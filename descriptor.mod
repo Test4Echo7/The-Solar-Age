@@ -7,4 +7,7 @@ tags={
 	"National Focuses"
 }
 name="SOL Rework"
+dependencies = {
+	"Equestria at War"
+}
 supported_version="1.14.7"
