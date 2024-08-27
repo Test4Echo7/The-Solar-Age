@@ -1,0 +1,15 @@
+EQS_debug_category = {
+    allowed = {
+        tag = EQS
+        is_debug = yes
+    }
+    visible_when_empty = yes
+    priority = {
+        base = 150
+    }
+}
+EQS_BOP_sanity_category = {
+    allowed = {
+        tag = EQS
+    }
+}

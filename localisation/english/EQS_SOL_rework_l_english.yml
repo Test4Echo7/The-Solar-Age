@@ -1,0 +1,26 @@
+﻿l_english:
+  ###Names###
+  sunset_shimmer_new_name:0 "Dawnbreak Shimmer"
+
+  ###BoP###
+  EQS_sanity_bop:0 "The Princess's Burden"
+  EQS_sanity_bop_desc:0 "In the changing world, an alicorn must adapt to the necessities of the modern ethos. Princess Celestia has led the nation of Equestria for a thousand years, and in that time she has seen kingdoms rise and fall, villains conquer and be conquered, and technology approach the levels of magic. In these dark times of turbulent war, it falls to her and her alone to shoulder this responsibility and make the difficult decisions for the good of Equestria. However, not even an immortal alicorn is safe from the burdens of war..."
+  EQS_calm_sanity:0 "§GCalm§!"
+  EQS_uneasy_sanity:0 "§YUneasy§!"
+  EQS_nervous_sanity:0 "§YAnxious§!"
+  EQS_middling_sanity:0 "§OStressed§!"
+  EQS_discomforting_insanity:0 "§OOverwhelmed§!"
+  EQS_paranoid_insanity:0 "§RParanoid§!"
+  EQS_schizophrenic_insanity:0 "§RFurious§!"
+  EQS_npc:0 "Harmony"
+  EQS_woke:0 "Chaos"
+  EQS_take_lakeside_retreat:0 "Go on a Lakeside Retreat"
+  EQS_preside_over_baking_competition:0 "Preside over Baking Competition"
+  EQS_visit_veterans_hospital:0 "Visit Veterans Hospital"
+  EQS_provide_new_charity_grant:0 "Provide new Charity Grants"
+  EQS_discuss_fears_with_luna:0 "Discuss Fears with Luna"
+  EQS_visit_the_front:0 "Visit the Front"
+  EQS_preside_over_war_planning:0 "Preside over High Command Meeting"
+  EQS_host_speech_of_fallen:0 "Host a Speech to the Fallen"
+  EQS_oversee_military_trial:0 "Oversee Military Trial"
+  EQS_taste_of_the_war:0 "Get a Taste of the War"

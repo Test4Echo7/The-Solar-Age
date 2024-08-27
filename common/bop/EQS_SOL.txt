@@ -1,0 +1,131 @@
+EQS_sanity_bop = {
+    initial_value = 0.9
+    left_side = EQS_woke
+    right_side = EQS_npc
+    decision_category = EQS_BOP_sanity_category
+
+    range = {
+        id = EQS_middling_sanity
+        min = -0.15
+        max = 0.15
+        modifier = {
+            political_power_gain = 0.05
+            political_advisor_cost_factor = -0.1
+        }
+    }
+
+    side = {
+        id = EQS_npc
+        #icon = GFX_bop_celestia_bust #Should be a bust like Benito's in ITA
+        range = {
+            id = EQS_nervous_sanity
+            min = 0.15
+            max = 0.45
+            modifier = {
+                stability_factor = 0.05
+                political_power_gain = 0.1
+                mobilization_speed = -0.1
+            }
+            on_activate = {
+                log = "EQS_nervous_sanity"
+            }
+        }
+        range = {
+            id = EQS_uneasy_sanity
+            min = 0.45
+            max = 0.85
+            modifier = {
+                stability_factor = 0.1
+                war_support_factor = -0.05
+                political_power_gain = 0.1
+                mobilization_speed = -0.15
+                army_defence_factor = 0.03
+            }
+            on_activate = {
+                log = "EQS_uneasy_sanity"
+            }
+        }
+        range = {
+            id = EQS_calm_sanity
+            min = 0.85
+            max = 1
+            modifier = {
+                stability_factor = 0.15
+                war_support_factor = -0.1
+                political_power_gain = 0.15
+                mobilization_speed = -0.25
+                army_defence_factor = 0.05
+                production_speed_buildings_factor = 0.1
+                consumer_goods_factor = 0.15
+            }
+            on_activate = {
+                log = "EQS_calm_sanity"
+            }
+        }
+    }
+
+    side = {
+        id = EQS_woke
+        #icon = GFX_bop_sun_side #Should be the same colour, but it's just the sun; alternately can be a shatterd bust of Celestia, or a bust of Daybreaker
+        range = {
+            id = EQS_discomforting_insanity
+            min = -0.45
+            max = -0.15
+            modifier = {
+                political_power_gain = -0.05
+                political_advisor_cost_factor = -0.15
+                war_support_factor = 0.05
+            }
+            on_activate = {
+                log = "EQS_discomforting_insanity"
+            }
+        }
+        range = {
+            id = EQS_paranoid_insanity
+            min = -0.85
+            max = -0.45
+            modifier = {
+                political_power_gain = -0.15
+                stability_factor = -0.1
+                political_advisor_cost_factor = -0.2
+                war_support_factor = 0.1
+                mobilization_speed = 0.15
+                surrender_limit = -0.05
+                industrial_capacity_factory = 0.05
+            }
+            on_activate = {
+                log = "EQS_paranoid_insanity"
+            }
+        }
+        range = {
+            id = EQS_schizophrenic_insanity
+            min = -1
+            max = -0.85
+            modifier = {
+                political_power_gain = -0.25
+                stability_factor = -0.2
+                political_advisor_cost_factor = -0.25
+                war_support_factor = 0.25
+                mobilization_speed = 0.25
+                surrender_limit = -0.15
+                industrial_capacity_factory = 0.1
+                consumer_goods_factor = -0.1
+            }
+            on_activate = {
+                log = "EQS_schizophrenic_insanity"
+                hidden_effect = {
+                    if = {
+                        limit = {
+                            is_EQS_SOL = no
+                        }
+                        country_event = {
+                            id = equestria.154
+                            days = 7
+                            random_days = 7
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

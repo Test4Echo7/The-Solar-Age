@@ -1,0 +1,190 @@
+EQS_BOP_sanity_category = {
+    ###Calming activities
+    EQS_take_lakeside_retreat = {
+        allowed = {
+            tag = EQS
+        }
+        cost = 25
+        days_remove = 14
+        days_re_enable = 30
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision EQS_take_lakeside_retreat"
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = 0.05
+                tooltip_side = EQS_npc
+            }
+        }
+    }
+    EQS_preside_over_baking_competition = {
+        allowed = {
+            tag = EQS
+        }
+        cost = 15
+        days_remove = 7
+        days_re_enable = 50
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision EQS_preside_over_baking_competition"
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = 0.05
+                tooltip_side = EQS_npc
+            }
+        }
+    }
+    EQS_visit_veterans_hospital = {
+        allowed = {
+            tag = EQS
+        }
+        cost = 50
+        days_remove = 30
+        days_re_enable = 90
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision EQS_visit_veterans_hospital"
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = 0.1
+                tooltip_side = EQS_npc
+            }
+        }
+    }
+    EQS_provide_new_charity_grant = {
+        allowed = {
+            tag = EQS
+        }
+        cost = 75
+        days_remove = 45
+        days_re_enable = 120
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision EQS_provide_new_charity_grant"
+            add_stability = 0.05
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = 0.1
+                tooltip_side = EQS_npc
+            }
+        }
+    }
+    #One use
+    EQS_discuss_fears_with_luna = {
+        allowed = {
+            tag = EQS
+        }
+        available = {
+            has_character = EQS_princess_luna
+        }
+        cost = 5
+        fire_only_once = yes
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision EQS_discuss_fears_with_luna"
+            ###Event of Celestia recalling Luna from the front so that she can tell of some of her fears, which Luna then spends some time to assuage from; Luna is worried at first because she believes that something horrible is going to happen, but Celestia is only worrying, and she says that it shows she truly cares for her ponies, which eases Celestia's worries
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = 0.2
+                tooltip_side = EQS_npc
+            }
+        }
+    }
+    ###Worrying activities
+    EQS_visit_the_front = {
+        allowed = {
+            tag = EQS
+        }
+        cost = 20
+        days_remove = 30
+        days_re_enable = 30
+        modifier = {
+            army_morale_factor = 0.05
+        }
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision EQS_visit_the_front"
+            add_war_support = 0.02
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = -0.05
+                tooltip_side = EQS_woke
+            }
+        }
+    }
+    EQS_preside_over_war_planning = {
+        allowed = {
+            tag = EQS
+        }
+        cost = 35
+        days_remove = 14
+        days_re_enable = 45
+        modifier = {
+            planning_factor = 0.1
+            planning_speed_factor = 0.15
+        }
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision EQS_preside_over_war_planning"
+            add_command_power = 10
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = -0.05
+                tooltip_side = EQS_woke
+            }
+        }
+    }
+    EQS_host_speech_of_fallen = {
+        allowed = {
+            tag = EQS
+        }
+        cost = 35
+        days_remove = 14
+        days_re_enable = 90
+        modifier = {
+            war_support_weekly = 0.005
+        }
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision EQS_host_speech_of_fallen"
+            add_manpower = 1000
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = -0.1
+                tooltip_side = EQS_woke
+            }
+        }
+    }
+    EQS_oversee_military_trial = {
+        allowed = {
+            tag = EQS
+        }
+        cost = 50
+        days_remove = 30
+        days_re_enable = 120
+        modifier = {
+            army_core_defence_factor = 0.05
+        }
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision EQS_oversee_military_trial"
+            army_experience = 10
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = -0.1
+                tooltip_side = EQS_woke
+            }
+        }
+    }
+    #One use
+    EQS_taste_of_the_war = {
+        allowed = {
+            tag = EQS
+        }
+        available = {
+            has_character = EQS_princess_luna
+        }
+        cost = 5
+        fire_only_once = yes
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision EQS_taste_of_the_war"
+            ###Celestia visits Luna on the front, who is surprised to see her, and at first they both talk about the state of it, and Celestia's worries, but they are surprised by a changeling attack on them, which gets Celestia a taste of fighting as she takes a couple of lives, which makes her puke before the end of the event
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = -0.2
+                tooltip_side = EQS_woke
+            }
+        }
+    }
+}

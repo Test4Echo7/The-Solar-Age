@@ -1,0 +1,49 @@
+on_actions = {
+    on_war_relation_added = {
+        effect = {
+            if = {
+                limit = {
+                    ROOT = {
+                        tag = CHN
+                    }
+                    FROM = {
+                        tag = EQS
+                    }
+                }
+                FROM = {
+                    set_power_balance = {
+                        id = EQS_sanity_bop
+                        set_default = yes
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    ROOT = {
+                        tag = EQS
+                    }
+                    FROM = {
+                        tag = NLR
+                    }
+                }
+                ROOT = {
+                    set_power_balance = {
+                        id = EQS_sanity_bop
+                        set_default = yes
+                    }
+                }
+            }
+        }
+    }
+    on_peace = {
+        effect = {
+            if = {
+                limit = {
+                    tag = EQS
+                    has_power_balance = { id = EQS_sanity_bop }
+                }
+                EQS = { remove_power_balance = { id = EQS_sanity_bop } }
+            }
+        }
+    }
+}
