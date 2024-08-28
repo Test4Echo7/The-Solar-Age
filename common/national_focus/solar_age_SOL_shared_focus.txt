@@ -1,0 +1,614 @@
+###SOL Rework, The Solar Age, new focuses###
+###Damn you, EQS spaghetti code###
+###Coded by Test4Echo###
+
+###Sunset joins in on the evil fun###
+shared_focus = {
+    id = SOL_sunset_awaken
+    icon = GFX_goal_sunrise_sparkle
+    x = 21
+    y = -1
+
+    cost = 10
+    allow_branch = { is_EQS_SOL = yes }
+    available = {
+        has_country_flag = SOL_has_captured_sunset
+        OR = {
+            has_completed_focus = SOL_empress_protector
+            has_completed_focus = SOL_empress_mother
+            has_completed_focus = SOL_god_empress
+        }
+    }
+    select_effect = {
+        ###Events here later###
+        set_temp_variable = {
+            bruh = 1
+        }
+    }
+    completion_reward = {
+        log = "[GetDateText]: [Root.GetName]: Focus SOL_sunset_awaken"
+        set_global_flag = SOL_sunset_converted
+        EQS_sunset_shimmer = {
+            set_character_name = SOL_sunset_new_name
+        }
+    }
+    ai_will_do = {
+        base = 150
+        modifier = {
+            has_completed_focus = SOL_twilight_ascend
+            add = 150
+        }
+    }
+}
+
+###New civil war focuses###
+shared_focus = {
+	id = SOL_civil_war_measures
+	icon = GFX_goal_solar_military_factory
+	cost = 5
+	ai_will_do = {
+		factor = 300
+	}
+	x = 24
+	y = -1
+	available = {
+		eqs_has_civil_war = yes
+	}
+	allow_branch = {
+		is_EQS_SOL = yes
+	}
+	bypass = {
+		has_civil_war = no
+		OR = {
+			has_global_flag = equestrian_civil_war_ended
+			has_global_flag = equestrian_com_civil_war_ended
+			has_global_flag = equestrian_civil_war_daybreaker_ended
+		}
+		OR = {
+			NOT = {
+				country_exists = NLR
+			}
+			NLR = {
+				is_subject = yes
+			}
+		}
+		OR = {
+			NOT = {
+				country_exists = event_target:equestria
+			}
+			event_target:equestria = {
+				is_subject = yes
+			}
+		}
+		ROOT = {
+			is_subject = no
+		}
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_civil_war_measures"
+		###Event of Daybreaker passing the war measures act, which gets thundrous applause, aside from a few, as they democracy die
+		add_ideas = SOL_civil_war_measures_idea
+	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESISTANCE FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+    id = SOL_promise_swift_end
+    x = -3
+    y = 1
+    relative_position_id = SOL_civil_war_measures
+
+    cost = 2
+    prerequisite = { focus = SOL_civil_war_measures }
+    available = {
+		eqs_has_civil_war = yes
+	}
+	allow_branch = {
+		is_EQS_SOL = yes
+	}
+	bypass = {
+		has_civil_war = no
+		OR = {
+			has_global_flag = equestrian_civil_war_ended
+			has_global_flag = equestrian_com_civil_war_ended
+			has_global_flag = equestrian_civil_war_daybreaker_ended
+		}
+		OR = {
+			NOT = {
+				country_exists = NLR
+			}
+			NLR = {
+				is_subject = yes
+			}
+		}
+		OR = {
+			NOT = {
+				country_exists = event_target:equestria
+			}
+			event_target:equestria = {
+				is_subject = yes
+			}
+		}
+		ROOT = {
+			is_subject = no
+		}
+	}
+	completion_reward = {
+        log = "[GetDateText]: [Root.GetName]: Focus SOL_promise_swift_end"
+        ###Daybreaker hosts a speech outside Canterlot castle, where ponies are frightened of what is happening, and she promises that she will always be with them, unlike her traitor sister, and that they will drive back the forces of darkness and see the light of day shine forever
+	}
+	ai_will_do = { factor = 150 }
+}
+
+shared_focus = {
+    id = SOL_crisis_industrial_management
+    x = 3
+    y = 1
+    relative_position_id = SOL_civil_war_measures
+
+    cost = 3
+    prerequisite = { focus = SOL_civil_war_measures }
+    available = {
+		eqs_has_civil_war = yes
+	}
+	allow_branch = {
+		is_EQS_SOL = yes
+	}
+	bypass = {
+		has_civil_war = no
+		OR = {
+			has_global_flag = equestrian_civil_war_ended
+			has_global_flag = equestrian_com_civil_war_ended
+			has_global_flag = equestrian_civil_war_daybreaker_ended
+		}
+		OR = {
+			NOT = {
+				country_exists = NLR
+			}
+			NLR = {
+				is_subject = yes
+			}
+		}
+		OR = {
+			NOT = {
+				country_exists = event_target:equestria
+			}
+			event_target:equestria = {
+				is_subject = yes
+			}
+		}
+		ROOT = {
+			is_subject = no
+		}
+	}
+    completion_reward = {
+        log = "[GetDateText]: [Root.GetName]: Focus SOL_crisis_industrial_management"
+        three_random_industrial_complex = yes
+        three_random_arms_factory = yes
+        add_stability = -0.1
+    }
+    ai_will_do = { factor = 250 }
+}
+
+shared_focus = {
+    id = SOL_draw_upon_militia
+    x = 0
+    y = 1
+    relative_position_id = SOL_civil_war_measures
+
+    cost = 4
+    prerequisite = { focus = SOL_civil_war_measures }
+    mutually_exclusive = { focus = SOL_counter_terrorists }
+    available = {
+		eqs_has_civil_war = yes
+	}
+	allow_branch = {
+		is_EQS_SOL = yes
+	}
+	bypass = {
+		has_civil_war = no
+		OR = {
+			has_global_flag = equestrian_civil_war_ended
+			has_global_flag = equestrian_com_civil_war_ended
+			has_global_flag = equestrian_civil_war_daybreaker_ended
+		}
+		OR = {
+			NOT = {
+				country_exists = NLR
+			}
+			NLR = {
+				is_subject = yes
+			}
+		}
+		OR = {
+			NOT = {
+				country_exists = event_target:equestria
+			}
+			event_target:equestria = {
+				is_subject = yes
+			}
+		}
+		ROOT = {
+			is_subject = no
+		}
+	}
+	completion_reward = {
+        log = "[GetDateText]: [Root.GetName]: Focus SOL_draw_upon_militia"
+        #Militia and idea here
+	}
+	ai_will_do = { factor = 300 }
+}
+
+shared_focus = {
+    id = SOL_counter_terrorists
+    x = 0
+    y = 1
+    relative_position_id = SOL_crisis_industrial_management
+
+    cost = 4
+    prerequisite = { focus = SOL_crisis_industrial_management }
+    mutually_exclusive = { focus = SOL_draw_upon_militia }
+    available = {
+		eqs_has_civil_war = yes
+	}
+	allow_branch = {
+		is_EQS_SOL = yes
+	}
+    bypass = {
+		has_civil_war = no
+		OR = {
+			has_global_flag = equestrian_civil_war_ended
+			has_global_flag = equestrian_com_civil_war_ended
+			has_global_flag = equestrian_civil_war_daybreaker_ended
+		}
+		OR = {
+			NOT = {
+				country_exists = NLR
+			}
+			NLR = {
+				is_subject = yes
+			}
+		}
+		OR = {
+			NOT = {
+				country_exists = event_target:equestria
+			}
+			event_target:equestria = {
+				is_subject = yes
+			}
+		}
+		ROOT = {
+			is_subject = no
+		}
+	}
+    completion_reward = {
+        log = "[GetDateText]: [Root.GetName]: Focus SOL_counter_terrorists"
+        #Idea here
+    }
+    ai_will_do = { factor = 200 }
+}
+
+shared_focus = {
+    id = SOL_spending_money
+    x = 2
+    y = 1
+    relative_position_id = SOL_crisis_industrial_management
+
+    cost = 5
+    prerequisite = { focus = SOL_crisis_industrial_management }
+    available = {
+		eqs_has_civil_war = yes
+	}
+	allow_branch = {
+		is_EQS_SOL = yes
+	}
+    bypass = {
+		has_civil_war = no
+		OR = {
+			has_global_flag = equestrian_civil_war_ended
+			has_global_flag = equestrian_com_civil_war_ended
+			has_global_flag = equestrian_civil_war_daybreaker_ended
+		}
+		OR = {
+			NOT = {
+				country_exists = NLR
+			}
+			NLR = {
+				is_subject = yes
+			}
+		}
+		OR = {
+			NOT = {
+				country_exists = event_target:equestria
+			}
+			event_target:equestria = {
+				is_subject = yes
+			}
+		}
+		ROOT = {
+			is_subject = no
+		}
+	}
+	completion_reward = {
+        log = "[GetDateText]: [Root.GetName]: Focus SOL_spending_money"
+        #Idea here
+	}
+	ai_will_do = { factor = 150 }
+}
+
+shared_focus = {
+    id = SOL_herald_doom
+    x = 1
+    y = 1
+    relative_position_id = SOL_promise_swift_end
+
+    cost = 5
+    prerequisite = { focus = SOL_promise_swift_end }
+    mutually_exclusive = { focus = SOL_take_everypony }
+    available = {
+		eqs_has_civil_war = yes
+	}
+	allow_branch = {
+		is_EQS_SOL = yes
+	}
+    bypass = {
+		has_civil_war = no
+		OR = {
+			has_global_flag = equestrian_civil_war_ended
+			has_global_flag = equestrian_com_civil_war_ended
+			has_global_flag = equestrian_civil_war_daybreaker_ended
+		}
+		OR = {
+			NOT = {
+				country_exists = NLR
+			}
+			NLR = {
+				is_subject = yes
+			}
+		}
+		OR = {
+			NOT = {
+				country_exists = event_target:equestria
+			}
+			event_target:equestria = {
+				is_subject = yes
+			}
+		}
+		ROOT = {
+			is_subject = no
+		}
+	}
+    completion_reward = {
+        log = "[GetDateText]: [Root.GetName]: Focus SOL_herald_doom"
+        ###Event of a pony preacher for Daybreaker using fear and cursing to fire up ponies to remain hateful of those who would "free" them from Daybreaker's enslavement
+    }
+    ai_will_do = { factor = 250 }
+}
+
+shared_focus = {
+    id = SOL_take_everypony
+    x = 0
+    y = 1
+    relative_position_id = SOL_draw_upon_militia
+
+    cost = 5
+    prerequisite = { focus = SOL_draw_upon_militia }
+    mutually_exclusive = { focus = SOL_herald_doom }
+    available = {
+		eqs_has_civil_war = yes
+	}
+	allow_branch = {
+		is_EQS_SOL = yes
+	}
+    bypass = {
+		has_civil_war = no
+		OR = {
+			has_global_flag = equestrian_civil_war_ended
+			has_global_flag = equestrian_com_civil_war_ended
+			has_global_flag = equestrian_civil_war_daybreaker_ended
+		}
+		OR = {
+			NOT = {
+				country_exists = NLR
+			}
+			NLR = {
+				is_subject = yes
+			}
+		}
+		OR = {
+			NOT = {
+				country_exists = event_target:equestria
+			}
+			event_target:equestria = {
+				is_subject = yes
+			}
+		}
+		ROOT = {
+			is_subject = no
+		}
+	}
+	completion_reward = {
+        log = "[GetDateText]: [Root.GetName]: Focus SOL_take_everypony"
+        #Idea here
+        ###Maybe event of a recruiter being forced to pass every single pony she sees, just so that they can get more bodies on the front, even though some of them are cowards, drunks, etc.
+	}
+	ai_will_do = { factor = 200 }
+}
+
+shared_focus = {
+	id = SOL_reconquer_equestria
+	icon = GFX_goal_solar_unite_equestria
+	relative_position_id = SOL_take_everypony
+	prerequisite = {
+		focus = SOL_herald_doom
+		focus = SOL_take_everypony
+		focus = SOL_counter_terrorists
+	}
+	available = {
+		is_subject = no
+	}
+	bypass = {
+		all_of = {
+			array = core_states
+			var:v = {
+				owner = {
+					OR = {
+						tag = ROOT
+						is_subject_of = ROOT
+						NOT = {
+							is_eqs_civil_war_tag = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	will_lead_to_war_with = SCS
+	will_lead_to_war_with = LSP
+	will_lead_to_war_with = BUF
+	will_lead_to_war_with = NLR
+	will_lead_to_war_with = NMS
+	will_lead_to_war_with = CES
+	will_lead_to_war_with = VAN
+	will_lead_to_war_with = BAL
+	will_lead_to_war_with = JUN
+	cost = 10
+	ai_will_do = {
+		factor = 50
+		modifier = {
+			factor = 0.1
+			has_war = yes
+		}
+	}
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_reconquer_equestria"
+		every_other_country = {
+			limit = {
+				is_eqs_civil_war_tag = yes
+				NOT = {
+					is_subject_of = ROOT
+				}
+				NOT = {
+					has_war_with = ROOT
+				}
+				any_owned_state = {
+					is_core_of = ROOT
+				}
+			}
+			ROOT = {
+				create_wargoal = {
+					type = annex_everything
+					target = PREV
+				}
+			}
+		}
+		if = {
+			limit = {
+				BUF = {
+					exists = yes
+					NOT = {
+						is_subject_of = ROOT
+					}
+					NOT = {
+						has_war_with = ROOT
+					}
+				}
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = BUF
+			}
+		}
+	}
+	search_filters = { FOCUS_FILTER_ANNEXATION }
+}
+
+###New Politics! We love Democracy###
+shared_focus = {
+    id = SOL_waking_dawn_star
+    x = 10
+    y = -1
+    available = {
+		is_subject = no
+		has_DB_ruler = yes
+	}
+	cost = 2
+	ai_will_do = {
+		factor = 200
+		modifier = {
+            has_war_with = CHN
+            factor = 3
+		}
+		modifier = {
+            has_completed_focus = SOL_civil_war_measures
+            factor = 3
+		}
+	}
+	allow_branch = {
+		is_EQS_SOL = yes
+	}
+	completion_reward = {
+        ###Event of Daybreaker revealing herself to the Canterlot, and she is initially attacked by some of her own soldiers, who she deals with as she proclaims that she will lead the nation to greatness and destruction of the changelings; she is passive until she's shot at
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_waking_dawn_star"
+		add_political_power = 200
+		add_stability = 0.25
+		effect_tooltip = {
+			every_enemy_country = {
+				add_ideas = SOL_enemy_debuff_idea
+			}
+		}
+		hidden_effect = {
+			every_enemy_country = {
+				add_ideas = SOL_enemy_debuff_idea
+			}
+		}
+		if = {
+			limit = {
+				is_faction_leader = no
+			}
+			create_faction = "SOL_faction"
+		}
+	}
+}
+
+shared_focus = {
+    id = SOL_fire_ministers
+    x = -4
+    y = 1
+    relative_position_id = SOL_waking_dawn_star
+
+    cost = 2
+    prerequisite = { focus = SOL_waking_dawn_star }
+    available = {
+        is_subject = no
+        has_DB_ruler = yes
+    }
+
+    completion_reward = {
+       log = "[GetDateText]: [Root.GetName]: Focus SOL_fire_ministers"
+       ###Daybreaker secures most of the castle and is confronted by Fancy Pants, who she finds droll, and ends up sacking him, as well as most of her cabinet, and has them all arrested to avoid disruptions
+    }
+    ai_will_do = { factor = 200 }
+}
+
+shared_focus = {
+    id = SOL_bluebloods_fealty
+    x = 4
+    y = 1
+    relative_position_id = SOL_waking_dawn_star
+
+    cost = 2
+    prerequisite = { focus = SOL_waking_dawn_star }
+    available = {
+        is_subject = no
+        has_DB_ruler = yes
+    }
+
+    completion_reward = {
+        log = "[GetDateText]: [Root.GetName]: Focus SOL_bluebloods_fealty"
+        ###Daybreaker gets hold of Blueblood in his war tent, and appears as him a fiery demon, which makes him scared enough to basically prostrate himself to her, and swear that he will serve her
+    }
+    ai_will_do = { factor = 200 }
+}

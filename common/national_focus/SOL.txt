@@ -27,7 +27,7 @@ focus_tree = {
 
 	shared_focus = SOL_Imperium_Solis
 
-	shared_focus = SOL_twilight_ascend
+	#shared_focus = SOL_twilight_ascend
 
 	shared_focus = SOL_civil_war_measures
 	shared_focus = SOL_military_reorganization
@@ -73,7 +73,7 @@ focus_tree = {
 
 	shared_focus = SOL_Imperium_Solis
 
-	shared_focus = SOL_twilight_ascend
+	#shared_focus = SOL_twilight_ascend
 
 	shared_focus = SOL_civil_war_measures
 
@@ -1593,54 +1593,54 @@ shared_focus = {
 ##############################################################
 ################### INTERNAL AFFAIRS #############################
 ##################################################################
-shared_focus = {
-	id = SOL_civil_war_measures
-	icon = GFX_goal_solar_military_factory
-	cost = 8
-	ai_will_do = {
-		factor = 300
-	}
-	x = 10
-	y = 0
-	available = {
-		eqs_has_civil_war = yes
-	}
-	allow_branch = {
-		is_EQS_SOL = yes
-	}
-	bypass = {
-		has_civil_war = no
-		OR = {
-			has_global_flag = equestrian_civil_war_ended
-			has_global_flag = equestrian_com_civil_war_ended
-			has_global_flag = equestrian_civil_war_daybreaker_ended
-		}
-		OR = {
-			NOT = {
-				country_exists = NLR
-			}
-			NLR = {
-				is_subject = yes
-			}
-		}
-		OR = {
-			NOT = {
-				country_exists = event_target:equestria
-			}
-			event_target:equestria = {
-				is_subject = yes
-			}
-		}
-		ROOT = {
-			is_subject = no
-		}
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_civil_war_measures"
-		add_ideas = SOL_civil_war_measures_idea
-	}
-	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESISTANCE FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
-}
+#shared_focus = {
+#	id = SOL_civil_war_measures
+#	icon = GFX_goal_solar_military_factory
+#	cost = 8
+#	ai_will_do = {
+#		factor = 300
+#	}
+#	x = 10
+#	y = 0
+#	available = {
+#		eqs_has_civil_war = yes
+#	}
+#	allow_branch = {
+#		is_EQS_SOL = yes
+#	}
+#	bypass = {
+#		has_civil_war = no
+#		OR = {
+#			has_global_flag = equestrian_civil_war_ended
+#			has_global_flag = equestrian_com_civil_war_ended
+#			has_global_flag = equestrian_civil_war_daybreaker_ended
+#		}
+#		OR = {
+#			NOT = {
+#				country_exists = NLR
+#			}
+#			NLR = {
+#				is_subject = yes
+#			}
+#		}
+#		OR = {
+#			NOT = {
+#				country_exists = event_target:equestria
+#			}
+#			event_target:equestria = {
+#				is_subject = yes
+#			}
+#		}
+#		ROOT = {
+#			is_subject = no
+#		}
+#	}
+#	completion_reward = {
+#		log = "[GetDateText]: [Root.GetName]: Focus SOL_civil_war_measures"
+#		add_ideas = SOL_civil_war_measures_idea
+#	}
+#	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESISTANCE FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
+#}
 
 shared_focus = {
 	id = SOL_end_of_civil_war
@@ -1651,9 +1651,9 @@ shared_focus = {
 	}
 	x = 10
 	y = 1
-	prerequisite = {
-		focus = SOL_civil_war_measures
-	}
+	#prerequisite = {
+	#	focus = SOL_civil_war_measures
+	#}
 	available = {
 		eqs_civil_war_ended = yes
 	}
@@ -1673,92 +1673,92 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_RESEARCH }
 }
 
-shared_focus = {
-	id = SOL_reconquer_equestria
-	icon = GFX_goal_solar_unite_equestria
-	prerequisite = {
-		focus = SOL_end_of_civil_war
-	}
-	available = {
-		is_subject = no
-	}
-	bypass = {
-		all_of = {
-			array = core_states
-			var:v = {
-				owner = {
-					OR = {
-						tag = ROOT
-						is_subject_of = ROOT
-						NOT = {
-							is_eqs_civil_war_tag = yes
-						}
-					}
-				}
-			}
-		}
-	}
-	will_lead_to_war_with = SCS
-	will_lead_to_war_with = LSP
-	will_lead_to_war_with = BUF
-	will_lead_to_war_with = NLR
-	will_lead_to_war_with = NMS
-	will_lead_to_war_with = CES
-	will_lead_to_war_with = VAN
-	will_lead_to_war_with = BAL
-	will_lead_to_war_with = JUN
-	cost = 10
-	ai_will_do = {
-		factor = 35
-		modifier = {
-			factor = 0.1
-			has_war = yes
-		}
-	}
-	x = 10
-	y = 2
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_reconquer_equestria"
-		every_other_country = {
-			limit = {
-				is_eqs_civil_war_tag = yes
-				NOT = {
-					is_subject_of = ROOT
-				}
-				NOT = {
-					has_war_with = ROOT
-				}
-				any_owned_state = {
-					is_core_of = ROOT
-				}
-			}
-			ROOT = {
-				create_wargoal = {
-					type = annex_everything
-					target = PREV
-				}
-			}
-		}
-		if = {
-			limit = {
-				BUF = {
-					exists = yes
-					NOT = {
-						is_subject_of = ROOT
-					}
-					NOT = {
-						has_war_with = ROOT
-					}
-				}
-			}
-			create_wargoal = {
-				type = annex_everything
-				target = BUF
-			}
-		}
-	}
-	search_filters = { FOCUS_FILTER_ANNEXATION }
-}
+#shared_focus = {
+#	id = SOL_reconquer_equestria
+#	icon = GFX_goal_solar_unite_equestria
+#	prerequisite = {
+#		focus = SOL_end_of_civil_war
+#	}
+#	available = {
+#		is_subject = no
+#	}
+#	bypass = {
+#		all_of = {
+#			array = core_states
+#			var:v = {
+#				owner = {
+#					OR = {
+#						tag = ROOT
+#						is_subject_of = ROOT
+#						NOT = {
+#							is_eqs_civil_war_tag = yes
+#						}
+#					}
+#				}
+#			}
+#		}
+#	}
+#	will_lead_to_war_with = SCS
+#	will_lead_to_war_with = LSP
+#	will_lead_to_war_with = BUF
+#	will_lead_to_war_with = NLR
+#	will_lead_to_war_with = NMS
+#	will_lead_to_war_with = CES
+#	will_lead_to_war_with = VAN
+#	will_lead_to_war_with = BAL
+#	will_lead_to_war_with = JUN
+#	cost = 10
+#	ai_will_do = {
+#		factor = 35
+#		modifier = {
+#			factor = 0.1
+#			has_war = yes
+#		}
+#	}
+#	x = 10
+#	y = 2
+#	completion_reward = {
+#		log = "[GetDateText]: [Root.GetName]: Focus SOL_reconquer_equestria"
+#		every_other_country = {
+#			limit = {
+#				is_eqs_civil_war_tag = yes
+#				NOT = {
+#					is_subject_of = ROOT
+#				}
+#				NOT = {
+#					has_war_with = ROOT
+#				}
+#				any_owned_state = {
+#					is_core_of = ROOT
+#				}
+#			}
+#			ROOT = {
+#				create_wargoal = {
+#					type = annex_everything
+#					target = PREV
+#				}
+#			}
+#		}
+#		if = {
+#			limit = {
+#				BUF = {
+#					exists = yes
+#					NOT = {
+#						is_subject_of = ROOT
+#					}
+#					NOT = {
+#						has_war_with = ROOT
+#					}
+#				}
+#			}
+#			create_wargoal = {
+#				type = annex_everything
+#				target = BUF
+#			}
+#		}
+#	}
+#	search_filters = { FOCUS_FILTER_ANNEXATION }
+#}
 
 shared_focus = {
 	id = SOL_twilight_ascend
@@ -1767,8 +1767,8 @@ shared_focus = {
 	ai_will_do = {
 		factor = 300
 	}
-	x = 13
-	y = 0
+	x = 19
+	y = -1
 	allow_branch = {
 		is_EQS_SOL = yes
 	}
@@ -1928,8 +1928,9 @@ shared_focus = {
 			}
 		}
 	}
-	x = 12
-	y = 2
+	relative_position_id = examine_the_situation
+	x = -4
+	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_increase_presense_inCRY"
 		if = {
@@ -1990,8 +1991,9 @@ shared_focus = {
 	ai_will_do = {
 		factor = 150
 	}
-	x = 14
-	y = 2
+	relative_position_id = examine_the_situation
+	x = -2
+	y = 1
 	prerequisite = {
 		focus = examine_the_situation
 	}

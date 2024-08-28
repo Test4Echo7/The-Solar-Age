@@ -1,6 +1,21 @@
 ﻿l_english:
+  ###Country Names###
+  EQS_SOL_democratic:0 "Imperial Federation"
+  EQS_SOL_democratic_DEF:0 "the Imperial Federation"
+  EQS_SOL_democratic_ADJ:0 "Imperial"
+  EQS_SOL_communism:0 "United Socialist Solarist States"
+  EQS_SOL_communism_DEF:0 "the United Socialist Solarist States"
+  EQS_SOL_communism_ADJ:0 "Solarist"
+  EQS_SOL_neutrality:0 "Solar Empire"
+  EQS_SOL_neutrality_DEF:0 "the Solar Empire"
+  EQS_SOL_neutrality_ADJ:0 "Imperial"
+
+  ###Parties###
+  EQS_solaris_cultus:0 "Solaris Cultus"
+
   ###Names###
-  sunset_shimmer_new_name:0 "Dawnbreak Shimmer"
+  SOL_sunset_shimmer_new_name:0 "Dawnbreak Shimmer"
+  SOL_flurry_heart_based_name:0 "Firestorm Heart"
 
   ###BoP###
   EQS_sanity_bop:0 "The Princess's Burden"
@@ -24,3 +39,6 @@
   EQS_host_speech_of_fallen:0 "Host a Speech to the Fallen"
   EQS_oversee_military_trial:0 "Oversee Military Trial"
   EQS_taste_of_the_war:0 "Get a Taste of the War"
+
+  ###City Names###
+  EQS_sanctum_solar:0 "Sanctum Solar"

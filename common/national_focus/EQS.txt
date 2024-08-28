@@ -25,12 +25,15 @@ focus_tree = {
 	shared_focus = eqs_prevent_the_vote
 
 
-	shared_focus = SOL_Imperium_Solis
+	#shared_focus = SOL_Imperium_Solis
 
 	shared_focus = SOL_twilight_ascend
 
-	shared_focus = SOL_civil_war_measures
-	shared_focus = SOL_military_reorganization
+	#shared_focus = SOL_military_reorganization
+	###New Schtuff###
+	shared_focus = SOL_sunset_awaken
+	shared_focus = SOL_civil_war_measures #Gets new content
+	shared_focus = SOL_waking_dawn_star
 }
 
 
@@ -45,7 +48,8 @@ shared_focus = {
 	bypass = {
 		hidden_trigger = { is_EQS_SOL = yes }
 	}
-	x = 16
+	relative_position_id = Friendship_Games
+	x = 0
 	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus examine_the_situation"
@@ -88,8 +92,9 @@ shared_focus = {
 	allow_branch = {
 		always = yes
 	}
-	x = 12
-	y = 3
+	relative_position_id = SOL_increase_presense_inCRY
+	x = 0
+	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus Crystal_Fair"
 		add_political_power = 150
@@ -138,8 +143,9 @@ shared_focus = {
 		}
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY }
-	x = 11
-	y = 4
+	relative_position_id = Crystal_Fair
+	x = -1
+	y = 1
 }
 shared_focus = {
 	id = industry_crystal_emp
@@ -166,19 +172,26 @@ shared_focus = {
 	allow_branch = {
 		always = yes
 	}
-	x = 13
-	y = 4
+	relative_position_id = Crystal_Fair
+	x = 1
+	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus industry_crystal_emp"
 		53 = { add_extra_state_shared_building_slots = 3
-			add_building_construction = { type = industrial_complex
+			add_building_construction = {
+				type = industrial_complex
 				level = 3
-				instant_build = yes }
+				instant_build = yes
+			}
 		}
 		144 = { add_extra_state_shared_building_slots = 3
-			add_building_construction = { type = arms_factory
+			add_building_construction = {
+				type = arms_factory
 				level = 3
-				instant_build = yes } } }
+				instant_build = yes
+			}
+		}
+	}
 }
 
 shared_focus = {
@@ -186,8 +199,9 @@ shared_focus = {
 	icon = GFX_goal_cryacademy
 	cost = 10.00
 	ai_will_do = { factor = 30 }
-	x = 12
-	y = 5
+	relative_position_id = industry_crystal_emp
+	x = -1
+	y = 1
 	dynamic = yes
 	prerequisite = {
 		focus = industry_crystal_emp
@@ -289,8 +303,9 @@ shared_focus = {
 	available = {
 		eqs_not_has_civil_war = yes
 	}
-	x = 16
-	y = 2
+	relative_position_id = examine_the_situation
+	x = 0
+	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus arms_potential"
 		59 = {
@@ -428,8 +443,9 @@ shared_focus = {
 		}
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
-	x = 14
-	y = 3
+	relative_position_id = arms_potential
+	x = -2
+	y = 1
 
 }
 shared_focus = {
@@ -494,8 +510,9 @@ shared_focus = {
 			}	
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
-	x = 14
-	y = 5
+	relative_position_id = Spitfire_research
+	x = 0
+	y = 2
 
 }
 shared_focus = {
@@ -509,8 +526,9 @@ shared_focus = {
 	available = {
 		eqs_not_has_civil_war = yes
 	}
-	x = 16
-	y = 3
+	relative_position_id = arms_potential
+	x = 0
+	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus need_to_reinovate"
 		add_tech_bonus = {
@@ -558,8 +576,9 @@ shared_focus = {
 		}
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY }
-	x = 18
-	y = 2
+	relative_position_id = examine_the_situation
+	x = 2
+	y = 1
 
 }
 shared_focus = {
@@ -584,8 +603,9 @@ shared_focus = {
             }
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY }
-	x = 18
-	y = 3
+	relative_position_id = industry_manehattan
+	x = 0
+	y = 1
 
 }
 shared_focus = {
@@ -614,8 +634,9 @@ shared_focus = {
 		}
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY }
-	x = 16
-	y = 4
+	relative_position_id = need_to_reinovate
+	x = 0
+	y = 1
 
 }
 shared_focus = {
@@ -664,8 +685,9 @@ shared_focus = {
             }
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY }
-	x = 16
-	y = 5
+	relative_position_id = mil_industry_fillydelphia
+	x = 0
+	y = 1
 
 }
 shared_focus = {
@@ -683,8 +705,9 @@ shared_focus = {
 	}
 	cancel_if_invalid = yes
 	continue_if_invalid = no
-	x = 18
-	y = 4
+	relative_position_id = transequestrian_raillines
+	x = 0
+	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus industry_las_pegasus"
 		66 = {	add_extra_state_shared_building_slots = 3
@@ -708,8 +731,9 @@ shared_focus = {
 	available = {
 		eqs_not_has_civil_war = yes
 	}
-	x = 20
-	y = 2
+	relative_position_id = examine_the_situation
+	x = 4
+	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus unicorn_academy_f"
 		country_event = equestria.4
@@ -731,8 +755,9 @@ shared_focus = {
 	available = {
 		eqs_not_has_civil_war = yes
 	}
-	x = 20
-	y = 3
+	relative_position_id = unicorn_academy_f
+	x = 0
+	y = 1
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus luna_nova_academy"
@@ -754,8 +779,9 @@ shared_focus = {
 	available = {
 		eqs_not_has_civil_war = yes
 	}
-	x = 20
-	y = 4
+	relative_position_id = luna_nova_academy
+	x = 0
+	y = 1
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus Fund_public_schools"
@@ -783,8 +809,9 @@ shared_focus = {
 			has_tech = tech_pony_unicorns
 		}
 	}
-	x = 18
-	y = 5
+	relative_position_id = industry_las_pegasus
+	x = 0
+	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus magical_crypto_machines"
 		add_tech_bonus = {
@@ -810,8 +837,9 @@ shared_focus = {
 		eqs_not_has_civil_war = yes
 		capital_scope = { is_controlled_by = ROOT }
 	}
-	x = 20
-	y = 5
+	relative_position_id = Fund_public_schools
+	x = 0
+	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus CTL_center_of_research"
 		add_research_slot = 1
@@ -994,6 +1022,11 @@ shared_focus = {
 	}
 	x = 24
 	y = 0
+	offset = {
+		x = -24
+		y = -1
+		trigger = { is_EQS_SOL = yes }
+	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus Ministry_of_defense"
 		add_political_power = 150
@@ -1047,7 +1080,8 @@ shared_focus = {
 	}
 	continue_if_invalid = no
 	cancel_if_invalid = yes
-	x = 24
+	relative_position_id = Ministry_of_defense
+	x = 0
 	y = 2
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus worrisome_changelings"
@@ -1089,7 +1123,8 @@ shared_focus = {
 	prerequisite = {
 		focus = Ministry_of_defense
 	}
-	x = 25
+	relative_position_id = Ministry_of_defense
+	x = 1
 	y = 1
 	available = {
 		132 = { is_controlled_by = ROOT }
@@ -1169,7 +1204,8 @@ shared_focus = {
 	prerequisite = {
 		focus = Ministry_of_defense
 	}
-	x = 23
+	relative_position_id = Ministry_of_defense
+	x = -1
 	y = 1
 	available = {
 		38 = { is_controlled_by = ROOT }
@@ -1236,8 +1272,9 @@ shared_focus = {
 	prerequisite = {
 		focus = worrisome_changelings
 	}
-	x = 23
-	y = 3
+	relative_position_id = worrisome_changelings
+	x = -1
+	y = 1
 	available = { 
 		CHN = {
 			exists = yes
@@ -1348,8 +1385,9 @@ shared_focus = {
 	prerequisite = {
 		focus = reinforce_border
 	}
-	x = 23
-	y = 4
+	relative_position_id = reinforce_border
+	x = 0
+	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus River_Fortifications"
 		if = { limit = {
@@ -1503,8 +1541,9 @@ shared_focus = {
 			has_government = fascism
 		}
 	}
-	x = 25
-	y = 3
+	relative_position_id = worrisome_changelings
+	x = 1
+	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus Improve_relations"
 		add_war_support = 0.05
@@ -3231,8 +3270,8 @@ shared_focus = {
 	x = 12
 	y = 0
 	offset = {
-		y = 0
-		x = 4
+		y = -1
+		x = -20
 		trigger = { is_EQS_SOL = yes }
 	}
 	ai_will_do = { factor = 100 }

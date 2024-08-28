@@ -13,4 +13,27 @@ EQS_debug_category = {
             }
         }
     }
+    EQS_based_name = {
+        allowed = {
+            tag = EQS
+        }
+        complete_effect = {
+            set_party_name = {
+                ideology = fascism
+                long_name = EQS_solaris_cultus
+                name = EQS_solaris_cultus
+            }
+        }
+    }
+    EQS_canterlot_based_name = {
+        allowed = {
+            tag = EQS
+        }
+        complete_effect = {
+            set_province_name = {
+                id = 179
+                name = "EQS_sanctum_solar"
+            }
+        }
+    }
 }
