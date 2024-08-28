@@ -42,3 +42,47 @@
 
   ###City Names###
   EQS_sanctum_solar:0 "Sanctum Solar"
+
+  ###Flags and Custom Tooltips###
+  SOL_has_captured_sunset:0 "Sunset Shimmer has been captured."
+
+  ###Focuses###
+  ###Sunset's Corruption###
+  SOL_sunset_awaken:0 "Awakening"
+  SOL_sunset_awaken_desc:0 "The Empress's prodigal student has been returned to her at last. Unlike Twilight Sparkle, Sunset Shimmer has had a consistent history of individualism and rash judgements. Chaos once flowed through her, but that taste its corruption has given her perspective. No longer will she serve her whims and strive against our Harmony. When dawn breaks, she will seek Order."
+  ###Civil War###
+  SOL_civil_war_measures:0 "The Civil War Emergencies Act"
+  SOL_promise_swift_end:0 "Promise Swift Ends"
+  SOL_crisis_industrial_management:0 "Crisis Industrial Management"
+  SOL_draw_upon_militia:0 "Draw upon Regional Militia"
+  SOL_counter_terrorists:0 "Counter Terrorism"
+  SOL_spending_money:0 "Mitigating Bit Injections"
+  SOL_herald_doom:0 "Herald Coming Doom"
+  SOL_take_everypony:0 "Press Any Into Service"
+  SOL_reconquer_equestria:0 "Bring Back the Foalish"
+  ###Prelude###
+  SOL_waking_dawn_star:0 "The Dawn Star Wakes"
+  SOL_waking_dawn_star_desc:0 "Equestria burns all around us, but in our darkest hour, the first sign of hope has sprung forth. Celestia is no longer, for she has been reborn. The bright light of the Sun shall guide us, and in its warmth we shall crush all those that threaten us!"
+  SOL_fire_ministers:0 "Retire the Old Ministers"
+  SOL_bluebloods_fealty:0 "Require Blueblood's Fealty"
+  SOL_appoint_committee:0 "Appoint a Committee of War"
+  SOL_answer_crimes:0 "Answer Crimes with Crimes"
+  SOL_sweeping_chaff:0 "Sweeping out the Chaff"
+  SOL_first_feelers:0 "The First Feelers"
+  SOL_break_dissent:0 "Crack Down on Open Dissent"
+  SOL_plants_in_chaos:0 "Plants in Chaos"
+  SOL_personal_training:0 "Personal Training"
+  SOL_reward_loyal:0 "Reward the Loyal"
+  SOL_arbitrary_judgement:0 "Arbitrary Judgements"
+  SOL_solidify_merger:0 "Solidify Merger"
+  SOL_suns_son:0 "The Sun's Son"
+  SOL_judge_jury_executioner:0 "Judge, Jury, Executioner"
+  SOL_take_charge:0 "Take Personal Charge"
+  SOL_successor_question:0 "The Question of a Successor"
+  SOL_Imperium_Solis:0 "Imperium Solaris"
+
+  ###Events###
+  ###Industry Tree Events###
+  solarreworked.40.t:0 "An Offer that Can't be Refused"
+  solarreworked.40.d:0 "Daybreaker sipped on her tea.\n\n"I can't believe that I'm being subjected to such an indignity!" her guest protested as he squirmed and fumed across the table from her. She merely smiled. As he glowered at her, she sipped again on her tea and then daintily set it aside, next to a large stack of tomes that had been placed on the right side of the table.\n\n"Chancellor Neighsay," she began, her voice dripping with false understanding, "I can completely see your point of view, but—" she shrugged "—I'm afraid that I will have to be insistent."\n\nNeighsay, his cyan eyes burning with fury, quivered and shook with rage. While his cheeks turned a deep shade of purple, he snarled, "I will NOT see the EEA turned into nothing more than a mouthpiece for whatever propaganda you purport to be scientific fact! We have standards! We have codes! We have—"\n\n"Almost no funding left," Daybreaker interjected, as she wrote something down on a napkin near her tea. She stuck out her tongue thoughtfully. "By my quick and dirty math, I'd say... you're at approximately... oh, five percent funding as when you entered." When she stated that, she sneered when he gagged in shock and his eyes went wide.\n\n"That's preposterous! I was assured—"\n\n"You were assured nothing! We met to discuss the new EEA curriculum, and how to properly educate our ponies, but you, sadly, believed that it was 'propaganda' and 'brainwashing'." She clicked her tongue. "It'd be such a shame that you'll be remembered as the last Chairpony of the EEA, and the one that led to its demise." Pursing her lips in an expression of mock compassion. "So sad," she pouted.\n\n"B-But I shall not—"\n\n"And that's four percent remaining."\n\n"Y-You can't—"\n\n"Three percent."\n\n"T-These are nothing but—"\n\n"Two percent."\n\n"Fine! Fine!" Neighsay screamed, throwing himself against the table, which made it rattle and spill tea onto his impeccably clean, red tunic. "I will implement the new curriculum! I can't have my legacy destroyed!"\n\nStaying silent for a moment, Daybreaker grinned. She sipped on her tea."
+  solarreworked.40.a:0 "Good pet."

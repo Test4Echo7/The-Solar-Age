@@ -3,10 +3,26 @@ add_namespace = solar_god_empress
 add_namespace = solar_self
 add_namespace = solar_fallen_hero
 
+country_event = { #Daybreaker meets with Neighsay, whom she has summoned in order to discuss how to best adjust the curriculum of the EEA, since it needs to be updated to proper, Imperial standards, and she threatens him with defunding if he doesn't comply, which eventually breaks him.
+    id = solarreworked.40
+    title = solarreworked.40.t
+    desc = solarreworked.40.d
+    picture = GFX_event_canterlot
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.40"}
+
+    is_triggered_only = yes
+
+    option = { #Good pet.
+        name = solarreworked.40.a
+        #Idea here
+    }
+}
+
 country_event = {
     id = solarreworked.50
     title = solarreworked.50.t
     desc = solarreworked.50.d
+    picture = GFX_event_palace_hall
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.50"}
 
     is_triggered_only = yes
@@ -25,6 +41,7 @@ country_event = {
     id = solarreworked.51
     title = solarreworked.51.t
     desc = solarreworked.51.d
+    picture = GFX_event_luna_castle
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.51"}
 
     is_triggered_only = yes

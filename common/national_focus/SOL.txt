@@ -25,7 +25,7 @@ focus_tree = {
 	shared_focus = eqs_prevent_the_vote
 
 
-	shared_focus = SOL_Imperium_Solis
+	#shared_focus = SOL_Imperium_Solis
 
 	#shared_focus = SOL_twilight_ascend
 
@@ -71,7 +71,7 @@ focus_tree = {
 	###### Politics #######################
 	#################################################
 
-	shared_focus = SOL_Imperium_Solis
+	#shared_focus = SOL_Imperium_Solis
 
 	#shared_focus = SOL_twilight_ascend
 
@@ -89,46 +89,46 @@ focus_tree = {
 
 }
 
-shared_focus = {
-	id = SOL_Imperium_Solis
-	icon = GFX_goal_imperium_solem
-	available = {
-		is_subject = no
-		has_DB_ruler = yes 
-	}
-	#bypass = {}
-	cost = 7
-	ai_will_do = {
-		factor = 200
-	}
-	allow_branch = {
-		is_EQS_SOL = yes
-	}
-	x = 4
-	y = 0
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_Imperium_Solis"
-		add_political_power = 200
-		add_stability = 0.25
-		effect_tooltip = {
-			every_enemy_country = {
-				add_ideas = SOL_enemy_debuff_idea
-			}
-		}
-		hidden_effect = {
-			every_enemy_country = {
-				add_ideas = SOL_enemy_debuff_idea
-			}
-		}
-		if = {
-			limit = {
-				is_faction_leader = no
-			}
-			create_faction = "SOL_faction"
-		}
-	}
-	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
-}
+#shared_focus = {
+#	id = SOL_Imperium_Solis
+#	icon = GFX_goal_imperium_solem
+#	available = {
+#		is_subject = no
+#		has_DB_ruler = yes
+#	}
+#	#bypass = {}
+#	cost = 7
+#	ai_will_do = {
+#		factor = 200
+#	}
+#	allow_branch = {
+#		is_EQS_SOL = yes
+#	}
+#	x = 4
+#	y = 0
+#	completion_reward = {
+#		log = "[GetDateText]: [Root.GetName]: Focus SOL_Imperium_Solis"
+#		add_political_power = 200
+#		add_stability = 0.25
+#		effect_tooltip = {
+#			every_enemy_country = {
+#				add_ideas = SOL_enemy_debuff_idea
+#			}
+#		}
+#		hidden_effect = {
+#			every_enemy_country = {
+#				add_ideas = SOL_enemy_debuff_idea
+#			}
+#		}
+#		if = {
+#			limit = {
+#				is_faction_leader = no
+#			}
+#			create_faction = "SOL_faction"
+#		}
+#	}
+#	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
+#}
 
 shared_focus = {
 	id = SOL_empress_protector
@@ -1767,7 +1767,7 @@ shared_focus = {
 	ai_will_do = {
 		factor = 300
 	}
-	x = 19
+	x = 4
 	y = -1
 	allow_branch = {
 		is_EQS_SOL = yes

@@ -1830,9 +1830,9 @@ characters={
 			desc = EQS_sunset_shimmer_desc
 			visible = {
 				has_country_flag = EQS_sunset_shimmer_arrived
-				NOT = {
-					has_country_flag = SOL_harmonic_commanders_leave
-				}
+				#NOT = {
+				#	has_country_flag = SOL_harmonic_commanders_leave
+				#}
 			}
 		}
 	}

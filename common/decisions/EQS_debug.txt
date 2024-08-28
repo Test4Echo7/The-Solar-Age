@@ -36,4 +36,21 @@ EQS_debug_category = {
             }
         }
     }
+    EQS_based_shimmer = {
+        allowed = {
+            tag = EQS
+        }
+        complete_effect = {
+            EQS_sunset_shimmer = {
+                set_character_name = SOL_sunset_shimmer_new_name
+                set_portraits = {
+                    army = {
+                        small = "gfx/interface/ideas/advisors/EQS/sunset_shimmer_new.tga"
+                        large = "gfx/leaders/EQS/Sunset_new.tga"
+                    }
+                }
+            }
+            set_country_flag = EQS_sunset_shimmer_arrived
+        }
+    }
 }

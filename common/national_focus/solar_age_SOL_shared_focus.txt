@@ -6,7 +6,7 @@
 shared_focus = {
     id = SOL_sunset_awaken
     icon = GFX_goal_sunrise_sparkle
-    x = 21
+    x = 6
     y = -1
 
     cost = 10
@@ -49,7 +49,7 @@ shared_focus = {
 	ai_will_do = {
 		factor = 300
 	}
-	x = 24
+	x = 18
 	y = -1
 	available = {
 		eqs_has_civil_war = yes
@@ -528,6 +528,7 @@ shared_focus = {
 ###New Politics! We love Democracy###
 shared_focus = {
     id = SOL_waking_dawn_star
+    icon = GFX_goal_imperium_solem
     x = 10
     y = -1
     available = {
@@ -575,7 +576,7 @@ shared_focus = {
 
 shared_focus = {
     id = SOL_fire_ministers
-    x = -4
+    x = -2
     y = 1
     relative_position_id = SOL_waking_dawn_star
 
@@ -595,7 +596,7 @@ shared_focus = {
 
 shared_focus = {
     id = SOL_bluebloods_fealty
-    x = 4
+    x = 2
     y = 1
     relative_position_id = SOL_waking_dawn_star
 
@@ -608,7 +609,355 @@ shared_focus = {
 
     completion_reward = {
         log = "[GetDateText]: [Root.GetName]: Focus SOL_bluebloods_fealty"
-        ###Daybreaker gets hold of Blueblood in his war tent, and appears as him a fiery demon, which makes him scared enough to basically prostrate himself to her, and swear that he will serve her
+        ###Daybreaker gets hold of Blueblood in his war tent, and appears to him as a fiery demon, which makes him scared enough to basically prostrate himself to her, and swear that he will serve her
     }
     ai_will_do = { factor = 200 }
+}
+
+shared_focus = {
+    id = SOL_appoint_committee
+    x = -2
+    y = 1
+    relative_position_id = SOL_fire_ministers
+
+    cost = 4
+    prerequisite = { focus = SOL_fire_ministers }
+    available = {
+        is_subject = no
+        has_DB_ruler = yes
+    }
+
+    completion_reward = {
+        log = "[GetDateText]: [Root.GetName]: Focus SOL_appoint_committee"
+        #Idea here
+    }
+    ai_will_do = { factor = 150 }
+}
+
+shared_focus = {
+    id = SOL_answer_crimes
+    x = 0
+    y = 1
+    relative_position_id = SOL_fire_ministers
+
+    cost = 4
+    prerequisite = { focus = SOL_fire_ministers }
+    available = {
+        is_subject = no
+        has_DB_ruler = yes
+    }
+
+    completion_reward = {
+        log = "[GetDateText]: [Root.GetName]: Focus SOL_answer_crimes"
+        ###Event of soldiers being sent in to crack down on a large series of union protests and organized riots in Fillydelphia, after the Fillydelphian mayor also rebelled against Daybreaker, with casualties in the streets once they are attacked
+    }
+    ai_will_do = { factor = 200 }
+}
+
+shared_focus = {
+    id = SOL_sweeping_chaff
+    x = -1
+    y = 1
+    relative_position_id = SOL_bluebloods_fealty
+
+    cost = 4
+    prerequisite = { focus = SOL_bluebloods_fealty }
+    available = {
+        is_subject = no
+        has_DB_ruler = yes
+    }
+
+    completion_reward = {
+        log = "[GetDateText]: [Root.GetName]: Focus SOL_sweeping_chaff"
+        ###Event overviewing how the loyal aspects of the military went in and started to purge some of the officers and rank and file, which has led to extreme fear within the remaining soldiers, as it should be
+    }
+    ai_will_do = { factor = 200 }
+}
+
+shared_focus = {
+    id = SOL_first_feelers
+    x = 0
+    y = 1
+    relative_position_id = SOL_appoint_committee
+
+    cost = 5
+    prerequisite = { focus = SOL_appoint_committee }
+    available = {
+        is_subject = no
+        has_DB_ruler = yes
+    }
+
+    completion_reward = {
+        log = "[GetDateText]: [Root.GetName]: Focus SOL_first_feelers"
+        #Advisors here
+    }
+    ai_will_do = { factor = 150 }
+}
+
+shared_focus = {
+    id = SOL_break_dissent
+    x = 2
+    y = 2
+    relative_position_id = SOL_fire_ministers
+
+    cost = 5
+    prerequisite = { focus = SOL_fire_ministers }
+    available = {
+        is_subject = no
+        has_DB_ruler = yes
+    }
+
+    completion_reward = {
+        log = "[GetDateText]: [Root.GetName]: Focus SOL_break_dissent"
+        ###Event of a news reporter who is on the air on the radio being barged into by some of the military, who are shutting down the station, as they have been determined to have been broadcasting "anti-Harmony propaganda" and are hauled away, with some final statements by a soldier
+    }
+    ai_will_do = { factor = 200 }
+}
+
+shared_focus = {
+    id = SOL_plants_in_chaos
+    x = 1
+    y = 1
+    relative_position_id = SOL_sweeping_chaff
+
+    cost = 5
+    prerequisite = { focus = SOL_sweeping_chaff }
+    available = {
+        is_subject = no
+        has_DB_ruler = yes
+    }
+
+    completion_reward = {
+        log = "[GetDateText]: [Root.GetName]: Focus SOL_plants_in_chaos"
+        #Idea reduction here
+        ###Maybe event of a plant in one of the suspect divisions coming across some truly damning evidence, and barely getting away with it to report
+    }
+    ai_will_do = { factor = 150 }
+}
+
+shared_focus = {
+    id = SOL_personal_training
+    x = 2
+    y = 2
+    relative_position_id = SOL_bluebloods_fealty
+
+    cost = 5
+    prerequisite = { focus = SOL_bluebloods_fealty }
+    available = {
+        is_subject = no
+        has_DB_ruler = yes
+    }
+
+    completion_reward = {
+        log = "[GetDateText]: [Root.GetName]: Focus SOL_personal_training"
+        ###Daybreaker meets with a tired Blueblood, whom she has been training for the last day, the entire day, without her breaking a sweat, and he is finally starting to get some of the ideas behind what she is teaching him, despite the punishments for failure, which include improving his magic, awareness, and decision making
+    }
+    ai_will_do = { factor = 100 }
+}
+
+shared_focus = {
+    id = SOL_reward_loyal
+    x = -1
+    y = 1
+    relative_position_id = SOL_first_feelers
+
+    cost = 5
+    prerequisite = { focus = SOL_first_feelers }
+    available = {
+        is_subject = no
+        has_DB_ruler = yes
+    }
+
+    completion_reward = {
+        log = "[GetDateText]: [Root.GetName]: Focus SOL_reward_loyal"
+        ###Daybreaker meets privately with Raven, who is still so busy she doesn't really care that Daybreaker is now leading versus Celestia, since she is still coordinating most of Daybreaker's life, and Daybreaker rewards her for her steadfast loyalty with a new position, although she will still need to be Daybreaker's assistant, which annoys Raven
+    }
+    ai_will_do = { factor = 100 }
+}
+
+shared_focus = {
+    id = SOL_arbitrary_judgement
+    x = 0
+    y = 2
+    relative_position_id = SOL_answer_crimes
+
+    cost = 5
+    prerequisite = { focus = SOL_answer_crimes }
+    mutually_exclusive = { focus = SOL_solidify_merger }
+    available = {
+        is_subject = no
+        has_DB_ruler = yes
+    }
+
+    completion_reward = {
+        log = "[GetDateText]: [Root.GetName]: Focus SOL_arbitrary_judgement"
+        #Reduce ideas
+        ###Maybe event of Daybreaker going rapidfire through some different trials, all of which she proclaims as guilty, even though they want to plead their case
+    }
+    ai_will_do = { factor = 200 }
+}
+
+shared_focus = {
+    id = SOL_solidify_merger
+    x = 1
+    y = 1
+    relative_position_id = SOL_break_dissent
+
+    cost = 5
+    prerequisite = { focus = SOL_break_dissent }
+    prerequisite = { focus = SOL_sweeping_chaff }
+    mutually_exclusive = { focus = SOL_arbitrary_judgement }
+    available = {
+        is_subject = no
+        has_DB_ruler = yes
+    }
+
+    completion_reward = {
+        log = "[GetDateText]: [Root.GetName]: Focus SOL_solidify_merger"
+        #Idea here
+        #Reduce ideas
+        ###Maybe event of a couple of mid-level pencil pushers trying to navigate how much more confusing the laws have become, while at the same time, seeing how effective they are, since a couple of ponies just get taken out and shot for breaking a law
+    }
+    ai_will_do = { factor = 300 }
+}
+
+shared_focus = {
+    id = SOL_suns_son
+    x = 0
+    y = 1
+    relative_position_id = SOL_personal_training
+
+    cost = 5
+    prerequisite = { focus = SOL_personal_training }
+    available = {
+        is_subject = no
+        has_DB_ruler = yes
+    }
+
+    completion_reward = {
+        log = "[GetDateText]: [Root.GetName]: Focus SOL_suns_son"
+        ###Daybreaker oversees his last test, which is choosing between her, and choosing between one of his old suitors, of whom she found pictures in his quarters, and how it is potentially a distraction, and he ultimately chooses Daybreaker, which means, since she was also a staunch anti-Daybreaker pony, she gets to be executed by him, in cold blood
+    }
+    ai_will_do = { factor = 100 }
+}
+
+shared_focus = {
+    id = SOL_judge_jury_executioner
+    x = 1
+    y = 2
+    relative_position_id = SOL_first_feelers
+
+    cost = 5
+    prerequisite = { focus = SOL_first_feelers }
+    prerequisite = { focus = SOL_arbitrary_judgement }
+    available = {
+        is_subject = no
+        has_DB_ruler = yes
+    }
+    bypass = {
+        AND = {
+            OR = {
+                NOT = { has_war_with = CHN }
+                NOT = { country_exists = CHN }
+            }
+            OR = {
+                NOT = { has_war_with = NLR }
+                NOT = { country_exists = NLR }
+            }
+        }
+    }
+
+    completion_reward = {
+        log = "[GetDateText]: [Root.GetName]: Focus SOL_judge_jury_executioner"
+        #Idea here
+    }
+    ai_will_do = { factor = 150 }
+}
+
+shared_focus = {
+    id = SOL_take_charge
+    x = 2
+    y = 1
+    relative_position_id = SOL_arbitrary_judgement
+
+    cost = 5
+    prerequisite = {
+        focus = SOL_arbitrary_judgement
+        focus = SOL_solidify_merger
+    }
+    available = {
+        is_subject = no
+        has_DB_ruler = yes
+    }
+
+    completion_reward = {
+        log = "[GetDateText]: [Root.GetName]: Focus SOL_take_charge"
+        #Assign field marshal here
+        ###Maybe short event of her suiting up for battle with the enemies of the Empire, as she realizes that her ponies are forever lost without her, and they will be guided like the sheep they are
+    }
+    ai_will_do = { factor = 500 }
+}
+
+shared_focus = {
+    id = SOL_successor_question
+    x = 1
+    y = 2
+    relative_position_id = SOL_plants_in_chaos
+
+    cost = 5
+    prerequisite = { focus = SOL_plants_in_chaos }
+    prerequisite = { focus = SOL_solidify_merger }
+    available = {
+        is_subject = no
+        has_DB_ruler = yes
+    }
+
+    completion_reward = {
+        log = "[GetDateText]: [Root.GetName]: Focus SOL_successor_question"
+        ###Event of discussing that there is the unlikely, and disliked, event that if Daybreaker is either wounded and indisposed, or killed, that there needs to be somepony who fills her role; there will only be Raven and Blueblood to choose from initially, but Sunrise and Dawnbreak open up when they become corrupted, if taken later
+    }
+    ai_will_do = { factor = 100 }
+}
+
+shared_focus = {
+	id = SOL_Imperium_Solis
+	icon = GFX_goal_imperium_solem
+	available = {
+		is_subject = no
+		has_DB_ruler = yes
+	}
+	#bypass = {}
+	cost = 7
+	ai_will_do = {
+		factor = 200
+	}
+	allow_branch = {
+		is_EQS_SOL = yes
+	}
+	x = 0
+	y = 1
+	relative_position_id = SOL_take_charge
+	prerequisite = { focus = SOL_take_charge }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_Imperium_Solis"
+		add_political_power = 200
+		add_stability = 0.25
+		effect_tooltip = {
+			every_enemy_country = {
+				add_ideas = SOL_enemy_debuff_idea
+			}
+		}
+		hidden_effect = {
+			every_enemy_country = {
+				add_ideas = SOL_enemy_debuff_idea
+			}
+		}
+		if = {
+			limit = {
+				is_faction_leader = no
+			}
+			create_faction = "SOL_faction"
+		}
+	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 }
