@@ -2257,4 +2257,19 @@ ideas = {
 			}
 		}
 	}
+
+	###Solar Age###
+	hidden_ideas = {
+		EQS_mental_decline = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				power_balance_weekly = -0.001
+			}
+		}
+	}
 }
