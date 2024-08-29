@@ -999,6 +999,18 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_empress_mother"
 		add_country_leader_trait = daybreaker_mother
 		custom_effect_tooltip = super_combat_abilities_tt
+		hidden_effect = {
+			EQS_princess_celestia = {
+				set_portraits = {
+					civilian = {
+						large = "gfx/leaders/EQS/Daybreaker_canon.tga"
+					}
+					army = {
+						large = "gfx/leaders/EQS/Daybreaker_canon.tga"
+					}
+				}
+			}
+		}
 		country_event = {
 			id = solarempire.45
 			days = 7
@@ -1039,16 +1051,6 @@ shared_focus = {
 		add_country_leader_trait = daybreaker_god
 		custom_effect_tooltip = super_combat_abilities_tt
 		hidden_effect = {
-			EQS_princess_celestia = {
-				set_portraits = {
-					civilian = {
-						large = "gfx/leaders/SOL/Daybreaker_god.tga"
-					}
-					army = {
-						large = "gfx/leaders/SOL/Daybreaker_god.tga"
-					}
-				}
-			}
 			set_country_leader_ideology = falangism
 			if = {
 				limit = {
@@ -1136,10 +1138,10 @@ shared_focus = {
 			EQS_princess_celestia = {
 				set_portraits = {
 					civilian = {
-						large = "gfx/leaders/SOL/Daybreaker.tga"
+						large = "gfx/leaders/EQS/Daybreaker_savior.tga"
 					}
 					army = {
-						large = "gfx/leaders/SOL/Daybreaker.tga"
+						large = "gfx/leaders/EQS/Daybreaker_savior.tga"
 					}
 				}
 			}
