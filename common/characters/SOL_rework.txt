@@ -1,0 +1,201 @@
+characters = {
+    EQS_zephyr_breeze = {
+        name = EQS_zephyr_breeze
+
+        corps_commander = {
+            traits = { pony_race_trait gifted }
+            skill = 1
+            attack_skill = 1
+            defense_skill = 1
+            planning_skill = 1
+            logistics_skill = 1
+            visible = {
+                has_character_flag = SOL_zephyr_enlisted
+            }
+        }
+    }
+    EQS_Novus_Flux = {
+		name = EQS_Novus_Flux_name
+		gender = female
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EQS/Novus_Flux.tga"
+			}
+			army = {
+				large = "gfx/leaders/EQS/Novus_Flux.tga"
+				#small = "GFX_idea_EQS_novus_flux"
+			}
+		}
+		corps_commander = {
+			traits = { pony_race_trait infantry_leader }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 1
+			visible = {
+                is_EQS_SOL = yes
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = novus_flux
+			cost = 100
+			ledger = army
+			allowed = {
+				original_tag = EQS
+			}
+			visible = {
+				is_EQS_SOL = yes
+			}
+			available = {
+				is_EQS_SOL = yes
+			}
+			traits = { army_regrouping_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	EQS_Nova_Glow = {
+		name = EQS_Nova_Glow_name
+		gender = female
+		portraits = {
+			army = {
+				large = "gfx/leaders/EQS/Nova_Glow.tga"
+				#small = "GFX_idea_EQS_nova_glow"
+			}
+		}
+		corps_commander = {
+			traits = { pony_race_trait harsh_leader }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+			visible = {
+				is_EQS_SOL = yes
+			}
+		}
+	}
+	EQS_Quasar_Pulse = {
+		name = EQS_Quasar_Pulse_name
+		gender = female
+		portraits ={
+			army = {
+				large = "gfx/leaders/EQS/Quasar_Pulse.tga"
+				#small = "GFX_idea_quasar_pulse"
+			}
+		}
+		corps_commander = {
+			traits = { pony_race_trait harsh_leader }
+			skill = 2
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			visible = {
+				is_EQS_SOL = yes
+			}
+		}
+	}
+	EQS_Stellar_Breeze = {
+		name = EQS_Stellar_Breeze_name
+		gender = female
+		portraits = {
+			civilian = {
+				#small = "GFX_idea_EQS_stellar_breeze"
+			}
+			army = {
+				large = "gfx/leaders/EQS/Stellar_Breeze.tga"
+			}
+		}
+		#corps_commander = {
+		#	traits = { solaris_adoratio pony_race_trait overworked_secretary } ###Have a trait called overworked_secretary and say how much pressure it puts on her from Sunset, which gives -10% experience gain, -5% recovery, but +5% organization and +3 division capacity
+		#	skill = 2
+		#	attack_skill = 1
+		#	defense_skill = 1
+		#	planning_skill = 3
+		#	logistics_skill = 2
+		#	visible = {
+		#		if = {
+		#			limit = {
+		#				original_tag = EQS
+		#			}
+		#			has_country_flag = redeemed_solarist_generals
+		#		}
+		#	}
+		#}
+		advisor = {
+			slot = political_advisor
+			idea_token = stellar_breeze
+
+			allowed = {
+				original_tag = EQS
+			}
+			visible = { is_EQS_SOL = yes }
+			traits = { silent_workhorse }
+		}
+	}
+	EQS_Fidelis_Flamma = {
+		name = EQS_Fidelis_Flamma_name
+		gender = female
+		portraits = {
+			army = {
+				large = "gfx/leaders/EQS/Fidelis_Flamma.tga"
+				#small = "GFX_idea_EQS_fidelis_flamma"
+			}
+		}
+		corps_commander = {
+            traits = { pony_race_trait heat_specialist }
+            skill = 2
+            attack_skill = 3
+            defense_skill = 1
+            planning_skill = 1
+            logistics_skill = 2
+            visible = {
+                is_EQS_SOL = yes
+            }
+		}
+	}
+	EQS_burning_plage = {
+        name = EQS_burning_plage
+        gender = female
+        portraits = {
+            army = {
+                large = "gfx/leaders/EQS/Burning_Plage.tga"
+            }
+        }
+        corps_commander = {
+            traits = { pony_race_trait organizer }
+            skill = 3
+            attack_skill = 2
+            defense_skill = 3
+            planning_skill = 1
+            logistics_skill = 4
+            visible = { is_EQS_SOL = yes }
+        }
+	}
+	EQS_Steel_Sickle = {
+		name = EQS_Steel_Sickle_name
+		gender = female
+		portraits = {
+			army = {
+				large = "gfx/leaders/EQS/Steel_Sickle.tga"
+				#small = "GFX_idea_EQS_steel_sickle"
+			}
+		}
+		corps_commander = {
+            traits = { pony_race_trait old_guard }
+            skill = 2
+            attack_skill = 1
+            defense_skill = 3
+            planning_skill = 2
+            logistics_skill = 1
+            visible = {
+                is_EQS_SOL = yes
+            }
+		}
+	}
+}

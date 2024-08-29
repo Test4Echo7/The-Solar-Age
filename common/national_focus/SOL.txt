@@ -733,214 +733,214 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_RESISTANCE FOCUS_FILTER_POLITICAL }
 }
 
-shared_focus = {
-	id = SOL_Lux_et_Tenebris
-	icon = GFX_goal_lux_in_tenebris
-	prerequisite = {
-		focus = SOL_Solar_Cult
-		focus = SOL_Maternal_Guidiance
-	}
-	available = {
-		is_subject = no
-		has_DB_ruler = yes
-		if = {
-			limit = {
-				has_completed_focus = SOL_empress_mother
-			}
-			NOT = {
-				has_completed_focus = SOL_Imperial_Corporation_Council
-			}
-		}
-	}
-	#bypass = {}
-	cost = 10
-	ai_will_do = {
-		factor = 100
-	}
-	relative_position_id = SOL_Imperium_Solis
-	x = 2
-	y = 3
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_Lux_et_Tenebris"
-		if = {
-			limit = {
-				has_idea = unicorn_academy
-			}
-			swap_ideas = {
-				add_idea = SOL_Lux_et_Tenebris_idea
-				remove_idea = unicorn_academy
-			}
-		}
-		else_if = {
-			limit = {
-				has_idea = unicorn_academy1
-			}
-			swap_ideas = {
-				add_idea = SOL_Lux_et_Tenebris_idea1
-				remove_idea = unicorn_academy1
-			}
-		}
-		else_if = {
-			limit = {
-				has_idea = unicorn_academy2
-			}
-			swap_ideas = {
-				add_idea = SOL_Lux_et_Tenebris_idea2
-				remove_idea = unicorn_academy2
-			}
-		}
-		else = {
-			add_ideas = SOL_Lux_et_Tenebris_idea0
-		}
-		add_tech_bonus = {
-			name = unicorn_bonus2
-			bonus = 1
-			ahead_reduction = 2
-			category = magical_tech
-		}
-	}
-	search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
-}
+#shared_focus = {
+#	id = SOL_Lux_et_Tenebris
+#	icon = GFX_goal_lux_in_tenebris
+#	prerequisite = {
+#		focus = SOL_Solar_Cult
+#		focus = SOL_Maternal_Guidiance
+#	}
+#	available = {
+#		is_subject = no
+#		has_DB_ruler = yes
+#		if = {
+#			limit = {
+#				has_completed_focus = SOL_empress_mother
+#			}
+#			NOT = {
+#				has_completed_focus = SOL_Imperial_Corporation_Council
+#			}
+#		}
+#	}
+#	#bypass = {}
+#	cost = 10
+#	ai_will_do = {
+#		factor = 100
+#	}
+#	relative_position_id = SOL_Imperium_Solis
+#	x = 2
+#	y = 3
+#	completion_reward = {
+#		log = "[GetDateText]: [Root.GetName]: Focus SOL_Lux_et_Tenebris"
+#		if = {
+#			limit = {
+#				has_idea = unicorn_academy
+#			}
+#			swap_ideas = {
+#				add_idea = SOL_Lux_et_Tenebris_idea
+#				remove_idea = unicorn_academy
+#			}
+#		}
+#		else_if = {
+#			limit = {
+#				has_idea = unicorn_academy1
+#			}
+#			swap_ideas = {
+#				add_idea = SOL_Lux_et_Tenebris_idea1
+#				remove_idea = unicorn_academy1
+#			}
+#		}
+#		else_if = {
+#			limit = {
+#				has_idea = unicorn_academy2
+#			}
+#			swap_ideas = {
+#				add_idea = SOL_Lux_et_Tenebris_idea2
+#				remove_idea = unicorn_academy2
+#			}
+#		}
+#		else = {
+#			add_ideas = SOL_Lux_et_Tenebris_idea0
+#		}
+#		add_tech_bonus = {
+#			name = unicorn_bonus2
+#			bonus = 1
+#			ahead_reduction = 2
+#			category = magical_tech
+#		}
+#	}
+#	search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
+#}
 
-shared_focus = {
-	id = SOL_Mandatory_Temple_Attendance
-	icon = GFX_goal_solar_church
-	prerequisite = {
-		focus = SOL_Imperial_Inquisition
-	}
-	available = {
-		is_subject = no
-		has_DB_ruler = yes
-	}
-	#bypass = {}
-	cost = 10
-	ai_will_do = {
-		factor = 100
-	}
-	relative_position_id = SOL_Imperium_Solis
-	x = 4
-	y = 4
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_Mandatory_Temple_Attendance"
-		swap_ideas = {
-			add_idea = SOL_Solar_Cult_idea1
-			remove_idea = SOL_Solar_Cult_idea
-		}
-	}
-	search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
-}
+#shared_focus = {
+#	id = SOL_Mandatory_Temple_Attendance
+#	icon = GFX_goal_solar_church
+#	prerequisite = {
+#		focus = SOL_Imperial_Inquisition
+#	}
+#	available = {
+#		is_subject = no
+#		has_DB_ruler = yes
+#	}
+#	#bypass = {}
+#	cost = 10
+#	ai_will_do = {
+#		factor = 100
+#	}
+#	relative_position_id = SOL_Imperium_Solis
+#	x = 4
+#	y = 4
+#	completion_reward = {
+#		log = "[GetDateText]: [Root.GetName]: Focus SOL_Mandatory_Temple_Attendance"
+#		swap_ideas = {
+#			add_idea = SOL_Solar_Cult_idea1
+#			remove_idea = SOL_Solar_Cult_idea
+#		}
+#	}
+#	search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
+#}
 
-shared_focus = {
-	id = SOL_State_Personified
-	icon = GFX_goal_state_personified
-	prerequisite = {
-		focus = SOL_Mandatory_Temple_Attendance
-		focus = SOL_Harmony_through_Order
-	}
-	available = {
-		is_subject = no
-		has_DB_ruler = yes
-		if = {
-			limit = {
-				has_completed_focus = SOL_empress_mother
-			}
-			NOT = {
-				has_completed_focus = SOL_legion_of_labor
-			}
-		}
-	}
-	#bypass = {}
-	cost = 10
-	ai_will_do = {
-		factor = 100
-	}
-	relative_position_id = SOL_Imperium_Solis
-	x = 2
-	y = 5
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_State_Personified"
-		add_stability = 0.15
-		add_political_power = 250
-	}
-	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
-}
+#shared_focus = {
+#	id = SOL_State_Personified
+#	icon = GFX_goal_state_personified
+#	prerequisite = {
+#		focus = SOL_Mandatory_Temple_Attendance
+#		focus = SOL_Harmony_through_Order
+#	}
+#	available = {
+#		is_subject = no
+#		has_DB_ruler = yes
+#		if = {
+#			limit = {
+#				has_completed_focus = SOL_empress_mother
+#			}
+#			NOT = {
+#				has_completed_focus = SOL_legion_of_labor
+#			}
+#		}
+#	}
+#	#bypass = {}
+#	cost = 10
+#	ai_will_do = {
+#		factor = 100
+#	}
+#	relative_position_id = SOL_Imperium_Solis
+#	x = 2
+#	y = 5
+#	completion_reward = {
+#		log = "[GetDateText]: [Root.GetName]: Focus SOL_State_Personified"
+#		add_stability = 0.15
+#		add_political_power = 250
+#	}
+#	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+#}
 
-shared_focus = {
-	id = SOL_Faith_Sacrifice_Worship
-	icon = GFX_goal_solar_worship_sacrifice
-	prerequisite = {
-		focus = SOL_Mandatory_Temple_Attendance
-	}
-	available = {
-		is_subject = no
-		has_DB_ruler = yes
-	}
-	#bypass = {}
-	cost = 10
-	ai_will_do = {
-		factor = 40
-	}
-	relative_position_id = SOL_Imperium_Solis
-	x = 4
-	y = 5
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_Faith_Sacrifice_Worship"
-		swap_ideas = {
-			add_idea = SOL_Solar_Cult_idea2
-			remove_idea = SOL_Solar_Cult_idea1
-		}
-		custom_effect_tooltip = SOL_Faith_Sacrifice_Worship_tp
-		hidden_effect = {
-			set_technology = {
-				popup = no
-				berserker_charge = 1
-			}
-		}
-		hidden_effect = {
-			set_rule = {
-				can_use_kamikaze_pilots = yes
-			}
-			set_country_flag = kamikaze_flag
-		}
-		custom_effect_tooltip = kamikaze_focus_tooltip
-	}
-	search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
-}
+#shared_focus = {
+#	id = SOL_Faith_Sacrifice_Worship
+#	icon = GFX_goal_solar_worship_sacrifice
+#	prerequisite = {
+#		focus = SOL_Mandatory_Temple_Attendance
+#	}
+#	available = {
+#		is_subject = no
+#		has_DB_ruler = yes
+#	}
+#	#bypass = {}
+#	cost = 10
+#	ai_will_do = {
+#		factor = 40
+#	}
+#	relative_position_id = SOL_Imperium_Solis
+#	x = 4
+#	y = 5
+#	completion_reward = {
+#		log = "[GetDateText]: [Root.GetName]: Focus SOL_Faith_Sacrifice_Worship"
+#		swap_ideas = {
+#			add_idea = SOL_Solar_Cult_idea2
+#			remove_idea = SOL_Solar_Cult_idea1
+#		}
+#		custom_effect_tooltip = SOL_Faith_Sacrifice_Worship_tp
+#		hidden_effect = {
+#			set_technology = {
+#				popup = no
+#				berserker_charge = 1
+#			}
+#		}
+#		hidden_effect = {
+#			set_rule = {
+#				can_use_kamikaze_pilots = yes
+#			}
+#			set_country_flag = kamikaze_flag
+#		}
+#		custom_effect_tooltip = kamikaze_focus_tooltip
+#	}
+#	search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
+#}
 
-shared_focus = {
-	id = SOL_She_Who_Raises_the_Sun
-	icon = GFX_goal_solar_the_one_who_raises_the_sun
-	prerequisite = {
-		focus = SOL_Faith_Sacrifice_Worship
-	}
-	available = {
-		is_subject = no
-		has_DB_ruler = yes
-	}
-	#bypass = {}
-	cost = 10
-	ai_will_do = {
-		factor = 100
-	}
-	relative_position_id = SOL_Imperium_Solis
-	x = 4
-	y = 6
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_She_Who_Raises_the_Sun"
-		add_stability = 0.1
-		swap_ruler_traits = {
-			add = daybreaker_god2
-			remove = daybreaker_god
-		}
-	}
-	search_filters = { FOCUS_FILTER_STABILITY }
-}
+#shared_focus = {
+#	id = SOL_She_Who_Raises_the_Sun
+#	icon = GFX_goal_solar_the_one_who_raises_the_sun
+#	prerequisite = {
+#		#focus = SOL_Faith_Sacrifice_Worship
+#	}
+#	available = {
+#		is_subject = no
+#		has_DB_ruler = yes
+#	}
+#	#bypass = {}
+#	cost = 10
+#	ai_will_do = {
+#		factor = 100
+#	}
+#	relative_position_id = SOL_Imperium_Solis
+#	x = 4
+#	y = 6
+#	completion_reward = {
+#		log = "[GetDateText]: [Root.GetName]: Focus SOL_She_Who_Raises_the_Sun"
+#		add_stability = 0.1
+#		swap_ruler_traits = {
+#			add = daybreaker_god2
+#			remove = daybreaker_god
+#		}
+#	}
+#	search_filters = { FOCUS_FILTER_STABILITY }
+#}
 
 shared_focus = {
 	id = SOL_reconquer_cry
 	icon = GFX_goal_solar_attack_cry
 	prerequisite = {
-		focus = SOL_She_Who_Raises_the_Sun
+		#focus = SOL_She_Who_Raises_the_Sun
 		focus = SOL_Empress_knows_Best
 		focus = SOL_Freedom_from_Fear
 	}
@@ -990,7 +990,7 @@ shared_focus = {
 	id = SOL_reconquer_stg
 	icon = GFX_goal_solar_attack_stg
 	prerequisite = {
-		focus = SOL_She_Who_Raises_the_Sun
+		#focus = SOL_She_Who_Raises_the_Sun
 		focus = SOL_Empress_knows_Best
 		focus = SOL_Freedom_from_Fear
 	}

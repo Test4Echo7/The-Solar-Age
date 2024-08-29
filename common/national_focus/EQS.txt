@@ -45,7 +45,7 @@ shared_focus = {
 	y = 0
 	offset = {
 		y = -1
-		x = -20
+		x = -21
 		trigger = { is_EQS_SOL = yes }
 	}
 	ai_will_do = { factor = 100 }
@@ -302,6 +302,9 @@ shared_focus = {
 	}
 	allow_branch = {
 		has_government = democratic
+		EQS_princess_celestia = {
+			NOT = { has_character_flag = EQS_celestia_is_db }
+		}
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_removesombra"
@@ -1057,7 +1060,7 @@ shared_focus = {
 	x = 24
 	y = 0
 	offset = {
-		x = -24
+		x = -25
 		y = -1
 		trigger = { is_EQS_SOL = yes }
 	}

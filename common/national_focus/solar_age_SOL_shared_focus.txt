@@ -958,6 +958,7 @@ shared_focus = {
 			}
 			create_faction = "SOL_faction"
 		}
+		set_cosmetic_tag = EQS_SOL
 	}
 	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 }
@@ -993,7 +994,7 @@ shared_focus = {
 		}
 	}
 	relative_position_id = SOL_Imperium_Solis
-	x = -12
+	x = -13
 	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_empress_mother"
@@ -1075,6 +1076,7 @@ shared_focus = {
 				days = 7
 			}
 		}
+		set_faction_name = SOL_romanophile_faction
 	}
 }
 
@@ -1096,6 +1098,623 @@ shared_focus = {
 		###Daybreaker hosts the first service of the now front and center Solaris Cultus, with the priestly duties done by Padlock Key, and she inaugarates the first service with a proclamation of her godhood, and that she will guide the world into a new era of light and peace
 	}
 	ai_will_do = { factor = 300 }
+}
+
+shared_focus = {
+	id = SOL_solaris_adoratio
+	x = -3
+	y = 1
+	relative_position_id = SOL_unveil_cultus
+
+	cost = 4
+	prerequisite = { focus = SOL_unveil_cultus }
+	available = {
+		has_global_flag = SOL_alpha_bitch_awoken
+		is_subject = no
+		has_DB_ruler = yes
+	}
+
+	completion = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_solaris_adoratio"
+		###In a grand ceremony, where she proclaims some of the highlights of Sunset's life, she proclaims that Sunset shall be the head of the worship branch of the Solaris Cultus, answering only to Padlock Key, and annoints her in a branding of fire on her shoulder that she is forever Daybreaker's
+	}
+	ai_will_do = { factor = 200 }
+}
+
+shared_focus = {
+	id = SOL_solaris_inquisitionis
+	x = 5
+	y = 2
+	relative_position_id = SOL_god_empress
+
+	cost = 4
+	prerequisite = { focus = SOL_god_empress }
+	available = {
+		has_global_flag = SOL_twilight_converted
+		is_subject = no
+		has_DB_ruler = yes
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_solaris_inquisitionis"
+		###Event of Sunset meeting privately with Daybreaker, who is pleased to offer Twilight an even better position than she had before, which will be the head inquisitor of the Solaris Inquisitionis, her holy inquisition, that will be used to keep Harmony and Order, which Twilight readily accepts, as she is worried that ponies don't understand Daybreaker's desires; it is close to a mother-daughter relationship kind of talk
+	}
+	ai_will_do = { factor = 250 }
+}
+
+shared_focus = {
+	id = SOL_suffer_not_heresy
+	x = -2
+	y = 1
+	relative_position_id = SOL_solaris_adoratio
+
+	cost = 5
+	prerequisite = { focus = SOL_solaris_adoratio }
+	available = {
+		has_global_flag = SOL_twilight_converted
+		is_subject = no
+		has_DB_ruler = yes
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_suffer_not_heresy"
+		###Follow some inquisitors as they barge into an office building that has been used for quite a while in Canterlot, declaring that every single pony has been declared a heretic after one was determined to work there, and taint the very labor they intend to do for the Empress, and since none of them reported on the heretic, they are all co-sinners, and will be cleansed with fire; one of the heads (Aurora) happily lights a pony on fire or the like as they try to flee, and sets the entire building on fire
+	}
+	ai_will_do = { factor = 100 }
+}
+
+shared_focus = {
+	id = SOL_Mandatory_Temple_Attendance
+	icon = GFX_goal_solar_church
+	prerequisite = {
+		focus = SOL_unveil_cultus
+	}
+	available = {
+		is_subject = no
+		has_DB_ruler = yes
+	}
+	#bypass = {}
+	cost = 5
+	ai_will_do = {
+		factor = 100
+	}
+	relative_position_id = SOL_unveil_cultus
+	x = 0
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_Mandatory_Temple_Attendance"
+		###Possibly event of somepony trying to get out of attending a temple service, which a cult member pushes them very hard to attend, to the point of basically flagging a soldier to come and haul them off, if they refuse to go, because they are clearly flirting with heresy
+		#swap_ideas = {
+		#	add_idea = SOL_Solar_Cult_idea1
+		#	remove_idea = SOL_Solar_Cult_idea
+		#}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = SOL_inquisitionis_secondary_role
+	x = 3
+	y = 2
+	relative_position_id = SOL_unveil_cultus
+
+	cost = 5
+	prerequisite = { focus = SOL_unveil_cultus }
+	mutually_exclusive = { focus = SOL_inquisitionis_primary_role}
+	available = {
+		has_global_flag = SOL_twilight_converted
+		is_subject = no
+		has_DB_ruler = yes
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_inquisitionis_secondary_role"
+		#Idea here
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_inquisitionis_primary_role
+	x = 0
+	y = 1
+	relative_position_id = SOL_solaris_inquisitionis
+
+	cost = 5
+	prerequisite = { focus = SOL_solaris_inquisitionis }
+	mutually_exclusive = { focus = SOL_inquisitionis_secondary_role }
+	available = {
+		is_subject = no
+		has_DB_ruler = yes
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_inquisitionis_primary_role"
+		#Idea here
+	}
+}
+
+shared_focus = {
+	id = SOL_solaris_speculatores
+	x = 2
+	y = 1
+	relative_position_id = SOL_solaris_inquisitionis
+
+	cost = 5
+	prerequisite = {
+		focus = SOL_solaris_inquisitionis
+	}
+	available = {
+		is_subject = no
+		has_DB_ruler = yes
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_solaris_speculatores"
+		#Ideas here
+	}
+}
+
+shared_focus = {
+	id = SOL_Lux_et_Tenebris
+	icon = GFX_goal_lux_in_tenebris
+	prerequisite = {
+		focus = SOL_suffer_not_heresy
+		#focus = SOL_Maternal_Guidiance
+	}
+	available = {
+		is_subject = no
+		has_DB_ruler = yes
+	}
+	cost = 6
+	ai_will_do = {
+		factor = 100
+	}
+	relative_position_id = SOL_suffer_not_heresy
+	x = -2
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_Lux_et_Tenebris"
+		if = {
+			limit = {
+				has_idea = unicorn_academy
+			}
+			swap_ideas = {
+				add_idea = SOL_Lux_et_Tenebris_idea
+				remove_idea = unicorn_academy
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = unicorn_academy1
+			}
+			swap_ideas = {
+				add_idea = SOL_Lux_et_Tenebris_idea1
+				remove_idea = unicorn_academy1
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = unicorn_academy2
+			}
+			swap_ideas = {
+				add_idea = SOL_Lux_et_Tenebris_idea2
+				remove_idea = unicorn_academy2
+			}
+		}
+		else = {
+			add_ideas = SOL_Lux_et_Tenebris_idea0
+		}
+		add_tech_bonus = {
+			name = unicorn_bonus2
+			bonus = 1
+			ahead_reduction = 2
+			category = magical_tech
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = SOL_faith_honor_family
+	x = 0
+	y = 2
+	relative_position_id = SOL_solaris_adoratio
+
+	cost = 5
+	prerequisite = { focus = SOL_solaris_adoratio }
+	mutually_exclusive = { focus = SOL_Faith_Sacrifice_Worship }
+	available = {
+		is_subject = no
+		has_DB_ruler = yes
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_faith_honor_family"
+		#Idea here
+	}
+	ai_will_do = { factor = 100 }
+}
+
+shared_focus = {
+	id = SOL_Faith_Sacrifice_Worship
+	icon = GFX_goal_solar_worship_sacrifice
+	prerequisite = {
+		focus = SOL_Mandatory_Temple_Attendance
+	}
+	mutually_exclusive = { focus = SOL_faith_honor_family }
+	available = {
+		is_subject = no
+		has_DB_ruler = yes
+	}
+	cost = 5
+	ai_will_do = {
+		factor = 75
+	}
+	relative_position_id = SOL_Mandatory_Temple_Attendance
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_Faith_Sacrifice_Worship"
+		#swap_ideas = {
+		#	add_idea = SOL_Solar_Cult_idea2
+		#	remove_idea = SOL_Solar_Cult_idea1
+		#}
+		custom_effect_tooltip = SOL_Faith_Sacrifice_Worship_tp
+		hidden_effect = {
+			set_technology = {
+				popup = no
+				berserker_charge = 1
+			}
+		}
+		hidden_effect = {
+			set_rule = {
+				can_use_kamikaze_pilots = yes
+			}
+			set_country_flag = kamikaze_flag
+		}
+		custom_effect_tooltip = kamikaze_focus_tooltip
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = SOL_field_executions
+	x = 1
+	y = 1
+	relative_position_id = SOL_inquisitionis_secondary_role
+
+	cost = 6
+	prerequisite = {
+		focus = SOL_inquisitionis_secondary_role
+		focus = SOL_inquisitionis_primary_role
+	}
+	available = {
+		is_subject = no
+		has_DB_ruler = yes
+		any_owned_state = {
+			NOT = { is_core_of = ROOT }
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_field_executions"
+		###Event of an inquisitor (Quasar) being brought forward a suspected heretic, although there is nothing proven, and the pony tries to defend themselves, especially considering they don't recognize the rule of the Solar Empire since they are an occupier, and the inquisitor takes justice into her own hooves, as simply the accusing is enough, especially since they're supsicious already
+	}
+	ai_will_do = { factor = 40 }
+}
+
+shared_focus = {
+	id = SOL_State_Personified
+	icon = GFX_goal_state_personified
+	prerequisite = { focus = SOL_inquisitionis_primary_role }
+	available = {
+		is_subject = no
+		has_DB_ruler = yes
+	}
+	cost = 5
+	ai_will_do = {
+		factor = 50
+	}
+	relative_position_id = SOL_inquisitionis_primary_role
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_State_Personified"
+		add_stability = 0.15
+		add_political_power = 250
+		#Maybe change this to an idea of -10% advisor cost, -15% conscription cost
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+}
+
+shared_focus = {
+	id = SOL_raising_generations
+	x = 0
+	y = 1
+	relative_position_id = SOL_faith_honor_family
+
+	cost = 5
+	prerequisite = { focus = SOL_faith_honor_family }
+	available = {
+		is_subject = no
+		has_DB_ruler = yes
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_raising_generations"
+		###Event of a concerned mother or the like speaking ot another, and having an intervention with the Inquisitionis with one of the other parents of the community, because their child appears to be showing "concerning" beliefs and how they don't follow the Empress's teachings enough, and the other mother tries to argue against it, but her child is ultimately taken and the parent is arrested
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_better_than_best
+	x = 0
+	y = 1
+	relative_position_id = SOL_Faith_Sacrifice_Worship
+
+	cost = 5
+	prerequisite = {
+		focus = SOL_faith_honor_family
+		focus = SOL_Faith_Sacrifice_Worship
+	}
+	available = {
+		is_subject = no
+		has_DB_ruler = yes
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_better_than_best"
+		#Add stats to Daybreaker
+		###Possibly event of Daybreaker taking a lead role in an attack of a heretic stronghold or the like, and she wants to test some of the new spells that she practiced as she needs to see what her soldiers are doing under her command, and also so she can enact some judgement of ponies herself, and she is basically a walking death machine, although it clear she is at her limits protecting herself
+	}
+	ai_will_do = { factor = 70 }
+}
+
+shared_focus = {
+	id = SOL_sacricices_from_birth
+	x = 0
+	y = 2
+	relative_position_id = SOL_inquisitionis_secondary_role
+
+	cost = 5
+	prerequisite = {
+		focus = SOL_inquisitionis_secondary_role
+		focus = SOL_inquisitionis_primary_role
+	}
+	prerequisite = { focus = SOL_Faith_Sacrifice_Worship }
+	available = {
+		is_subject = no
+		has_DB_ruler = yes
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_sacricices_from_birth"
+		###Event of a parent trying to keep their foal when an inquisitor and a couple of soldiers come to them to take their foal to become another inquisitor from a very young age, and they are basically forced to give them up, since they were identified as probably a decently strong unicorn to serve Daybreaker, and they are threatened with being declared heretics if they don't give up the foal
+	}
+	ai_will_do = { factor = 100 }
+}
+
+shared_focus = {
+	id = SOL_annual_purges
+	x = -1
+	y = 1
+	relative_position_id = SOL_State_Personified
+
+	cost = 5
+	prerequisite = { focus = SOL_State_Personified }
+	available = {
+		is_subject = no
+		has_DB_ruler = yes
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_annual_purges"
+		###Event of Quasar Pulse moving through the castle, being led by Sunrise Sparkle, to different rooms and dragging some nobles and government officials out, as even though they aren't overtly heretic, they aren't loyal enough, and every year, there will be some who will be purged, so to ensure that only the most loyal to Daybreaker are in government
+	}
+	ai_will_do = { factor = 40 }
+}
+
+shared_focus = {
+	id = SOL_enlightened_education
+	x = 0
+	y = 2
+	relative_position_id = SOL_Lux_et_Tenebris
+
+	cost = 6
+	prerequisite = { focus = SOL_Lux_et_Tenebris }
+	mutually_exclusive = { focus = SOL_tradition_of_worship }
+	available = {
+		is_subject = no
+		has_DB_ruler = yes
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_enlightened_education"
+		#Idea here
+		###Perhaps an event of a few ponies in school being taught some obvious propaganda of Daybreaker, and questioning it, which leads to first strong whaps, and then actual beatings (they are adults), to ensure that they learn the "truth"
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_tradition_of_worship
+	x = -2
+	y = 2
+	relative_position_id = SOL_faith_honor_family
+
+	cost = 6
+	prerequisite = { focus = SOL_faith_honor_family }
+	mutually_exclusive = { focus = SOL_enlightened_education }
+	available = {
+		is_subject = no
+		has_DB_ruler = yes
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_tradition_of_worship"
+		###Perhaps an event of the worship service of the Cultus, and some of the younger ponies asking questions of the priestess, and ultimately getting forced to agree, since they do see some of the faulty logic about Daybreaker being the center of everything
+		#Idea here
+	}
+	ai_will_do = { factor = 100 }
+}
+
+shared_focus = {
+	id = SOL_sacrifices_on_assembly_line
+	x = 1
+	y = 1
+	relative_position_id = SOL_raising_generations
+
+	cost = 5
+	prerequisite = { focus = SOL_raising_generations }
+	available = {
+		is_subject = no
+		has_DB_ruler = yes
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_sacrifices_on_assembly_line"
+		#Idea here
+	}
+	ai_will_do = { factor = 80 }
+}
+
+shared_focus = {
+	id = SOL_fodder_troops
+	x = -1
+	y = 1
+	relative_position_id = SOL_sacricices_from_birth
+
+	cost = 5
+	prerequisite = { focus = SOL_sacricices_from_birth }
+	available = {
+		is_subject = no
+		has_DB_ruler = yes
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_fodder_troops"
+		#Idea here
+	}
+	ai_will_do = { factor = 80 }
+}
+
+shared_focus = {
+	id = SOL_combine_church_and_state
+	x = 0
+	y = 2
+	relative_position_id = SOL_State_Personified
+
+	cost = 6
+	prerequisite = { focus = SOL_State_Personified }
+	available = {
+		is_subject = no
+		has_DB_ruler = yes
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_combine_church_and_state"
+		#Idea here
+		###Perhaps an event of a number of ministers being replaced with members of the Adoratio, since they are no longer trusted, or an event of basically a theological matter being placed in government, and being voted on, while also declaring that anything else is heresy, through law, let alone religion
+	}
+	ai_will_do = { factor = 70 }
+}
+
+shared_focus = {
+	id = SOL_honorable_guards
+	x = 0
+	y = 1
+	relative_position_id = SOL_tradition_of_worship
+
+	cost = 6
+	prerequisite = {
+		focus = SOL_tradition_of_worship
+		focus = SOL_sacrifices_on_assembly_line
+	}
+	available = {
+		is_subject = no
+		has_DB_ruler = yes
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_honorable_guards"
+		#Spawn 3 25-width, max xp infantry-arty divisions, one general of 4 4/4/2/3
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_generals_above_rest
+	x = 0
+	y = 1
+	relative_position_id = SOL_better_than_best
+
+	cost = 7
+	prerequisite = { focus = SOL_better_than_best }
+	available = {
+		is_subject = no
+		has_DB_ruler = yes
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_generals_above_rest"
+		#Generals here
+		###Possibly short event of how there are skilled fighters in the Inquisitionis and the Adoratio who could also serve for the Empress, and that they will happily serve and die for her
+	}
+	ai_will_do = { factor = 60 }
+}
+
+shared_focus = {
+	id = SOL_monsters_of_earth
+	x = 0
+	y = 3
+	relative_position_id = SOL_field_executions
+
+	cost = 6
+	prerequisite = {
+		focus = SOL_fodder_troops
+		focus = SOL_combine_church_and_state
+	}
+	available = {
+		is_subject = no
+		has_DB_ruler = yes
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_monsters_of_earth"
+		#Spawn MIO or concern for Sanctum Arms
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_She_Who_Raises_the_Sun
+	icon = GFX_goal_solar_the_one_who_raises_the_sun
+	prerequisite = {
+		focus = SOL_sacrifices_on_assembly_line
+		focus = SOL_fodder_troops
+	}
+	available = {
+		is_subject = no
+		has_DB_ruler = yes
+	}
+	cost = 10
+	ai_will_do = {
+		factor = 200
+	}
+	relative_position_id = SOL_generals_above_rest
+	x = 0
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_She_Who_Raises_the_Sun"
+		add_stability = 0.1
+		swap_ruler_traits = {
+			add = daybreaker_god2
+			remove = daybreaker_god
+		}
+	}
+	search_filters = { FOCUS_FILTER_STABILITY }
 }
 
 shared_focus = {
@@ -1128,7 +1747,7 @@ shared_focus = {
 		}
 	}
 	relative_position_id = SOL_Imperium_Solis
-	x = 12
+	x = 13
 	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_empress_protector"

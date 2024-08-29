@@ -223,21 +223,21 @@ EQS_SOL_wartime_change = {
 
 	set_global_flag = daybreaker_spawned
 	set_country_flag = sol_wartime_change
-	set_cosmetic_tag = EQS_SOL
+	#set_cosmetic_tag = EQS_SOL
 	set_faction_name = SOL_faction
 
 	#set_country_flag = SOL_new_generals_flag
-	set_party_name = { ideology = democratic long_name = EQS_republic_long name = EQS_republic }
+	#set_party_name = { ideology = democratic long_name = EQS_republic_long name = EQS_republic }
 	save_global_event_target_as = solar_empire
 	clear_global_event_target = equestria
-	set_politics = { ruling_party = fascism }
-	add_popularity = {
-		ideology = fascism
-		popularity = 0.10
-	}
+	#set_politics = { ruling_party = fascism }
+	#add_popularity = {
+	#	ideology = fascism
+	#	popularity = 0.10
+	#}
 	hidden_effect = {
 		EQS_princess_celestia = {
-			set_character_name = EQS_SOL_daybreaker
+			#set_character_name = EQS_SOL_daybreaker
 			set_portraits = {
 				civilian = {
 					large = GFX_DaybreakerPortraitNew
@@ -248,17 +248,17 @@ EQS_SOL_wartime_change = {
 				}
 			}
 
-			add_country_leader_role = {
-				promote_leader = yes
-
-				country_leader = {
-					expire = "1965.1.1"
-					desc = "POLITICS_DAYBREAKER_DESC"
-					ideology = nazism
-					traits = { }
-					id = -1
-				}
-			}
+			#add_country_leader_role = {
+			#	promote_leader = yes
+			#
+			#	country_leader = {
+			#		expire = "1965.1.1"
+			#		desc = "POLITICS_DAYBREAKER_DESC"
+			#		ideology = nazism
+			#		traits = { }
+			#		id = -1
+			#	}
+			#}
 			set_character_flag = EQS_celestia_is_db
 		}
 	}
@@ -290,7 +290,7 @@ EQS_SOL_wartime_change = {
 			}
 			#using a flag doesnt seem to work
 			set_character_flag = EQS_luna_leader_disabled
-			promote_character = alicornrule
+			#promote_character = alicornrule
 		}
 		set_country_flag = EQS_had_luna
 	}
@@ -409,7 +409,7 @@ EQS_SOL_civil_war = {
 			popularity = 0.10
 		}
 	}
-	set_cosmetic_tag = EQS_SOL
+	#set_cosmetic_tag = EQS_SOL
 	set_temp_variable = { var = civil_war_size value = 1 }
 	subtract_from_temp_variable = { var = civil_war_size value = party_popularity@fascism }
 	set_party_name = { ideology = democratic long_name = EQS_republic_long name = EQS_republic }
@@ -421,7 +421,7 @@ EQS_SOL_civil_war = {
 		size = civil_war_size
 		capital = 75
 	}
-	set_politics = { ruling_party = fascism }
+	set_politics = { ruling_party = democratic }
 	if = {
 		limit = { is_faction_leader = no }
 		create_faction = "SOL_faction"
@@ -441,6 +441,7 @@ EQS_SOL_civil_war = {
 		limit = {
 			original_tag = EQS
 			has_government = democratic
+			is_dynamic_country = yes #Need this to ensure it still chooses the civil war country, since EQS starts democratic with Daybreaker's ascension now
 		}
 		save_global_event_target_as = equestria
 		#load_focus_tree = { tree = equestria_focus keep_completed = yes }
@@ -516,7 +517,8 @@ EQS_SOL_civil_war = {
 	}
 	hidden_effect = {
 		EQS_princess_celestia = {
-			set_character_name = EQS_SOL_daybreaker
+			#set_character_name = EQS_SOL_daybreaker
+			promote_character = yes
 			set_portraits = {
 				civilian = {
 					large = GFX_DaybreakerPortraitNew
@@ -527,17 +529,17 @@ EQS_SOL_civil_war = {
 				}
 			}
 
-			add_country_leader_role = {
-				promote_leader = yes
-
-				country_leader = {
-					expire = "1965.1.1"
-					desc = "POLITICS_DAYBREAKER_DESC"
-					ideology = nazism
-					traits = { }
-					id = -1
-				}
-			}
+			#add_country_leader_role = {
+			#	promote_leader = yes
+			#
+			#	country_leader = {
+			#		expire = "1965.1.1"
+			#		desc = "POLITICS_DAYBREAKER_DESC"
+			#		ideology = nazism
+			#		traits = { }
+			#		id = -1
+			#	}
+			#}
 
 			set_character_flag = EQS_celestia_is_db
 		}
