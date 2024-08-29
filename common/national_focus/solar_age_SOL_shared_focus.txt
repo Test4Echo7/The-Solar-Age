@@ -961,3 +961,2214 @@ shared_focus = {
 	}
 	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 }
+
+###Revamped Paths###
+shared_focus = {
+	id = SOL_empress_mother
+	icon = GFX_goal_daybreaker_mother
+	prerequisite = {
+		focus = SOL_Imperium_Solis
+	}
+	mutually_exclusive = {
+		focus = SOL_empress_protector
+		focus = SOL_god_empress
+	}
+	available = {
+		is_subject = no
+		has_DB_ruler = yes
+	}
+	select_effect = {
+		#just a dummy thing to make it uncancellable
+		set_temp_variable = {
+			aaaaa = 1
+		}
+	}
+	#bypass = {}
+	cost = 10
+	ai_will_do = {
+		factor = 1000
+		modifier = {
+			is_historical_focus_on = yes
+			factor = 0
+		}
+	}
+	relative_position_id = SOL_Imperium_Solis
+	x = -12
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_empress_mother"
+		add_country_leader_trait = daybreaker_mother
+		custom_effect_tooltip = super_combat_abilities_tt
+		country_event = {
+			id = solarempire.45
+			days = 7
+		}
+	}
+}
+
+shared_focus = {
+	id = SOL_god_empress
+	icon = GFX_goal_daybreaker_god
+	prerequisite = {
+		focus = SOL_Imperium_Solis
+	}
+	mutually_exclusive = {
+		focus = SOL_empress_protector
+		focus = SOL_empress_mother
+	}
+	available = {
+		is_subject = no
+		has_DB_ruler = yes
+	}
+	select_effect = {
+		#just a dummy thing to make it uncancellable
+		set_temp_variable = {
+			aaaaa = 1
+		}
+	}
+	#bypass = {}
+	cost = 10
+	ai_will_do = {
+		factor = 1200
+	}
+	relative_position_id = SOL_Imperium_Solis
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_god_empress"
+		add_country_leader_trait = daybreaker_god
+		custom_effect_tooltip = super_combat_abilities_tt
+		hidden_effect = {
+			EQS_princess_celestia = {
+				set_portraits = {
+					civilian = {
+						large = "gfx/leaders/SOL/Daybreaker_god.tga"
+					}
+					army = {
+						large = "gfx/leaders/SOL/Daybreaker_god.tga"
+					}
+				}
+			}
+			set_country_leader_ideology = falangism
+			if = {
+				limit = {
+					EQC = {
+						is_subject_of = ROOT
+						has_government = democratic
+						NOT = {
+							has_country_flag = EQC_dont_break_free_from_SOL
+						}
+					}
+				}
+				random_list = {
+					60 = {
+					}
+					40 = {
+						set_country_flag = EQC_dont_break_free_from_SOL
+					}
+				}
+			}
+			country_event = {
+				id = solarempire.45
+				days = 7
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = SOL_unveil_cultus
+	x = 0
+	y = 1
+	relative_position_id = SOL_god_empress
+
+	cost = 4
+	prerequisite = { focus = SOL_god_empress }
+	available = {
+		is_subject = no
+		has_DB_ruler = yes
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_unveil_cultus"
+		###Daybreaker hosts the first service of the now front and center Solaris Cultus, with the priestly duties done by Padlock Key, and she inaugarates the first service with a proclamation of her godhood, and that she will guide the world into a new era of light and peace
+	}
+	ai_will_do = { factor = 300 }
+}
+
+shared_focus = {
+	id = SOL_empress_protector
+	icon = GFX_goal_daybreaker_protector
+	prerequisite = {
+		focus = SOL_Imperium_Solis
+	}
+	mutually_exclusive = {
+		focus = SOL_empress_mother
+		focus = SOL_god_empress
+	}
+	available = {
+		is_subject = no
+		has_DB_ruler = yes
+	}
+	select_effect = {
+		#just a dummy thing to make it uncancellable
+		set_temp_variable = {
+			aaaaa = 1
+		}
+	}
+	#bypass = {}
+	cost = 10
+	ai_will_do = {
+		factor = 800
+		modifier = {
+			is_historical_focus_on = yes
+			factor = 0
+		}
+	}
+	relative_position_id = SOL_Imperium_Solis
+	x = 12
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_empress_protector"
+		add_country_leader_trait = daybreaker_protector
+		custom_effect_tooltip = super_combat_abilities_tt
+		hidden_effect = {
+			EQS_princess_celestia = {
+				set_portraits = {
+					civilian = {
+						large = "gfx/leaders/SOL/Daybreaker.tga"
+					}
+					army = {
+						large = "gfx/leaders/SOL/Daybreaker.tga"
+					}
+				}
+			}
+			if = {
+				limit = {
+					EQC = {
+						is_subject_of = ROOT
+						has_government = democratic
+						has_country_flag = EQC_dont_break_free_from_SOL
+					}
+				}
+				random_list = {
+					70 = {
+					}
+					30 = {
+						clr_country_flag = EQC_dont_break_free_from_SOL
+					}
+				}
+			}
+			country_event = {
+				id = solarempire.45
+				days = 7
+			}
+		}
+	}
+}
+
+###Military Focuses###
+shared_focus = {
+	id = SOL_modernize_relic
+	icon = GFX_focus_generic_little_entente
+	x = 50
+	y = -1
+	cost = 3
+
+	available = { has_completed_focus = SOL_Imperium_Solis }
+	allow_branch = {
+		is_EQS_SOL = yes
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_modernize_relic"
+		army_experience = 20
+		air_experience = 10
+		navy_experience = 10
+	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_AIRFORCE_BONUS FOCUS_FILTER_NAVY_BONUS }
+	ai_will_do = { factor = 100 }
+}
+
+shared_focus = {
+	id = SOL_establish_solaris_militarium
+	x = -14
+	y = 1
+	relative_position_id = SOL_modernize_relic
+
+	cost = 3
+	prerequisite = { focus = SOL_modernize_relic }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_modernize_relic"
+		army_experience = 30
+	}
+	ai_will_do = { factor = 150 }
+}
+
+shared_focus = {
+	id = SOL_inspect_officers
+	x = -2
+	y = 1
+	relative_position_id = SOL_establish_solaris_militarium
+
+	cost = 3
+	prerequisite = { focus = SOL_establish_solaris_militarium }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_inspect_officers"
+		army_experience = 10
+		add_political_power = 25
+		add_manpower = -10000
+		###Event maybe of a military police officer inspecting or raiding an officer's quarters and finding supposedly damning evidence for anti-Daybreaker activities or working with the harmonic resistance
+	}
+	ai_will_do = { factor = 100 }
+}
+
+shared_focus = {
+	id = SOL_encourage_troops
+	x = 2
+	y = 1
+	relative_position_id = SOL_establish_solaris_militarium
+
+	cost = 3
+	prerequisite = { focus = SOL_establish_solaris_militarium }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_modernize_relic"
+		add_command_power = 50
+		add_manpower = -25000
+		###Event maybe of Daybreaker personally visiting some of the suspected disloyal troops, and using a couple as an example of what happens to traitors, since there is one that she knows is working with harmonists, who she uses as an example, which she first shows by an item or two from his barracks, and how it also affects the rest of his fellow soldiers, too
+	}
+	ai_will_do = { factor = 100 }
+}
+
+shared_focus = {
+	id = SOL_break_out_blueprints
+	x = -2
+	y = 1
+	relative_position_id = SOL_inspect_officers
+
+	cost = 3
+	prerequisite = { focus = SOL_inspect_officers }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_break_out_blueprints"
+		add_tech_bonus = {
+			name = armor_bonus
+			uses = 1
+			bonus = 1
+			category = armor
+		}
+	}
+	ai_will_do = { factor = 75 }
+}
+
+shared_focus = {
+	id = SOL_reaarange_command
+	x = 1
+	y = 1
+	relative_position_id = SOL_inspect_officers
+
+	cost = 3
+	prerequisite = { focus = SOL_inspect_officers }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_reaarange_command"
+		#Idea here
+	}
+	ai_will_do = { factor = 100 }
+}
+
+shared_focus = {
+	id = SOL_imperial_factory_tour
+	x = 0
+	y = 1
+	relative_position_id = SOL_encourage_troops
+
+	cost = 3
+	prerequisite = { focus = SOL_encourage_troops }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_imperial_factory_tour"
+		add_tech_bonus = {
+			name = infantry_bonus
+			uses = 1
+			bonus = 1
+			category = infantry_weapons
+		}
+	}
+	ai_will_do = { factor = 75 }
+}
+
+shared_focus = {
+	id = SOL_motivate_engineers
+	x = 2
+	y = 1
+	relative_position_id = SOL_encourage_troops
+
+	cost = 3
+	prerequisite = { focus = SOL_encourage_troops }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_motivate_engineers"
+		add_tech_bonus = {
+			name = support_bonus
+			uses = 1
+			bonus = 1
+			category = support_tech
+		}
+	}
+	ai_will_do = { factor = 100 }
+}
+
+shared_focus = {
+	id = SOL_prevent_embarrassments
+	x = 0
+	y = 1
+	relative_position_id = SOL_break_out_blueprints
+
+	cost = 4
+	prerequisite = { focus = SOL_break_out_blueprints }
+	mutually_exclusive = { focus = SOL_traitors_reward }
+	mutually_exclusive = { focus = SOL_sun_shines }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_prevent_embarrassments"
+		###Event of one of the generals who would be affected by the purge route being shown to his new office or the like, with some rather demeaning and simple work that will keep him busy, and out of the eye of the public, while still be somewhat useful
+	}
+	ai_will_do = { factor = 150 }
+}
+
+shared_focus = {
+	id = SOL_traitors_reward
+	x = 0
+	y = 1
+	relative_position_id = SOL_reaarange_command
+
+	cost = 4
+	prerequisite = { focus = SOL_reaarange_command }
+	prerequisite = { focus = SOL_imperial_factory_tour }
+	mutually_exclusive = { focus = SOL_prevent_embarrassments }
+	mutually_exclusive = { focus = SOL_sun_shines }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_traitors_reward"
+		###Event of Daybreaker executing one of the generals who get purged, listing of a long list of crimes, both real and fabricated, and accusing them as a harmonist conspirator, before applied a death by flame
+	}
+	ai_will_do = { factor = 250 }
+}
+
+shared_focus = {
+	id = SOL_sun_shines
+	icon = GFX_goal_solar_phoenix
+	x = 0
+	y = 1
+	relative_position_id = SOL_imperial_factory_tour
+
+	cost = 4
+	prerequisite = { focus = SOL_motivate_engineers }
+	mutually_exclusive = { focus = SOL_prevent_embarrassments }
+	mutually_exclusive = { focus = SOL_traitors_reward }
+	available = {
+		OR = {
+			has_completed_focus = SOL_empress_mother
+			has_completed_focus = SOL_empress_protector
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_sun_shines"
+		###Event of a general being brought forth in front of Daybreaker, who lists off a list of supposed crimes committed by them, and how she could easily have them executed and be done with it, but she is merciful, and she will overlook them for complete loyalty, and if they ever betray that mercy, she will see them suffer before their death, which gets them to agree
+	}
+	ai_will_do = { factor = 150 }
+}
+
+shared_focus = {
+	id = SOL_new_officers
+	icon = GFX_goal_eqs_military_cooperation
+	cost = 7
+	ai_will_do = {
+		factor = 150
+	}
+	prerequisite = {
+		focus = SOL_prevent_embarrassments
+		focus = SOL_traitors_reward
+		focus = SOL_sun_shines
+	}
+	relative_position_id = SOL_traitors_reward
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_new_officers"
+		country_event = solarempire.11
+		custom_effect_tooltip = equestria_advisors
+		custom_effect_tooltip = equestria_generals
+	}
+}
+
+###Grand Battleplan###
+shared_focus = {
+	id = SOL_safest_methods
+	icon = GFX_goal_generic_position_armies
+	cost = 3
+	ai_will_do = {
+		factor = 80
+	}
+	available = {
+		has_completed_focus = SOL_empress_protector
+	}
+	prerequisite = {
+		focus = SOL_new_officers
+	}
+	mutually_exclusive = {
+		focus = SOL_hoof_of_empress
+		focus = SOL_imperial_workhorses
+		focus = SOL_mage_army
+	}
+	relative_position_id = SOL_new_officers
+	x = -7
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_safest_methods"
+		add_doctrine_cost_reduction = {
+			name = cat_grand_battle_plan
+			cost_reduction = 0.5
+			uses = 1
+			category = cat_grand_battle_plan
+		}
+	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = SOL_byzantine_supply
+	x = -2
+	y = 1
+	relative_position_id = SOL_safest_methods
+
+	cost = 5
+	prerequisite = { focus = SOL_safest_methods }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_byzantine_supply"
+		###An event of a soldier's request for some kind of field supply kit being approved, but with statements on how long it will take, after filling out additional forms a through h, in triplicate, and also ensuring that his CO also signs, in triplicate, and then promises delivery in a matter of moments, through magic
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_digging_earth
+	x = 0
+	y = 1
+	relative_position_id = SOL_safest_methods
+
+	cost = 4
+	prerequisite = { focus = SOL_safest_methods }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_digging_earth"
+		add_tech_bonus = {
+			name = engineer_bonus
+			uses = 2
+			bonus = 1
+			category = engineer_tech
+		}
+	}
+	ai_will_do = { factor = 40 }
+}
+
+shared_focus = {
+	id = SOL_combined_defenses
+	x = 1
+	y = 1
+	relative_position_id = SOL_byzantine_supply
+
+	cost = 6
+	prerequisite = { focus = SOL_byzantine_supply }
+	prerequisite = { focus = SOL_digging_earth }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_combined_defenses"
+		add_tech_bonus = {
+			name = infantry_bonus
+			bonus = 1
+			uses = 2
+			category = infantry_weapons
+		}
+		add_tech_bonus = {
+			name = motorized_bonus
+			bonus = 3
+			uses = 1
+			category = motorized_equipment
+		}
+	}
+	ai_will_do = { factor = 60 }
+}
+
+shared_focus = {
+	id = SOL_efficient_clearing
+	x = 0
+	y = 1
+	relative_position_id = SOL_combined_defenses
+
+	cost = 7
+	prerequisite = { focus = SOL_combined_defenses }
+	mutually_exclusive = { focus = SOL_strike_iron }
+	available = {
+		has_war = yes
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_efficient_clearing"
+		###Event of a pony going in with a flamethrower into the trenches of the enemy, and being spotted very quickly, having a panicked moment, and then starting their flamethrower, and watching in horror, since they didn't want to use such a clearly barbaric weapon, as it cleans effectively the entire trench in front of them
+	}
+	ai_will_do = { factor = 80 }
+}
+
+shared_focus = {
+	id = SOL_generational_leaps
+	x = 0
+	y = 1
+	relative_position_id = SOL_efficient_clearing
+
+	cost = 5
+	prerequisite = { focus = SOL_efficient_clearing }
+	available = { has_war = yes }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_generational_leaps"
+		#Idea here
+	}
+	ai_will_do = { factor = 50 }
+}
+
+###Superior Firepower###
+shared_focus = {
+	id = SOL_hoof_of_empress
+	icon = GFX_goal_generic_army_artillery
+	cost = 3
+	ai_will_do = {
+		factor = 80
+	}
+	available = {
+		has_completed_focus = SOL_empress_mother
+	}
+	prerequisite = {
+		focus = SOL_new_officers
+	}
+	mutually_exclusive = {
+		focus = SOL_safest_methods
+		focus = SOL_imperial_workhorses
+		focus = SOL_mage_army
+	}
+	relative_position_id = SOL_new_officers
+	x = -3
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_hoof_of_empress"
+		add_doctrine_cost_reduction = {
+			name = cat_superior_firepower
+			cost_reduction = 0.5
+			uses = 2
+			category = cat_superior_firepower
+		}
+	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = SOL_showering_battlefield
+	icon = GFX_goal_generic_army_artillery2
+	cost = 4
+	ai_will_do = {
+		factor = 30
+	}
+	prerequisite = {
+		focus = SOL_hoof_of_empress
+	}
+	relative_position_id = SOL_hoof_of_empress
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_showering_battlefield"
+		add_tech_bonus = {
+			name = artillery_bonus
+			bonus = 1
+			uses = 2
+			category = artillery
+		}
+	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = SOL_combined_assaults
+	icon = GFX_goal_generic_army_motorized
+	cost = 6
+	ai_will_do = {
+		factor = 40
+	}
+	prerequisite = {
+		focus = SOL_showering_battlefield
+	}
+	mutually_exclusive = { focus = SOL_invincible_spotlights }
+	relative_position_id = SOL_showering_battlefield
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_combined_assaults"
+		add_tech_bonus = {
+			name = infantry_bonus
+			bonus = 1
+			uses = 1
+			category = infantry_weapons
+		}
+		add_tech_bonus = {
+			name = motorized_bonus
+			bonus = 1
+			uses = 2
+			category = cat_mechanized_equipment
+			category = motorized_equipment
+			ahead_reduction = 0.5
+		}
+	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = SOL_holy_napalm_applications
+	x = -1
+	y = 1
+	relative_position_id = SOL_combined_assaults
+
+	cost = 5
+	prerequisite = { focus = SOL_combined_assaults }
+	available = { has_war = yes }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_holy_napalm_applications"
+		#Idea here
+		###Maybe event of some of the first napalm shell strike tests, and how they are incredibly effective, and also completely and utterly mentally scarring for the operators as they see their handiwork, which has left swaths of a battlefield completely aflame, and later reports indicate how burnt the soldiers were that were killed, which horrifies them
+	}
+	ai_will_do = { factor = 60 }
+}
+
+shared_focus = {
+	id = SOL_war_games
+	icon = GFX_goal_generic_army_doctrines
+	cost = 7
+	ai_will_do = {
+		factor = 45
+	}
+	prerequisite = {
+		focus = SOL_holy_napalm_applications
+	}
+	prerequisite = { focus = SOL_mundane_magic }
+	relative_position_id = SOL_holy_napalm_applications
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_war_games"
+		#Idea here
+		add_doctrine_cost_reduction = {
+			name = cat_superior_firepower
+			cost_reduction = 0.5
+			uses = 1
+			category = cat_superior_firepower
+		}
+	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+###Mass Assault###
+shared_focus = {
+	id = SOL_imperial_workhorses
+	icon = GFX_goal_generic_more_territorial_claims
+	cost = 3
+	ai_will_do = {
+		factor = 80
+	}
+	available = {
+		has_completed_focus = SOL_god_empress
+	}
+	prerequisite = {
+		focus = SOL_new_officers
+	}
+	mutually_exclusive = {
+		focus = SOL_hoof_of_empress
+		focus = SOL_safest_methods
+		focus = SOL_mage_army
+	}
+	relative_position_id = SOL_new_officers
+	x = 3
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_imperial_workhorses"
+		add_doctrine_cost_reduction = {
+			name = cat_mass_assault
+			cost_reduction = 0.5
+			uses = 2
+			category = cat_mass_assault
+		}
+	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = SOL_accept_truth
+	icon = GFX_goal_generic_army_tanks
+	cost = 4
+	ai_will_do = {
+		factor = 60
+	}
+	prerequisite = {
+		focus = SOL_imperial_workhorses
+	}
+	relative_position_id = SOL_imperial_workhorses
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_accept_truth"
+		add_tech_bonus = {
+			name = armor_bonus
+			bonus = 1
+			uses = 2
+			category = armor
+		}
+	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = SOL_operational_art
+	icon = GFX_goal_generic_army_doctrines
+	cost = 3
+	ai_will_do = {
+		factor = 30
+	}
+	prerequisite = {
+		focus = SOL_accept_truth
+	}
+	mutually_exclusive = { focus = SOL_streamlined_firearms }
+	relative_position_id = SOL_accept_truth
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_operational_art"
+		add_doctrine_cost_reduction = {
+			name = cat_mass_assault
+			cost_reduction = 0.5
+			uses = 1
+			category = cat_mass_assault
+		}
+	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = SOL_streamlined_firearms
+	icon = GFX_goal_continuous_reduce_training_time
+	cost = 5
+	ai_will_do = {
+		factor = 60
+	}
+	prerequisite = {
+		focus = SOL_accept_truth
+	}
+	mutually_exclusive = { focus = SOL_operational_art }
+	relative_position_id = SOL_accept_truth
+	x = 2
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_streamlined_firearms"
+		###Potentially an event of how much has been gutted from what to include in a gun, although it's nothing essential, so that the guns are basically just nothing more than sticks with some basic parts and the like to throw bullets at the enemy
+		add_ideas = SOL_pb_inf_idea
+	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS }
+}
+
+shared_focus = {
+	id = SOL_only_statistics
+	x = -1
+	y = 2
+	relative_position_id = SOL_operational_art
+
+	cost = 5
+	prerequisite = { focus = SOL_operational_art }
+	available = { has_war = yes }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_only_statistics"
+		#Idea here
+		###Maybe event of reports of how many have been killed in some of the latest conflicts, but how there are so many more which can be taken from their families to happily serve the God-Empress and die keeping her safe and the hope of Order and Harmony alive; the ponies aren't even acknowledged as sentient beings, merely tools
+	}
+	ai_will_do = { factor = 75 }
+}
+
+shared_focus = {
+	id = SOL_melt_shroud
+	x = 1
+	y = 1
+	relative_position_id = SOL_operational_art
+
+	cost = 6
+	prerequisite = {
+		focus = SOL_operational_art
+		focus = SOL_streamlined_firearms
+	}
+	available = { has_war = yes }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_melting_shroud"
+		#Idea here
+		###Maybe event of some soldiers going along with a flame tank division through an urban area, and being ambushed but soon dispatching of the ambushers with the help of the tanks, after the killed operator is taken out to then be driven by somepony else and melt all those that oppose them
+	}
+	ai_will_do = { factor = 75 }
+}
+
+shared_focus = {
+	id = SOL_reduced_standards
+	x = 1
+	y = 2
+	relative_position_id = SOL_streamlined_firearms
+
+	cost = 5
+	prerequisite = { focus = SOL_streamlined_firearms }
+	available = { has_war = yes }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_reduced_standards"
+		###Event of a soldier on the battlefield after his gun jammed, and he manages to find another gun that is on a dead comrade, but that breaks after firing once, and then soon finding another, and another, each with their own problems, which may lead to a few dead foes, but still leaves him defenseless in the end
+		#Idea here
+	}
+	ai_will_do = { factor = 50 }
+}
+
+###Mage Army###
+shared_focus = {
+	id = SOL_mage_army
+	icon = GFX_goal_generic_special_forces
+	cost = 4
+	ai_will_do = {
+		factor = 60
+	}
+	prerequisite = {
+		focus = SOL_new_officers
+	}
+	mutually_exclusive = {
+		focus = SOL_hoof_of_empress
+		focus = SOL_safest_methods
+		focus = SOL_imperial_workhorses
+	}
+	relative_position_id = SOL_new_officers
+	x = 7
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_mage_army"
+		add_doctrine_cost_reduction = {
+			name = land_doc_bonus
+			cost_reduction = 0.33
+			uses = 2
+			category = land_doctrine
+		}
+	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = SOL_mysterious_magic
+	icon = GFX_goal_continuous_research
+	cost = 5
+	ai_will_do = {
+		factor = 50
+	}
+	prerequisite = {
+		focus = SOL_mage_army
+	}
+	relative_position_id = SOL_mage_army
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_mysterious_magic"
+		add_tech_bonus = {
+			name = unicorn_bonus2
+			bonus = 1.25
+			uses = 2
+			category = magical_tech
+		}
+	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = SOL_evocation_schools
+	x = 0
+	y = 1
+	relative_position_id = SOL_mysterious_magic
+
+	cost = 6
+	prerequisite = { focus = SOL_mysterious_magic }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_evocation_schools"
+		###Event of a unicorn learning fire magic at one of Daybreaker's new schools, which leads to both awe and fear, as they test some of their skills on some test dummies, which are utterly consumed; they are quite good at fire magic, which worries their teachers, since they almost seem to be enjoying it
+	}
+	ai_will_do = { factor = 75 }
+}
+
+shared_focus = {
+	id = SOL_magitech_integration
+	icon = GFX_focus_secret_rearmament
+	cost = 5
+	ai_will_do = {
+		factor = 70
+	}
+	prerequisite = {
+		focus = SOL_mysterious_magic
+	}
+	relative_position_id = SOL_mysterious_magic
+	x = 2
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_magitech_integration"
+		add_ideas = SOL_pb_magic_idea
+	}
+}
+
+shared_focus = {
+	id = SOL_magical_adaptations
+	icon = GFX_goal_generic_army_doctrines
+	cost = 7
+	ai_will_do = {
+		factor = 30
+	}
+	prerequisite = {
+		focus = SOL_evocation_schools
+	}
+	mutually_exclusive = { focus = SOL_mighty_hoofs }
+	available = { has_war = yes }
+	relative_position_id = SOL_evocation_schools
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_magical_adaptations"
+		add_doctrine_cost_reduction = {
+			name = land_doc_bonus
+			cost_reduction = 0.33
+			uses = 2
+			category = land_doctrine
+		}
+	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = SOL_next_gen_spells
+	x = 0
+	y = 2
+	relative_position_id = SOL_magitech_integration
+
+	cost = 6
+	prerequisite = { focus = SOL_magical_adaptations }
+	prerequisite = { focus = SOL_magitech_integration }
+	available = { has_war = yes }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_next_gen_spells"
+		###Event of a scientist or two recording their thoughts on the new spell crystals being used in the prototype MEWs, which they record coldly on how it affects flesh, bone, and other aspects of a pony's body, and also how there's only a slight chance of explosion in the operator's face, but can give some nice scars to talk about with the mares (or stallions if a mare)
+	}
+	ai_will_do = { factor = 70 }
+}
+
+###Open Doctrine Paths###
+shared_focus = {
+	id = SOL_communication_key
+	x = 2
+	y = 1
+	relative_position_id = SOL_digging_earth
+
+	cost = 4
+	prerequisite = {
+		focus = SOL_digging_earth
+		focus = SOL_showering_battlefield
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_communication_key"
+		add_tech_bonus = {
+			name = electronics_bonus
+			uses = 2
+			bonus = 1
+			category = electronics
+		}
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_strike_iron
+	x = -1
+	y = 1
+	relative_position_id = SOL_communication_key
+
+	cost = 6
+	prerequisite = { focus = SOL_communication_key }
+	mutually_exclusive = { focus = SOL_efficient_clearing }
+	available = { has_war = yes }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_strike_iron"
+		###An event of some troops desperately trying to fight back against an enemy assault of their lines, and asking where their reinforcements are at, and as the enemy continues to advance, they believe that they'll be overrun, before the cavalry arrives with motorized divisions and start to push back the opposing forces (has to be generic)
+	}
+	ai_will_do = { factor = 60 }
+}
+
+shared_focus = {
+	id = SOL_rapid_reloads
+	x = 3
+	y = 1
+	relative_position_id = SOL_hoof_of_empress
+
+	cost = 5
+	prerequisite = {
+		focus = SOL_hoof_of_empress
+		focus = SOL_imperial_workhorses
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_rapid_reloads"
+		#Idea here
+		###Possibly event of some of the dangers of how much the artillery corps is pushed to inflict more damage upon the enemy, in a specific series of field tests or the like, which ends up injuring a couple of the crew, although the end results of the impacts of the weapons is undeniably impressive
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_invincible_spotlights
+	x = 0
+	y = 1
+	relative_position_id = SOL_rapid_reloads
+
+	cost = 4
+	prerequisite = { focus = SOL_rapid_reloads }
+	mutually_exclusive = { focus = SOL_combined_assaults }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_invincible_spotlights"
+		add_tech_bonus = {
+			name = aa_bonus
+			uses = 1
+			bonus = 1
+			category = cat_anti_air
+		}
+		add_tech_bonus = {
+			name = artillery_bonus
+			uses = 1
+			bonus = 1
+			category = artillery
+		}
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_mundane_magic
+	x = 1
+	y = 1
+	relative_position_id = SOL_combined_assaults
+
+	cost = 4
+	prerequisite = {
+		focus = SOL_combined_assaults
+		focus = SOL_invincible_spotlights
+	}
+	available = { has_war = yes }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_mundane_magic"
+		add_tech_bonus = {
+			name = anti_tank_bonus
+			uses = 2
+			bonus = 1
+			category = cat_anti_tank
+		}
+		###Possibly event of some weapons tests with the new anti-tank weaponry, and a pony or two nearly getting sawn in half when the AP rounds go farather than expected through the armor
+	}
+	ai_will_do = { factor = 40 }
+}
+
+shared_focus = {
+	id = SOL_mobile_cannons
+	x = 1
+	y = 1
+	relative_position_id = SOL_imperial_workhorses
+
+	cost = 5
+	prerequisite = {
+		focus = SOL_imperial_workhorses
+		focus = SOL_mage_army
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_mobile_cannons"
+		add_tech_bonus = {
+			name = heavy_tank_bonus
+			uses = 2
+			bonus = 1
+			category = cat_heavy_armor
+		}
+	}
+	ai_will_do = { factor = 40 }
+}
+
+shared_focus = {
+	id = SOL_speedy_fields
+	x = -1
+	y = 1
+	relative_position_id = SOL_mage_army
+
+	cost = 4
+	prerequisite = {
+		focus = SOL_imperial_workhorses
+		focus = SOL_mage_army
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_speedy_fields"
+		add_tech_bonus = {
+			name = motorized_bonus
+			uses = 1
+			bonus = 3
+			category = motorized_equipment
+		}
+	}
+	ai_will_do = { factor = 40 }
+}
+
+shared_focus = {
+	id = SOL_mighty_hoofs
+	x = 0
+	y = 2
+	relative_position_id = SOL_speedy_fields
+
+	cost = 5
+	prerequisite = { focus = SOL_speedy_fields }
+	mutually_exclusive = { focus = SOL_magical_adaptations }
+	available = { has_war = yes }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_mighty_hoofs"
+		#Idea here
+		###Possibly event of following a tank commander as he prepares to storm a city, without a care for the civilians or buildings he'll destroy, as they have sealed their fate already by working with the enemy
+	}
+	ai_will_do = { factor = 60 }
+}
+
+shared_focus = {
+	id = SOL_modernized_knights
+	x = 1
+	y = 1
+	relative_position_id = SOL_mighty_hoofs
+
+	cost = 6
+	prerequisite = { focus = SOL_mighty_hoofs }
+	available = { has_war = yes }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_modernized_knights"
+		add_tech_bonus = {
+			name = medium_tank_bonus
+			uses = 2
+			bonus = 1
+			ahead_reduction = 1
+			category = cat_medium_armor
+		}
+	}
+	ai_will_do = { factor = 40 }
+}
+
+###Air Force###
+shared_focus = {
+	id = SOL_sky_domain
+	icon = GFX_goal_generic_build_airforce
+	x = 0
+	y = 1
+	relative_position_id = SOL_modernize_relic
+
+	cost = 4
+	prerequisite = { focus = SOL_modernize_relic }
+	available = {
+		OR = {
+			has_completed_focus = SOL_god_empress
+			has_completed_focus = SOL_empress_mother
+			has_completed_focus = SOL_empress_protector
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_mighty_hoofs"
+		air_experience = 50
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_abolish_wonderbolts
+	x = 0
+	y = 1
+	relative_position_id = SOL_sky_domain
+
+	cost = 5
+	prerequisite = { focus = SOL_sky_domain }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_abolish_wonderbolts"
+		###Event of the Wonderbolts headquarters in either Canterlot or Cloudsdale getting raided and ponies who serve there being arrested and those that resist executed, as they have been deemed a symbol of anti-Order activities and will be turned into something greater, and it's ensured that Spitfire knows that she will have a special place in the future air force, as a test pilot, or the like; Thunderlane was a mole who helped with the raid
+		custom_effect_tooltip = available_chief_of_airforce
+		show_ideas_tooltip = blaze
+		custom_effect_tooltip = available_chief_of_airforce
+		show_ideas_tooltip = thunderlane
+		custom_effect_tooltip = available_theorist
+		show_ideas_tooltip = wind_rider
+		if = {
+            limit = {
+                has_dlc = "By Blood Alone"
+            }
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 0.75
+				uses = 1
+				category = light_air
+			}
+			add_tech_bonus = {
+				name = cat_air_guns
+				bonus = 0.75
+				uses = 1
+				category = cat_air_guns
+			}
+		}
+		else = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 0.75
+				uses = 1
+				category = light_fighter
+				category = cat_heavy_fighter
+			}
+		}
+	}
+	search_filters = { FOCUS_FILTER_AIRFORCE_BONUS FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = SOL_striking_battlefield
+	x = -4
+	y = 1
+	relative_position_id = SOL_abolish_wonderbolts
+
+	cost = 5
+	prerequisite = { focus = SOL_abolish_wonderbolts }
+	mutually_exclusive = { focus = SOL_punishing_world }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_striking_battlefield"
+		add_doctrine_cost_reduction = {
+			name = battlefield_support_bonus
+			uses = 2
+			cost_reduction = 0.5
+			category = cat_battlefield_support
+		}
+	}
+	ai_will_do = {
+		factor = 50
+		modifier = {
+			has_completed_focus = SOL_god_empress
+			factor = 2
+		}
+	}
+}
+
+shared_focus = {
+	id = SOL_punishing_world
+	x = 4
+	y = 1
+	relative_position_id = SOL_abolish_wonderbolts
+
+	cost = 5
+	prerequisite = { focus = SOL_abolish_wonderbolts }
+	mutually_exclusive = { focus = SOL_striking_battlefield }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_punishing_world"
+		add_doctrine_cost_reduction = {
+			name = strategic_destruction_bonus
+			uses = 2
+			cost_reduction = 0.5
+			category = cat_strategic_destruction
+		}
+	}
+	ai_will_do = { factor = 60 }
+}
+
+shared_focus = {
+	id = SOL_durable_frames
+	x = 0
+	y = 1
+	relative_position_id = SOL_striking_battlefield
+
+	cost = 3
+	prerequisite = { focus = SOL_striking_battlefield }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_durable_frames"
+		add_tech_bonus = {
+			name = cas_bonus
+			bonus = 1
+			uses = 1
+			category = cas_bomber
+		}
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_fear_tactics
+	x = 2
+	y = 1
+	relative_position_id = SOL_striking_battlefield
+
+	cost = 5
+	prerequisite = { focus = SOL_striking_battlefield }
+	mutually_exclusive = { focus = SOL_sky_flexibility }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_fear_tactics"
+		###Event of some test subjects about the effects of attaching air horns to the bottom of planes as they go about a normal day, but then suddenly hear the test dive bombers, and begin to panic, and gives a couple even early signs of PTSD, since the bombers are testing everything, included dud bombs to mimic the dive bomb
+	}
+	ai_will_do = { factor = 75 }
+}
+
+shared_focus = {
+	id = SOL_sky_flexibility
+	x = 0
+	y = 2
+	relative_position_id = SOL_abolish_wonderbolts
+
+	cost = 5
+	prerequisite = { focus = SOL_abolish_wonderbolts }
+	mutually_exclusive = { focus = SOL_fear_tactics }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_sky_flexibility"
+		if = {
+			limit = { has_dlc = "By Blood Alone" }
+			add_tech_bonus = {
+				name = fighter_bonus
+				uses = 1
+				bonus = 1
+				category = light_air
+			}
+		}
+		else = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				uses = 1
+				bonus = 1
+				category = light_fighter
+			}
+		}
+		add_doctrine_cost_reduction = {
+			name = air_doctrine_bonus
+			uses = 1
+			cost_reduction = 0.5
+			category = air_doctrine
+		}
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_streamline_expenses
+	x = -1
+	y = 1
+	relative_position_id = SOL_punishing_world
+
+	cost = 5
+	prerequisite = { focus = SOL_punishing_world }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_streamline_expenses"
+		#Idea here
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_reinforced_bomb_struts
+	x = 0
+	y = 1
+	relative_position_id = SOL_durable_frames
+
+	cost = 5
+	prerequisite = { focus = SOL_durable_frames }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_reinforced_bomb_struts"
+		if = {
+			limit = { has_dlc = "By Blood Alone" }
+			add_tech_bonus = {
+				name = bomb_bonus
+				uses = 1
+				bonus = 0.75
+				category = cat_air_bombs
+			}
+		}
+		else = {
+			add_tech_bonus = {
+				name = bomber_bonus
+				uses = 1
+				bonus = 0.75
+				category = tactical_bomber
+			}
+		}
+		add_doctrine_cost_reduction = {
+			name = battlefield_support_bonus
+			uses = 1
+			cost_reduction = 0.5
+			category = cat_battlefield_support
+		}
+	}
+	ai_will_do = { factor = 40 }
+}
+
+shared_focus = {
+	id = SOL_field_tests
+	x = 0
+	y = 1
+	relative_position_id = SOL_sky_flexibility
+
+	cost = 5
+	prerequisite = { focus = SOL_sky_flexibility }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_field_tests"
+		###Event of Spitfire being strapped into another test for a prototype fighter, as part of her punishment for being tied to the Harmonists, and the experiment goes well at first, with testing early g-suits, but she soon blacks out and almost perishes in a crash, only saved by the suits durability itself
+	}
+	ai_will_do = { factor = 55 }
+}
+
+shared_focus = {
+	id = SOL_invisible_eyes
+	x = -1
+	y = 1
+	relative_position_id = SOL_streamline_expenses
+
+	cost = 4
+	prerequisite = { focus = SOL_sky_flexibility }
+	prerequisite = { focus = SOL_streamline_expenses }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_invisible_eyes"
+		if = {
+			limit = { has_dlc = "By Blood Alone" }
+			add_tech_bonus = {
+				name = engine_bonus
+				bonus = 1
+				uses = 1
+				category = cat_air_engine
+			}
+		}
+		else = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 0.5
+				uses = 1
+				category = light_fighter
+			}
+		}
+		if = {
+			limit = { has_dlc = "La Resistance" }
+				add_tech_bonus = {
+				name = scout_plane_bonus
+				uses = 1
+				bonus = 3
+				category = cat_scout_plane
+			}
+		}
+	}
+	ai_will_do = { factor = 35 }
+}
+
+shared_focus = {
+	id = SOL_adequate_defense
+	x = 0
+	y = 2
+	relative_position_id = SOL_punishing_world
+
+	cost = 5
+	prerequisite = { focus = SOL_punishing_world }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_adequate_defense"
+		if = {
+			limit = { has_dlc = "By Blood Alone" }
+			add_tech_bonus = {
+				name = cat_air_guns
+				uses = 1
+				bonus = 1
+				category = cat_air_guns
+			}
+		}
+		add_tech_bonus = {
+			name = heavy_fighter_bonus
+			uses = 1
+			bonus = 1
+			category = cat_heavy_fighter
+		}
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_bat_vision
+	x = 2
+	y = 2
+	relative_position_id = SOL_punishing_world
+
+	cost = 5
+	prerequisite = { focus = SOL_punishing_world }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_bat_vision"
+		#Idea here
+	}
+	ai_will_do = { factor = 40 }
+}
+
+shared_focus = {
+	id = SOL_mimic_pegasi
+	x = -1
+	y = 1
+	relative_position_id = SOL_reinforced_bomb_struts
+
+	cost = 5
+	prerequisite = { focus = SOL_reinforced_bomb_struts }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_mimic_pegasi"
+		###Event of a new test pilot being thrown into a ground attack bomber, with improved diving brakes and the like, as well as increased maneuverability, which, after a short bit of time having fun, he does his test, and nearly crashes as he both blacks out and the automatic dive brakes fail at first, but he does manage to land after the wings are clipped by being so close to the ground, and it's deemed a success, despite almost dying
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_high_yield_explosives
+	x = 0
+	y = 2
+	relative_position_id = SOL_fear_tactics
+
+	cost = 4
+	prerequisite = { focus = SOL_fear_tactics }
+	prerequisite = { focus = SOL_reinforced_bomb_struts }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_high_yield_explosives"
+		if = {
+			limit = { has_dlc = "By Blood Alone" }
+			add_tech_bonus = {
+				name = cas_bonus
+				uses = 1
+				bonus = 0.75
+				category = cas_bomber
+			}
+			add_tech_bonus = {
+				name = cat_air_bombs
+				uses = 1
+				bonus = 1
+				category = cat_air_bombs
+			}
+		}
+		else = {
+			add_tech_bonus = {
+				name = cas_bonus
+				uses = 1
+				bonus = 1
+				category = cas_bomber
+				category = tactical_bomber
+			}
+		}
+	}
+	ai_will_do = { factor = 40 }
+}
+
+shared_focus = {
+	id = SOL_hero_program
+	x = 0
+	y = 1
+	relative_position_id = SOL_invisible_eyes
+
+	cost = 6
+	prerequisite = { focus = SOL_invisible_eyes }
+	mutually_exclusive = { focus = SOL_flying_castles }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_hero_program"
+		###Event of a propaganda piece that uses knock-off Wonderbolts, now the Solarbeams, to entice ponies to join the air force, and how they'll totally not be shot down in five seconds in war and that they will be an ace like them, and otherwise feed into the fantasy that Ace Combat taps into
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_flying_castles
+	x = 0
+	y = 1
+	relative_position_id = SOL_adequate_defense
+
+	cost = 6
+	prerequisite = { focus = SOL_adequate_defense }
+	mutually_exclusive = { focus = SOL_hero_program }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_flying_castles"
+		#Idea here
+		add_doctrine_cost_reduction = {
+			name = strategic_destruction_bonus
+			uses = 1
+			cost_reduction = 0.5
+			category = cat_strategic_destruction
+		}
+	}
+	ai_will_do = { factor = 60 }
+}
+
+shared_focus = {
+	id = SOL_holy_deliverance
+	x = 0
+	y = 2
+	relative_position_id = SOL_reinforced_bomb_struts
+
+	cost = 5
+	prerequisite = { focus = SOL_reinforced_bomb_struts }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_holy_deliverance"
+		###Event of peforming napalm strikes on a suspected rebel encampment in the middle of the Empire, and the pilot grows nervous at just how effectively the new payload system has improved the craft's deadliness, which makes him hesitate before almost being shot from a pony on the ground, which motivates him to continue the bombing
+	}
+	ai_will_do = { factor = 70 }
+}
+
+shared_focus = {
+	id = SOL_additional_prototypes
+	x = -2
+	y = 1
+	relative_position_id = SOL_hero_program
+
+	cost = 4
+	prerequisite = { focus = SOL_hero_program }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_additional_prototypes"
+		if = {
+			limit = {
+				has_dlc = "By Blood Alone"
+			}
+			add_tech_bonus = {
+				name = fighter_bonus
+				uses = 1
+				bonus = 1
+				category = light_air
+			}
+		}
+		else = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				uses = 1
+				bonus = 1
+				category = light_fighter
+			}
+		}
+		add_tech_bonus = {
+			name = heavy_fighter_bonus
+			uses = 1
+			bonus = 1
+			category = cat_heavy_fighter
+		}
+	}
+	ai_will_do = { factor = 30 }
+}
+
+shared_focus = {
+	id = SOL_fire_from_sky
+	x = 1
+	y = 1
+	relative_position_id = SOL_hero_program
+
+	cost = 5
+	prerequisite = {
+		focus = SOL_hero_program
+		focus = SOL_flying_castles
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_fire_from_sky"
+		###Event of Daybreaker being shown around the new napalm factory for the bombs to use for her bombers in the case of war, with statistics of what would happen if used in a widespread capacity, and Daybreaker is more than pleased, merely asking that they find a way to make them even faster, and if can burn better than ever
+	}
+	ai_will_do = { factor = 60 }
+}
+
+shared_focus = {
+	id = SOL_targeted_destruction
+	x = -1
+	y = 2
+	relative_position_id = SOL_high_yield_explosives
+
+	cost = 3
+	prerequisite = {
+		focus = SOL_holy_deliverance
+		focus = SOL_high_yield_explosives
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_targeted_destruction"
+		add_doctrine_cost_reduction = {
+			name = battlefield_support_bonus
+			uses = 1
+			cost_reduction = 0.5
+			category = cat_battlefield_support
+		}
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_modern_bombers
+	x = -1
+	y = 2
+	relative_position_id = SOL_hero_program
+
+	cost = 4
+	prerequisite = { focus = SOL_hero_program }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_modern_bombers"
+		if = {
+			limit = {
+				has_dlc = "By Blood Alone"
+			}
+			add_tech_bonus = {
+				name = air_modules_bonus
+				bonus = 0.66
+				uses = 1
+				category = plane_modules_tech
+			}
+		}
+		add_tech_bonus = {
+			name = bomber_bonus
+			uses = 1
+			bonus = 1.25
+			category = tactical_bomber
+		}
+	}
+	ai_will_do = { factor = 30 }
+}
+
+shared_focus = {
+	id = SOL_area_bombardment
+	icon = GFX_goal_generic_air_doctrine
+	x = 2
+	y = 1
+	relative_position_id = SOL_fire_from_sky
+
+	cost = 3
+	prerequisite = { focus = SOL_fire_from_sky }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_area_bombardment"
+		add_doctrine_cost_reduction = {
+			name = strategic_destruction_bonus
+			uses = 1
+			cost_reduction = 0.5
+			category = cat_strategic_destruction
+		}
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_deliver_death
+	x = 2
+	y = 1
+	relative_position_id = SOL_targeted_destruction
+
+	cost = 8
+	prerequisite = { focus = SOL_targeted_destruction }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_deliver_death"
+		if = {
+			limit = { has_dlc = "By Blood Alone" }
+			add_tech_bonus = {
+				name = jet_bonus
+				bonus = 1
+				uses = 2
+				ahead_reduction = 0.5
+				technology = small_plane_airframe_4
+				technology = small_plane_airframe_5
+			}
+		}
+		else = {
+			add_tech_bonus = {
+				name = jet_bonus
+				bonus = 1
+				uses = 2
+				ahead_reduction = 0.5
+				technology = jet_fighter1
+				technology = jet_fighter2
+			}
+		}
+		add_tech_bonus = {
+			name = jet_engine_bonus
+			bonus = 1
+			uses = 1
+			ahead_reduction = 0.33
+			technology = jet_engines
+		}
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_desolation_engines
+	x = -2
+	y = 1
+	relative_position_id = SOL_area_bombardment
+
+	cost = 8
+	prerequisite = { focus = SOL_area_bombardment }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_desolation_engines"
+		if = {
+			limit = { has_dlc = "By Blood Alone" }
+			add_tech_bonus = {
+				name = jet_bonus
+				bonus = 1
+				uses = 2
+				ahead_reduction = 0.5
+				technology = large_plane_airframe_4
+				technology = large_plane_airframe_5
+			}
+		}
+		else = {
+			add_tech_bonus = {
+				name = jet_bonus
+				bonus = 1
+				uses = 2
+				ahead_reduction = 0.5
+				technology = jet_strategic_bomber_a
+				technology = jet_strategic_bomber_x
+			}
+		}
+		add_tech_bonus = {
+			name = jet_engine_bonus
+			bonus = 1
+			uses = 1
+			ahead_reduction = 0.33
+			technology = jet_engines
+		}
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_judge_ground
+	x = 0
+	y = 2
+	relative_position_id = SOL_targeted_destruction
+
+	cost = 5
+	prerequisite = { focus = SOL_targeted_destruction }
+	mutually_exclusive = { focus = SOL_order_skies }
+	mutually_exclusive = { focus = SOL_heavenly_backdrop }
+	available = { has_war = yes }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_judge_ground"
+		###As a battle unfolds beneath her, a fighter pilot, leading a couple of other divebombers, takes charge of a sortie to try and free up a pinned down position near the back, and she effectively ingores all the dangers, including those that damage her plane, as she delivers a large payload of destruction against the enemy beneath her
+	}
+	ai_will_do = { factor = 75 }
+}
+
+shared_focus = {
+	id = SOL_order_skies
+	x = 2
+	y = 1
+	relative_position_id = SOL_deliver_death
+
+	cost = 5
+	prerequisite = {
+		focus = SOL_deliver_death
+		focus = SOL_desolation_engines
+	}
+	mutually_exclusive = { focus = SOL_judge_ground }
+	mutually_exclusive = { focus = SOL_heavenly_backdrop }
+	available = { has_war = yes }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_order_skies"
+		###Event of about half a dozen ponies, two different flight groups, getting into a bit of a scuffle after spending a day at the canteen in the air base, as they both believe they have the better skills, and it causes a bit of havoc as they aim to test munitions for good on some target dummies, not realizing how damaging to the base it would be
+	}
+	ai_will_do = { factor = 60 }
+}
+
+shared_focus = {
+	id = SOL_heavenly_backdrop
+	x = 0
+	y = 2
+	relative_position_id = SOL_area_bombardment
+
+	cost = 5
+	prerequisite = { focus = SOL_area_bombardment }
+	mutually = { focus = SOL_judge_ground }
+	mutually = { focus = SOL_order_skies }
+	available = { has_war = yes }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_heavenly_backdrop"
+		###Event of a sole pilot, as the others are sleeping overnight, as he flies high toward his destination target far into enemy territory to destroy some different targets, and he finds the beauty of the night rather haunting, especially since he's supposed to be loyal to the day, and wishes that he could spend all his time in the high altitude of flight, given how amazing it is, and to an extent regrets the damage he will have to do
+	}
+	ai_will_do = { factor = 75 }
+}
+
+shared_focus = {
+	id = SOL_breyns_dream
+	x = 0
+	y = 2
+	relative_position_id = SOL_deliver_death
+
+	cost = 5
+	prerequisite = {
+		focus = SOL_judge_ground
+		focus = SOL_order_skies
+		focus = SOL_heavenly_backdrop
+	}
+	available = { has_war = yes }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_breyns_dream"
+		add_tech_bonus = {
+			name = rocket_bonus
+			uses = 2
+			bonus = 1.25
+			category = rocketry
+		}
+	}
+	ai_will_do = { factor = 30 }
+}
+
+shared_focus = {
+	id = SOL_project_solar_flare
+	icon = GFX_focus_wonderweapons
+	x = 0
+	y = 2
+	relative_position_id = SOL_desolation_engines
+
+	cost = 5
+	prerequisite = {
+		focus = SOL_judge_ground
+		focus = SOL_order_skies
+		focus = SOL_heavenly_backdrop
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_project_solar_flare"
+		add_tech_bonus = {
+			name = secret_bonus
+			uses = 2
+			bonus = 1.25
+			ahead_reduction = 0.75
+			category = nuclear
+		}
+	}
+	ai_will_do = { factor = 30 }
+}
+
+shared_focus = {
+	id = SOL_skyborn
+	x = 0
+	y = 2
+	relative_position_id = SOL_order_skies
+
+	cost = 7
+	prerequisite = {
+		focus = SOL_judge_ground
+		focus = SOL_order_skies
+		focus = SOL_heavenly_backdrop
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_skyborn"
+		#Idea here
+	}
+}
+
+###Navy###
+shared_focus = {
+	id = SOL_rebuild_admiralty
+	x = 14
+	y = 1
+	relative_position_id = SOL_modernize_relic
+
+	cost = 4
+	prerequisite = { focus = SOL_modernize_relic }
+	available = {
+		OR = {
+			has_completed_focus = SOL_god_empress
+			has_completed_focus = SOL_empress_mother
+			has_completed_focus = SOL_empress_protector
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_skyborn"
+		navy_experience = 50
+	}
+	ai_will_do = { factor = 40 }
+}
+
+shared_focus = {
+	id = SOL_scraping_barrels
+	x = -2
+	y = 1
+	relative_position_id = SOL_rebuild_admiralty
+
+	cost = 7
+	prerequisite = { focus = SOL_rebuild_admiralty }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_scraping_barrels"
+		###Event of Daybreaker meeting with some of the new admiralty to see what the state of the Imperial Navy is, since other nations around them are also building to a larger standard, and she knows that the Navy has been neglected, despite its size, and they are a bit nervous, since they only have some mothballs to help in the meantime, and she isn't impressed, but sadly accepts they need them as protection, and agrees after she sees how inadequate they are
+	}
+	ai_will_do = { factor = 40 }
+}
+
+shared_focus = {
+	id = SOL_saltless_blood
+	x = 1
+	y = 1
+	relative_position_id = SOL_rebuild_admiralty
+
+	cost = 6
+	prerequisite = { focus = SOL_rebuild_admiralty }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_saltless_blood"
+		###Event of an eager new captain being met by Daybreaker, who grills them to see if they are truly ready for any of the dangers of the sea, including going down with the ship, which scares them, but she does agree in the end; alternately a live fire drill with Daybreaker watching some of the new captains handle the situation
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_practical_needs
+	x = 0
+	y = 2
+	relative_position_id = SOL_rebuild_admiralty
+
+	cost = 4
+	prerequisite = { focus = SOL_rebuild_admiralty }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_practical_needs"
+		add_tech_bonus = {
+			name = destroyer_bonus
+			uses = 2
+			bonus = 1
+			category = dd_tech
+		}
+	}
+	ai_will_do = { factor = 60 }
+}
+
+shared_focus = {
+	id = SOL_strong_dissuasion
+	x = 2
+	y = 2
+	relative_position_id = SOL_rebuild_admiralty
+
+	cost = 4
+	prerequisite = { focus = SOL_rebuild_admiralty }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_strong_dissuasion"
+		add_tech_bonus = {
+			name = light_cruiser_bonus
+			uses = 1
+			bonus = 1
+			category = cl_tech
+		}
+		add_tech_bonus = {
+			name = heavy_cruiser_bonus
+			uses = 1
+			bonus = 1
+			category = ca_tech
+		}
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_surrender_waves
+	x = -2
+	y = 1
+	relative_position_id = SOL_practical_needs
+
+	cost = 5
+	prerequisite = {
+		focus = SOL_practical_needs
+		focus = SOL_strong_dissuasion
+	}
+	mutually_exclusive = { focus = SOL_crushing_sea }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_surrender_waves"
+		add_doctrine_cost_reduction ={
+			name = base_strike_bonus
+			uses = 2
+			cost_reduction = 0.5
+			category = cat_base_strike
+		}
+	}
+	ai_will_do = {
+		factor = 60
+		modifier = {
+			has_completed_focus = SOL_god_empress
+			factor = 0
+		}
+	}
+}
+
+shared_focus = {
+	id = SOL_crushing_sea
+	x = 2
+	y = 1
+	relative_position_id = SOL_practical_needs
+
+	cost = 5
+	prerequisite = {
+		focus = SOL_practical_needs
+		focus = SOL_strong_dissuasion
+	}
+	mutually_exclusive = { focus = SOL_surrender_waves }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_crushing_sea"
+		add_doctrine_cost_reduction = {
+			name = fleet_in_being_bonus
+			uses = 2
+			cost_reduction = 0.5
+			category = cat_fleet_in_being
+		}
+	}
+	ai_will_do = { factor = 80 }
+}

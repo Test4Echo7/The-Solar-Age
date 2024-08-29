@@ -1,14 +1,17 @@
 ﻿l_english:
   ###Country Names###
-  EQS_SOL_democratic:0 "Imperial Federation"
-  EQS_SOL_democratic_DEF:0 "the Imperial Federation"
+  EQS_SOL_democratic:0 "Imperial Solar Federation"
+  EQS_SOL_democratic_DEF:0 "the Imperial Solar Federation"
   EQS_SOL_democratic_ADJ:0 "Imperial"
   EQS_SOL_communism:0 "United Socialist Solarist States"
   EQS_SOL_communism_DEF:0 "the United Socialist Solarist States"
-  EQS_SOL_communism_ADJ:0 "Solarist"
+  EQS_SOL_communism_ADJ:0 "Solar"
   EQS_SOL_neutrality:0 "Solar Empire"
   EQS_SOL_neutrality_DEF:0 "the Solar Empire"
   EQS_SOL_neutrality_ADJ:0 "Imperial"
+  EQS_SOL_romanophile:0 "Imperium Solaris"
+  EQS_SOL_romanophile_DEF:0 "the Imperium Solaris"
+  EQS_SOL_romanophile_ADJ:0 "Imperial"
 
   ###Parties###
   EQS_solaris_cultus:0 "Solaris Cultus"
@@ -50,8 +53,10 @@
   ###Sunset's Corruption###
   SOL_sunset_awaken:0 "Awakening"
   SOL_sunset_awaken_desc:0 "The Empress's prodigal student has been returned to her at last. Unlike Twilight Sparkle, Sunset Shimmer has had a consistent history of individualism and rash judgements. Chaos once flowed through her, but that taste its corruption has given her perspective. No longer will she serve her whims and strive against our Harmony. When dawn breaks, she will seek Order."
+
   ###Civil War###
   SOL_civil_war_measures:0 "The Civil War Emergencies Act"
+  SOL_civil_war_measures_desc:0 "Despite our previous reforms to the Equestrian society, it is still not enough, and drastic measures need to be taken in order secure our victory against the traitors and rebels. The Empress will have unity, whether they like it or not."
   SOL_promise_swift_end:0 "Promise Swift Ends"
   SOL_crisis_industrial_management:0 "Crisis Industrial Management"
   SOL_draw_upon_militia:0 "Draw upon Regional Militia"
@@ -60,6 +65,8 @@
   SOL_herald_doom:0 "Herald Coming Doom"
   SOL_take_everypony:0 "Press Any Into Service"
   SOL_reconquer_equestria:0 "Bring Back the Foalish"
+  SOL_reconquer_equestria_desc:0 "The separatist states across Equestria are deluded if they think they can survive on their own in this cruel world. There can be only one Equestria - for only together we are strong. Unity is a natural law, and we shall uphold it."
+
   ###Prelude###
   SOL_waking_dawn_star:0 "The Dawn Star Wakes"
   SOL_waking_dawn_star_desc:0 "Equestria burns all around us, but in our darkest hour, the first sign of hope has sprung forth. Celestia is no longer, for she has been reborn. The bright light of the Sun shall guide us, and in its warmth we shall crush all those that threaten us!"
@@ -80,6 +87,25 @@
   SOL_take_charge:0 "Take Personal Charge"
   SOL_successor_question:0 "The Question of a Successor"
   SOL_Imperium_Solis:0 "Imperium Solaris"
+  SOL_Imperium_Solis_desc:0 "It is time for a new dawn for Equestria - the Solar Empire shall rise, and all will bask in the light and glory of our Empress!"
+
+  ###Political Paths###
+  ###God-Empress###
+  SOL_god_empress:0 "God-Empress of Ponykind"
+  SOL_god_empress_desc:0 "How can a being that raises the Sun not be a god? Princess Celestia might have rejected worship, but it is only fit for the Empress to be revered. May our Sun shine eternally! Forever will She be praised!"
+  ###Empress Mother###
+  SOL_empress_mother:0 "Service of Self"
+  SOL_empress_mother_desc:0 "Ponies are like foals, in need of a wise, yet stern parent. It is the duty of the Empress to be a mother to all her subjects. May she watch over us."
+  ###Empress Protector###
+  SOL_empress_protector:0 "Hero of the Ponies"
+  SOL_empress_protector_desc:0 "The ponies, and other beings, need protection from harm and disorder - only in this way we can uphold Harmony. The Sun is a loving, nurturing protector. She watches over us all."
+
+  ###Military###
+  ###Army###
+  SOL_new_officers:0 "New Blood"
+  SOL_new_officers_desc:0 "We have no shortage of ambitious, young or overlooked officers. While their potential might have been wasted under the old regime, the Empire will most certainly make good use of their skills."
+  SOL_mage_army:0 "An Army of Mages"
+  SOL_mage_army_desc:0 "Basing our doctrine on usage of magic will allow us to tap into the power of our mages, with devastating results for the enemy."
 
   ###Events###
   ###Industry Tree Events###
