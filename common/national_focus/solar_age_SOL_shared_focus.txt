@@ -3081,7 +3081,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_practical_needs"
 		add_tech_bonus = {
-			name = destroyer_bonus
+			name = dd_bonus
 			uses = 2
 			bonus = 1
 			category = dd_tech
@@ -3102,13 +3102,13 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_strong_dissuasion"
 		add_tech_bonus = {
-			name = light_cruiser_bonus
+			name = cl_bonus
 			uses = 1
 			bonus = 1
 			category = cl_tech
 		}
 		add_tech_bonus = {
-			name = heavy_cruiser_bonus
+			name = ca_bonus
 			uses = 1
 			bonus = 1
 			category = ca_tech
@@ -3171,4 +3171,438 @@ shared_focus = {
 		}
 	}
 	ai_will_do = { factor = 80 }
+}
+
+shared_focus = {
+	id = SOL_mobile_airfields
+	x = -2
+	y = 1
+	relative_position_id = SOL_surrender_waves
+
+	cost = 4
+	prerequisite = { focus = SOL_surrender_waves }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_mobile_airfields"
+		###Event of Daybreaker being shown some of the first of a new line of carriers, which she isn't normally much of a fan of, but it does include a small firepower demonstration, plus the destruction of targets they set up, which does actually impress her, especially since it is more effective than a battleship
+		add_tech_bonus = {
+			name = cv_bonus
+			uses = 2
+			bonus = 1
+			category = cv_tech
+		}
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_fillydelphia_rivalry
+	x = 0
+	y = 1
+	relative_position_id = SOL_surrender_waves
+
+	cost = 5
+	prerequisite = { focus = SOL_surrender_waves }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_fillydelphia_rivalry"
+		###Maybe short event of some production foreman for a new navy contract calling up a rival in Manehattan, to just rub into their face about how Fillydelphia is going to outproduce Manehattan with the new designs that the Empire wants, and how that makes them better
+		12 = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = dockyard
+				level = 3
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = naval_base
+				level = 4
+				instant_build = yes
+				province = 950
+			}
+		}
+	}
+	ai_will_do = { factor = 70 }
+}
+
+shared_focus = {
+	id = SOL_semper_fi
+	x = 0
+	y = 2
+	relative_position_id = SOL_practical_needs
+
+	cost = 5
+	prerequisite = { focus = SOL_practical_needs }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_semper_fi"
+		add_tech_bonus = {
+			name = marine_bonus
+			bonus = 1
+			uses = 2
+			category = marine_tech
+		}
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_expand_manehattan_dockyards
+	x = 0
+	y = 1
+	relative_position_id = SOL_crushing_sea
+
+	cost = 5
+	prerequisite = { focus = SOL_crushing_sea }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_expand_manehattan_dockyards"
+		###Maybe short event of some ponies being inspected on the new dockyards by one of the ponies from the military, and the pony being overly nitpicky about all the details, since it has to be perfect for the Empress
+		75 = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = dockyard
+				level = 3
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = naval_base
+				level = 4
+				instant_build = yes
+				province = 11710
+			}
+		}
+	}
+	ai_will_do = { factor = 70 }
+}
+
+shared_focus = {
+	id = SOL_first_rates
+	x = 2
+	y = 1
+	relative_position_id = SOL_crushing_sea
+
+	cost = 4
+	prerequisite = { focus = SOL_crushing_sea }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_first_rates"
+		add_tech_bonus = {
+			name = bb_bonus
+			bonus = 1
+			uses = 2
+			category = bb_tech
+		}
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_birds_of_water
+	x = -2
+	y = 1
+	relative_position_id = SOL_mobile_airfields
+
+	cost = 5
+	prerequisite = { focus = SOL_mobile_airfields }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_birds_of_water"
+		###Maybe short event of a new pilot being trained on carrier aircraft coming in for a landing and nearly crashing, which gets dramatic since it is the second or third pass, and he almost falls off on it, but manages to land it in the end
+		if = {
+			limit = { has_dlc = "By Blood Alone" }
+			add_tech_bonus = {
+				name = naval_air
+				uses = 1
+				bonus = 1
+				category = naval_air
+			}
+			add_tech_bonus = {
+				name = plane_modules_tech
+				uses = 1
+				bonus = 1
+				category = plane_modules_tech
+			}
+		}
+		else = {
+			add_tech_bonus = {
+				name = naval_bomber
+				uses = 1
+				bonus = 1
+				category = naval_bomber
+			}
+		}
+	}
+	ai_will_do = { factor = 40 }
+}
+
+shared_focus = {
+	id = SOL_modern_sea
+	x = 0
+	y = 1
+	relative_position_id = SOL_mobile_airfields
+
+	cost = 3
+	prerequisite = { focus = SOL_mobile_airfields }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_modern_sea"
+		add_doctrine_cost_reduction = {
+			name = base_strike_bonus
+			uses = 1
+			cost_reduction = 0.5
+			category = cat_base_strike
+		}
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_grand_expeditions
+	x = 0
+	y = 1
+	relative_position_id = SOL_semper_fi
+
+	cost = 4
+	prerequisite = { focus = SOL_semper_fi }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_grand_expeditions"
+		add_tech_bonus = {
+			name = tp_bonus
+			uses = 2
+			bonus = 1
+			category = tp_tech
+		}
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_imperial_dreadnoughts
+	x = 0
+	y = 2
+	relative_position_id = SOL_first_rates
+
+	cost = 5
+	prerequisite = { focus = SOL_first_rates }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_imperial_dreadnoughts"
+		###Event of a new battleship captain, who is still a bit eager to prove his worth, finding the base of some pirates, promising them amnesty, just so he could get them out on the field, and then begins to shower them with shells, which he enjoys to a perturbing degree, since he feels invincible in his battleship
+	}
+	ai_will_do = { factor = 60 }
+}
+
+shared_focus = {
+	id = SOL_floating_cities
+	x = 1
+	y = 1
+	relative_position_id = SOL_birds_of_water
+
+	cost = 7
+	prerequisite = { focus = SOL_birds_of_water }
+	prerequisite = { focus = SOL_modern_sea }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_floating_cities"
+		#Idea here
+		add_tech_bonus = {
+			name = cv_bonus
+			uses = 1
+			bonus = 1
+			category = cv_tech
+		}
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_roach_guards
+	x = 0
+	y = 1
+	relative_position_id = SOL_grand_expeditions
+
+	cost = 7
+	prerequisite = { focus = SOL_grand_expeditions }
+	mutually_exclusive = { focus = SOL_magisteel_plating }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_roach_guards"
+		#Idea here
+		add_doctrine_cost_reduction = {
+			name = naval_doctrine_bonus
+			uses = 1
+			cost_reduction = 0.5
+			category = naval_doctrine
+		}
+	}
+	ai_will_do = { factor = 40 }
+}
+
+shared_focus = {
+	id = SOL_magisteel_plating
+	x = 0
+	y = 2
+	relative_position_id = SOL_expand_manehattan_dockyards
+
+	cost = 7
+	prerequisite = { focus = SOL_expand_manehattan_dockyards }
+	mutually_exclusive = { focus = SOL_roach_guards }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_magisteel_plating"
+		add_doctrine_cost_reduction = {
+			name = fleet_in_being_bonus
+			uses = 1
+			cost_reduction = 0.5
+			category = cat_fleet_in_being
+		}
+		#Idea here
+	}
+	ai_will_do = { factor = 80 }
+}
+
+shared_focus = {
+	id = SOL_swarms_upon_sea
+	x = 0
+	y = 3
+	relative_position_id = SOL_fillydelphia_rivalry
+
+	cost = 5
+	prerequisite = { focus = SOL_fillydelphia_rivalry }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_swarms_upon_sea"
+		add_tech_bonus = {
+			name = cv_bonus
+			uses = 1
+			bonus = 1
+			category = cv_tech
+		}
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_old_guns
+	x = 0
+	y = 1
+	relative_position_id = SOL_magisteel_plating
+
+	cost = 5
+	prerequisite = { focus = SOL_imperial_dreadnoughts }
+	prerequisite = {
+		focus = SOL_roach_guards
+		focus = SOL_magisteel_plating
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_old_guns"
+		add_tech_bonus = {
+			name = bb_bonus
+			uses = 1
+			bonus = 1
+			category = bb_tech
+		}
+		add_doctrine_cost_reduction = {
+			name = fleet_in_being_bonus
+			uses = 1
+			cost_reduction = 0.5
+			category = cat_fleet_in_being
+		}
+	}
+	ai_will_do = { factor = 60 }
+}
+
+shared_focus = {
+	id = SOL_practical_reductions
+	x = 0
+	y = 2
+	relative_position_id = SOL_imperial_dreadnoughts
+
+	cost = 5
+	prerequisite = { focus = SOL_imperial_dreadnoughts }
+	mutually_exclusive = { focus = SOL_sea_fortress }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_practical_reductions"
+		#Idea here
+	}
+	ai_will_do = { factor = 30 }
+}
+
+shared_focus = {
+	id = SOL_sea_fortress
+	x = 2
+	y = 2
+	relative_position_id = SOL_imperial_dreadnoughts
+
+	cost = 5
+	prerequisite = { focus = SOL_imperial_dreadnoughts }
+	mutually_exclusive = { focus = SOL_practical_reductions }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_sea_fortress"
+		###Perhaps event of Daybreaker being given a blueprint presentation of the Daybreak-class superheavy, as a way to impress her, and also gain her good graces by a designer from Manehattan, who had been accused of anti-Order activities, and she is indeed suitably impressed, although asks if it can come in orange as a joke
+		add_tech_bonus = {
+			name = shbb_bonus
+			uses = 1
+			bonus = 2
+			category = shbb_tech
+		}
+		custom_effect_tooltip = SOL_biggest_guns_tt #Mention that player will get a design once researched (or already researched), and one production line of Daybreak-Class at 50% completion
+	}
+	ai_will_do = { factor = 100 }
+}
+
+shared_focus = {
+	id = SOL_adapt_tide
+	x = 1
+	y = 1
+	relative_position_id = SOL_swarms_upon_sea
+
+	cost = 5
+	prerequisite = { focus = SOL_swarms_upon_sea }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_adapt_tide"
+		#Idea here
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_steady_going
+	x = -1
+	y = 1
+	relative_position_id = SOL_old_guns
+
+	cost = 5
+	prerequisite = { focus = SOL_old_guns }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_steady_going"
+		#Idea here
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_sun_never_sets
+	x = 1
+	y = 1
+	relative_position_id = SOL_adapt_tide
+
+	cost = 6
+	prerequisite = {
+		focus = SOL_adapt_tide
+		focus = SOL_steady_going
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_sun_never_sets"
+		###Event of Daybreaker stepping upon the Daybreak, and going out to see to experience the waves at her hooftips once more, which makes her feel freer. Freer to test her weaponry, since she knows she's gathering a crowd, and she wants to make sure she impresses them, and if there are a few bits of collateral damage, she can live with it if it means that Order is maintained
+	}
+	ai_will_do = { factor = 70 }
 }
