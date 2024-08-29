@@ -55,3 +55,66 @@ country_event = {
         }
     }
 }
+
+country_event = { #Daybreaker visit's Fluttershy's family, as Zephyr Breeze has been drafted into the military, but he has been dodging it wherever he could, and after a bit of a tense meeting in the library, she basically forces him into the military, as he is an example because he's Fluttershy's brother, and she will not have herself be defied again
+    id = solarreworked.100
+    title = solarreworked.100.t
+    desc = solarreworked.100.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.100"}
+
+    is_triggered_only = yes
+
+    option = { #Nopony defies me!
+        name = solarreworked.100.a
+        hidden_effect = {
+            country_event = {
+                id = solarreworked.101
+                days = 84
+                random_days = 14
+            }
+        }
+    }
+}
+
+country_event = { #Zephyr does his best to avoid combat as it breaks out in his unit, and he finds his way into his general's quarters, which gives him an idea of escape, but he is found before he can flee, but mistaken for his general instead, and brought to help with leading an orderly regrouping, which he isn't happy about
+    id = solarreworked.101
+    title = solarreworked.101.t
+    desc = solarreworked.101.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.101"}
+
+    is_triggered_only = yes
+
+    option = { #This is my life, apparently
+        name = solarreworked.101.a
+        custom_effect_tooltip = zephyr_breeze_stats_tt
+        EQS_zephyr_breeze = {
+            set_character_flag = SOL_zephyr_enlisted
+        }
+        hidden_effect = {
+            country_event = {
+                id = solarreworked.102
+                days = 70
+                random_days = 35
+            }
+        }
+    }
+}
+
+country_event = { #Zephyr kicks back in his office that he now has as a general, and he is interrupted by both his aide, and then later, the general himself, as he wasn't killed in combat like thought, just injured, and Zephyr flees before he can be court martialed
+    id = solarreworked.102
+    title = solarreworked.102.t
+    desc = solarreworked.102.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.102"}
+
+    is_triggered_only = yes
+
+    option = { #Buck! Buck! Buck!
+        name = solarreworked.102.a
+        #Will later trigger an event in CRY, but for now, just send him to CRY
+        hidden_effect = {
+            EQS_zephyr_breeze = {
+                set_nationality = CRY
+            }
+        }
+    }
+}
