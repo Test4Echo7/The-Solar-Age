@@ -1,7 +1,7 @@
 ﻿add_namespace = solarempire
 add_namespace = solarempiresparkles
 
-country_event = {
+country_event = { #Ta!
 	id = solarempire.1
 	immediate = {log = "[GetDateText]: [Root.GetName]: event solarempire.1"}
 	title = solarempire.1.t
@@ -48,46 +48,43 @@ country_event = {
 
 	option = {
 		name = solarempire.2.a
-		add_field_marshal_role = {
-			character = EQS_princess_celestia
-			traits = { supernova pony_race_trait }
-			skill = 7
-			legacy_id = 1337
-			attack_skill = 7
-			defense_skill = 5
-			planning_skill = 5
-			logistics_skill = 5
-		}
-		custom_effect_tooltip = daybreaker_stats_tp
-		if = {
-			limit = { is_ai = yes }
-			if = {
-				limit = { has_country_flag = remove_db_70_days }
-				hidden_effect = {
-					clr_country_flag = remove_db_70_days
-					country_event = { id = solarempire.1 days = 320 }
-				}
-				custom_effect_tooltip = solarempire.2.a.tp_70
-			}
-			else = {
-				custom_effect_tooltip = solarempire.2.a.tp_40
-				hidden_effect = { country_event = { id = solarempire.1 days = 160 } }
+		hidden_effect = {
+			EQS_princess_celestia = {
+				set_character_flag = SOL_daybreaker_boss
+				set_character_name = EQS_SOL_daybreaker
 			}
 		}
-		else = {
-			if = {
-				limit = { has_country_flag = remove_db_70_days }
-				hidden_effect = {
-					clr_country_flag = remove_db_70_days
-					country_event = { id = solarempire.1 days = 160 }
-				}
-				custom_effect_tooltip = solarempire.2.a.tp_70
-			}
-			else = {
-				custom_effect_tooltip = solarempire.2.a.tp_40
-				hidden_effect = { country_event = { id = solarempire.1 days = 80 } }
-			}
-		}
+		custom_effect_tooltip = SOL_daybreaker_promotion_tt
+		custom_effect_tooltip = new_daybreaker_stats_tp
+		#if = {
+		#	limit = { is_ai = yes }
+		#	if = {
+		#		limit = { has_country_flag = remove_db_70_days }
+		#		hidden_effect = {
+		#			clr_country_flag = remove_db_70_days
+		#			country_event = { id = solarempire.1 days = 320 }
+		#		}
+		#		custom_effect_tooltip = solarempire.2.a.tp_70
+		#	}
+		#	else = {
+		#		custom_effect_tooltip = solarempire.2.a.tp_40
+		#		hidden_effect = { country_event = { id = solarempire.1 days = 160 } }
+		#	}
+		#}
+		#else = {
+		#	if = {
+		#		limit = { has_country_flag = remove_db_70_days }
+		#		hidden_effect = {
+		#			clr_country_flag = remove_db_70_days
+		#			country_event = { id = solarempire.1 days = 160 }
+		#		}
+		#		custom_effect_tooltip = solarempire.2.a.tp_70
+		#	}
+		#	else = {
+		#		custom_effect_tooltip = solarempire.2.a.tp_40
+		#		hidden_effect = { country_event = { id = solarempire.1 days = 80 } }
+		#	}
+		#}
 	}
 }
 

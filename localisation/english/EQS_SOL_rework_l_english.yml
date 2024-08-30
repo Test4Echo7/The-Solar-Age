@@ -57,10 +57,19 @@
 
   ###Flags and Custom Tooltips###
   SOL_has_captured_sunset:0 "Sunset Shimmer has been captured."
+  SOL_daybreaker_promotion_tt:0 "§YDaybreaker§! becomes a Field Marshal."
 
   ###Leader Traits###
   gifted:0 "Gifted"
-  gifted_desc:0 "Zephyr Breeze always believed that he was destined for greatness, and with his brains, of course he'd easily pick up any new task thrown at him! Now, if only he could find ponies to delegate some of his tasks. Starting with... all of them."
+  gifted_desc:0 "§LZephyr Breeze always believed that he was destined for greatness, and with his brains, of course he'd easily pick up any new task thrown at him! Now, if only he could find ponies to delegate some of his tasks. Starting with... all of them.§!"
+  bearer_of_the_sun:0 "Bearer of the Sun"
+  bearer_of_the_sun_desc:0 "§LThe Sun rises. The Light of the Dawn Star reaches into the cold pits of darkness and Chaos. The Holy Flame cleanses all.§!"
+  ponykinds_goddess:0 "Goddess of Ponykind"
+  ponykinds_goddess_desc:0 "§LAmong us a Goddess walks. Her word is law, her statutes unquestionable. Every step she takes sanctifies the ground on which she treads. None of us are worthy of her love. All of us are deserving of her wrath. Let the heathens know their fate has come. The Sun has risen, and it seeks its due.§!"
+  hoof_of_iron:0 "Hoof of Iron"
+  hoof_of_iron_desc:0 "§LThe Empress guides us through our mistakes. Every error she chastens us with the punishment we deserve. Our life is fleeting, yet hers is unending. Our thoughts should not be our own; we are nothing but vessels for her to fill. As one, we shall drive the sinners of the world into Sheol.§!"
+  savior_of_ponykind:0 "Savior of Ponykind"
+  savior_of_ponykind_desc:0 "§LOur lives have been bought at a great price. Our every breath we owe to the Empress, for she has shielded us all from the harms of this world. We are no longer our own. As her humble servants, we must fight to protect our right to serve her. Nothing less than complete devotion will suffice.§!"
 
   ###Focuses###
   ###Sunset's Corruption###

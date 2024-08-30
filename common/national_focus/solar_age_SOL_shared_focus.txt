@@ -1394,6 +1394,10 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_ultimate_leader"
+		#Temp
+		EQS_princess_celestia = {
+			add_trait = { trait = hoof_of_iron }
+		}
 		###Event of Daybreaker effectively taking additional charge or bossing around even further some armies, and not allowing herself to be questioned at all, since she is the ultimate general in the Imperial Army
 	}
 	ai_will_do = { factor = 40 }
@@ -2019,6 +2023,9 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_better_than_best"
 		#Add stats to Daybreaker
+		EQS_princess_celestia = {
+			add_trait = { trait = ponykinds_goddess }
+		}
 		###Possibly event of Daybreaker taking a lead role in an attack of a heretic stronghold or the like, and she wants to test some of the new spells that she practiced as she needs to see what her soldiers are doing under her command, and also so she can enact some judgement of ponies herself, and she is basically a walking death machine, although it clear she is at her limits protecting herself
 	}
 	ai_will_do = { factor = 70 }
@@ -2682,6 +2689,10 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_ponykinds_savior"
+		#Temp
+		EQS_princess_celestia = {
+			add_trait = { trait = savior_of_ponykind }
+		}
 		###Event of a soldier or two being pinned down by enemy fire, and there is a bit of radio chatter that "she" is gone, and shortly Daybreaker breaks through a barricade or the like to blast most of the attackers, since she was nearby to begin with, and is doing all that she can to protect her ponies
 	}
 	ai_will_do = { factor = 100 }

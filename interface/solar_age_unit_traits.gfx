@@ -1,0 +1,6 @@
+spriteTypes = {
+    spriteType = {
+		name = "GFX_trait_bearer_of_the_sun"
+		texturefile = "gfx/interface/traits/personal/trait_supernova.dds"
+	}
+}
