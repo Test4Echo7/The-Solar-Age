@@ -15,15 +15,12 @@ characters = {
         }
     }
     EQS_Novus_Flux = {
-		name = EQS_Novus_Flux_name
+		name = EQS_Novus_Flux
 		gender = female
 		portraits = {
-			civilian = {
-				large = "gfx/leaders/EQS/Novus_Flux.tga"
-			}
 			army = {
 				large = "gfx/leaders/EQS/Novus_Flux.tga"
-				#small = "GFX_idea_EQS_novus_flux"
+				small = "gfx/interface/ideas/advisors/EQS/EQS_novus_flux.tga"
 			}
 		}
 		corps_commander = {
@@ -59,12 +56,12 @@ characters = {
 		}
 	}
 	EQS_Nova_Glow = {
-		name = EQS_Nova_Glow_name
+		name = EQS_Nova_Glow
 		gender = female
 		portraits = {
 			army = {
 				large = "gfx/leaders/EQS/Nova_Glow.tga"
-				#small = "GFX_idea_EQS_nova_glow"
+				small = "gfx/interface/ideas/advisors/EQS/EQS_nova_glow.tga"
 			}
 		}
 		corps_commander = {
@@ -80,12 +77,12 @@ characters = {
 		}
 	}
 	EQS_Quasar_Pulse = {
-		name = EQS_Quasar_Pulse_name
+		name = EQS_Quasar_Pulse
 		gender = female
 		portraits ={
 			army = {
 				large = "gfx/leaders/EQS/Quasar_Pulse.tga"
-				#small = "GFX_idea_quasar_pulse"
+				small = "gfx/interface/ideas/advisors/EQS/EQS_quasar_pulse.tga"
 			}
 		}
 		corps_commander = {
@@ -101,11 +98,11 @@ characters = {
 		}
 	}
 	EQS_Stellar_Breeze = {
-		name = EQS_Stellar_Breeze_name
+		name = EQS_Stellar_Breeze
 		gender = female
 		portraits = {
 			civilian = {
-				#small = "GFX_idea_EQS_stellar_breeze"
+				small = "gfx/interface/ideas/advisors/EQS/EQS_stellar_breeze.tga"
 			}
 			army = {
 				large = "gfx/leaders/EQS/Stellar_Breeze.tga"
@@ -139,12 +136,12 @@ characters = {
 		}
 	}
 	EQS_Fidelis_Flamma = {
-		name = EQS_Fidelis_Flamma_name
+		name = EQS_Fidelis_Flamma
 		gender = female
 		portraits = {
 			army = {
 				large = "gfx/leaders/EQS/Fidelis_Flamma.tga"
-				#small = "GFX_idea_EQS_fidelis_flamma"
+				small = "gfx/interface/ideas/advisors/EQS/EQS_fidelis_flamma.tga"
 			}
 		}
 		corps_commander = {
@@ -165,6 +162,7 @@ characters = {
         portraits = {
             army = {
                 large = "gfx/leaders/EQS/Burning_Plage.tga"
+                small = "gfx/interface/ideas/advisors/EQS/EQS_burning_plage.tga"
             }
         }
         corps_commander = {
@@ -178,12 +176,12 @@ characters = {
         }
 	}
 	EQS_Steel_Sickle = {
-		name = EQS_Steel_Sickle_name
+		name = EQS_Steel_Sickle
 		gender = female
 		portraits = {
 			army = {
 				large = "gfx/leaders/EQS/Steel_Sickle.tga"
-				#small = "GFX_idea_EQS_steel_sickle"
+				small = "gfx/interface/ideas/advisors/EQS/EQS_steel_sickle.tga"
 			}
 		}
 		corps_commander = {

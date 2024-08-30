@@ -20,6 +20,13 @@
   SOL_sunset_shimmer_new_name:0 "Dawnbreak Shimmer"
   SOL_flurry_heart_based_name:0 "Firestorm Heart"
   EQS_zephyr_breeze:0 "Zephyr Breeze"
+  EQS_Novus_Flux:0 "Novus Flux"
+  EQS_Nova_Glow:0 "Nova Glow"
+  EQS_Quasar_Pulse:0 "Quasar Pulse"
+  EQS_burning_plage:0 "Burning Plage"
+  EQS_Steel_Sickle:0 "Steel Sickle"
+  EQS_Stellar_Breeze:0 "Stellar Breeze"
+  EQS_Fidelis_Flamma:0 "Fidelis Flamma"
 
   ###BoP###
   EQS_sanity_bop:0 "The Princess's Burden"

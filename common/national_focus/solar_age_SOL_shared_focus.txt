@@ -1479,10 +1479,7 @@ shared_focus = {
 	relative_position_id = SOL_inquisitionis_secondary_role
 
 	cost = 5
-	prerequisite = {
-		focus = SOL_inquisitionis_secondary_role
-		focus = SOL_inquisitionis_primary_role
-	}
+	prerequisite = { focus = SOL_inquisitionis_secondary_role }
 	prerequisite = { focus = SOL_Faith_Sacrifice_Worship }
 	available = {
 		is_subject = no
