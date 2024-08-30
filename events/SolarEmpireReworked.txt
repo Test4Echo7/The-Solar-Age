@@ -110,10 +110,35 @@ country_event = { #Zephyr kicks back in his office that he now has as a general,
 
     option = { #Buck! Buck! Buck!
         name = solarreworked.102.a
-        #Will later trigger an event in CRY, but for now, just send him to CRY
         hidden_effect = {
             EQS_zephyr_breeze = {
                 set_nationality = CRY
+                clr_character_flag = SOL_zephyr_enlisted
+            }
+            CRY = {
+                country_event = {
+                    id = solarreworked.103
+                    days = 10
+                    random_days = 4
+                }
+            }
+        }
+    }
+}
+
+country_event = { #Zephyr flees to the Crystal Empire, and he runs across a sole soldier patrolling the border between a small town and the desolate wastes of Equestria, and he is caught by her, and questioned a bit, where he pretends that he is definitely a super important officer and that the Solar Empire is probably searching for him as they speak, and she takes him back, to be used to provide intel
+    id = solarreworked.103
+    title = solarreworked.103.t
+    desc = solarreworked.103.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.103"}
+
+    is_triggered_only = yes
+
+    option = { #Oh no.
+        name = solarreworked.103.a
+        hidden_effect = {
+            EQS_zephyr_breeze = {
+                set_character_flag = SOL_zephyr_enlisted
             }
         }
     }

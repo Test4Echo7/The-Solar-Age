@@ -222,183 +222,183 @@ focus_tree = {
 #	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ANNEXATION }
 #}
 
-shared_focus = {
-	id = SOL_imperial_bureaucracy
-	icon = GFX_goal_solar_buraucracy
-	prerequisite = {
-		focus = SOL_defence_of_empire_act
-	}
-	available = {
-		is_subject = no
-		has_DB_ruler = yes
-	}
-	#bypass = {}
-	cost = 10
-	ai_will_do = {
-		factor = 100
-	}
-	relative_position_id = SOL_Imperium_Solis
-	x = -4
-	y = 3
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_imperial_bureaucracy"
-		add_political_power = 50
-		add_ideas = SOL_imperial_bureaucracy_idea
-	}
-	search_filters = { FOCUS_FILTER_POLITICAL }
-}
+#shared_focus = {
+#	id = SOL_imperial_bureaucracy
+#	icon = GFX_goal_solar_buraucracy
+#	prerequisite = {
+#		focus = SOL_defence_of_empire_act
+#	}
+#	available = {
+#		is_subject = no
+#		has_DB_ruler = yes
+#	}
+#	#bypass = {}
+#	cost = 10
+#	ai_will_do = {
+#		factor = 100
+#	}
+#	relative_position_id = SOL_Imperium_Solis
+#	x = -4
+#	y = 3
+#	completion_reward = {
+#		log = "[GetDateText]: [Root.GetName]: Focus SOL_imperial_bureaucracy"
+#		add_political_power = 50
+#		add_ideas = SOL_imperial_bureaucracy_idea
+#	}
+#	search_filters = { FOCUS_FILTER_POLITICAL }
+#}
 
-shared_focus = {
-	id = SOL_Imperial_Corporation_Council
-	icon = GFX_goal_solar_corporate_council
-	prerequisite = {
-		focus = SOL_defence_of_empire_act
-		focus = SOL_Maternal_Guidiance
-	}
-	available = {
-		is_subject = no
-		has_DB_ruler = yes
-		if = {
-			limit = {
-				has_completed_focus = SOL_empress_mother
-			}
-			NOT = {
-				has_completed_focus = SOL_Lux_et_Tenebris
-			}
-		}
-	}
-	#bypass = {}
-	cost = 10
-	ai_will_do = {
-		factor = 100
-	}
-	relative_position_id = SOL_Imperium_Solis
-	x = -2
-	y = 3
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_Imperial_Corporation_Council"
-		add_ideas = SOL_Imperial_Corporation_Council_idea
-		add_tech_bonus = {
-			name = industrial_bonus
-			bonus = 0.5
-			uses = 2
-			category = industry
-		}
-	}
-	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
-}
+#shared_focus = {
+#	id = SOL_Imperial_Corporation_Council
+#	icon = GFX_goal_solar_corporate_council
+#	prerequisite = {
+#		focus = SOL_defence_of_empire_act
+#		focus = SOL_Maternal_Guidiance
+#	}
+#	available = {
+#		is_subject = no
+#		has_DB_ruler = yes
+#		if = {
+#			limit = {
+#				has_completed_focus = SOL_empress_mother
+#			}
+#			NOT = {
+#				has_completed_focus = SOL_Lux_et_Tenebris
+#			}
+#		}
+#	}
+#	#bypass = {}
+#	cost = 10
+#	ai_will_do = {
+#		factor = 100
+#	}
+#	relative_position_id = SOL_Imperium_Solis
+#	x = -2
+#	y = 3
+#	completion_reward = {
+#		log = "[GetDateText]: [Root.GetName]: Focus SOL_Imperial_Corporation_Council"
+#		add_ideas = SOL_Imperial_Corporation_Council_idea
+#		add_tech_bonus = {
+#			name = industrial_bonus
+#			bonus = 0.5
+#			uses = 2
+#			category = industry
+#		}
+#	}
+#	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+#}
 
-shared_focus = {
-	id = SOL_Strong_Imperial_Government
-	icon = GFX_goal_solar_strong_government
-	prerequisite = {
-		focus = SOL_imperial_bureaucracy
-	}
-	available = {
-		is_subject = no
-		has_DB_ruler = yes
-	}
-	#bypass = {}
-	cost = 10
-	ai_will_do = {
-		factor = 100
-	}
-	relative_position_id = SOL_Imperium_Solis
-	x = -4
-	y = 4
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_Strong_Imperial_Government"
-		add_political_power = 150
-	}
-	search_filters = { FOCUS_FILTER_POLITICAL }
-}
+#shared_focus = {
+#	id = SOL_Strong_Imperial_Government
+#	icon = GFX_goal_solar_strong_government
+#	prerequisite = {
+#		focus = SOL_imperial_bureaucracy
+#	}
+#	available = {
+#		is_subject = no
+#		has_DB_ruler = yes
+#	}
+#	#bypass = {}
+#	cost = 10
+#	ai_will_do = {
+#		factor = 100
+#	}
+#	relative_position_id = SOL_Imperium_Solis
+#	x = -4
+#	y = 4
+#	completion_reward = {
+#		log = "[GetDateText]: [Root.GetName]: Focus SOL_Strong_Imperial_Government"
+#		add_political_power = 150
+#	}
+#	search_filters = { FOCUS_FILTER_POLITICAL }
+#}
 
-shared_focus = {
-	id = SOL_Protect_the_Weak
-	icon = GFX_goal_solar_care_for_weak
-	prerequisite = {
-		focus = SOL_Strong_Imperial_Government
-	}
-	available = {
-		is_subject = no
-		has_DB_ruler = yes
-	}
-	#bypass = {}
-	cost = 10
-	ai_will_do = {
-		factor = 100
-	}
-	relative_position_id = SOL_Imperium_Solis
-	x = -4
-	y = 5
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_Protect_the_Weak"
-		add_ideas = SOL_Protect_the_Weak_idea
-	}
-	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
-}
+#shared_focus = {
+#	id = SOL_Protect_the_Weak
+#	icon = GFX_goal_solar_care_for_weak
+#	prerequisite = {
+#		focus = SOL_Strong_Imperial_Government
+#	}
+#	available = {
+#		is_subject = no
+#		has_DB_ruler = yes
+#	}
+#	#bypass = {}
+#	cost = 10
+#	ai_will_do = {
+#		factor = 100
+#	}
+#	relative_position_id = SOL_Imperium_Solis
+#	x = -4
+#	y = 5
+#	completion_reward = {
+#		log = "[GetDateText]: [Root.GetName]: Focus SOL_Protect_the_Weak"
+#		add_ideas = SOL_Protect_the_Weak_idea
+#	}
+#	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+#}
 
-shared_focus = {
-	id = SOL_legion_of_labor
-	icon = GFX_goal_solar_legion_of_labour
-	prerequisite = {
-		focus = SOL_Strong_Imperial_Government
-		focus = SOL_Harmony_through_Order
-	}
-	available = {
-		is_subject = no
-		has_DB_ruler = yes
-		if = {
-			limit = {
-				has_completed_focus = SOL_empress_mother
-			}
-			NOT = {
-				has_completed_focus = SOL_State_Personified
-			}
-		}
-	}
-	#bypass = {}
-	cost = 10
-	ai_will_do = {
-		factor = 100
-	}
-	relative_position_id = SOL_Imperium_Solis
-	x = -2
-	y = 5
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_legion_of_labor"
-		add_ideas = SOL_legion_of_labor_idea
-	}
-	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
-}
+#shared_focus = {
+#	id = SOL_legion_of_labor
+#	icon = GFX_goal_solar_legion_of_labour
+#	prerequisite = {
+#		focus = SOL_Strong_Imperial_Government
+#		focus = SOL_Harmony_through_Order
+#	}
+#	available = {
+#		is_subject = no
+#		has_DB_ruler = yes
+#		if = {
+#			limit = {
+#				has_completed_focus = SOL_empress_mother
+#			}
+#			NOT = {
+#				has_completed_focus = SOL_State_Personified
+#			}
+#		}
+#	}
+#	#bypass = {}
+#	cost = 10
+#	ai_will_do = {
+#		factor = 100
+#	}
+#	relative_position_id = SOL_Imperium_Solis
+#	x = -2
+#	y = 5
+#	completion_reward = {
+#		log = "[GetDateText]: [Root.GetName]: Focus SOL_legion_of_labor"
+#		add_ideas = SOL_legion_of_labor_idea
+#	}
+#	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+#}
 
-shared_focus = {
-	id = SOL_Freedom_from_Fear
-	icon = GFX_goal_solar_phoenix_defence
-	prerequisite = {
-		focus = SOL_Protect_the_Weak
-	}
-	available = {
-		is_subject = no
-		has_DB_ruler = yes
-	}
-	#bypass = {}
-	cost = 10
-	ai_will_do = {
-		factor = 50
-	}
-	relative_position_id = SOL_Imperium_Solis
-	x = -4
-	y = 6
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_Freedom_from_Fear"
-		add_political_power = 70
-		add_stability = 0.1
-		add_ideas = SOL_Freedom_from_Fear_idea
-		unlock_decision_category_tooltip = SOL_dealing_with_resistance
-	}
-	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESISTANCE FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
-}
+#shared_focus = {
+#	id = SOL_Freedom_from_Fear
+#	icon = GFX_goal_solar_phoenix_defence
+#	prerequisite = {
+#		focus = SOL_Protect_the_Weak
+#	}
+#	available = {
+#		is_subject = no
+#		has_DB_ruler = yes
+#	}
+#	#bypass = {}
+#	cost = 10
+#	ai_will_do = {
+#		factor = 50
+#	}
+#	relative_position_id = SOL_Imperium_Solis
+#	x = -4
+#	y = 6
+#	completion_reward = {
+#		log = "[GetDateText]: [Root.GetName]: Focus SOL_Freedom_from_Fear"
+#		add_political_power = 70
+#		add_stability = 0.1
+#		add_ideas = SOL_Freedom_from_Fear_idea
+#		unlock_decision_category_tooltip = SOL_dealing_with_resistance
+#	}
+#	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESISTANCE FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
+#}
 
 #shared_focus = {
 #	id = SOL_empress_mother
@@ -465,137 +465,137 @@ shared_focus = {
 #	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 #}
 
-shared_focus = {
-	id = SOL_Imperial_Investigative_Service
-	icon = GFX_goal_solar_intelligence
-	prerequisite = {
-		focus = SOL_Maternal_Guidiance
-	}
-	available = {
-		is_subject = no
-		has_DB_ruler = yes
-	}
-	#bypass = {}
-	cost = 10
-	ai_will_do = {
-		factor = 100
-	}
-	relative_position_id = SOL_Imperium_Solis
-	x = 0
-	y = 3
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_Imperial_Investigative_Service"
-		if = {
-			limit = {
-				has_dlc = "La Resistance"
-			}
-			add_ideas = SOL_Imperial_Investigative_Service_idea_lar
-		}
-		else = {
-			add_ideas = SOL_Imperial_Investigative_Service_idea
-		}
-		if = {
-			limit = {
-				has_idea = changeling_spies
-			}
-			country_event = equestriachn.2
-		}
-	}
-	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESISTANCE FOCUS_FILTER_STABILITY }
-}
+#shared_focus = {
+#	id = SOL_Imperial_Investigative_Service
+#	icon = GFX_goal_solar_intelligence
+#	prerequisite = {
+#		focus = SOL_Maternal_Guidiance
+#	}
+#	available = {
+#		is_subject = no
+#		has_DB_ruler = yes
+#	}
+#	#bypass = {}
+#	cost = 10
+#	ai_will_do = {
+#		factor = 100
+#	}
+#	relative_position_id = SOL_Imperium_Solis
+#	x = 0
+#	y = 3
+#	completion_reward = {
+#		log = "[GetDateText]: [Root.GetName]: Focus SOL_Imperial_Investigative_Service"
+#		if = {
+#			limit = {
+#				has_dlc = "La Resistance"
+#			}
+#			add_ideas = SOL_Imperial_Investigative_Service_idea_lar
+#		}
+#		else = {
+#			add_ideas = SOL_Imperial_Investigative_Service_idea
+#		}
+#		if = {
+#			limit = {
+#				has_idea = changeling_spies
+#			}
+#			country_event = equestriachn.2
+#		}
+#	}
+#	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESISTANCE FOCUS_FILTER_STABILITY }
+#}
 
-shared_focus = {
-	id = SOL_Harmony_through_Order
-	icon = GFX_goal_solar_harmony_in_order
-	prerequisite = {
-		focus = SOL_Imperial_Investigative_Service
-	}
-	available = {
-		is_subject = no
-		has_DB_ruler = yes
-	}
-	#bypass = {}
-	cost = 10
-	ai_will_do = {
-		factor = 100
-	}
-	relative_position_id = SOL_Imperium_Solis
-	x = 0
-	y = 4
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_Harmony_through_Order"
-		add_political_power = 50
-		if = {
-			limit = {
-				has_idea = eqs_order_idea
-			}
-			swap_ideas = {
-				add_idea = eqs_order_idea1
-				remove_idea = eqs_order_idea
-			}
-		}
-		else = {
-			add_ideas = eqs_order_idea1
-		}
-	}
-	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
-}
+#shared_focus = {
+#	id = SOL_Harmony_through_Order
+#	icon = GFX_goal_solar_harmony_in_order
+#	prerequisite = {
+#		#focus = SOL_Imperial_Investigative_Service
+#	}
+#	available = {
+#		is_subject = no
+#		has_DB_ruler = yes
+#	}
+#	#bypass = {}
+#	cost = 10
+#	ai_will_do = {
+#		factor = 100
+#	}
+#	relative_position_id = SOL_Imperium_Solis
+#	x = 0
+#	y = 4
+#	completion_reward = {
+#		log = "[GetDateText]: [Root.GetName]: Focus SOL_Harmony_through_Order"
+#		add_political_power = 50
+#		if = {
+#			limit = {
+#				has_idea = eqs_order_idea
+#			}
+#			swap_ideas = {
+#				add_idea = eqs_order_idea1
+#				remove_idea = eqs_order_idea
+#			}
+#		}
+#		else = {
+#			add_ideas = eqs_order_idea1
+#		}
+#	}
+#	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+#}
 
-shared_focus = {
-	id = SOL_Firm_but_Fair
-	icon = GFX_goal_solar_fair_but_just
-	prerequisite = {
-		focus = SOL_Harmony_through_Order
-	}
-	available = {
-		is_subject = no
-		has_DB_ruler = yes
-	}
-	#bypass = {}
-	cost = 10
-	ai_will_do = {
-		factor = 50
-	}
-	relative_position_id = SOL_Imperium_Solis
-	x = 0
-	y = 5
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_Firm_but_Fair"
-		add_ideas = SOL_Firm_but_Fair_idea
-		unlock_decision_category_tooltip = SOL_dealing_with_resistance
-	}
-	search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_BONUS }
-}
+#shared_focus = {
+#	id = SOL_Firm_but_Fair
+#	icon = GFX_goal_solar_fair_but_just
+#	prerequisite = {
+#		focus = SOL_Harmony_through_Order
+#	}
+#	available = {
+#		is_subject = no
+#		has_DB_ruler = yes
+#	}
+#	#bypass = {}
+#	cost = 10
+#	ai_will_do = {
+#		factor = 50
+#	}
+#	relative_position_id = SOL_Imperium_Solis
+#	x = 0
+#	y = 5
+#	completion_reward = {
+#		log = "[GetDateText]: [Root.GetName]: Focus SOL_Firm_but_Fair"
+#		add_ideas = SOL_Firm_but_Fair_idea
+#		unlock_decision_category_tooltip = SOL_dealing_with_resistance
+#	}
+#	search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_BONUS }
+#}
 
-shared_focus = {
-	id = SOL_Empress_knows_Best
-	icon = GFX_goal_solar_empress_knows_best
-	prerequisite = {
-		focus = SOL_Firm_but_Fair
-	}
-	available = {
-		is_subject = no
-		has_DB_ruler = yes
-	}
-	#bypass = {}
-	cost = 10
-	ai_will_do = {
-		factor = 100
-	}
-	relative_position_id = SOL_Imperium_Solis
-	x = 0
-	y = 6
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_Empress_knows_Best"
-		add_stability = 0.15
-		add_political_power = 200
-		add_popularity = {
-			ideology = fascism
-			popularity = 0.1
-		}
-	}
-	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
-}
+#shared_focus = {
+#	id = SOL_Empress_knows_Best
+#	icon = GFX_goal_solar_empress_knows_best
+#	prerequisite = {
+#		focus = SOL_Firm_but_Fair
+#	}
+#	available = {
+#		is_subject = no
+#		has_DB_ruler = yes
+#	}
+#	#bypass = {}
+#	cost = 10
+#	ai_will_do = {
+#		factor = 100
+#	}
+#	relative_position_id = SOL_Imperium_Solis
+#	x = 0
+#	y = 6
+#	completion_reward = {
+#		log = "[GetDateText]: [Root.GetName]: Focus SOL_Empress_knows_Best"
+#		add_stability = 0.15
+#		add_political_power = 200
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.1
+#		}
+#	}
+#	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+#}
 
 #shared_focus = {
 #	id = SOL_god_empress
@@ -936,594 +936,594 @@ shared_focus = {
 #	search_filters = { FOCUS_FILTER_STABILITY }
 #}
 
-shared_focus = {
-	id = SOL_reconquer_cry
-	icon = GFX_goal_solar_attack_cry
-	prerequisite = {
-		#focus = SOL_She_Who_Raises_the_Sun
-		focus = SOL_Empress_knows_Best
-		focus = SOL_Freedom_from_Fear
-	}
-	available = {
-		is_subject = no
-		if = {
-			limit = {
-				NOT = {
-					has_country_flag = sol_wartime_change
-				}
-			}
-			has_completed_focus = SOL_reconquer_equestria
-		}
-	}
-	bypass = {
-		CRY = {
-			OR = {
-				exists = no
-				is_subject_of = ROOT
-				has_war_with = ROOT
-			}
-		}
-	}
-	will_lead_to_war_with = CRY
-	cost = 10
-	ai_will_do = {
-		factor = 35
-		modifier = {
-			factor = 0.1
-			has_war = yes
-		}
-	}
-	relative_position_id = SOL_Imperium_Solis
-	x = -2
-	y = 7
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_reconquer_cry"
-		create_wargoal = {
-			type = annex_everything
-			target = CRY
-		}
-	}
-	search_filters = { FOCUS_FILTER_ANNEXATION }
-}
+#shared_focus = {
+#	id = SOL_reconquer_cry
+#	icon = GFX_goal_solar_attack_cry
+#	prerequisite = {
+#		#focus = SOL_She_Who_Raises_the_Sun
+#		#focus = SOL_Empress_knows_Best
+#		#focus = SOL_Freedom_from_Fear
+#	}
+#	available = {
+#		is_subject = no
+#		if = {
+#			limit = {
+#				NOT = {
+#					has_country_flag = sol_wartime_change
+#				}
+#			}
+#			has_completed_focus = SOL_reconquer_equestria
+#		}
+#	}
+#	bypass = {
+#		CRY = {
+#			OR = {
+#				exists = no
+#				is_subject_of = ROOT
+#				has_war_with = ROOT
+#			}
+#		}
+#	}
+#	will_lead_to_war_with = CRY
+#	cost = 10
+#	ai_will_do = {
+#		factor = 35
+#		modifier = {
+#			factor = 0.1
+#			has_war = yes
+#		}
+#	}
+#	relative_position_id = SOL_Imperium_Solis
+#	x = -2
+#	y = 7
+#	completion_reward = {
+#		log = "[GetDateText]: [Root.GetName]: Focus SOL_reconquer_cry"
+#		create_wargoal = {
+#			type = annex_everything
+#			target = CRY
+#		}
+#	}
+#	search_filters = { FOCUS_FILTER_ANNEXATION }
+#}
 
-shared_focus = {
-	id = SOL_reconquer_stg
-	icon = GFX_goal_solar_attack_stg
-	prerequisite = {
-		#focus = SOL_She_Who_Raises_the_Sun
-		focus = SOL_Empress_knows_Best
-		focus = SOL_Freedom_from_Fear
-	}
-	available = {
-		is_subject = no
-		if = {
-			limit = {
-				NOT = {
-					has_country_flag = sol_wartime_change
-				}
-			}
-			has_completed_focus = SOL_reconquer_equestria
-		}
-	}
-	bypass = {
-		STG = {
-			OR = {
-				exists = no
-				is_subject_of = ROOT
-				has_war_with = ROOT
-			}
-		}
-		STL = {
-			OR = {
-				exists = no
-				is_subject_of = ROOT
-				has_war_with = ROOT
-			}
-		}
-	}
-	will_lead_to_war_with = STG
-	will_lead_to_war_with = STL
-	cost = 10
-	ai_will_do = {
-		factor = 35
-		modifier = {
-			factor = 0.1
-			has_war = yes
-		}
-	}
-	relative_position_id = SOL_Imperium_Solis
-	x = 2
-	y = 7
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_reconquer_stg"
-		if = {
-			limit = {
-				country_exists = STG
-			}
-			create_wargoal = {
-				type = annex_everything
-				target = STG
-			}
-		}
-		if = {
-			limit = {
-				country_exists = STL
-			}
-			create_wargoal = {
-				type = annex_everything
-				target = STL
-			}
-		}
-	}
-	search_filters = { FOCUS_FILTER_ANNEXATION }
-}
+#shared_focus = {
+#	id = SOL_reconquer_stg
+#	icon = GFX_goal_solar_attack_stg
+#	prerequisite = {
+#		#focus = SOL_She_Who_Raises_the_Sun
+#		#focus = SOL_Empress_knows_Best
+#		#focus = SOL_Freedom_from_Fear
+#	}
+#	available = {
+#		is_subject = no
+#		if = {
+#			limit = {
+#				NOT = {
+#					has_country_flag = sol_wartime_change
+#				}
+#			}
+#			has_completed_focus = SOL_reconquer_equestria
+#		}
+#	}
+#	bypass = {
+#		STG = {
+#			OR = {
+#				exists = no
+#				is_subject_of = ROOT
+#				has_war_with = ROOT
+#			}
+#		}
+#		STL = {
+#			OR = {
+#				exists = no
+#				is_subject_of = ROOT
+#				has_war_with = ROOT
+#			}
+#		}
+#	}
+#	will_lead_to_war_with = STG
+#	will_lead_to_war_with = STL
+#	cost = 10
+#	ai_will_do = {
+#		factor = 35
+#		modifier = {
+#			factor = 0.1
+#			has_war = yes
+#		}
+#	}
+#	relative_position_id = SOL_Imperium_Solis
+#	x = 2
+#	y = 7
+#	completion_reward = {
+#		log = "[GetDateText]: [Root.GetName]: Focus SOL_reconquer_stg"
+#		if = {
+#			limit = {
+#				country_exists = STG
+#			}
+#			create_wargoal = {
+#				type = annex_everything
+#				target = STG
+#			}
+#		}
+#		if = {
+#			limit = {
+#				country_exists = STL
+#			}
+#			create_wargoal = {
+#				type = annex_everything
+#				target = STL
+#			}
+#		}
+#	}
+#	search_filters = { FOCUS_FILTER_ANNEXATION }
+#}
 
-shared_focus = {
-	id = SOL_conquer_chn
-	icon = GFX_goal_solar_attack_chn
-	prerequisite = {
-		focus = SOL_reconquer_stg
-		focus = SOL_reconquer_cry
-	}
-	available = {
-		is_subject = no
-	}
-	bypass = {
-		CHN = {
-			OR = {
-				exists = no
-				is_subject_of = ROOT
-				has_war_with = ROOT
-			}
-		}
-		CCN = {
-			OR = {
-				exists = no
-				is_subject_of = ROOT
-				has_war_with = ROOT
-			}
-		}
-	}
-	will_lead_to_war_with = CHN
-	will_lead_to_war_with = CCN
-	cost = 10
-	ai_will_do = {
-		factor = 35
-		modifier = {
-			factor = 0.1
-			has_war = yes
-		}
-	}
-	relative_position_id = SOL_Imperium_Solis
-	x = -1
-	y = 8
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_conquer_chn"
-		if = {
-			limit = {
-				country_exists = CHN
-			}
-			create_wargoal = {
-				type = annex_everything
-				target = CHN
-			}
-		}
-		if = {
-			limit = {
-				country_exists = CCN
-			}
-			create_wargoal = {
-				type = annex_everything
-				target = CCN
-			}
-		}
-	}
-	search_filters = { FOCUS_FILTER_ANNEXATION }
-}
+#shared_focus = {
+#	id = SOL_conquer_chn
+#	icon = GFX_goal_solar_attack_chn
+#	prerequisite = {
+#		focus = SOL_reconquer_stg
+#		focus = SOL_reconquer_cry
+#	}
+#	available = {
+#		is_subject = no
+#	}
+#	bypass = {
+#		CHN = {
+#			OR = {
+#				exists = no
+#				is_subject_of = ROOT
+#				has_war_with = ROOT
+#			}
+#		}
+#		CCN = {
+#			OR = {
+#				exists = no
+#				is_subject_of = ROOT
+#				has_war_with = ROOT
+#			}
+#		}
+#	}
+#	will_lead_to_war_with = CHN
+#	will_lead_to_war_with = CCN
+#	cost = 10
+#	ai_will_do = {
+#		factor = 35
+#		modifier = {
+#			factor = 0.1
+#			has_war = yes
+#		}
+#	}
+#	relative_position_id = SOL_Imperium_Solis
+#	x = -1
+#	y = 8
+#	completion_reward = {
+#		log = "[GetDateText]: [Root.GetName]: Focus SOL_conquer_chn"
+#		if = {
+#			limit = {
+#				country_exists = CHN
+#			}
+#			create_wargoal = {
+#				type = annex_everything
+#				target = CHN
+#			}
+#		}
+#		if = {
+#			limit = {
+#				country_exists = CCN
+#			}
+#			create_wargoal = {
+#				type = annex_everything
+#				target = CCN
+#			}
+#		}
+#	}
+#	search_filters = { FOCUS_FILTER_ANNEXATION }
+#}
 
-shared_focus = {
-	id = SOL_conquer_ole
-	icon = GFX_goal_solar_attack_ole
-	prerequisite = {
-		focus = SOL_reconquer_stg
-		focus = SOL_reconquer_cry
-	}
-	available = {
-		is_subject = no
-	}
-	bypass = {
-		OLE = {
-			OR = {
-				exists = no
-				is_subject_of = ROOT
-				has_war_with = ROOT
-			}
-		}
-	}
-	will_lead_to_war_with = OLE
-	cost = 10
-	ai_will_do = {
-		factor = 35
-		modifier = {
-			factor = 0.1
-			has_war = yes
-		}
-	}
-	relative_position_id = SOL_Imperium_Solis
-	x = 1
-	y = 8
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_conquer_ole"
-		create_wargoal = {
-			type = annex_everything
-			target = OLE
-		}
-	}
-	search_filters = { FOCUS_FILTER_ANNEXATION }
-}
+#shared_focus = {
+#	id = SOL_conquer_ole
+#	icon = GFX_goal_solar_attack_ole
+#	prerequisite = {
+#		focus = SOL_reconquer_stg
+#		focus = SOL_reconquer_cry
+#	}
+#	available = {
+#		is_subject = no
+#	}
+#	bypass = {
+#		OLE = {
+#			OR = {
+#				exists = no
+#				is_subject_of = ROOT
+#				has_war_with = ROOT
+#			}
+#		}
+#	}
+#	will_lead_to_war_with = OLE
+#	cost = 10
+#	ai_will_do = {
+#		factor = 35
+#		modifier = {
+#			factor = 0.1
+#			has_war = yes
+#		}
+#	}
+#	relative_position_id = SOL_Imperium_Solis
+#	x = 1
+#	y = 8
+#	completion_reward = {
+#		log = "[GetDateText]: [Root.GetName]: Focus SOL_conquer_ole"
+#		create_wargoal = {
+#			type = annex_everything
+#			target = OLE
+#		}
+#	}
+#	search_filters = { FOCUS_FILTER_ANNEXATION }
+#}
 
-shared_focus = {
-	id = SOL_conquer_drg
-	icon = GFX_goal_solar_attack_drg
-	prerequisite = {
-		focus = SOL_reconquer_stg
-		focus = SOL_reconquer_cry
-	}
-	available = {
-		is_subject = no
-	}
-	bypass = {
-		DRG = {
-			OR = {
-				exists = no
-				is_subject_of = ROOT
-				has_war_with = ROOT
-			}
-		}
-	}
-	will_lead_to_war_with = DRG
-	cost = 10
-	ai_will_do = {
-		factor = 35
-	}
-	relative_position_id = SOL_Imperium_Solis
-	x = -4
-	y = 8
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_conquer_drg"
-		create_wargoal = {
-			type = annex_everything
-			target = DRG
-		}
-	}
-	search_filters = { FOCUS_FILTER_ANNEXATION }
-}
+#shared_focus = {
+#	id = SOL_conquer_drg
+#	icon = GFX_goal_solar_attack_drg
+#	prerequisite = {
+#		focus = SOL_reconquer_stg
+#		focus = SOL_reconquer_cry
+#	}
+#	available = {
+#		is_subject = no
+#	}
+#	bypass = {
+#		DRG = {
+#			OR = {
+#				exists = no
+#				is_subject_of = ROOT
+#				has_war_with = ROOT
+#			}
+#		}
+#	}
+#	will_lead_to_war_with = DRG
+#	cost = 10
+#	ai_will_do = {
+#		factor = 35
+#	}
+#	relative_position_id = SOL_Imperium_Solis
+#	x = -4
+#	y = 8
+#	completion_reward = {
+#		log = "[GetDateText]: [Root.GetName]: Focus SOL_conquer_drg"
+#		create_wargoal = {
+#			type = annex_everything
+#			target = DRG
+#		}
+#	}
+#	search_filters = { FOCUS_FILTER_ANNEXATION }
+#}
 
-shared_focus = {
-	id = SOL_conquer_grf
-	icon = GFX_goal_solar_attack_grf
-	prerequisite = {
-		focus = SOL_reconquer_stg
-		focus = SOL_reconquer_cry
-	}
-	available = {
-		is_subject = no
-	}
-	bypass = {
-		GRF = {
-			OR = {
-				exists = no
-				is_subject_of = ROOT
-				has_war_with = ROOT
-			}
-		}
-		GFF = {
-			OR = {
-				exists = no
-				is_subject_of = ROOT
-				has_war_with = ROOT
-			}
-		}
-	}
-	will_lead_to_war_with = GRF
-	will_lead_to_war_with = GFF
-	cost = 10
-	ai_will_do = {
-		factor = 35
-		modifier = {
-			factor = 0.1
-			has_war = yes
-		}
-	}
-	relative_position_id = SOL_Imperium_Solis
-	x = 4
-	y = 8
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_conquer_grf"
-		if = {
-			limit = {
-				country_exists = GRF
-			}
-			create_wargoal = {
-				type = annex_everything
-				target = GRF
-			}
-		}
-		if = {
-			limit = {
-				country_exists = GFF
-			}
-			create_wargoal = {
-				type = annex_everything
-				target = GFF
-			}
-		}
-	}
-	search_filters = { FOCUS_FILTER_ANNEXATION }
-}
+#shared_focus = {
+#	id = SOL_conquer_grf
+#	icon = GFX_goal_solar_attack_grf
+#	prerequisite = {
+#		focus = SOL_reconquer_stg
+#		focus = SOL_reconquer_cry
+#	}
+#	available = {
+#		is_subject = no
+#	}
+#	bypass = {
+#		GRF = {
+#			OR = {
+#				exists = no
+#				is_subject_of = ROOT
+#				has_war_with = ROOT
+#			}
+#		}
+#		GFF = {
+#			OR = {
+#				exists = no
+#				is_subject_of = ROOT
+#				has_war_with = ROOT
+#			}
+#		}
+#	}
+#	will_lead_to_war_with = GRF
+#	will_lead_to_war_with = GFF
+#	cost = 10
+#	ai_will_do = {
+#		factor = 35
+#		modifier = {
+#			factor = 0.1
+#			has_war = yes
+#		}
+#	}
+#	relative_position_id = SOL_Imperium_Solis
+#	x = 4
+#	y = 8
+#	completion_reward = {
+#		log = "[GetDateText]: [Root.GetName]: Focus SOL_conquer_grf"
+#		if = {
+#			limit = {
+#				country_exists = GRF
+#			}
+#			create_wargoal = {
+#				type = annex_everything
+#				target = GRF
+#			}
+#		}
+#		if = {
+#			limit = {
+#				country_exists = GFF
+#			}
+#			create_wargoal = {
+#				type = annex_everything
+#				target = GFF
+#			}
+#		}
+#	}
+#	search_filters = { FOCUS_FILTER_ANNEXATION }
+#}
 
-shared_focus = {
-	id = SOL_conquer_yak
-	icon = GFX_goal_solar_attack_yak
-	prerequisite = {
-		focus = SOL_reconquer_stg
-		focus = SOL_reconquer_cry
-	}
-	available = {
-		is_subject = no
-	}
-	bypass = {
-		YAK = {
-			OR = {
-				exists = no
-				is_subject_of = ROOT
-				has_war_with = ROOT
-			}
-		}
-		JAK = {
-			OR = {
-				exists = no
-				is_subject_of = ROOT
-				has_war_with = ROOT
-			}
-		}
-	}
-	will_lead_to_war_with = YAK
-	will_lead_to_war_with = JAK
-	cost = 10
-	ai_will_do = {
-		factor = 35
-	}
-	relative_position_id = SOL_Imperium_Solis
-	x = -3
-	y = 9
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_conquer_yak"
-		if = {
-			limit = {
-				country_exists = YAK
-			}
-			create_wargoal = {
-				type = annex_everything
-				target = YAK
-			}
-		}
-		if = {
-			limit = {
-				country_exists = JAK
-			}
-			create_wargoal = {
-				type = annex_everything
-				target = JAK
-			}
-		}
-	}
-	search_filters = { FOCUS_FILTER_ANNEXATION }
-}
+#shared_focus = {
+#	id = SOL_conquer_yak
+#	icon = GFX_goal_solar_attack_yak
+#	prerequisite = {
+#		focus = SOL_reconquer_stg
+#		focus = SOL_reconquer_cry
+#	}
+#	available = {
+#		is_subject = no
+#	}
+#	bypass = {
+#		YAK = {
+#			OR = {
+#				exists = no
+#				is_subject_of = ROOT
+#				has_war_with = ROOT
+#			}
+#		}
+#		JAK = {
+#			OR = {
+#				exists = no
+#				is_subject_of = ROOT
+#				has_war_with = ROOT
+#			}
+#		}
+#	}
+#	will_lead_to_war_with = YAK
+#	will_lead_to_war_with = JAK
+#	cost = 10
+#	ai_will_do = {
+#		factor = 35
+#	}
+#	relative_position_id = SOL_Imperium_Solis
+#	x = -3
+#	y = 9
+#	completion_reward = {
+#		log = "[GetDateText]: [Root.GetName]: Focus SOL_conquer_yak"
+#		if = {
+#			limit = {
+#				country_exists = YAK
+#			}
+#			create_wargoal = {
+#				type = annex_everything
+#				target = YAK
+#			}
+#		}
+#		if = {
+#			limit = {
+#				country_exists = JAK
+#			}
+#			create_wargoal = {
+#				type = annex_everything
+#				target = JAK
+#			}
+#		}
+#	}
+#	search_filters = { FOCUS_FILTER_ANNEXATION }
+#}
 
-shared_focus = {
-	id = SOL_conquer_north
-	icon = GFX_goal_solar_attack_north
-	prerequisite = {
-		focus = SOL_reconquer_stg
-		focus = SOL_reconquer_cry
-	}
-	available = {
-		is_subject = no
-	}
-	bypass = {
-		PLB = {
-			OR = {
-				exists = no
-				is_subject_of = ROOT
-				has_war_with = ROOT
-			}
-		}
-		PNG = {
-			OR = {
-				exists = no
-				is_subject_of = ROOT
-				has_war_with = ROOT
-			}
-		}
-	}
-	will_lead_to_war_with = PLB
-	will_lead_to_war_with = PNG
-	cost = 10
-	ai_will_do = {
-		factor = 35
-	}
-	relative_position_id = SOL_Imperium_Solis
-	x = 3
-	y = 9
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_conquer_north"
-		if = {
-			limit = {
-				country_exists = PLB
-			}
-			create_wargoal = {
-				type = annex_everything
-				target = PLB
-			}
-		}
-		if = {
-			limit = {
-				country_exists = PNG
-			}
-			create_wargoal = {
-				type = annex_everything
-				target = PNG
-			}
-		}
-	}
-	search_filters = { FOCUS_FILTER_ANNEXATION }
-}
+#shared_focus = {
+#	id = SOL_conquer_north
+#	icon = GFX_goal_solar_attack_north
+#	prerequisite = {
+#		focus = SOL_reconquer_stg
+#		focus = SOL_reconquer_cry
+#	}
+#	available = {
+#		is_subject = no
+#	}
+#	bypass = {
+#		PLB = {
+#			OR = {
+#				exists = no
+#				is_subject_of = ROOT
+#				has_war_with = ROOT
+#			}
+#		}
+#		PNG = {
+#			OR = {
+#				exists = no
+#				is_subject_of = ROOT
+#				has_war_with = ROOT
+#			}
+#		}
+#	}
+#	will_lead_to_war_with = PLB
+#	will_lead_to_war_with = PNG
+#	cost = 10
+#	ai_will_do = {
+#		factor = 35
+#	}
+#	relative_position_id = SOL_Imperium_Solis
+#	x = 3
+#	y = 9
+#	completion_reward = {
+#		log = "[GetDateText]: [Root.GetName]: Focus SOL_conquer_north"
+#		if = {
+#			limit = {
+#				country_exists = PLB
+#			}
+#			create_wargoal = {
+#				type = annex_everything
+#				target = PLB
+#			}
+#		}
+#		if = {
+#			limit = {
+#				country_exists = PNG
+#			}
+#			create_wargoal = {
+#				type = annex_everything
+#				target = PNG
+#			}
+#		}
+#	}
+#	search_filters = { FOCUS_FILTER_ANNEXATION }
+#}
 
-shared_focus = {
-	id = SOL_core_cry
-	icon = GFX_goal_solar_break_cry
-	prerequisite = {
-		focus = SOL_reconquer_cry
-	}
-	available = {
-		CRY = {
-			custom_trigger_tooltip = {
-				tooltip = owns_all_passable_cores_original_subject_tt
-				hidden_trigger = {
-					all_of = {
-						array = CRY.original_cores
-						var:v = {
-							OR = {
-								impassable = yes
-								is_owned_by = ROOT
-								owner = {
-									is_subject_of = ROOT
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-	#bypass = { }
-	cost = 15
-	ai_will_do = {
-		factor = 35
-	}
-	relative_position_id = SOL_Imperium_Solis
-	x = -2
-	y = 10
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_core_cry"
-		every_state = {
-			limit = {
-				# we could and should iterate over an array, but that would give us no tooltip
-				is_in_array = {
-					array = CRY.original_cores
-					value = THIS
-				}
-			}
-			add_core_of = ROOT
-		}
-	}
-	search_filters = { FOCUS_FILTER_ANNEXATION }
-}
+#shared_focus = {
+#	id = SOL_core_cry
+#	icon = GFX_goal_solar_break_cry
+#	prerequisite = {
+#		focus = SOL_reconquer_cry
+#	}
+#	available = {
+#		CRY = {
+#			custom_trigger_tooltip = {
+#				tooltip = owns_all_passable_cores_original_subject_tt
+#				hidden_trigger = {
+#					all_of = {
+#						array = CRY.original_cores
+#						var:v = {
+#							OR = {
+#								impassable = yes
+#								is_owned_by = ROOT
+#								owner = {
+#									is_subject_of = ROOT
+#								}
+#							}
+#						}
+#					}
+#				}
+#			}
+#		}
+#	}
+#	#bypass = { }
+#	cost = 15
+#	ai_will_do = {
+#		factor = 35
+#	}
+#	relative_position_id = SOL_Imperium_Solis
+#	x = -2
+#	y = 10
+#	completion_reward = {
+#		log = "[GetDateText]: [Root.GetName]: Focus SOL_core_cry"
+#		every_state = {
+#			limit = {
+#				# we could and should iterate over an array, but that would give us no tooltip
+#				is_in_array = {
+#					array = CRY.original_cores
+#					value = THIS
+#				}
+#			}
+#			add_core_of = ROOT
+#		}
+#	}
+#	search_filters = { FOCUS_FILTER_ANNEXATION }
+#}
 
-shared_focus = {
-	id = SOL_core_stg
-	icon = GFX_goal_solar_break_stg
-	prerequisite = {
-		focus = SOL_reconquer_stg
-	}
-	available = {
-		STG = {
-			all_cores_owned_by_ROOT_or_subject = yes
-		}
-		STL = {
-			all_cores_owned_by_ROOT_or_subject = yes
-		}
-	}
-	#bypass = { }
-	cost = 15
-	ai_will_do = {
-		factor = 35
-	}
-	relative_position_id = SOL_Imperium_Solis
-	x = 2
-	y = 10
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_core_stg"
-		every_state = {
-			limit = {
-				OR = {
-					is_core_of = STG
-					is_core_of = STL
-				}
-			}
-			add_core_of = ROOT
-		}
-	}
-	search_filters = { FOCUS_FILTER_ANNEXATION }
-}
+#shared_focus = {
+#	id = SOL_core_stg
+#	icon = GFX_goal_solar_break_stg
+#	prerequisite = {
+#		focus = SOL_reconquer_stg
+#	}
+#	available = {
+#		STG = {
+#			all_cores_owned_by_ROOT_or_subject = yes
+#		}
+#		STL = {
+#			all_cores_owned_by_ROOT_or_subject = yes
+#		}
+#	}
+#	#bypass = { }
+#	cost = 15
+#	ai_will_do = {
+#		factor = 35
+#	}
+#	relative_position_id = SOL_Imperium_Solis
+#	x = 2
+#	y = 10
+#	completion_reward = {
+#		log = "[GetDateText]: [Root.GetName]: Focus SOL_core_stg"
+#		every_state = {
+#			limit = {
+#				OR = {
+#					is_core_of = STG
+#					is_core_of = STL
+#				}
+#			}
+#			add_core_of = ROOT
+#		}
+#	}
+#	search_filters = { FOCUS_FILTER_ANNEXATION }
+#}
 
-shared_focus = {
-	id = SOL_attack_bat
-	icon = GFX_goal_SOL_batnation
-	prerequisite = {
-		focus = SOL_conquer_chn
-	}
-	prerequisite = {
-		focus = SOL_conquer_ole
-	}
-	prerequisite = {
-		focus = SOL_conquer_north
-	}
-	prerequisite = {
-		focus = SOL_conquer_yak
-	}
-	prerequisite = {
-		focus = SOL_conquer_drg
-	}
-	prerequisite = {
-		focus = SOL_conquer_grf
-	}
-	available = {
-		is_subject = no
-	}
-	bypass = {
-		BAT = {
-			OR = {
-				exists = no
-				is_subject_of = ROOT
-				has_war_with = ROOT
-			}
-		}
-	}
-	will_lead_to_war_with = BAT
-	#bypass = { }
-	cost = 10
-	ai_will_do = {
-		factor = 35
-	}
-	relative_position_id = SOL_Imperium_Solis
-	x = 0
-	y = 10
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_attack_bat"
-		if = {
-			limit = {
-				country_exists = BAT
-			}
-			create_wargoal = {
-				type = annex_everything
-				target = BAT
-			}
-		}
-	}
-	search_filters = { FOCUS_FILTER_ANNEXATION }
-}
+#shared_focus = {
+#	id = SOL_attack_bat
+#	icon = GFX_goal_SOL_batnation
+#	prerequisite = {
+#		focus = SOL_conquer_chn
+#	}
+#	prerequisite = {
+#		focus = SOL_conquer_ole
+#	}
+#	prerequisite = {
+#		focus = SOL_conquer_north
+#	}
+#	prerequisite = {
+#		focus = SOL_conquer_yak
+#	}
+#	prerequisite = {
+#		focus = SOL_conquer_drg
+#	}
+#	prerequisite = {
+#		focus = SOL_conquer_grf
+#	}
+#	available = {
+#		is_subject = no
+#	}
+#	bypass = {
+#		BAT = {
+#			OR = {
+#				exists = no
+#				is_subject_of = ROOT
+#				has_war_with = ROOT
+#			}
+#		}
+#	}
+#	will_lead_to_war_with = BAT
+#	#bypass = { }
+#	cost = 10
+#	ai_will_do = {
+#		factor = 35
+#	}
+#	relative_position_id = SOL_Imperium_Solis
+#	x = 0
+#	y = 10
+#	completion_reward = {
+#		log = "[GetDateText]: [Root.GetName]: Focus SOL_attack_bat"
+#		if = {
+#			limit = {
+#				country_exists = BAT
+#			}
+#			create_wargoal = {
+#				type = annex_everything
+#				target = BAT
+#			}
+#		}
+#	}
+#	search_filters = { FOCUS_FILTER_ANNEXATION }
+#}
 
 #shared_focus = {
 #	id = SOL_conquer_GRI

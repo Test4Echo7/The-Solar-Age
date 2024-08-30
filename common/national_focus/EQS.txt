@@ -45,7 +45,7 @@ shared_focus = {
 	y = 0
 	offset = {
 		y = -1
-		x = -21
+		x = -25
 		trigger = { is_EQS_SOL = yes }
 	}
 	ai_will_do = { factor = 100 }
@@ -1060,7 +1060,7 @@ shared_focus = {
 	x = 24
 	y = 0
 	offset = {
-		x = -25
+		x = -29
 		y = -1
 		trigger = { is_EQS_SOL = yes }
 	}
