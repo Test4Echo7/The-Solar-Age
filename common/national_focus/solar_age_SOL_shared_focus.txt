@@ -2922,7 +2922,7 @@ shared_focus = {
 		}
 	}
 	relative_position_id = SOL_She_Who_Raises_the_Sun
-	x = -5
+	x = -7
 	y = 2
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_reconquer_cry"
@@ -3004,7 +3004,7 @@ shared_focus = {
 		}
 	}
 	relative_position_id = SOL_She_Who_Raises_the_Sun
-	x = 5
+	x = 7
 	y = 2
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_reconquer_stg"
@@ -3028,6 +3028,169 @@ shared_focus = {
 		}
 	}
 	search_filters = { FOCUS_FILTER_ANNEXATION }
+}
+
+shared_focus = {
+	id = SOL_core_cry
+	icon = GFX_goal_solar_break_cry
+	prerequisite = {
+		focus = SOL_reconquer_cry
+	}
+	available = {
+		CRY = {
+			custom_trigger_tooltip = {
+				tooltip = owns_all_passable_cores_original_subject_tt
+				hidden_trigger = {
+					all_of = {
+						array = CRY.original_cores
+						var:v = {
+							OR = {
+								impassable = yes
+								is_owned_by = ROOT
+								owner = {
+									is_subject_of = ROOT
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	#bypass = { }
+	cost = 15
+	ai_will_do = {
+		factor = 35
+	}
+	relative_position_id = SOL_reconquer_cry
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_core_cry"
+		every_state = {
+			limit = {
+				# we could and should iterate over an array, but that would give us no tooltip
+				is_in_array = {
+					array = CRY.original_cores
+					value = THIS
+				}
+			}
+			add_core_of = ROOT
+		}
+	}
+	search_filters = { FOCUS_FILTER_ANNEXATION }
+}
+
+shared_focus = {
+	id = SOL_core_stg
+	icon = GFX_goal_solar_break_stg
+	prerequisite = {
+		focus = SOL_reconquer_stg
+	}
+	available = {
+		STG = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+		STL = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+	}
+	#bypass = { }
+	cost = 15
+	ai_will_do = {
+		factor = 35
+	}
+	relative_position_id = SOL_reconquer_stg
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_core_stg"
+		every_state = {
+			limit = {
+				OR = {
+					is_core_of = STG
+					is_core_of = STL
+				}
+			}
+			add_core_of = ROOT
+		}
+	}
+	search_filters = { FOCUS_FILTER_ANNEXATION }
+}
+
+shared_focus = {
+	id = SOL_conquer_drg
+	icon = GFX_goal_solar_attack_drg
+	prerequisite = {
+		focus = SOL_reconquer_stg
+		focus = SOL_reconquer_cry
+	}
+	available = {
+		is_subject = no
+	}
+	bypass = {
+		DRG = {
+			OR = {
+				exists = no
+				is_subject_of = ROOT
+				has_war_with = ROOT
+			}
+		}
+	}
+	will_lead_to_war_with = DRG
+	cost = 10
+	ai_will_do = {
+		factor = 35
+	}
+	relative_position_id = SOL_reconquer_cry
+	x = -3
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_conquer_drg"
+		create_wargoal = {
+			type = annex_everything
+			target = DRG
+		}
+	}
+	search_filters = { FOCUS_FILTER_ANNEXATION }
+}
+
+shared_focus = {
+	id = SOL_evict_hoarders
+	icon = GFX_goal_solar_attack_drg
+	x = -1
+	y = 1
+	relative_position_id = SOL_conquer_drg
+
+	cost = 7
+	prerequisite = { focus = SOL_conquer_drg }
+	mutually_exclusive = { focus = SOL_elite_laborers }
+	available = { is_subject = no }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_evict_hoarders"
+		###Event of some Solar troops going into the dragon islands, where Ember has managed to hole up in one area with some dragons, and them fighting through the dragons to get them out of the isles, or kill them in the process, and there is one combat with Ember, which eventually overpowers her, since she's only one dragon
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_elite_laborers
+	icon = GFX_goal_solar_attack_drg
+	x = 1
+	y = 1
+	relative_position_id = SOL_conquer_drg
+
+	cost = 5
+	prerequisite = { focus = SOL_conquer_drg }
+	mutually_exclusive = { focus = SOL_evict_hoarders }
+	available = { is_subject = no }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_elite_laborers"
+		###Event of a dragon trying to escape their prison camp, where they are being used to mine crystals for Daybreaker's forces, and ultimately being captured and executed, since they're clearly of no use any longer
+	}
+	ai_will_do = { factor = 35 }
 }
 
 shared_focus = {
@@ -3067,7 +3230,7 @@ shared_focus = {
 		}
 	}
 	relative_position_id = SOL_reconquer_cry
-	x = 1
+	x = 4
 	y = 2
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_conquer_chn"
@@ -3122,50 +3285,13 @@ shared_focus = {
 		}
 	}
 	relative_position_id = SOL_reconquer_stg
-	x = -1
+	x = -4
 	y = 2
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_conquer_ole"
 		create_wargoal = {
 			type = annex_everything
 			target = OLE
-		}
-	}
-	search_filters = { FOCUS_FILTER_ANNEXATION }
-}
-
-shared_focus = {
-	id = SOL_conquer_drg
-	icon = GFX_goal_solar_attack_drg
-	prerequisite = {
-		focus = SOL_reconquer_stg
-		focus = SOL_reconquer_cry
-	}
-	available = {
-		is_subject = no
-	}
-	bypass = {
-		DRG = {
-			OR = {
-				exists = no
-				is_subject_of = ROOT
-				has_war_with = ROOT
-			}
-		}
-	}
-	will_lead_to_war_with = DRG
-	cost = 10
-	ai_will_do = {
-		factor = 35
-	}
-	relative_position_id = SOL_reconquer_cry
-	x = -2
-	y = 1
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_conquer_drg"
-		create_wargoal = {
-			type = annex_everything
-			target = DRG
 		}
 	}
 	search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -3208,8 +3334,8 @@ shared_focus = {
 		}
 	}
 	relative_position_id = SOL_reconquer_stg
-	x = 2
-	y = 1
+	x = 3
+	y = 2
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_conquer_grf"
 		if = {
@@ -3267,8 +3393,8 @@ shared_focus = {
 		factor = 35
 	}
 	relative_position_id = SOL_reconquer_cry
-	x = -1
-	y = 2
+	x = 0
+	y = 4
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_conquer_yak"
 		if = {
@@ -3326,8 +3452,8 @@ shared_focus = {
 		factor = 35
 	}
 	relative_position_id = SOL_reconquer_stg
-	x = 1
-	y = 2
+	x = 0
+	y = 4
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_conquer_north"
 		if = {
@@ -3347,94 +3473,6 @@ shared_focus = {
 				type = annex_everything
 				target = PNG
 			}
-		}
-	}
-	search_filters = { FOCUS_FILTER_ANNEXATION }
-}
-
-shared_focus = {
-	id = SOL_core_cry
-	icon = GFX_goal_solar_break_cry
-	prerequisite = {
-		focus = SOL_reconquer_cry
-	}
-	available = {
-		CRY = {
-			custom_trigger_tooltip = {
-				tooltip = owns_all_passable_cores_original_subject_tt
-				hidden_trigger = {
-					all_of = {
-						array = CRY.original_cores
-						var:v = {
-							OR = {
-								impassable = yes
-								is_owned_by = ROOT
-								owner = {
-									is_subject_of = ROOT
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-	#bypass = { }
-	cost = 15
-	ai_will_do = {
-		factor = 35
-	}
-	relative_position_id = SOL_reconquer_cry
-	x = 0
-	y = 3
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_core_cry"
-		every_state = {
-			limit = {
-				# we could and should iterate over an array, but that would give us no tooltip
-				is_in_array = {
-					array = CRY.original_cores
-					value = THIS
-				}
-			}
-			add_core_of = ROOT
-		}
-	}
-	search_filters = { FOCUS_FILTER_ANNEXATION }
-}
-
-shared_focus = {
-	id = SOL_core_stg
-	icon = GFX_goal_solar_break_stg
-	prerequisite = {
-		focus = SOL_reconquer_stg
-	}
-	available = {
-		STG = {
-			all_cores_owned_by_ROOT_or_subject = yes
-		}
-		STL = {
-			all_cores_owned_by_ROOT_or_subject = yes
-		}
-	}
-	#bypass = { }
-	cost = 15
-	ai_will_do = {
-		factor = 35
-	}
-	relative_position_id = SOL_reconquer_stg
-	x = 0
-	y = 3
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_core_stg"
-		every_state = {
-			limit = {
-				OR = {
-					is_core_of = STG
-					is_core_of = STL
-				}
-			}
-			add_core_of = ROOT
 		}
 	}
 	search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -3480,8 +3518,8 @@ shared_focus = {
 		factor = 35
 	}
 	relative_position_id = SOL_She_Who_Raises_the_Sun
-	x = 0
-	y = 6
+	x = -2
+	y = 10
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_attack_bat"
 		if = {
@@ -3497,70 +3535,70 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_ANNEXATION }
 }
 
-#shared_focus = {
-#	id = SOL_conquer_GRI
-#	icon = GFX_goal_solar_attack_griffonia
-#	prerequisite = {
-#		focus = SOL_core_stg
-#		focus = SOL_core_cry
-#	}
-#	available = {
-#		is_subject = no
-#	}
-#	bypass = {
-#		GRD = {
-#			OR = {
-#				exists = no
-#				is_subject_of = ROOT
-#				has_war_with = ROOT
-#			}
-#		}
-#		382 = {
-#			owner = {
-#				OR = {
-#					tag = ROOT
-#					is_subject_of = ROOT
-#				}
-#			}
-#		}
-#	}
-#	will_lead_to_war_with = GRI
-#	cost = 15
-#	ai_will_do = {
-#		factor = 10
-#		modifier = {
-#			factor = 0.1
-#			has_war = yes
-#		}
-#	}
-#	relative_position_id = SOL_Imperium_Solis
-#	x = 0
-#	y = 11
-#	completion_reward = {
-#		log = "[GetDateText]: [Root.GetName]: Focus SOL_conquer_GRI"
-#		if = {
-#			limit = {
-#				country_exists = GRD
-#			}
-#			create_wargoal = {
-#				type = puppet_wargoal_focus
-#				target = GRD
-#			}
-#		}
-#		else = {
-#			382 = {
-#				owner = {
-#					ROOT = {
-#						create_wargoal = {
-#							type = puppet_wargoal_focus
-#							target = PREV
-#						}
-#					}
-#				}
-#			}
-#		}
-#	}
-#}
+shared_focus = {
+	id = SOL_conquer_GRI
+	icon = GFX_goal_solar_attack_griffonia
+	prerequisite = {
+		focus = SOL_core_stg
+		focus = SOL_core_cry
+	}
+	available = {
+		is_subject = no
+	}
+	bypass = {
+		GRD = {
+			OR = {
+				exists = no
+				is_subject_of = ROOT
+				has_war_with = ROOT
+			}
+		}
+		382 = {
+			owner = {
+				OR = {
+					tag = ROOT
+					is_subject_of = ROOT
+				}
+			}
+		}
+	}
+	will_lead_to_war_with = GRI
+	cost = 15
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0.1
+			has_war = yes
+		}
+	}
+	relative_position_id = SOL_She_Who_Raises_the_Sun
+	x = 2
+	y = 10
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_conquer_GRI"
+		if = {
+			limit = {
+				country_exists = GRD
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = GRD
+			}
+		}
+		else = {
+			382 = {
+				owner = {
+					ROOT = {
+						create_wargoal = {
+							type = puppet_wargoal_focus
+							target = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+}
 
 ###Military Focuses###
 shared_focus = {

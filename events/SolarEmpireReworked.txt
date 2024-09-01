@@ -143,3 +143,81 @@ country_event = { #Zephyr flees to the Crystal Empire, and he runs across a sole
         }
     }
 }
+
+country_event = { #Zephyr gets interrogated by a CRY officer since he says he has important information on SOL, but when grilled, he has no idea about what any of it means, and he makes a dart for a window to escape again, and is back on the run
+    id = solarreworked.104
+    title = solarreworked.104.t
+    desc = solarreworked.104.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.104"}
+
+    is_triggered_only = yes
+
+    option = { #Crap! Crap! Crap!
+        name = solarreworked.104.a
+        hidden_effect = {
+            EQS_zephyr_breeze = {
+                clr_character_flag = SOL_zephyr_enlisted
+                set_nationality = STG
+            }
+            STG = {
+                country_event = {
+                    id = solarreworked.105
+                    days = 21
+                    random_days = 7
+                }
+            }
+        }
+    }
+}
+
+country_event = { #Zephyr is grabbed by a Stalliongrad patrol and taken into custody, where is held until he is grilled by the officer who commands the outpost, and he basically makes it sound like he is a big deal in CRY, and that he could totally help out there, since he's being chased, and he gets taken up on that
+    id = solarreworked.105
+    title = solarreworked.105.t
+    desc = solarreworked.105.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.105"}
+
+    is_triggered_only = yes
+
+    option = { #Da, comrade.
+        name = solarreworked.105.a
+        hidden_effect = {
+            EQS_zephyr_breeze = {
+                set_character_flag = SOL_zephyr_enlisted
+            }
+        }
+    }
+}
+
+country_event = { #Zephyr has integrated into a STG officer corps, and decides to tell some bad joke about Steel Stallion and Caramel Marks, which instantly offends every single officer in the building while he eats, and he soon gets everypony on him, since he is already a capitalist pig and now is making overt fun of the greatest ponies in the world
+    id = solarreworked.106
+    title = solarreworked.106.t
+    desc = solarreworked.106.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.106"}
+
+    is_triggered_only = yes
+
+    option = { #Damn! Damn! Damn!
+        name = solarreworked.106.a
+        hidden_effect = {
+            EQS_zephyr_breeze = {
+                clr_character_flag = SOL_zephyr_enlisted
+                set_nationality = EQC
+            }
+        }
+    }
+}
+
+country_event = {
+    id = solarreworked.130
+    title = solarreworked.130.t
+    desc = solarreworked.130.d
+    picture = GFX_event_angy_daybreaker
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.130"}
+
+    is_triggered_only = yes
+
+    option = { #They will be nothing but ash!
+        name = solarreworked.130.a
+        set_country_flag = SOL_supernova_seen
+    }
+}

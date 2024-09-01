@@ -8,6 +8,12 @@ EQS_debug_category = {
         base = 150
     }
 }
+EQS_solar_fury_category = {
+    allowed = { tag = EQS }
+    priority = {
+        base = 140
+    }
+}
 EQS_BOP_sanity_category = {
     allowed = {
         tag = EQS

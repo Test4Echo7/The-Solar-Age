@@ -55,9 +55,17 @@
   ###City Names###
   EQS_sanctum_solar:0 "Sanctum Solar"
 
+  ###Decisions###
+  EQS_solar_fury_category:0 "An Alicorn's Rage"
+  EQS_fury_of_sun:0 "§RUnleash the Power of the Sun!§!"
+  EQS_fury_of_sun_desc:0 "The enemy is at our gates, but we are not without support. Our Empress guides our armies in the heat of battle, and she is capable of destroying entire armies without our aid. If she were to unleash it, all those that threaten us would fall like dead grass in her wake!"
+
   ###Flags and Custom Tooltips###
   SOL_has_captured_sunset:0 "Sunset Shimmer has been captured."
   SOL_daybreaker_promotion_tt:0 "§YDaybreaker§! becomes a Field Marshal."
+  EQS_SOL_they_bucked_up_tt:0 "§OGo supernova and immolate all those who threaten [EQS.GetNameDef]!§!"
+  EQS_SOL_eepy_tt:0 "§RDaybreaker will be exhausted for a period of time after pushing herself so far.§!"
+  SOL_nova_ops_tt:0 "Has not recently gone §Osupernova.§!"
 
   ###Leader Traits###
   gifted:0 "Gifted"
@@ -70,6 +78,9 @@
   hoof_of_iron_desc:0 "§LThe Empress guides us through our mistakes. Every error she chastens us with the punishment we deserve. Our life is fleeting, yet hers is unending. Our thoughts should not be our own; we are nothing but vessels for her to fill. As one, we shall drive the sinners of the world into Sheol.§!"
   savior_of_ponykind:0 "Savior of Ponykind"
   savior_of_ponykind_desc:0 "§LOur lives have been bought at a great price. Our every breath we owe to the Empress, for she has shielded us all from the harms of this world. We are no longer our own. As her humble servants, we must fight to protect our right to serve her. Nothing less than complete devotion will suffice.§!"
+  supernova_desc:0 "§LThe Dawn comes. The Sun pierces the veil of darkness. The Fire leaves no sinner alive.§!"
+  magic_drained:0 "Magic Drained"
+  magic_drained_desc:0 "§LNopony is without their limits, and the Empress has pushed herself beyond hers for too long. She must take time to rest and recover to effectively lead us in battle.§!"
 
   ###Focuses###
   ###Sunset's Corruption###
@@ -129,6 +140,10 @@
   SOL_mage_army:0 "An Army of Mages"
   SOL_mage_army_desc:0 "Basing our doctrine on usage of magic will allow us to tap into the power of our mages, with devastating results for the enemy."
 
+  ###Navy###
+
+  ###Air Force###
+
   ###Events###
   ###Industry Tree Events###
   solarreworked.40.t:0 "An Offer that Can't be Refused"
@@ -148,4 +163,9 @@
   solarreworked.103.t:0 "Visitors from the South"
   solarreworked.103.d:0 "It wasn't often that Refraction saw life along the border between [CRY.GetNameDef] and [EQS.GetNameDef]. With her station set along one of the few small settlements of [CRY.GetNameDef], she had a relatively quiet position. In the past, there had been an odd incident or two of an accused changeling infiltrator, before it was determined that it was just a unicorn with a mild allergy to magic. There was even a bugbear once, but it was being directed by Fluttershy to a safe nesting location, so it wasn't much of a threat.\n\nTherefore, when she caught some movement in the sky on her way back to her station for the evening, she frowned. Readying her rifle, she took aim and traced it as it grew larger. Soon enough, she could see it was a lanky pegasus. Since she was concealed by some of the shrubs in the wooded area near the town, she could watch him as he approached.\n\nHe seemed to be fleeing. Every so often, he'd glance over his shoulders like he was being pursued, but he wasn't being followed, from what she could see. When he was about three hundred feet out and above her, she stepped and called, "Halt! You're entering [CRY.GetAdjective] territory!" He screamed with a haggard gasp and noticed her. She held her gun at the ready.\n\nFreezing and looking at her gun, he obeyed and descended. When his hooves touched the earth, he collapsed and began to kiss it. "Thank Celestia!" he exclaimed when he stopped. "Finally somepony to help me!" Before Refraction could ask him anything, he grabbed both her shoulders and shook her. "They're after me! I-I barely made it out! I know they're hunting little ol' me!"\n\nShe pushed him back. Arching a brow, she demanded, "Who's hunting you?" Now that she was closer, she could tell he was wearing a rather sweat-drenched uniform of an [EQS.GetAdjective] officer. "Wait," she began. "Are you an [EQS.GetAdjective] soldier?" She tightened her grip on her rifle.\n\nFor a second, he blinked at her, and then he bobbed his head up and down frantically. "Y-Yeah, totally! Five star gen-er-RAL!" He fluttered his lashes at her innocently. "They were cramping my style, so I said, 'No thanks, buckos!' and then they just started chasing me!" He hopped up. "Super important pony, after all." He shot her a smug grin. "Probably sent a whole army after me."\n\n"Right..." she muttered. "Well, it'll have to be verified, but if you're an [EQS.GetAdjective] general..." Pausing for a second, she finally quipped, "I think we have a job for you.""
   solarreworked.103.a:0 "Oh no."
-
+  solarreworked.104.t:0 "Always in the Know"
+  solarreworked.104.d:0 "Trillium Petal briefly sighed as she flipped through a few papers on her clipboard. Reaching vainly to her coffee cup, she groaned and hung her head before she put down the clipboard, then leaned over to grab it. She swiped at air, which made her look back up to blink in surprise. Then she heard a loud, long slurp as the other pony—correction, one of the other ponies—guzzled HER coffee. She snarled.\n\nWhen his eyes locked with hers, he stopped mid-slurp and just looked at her. He wiggled his eyebrows playfully.\n\n"Private, is there a reason you're still in here with your—" Petal eyed him again "—your general?"\n\n"Don't worry about her, Glitter Glow—"\n\n"That isn't even close to my name."\n\n"Whatever." The stallion waved a hoof dismissively. To her consternation and rapidly skyrocketing migraine, he leaned back on his chair and kicked his hind hooves up on the table. The interrogation table. Not that he really seemed to treat the offices of [CRY.GetAgency]'s with much respect. Or really the offices of anything in [CRY.GetNameDef] that well, from what she saw on her clipboard.\n\nIf it weren't because he was, from what they could verify, a general in [EQS.GetNameDef]'s military, he would have probably been looking at a dishonorable discharge, at best.\n\nWith a long, exasperated sigh, she rubbed her temples for a second or two, then looked at her clipboard. She had to double check his name. Zephyr Sneeze. Straightening her papers, she asked him, "General, if we may begin?"\n\n"Hmm?" he inquired, as he was looking at one of the rank stripes on his [CRY.GetAdjective] uniform. "Oh, sure, shiny stuff. But you didn't need to take me here to—"\n\n"Stuff it," she huffed, then flipped through a couple more pages. "All right, so, now that we finally have the bandwidth, what can you tell us about some of [EQS.GetLeader]'s battle plans? Troop compositions? Research projects?" With each question, Zephyr's posture grew more discomforted and he started to wriggle uneasily. "Anything? You said you were a 'top-top-brass.'" She furrowed her brow. "So?"\n\n"Uh, well, you know, when I said that I meant, actually, uh—" Zephyr pulled on his collar, then spotted one of small windows in the room. "I meant I was FRIENDS with one, and uh—" Before he finished, he bolted from his seat and dove straight for the window. Crashing through the glass, he took to the skies and was a blip on the horizon in no time at all."
+  solarreworked.104.a:0 "Crap! Crap! Crap!"
+  solarreworked.130.t:0 "Inferno"
+  solarreworked.130.d:0 "The enemy is at our gates. Everything that I have fought for, everything that I have done to protect my ponies has not been enough. I see the wounded hauled off to the hospitals, I hear the pleas for salvation from the lost souls around me. Their belief in me is unwavering, it is unstoppable, but our foes are stronger than just my ponies.\n\nBattle after battle, more dead are left to be eaten by maggots. Loyal and fiend alike leave spill blood to water the fields of war, while I must continue on and strike in retribution for our survival.\n\nI have not come this way, I have not lived for over a thousand years to see an upstart nation topple us. If they are so confident that they can endure the heat of the Sun, then they shall face its full radiance!\n\nLet them feel the might of the Dawn Star! Let them cower as their comrades perish in flame! Let them crawl and beg, plead for mercy, and receive none! As the fire crawls upon their skin and consumes their sin, they shall feel my justice!\n\nFor I am the Sun! I am the Light of Equus! I am Order Incarnate!\n\nI. AM. HARMONY!\n\nAnd they will all §RBURN!§!"
+  solarreworked.130.a:0 "They will be turned to ash!"

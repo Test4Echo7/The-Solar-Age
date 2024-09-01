@@ -180,3 +180,67 @@ EQS_BOP_sanity_category = {
         }
     }
 }
+EQS_solar_fury_category = {
+    EQS_fury_of_sun = {
+        allowed = {
+            tag = EQS
+        }
+        available = {
+            surrender_progress > 0.15
+            is_EQS_SOL = yes
+            custom_trigger_tooltip = {
+                tooltip = SOL_nova_ops_tt
+                NOT = { has_country_flag = SOL_went_nova }
+            }
+        }
+        visible = {
+            has_war = yes
+            is_EQS_SOL = yes
+        }
+        cost = 50
+        days_remove = 40
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision EQS_fury_of_sun"
+            if = {
+                limit = {
+                   NOT = { has_country_flag = SOL_supernova_seen }
+                }
+                country_event = solarreworked.130
+            }
+            custom_effect_tooltip = EQS_SOL_they_bucked_up_tt
+            hidden_effect = {
+                EQS_princess_celestia = {
+                    add_timed_unit_leader_trait = { trait = supernova days = 40 }
+                }
+            }
+        }
+        remove_effect = {
+            custom_effect_tooltip = EQS_SOL_eepy_tt
+            hidden_effect = {
+                EQS_princess_celestia = {
+                    add_timed_unit_leader_trait = { trait = magic_drained days = 60 }
+                }
+            }
+            set_country_flag = {
+                flag = SOL_went_nova
+                days = 100
+                value = 1
+            }
+        }
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                surrender_progress > 0.25
+                add = 10
+            }
+            modifier = {
+                surrender_progress > 0.4
+                add = 30
+            }
+            modifier = {
+                surrender_progress > 0.75
+                add = 1000
+            }
+        }
+    }
+}
