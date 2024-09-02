@@ -9,6 +9,7 @@ leader_traits = {
 
         ai_will_do = { factor = 1 }
     }
+
     empresss_representative = {
         random = no
         stability_factor = -0.05

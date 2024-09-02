@@ -667,31 +667,31 @@ focus_tree = {
 #	}
 #}
 
-#shared_focus = {
-#	id = SOL_Solar_Cult
-#	icon = GFX_goal_solar_cult
-#	prerequisite = {
-#		focus = SOL_god_empress
-#	}
-#	available = {
-#		is_subject = no
-#		has_DB_ruler = yes
-#	}
-#	#bypass = {}
-#	cost = 10
-#	ai_will_do = {
-#		factor = 100
-#	}
-#	relative_position_id = SOL_Imperium_Solis
-#	x = 4
-#	y = 2
-#	completion_reward = {
-#		log = "[GetDateText]: [Root.GetName]: Focus SOL_Solar_Cult"
-#		add_political_power = 50
-#		add_ideas = SOL_Solar_Cult_idea
-#	}
-#	search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
-#}
+shared_focus = {
+	id = SOL_Solar_Cult
+	icon = GFX_goal_solar_cult
+	prerequisite = {
+		#focus = SOL_god_empress
+	}
+	available = {
+		is_subject = no
+		has_DB_ruler = yes
+	}
+	#bypass = {}
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+	#relative_position_id = SOL_Imperium_Solis
+	x = 4
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_Solar_Cult"
+		add_political_power = 50
+		add_ideas = SOL_Solar_Cult_idea
+	}
+	search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
+}
 
 shared_focus = {
 	id = SOL_Imperial_Inquisition
@@ -708,7 +708,7 @@ shared_focus = {
 	ai_will_do = {
 		factor = 50
 	}
-	relative_position_id = SOL_Imperium_Solis
+	#relative_position_id = SOL_Imperium_Solis
 	x = 4
 	y = 3
 	completion_reward = {
@@ -1892,145 +1892,145 @@ shared_focus = {
 	}
 }
 
-shared_focus = {
-	id = SOL_increase_presense_inCRY
-	icon = GFX_goal_crystal_empire_sub
-	cost = 10
-	ai_will_do = {
-		factor = 100
-	}
-	bypass = {
-		OR = {
-			NOT = {
-				country_exists = CRY
-			}
-			has_war_with = CRY
-		}
-	}
-	prerequisite = {
-		focus = examine_the_situation
-	}
-	allow_branch = {
-		is_EQS_SOL = yes
-	}
-	available = {
-		eqs_not_has_civil_war = yes
-		OR = {
-			has_completed_focus = SOL_empress_protector
-			has_completed_focus = SOL_empress_mother
-			has_completed_focus = SOL_god_empress
-		}
-		CRY = {
-			has_war = no
-			OR = {
-				is_subject = no
-				is_subject_of = ROOT
-			}
-		}
-	}
-	relative_position_id = examine_the_situation
-	x = -4
-	y = 1
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_increase_presense_inCRY"
-		if = {
-			limit = {
-				CRY = {
-					is_subject_of = ROOT
-				}
-			}
-			CRY = {
-				add_autonomy_ratio = {
-					value = -0.03
-				}
-				if = {
-					limit = {
-						NOT = {
-							has_global_flag = CRY_puppet_chosen
-						}
-						NOT = {
-							has_country_flag = CRY_solar_governorship
-						}
-						has_global_flag = SOL_twilight_converted
-					}
-					ROOT = {
-						country_event = solarempire.131
-					}
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				OR = {
-					NOT = {
-						has_global_flag = SOL_twilight_converted
-					}
-					CRY = {
-						has_country_leader = { character = CRY_princess_mi_amore_cadenza ruling_only = yes }
-					}
-				}
-			}
-			CRY = {
-				country_event = {
-					id = solarempire.27
-					days = 1
-				}
-			}
-		}
-		else = {
-			country_event = solarempiresparkles.1
-		}
-	}
-	search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
-}
+#shared_focus = {
+#	id = SOL_increase_presense_inCRY
+#	icon = GFX_goal_crystal_empire_sub
+#	cost = 10
+#	ai_will_do = {
+#		factor = 100
+#	}
+#	bypass = {
+#		OR = {
+#			NOT = {
+#				country_exists = CRY
+#			}
+#			has_war_with = CRY
+#		}
+#	}
+#	prerequisite = {
+#		focus = examine_the_situation
+#	}
+#	allow_branch = {
+#		is_EQS_SOL = yes
+#	}
+#	available = {
+#		eqs_not_has_civil_war = yes
+#		OR = {
+#			has_completed_focus = SOL_empress_protector
+#			has_completed_focus = SOL_empress_mother
+#			has_completed_focus = SOL_god_empress
+#		}
+#		CRY = {
+#			has_war = no
+#			OR = {
+#				is_subject = no
+#				is_subject_of = ROOT
+#			}
+#		}
+#	}
+#	relative_position_id = examine_the_situation
+#	x = -4
+#	y = 1
+#	completion_reward = {
+#		log = "[GetDateText]: [Root.GetName]: Focus SOL_increase_presense_inCRY"
+#		if = {
+#			limit = {
+#				CRY = {
+#					is_subject_of = ROOT
+#				}
+#			}
+#			CRY = {
+#				add_autonomy_ratio = {
+#					value = -0.03
+#				}
+#				if = {
+#					limit = {
+#						NOT = {
+#							has_global_flag = CRY_puppet_chosen
+#						}
+#						NOT = {
+#							has_country_flag = CRY_solar_governorship
+#						}
+#						has_global_flag = SOL_twilight_converted
+#					}
+#					ROOT = {
+#						country_event = solarempire.131
+#					}
+#				}
+#			}
+#		}
+#		else_if = {
+#			limit = {
+#				OR = {
+#					NOT = {
+#						has_global_flag = SOL_twilight_converted
+#					}
+#					CRY = {
+#						has_country_leader = { character = CRY_princess_mi_amore_cadenza ruling_only = yes }
+#					}
+#				}
+#			}
+#			CRY = {
+#				country_event = {
+#					id = solarempire.27
+#					days = 1
+#				}
+#			}
+#		}
+#		else = {
+#			country_event = solarempiresparkles.1
+#		}
+#	}
+#	search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+#}
 
-shared_focus = {
-	id = SOL_bat_problems
-	icon = GFX_goal_bat
-	cost = 10
-	ai_will_do = {
-		factor = 150
-	}
-	relative_position_id = examine_the_situation
-	x = -2
-	y = 1
-	prerequisite = {
-		focus = examine_the_situation
-	}
-	allow_branch = {
-		is_EQS_SOL = yes
-	}
-	available = {
-		has_country_flag = SOL_bat_problems_flag
-		has_war = no
-		OR = {
-			has_completed_focus = SOL_empress_protector
-			has_completed_focus = SOL_empress_mother
-			has_completed_focus = SOL_god_empress
-		}
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_bat_problems"
-		if = {
-			limit = {
-				has_completed_focus = SOL_empress_protector
-			}
-			country_event = solarempire.40
-		}
-		else_if = {
-			limit = {
-				has_completed_focus = SOL_empress_mother
-			}
-			country_event = solarempire.41
-		}
-		else_if = {
-			limit = {
-				has_completed_focus = SOL_god_empress
-			}
-			country_event = solarempire.42
-		}
-	}
-}
+#shared_focus = {
+#	id = SOL_bat_problems
+#	icon = GFX_goal_bat
+#	cost = 10
+#	ai_will_do = {
+#		factor = 150
+#	}
+#	relative_position_id = examine_the_situation
+#	x = -2
+#	y = 1
+#	prerequisite = {
+#		focus = examine_the_situation
+#	}
+#	allow_branch = {
+#		is_EQS_SOL = yes
+#	}
+#	available = {
+#		has_country_flag = SOL_bat_problems_flag
+#		has_war = no
+#		OR = {
+#			has_completed_focus = SOL_empress_protector
+#			has_completed_focus = SOL_empress_mother
+#			has_completed_focus = SOL_god_empress
+#		}
+#	}
+#	completion_reward = {
+#		log = "[GetDateText]: [Root.GetName]: Focus SOL_bat_problems"
+#		if = {
+#			limit = {
+#				has_completed_focus = SOL_empress_protector
+#			}
+#			country_event = solarempire.40
+#		}
+#		else_if = {
+#			limit = {
+#				has_completed_focus = SOL_empress_mother
+#			}
+#			country_event = solarempire.41
+#		}
+#		else_if = {
+#			limit = {
+#				has_completed_focus = SOL_god_empress
+#			}
+#			country_event = solarempire.42
+#		}
+#	}
+#}
 
 ############## DEFENSE SECTION / WAR SECTION ############
 shared_focus = {
@@ -3327,31 +3327,31 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_RESEARCH }
 }
 
-shared_focus = {
-	id = SOL_sun_never_sets
-	icon = GFX_goal_generic_navy_doctrines_tactics
-	cost = 10
-	ai_will_do = {
-		factor = 25
-	}
-	prerequisite = {
-		focus = SOL_rb_battleships
-	}
-	relative_position_id = SOL_navy
-	x = -2
-	y = 3
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_sun_never_sets"
-		add_ideas = SOL_sun_never_sets_idea
-		add_doctrine_cost_reduction = {
-			name = cat_fleet_in_being
-			cost_reduction = 0.5
-			uses = 1
-			category = cat_fleet_in_being
-		}
-	}
-	search_filters = { FOCUS_FILTER_NAVY_BONUS FOCUS_FILTER_RESEARCH }
-}
+#shared_focus = {
+#	id = SOL_sun_never_sets
+#	icon = GFX_goal_generic_navy_doctrines_tactics
+#	cost = 10
+#	ai_will_do = {
+#		factor = 25
+#	}
+#	prerequisite = {
+#		focus = SOL_rb_battleships
+#	}
+#	relative_position_id = SOL_navy
+#	x = -2
+#	y = 3
+#	completion_reward = {
+#		log = "[GetDateText]: [Root.GetName]: Focus SOL_sun_never_sets"
+#		add_ideas = SOL_sun_never_sets_idea
+#		add_doctrine_cost_reduction = {
+#			name = cat_fleet_in_being
+#			cost_reduction = 0.5
+#			uses = 1
+#			category = cat_fleet_in_being
+#		}
+#	}
+#	search_filters = { FOCUS_FILTER_NAVY_BONUS FOCUS_FILTER_RESEARCH }
+#}
 
 shared_focus = {
 	id = SOL_carriers
@@ -3533,7 +3533,7 @@ shared_focus = {
 	}
 	prerequisite = {
 		focus = SOL_rb_cruisers
-		focus = SOL_sun_never_sets
+		#focus = SOL_sun_never_sets
 		focus = SOL_rb_naval_planes
 	}
 	relative_position_id = SOL_navy

@@ -271,26 +271,27 @@ EQS_SOL_wartime_change = {
 	if = {
 		limit = { EQS_princess_luna = { is_unit_leader = yes } }
 		EQS_princess_luna = {
-			remove_unit_leader_role = yes
-			if = {
-				limit = {
-					is_high_command = yes
-				}
-				remove_advisor_role = {
-					slot = high_command
-				}
-			}
-			if = {
-				limit = {
-					is_army_chief = yes
-				}
-				remove_advisor_role = {
-					slot = army_chief
-				}
-			}
-			#using a flag doesnt seem to work
-			set_character_flag = EQS_luna_leader_disabled
-			#promote_character = alicornrule
+			set_nationality = CRY
+			#remove_unit_leader_role = yes
+			#if = {
+			#	limit = {
+			#		is_high_command = yes
+			#	}
+			#	remove_advisor_role = {
+			#		slot = high_command
+			#	}
+			#}
+			#if = {
+			#	limit = {
+			#		is_army_chief = yes
+			#	}
+			#	remove_advisor_role = {
+			#		slot = army_chief
+			#	}
+			#}
+			##using a flag doesnt seem to work
+			##set_character_flag = EQS_luna_leader_disabled
+			##promote_character = alicornrule
 		}
 		set_country_flag = EQS_had_luna
 	}
@@ -555,6 +556,7 @@ EQS_SOL_civil_war = {
 #ROOT is EQS
 EQS_NLR_civil_war = {
 	set_global_flag = equestrian_civil_war
+	set_global_flag = NLR_spawned
 	#random_list = { 50 = { set_country_flag = SCS_gonna_appear } 50 = { }}
 	news_event = { hours = 6 id = news.200 }
 	country_event = { id = equestria.229 days = 10 }

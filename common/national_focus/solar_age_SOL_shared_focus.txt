@@ -1020,7 +1020,7 @@ shared_focus = {
 		has_DB_ruler = yes
 	}
 
-	completion = {
+	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_harmonys_exemplar"
 		###Event of Daybreaker speaking of all the things that she has done for her ponies, and how that means she is the pure manifestation of Harmony, and that she will do all that she can to better everypony through her
 	}
@@ -1152,6 +1152,11 @@ shared_focus = {
 	cost = 5
 	prerequisite = { focus = SOL_industrial_hoof }
 	available = {
+		is_subject = no
+		has_DB_ruler = yes
+	}
+
+	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_ponys_project"
 		#Inform player about decisions here
 		###Maybe event of Daybreaker proudly standing before an idea she had of something meant to honor her, or to show her glory, despite how it is draining the Empire's resources, but because she needs it, then she gets it, no matter what other ponies need
@@ -1359,7 +1364,7 @@ shared_focus = {
 	}
 
 	completion_reward = {
-		id = SOL_sole_alicorn
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_sole_alicorn"
 		###Event of a book burning of most of Canterlot's library, led by Twilight, as it is for destroying all evidence that Daybreaker is anything but the only true alicorn (Twilight is "only" a "demi-alicorn") and that she alone controls the day and night, no matter what ponies say about Luna; could include one pony being arrested when they protest destroying history
 	}
 	ai_will_do = { factor = 60 }
@@ -1633,7 +1638,7 @@ shared_focus = {
 		has_DB_ruler = yes
 	}
 
-	completion = {
+	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_solaris_adoratio"
 		###In a grand ceremony, where she proclaims some of the highlights of Sunset's life, she proclaims that Sunset shall be the head of the worship branch of the Solaris Cultus, answering only to Padlock Key, and annoints her in a branding of fire on her shoulder that she is forever Daybreaker's
 	}
@@ -4380,6 +4385,7 @@ shared_focus = {
 
 	cost = 5
 	prerequisite = { focus = SOL_land_of_rising_sun }
+	mutually_exclusive = { focus = SOL_doghouse }
 	available = {
 		DMT = { all_cores_owned_by_ROOT_or_subject = yes }
 	}
@@ -4937,42 +4943,42 @@ shared_focus = {
 			limit = { country_exists = EMR }
 			create_wargoal = {
 				target = EMR
-				type = annex_everything
+				type = puppet_wargoal_focus
 			}
 		}
 		if = {
 			limit = { country_exists = SDL }
 			create_wargoal = {
 				target = SDL
-				type = annex_everything
+				type = puppet_wargoal_focus
 			}
 		}
 		if = {
 			limit = { country_exists = SDS }
 			create_wargoal = {
 				target = SDS
-				type = annex_everything
+				type = puppet_wargoal_focus
 			}
 		}
 		if = {
 			limit = { country_exists = SDC }
 			create_wargoal = {
 				target = SDC
-				type = annex_everything
+				type = puppet_wargoal_focus
 			}
 		}
 		if = {
 			limit = { country_exists = SDF }
 			create_wargoal = {
 				target = SDF
-				type = annex_everything
+				type = puppet_wargoal_focus
 			}
 		}
 		if = {
 			limit = { country_exists = YMN }
 			create_wargoal = {
 				target = YMN
-				type = annex_everything
+				type = puppet_wargoal_focus
 			}
 		}
 	}
@@ -5313,6 +5319,7 @@ shared_focus = {
 
 	cost = 5
 	prerequisite = { focus = SOL_attack_bat }
+	mutually_exclusive = { focus = SOL_no_sinner_alive }
 	available = {
 		BAT = { all_cores_owned_by_ROOT_or_subject = yes }
 	}
@@ -5398,6 +5405,969 @@ shared_focus = {
 		###Daybreaker finally has a day to herself, as the world is at peace at last, and she looks to a map of her empire, and how ponies from all walks of life had been made safe under her, and she believes that she has accomplished her goal, and she will lead all of ponykind into prosperity forever
 	}
 	ai_will_do = { factor = 1000 }
+}
+
+###Imperial Diplomacy###
+shared_focus = {
+	id = SOL_imperial_diplomatic_corps
+	x = 0
+	y = -1
+
+	cost = 5
+	available = {
+		is_subject = no
+		has_DB_ruler = yes
+		OR = {
+			has_global_flag = SOL_twilight_converted
+			has_global_flag = SOL_sunset_converted
+		}
+	}
+	allow_branch = { is_EQS_SOL = yes }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_imperial_diplomatic_corps"
+		add_political_power = 50
+		custom_effect_tooltip = SOL_nice_empress_tt
+		#Possibly show off decisions or the like
+	}
+	ai_will_do = {
+		factor = 40
+		modifier = {
+			has_completed_focus = SOL_empress_protector
+			factor = 2
+		}
+		modifier = {
+			has_completed_focus = SOL_god_empress
+			factor = 1.5
+		}
+		modifier = {
+			has_completed_focus = SOL_empress_mother
+			factor = 2.5
+		}
+	}
+}
+
+shared_focus = {
+	id = SOL_sustenance_workers
+	x = -1
+	y = 1
+	relative_position_id = SOL_imperial_diplomatic_corps
+
+	cost = 6
+	prerequisite = { focus = SOL_imperial_diplomatic_corps }
+	available = {
+		is_subject = no
+		has_DB_ruler = yes
+		custom_trigger_tooltip = {
+			tooltip = SOL_all_diplomats_busy_please_call_again_later_tt
+			OR = {
+				NOT = { has_country_flag = SOL_twilight_away }
+				NOT = { has_country_flag = SOL_sunset_away }
+			}
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_sustenance_workers"
+		###Event of choosing who to send, which then gives DRG an event of said diplomat arriving and trying to get them to kneel
+	}
+	ai_will_do = {
+		factor = 20
+		modifier = {
+			has_war = no
+			factor = 2.5
+		}
+	}
+}
+
+shared_focus = {
+	id = SOL_insurance_policies
+	x = 1
+	y = 1
+	relative_position_id = SOL_imperial_diplomatic_corps
+
+	cost = 6
+	prerequisite = { focus = SOL_imperial_diplomatic_corps }
+	available = {
+		is_subject = no
+		has_DB_ruler = yes
+		custom_trigger_tooltip = {
+			tooltip = SOL_all_diplomats_busy_please_call_again_later_tt
+			OR = {
+				NOT = { has_country_flag = SOL_twilight_away }
+				NOT = { has_country_flag = SOL_sunset_away }
+			}
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_insurance_policies"
+		###Event of choosing who to send, and also an event for YAK on the promise of support against any threats to them, so long as they give all resource rights for their resources, or provide materiel support in Daybreaker's own wars, as mercs
+	}
+	ai_will_do = {
+		factor = 20
+		modifier = {
+			has_war = no
+			factor = 2.5
+		}
+	}
+}
+
+shared_focus = {
+	id = SOL_oil_existence
+	x = -2
+	y = 2
+	relative_position_id = SOL_imperial_diplomatic_corps
+
+	cost = 6
+	prerequisite = { focus = SOL_imperial_diplomatic_corps }
+	available = {
+		is_subject = no
+		has_DB_ruler = yes
+		custom_trigger_tooltip = {
+			tooltip = SOL_all_diplomats_busy_please_call_again_later_tt
+			OR = {
+				NOT = { has_country_flag = SOL_twilight_away }
+				NOT = { has_country_flag = SOL_sunset_away }
+			}
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_oil_existence"
+		###Event of choosing who to send and later an event for PNG and PLB, demanding they provide either access to their resources, including all their oil, or provide experts for resource extraction, or naval expertise for continued existence
+	}
+	ai_will_do = {
+		factor = 20
+		modifier = {
+			has_war = no
+			factor = 2.5
+		}
+	}
+}
+
+shared_focus = {
+	id = SOL_griffon_fealty
+	x = 2
+	y = 2
+	relative_position_id = SOL_imperial_diplomatic_corps
+
+	cost = 6
+	prerequisite = { focus = SOL_imperial_diplomatic_corps }
+	available = {
+		is_subject = no
+		has_DB_ruler = yes
+		custom_trigger_tooltip = {
+			tooltip = SOL_all_diplomats_busy_please_call_again_later_tt
+			OR = {
+				NOT = { has_country_flag = SOL_twilight_away }
+				NOT = { has_country_flag = SOL_sunset_away }
+			}
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_griffon_fealty"
+		###Event of choosing who to send and then an event for GRF demanding that they contribute toward the war efforts on Equus by providing their troops or by providing military leadership
+	}
+	ai_will_do = {
+		factor = 20
+		modifier = {
+			has_war = no
+			factor = 2.5
+		}
+	}
+}
+
+shared_focus = {
+	id = SOL_reich_relations
+	x = 0
+	y = 3
+	relative_position_id = SOL_imperial_diplomatic_corps
+
+	cost = 10
+	prerequisite = { focus = SOL_imperial_diplomatic_corps }
+	available = {
+		is_subject = no
+		has_DB_ruler = yes
+		custom_trigger_tooltip = {
+			tooltip = SOL_all_hands_on_deck_tt
+			NOT = { has_country_flag = SOL_twilight_away }
+			NOT = { has_country_flag = SOL_sunset_away }
+		}
+	}
+
+	#Select effect of three events of negotiations, as both Sunset and Twilight are sent
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_imperial_relations"
+		#Show off idea here, if they accept it
+		custom_effect_tooltip = SOL_griffons_like_tt
+	}
+	ai_will_do = {
+		factor = 30
+		modifier = {
+			OR = {
+				NOT = { has_completed_focus = SOL_sustenance_workers }
+				NOT = { has_completed_focus = SOL_oil_existence }
+				NOT = { has_completed_focus = SOL_insurance_policies }
+				NOT = { has_completed_focus = SOL_griffon_fealty }
+			}
+			factor = 0
+		}
+		modifier = {
+			NOT = { country_exists = CHN }
+			factor = 1.33
+		}
+		modifier = {
+			has_war = no
+			factor = 3
+		}
+	}
+}
+
+###Crystal Empire###
+shared_focus = {
+	id = SOL_increase_presense_inCRY
+	icon = GFX_goal_crystal_empire_sub
+	cost = 5
+	ai_will_do = {
+		factor = 100
+	}
+	bypass = {
+		OR = {
+			NOT = {
+				country_exists = CRY
+			}
+			has_war_with = CRY
+		}
+	}
+	prerequisite = {
+		focus = examine_the_situation
+	}
+	allow_branch = {
+		is_EQS_SOL = yes
+	}
+	available = {
+		eqs_not_has_civil_war = yes
+		OR = {
+			has_completed_focus = SOL_empress_protector
+			has_completed_focus = SOL_empress_mother
+			has_completed_focus = SOL_god_empress
+		}
+		CRY = {
+			has_war = no
+			OR = {
+				is_subject = no
+				is_subject_of = ROOT
+			}
+		}
+	}
+	relative_position_id = examine_the_situation
+	x = -11
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_increase_presense_inCRY"
+		if = {
+			limit = {
+				CRY = {
+					is_subject_of = ROOT
+				}
+			}
+			CRY = {
+				add_autonomy_ratio = {
+					value = -0.03
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_global_flag = CRY_puppet_chosen
+						}
+						NOT = {
+							has_country_flag = CRY_solar_governorship
+						}
+						has_global_flag = SOL_twilight_converted
+					}
+					ROOT = {
+						country_event = solarempire.131
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					NOT = {
+						has_global_flag = SOL_twilight_converted
+					}
+					CRY = {
+						has_country_leader = { character = CRY_princess_mi_amore_cadenza ruling_only = yes }
+					}
+				}
+			}
+			CRY = {
+				country_event = {
+					id = solarempire.27
+					days = 1
+				}
+			}
+
+		}
+		else = {
+			#country_event = solarempiresparkles.1
+			###Country event of Twilight stating that she wants to deal with this issue personally, since Cadance is family, and she should listen to Twilight, which Daybreaker ultimately agrees to
+			add_war_support = 0.05
+			add_political_power = 50
+		}
+	}
+	search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+}
+
+shared_focus = {
+	id = SOL_follow_sunrise_plan
+	x = -1
+	y = 1
+	relative_position_id = SOL_increase_presense_inCRY
+
+	cost = 4
+	prerequisite = { focus = SOL_increase_presense_inCRY }
+	mutually_exclusive = { focus = SOL_gesture_of_strength }
+	available = {
+		is_subject = no
+		has_DB_ruler = yes
+		CRY = {
+			has_war = no
+			OR = {
+				is_subject = no
+				NOT = { is_subject_of = ROOT }
+			}
+		}
+	}
+	bypass = {
+		OR = {
+			NOT = { country_exists = CRY }
+			has_war_with = CRY
+			CRY = { is_subject_of = ROOT }
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_follow_sunrise_plan"
+		#Have her do vanilla infiltration mission
+	}
+	ai_will_do = { factor = 40 }
+}
+
+shared_focus = {
+	id = SOL_gesture_of_strength
+	x = 1
+	y = 1
+	relative_position_id = SOL_increase_presense_inCRY
+
+	cost = 4
+	prerequisite = { focus = SOL_increase_presense_inCRY }
+	mutually_exclusive = { focus = SOL_follow_sunrise_plan }
+	available = {
+		is_subject = no
+		has_DB_ruler = yes
+		CRY = {
+			has_war = no
+			OR = {
+				is_subject = no
+				NOT = { is_subject_of = ROOT }
+			}
+		}
+	}
+	bypass = {
+		OR = {
+			NOT = { country_exists = CRY }
+			has_war_with = CRY
+			CRY = { is_subject_of = ROOT }
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_gesture_of_strength"
+		###Event of Daybreaker speaking with Twilight about how she must use the strength of the Empire to intimidate Cadance, not just use her guile, and Twilight takes that to heart before the vanilla grand display event
+	}
+	ai_will_do = {
+		factor = 30
+		modifier = {
+			has_completed_focus = SOL_god_empress
+			factor = 3.33
+		}
+	}
+}
+
+shared_focus = {
+	id = Crystal_Fair
+	icon = GFX_goal_crystal_fair
+	cost = 5
+	dynamic = yes
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	ai_will_do = { factor = 40 }
+	prerequisite = {
+		focus = SOL_follow_sunrise_plan
+		focus = SOL_gesture_of_strength
+		focus = increase_presense_inCRY
+	}
+	available = {
+		eqs_not_has_civil_war = yes
+		is_subject = no
+		CRY = {
+			OR = { is_subject_of = ROOT is_in_faction_with = ROOT }
+			has_civil_war = no
+		}
+	}
+	bypass = {
+		CRY = {
+			has_focus_tree = crystal_empire_solar_focus
+			has_focus_tree = crystal_empire_lunar_focus
+		}
+	}
+	relative_position_id = examine_the_situation
+	x = -4
+	y = 2
+	offset = {
+		x = -7
+		y = 1
+		trigger = { is_EQS_SOL = yes }
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus Crystal_Fair"
+		add_political_power = 150
+		hidden_effect = {
+			if = {
+				limit = { is_original_EQS = yes }
+				news_event = news.4
+			}
+		}
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = SOL_expel_night_witch
+	x = 1
+	y = 1
+	relative_position_id = Crystal_Fair
+
+	cost = 5
+	prerequisite = { focus = Crystal_Fair }
+	allow_branch = { is_EQS_SOL = yes }
+	available = {
+		is_subject = no
+		has_DB_ruler = yes
+		OR = {
+			has_completed_focus = SOL_Imperial_Investigative_Service
+			has_completed_focus = SOL_solaris_speculatores
+		}
+		NOT = { has_global_flag = NLR_spawned }
+		CRY = { has_character = EQS_princess_luna }
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_expel_night_witch"
+		###Event of Daybreaker preparing a plan with her chief of intelligence to find and capture Luna, who is still running a campaign of resistance against the Solar Empire, and she is incredibly frustrated with how she has not been able to yet, and is adamant they must find her
+		#Unlock operation if LR, decision if not
+		#Will have another event at end of decision/op of Daybreaker getting into combat with Luna to capture her
+	}
+	ai_will_do = {
+		factor = 150
+	}
+}
+
+shared_focus = {
+	id = rainbow_falls_resort
+	icon = GFX_goal_rainbow_falls
+	cost = 6
+	dynamic = yes
+	ai_will_do = { factor = 30 }
+	prerequisite = {
+		focus = Crystal_Fair
+	}
+	available = {
+		eqs_not_has_civil_war = yes
+		is_subject = no
+		98 = {
+			owner = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } }
+			controller = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } }
+		}
+	}
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus rainbow_falls_resort"
+		98 = {
+			owner = { add_political_power = 150 }
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	relative_position_id = Crystal_Fair
+	x = 1
+	y = 1
+	offset = {
+		x = 3
+		y = 0
+		trigger = { is_EQS_SOL = yes }
+	}
+}
+
+shared_focus = {
+	id = SOL_family_visits
+	x = -3
+	y = 2
+	relative_position_id = Crystal_Fair
+
+	cost = 5
+	prerequisite = { focus = Crystal_Fair }
+	available = {
+		is_subject = no
+		has_DB_ruler = yes
+	}
+	allow_branch = { is_EQS_SOL = yes }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_family_visits"
+		###Event of Daybreaker going to visit Cadance and family, and they are under house arrest, with magic inhibitors put on them, and Daybreaker basically makes fun of it, and also makes a few intimidating remarks around Flurry and her health, as she acts like Cadance is hurting her by being so cold to her (as in Daybreaker)
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = industry_crystal_emp
+	icon = GFX_goal_cry_factory_cel
+	cost = 6
+	ai_will_do = { factor = 30 }
+	prerequisite = {
+		focus = Crystal_Fair
+	}
+	available = {
+		eqs_not_has_civil_war = yes
+		is_subject = no
+		53 = {
+			owner = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } }
+			controller = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } }
+		}
+		144 = {
+			owner = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } }
+			controller = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } }
+		}
+	}
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	relative_position_id = Crystal_Fair
+	x = -1
+	y = 1
+	offset = {
+		x = 0
+		y = 1
+		trigger = { is_EQS_SOL = yes }
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus industry_crystal_emp"
+		53 = { add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}
+		}
+		144 = { add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = arms_factory
+				level = 3
+				instant_build = yes
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = SOL_update_northern_tactics
+	x = -2
+	y = 1
+	relative_position_id = rainbow_falls_resort
+
+	cost = 8
+	prerequisite = { focus = rainbow_falls_resort }
+	allow_branch = { is_EQS_SOL = yes }
+	available = {
+		is_subject = no
+		has_DB_ruler = yes
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_update_northern_tactics"
+		###Maybe event for doing some kind of war games exercise between SOL and CRY soldiers
+		CRY = {
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				uses = 3
+				cost_reduction = 0.5
+				category = land_doctrine
+			}
+		}
+		army_experience = 30
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_establish_crystal_legion
+	x = 0
+	y = 1
+	relative_position_id = rainbow_falls_resort
+
+	cost = 5
+	prerequisite = { focus = rainbow_falls_resort }
+	allow_branch = { is_EQS_SOL = yes }
+	available = {
+		is_subject = no
+		has_DB_ruler = yes
+		command_power > 39.99
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_establish_crystal_legion"
+		add_command_power = -40
+		CRY = {
+			#Spawn divisions here
+			add_war_support = 0.1
+		}
+	}
+	ai_will_do = { factor = 40 }
+}
+
+shared_focus = {
+	id = SOL_monarchy_compliance
+	x = -1
+	y = 1
+	relative_position_id = SOL_family_visits
+
+	cost = 7
+	prerequisite = { focus = SOL_family_visits }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_monarchy_compliance"
+		###Daybreaker meets again with Cadance, who is still under house arrest, and speaks further about some of her plans for the Crystal Empire, which upsets Cadance, especially since she is perturbed about how much Celestia has changed and Daybreaker makes one final mention of what would happen if Cadance disobeys her or her representatives as a threat
+	}
+	ai_will_do = { factor = 60 }
+}
+
+shared_focus = {
+	id = SOL_appoint_economic_advisors
+	x = 1
+	y = 1
+	relative_position_id = industry_crystal_emp
+
+	cost = 6
+	prerequisite = { focus = industry_crystal_emp }
+	mutually_exclusive = { focus = SOL_retire_old_guard }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_appoint_economic_advisors"
+		#Advisors and idea here
+		###Maybe event of a number of ponies from the Solar Empire coming to replace their Crystal counterparts, after they are taken away for anti-Order propaganda or the like
+	}
+	ai_will_do = { factor = 70 }
+}
+
+shared_focus = {
+	id = SOL_retire_old_guard
+	x = 0
+	y = 1
+	relative_position_id = SOL_update_northern_tactics
+
+	cost = 6
+	prerequisite = { focus = SOL_update_northern_tactics }
+	mutually_exclusive = { focus = SOL_appoint_economic_advisors }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_retire_old_guard"
+		#Generals and idea here
+		###Event of Shining Armor being brought before a tribunal, and him making a defense of himself, and although they can't kill him for fear of angering the entire Crystal Empire, they do sack him of his position
+	}
+	ai_will_do = { factor = 80 }
+}
+
+shared_focus = {
+	id = SOL_rouse_godhood
+	x = 0
+	y = 1
+	relative_position_id = SOL_monarchy_compliance
+
+	cost = 10
+	prerequisite = { focus = SOL_monarchy_compliance }
+	available = {
+		has_completed_focus = SOL_god_empress
+		custom_trigger_tooltip = {
+			tooltip = SOL_flurry_old_enough_tt
+			date > 1011.1.1
+		}
+	}
+
+	###Select effect of a few events for taking and corrupting Flurry
+	###Should only be two corruption events, but there will be one for a young Flurry, a teen Flurry, or an adult Flurry, possibly a middling young Flurry, so up to eight events
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_rouse_godhood"
+		###Event summarizing Flurry's ascendance
+	}
+	ai_will_do = { factor = 75 }
+}
+
+shared_focus = {
+	id = SOL_cadance_university
+	x = 1
+	y = 2
+	relative_position_id = SOL_family_visits
+
+	cost = 7
+	prerequisite = { focus = SOL_family_visits }
+	mutually_exclusive = { focus = SOL_gleaming_armor_arsenals }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_cadance_university"
+		#Idea is -15% RS, +0.1pp
+		CRY = {
+			if = {
+				limit = { amount_research_slots < 5 }
+				add_research_slot = 1
+			}
+		}
+	}
+	ai_will_do = { factor = 70 }
+}
+
+shared_focus = {
+	id = SOL_gleaming_armor_arsenals
+	x = 0
+	y = 2
+	relative_position_id = SOL_establish_crystal_legion
+
+	cost = 7
+	prerequisite = { focus = SOL_establish_crystal_legion }
+	mutually_exclusive = { focus = SOL_cadance_university }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_gleaming_armor_arsenals"
+		#Concern or MiO here
+	}
+	ai_will_do = { factor = 80 }
+}
+
+shared_focus = {
+	id = SOL_imperial_mind
+	x = 0
+	y = 2
+	relative_position_id = SOL_appoint_economic_advisors
+
+	cost = 8
+	prerequisite = { focus = SOL_appoint_economic_advisors }
+	prerequisite = { focus = SOL_cadance_university }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_imperial_mind"
+		#Idea here
+	}
+	ai_will_do = { factor = 80 }
+}
+
+shared_focus = {
+	id = SOL_imperial_guardian
+	x = 0
+	y = 2
+	relative_position_id = SOL_retire_old_guard
+
+	cost = 8
+	prerequisite = { focus = SOL_retire_old_guard }
+	prerequisite = { focus = SOL_gleaming_armor_arsenals }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_imperial_guardian"
+		#Idea here
+	}
+}
+
+shared_focus = {
+	id = crystalcity_university
+	icon = GFX_goal_cryacademy
+	cost = 10.00
+	ai_will_do = { factor = 30 }
+	relative_position_id = industry_crystal_emp
+	x = -1
+	y = 1
+	dynamic = yes
+	prerequisite = {
+		focus = industry_crystal_emp
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	prerequisite = {
+		focus = rainbow_falls_resort
+	}
+	available = {
+		eqs_not_has_civil_war = yes
+		is_subject = no
+		CRY = {
+			OR = { is_subject_of = ROOT is_in_faction_with = ROOT }
+			capital_scope = { is_controlled_by = PREV }
+		}
+	}
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	allow_branch = {
+		is_EQS_SOL = no
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus crystalcity_university"
+		add_political_power = 100
+		CRY = {
+			if = {
+				limit = { amount_research_slots < 5 }
+				add_research_slot = 1
+			}
+			add_ideas = CRY_EQS_techshare
+		}
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
+}
+
+###Bats! Bats? BATS!###
+shared_focus = {
+	id = SOL_bat_problems
+	icon = GFX_goal_bat
+	cost = 3
+	ai_will_do = {
+		factor = 150
+	}
+	relative_position_id = examine_the_situation
+	x = -6
+	y = 1
+	prerequisite = {
+		focus = examine_the_situation
+	}
+	allow_branch = {
+		is_EQS_SOL = yes
+	}
+	available = {
+		has_country_flag = SOL_bat_problems_flag
+		has_war = no
+		OR = {
+			has_completed_focus = SOL_empress_protector
+			has_completed_focus = SOL_empress_mother
+			has_completed_focus = SOL_god_empress
+		}
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_bat_problems"
+		###Event of the military going in to put down a riot by the bats, and otherwise having to deal with their issues, and Daybreaker resolving to deal with it in the most appropriate punishment possible; should be a bit of war support and command power
+		#if = {
+		#	limit = {
+		#		has_completed_focus = SOL_empress_protector
+		#	}
+		#	country_event = solarempire.40
+		#}
+		#else_if = {
+		#	limit = {
+		#		has_completed_focus = SOL_empress_mother
+		#	}
+		#	country_event = solarempire.41
+		#}
+		#else_if = {
+		#	limit = {
+		#		has_completed_focus = SOL_god_empress
+		#	}
+		#	country_event = solarempire.42
+		#}
+	}
+}
+
+shared_focus = {
+	id = SOL_what_homes
+	icon = GFX_goal_bat
+	x = -2
+	y = 1
+	relative_position_id = SOL_bat_problems
+
+	cost = 5
+	prerequisite = { focus = SOL_bat_problems }
+	available = { has_war = no }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_what_homes"
+		###Event of soldiers going in to seize land that the thestrals currently occupy, which leads to conflict and a number of dead thestrals; should give also 1 building slot in a couple of places or compliance
+	}
+	ai_will_do = { factor = 70 }
+}
+
+shared_focus = {
+	id = SOL_what_jobs
+	icon = GFX_goal_bat
+	x = 2
+	y = 1
+	relative_position_id = SOL_bat_problems
+
+	cost = 5
+	prerequisite = { focus = SOL_bat_problems }
+	available = { has_war = no }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_what_jobs"
+		###Event of some thestrals being kicked out or locked out of their old place of work, including ones that they actually owned, and them fighting with some of the guard to try and in, and failing; should be alos a couple of factories provided as well as the pp
+	}
+	ai_will_do = { factor = 70 }
+}
+
+shared_focus = {
+	id = SOL_burn_bats
+	icon = GFX_goal_bat
+	x = 1
+	y = 1
+	relative_position_id = SOL_what_homes
+
+	cost = 7
+	prerequisite = { focus = SOL_what_homes }
+	mutually_exclusive = { focus = SOL_useful_servants }
+	available = { has_war = no }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_burn_bats"
+		###Event like the vanilla God-Empress burning event, except follow the vigilantes stirred up by faithful ponies to Daybreaker to wipe out the filth of darkness; have the same effect as vanilla, but also +10% ST
+	}
+	ai_will_do = {
+		factor = 50
+		modifier = {
+			has_completed_focus = SOL_god_empress
+			factor = 5
+		}
+	}
+}
+
+shared_focus = {
+	id = SOL_useful_servants
+	icon = GFX_goal_bat
+	x = -1
+	y = 1
+	relative_position_id = SOL_what_jobs
+
+	cost = 7
+	prerequisite = { focus = SOL_what_jobs }
+	mutually_exclusive = { focus = SOL_burn_bats }
+	available = { has_war = no }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_useful_servants"
+		###Event a thestral being forcibly taken into service for the armed forces, since they can be used as both fodder and night scouts (with appropriate detonation enchantments if they try to flee), and she tries to fight it off, but is ultimately taken anyway, after basically being treated like a raging animal
+	}
+	ai_will_do = { factor = 100 }
 }
 
 ###Military Focuses###
@@ -5702,10 +6672,10 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_digging_earth"
 		add_tech_bonus = {
-			name = engineer_bonus
+			name = engineers_bonus
 			uses = 2
 			bonus = 1
-			category = engineer_tech
+			category = engineers_tech
 		}
 	}
 	ai_will_do = { factor = 40 }
@@ -7046,8 +8016,8 @@ shared_focus = {
 				bonus = 1
 				uses = 2
 				ahead_reduction = 0.5
-				technology = small_plane_airframe_4
-				technology = small_plane_airframe_5
+				technology = modern_small_airframe
+				technology = modern_small_airframe_2
 			}
 		}
 		else = {
@@ -7089,8 +8059,9 @@ shared_focus = {
 				bonus = 1
 				uses = 2
 				ahead_reduction = 0.5
-				technology = large_plane_airframe_4
-				technology = large_plane_airframe_5
+				technology = modern_large_airframe
+				technology = modern_large_airframe_2
+				technology = super_large_airframe
 			}
 		}
 		else = {
@@ -7163,8 +8134,8 @@ shared_focus = {
 
 	cost = 5
 	prerequisite = { focus = SOL_area_bombardment }
-	mutually = { focus = SOL_judge_ground }
-	mutually = { focus = SOL_order_skies }
+	mutually_exclusive = { focus = SOL_judge_ground }
+	mutually_exclusive = { focus = SOL_order_skies }
 	available = { has_war = yes }
 
 	completion_reward = {
