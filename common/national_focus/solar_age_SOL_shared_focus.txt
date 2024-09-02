@@ -4840,63 +4840,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_educate_kaiser"
 		###Event of Daybreaker walking into Grover VI's bed chambers, as he by now is a teen at least, and she speaks with him that she will now lead as the regent of GRI, and she will educate him in the proper teaching of being an emperor, and that she will also make sure he learns his place, which intimidates him (he will ask where the current regent is, and Daybreaker will say they're "indisposed"), although he tries to stand up against her and remain strong, which she promises will be broken
 		###Will allow for him to be eventually made Kaiser like for either normal regents
-		if = {
-			limit = {
-				GRD = { NOT = { tag = GRI } }
-				random_country = {
-					limit = {
-						has_character = GRI_daybreaker
-					}
-					GRI_daybreaker = {
-						set_nationality = GRD
-					}
-				}
-			}
-		}
-		GRD = {
-			if = {
-				limit = { NOT = { has_government = fascism } }
-				set_politics = {
-					ruling_party = fascism
-					elections_allowed = no
-				}
-			}
-			if = {
-				limit = { ROOT = { has_completed_focus = SOL_god_empress } }
-				GRI_daybreaker = {
-					add_country_leader_role = {
-						promote_leader = yes
-						country_leader = {
-							ideology = falangism
-							expire = "1965.1.1"
-							traits = { aussenseiter_regentin }
-						}
-					}
-				}
-				set_party_name = {
-					ideology = fascism
-					name = EQS_solaris_cultus
-					long_name = EQS_solaris_cultus
-				}
-			}
-			else = {
-				GRI_daybreaker = {
-					add_country_leader_role = {
-						promote_leader = yes
-						country_leader = {
-							ideology = nazism
-							expire = "1965.1.1"
-							traits = { aussenseiter_regentin }
-						}
-					}
-				}
-				set_party_name = {
-					ideology = fascism
-					name = EQS_fascism_party
-					long_name = EQS_fascism_party
-				}
-			}
-		}
+		country_event = solarreworked.120
 	}
 	ai_will_do = { factor = 70 }
 }

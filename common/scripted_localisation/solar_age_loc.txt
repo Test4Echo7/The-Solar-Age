@@ -1,0 +1,12 @@
+defined_text = {
+    name = GetGriffonRegent
+    text = {
+        trigger = {
+            GRI = { has_country_leader = { character = GRI_archon_eros_vii ruling_only = yes } }
+        }
+        localization_key = SOL_archon
+    }
+    text = {
+        localization_key = SOL_gabi
+    }
+}

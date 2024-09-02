@@ -208,6 +208,77 @@ country_event = { #Zephyr has integrated into a STG officer corps, and decides t
 }
 
 country_event = {
+    id = solarreworked.120
+    title = solarreworked.120.t
+    desc = solarreworked.120.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.120"}
+
+    is_triggered_only = yes
+
+    option = { #I shall watch the Empire in your stead.
+        name = solarreworked.120.a
+        if = {
+			limit = {
+				GRD = { NOT = { tag = GRI } }
+				random_country = {
+					limit = {
+						has_character = GRI_daybreaker
+					}
+					GRI_daybreaker = {
+						set_nationality = GRD
+					}
+				}
+			}
+		}
+		GRD = {
+			if = {
+				limit = { NOT = { has_government = fascism } }
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+				}
+			}
+			if = {
+				limit = { ROOT = { has_completed_focus = SOL_god_empress } }
+				GRI_daybreaker = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = falangism
+							expire = "1965.1.1"
+							traits = { aussenseiter_regentin }
+						}
+					}
+				}
+				set_party_name = {
+					ideology = fascism
+					name = EQS_solaris_cultus
+					long_name = EQS_solaris_cultus
+				}
+			}
+			else = {
+				GRI_daybreaker = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = nazism
+							expire = "1965.1.1"
+							traits = { aussenseiter_regentin }
+						}
+					}
+				}
+				set_party_name = {
+					ideology = fascism
+					name = EQS_fascism_party
+					long_name = EQS_fascism_party
+				}
+			}
+		}
+    }
+}
+
+country_event = {
     id = solarreworked.130
     title = solarreworked.130.t
     desc = solarreworked.130.d
