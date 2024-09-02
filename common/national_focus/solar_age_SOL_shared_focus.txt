@@ -554,17 +554,6 @@ shared_focus = {
         ###Event of Daybreaker revealing herself to the Canterlot, and she is initially attacked by some of her own soldiers, who she deals with as she proclaims that she will lead the nation to greatness and destruction of the changelings; she is passive until she's shot at
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_waking_dawn_star"
 		add_political_power = 200
-		add_stability = 0.25
-		effect_tooltip = {
-			every_enemy_country = {
-				add_ideas = SOL_enemy_debuff_idea
-			}
-		}
-		hidden_effect = {
-			every_enemy_country = {
-				add_ideas = SOL_enemy_debuff_idea
-			}
-		}
 		if = {
 			limit = {
 				is_faction_leader = no
@@ -2922,7 +2911,7 @@ shared_focus = {
 		}
 	}
 	relative_position_id = SOL_She_Who_Raises_the_Sun
-	x = -7
+	x = -8
 	y = 2
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_reconquer_cry"
@@ -2936,7 +2925,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_pan_pony_empire
-	x = 0
+	x = -2
 	y = 2
 	relative_position_id = SOL_She_Who_Raises_the_Sun
 
@@ -2956,6 +2945,30 @@ shared_focus = {
 		#Idea here
 	}
 	ai_will_do = { factor = 60 }
+}
+
+shared_focus = {
+	id = SOL_alicorn_weapons
+	x = 2
+	y = 2
+	relative_position_id = SOL_She_Who_Raises_the_Sun
+
+	cost = 8
+	prerequisite = {
+		focus = SOL_Empress_knows_Best
+		focus = SOL_She_Who_Raises_the_Sun
+		focus = SOL_Freedom_from_Fear
+	}
+	available = {
+		is_subject = no
+		has_DB_ruler = yes
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_alicorn_weapons"
+		#Unlock decisions here
+	}
+	ai_will_do = { factor = 50 }
 }
 
 shared_focus = {
@@ -3004,7 +3017,7 @@ shared_focus = {
 		}
 	}
 	relative_position_id = SOL_She_Who_Raises_the_Sun
-	x = 7
+	x = 8
 	y = 2
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_reconquer_stg"
@@ -3057,7 +3070,6 @@ shared_focus = {
 			}
 		}
 	}
-	#bypass = { }
 	cost = 15
 	ai_will_do = {
 		factor = 35
@@ -3095,7 +3107,6 @@ shared_focus = {
 			all_cores_owned_by_ROOT_or_subject = yes
 		}
 	}
-	#bypass = { }
 	cost = 15
 	ai_will_do = {
 		factor = 35
@@ -3116,6 +3127,77 @@ shared_focus = {
 		}
 	}
 	search_filters = { FOCUS_FILTER_ANNEXATION }
+}
+
+shared_focus = {
+	id = SOL_industrial_heartland
+	x = 0
+	y = 2
+	relative_position_id = SOL_core_stg
+
+	cost = 15
+	prerequisite = { focus = SOL_core_stg }
+	mutually_exclusive = { focus = SOL_expand_reach }
+	available = {
+		is_subject = no
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_core_stg"
+		153 = {
+			add_resource = {
+				type = steel
+				amount = 20
+			}
+			add_resource = {
+				type = tungsten
+				amount = 15
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		166 = {
+			add_resource = {
+				type = steel
+				amount = 10
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		57 = {
+			add_resource = {
+				type = steel
+				amount = 10
+			}
+			add_resource = {
+				type = tungsten
+				amount = 15
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		332 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = { factor = 60 }
 }
 
 shared_focus = {
@@ -3165,7 +3247,12 @@ shared_focus = {
 	cost = 7
 	prerequisite = { focus = SOL_conquer_drg }
 	mutually_exclusive = { focus = SOL_elite_laborers }
-	available = { is_subject = no }
+	available = {
+		is_subject = no
+		DRG = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_evict_hoarders"
@@ -3184,7 +3271,12 @@ shared_focus = {
 	cost = 5
 	prerequisite = { focus = SOL_conquer_drg }
 	mutually_exclusive = { focus = SOL_evict_hoarders }
-	available = { is_subject = no }
+	available = {
+		is_subject = no
+		DRG = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_elite_laborers"
@@ -3230,7 +3322,7 @@ shared_focus = {
 		}
 	}
 	relative_position_id = SOL_reconquer_cry
-	x = 4
+	x = 5
 	y = 2
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_conquer_chn"
@@ -3254,6 +3346,171 @@ shared_focus = {
 		}
 	}
 	search_filters = { FOCUS_FILTER_ANNEXATION }
+}
+
+shared_focus = {
+	id = SOL_put_in_place
+	x = -1
+	y = 1
+	relative_position_id = SOL_conquer_chn
+
+	cost = 5
+	prerequisite = { focus = SOL_conquer_chn }
+	available = {
+		is_subject = no
+		CHN = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+		CCN = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_conquer_chn"
+		###Event of some changelings being rounded up or the like to be tabulated, then put to work as different chattel slaves, as punishment for their plans for ever toppling the Solar Empire, and they are also deprived of any and all emotions, which means they must subsist off normal food, which is even worse for them
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_deserved_humiliation
+	x = 1
+	y = 1
+	relative_position_id = SOL_conquer_chn
+
+	cost = 5
+	prerequisite = { focus = SOL_conquer_chn }
+	available = {
+		is_subject = no
+		#259 = { is_owned_by = ROOT }
+		#309 = { is_owned_by = ROOT }
+		#262 = { is_owned_by = ROOT }
+		#252 = { is_owned_by = ROOT }
+		CHN = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+		CCN = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_deserved_humiliation"
+		###Daybreaker gathers the various queens of the main hives of the Changeling Lands, to give them a short, mocking speech about how they threw in their lot with the wrong changeling, and that she will see all that they held dear destroyed, as she uses magic to showcase what is happening to each the different hives as punishment, which involves much destruction
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_final_insult
+	x = 0
+	y = 2
+	relative_position_id = SOL_conquer_chn
+
+	cost = 5
+	prerequisite = { focus = SOL_conquer_chn }
+	available = {
+		is_subject = no
+		#251 = { is_owned_by = ROOT }
+		CHN = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+		CCN = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_final_insult"
+		###Daybreaker meets with Chrysalis, who is imprisoned like an animal, which Daybreaker claims she is, and Daybreaker has a one-sided, and incredibly furious and aggressive conversation about how Chrysalis will be treated, and what her punishment will be for defying her, although she at the same time thanks Chrysalis for helping motivate her ponies to follow her, as an ironic twist
+	}
+	ai_will_do = { factor = 70 }
+}
+
+shared_focus = {
+	id = SOL_establish_worker_hives
+	x = 0
+	y = 2
+	relative_position_id = SOL_put_in_place
+
+	cost = 7
+	prerequisite = { focus = SOL_put_in_place }
+	mutually_exclusive = { focus = SOL_keep_pets }
+	available = {
+		is_subject = no
+		CHN = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+		CCN = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_establish_worker_hives"
+		#Idea here
+	}
+	ai_will_do = { factor = 70 }
+}
+
+shared_focus = {
+	id = SOL_keep_pets
+	x = 0
+	y = 2
+	relative_position_id = SOL_deserved_humiliation
+
+	cost = 7
+	prerequisite = { focus = SOL_deserved_humiliation }
+	mutually_exclusive = { focus = SOL_establish_worker_hives }
+	available = {
+		is_subject = no
+		CHN = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+		CCN = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_keep_pets"
+		#Idea here
+		add_stability = -0.15
+	}
+}
+
+shared_focus = {
+	id = SOL_lebensraum
+	x = 0
+	y = 2
+	relative_position_id = SOL_final_insult
+
+	cost = 10
+	prerequisite = { focus = SOL_final_insult }
+	prerequisite = {
+		focus = SOL_establish_worker_hives
+		focus = SOL_keep_pets
+	}
+	available = {
+		is_subject = no
+		CHN = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+		CCN = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+		#246 = { is_owned_by = ROOT }
+		#291 = { is_owned_by = ROOT }
+		#248 = { is_owned_by = ROOT }
+		#316 = { is_owned_by = ROOT }
+		#319 = { is_owned_by = ROOT }
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_lebensraum"
+		###Event of some pony settlers and some Militarium troops marching into one of the larger changeling hives in the southern reaches and beginning to go on a purge and expelling of changelings, since it is their land that they are taking, according to them
+	}
 }
 
 shared_focus = {
@@ -3285,7 +3542,7 @@ shared_focus = {
 		}
 	}
 	relative_position_id = SOL_reconquer_stg
-	x = -4
+	x = -5
 	y = 2
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_conquer_ole"
@@ -3295,6 +3552,161 @@ shared_focus = {
 		}
 	}
 	search_filters = { FOCUS_FILTER_ANNEXATION }
+}
+
+shared_focus = {
+	id = SOL_deer_shipwrights
+	x = -2
+	y = 1
+	relative_position_id = SOL_conquer_ole
+
+	cost = 5
+	prerequisite = { focus = SOL_conquer_ole }
+	available = {
+		is_subject = no
+		NOT = { country_exists = OLE }
+		any_state = {
+			is_core_of = OLE
+			is_owned_by = ROOT
+			is_coastal = yes
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_deer_shipwrights"
+		#Idea here
+	}
+	ai_will_do = { factor = 40 }
+}
+
+shared_focus = {
+	id = SOL_reclaim_seaddle
+	x = 0
+	y = 1
+	relative_position_id = SOL_conquer_ole
+
+	cost = 5
+	prerequisite = { focus = SOL_conquer_ole }
+	available = {
+		is_subject = no
+		OLE = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_reclaim_seaddle"
+		###Event of a number of deer trying to chase off some ponies who come to kick them out of their homes or the like, or a fight against installing a pony governor, as the Empire seeks to reclaim Seaddle after it was lost to the vikings hundreds of years ago, which makes the deer even more ticked off
+		224 = { add_core_of = ROOT }
+		add_stability = 0.1
+	}
+	ai_will_do = { factor = 70 }
+}
+
+shared_focus = {
+	id = SOL_yoink_more_land
+	x = 1
+	y = 1
+	relative_position_id = SOL_reclaim_seaddle
+
+	cost = 6
+	prerequisite = { focus = SOL_reclaim_seaddle }
+	available = {
+		is_subject = no
+		#296 = { is_owned_by = ROOT }
+		#218 = { is_owned_by = ROOT }
+		#219 = { is_owned_by = ROOT }
+		#216 = { is_owned_by = ROOT }
+		#217 = { is_owned_by = ROOT }
+		#69 = { is_owned_by = ROOT }
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_yoink_more_land"
+		###Event of some ponies dealing with a domestic deer issue, since they are now in direct control of the laws there, and they put it down rather harshly, since they are told they need to become like ponies to keep their right to the land, which irritates the deer
+	}
+	ai_will_do = { factor = 40 }
+}
+
+shared_focus = {
+	id = SOL_tap_into_forests
+	x = 3
+	y = 2
+	relative_position_id = SOL_conquer_ole
+
+	cost = 6
+	prerequisite = { focus = SOL_conquer_ole }
+	available = {
+		is_subject = no
+		OLE = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_tap_into_forests"
+		189 = {
+			add_resource = {
+				type = oil
+				amount = 12
+			}
+		}
+		210 = {
+			add_resource = {
+				type = oil
+				amount = 8
+			}
+		}
+		215 = {
+			add_resource = {
+				type = tungsten
+				amount = 10
+			}
+		}
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_figurehead_monarch
+	x = 1
+	y = 2
+	relative_position_id = SOL_deer_shipwrights
+
+	cost = 7
+	prerequisite = { focus = SOL_deer_shipwrights }
+	prerequisite = { focus = SOL_reclaim_seaddle }
+	mutually_exclusive = { focus = SOL_destroy_deer_monarchy }
+	available = {
+		is_subject = no
+		#76 = { is_owned_by = ROOT }
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_figurehead_monarch"
+		###Event of Daybreaker of meeting with a bound Velvet to let her know that her lucky day has arrived, and that she will be set free, so long as she does exactly what Daybreaker wants, as she will be the figurehead of the Empire to the deer, so they can stay in line; and she will make sure that it happens, since she will have a garrison stationed in Hjortland at all times, and Velvet sees no way she can resist
+	}
+	ai_will_do = { factor = 60 }
+}
+
+shared_focus = {
+	id = SOL_destroy_deer_monarchy
+	x = 0
+	y = 1
+	relative_position_id = SOL_tap_into_forests
+
+	cost = 10
+	prerequisite = { focus = SOL_tap_into_forests }
+	mutually_exclusive = { focus = SOL_figurehead_monarch }
+	available = {
+		is_subject = no
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_destroy_deer_monarchy"
+		###Event of Velvet living her new normal life, as a simple deer in Hjortland, and she has a rather drab job in the pony administration to help with some of the transitions, and it pains her to no end to see how her great nation has fallen under the iron hoof of Daybreaker
+	}
+	ai_will_do = { factor = 80 }
 }
 
 shared_focus = {
@@ -3361,6 +3773,180 @@ shared_focus = {
 }
 
 shared_focus = {
+	id = SOL_expand_reach
+	x = 0
+	y = 1
+	relative_position_id = SOL_conquer_grf
+
+	cost = 8
+	prerequisite = { focus = SOL_conquer_grf }
+	mutually_exclusive = { focus = SOL_industrial_heartland }
+	available = {
+		GRF = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+		GFF = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_expand_reach"
+		#Effect here
+	}
+	ai_will_do = { factor = 70 }
+}
+
+shared_focus = {
+	id = SOL_delve_shelves
+	x = 0
+	y = 1
+	relative_position_id = SOL_expand_reach
+
+	cost = 7
+	prerequisite = { focus = SOL_expand_reach }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_delve_shelves"
+		243 = {
+			add_resource = {
+				type = oil
+				amount = 15
+			}
+		}
+		288 = {
+			add_resource = {
+				type = oil
+				amount = 20
+			}
+		}
+	}
+	ai_will_do = { factor = 60 }
+}
+
+shared_focus = {
+	id = SOL_northern_armory
+	x = 0
+	y = 2
+	relative_position_id = SOL_delve_shelves
+
+	cost = 7
+	prerequisite = { focus = SOL_delve_shelves }
+	mutually_exclusive = { focus = SOL_bases_under_ice }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_delve_shelves"
+		243 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = air_base
+				level = 4
+				instant_build = yes
+			}
+		}
+		329 = {
+			add_building_construction = {
+				type = air_base
+				level = 1
+				instant_build = yes
+			}
+		}
+		242 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = air_base
+				level = 2
+				instant_build = yes
+			}
+		}
+		239 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = air_base
+				level = 3
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = { factor = 80 }
+}
+
+shared_focus = {
+	id = SOL_island_vacation
+	x = 0
+	y = 2
+	relative_position_id = SOL_conquer_drg
+
+	cost = 5
+	prerequisite = { focus = SOL_conquer_drg }
+	available = {
+		is_subject = no
+	}
+	bypass = {
+		NOT = {
+			OR = {
+				country_exists = PCB
+				has_war_with = ROOT
+				is_subject_of = ROOT
+			}
+		}
+	}
+	will_lead_to_war_with = PCB
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_island_vacation"
+		if = {
+			limit = {
+				country_exists = PCB
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = PCB
+			}
+		}
+	}
+	ai_will_do = { factor = 30 }
+}
+
+shared_focus = {
+	id = SOL_resort_of_sun
+	x = 0
+	y = 2
+	relative_position_id = SOL_island_vacation
+
+	cost = 7
+	prerequisite = { focus = SOL_island_vacation }
+	mutually_exclusive = { focus = SOL_beasts_burden }
+	available = {
+		is_subject = no
+		PCB = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_resort_of_sun"
+		###Event of Daybreaker on a bit of a vacation from the war, although she is still doing some government stuff or the like, and she finds the entire thing quite relaxing, especially as she uses the sun as her personal sunbathing device, which is making the country overly hot, to the point of harming other ponies
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
 	id = SOL_conquer_yak
 	icon = GFX_goal_solar_attack_yak
 	prerequisite = {
@@ -3417,6 +4003,32 @@ shared_focus = {
 		}
 	}
 	search_filters = { FOCUS_FILTER_ANNEXATION }
+}
+
+shared_focus = {
+	id = SOL_beasts_burden
+	x = -1
+	y = 2
+	relative_position_id = SOL_conquer_yak
+
+	cost = 7
+	prerequisite = { focus = SOL_conquer_yak }
+	mutually_exclusive = { focus = SOL_resort_of_sun }
+	available = {
+		is_subject = no
+		YAK = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+		JAK = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_beasts_burden"
+		###Rutherford is forced with the rest of his yak brethren to start serving in the factories for the Solar Empire, as they are seen as little more than backwards and uncouth, and he tries to smash one of his overseers, but it soon gets retribution from the rest in charge
+	}
+	ai_will_do = { factor = 70 }
 }
 
 shared_focus = {
@@ -3479,69 +4091,93 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = SOL_attack_bat
-	icon = GFX_goal_SOL_batnation
-	prerequisite = {
-		focus = SOL_conquer_chn
-	}
-	prerequisite = {
-		focus = SOL_conquer_ole
-	}
-	prerequisite = {
-		focus = SOL_conquer_north
-	}
-	prerequisite = {
-		focus = SOL_conquer_yak
-	}
-	prerequisite = {
-		focus = SOL_conquer_drg
-	}
-	prerequisite = {
-		focus = SOL_conquer_grf
-	}
+	id = SOL_bases_under_ice
+	x = 1
+	y = 2
+	relative_position_id = SOL_conquer_north
+
+	cost = 6
+	prerequisite = { focus = SOL_conquer_north }
+	mutually_exclusive = { focus = SOL_northern_armory }
 	available = {
-		is_subject = no
-	}
-	bypass = {
-		BAT = {
-			OR = {
-				exists = no
-				is_subject_of = ROOT
-				has_war_with = ROOT
-			}
+		PNG = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+		PLB = {
+			all_cores_owned_by_ROOT_or_subject = yes
 		}
 	}
-	will_lead_to_war_with = BAT
-	#bypass = { }
-	cost = 10
-	ai_will_do = {
-		factor = 35
-	}
-	relative_position_id = SOL_She_Who_Raises_the_Sun
-	x = -2
-	y = 10
+
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_attack_bat"
-		if = {
-			limit = {
-				country_exists = BAT
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_conquer_north"
+		325 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = dockyard
+				level = 2
+				instant_build = yes
 			}
-			create_wargoal = {
-				type = annex_everything
-				target = BAT
+			add_building_construction = {
+				type = naval_base
+				level = 3
+				instant_build = yes
+				province = 13115
+			}
+			add_building_construction = {
+				type = naval_base
+				level = 2
+				instant_build = yes
+				province = 12801
+			}
+		}
+		62 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = dockyard
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = naval_base
+				level = 2
+				instant_build = yes
+				province = 13094
+			}
+		}
+		272 = {
+			add_building_construction = {
+				type = naval_base
+				level = 1
+				instant_build = yes
+				province = 7543
+			}
+		}
+		290 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = dockyard
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = naval_base
+				level = 2
+				province = 1831
 			}
 		}
 	}
-	search_filters = { FOCUS_FILTER_ANNEXATION }
+	ai_will_do = { factor = 60 }
 }
 
 shared_focus = {
 	id = SOL_conquer_GRI
 	icon = GFX_goal_solar_attack_griffonia
-	prerequisite = {
-		focus = SOL_core_stg
-		focus = SOL_core_cry
-	}
+	prerequisite = { focus = SOL_conquer_chn }
+	prerequisite = { focus = SOL_conquer_drg }
+	prerequisite = { focus = SOL_conquer_ole }
+	prerequisite = { focus = SOL_conquer_grf }
+	prerequisite = { focus = SOL_conquer_north }
+	prerequisite = { focus = SOL_conquer_yak }
 	available = {
 		is_subject = no
 	}
@@ -3563,7 +4199,7 @@ shared_focus = {
 		}
 	}
 	will_lead_to_war_with = GRI
-	cost = 15
+	cost = 10
 	ai_will_do = {
 		factor = 10
 		modifier = {
@@ -3572,8 +4208,8 @@ shared_focus = {
 		}
 	}
 	relative_position_id = SOL_She_Who_Raises_the_Sun
-	x = 2
-	y = 10
+	x = 0
+	y = 9
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_conquer_GRI"
 		if = {
@@ -3581,7 +4217,7 @@ shared_focus = {
 				country_exists = GRD
 			}
 			create_wargoal = {
-				type = puppet_wargoal_focus
+				type = annex_everything
 				target = GRD
 			}
 		}
@@ -3590,7 +4226,7 @@ shared_focus = {
 				owner = {
 					ROOT = {
 						create_wargoal = {
-							type = puppet_wargoal_focus
+							type = annex_everything
 							target = PREV
 						}
 					}
@@ -3598,6 +4234,1226 @@ shared_focus = {
 			}
 		}
 	}
+}
+
+shared_focus = {
+	id = SOL_wayward_foals
+	x = -9
+	y = 3
+	relative_position_id = SOL_conquer_GRI
+
+	cost = 5
+	prerequisite = { focus = SOL_conquer_GRI }
+	available = {
+		is_subject = no
+	}
+	bypass = {
+		RIV = {
+			OR = {
+				exists = no
+				is_subject_of = ROOT
+				has_war_with = ROOT
+			}
+		}
+	}
+	will_lead_to_war_with = RIV
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_wayward_foals"
+		if = {
+			limit = { country_exists = RIV }
+			create_wargoal = {
+				target = RIV
+				type = annex_everything
+			}
+		}
+	}
+	ai_will_do = { factor = 35 }
+}
+
+shared_focus = {
+	id = SOL_imperial_art_project
+	x = 0
+	y = 1
+	relative_position_id = SOL_wayward_foals
+
+	cost = 5
+	prerequisite = { focus = SOL_wayward_foals }
+	available = {
+		RIV = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_imperial_art_project"
+		#Effect here
+	}
+	ai_will_do = { factor = 30 }
+}
+
+shared_focus = {
+	id = SOL_harmonys_last_gasp
+	x = 2
+	y = 1
+	relative_position_id = SOL_wayward_foals
+
+	cost = 5
+	prerequisite = { focus = SOL_wayward_foals }
+	available = {
+		RIV = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_harmonys_last_gasp"
+		###Event of a fwe RIV members and River Swirl attempting to flee the country, to try and find someplace safe in which they can carry on the mission of RIV, but they are soon captured by the military, who hold them for anti-Order activities, and to be used as a display for the rest of RIV
+	}
+	ai_will_do = { factor = 40 }
+}
+
+shared_focus = {
+	id = SOL_integrate_CHS
+	x = -2
+	y = 2
+	relative_position_id = SOL_wayward_foals
+
+	cost = 5
+	prerequisite = { focus = SOL_wayward_foals }
+	available = {
+		RIV = { all_cores_owned_by_ROOT_or_subject = yes }
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_integrate_CHS"
+		#Idea here
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_doghouse
+	x = -1
+	y = 2
+	relative_position_id = SOL_imperial_art_project
+
+	cost = 5
+	prerequisite = { focus = SOL_imperial_art_project }
+	mutually_exclusive = { focus = SOL_mountain_treasure }
+	available = {
+		DMT = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_doghouse"
+		#Effect here
+		###Maybe event of Daybreaker having a bit of a session with trying to break the DMT leader, either the father or the daughter, and somewhat enjoying it for their inferiority and the trouble diamond dogs have caused elsewhere in the world
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_land_of_rising_sun
+	x = -1
+	y = 1
+	relative_position_id = SOL_harmonys_last_gasp
+
+	cost = 5
+	prerequisite = { focus = SOL_imperial_art_project }
+	prerequisite = { focus = SOL_harmonys_last_gasp }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_land_of_rising_sun"
+		#Idea here
+	}
+	ai_will_do = { factor = 60 }
+}
+
+shared_focus = {
+	id = SOL_mountain_treasure
+	x = 0
+	y = 1
+	relative_position_id = SOL_land_of_rising_sun
+
+	cost = 5
+	prerequisite = { focus = SOL_land_of_rising_sun }
+	available = {
+		DMT = { all_cores_owned_by_ROOT_or_subject = yes }
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_mountain_treasure"
+		###Event of an Imperial overseer making sure that the diamond dogs are doing all they can to dig out as many resources as possible to continue to feed the Imperial war machine now and forevermore, and is overly harsh to his subjects
+	}
+	ai_will_do = { factor = 60 }
+}
+
+shared_focus = {
+	id = SOL_eastern_brethren
+	x = 2
+	y = 2
+	relative_position_id = SOL_harmonys_last_gasp
+
+	cost = 6
+	prerequisite = { focus = SOL_harmonys_last_gasp }
+	mutually_exclusive = { focus = SOL_continue_research }
+	available = {
+		RIV = { all_cores_owned_by_ROOT_or_subject = yes }
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_eastern_brethren"
+		#Effect here
+	}
+	ai_will_do = { factor = 100 }
+}
+
+shared_focus = {
+	id = SOL_last_scatterings
+	x = -7
+	y = 1
+	relative_position_id = SOL_conquer_GRI
+
+	cost = 5
+	prerequisite = { focus = SOL_conquer_GRI }
+	available = { is_subject = no }
+	bypass = {
+		FBK = {
+			OR = {
+				exists = no
+				is_subject_of = ROOT
+				has_war_with = ROOT
+			}
+		}
+		FIR = {
+			OR = {
+				exists = no
+				is_subject_of = ROOT
+				has_war_with = ROOT
+			}
+		}
+		WAT = {
+			OR = {
+				exists = no
+				is_subject_of = ROOT
+				has_war_with = ROOT
+			}
+		}
+		NTR = {
+			OR = {
+				exists = no
+				is_subject_of = ROOT
+				has_war_with = ROOT
+			}
+		}
+	}
+	will_lead_to_war_with = FBK
+	will_lead_to_war_with = FIR
+	will_lead_to_war_with = WAT
+	will_lead_to_war_with = NTR
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_last_scatterings"
+		if = {
+			limit = { country_exists = FBK }
+			create_wargoal = {
+				type = annex_everything
+				target = FBK
+			}
+		}
+		if = {
+			limit = { country_exists = FIR }
+			create_wargoal = {
+				type = annex_everything
+				target = FIR
+			}
+		}
+		if = {
+			limit = { country_exists = WAT }
+			create_wargoal = {
+				type = annex_everything
+				target = WAT
+			}
+		}
+		if = {
+			limit = { country_exists = NTR }
+			create_wargoal = {
+				type = annex_everything
+				target = NTR
+			}
+		}
+	}
+	ai_will_do = { factor = 30 }
+}
+
+shared_focus = {
+	id = SOL_misguided_solarists
+	x = -5
+	y = 1
+	relative_position_id = SOL_conquer_GRI
+
+	cost = 5
+	prerequisite = { focus = SOL_conquer_GRI }
+	available = { is_subject = no }
+	bypass = {
+		MGY = {
+			OR = {
+				exists = no
+				is_subject_of = ROOT
+				has_war_with = ROOT\
+			}
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_misguided_solarists"
+		if = {
+			limit = { country_exists = MGY }
+			create_wargoal = {
+				type = annex_everything
+				target = MGY
+			}
+		}
+	}
+	ai_will_do = { factor = 35 }
+}
+
+shared_focus = {
+	id = SOL_second_coming
+	x = 1
+	y = 1
+	relative_position_id = SOL_misguided_solarists
+
+	cost = 5
+	prerequisite = { focus = SOL_misguided_solarists }
+	available = {
+		MGY = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_second_coming"
+		###Daybreaker visits the ancient town of Somnambula, where the oldest pyramid of them all is, not the Sphynx one, though, and proclaims that everypony should bow to her, as she is the Dawn Star, the second coming of an ancient Maregyptian deity (just a corruption of Celestia), and she uses her power of raising the sun and her magic to intimidate them all as word spreads of this supposed second coming
+		###The tale of the Dawn Star is a corruption of Celestia and Luna helping the ancient Maregyptians with ridding themselves of various Egyptian legendary creatures, which earned them worship, although at the time they both tried to dissuade it
+	}
+	ai_will_do = { factor = 80 }
+}
+
+shared_focus = {
+	id = SOL_imperial_province_solaria
+	x = -2
+	y = 2
+	relative_position_id = SOL_misguided_solarists
+
+	cost = 8
+	prerequisite = { focus = SOL_misguided_solarists }
+	mutually_exclusive = { focus = SOL_ports_of_zebrica }
+	available = {
+		MGY = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_misguided_solarists"
+		#Effect here
+	}
+	ai_will_do = { factor = 40 }
+}
+
+shared_focus = {
+	id = SOL_ports_of_zebrica
+	x = 0
+	y = 2
+	relative_position_id = SOL_misguided_solarists
+
+	cost = 5
+	prerequisite = { focus = SOL_misguided_solarists }
+	mutually_exclusive = { focus = SOL_imperial_province_solaria }
+	available = {
+		MGY = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_ports_of_zebrica"
+		#Effect here
+	}
+	ai_will_do = { factor = 60 }
+}
+
+shared_focus = {
+	id = SOL_lost_southern_souls
+	x = 2
+	y = 1
+	relative_position_id = SOL_ports_of_zebrica
+
+	cost = 5
+	prerequisite = {
+		focus = SOL_imperial_province_solaria
+		focus = SOL_ports_of_zebrica
+	}
+	available = {
+		is_subject = no
+	}
+	bypass = {
+		MTO = {
+			OR = {
+				exists = no
+				is_subject_of = ROOT
+				has_war_with = ROOT
+			}
+		}
+		AES = {
+			OR = {
+				exists = no
+				is_subject_of = ROOT
+				has_war_with = ROOT
+			}
+		}
+		KAR = {
+			OR = {
+				exists = no
+				is_subject_of = ROOT
+				has_war_with = ROOT
+			}
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_lost_southern_souls"
+		if = {
+			limit = { country_exists = MTO }
+			create_wargoal = {
+				target = MTO
+				type = annex_everything
+			}
+		}
+		if = {
+			limit = { country_exists = AES }
+			create_wargoal = {
+				target = AES
+				type = annex_everything
+			}
+		}
+		if = {
+			limit = { country_exists = KAR }
+			create_wargoal = {
+				target = KAR
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_civilize_backwaters
+	x = 0
+	y = 1
+	relative_position_id = SOL_lost_southern_souls
+
+	cost = 5
+	prerequisite = { focus = SOL_lost_southern_souls }
+	mutually_exclusive = { focus = SOL_imperial_breadbasket }
+	available = {
+		MTO = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+		AES = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+		KAR = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_civilize_backwaters"
+		#Effect here
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_imperial_breadbasket
+	x = 2
+	y = 1
+	relative_position_id = SOL_lost_southern_souls
+
+	cost = 5
+	prerequisite = { focus = SOL_lost_southern_souls }
+	mutually_exclusive = { focus = SOL_civilize_backwaters }
+	available = {
+		MTO = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+		AES = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+		KAR = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_imperial_breadbasket"
+		#Idea here
+	}
+	ai_will_do = { factor = 70 }
+}
+
+shared_focus = {
+	id = SOL_imperial_guidance
+	x = -1
+	y = 1
+	relative_position_id = SOL_conquer_GRI
+
+	cost = 6
+	prerequisite = { focus = SOL_conquer_GRI }
+	available = {
+		is_subject = no
+		GRD = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_imperial_guidance"
+		###Daybreaker goes through Griffenheim, and she is clearly despised by every single griffon that she sees, but she doesn't care, as she meets the council of nobles in the city, to state that the Griffoniches Reich will forever be a client state of the Solar Empire, as they will ensure that GRI has a proper reverence to her, and that it would be best to comply
+	}
+	ai_will_do = { factor = 75 }
+}
+
+shared_focus = {
+	id = SOL_military_exchange
+	x = -1
+	y = 1
+	relative_position_id = SOL_imperial_guidance
+
+	cost = 5
+	prerequisite = { focus = SOL_imperial_guidance }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_military_exchange"
+		#Idea here
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_lost_colony
+	x = 0
+	y = 2
+	relative_position_id = SOL_conquer_GRI
+
+	cost = 7
+	prerequisite = { focus = SOL_conquer_GRI }
+	available = {
+		is_subject = no
+	}
+	bypass = {
+		EQC = {
+			exists = no
+			is_subject_of = ROOT
+			has_war_with = ROOT
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_lost_colony"
+		create_wargoal = {
+			target = EQC
+			type = puppet_wargoal_focus
+		}
+	}
+	ai_will_do = { factor = 70 }
+}
+
+shared_focus = {
+	id = SOL_economic_opportunity
+	x = -1
+	y = 1
+	relative_position_id = SOL_lost_colony
+
+	cost = 6
+	prerequisite = { focus = SOL_lost_colony }
+	mutually_exclusive = { focus = SOL_world_station }
+	available = {
+		EQC = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_economic_opportunity"
+		###Event of number of megacorps moving their headquarters to the lands of EQC, since they have found multiple ways to abuse the tax code to make more money, so that they do not have to give back as much to Daybreaker, since they still chafe under her
+	}
+	ai_will_do = { factor = 40 }
+}
+
+shared_focus = {
+	id = SOL_world_station
+	x = 1
+	y = 1
+	relative_position_id = SOL_lost_colony
+
+	cost = 6
+	prerequisite = { focus = SOL_lost_colony }
+	mutually_exclusive = { focus = SOL_economic_opportunity }
+	available = {
+		EQC = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_world_station"
+		###Event of some sailors finally getting shore leave and causing a bit of havoc on the mainland of EQC, probably as some kind of report, or of the CO of the sailors coming in to get them out of lockup
+	}
+	ai_will_do = { factor =  50 }
+}
+
+shared_focus = {
+	id = SOL_educate_kaiser
+	x = 1
+	y = 1
+	relative_position_id = SOL_conquer_GRI
+
+	cost = 8
+	prerequisite = { focus = SOL_conquer_GRI }
+	mutually_exclusive = { focus = SOL_last_grover }
+	available = {
+		is_subject = no
+		GRD = {
+			all_cores_owned_by_ROOT_or_subject = yes
+			NOT = { has_country_leader = { character = GRI_emperor_grover_vi ruling_only = yes } }
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_educate_kaiser"
+		###Event of Daybreaker walking into Grover VI's bed chambers, as he by now is a teen at least, and she speaks with him that she will now lead as the regent of GRI, and she will educate him in the proper teaching of being an emperor, and that she will also make sure he learns his place, which intimidates him (he will ask where the current regent is, and Daybreaker will say they're "indisposed"), although he tries to stand up against her and remain strong, which she promises will be broken
+		###Will allow for him to be eventually made Kaiser like for either normal regents
+		if = {
+			limit = {
+				GRD = { NOT = { tag = GRI } }
+				random_country = {
+					limit = {
+						has_character = GRI_daybreaker
+					}
+					GRI_daybreaker = {
+						set_nationality = GRD
+					}
+				}
+			}
+		}
+		GRD = {
+			if = {
+				limit = { NOT = { has_government = fascism } }
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+				}
+			}
+			if = {
+				limit = { ROOT = { has_completed_focus = SOL_god_empress } }
+				GRI_daybreaker = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = falangism
+							expire = "1965.1.1"
+							traits = { aussenseiter_regentin }
+						}
+					}
+				}
+				set_party_name = {
+					ideology = fascism
+					name = EQS_solaris_cultus
+					long_name = EQS_solaris_cultus
+				}
+			}
+			else = {
+				GRI_daybreaker = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = nazism
+							expire = "1965.1.1"
+							traits = { aussenseiter_regentin }
+						}
+					}
+				}
+				set_party_name = {
+					ideology = fascism
+					name = EQS_fascism_party
+					long_name = EQS_fascism_party
+				}
+			}
+		}
+	}
+	ai_will_do = { factor = 70 }
+}
+
+shared_focus = {
+	id = SOL_last_grover
+	x = 3
+	y = 1
+	relative_position_id = SOL_conquer_GRI
+
+	cost = 5
+	prerequisite = { focus = SOL_conquer_GRI }
+	mutually_exclusive = { focus = SOL_educate_kaiser }
+	available = {
+		is_subject = no
+		GRD = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+		389 = {
+			owner = {
+				OR = {
+					tag = ROOT
+					is_subject_of = ROOT
+				}
+			}
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_last_grover"
+		###Daybreaker marches into the palace in Griffonstone, where the current regent, a representative from Griffonstone, and Grover VI are all waiting for her, and it is a clearly forced display, as there are only a few nobles here and there, and they all look furious, and after a short speech about how she will lead better than a bird ever could, she has Grover and the regent acknowledge their abdication, and passing the throne to her, and she is crowned with Grover's crown, which earns cries of despair
+		###Will anger every other griffon nation that still exists on Griffonia
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_almost_pony
+	x = 5
+	y = 1
+	relative_position_id = SOL_conquer_GRI
+
+	cost = 5
+	prerequisite = { focus = SOL_conquer_GRI }
+	available = { is_subject = no }
+	bypass = {
+		EMR = {
+			OR = {
+				exists = no
+				is_subject_of = ROOT
+				has_war_with = ROOT
+			}
+		}
+		SDF = {
+			OR = {
+				exists = no
+				is_subject_of = ROOT
+				has_war_with = ROOT
+			}
+		}
+		SDS = {
+			OR = {
+				exists = no
+				is_subject_of = ROOT
+				has_war_with = ROOT
+			}
+		}
+		SDC = {
+			OR = {
+				exists = no
+				is_subject_of = ROOT
+				has_war_with = ROOT
+			}
+		}
+		SDL = {
+			OR = {
+				exists = no
+				is_subject_of = ROOT
+				has_war_with = ROOT
+			}
+		}
+		YMN = {
+			OR = {
+				exists = no
+				is_subject_of = ROOT
+				has_war_with = ROOT
+			}
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_almost_pony"
+		if = {
+			limit = { country_exists = EMR }
+			create_wargoal = {
+				target = EMR
+				type = annex_everything
+			}
+		}
+		if = {
+			limit = { country_exists = SDL }
+			create_wargoal = {
+				target = SDL
+				type = annex_everything
+			}
+		}
+		if = {
+			limit = { country_exists = SDS }
+			create_wargoal = {
+				target = SDS
+				type = annex_everything
+			}
+		}
+		if = {
+			limit = { country_exists = SDC }
+			create_wargoal = {
+				target = SDC
+				type = annex_everything
+			}
+		}
+		if = {
+			limit = { country_exists = SDF }
+			create_wargoal = {
+				target = SDF
+				type = annex_everything
+			}
+		}
+		if = {
+			limit = { country_exists = YMN }
+			create_wargoal = {
+				target = YMN
+				type = annex_everything
+			}
+		}
+	}
+	ai_will_do = { factor = 30 }
+}
+
+shared_focus = {
+	id = SOL_decadence_shattered
+	x = 0
+	y = 1
+	relative_position_id = SOL_almost_pony
+
+	cost = 5
+	prerequisite = { focus = SOL_almost_pony }
+	available = {
+		SDL = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+		SDC = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+		SDF = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+		SDS = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+		EMR = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_decadence_shattered"
+		###Event of Daybreaker meeting with the prince of Saddle Arabia, who is a bit of a nervous wreck after being held for so long by the civil war, and she acts condescending that he can rule again, but he'll have to do what she wants, and will have to cut out most of the spending, since she wants an actually useful puppet, which he barely agrees to, since he would rather live
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_gold_of_sands
+	x = -2
+	y = 1
+	relative_position_id = SOL_decadence_shattered
+
+	cost = 5
+	prerequisite = { focus = SOL_decadence_shattered }
+	available = {
+		SDL = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_gold_of_sands"
+		826 = {
+			add_resource = {
+				type = oil
+				amount = 30
+			}
+		}
+		845 = {
+			add_resource = {
+				type = oil
+				amount = 10
+			}
+		}
+		861 = {
+			add_resource = {
+				type = oil
+				amount = 15
+			}
+		}
+		870 = {
+			add_resource = {
+				type = oil
+				amount = 25
+			}
+		}
+		847 = {
+			add_resource = {
+				type = oil
+				amount = 20
+			}
+		}
+	}
+	ai_will_do = { factor = 70 }
+}
+
+shared_focus = {
+	id = SOL_eastern_calipha
+	x = 2
+	y = 1
+	relative_position_id = SOL_decadence_shattered
+
+	cost = 6
+	prerequisite = { focus = SOL_decadence_shattered }
+	available = {
+		YMN = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_eastern_calipha"
+		###Daybreaker takes to the airwaves from Yemane, where she has pronounced herself the new calipha of one of the old religions of the Saddle Arabian area, and that she will inflict hamr upon those who defy her, as she is the sun itself to guide them, and otherwise promises their doom if they do not obey
+	}
+	ai_will_do = { factor = 40 }
+}
+
+shared_focus = {
+	id = SOL_mutant_lake
+	x = 0
+	y = 1
+	relative_position_id = SOL_gold_of_sands
+
+	cost = 5
+	prerequisite = { focus = SOL_gold_of_sands }
+	available = {
+		is_subject = no
+	}
+	bypass = {
+		REE = {
+			OR = {
+				exists = no
+				is_subject_of = ROOT
+				has_war_with = ROOT
+			}
+		}
+		HMR = {
+			OR = {
+				exists = no
+				is_subject_of = ROOT
+				has_war_with = ROOT
+			}
+		}
+		OSQ = {
+			OR = {
+				exists = no
+				is_subject_of = ROOT
+				has_war_with = ROOT
+			}
+		}
+		MTA = {
+			OR = {
+				exists = no
+				is_subject_of = ROOT
+				has_war_with = ROOT
+			}
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_mutant_lake"
+		if = {
+			limit = { country_exists = REE }
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = REE
+			}
+		}
+		if = {
+			limit = { country_exists = HMR }
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = HMR
+			}
+		}
+		if = {
+			limit = { country_exists = OSQ }
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = OSQ
+			}
+		}
+		if = {
+			limit = { country_exists = MTA }
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = MTA
+			}
+		}
+	}
+	ai_will_do = { factor = 30 }
+}
+
+shared_focus = {
+	id = SOL_magic_hit_squads
+	x = -2
+	y = 1
+	relative_position_id = SOL_mutant_lake
+
+	cost = 9
+	prerequisite = { focus = SOL_mutant_lake }
+	mutually_exclusive = { focus = SOL_raid_archives }
+	available = {
+		REE = { all_cores_owned_by_ROOT_or_subject = yes }
+		OSQ = { all_cores_owned_by_ROOT_or_subject = yes }
+		HMR = { all_cores_owned_by_ROOT_or_subject = yes }
+		MTA = { all_cores_owned_by_ROOT_or_subject = yes }
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_magic_hit_squads"
+		###Event of somepony who has wronged Daybreaker, or perhaps one more rebel, is trying to run away after he had been almost killed by the hit squad, until he is stopped hwne some appear in a teleportation spell, and they let him have his last words as they use fire magic to consume him entirely
+	}
+	ai_will_do = { factor = 40 }
+}
+
+shared_focus = {
+	id = SOL_raid_archives
+	x = 0
+	y = 1
+	relative_position_id = SOL_mutant_lake
+
+	cost = 9
+	prerequisite = { focus = SOL_mutant_lake }
+	mutually_exclusive = { focus = SOL_magic_hit_squads }
+	available = {
+		REE = { all_cores_owned_by_ROOT_or_subject = yes }
+		OSQ = { all_cores_owned_by_ROOT_or_subject = yes }
+		HMR = { all_cores_owned_by_ROOT_or_subject = yes }
+		MTA = { all_cores_owned_by_ROOT_or_subject = yes }
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_raid_archives"
+		###Event of Daybreaker leading an army to attack The Cave, where the artifacts of Maretonia are kept, and she gets into combat with the MTA leader, who is their most powerful mage, and she gets into a proper challenge with him, and almost loses out, aside from her playing dirty to get in, and she ultimately wins, and mocks him as he perishes
+	}
+	ai_will_do = { factor = 100 }
+}
+
+shared_focus = {
+	id = SOL_attack_bat
+	icon = GFX_goal_SOL_batnation
+	prerequisite = { focus = SOL_conquer_GRI }
+	available = {
+		is_subject = no
+	}
+	bypass = {
+		BAT = {
+			OR = {
+				exists = no
+				is_subject_of = ROOT
+				has_war_with = ROOT
+			}
+		}
+	}
+	will_lead_to_war_with = BAT
+	cost = 10
+	ai_will_do = {
+		factor = 35
+	}
+	relative_position_id = SOL_conquer_GRI
+	x = 9
+	y = 3
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_attack_bat"
+		if = {
+			limit = {
+				country_exists = BAT
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = BAT
+			}
+		}
+	}
+	search_filters = { FOCUS_FILTER_ANNEXATION }
+}
+
+shared_focus = {
+	id = SOL_natural_state
+	x = -2
+	y = 1
+	relative_position_id = SOL_attack_bat
+
+	cost = 5
+	prerequisite = { focus = SOL_attack_bat }
+	available = {
+		BAT = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_natural_state"
+		###Event of either inquisitors or just radical followers of Daybreaker going into a town of thestrals, in a night condoned by the governing body of BAT, to scare, drive out, or kill the bats of Zebrica, as lessons for them rebelling for so long against Daybreaker, which leads to extensive loss of life for the thestrals
+	}
+	ai_will_do = { factor = 60 }
+}
+
+shared_focus = {
+	id = SOL_reborn_in_fire
+	x = 2
+	y = 1
+	relative_position_id = SOL_attack_bat
+
+	cost = 5
+	prerequisite = { focus = SOL_attack_bat }
+	available = {
+		BAT = { all_cores_owned_by_ROOT_or_subject = yes }
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_reborn_in_fire"
+		###Event of a representative of Daybreaker, probably Sunrise Sparkle, leading a mass purge of the bats, starting with some of the BAT leaders, who are all defiant of her, and then by tearing down monuments and the like, which leads to large-scale destruction across BAT
+	}
+	ai_will_do = { factor = 100 }
+}
+
+shared_focus = {
+	id = SOL_no_sinner_alive
+	x = -1
+	y = 2
+	relative_position_id = SOL_attack_bat
+
+	cost = 10
+	prerequisite = { focus = SOL_attack_bat }
+	mutually_exclusive = { focus = SOL_special_treatment }
+	available = {
+		has_completed_focus = SOL_god_empress
+		BAT = { all_cores_owned_by_ROOT_or_subject = yes }
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_no_sinner_alive"
+		###Follow a soldier as he prepares to go in on one of the larger cities in BAT, as orders have come down that they will finally inflict the last of the wounds necessary to inflict total retribution on BAT, and he grows more upset and sickened as it is clearly a thestralcide, and even if he despises them, he thinks that it would be wiser to just use them than executed them all
+	}
+	ai_will_do = { factor = 30 }
+}
+
+shared_focus = {
+	id = SOL_special_treatment
+	x = 1
+	y = 2
+	relative_position_id = SOL_attack_bat
+
+	cost = 5
+	prerequisite = { focus = SOL_attack_bat }
+	available = {
+		BAT = { all_cores_owned_by_ROOT_or_subject = yes }
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_special_treatment"
+		#Effect here
+		###Maybe event speaking about how the thestrals can still be useful, and that they need to be monitored and can more easily be done so by the IIS/Solaris Speculatores, and that a client state will be erected in it to compensate for no longer having direct control
+	}
+	ai_will_do = { factor = 70 }
+}
+
+shared_focus = {
+	id = SOL_light_into_darkness
+	x = -1
+	y = 1
+	relative_position_id = SOL_no_sinner_alive
+
+	cost = 6
+	prerequisite = { focus = SOL_natural_state }
+	prerequisite = { focus = SOL_no_sinner_alive }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_light_into_darkness"
+		#Idea here
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_re_educate_foals
+	x = 1
+	y = 2
+	relative_position_id = SOL_reborn_in_fire
+
+	cost = 10
+	prerequisite = { focus = SOL_reborn_in_fire }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_re_educate_foals"
+		add_stability = -0.1
+		add_political_power = -125
+		#Advisors here
+	}
+	ai_will_do = { factor = 60 }
+}
+
+shared_focus = {
+	id = SOL_continue_research
+	x = -2
+	y = 2
+	relative_position_id = SOL_natural_state
+
+	cost = 6
+	prerequisite = { focus = SOL_natural_state }
+	mutually_exclusive = { focus = SOL_eastern_brethren }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_continue_research"
+		#Idea here
+	}
+	ai_will_do = { factor = 100 }
+}
+
+shared_focus = {
+	id = SOL_pax_solaris
+	x = 0
+	y = 7
+	relative_position_id = SOL_conquer_GRI
+
+	cost = 10
+	prerequisite = {
+		focus = SOL_eastern_brethren
+		focus = SOL_continue_research
+	}
+	available = {
+		has_completed_focus = SOL_wayward_foals
+		has_completed_focus = SOL_attack_bat
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_pax_solaris"
+		###Daybreaker finally has a day to herself, as the world is at peace at last, and she looks to a map of her empire, and how ponies from all walks of life had been made safe under her, and she believes that she has accomplished her goal, and she will lead all of ponykind into prosperity forever
+	}
+	ai_will_do = { factor = 1000 }
 }
 
 ###Military Focuses###

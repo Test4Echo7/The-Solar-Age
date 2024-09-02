@@ -2298,10 +2298,10 @@ characters={
 		name = EQS_SOL_arcane_nova
 		portraits = {
 			army = {
-				small = "GFX_idea_EQS_SOL_arcane_nova"
+				small = "gfx/interface/ideas/advisors/EQC/EQC_arcane_nova.tga"
 			}
 			civilian = {
-				large = "gfx/leaders/EQC/ArcaneNova.tga"
+				large = "gfx/leaders/EQC/ArcaneNovaNew.tga"
 			}
 		}
 
@@ -2314,7 +2314,7 @@ characters={
 			}
 			available = {
 				is_EQS_SOL = yes
-				has_completed_focus = SOL_military_reorganization
+				has_completed_focus = SOL_modernize_relic
 				NOT = {
 					any_country_with_original_tag = {
 						original_tag_to_check = EQC

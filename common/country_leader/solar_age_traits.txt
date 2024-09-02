@@ -1,0 +1,20 @@
+leader_traits = {
+    aussenseiter_regentin = {
+        random = no
+        stability_factor = -0.15
+        political_power_gain = -0.1
+        fascism_drift = 0.03
+        army_org_factor = 0.05
+        consumer_goods_factor = -0.1
+
+        ai_will_do = { factor = 1 }
+    }
+    empresss_representative = {
+        random = no
+        stability_factor = -0.05
+        monthly_population = -0.1
+        political_power_factor = 0.05
+        war_support_factor = 0.1
+        army_morale_factor = 0.03
+    }
+}

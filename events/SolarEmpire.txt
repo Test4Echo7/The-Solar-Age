@@ -2452,24 +2452,24 @@ country_event = {
 		}
 	}
 
-	option = { #Keep whoever
-		name = solarempire.35.a
-		if = {
-			limit = {
-				has_global_flag = SOL_wartime_change
-			}
-			EQC = {
-				country_event = { id = solarempire.36 days = 4 }
-			}
-		}
-		ai_chance = {
-			modifier = {
-				factor = 2
-				focus_progress = { focus = SOL_empress_protector progress > 0 }
-			}
-		}
-	}
-	option = { #Replace
+	#option = { #Keep whoever
+	#	name = solarempire.35.a
+	#	if = {
+	#		limit = {
+	#			has_global_flag = SOL_wartime_change
+	#		}
+	#		EQC = {
+	#			country_event = { id = solarempire.36 days = 4 }
+	#		}
+	#	}
+	#	ai_chance = {
+	#		modifier = {
+	#			factor = 2
+	#			focus_progress = { focus = SOL_empress_protector progress > 0 }
+	#		}
+	#	}
+	#}
+	option = { #Replace - No accep; only replac - T4E
 		name = solarempire.35.b
 		add_political_power = -100
 		EQC = {
@@ -2496,10 +2496,10 @@ country_event = {
 					promote_leader = yes
 
 					country_leader = {
-						desc = "albino_sunhorse_desc"
+						desc = "fancy_albino_sunhorse_desc"
 						expire = "1965.1.1"
 						ideology = falangism
-						traits = { }
+						traits = { empresss_representative }
 					}
 				}
 				set_party_name = { ideology = fascism long_name = EQC_SOL_fascism_party_long name = EQC_SOL_fascism_party }
@@ -2585,10 +2585,10 @@ country_event = {
 			promote_leader = yes
 
 			country_leader = {
-				desc = "albino_sunhorse_desc"
+				desc = "fancy_albino_sunhorse_desc"
 				expire = "1965.1.1"
 				ideology = falangism
-				traits = { }
+				traits = { empresss_representative }
 			}
 		}
 		set_party_name = { ideology = fascism long_name = EQC_SOL_fascism_party_long name = EQC_SOL_fascism_party }
