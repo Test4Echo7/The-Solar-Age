@@ -207,7 +207,7 @@ country_event = { #Zephyr has integrated into a STG officer corps, and decides t
     }
 }
 
-country_event = {
+country_event = { #Daybreaker marches and enters into the chambers of Grover, who believes that she has come to kill him, since he is an important griffon, and she quickly corrects him, since she has no desire to do that, and rather rear him into a better emperor than either regent could have done
     id = solarreworked.120
     title = solarreworked.120.t
     desc = solarreworked.120.d
@@ -275,6 +275,91 @@ country_event = {
 				}
 			}
 		}
+    }
+}
+
+country_event = { #Daybreaker smugly walks through Griffonstone, in a parade with griffons and ponies, as she goes toward the coronation hall, and soon usurps the crown from Grover and the regent, and declares herself the new kaiser of the griffons
+    id = solarreworked.121
+    title = solarreworked.121.t
+    desc = solarreworked.121.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.121"}
+
+    is_triggered_only = yes
+
+    option = { #Kneel for your new Empress!
+        name = solarreworked.121.a
+        if = {
+			limit = {
+				GRD = { NOT = { tag = GRI } }
+				random_country = {
+					limit = {
+						has_character = GRI_daybreaker
+					}
+					GRI_daybreaker = {
+						set_nationality = GRD
+					}
+				}
+			}
+		}
+		GRD = {
+			if = {
+				limit = { NOT = { has_government = fascism } }
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+				}
+			}
+			if = {
+				limit = { ROOT = { has_completed_focus = SOL_god_empress } }
+				GRI_daybreaker = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = falangism
+							expire = "1965.1.1"
+							traits = { die_kaiserin_der_greifen }
+						}
+					}
+				}
+				set_party_name = {
+					ideology = fascism
+					name = EQS_solaris_cultus
+					long_name = EQS_solaris_cultus
+				}
+			}
+			else = {
+				GRI_daybreaker = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = nazism
+							expire = "1965.1.1"
+							traits = { die_kaiserin_der_greifen }
+						}
+					}
+				}
+				set_party_name = {
+					ideology = fascism
+					name = EQS_fascism_party
+					long_name = EQS_fascism_party
+				}
+			}
+		}
+    }
+}
+
+country_event = { #Daybreaker has one of her first longer meetings with Grover, who is not really interested in eating, and she demands that he does, and they get into a small argument about why she is keeping him alive, before transitioning to her teaching him lessons on how to be an emperor, which starts with then and there with a test on how to pronounce judgement on criminals
+    id = solarreworked.122
+    title = solarreworked.122.t
+    desc = solarreworked.122.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.122"}
+
+    is_triggered_only = yes
+
+    option = { #Much to learn, you still have.
+        name = solarreworked.122.a
     }
 }
 
