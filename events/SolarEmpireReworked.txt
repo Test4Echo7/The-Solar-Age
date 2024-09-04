@@ -363,6 +363,21 @@ country_event = { #Daybreaker has one of her first longer meetings with Grover, 
     }
 }
 
+country_event = { #Grover is overly grumpy as he is made to have an official, annual portrait of him with his regent, which means that he is now with Daybreaker, and he is far from happy that he has to be around her, and they get into a tiny bit of a verbal spat as the photographer prepares to take a picture of them both, which they both are clearly not wanting to do
+    id = solarreworked.124
+    title = solarreworked.124.t
+    desc = solarreworked.124.d
+    picture = GFX_event_griffenheim
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.124"}
+
+    is_triggered_only = yes
+
+    option = { #There's always next year.
+        name = solarreworked.124.a
+        #Trigger following portrait a year later
+    }
+}
+
 country_event = {
     id = solarreworked.130
     title = solarreworked.130.t
