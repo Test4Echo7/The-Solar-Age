@@ -56,6 +56,11 @@ country_event = {
 		}
 		hidden_effect = {
 			modify_country_flag = { flag = celestia_evil_meter value = 12 }
+			country_event = {
+				id = solarreworked.52
+				days = 1
+				random_days = 3
+			}
 		}
 		ai_chance = {
 			factor = 5
@@ -2040,6 +2045,11 @@ country_event = { #### Buffalo Response Now
 		}
 		hidden_effect = {
 			modify_country_flag = { flag = celestia_evil_meter value = 15 }
+			country_event = {
+				id = solarreworked.52
+				days = 1
+				random_days = 3
+			}
 		}
 		ai_chance = {
 			factor = 5

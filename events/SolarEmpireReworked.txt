@@ -18,6 +18,7 @@ country_event = { #Daybreaker meets with Neighsay, whom she has summoned in orde
     }
 }
 
+###BoP###
 country_event = {
     id = solarreworked.50
     title = solarreworked.50.t
@@ -56,6 +57,63 @@ country_event = {
     }
 }
 
+country_event = { #Luna barges into Celestia's chambers demanding to know why she declared war on the Buffalo, since they are basically defenseless, and Celestia has no real answer, other than she feels like she was being controlled by somepony else, and she begins to break down, and Luna suggests that they make peace with BUF, even if it is still a stain on their global record
+    id = solarreworked.52
+    title = solarreworked.52.t
+    desc = solarreworked.52.d
+    picture = GFX_event_celestia_theme
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.52"}
+
+    is_triggered_only = yes
+
+    option = { #Yes, I must fix this.
+        name = solarreworked.52.a
+        custom_effect_tooltip = SOL_why_friends_tt
+        white_peace = BUF
+        add_political_power = -100
+        if = {
+            limit = {
+                NOT = { has_completed_focus = eqs_buffalo2 }
+                unlock_national_focus = eqs_buffalo2
+            }
+        }
+    }
+    option = { #I... cannot go against previous orders.
+        name = solarreworked.52.b
+        custom_effect_tooltip = SOL_you_idiot_tt
+        add_stability = -0.2
+        add_war_support = -0.1
+        add_popularity = {
+            ideology = fascism
+            popularity = 0.05
+        }
+        add_power_balance_value = {
+            id = EQS_sanity_bop
+            value = -0.05
+            tooltip_side = EQS_woke
+        }
+    }
+}
+
+###Internal affairs###
+country_event = { #Jet Set is completley surprised when a formation of Imperial ships comes to New Mareland, and hastily gets to the piers so that he can meet whoever the delegate is, who is Arcane Nova, and she and him have a tense confrontation before she states that she will be the one looking over him, to make sure that he is truly loyal.
+    id = solarreworked.70
+    title = solarreworked.70.t
+    desc = solarreworked.70.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.70"}
+
+    is_triggered_only = yes
+
+    option = { #I would never!
+        name = solarreworked.70.a
+        EQS = {
+            EQS_SOL_arcane_nova = { set_nationality = EQC }
+        }
+    }
+}
+
+###Flavour###
 country_event = { #Daybreaker visit's Fluttershy's family, as Zephyr Breeze has been drafted into the military, but he has been dodging it wherever he could, and after a bit of a tense meeting in the library, she basically forces him into the military, as he is an example because he's Fluttershy's brother, and she will not have herself be defied again
     id = solarreworked.100
     title = solarreworked.100.t

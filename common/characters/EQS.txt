@@ -2298,10 +2298,8 @@ characters={
 		name = EQS_SOL_arcane_nova
 		portraits = {
 			army = {
-				small = "gfx/interface/ideas/advisors/EQC/EQC_arcane_nova.tga"
-			}
-			civilian = {
 				large = "gfx/leaders/EQC/ArcaneNovaNew.tga"
+				small = "gfx/interface/ideas/advisors/EQC/EQC_arcane_nova.tga"
 			}
 		}
 
@@ -2336,6 +2334,19 @@ characters={
 			}
 
 			traits = { military_theorist }
+		}
+
+		corps_commander = {
+			traits = { pony_race_trait promising_general }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 1
+			visible = {
+				is_EQS_SOL = yes
+				has_country_flag = SOL_new_generals_flag
+			}
 		}
 		gender = female
 	}
