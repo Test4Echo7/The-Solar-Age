@@ -2327,7 +2327,15 @@ characters={
 				}
 			}
 			visible = {
-				is_EQS_SOL = yes
+				OR = {
+					is_EQS_SOL = yes
+					AND = {
+						tag = EQC
+						OVERLORD = {
+							is_EQS_SOL = yes
+						}
+					}
+				}
 			}
 			research_bonus = {
 				magical_tech = 0.05
@@ -2344,8 +2352,18 @@ characters={
 			planning_skill = 4
 			logistics_skill = 1
 			visible = {
-				is_EQS_SOL = yes
-				has_country_flag = SOL_new_generals_flag
+				OR = {
+					AND = {
+						tag = EQC
+						OVERLORD = {
+							is_EQS_SOL = yes
+						}
+					}
+					AND = {
+						is_EQS_SOL = yes
+						has_country_flag = SOL_new_generals_flag
+					}
+				}
 			}
 		}
 		gender = female
