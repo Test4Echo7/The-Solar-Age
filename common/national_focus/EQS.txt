@@ -1074,11 +1074,11 @@ shared_focus = {
 	bypass = {
 		hidden_trigger = { is_EQS_SOL = yes }
 	}
-	allow_branch = { is_EQS_SOL = no }
+	#allow_branch = { is_EQS_SOL = no }
 	x = 24
 	y = 0
 	offset = {
-		x = -29
+		x = -31
 		y = -1
 		trigger = { is_EQS_SOL = yes }
 	}
@@ -1121,6 +1121,7 @@ shared_focus = {
 	prerequisite = {
 		focus = examine_the_situation
 	}
+	allow_branch = { is_EQS_SOL = no }
 	bypass = {
 		OR = {
 			CHN = {
@@ -1173,7 +1174,7 @@ shared_focus = {
 shared_focus = {
 	id = EQS_airfields
 	icon = GFX_goal_eqs_airfields_central
-	cost = 7
+	cost = 5
 	ai_will_do = { factor = 70 }
 	prerequisite = {
 		focus = Ministry_of_defense
@@ -1181,6 +1182,12 @@ shared_focus = {
 	relative_position_id = Ministry_of_defense
 	x = 1
 	y = 1
+	offset = {
+		x = 2
+		y = 0
+		trigger = { is_EQS_SOL = yes }
+	}
+	allow_branch = { is_EQS_SOL = no }
 	available = {
 		132 = { is_controlled_by = ROOT }
 		170 = { is_controlled_by = ROOT }
@@ -1254,7 +1261,7 @@ shared_focus = {
 shared_focus = {
 	id = EQS_airfields2
 	icon = GFX_goal_eqs_airfields_south
-	cost = 7
+	cost = 5
 	ai_will_do = { factor = 20 }
 	prerequisite = {
 		focus = Ministry_of_defense
@@ -1262,6 +1269,11 @@ shared_focus = {
 	relative_position_id = Ministry_of_defense
 	x = -1
 	y = 1
+	offset = {
+		x = -2
+		y = 0
+		trigger = { is_EQS_SOL = yes }
+	}
 	available = {
 		38 = { is_controlled_by = ROOT }
 		114 = { is_controlled_by = ROOT }
@@ -1270,6 +1282,7 @@ shared_focus = {
 		116 = { is_controlled_by = ROOT }
 		12 = { is_controlled_by = ROOT }
 	}
+	allow_branch = { is_EQS_SOL = no }
 	continue_if_invalid = no
 	cancel_if_invalid = yes
 	completion_reward = {
