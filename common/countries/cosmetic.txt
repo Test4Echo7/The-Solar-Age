@@ -2659,3 +2659,7 @@ EQS_SOL_romanophile = {
 	color = rgb { 255 224 129 }
 	color_ui = rgb { 130 123 100 }
 }
+EQC_SOL_romanophile = {
+	color = rgb { 189 203 120 }
+	color_ui = rgb { 189 203 120 }
+}
