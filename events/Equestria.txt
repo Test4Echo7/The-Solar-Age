@@ -5750,6 +5750,11 @@ country_event = { ## Conscription
 		add_political_power = 20
 		hidden_effect = {
 			clr_country_flag = manpower_laws_blocked
+			add_power_balance_value = {
+				id = EQS_sanity_bop
+				value = 0.02
+				tooltip_side = EQS_woke
+			}
 		}
 		ai_chance = {
 			factor = 0
@@ -5760,8 +5765,13 @@ country_event = { ## Conscription
 		add_political_power = -150
 		hidden_effect = {
 			clr_country_flag = manpower_laws_blocked
-			modify_country_flag = { flag = celestia_evil_meter value = 4 }
+			#modify_country_flag = { flag = celestia_evil_meter value = 4 }
 			add_timed_idea = { idea = EQS_block_manpower_demob days = 360 }
+			add_power_balance_value = {
+				id = EQS_sanity_bop
+				value = -0.04
+				tooltip_side = EQS_based
+			}
 		}
 		add_ideas = limited_conscription
 		ai_chance = {
@@ -5780,8 +5790,13 @@ country_event = { ## Conscription
 		add_political_power = -300
 		hidden_effect = {
 			clr_country_flag = manpower_laws_blocked
-			modify_country_flag = { flag = celestia_evil_meter value = 8 }
+			#modify_country_flag = { flag = celestia_evil_meter value = 8 }
 			add_timed_idea = { idea = EQS_block_manpower_demob days = 360 }
+			add_power_balance_value = {
+				id = EQS_sanity_bop
+				value = -0.08
+				tooltip_side = EQS_based
+			}
 		}
 		add_ideas = extensive_conscription
 		add_war_support = 0.1
@@ -5809,6 +5824,11 @@ country_event = { ## Economy
 		add_political_power = 20
 		hidden_effect = {
 			clr_country_flag = economic_laws_blocked
+			add_power_balance_value = {
+				id = EQS_sanity_bop
+				value = 0.02
+				tooltip_side = EQS_woke
+			}
 		}
 		ai_chance = {
 			factor = 15
@@ -5826,8 +5846,13 @@ country_event = { ## Economy
 		custom_effect_tooltip = equestria.140.b.tp
 		hidden_effect = {
 			clr_country_flag = economic_laws_blocked
-			modify_country_flag = { flag = celestia_evil_meter value = 4 }
+			#modify_country_flag = { flag = celestia_evil_meter value = 4 }
 			add_timed_idea = { idea = EQS_block_econ_demob days = 360 }
+			add_power_balance_value = {
+				id = EQS_sanity_bop
+				value = -0.04
+				tooltip_side = EQS_based
+			}
 		}
 		add_political_power = -150
 		if = {
@@ -5913,8 +5938,13 @@ country_event = { ## Hippies
 	option = {
 		name = equestria.141.b
 		hidden_effect = {
-			modify_country_flag = { flag = celestia_evil_meter value = 1 }
+			#modify_country_flag = { flag = celestia_evil_meter value = 1 }
 			set_country_flag = { flag = eqs_conscription_crisis_recently days = 360 value = 1 }
+			add_power_balance_value = {
+				id = EQS_sanity_bop
+				value = -0.01
+				tooltip_side = EQS_based
+			}
 		}
 		ai_chance = {
 			factor = 40
@@ -5935,8 +5965,13 @@ country_event = { ## Hippies
 			NOT = { has_country_flag = eqs_democratic_laws }
 		}
 		hidden_effect = {
-			modify_country_flag = { flag = celestia_evil_meter value = 4 }
+			#modify_country_flag = { flag = celestia_evil_meter value = 4 }
 			set_country_flag = eqs_conscription_crisis_recently
+			add_power_balance_value = {
+				id = EQS_sanity_bop
+				value = -0.04
+				tooltip_side = EQS_based
+			}
 		}
 		ai_chance = {
 			factor = 10
@@ -6025,8 +6060,13 @@ country_event = { ## Defeatists
 			NOT = { has_country_flag = eqs_free_media }
 		}
 		hidden_effect = {
-			modify_country_flag = { flag = celestia_evil_meter value = 2 }
+			#modify_country_flag = { flag = celestia_evil_meter value = 2 }
 			set_country_flag = eqs_media_control
+			add_power_balance_value = {
+				id = EQS_sanity_bop
+				value = -0.02
+				tooltip_side = EQS_based
+			}
 		}
 		ai_chance = {
 			factor = 50
@@ -6067,7 +6107,14 @@ country_event = { #Celestia's speech
 	option = {
 		name = equestria.143.b #I will do everything to protect my little ponies
 		add_war_support = 0.1
-		hidden_effect = { modify_country_flag = { flag = celestia_evil_meter value = 2 } }
+		hidden_effect = {
+			#modify_country_flag = { flag = celestia_evil_meter value = 2 }
+			add_power_balance_value = {
+				id = EQS_sanity_bop
+				value = -0.02
+				tooltip_side = EQS_based
+			}
+		}
 		ai_chance = {
 			factor = 10
 			modifier = {
@@ -6085,7 +6132,12 @@ country_event = { #Celestia's speech
 		add_war_support = 0.15
 		add_popularity = { ideology = fascism popularity = 0.05 }
 		hidden_effect = {
-			modify_country_flag = { flag = celestia_evil_meter value = 3 }
+			#modify_country_flag = { flag = celestia_evil_meter value = 3 }
+			add_power_balance_value = {
+				id = EQS_sanity_bop
+				value = -0.03
+				tooltip_side = EQS_based
+			}
 		}
 		ai_chance = {
 			factor = 1
@@ -6131,7 +6183,12 @@ country_event = { #Remove magic of friendship
 		name = equestria.144.b #remove permanently
 		remove_ideas = friendly_harmony
 		hidden_effect = {
-			modify_country_flag = { flag = celestia_evil_meter value = 2 }
+			#modify_country_flag = { flag = celestia_evil_meter value = 2 }
+			add_power_balance_value = {
+				id = EQS_sanity_bop
+				value = -0.02
+				tooltip_side = EQS_based
+			}
 		}
 		ai_chance = {
 			factor = 80
@@ -6151,7 +6208,12 @@ country_event = { #Remove magic of friendship
 		add_popularity = { ideology = fascism popularity = 0.05 }
 		swap_ideas = { remove_idea = friendly_harmony add_idea = eqs_order_idea }
 		hidden_effect = {
-			modify_country_flag = { flag = celestia_evil_meter value = 6 }
+			#modify_country_flag = { flag = celestia_evil_meter value = 6 }
+			add_power_balance_value = {
+				id = EQS_sanity_bop
+				value = -0.06
+				tooltip_side = EQS_based
+			}
 		}
 		ai_chance = {
 			factor = 5
@@ -6240,6 +6302,11 @@ country_event = { #Media
 		add_political_power = 20
 		hidden_effect = {
 			set_country_flag = eqs_free_media
+			add_power_balance_value = {
+				id = EQS_sanity_bop
+				value = 0.03
+				tooltip_side = EQS_woke
+			}
 		}
 		ai_chance = {
 			factor = 35
@@ -6256,8 +6323,13 @@ country_event = { #Media
 	option = {
 		name = equestria.147.b #Media control
 		hidden_effect = {
-			modify_country_flag = { flag = celestia_evil_meter value = 2 }
+			#modify_country_flag = { flag = celestia_evil_meter value = 2 }
 			set_country_flag = eqs_media_control
+			add_power_balance_value = {
+				id = EQS_sanity_bop
+				value = -0.02
+				tooltip_side = EQS_based
+			}
 		}
 		ai_chance = {
 			factor = 60
@@ -6277,7 +6349,12 @@ country_event = { #Media
 		add_ideas = eqs_media_control
 		add_popularity = { ideology = fascism popularity = 0.03 }
 		hidden_effect = {
-			modify_country_flag = { flag = celestia_evil_meter value = 6 }
+			#modify_country_flag = { flag = celestia_evil_meter value = 6 }
+			add_power_balance_value = {
+				id = EQS_sanity_bop
+				value = -0.06
+				tooltip_side = EQS_based
+			}
 		}
 		ai_chance = {
 			factor = 5
@@ -6307,7 +6384,14 @@ country_event = { #Political system
 		name = equestria.148.a
 		add_political_power = 20
 		add_popularity = { ideology = democratic popularity = 0.05 }
-		hidden_effect = { set_country_flag = eqs_democratic_laws }
+		hidden_effect = {
+			set_country_flag = eqs_democratic_laws
+			add_power_balance_value = {
+				id = EQS_sanity_bop
+				value = 0.04
+				tooltip_side = EQS_woke
+			}
+		}
 		ai_chance = {
 			factor = 40
 			modifier = {
@@ -6326,9 +6410,14 @@ country_event = { #Political system
 		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = blueblood
 		hidden_effect = {
-			modify_country_flag = { flag = celestia_evil_meter value = 3 }
+			#modify_country_flag = { flag = celestia_evil_meter value = 3 }
 			set_country_flag = EQS_blueblood_allowed
 			set_country_flag = EQS_war_law_set
+			add_power_balance_value = {
+				id = EQS_sanity_bop
+				value = -0.03
+				tooltip_side = EQS_based
+			}
 		}
 		ai_chance = {
 			factor = 55
@@ -6350,8 +6439,13 @@ country_event = { #Political system
 		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = blueblood
 		hidden_effect = {
-			modify_country_flag = { flag = celestia_evil_meter value = 7 }
+			#modify_country_flag = { flag = celestia_evil_meter value = 7 }
 			set_country_flag = EQS_blueblood_allowed
+			add_power_balance_value = {
+				id = EQS_sanity_bop
+				value = -0.07
+				tooltip_side = EQS_based
+			}
 		}
 		ai_chance = {
 			factor = 5
@@ -6455,6 +6549,13 @@ country_event = { #Political system
 		name = equestria.151.a
 		add_political_power = 20
 		add_popularity = { ideology = democratic popularity = 0.03 }
+		hidden_effect = {
+			add_power_balance_value = {
+				id = EQS_sanity_bop
+				value = 0.02
+				tooltip_side = EQS_woke
+			}
+		}
 		ai_chance = {
 			factor = 40
 			modifier = {
@@ -6472,8 +6573,13 @@ country_event = { #Political system
 		add_political_power = -20
 		add_ideas = eqs_war_admin
 		hidden_effect = {
-			modify_country_flag = { flag = celestia_evil_meter value = 1 }
+			#modify_country_flag = { flag = celestia_evil_meter value = 1 }
 			set_country_flag = EQS_war_admin_set
+			add_power_balance_value = {
+				id = EQS_sanity_bop
+				value = -0.01
+				tooltip_side = EQS_based
+			}
 		}
 		ai_chance = {
 			factor = 50
@@ -6493,7 +6599,12 @@ country_event = { #Political system
 		add_ideas = eqs_war_admin_extreme
 		add_popularity = { ideology = fascism popularity = 0.04 }
 		hidden_effect = {
-			modify_country_flag = { flag = celestia_evil_meter value = 6 }
+			#modify_country_flag = { flag = celestia_evil_meter value = 6 }
+			add_power_balance_value = {
+				id = EQS_sanity_bop
+				value = -0.06
+				tooltip_side = EQS_based
+			}
 		}
 		ai_chance = {
 			factor = 10
@@ -6523,7 +6634,14 @@ country_event = { #War plan
 		name = equestria.152.a
 		add_political_power = 20
 		add_ideas = war_plan_equestria_mild
-		hidden_effect = { set_country_flag = EQS_war_plan_equestria_mild }
+		hidden_effect = {
+			set_country_flag = EQS_war_plan_equestria_mild
+			add_power_balance_value = {
+				id = EQS_sanity_bop
+				value = 0.05
+				tooltip_side = EQS_based
+			}
+		}
 		ai_chance = {
 			factor = 10
 			modifier = {
@@ -6542,7 +6660,12 @@ country_event = { #War plan
 		add_ideas = war_plan_equestria
 		hidden_effect = {
 			set_country_flag = EQS_war_plan_equestria
-			modify_country_flag = { flag = celestia_evil_meter value = 2 }
+			#modify_country_flag = { flag = celestia_evil_meter value = 2 }
+			add_power_balance_value = {
+				id = EQS_sanity_bop
+				value = -0.02
+				tooltip_side = EQS_based
+			}
 		}
 		ai_chance = {
 			factor = 75
@@ -6562,7 +6685,12 @@ country_event = { #War plan
 		add_ideas = war_plan_equestria_extreme
 		hidden_effect = {
 			set_country_flag = EQS_war_plan_equestria_extreme
-			modify_country_flag = { flag = celestia_evil_meter value = 6 }
+			#modify_country_flag = { flag = celestia_evil_meter value = 6 }
+			add_power_balance_value = {
+				id = EQS_sanity_bop
+				value = -0.06
+				tooltip_side = EQS_based
+			}
 		}
 		ai_chance = {
 			factor = 15
@@ -6601,7 +6729,11 @@ country_event = { #Luna is concerned
 	trigger = {
 		tag = EQS
 		has_government = democratic
-		has_country_flag = { flag = celestia_evil_meter value > 32 }
+		#has_country_flag = { flag = celestia_evil_meter value > 32 }
+		power_balance_value = {
+			id = EQS_sanity_bop
+			value < -0.65
+		}
 		has_country_leader = { character = EQS_princess_celestia ruling_only = yes }
 	}
 
@@ -6614,7 +6746,12 @@ country_event = { #Luna is concerned
 	option = { #Back down
 		name = equestria.153.a
 		hidden_effect = {
-			modify_country_flag = { flag = celestia_evil_meter value = -4 }
+			#modify_country_flag = { flag = celestia_evil_meter value = -4 }
+			add_power_balance_value = {
+				id = EQS_sanity_bop
+				value = 0.25
+				tooltip_side = EQS_woke
+			}
 		}
 		ai_chance = {
 			factor = 50
@@ -6677,7 +6814,11 @@ country_event = { #Change
 			has_completed_focus = eqs_come_to_compromise
 			has_country_flag = nightmare_moon
 		}
-		has_country_flag = { flag = celestia_evil_meter value > 32 }
+		#has_country_flag = { flag = celestia_evil_meter value > 32 }
+		power_balance_value = {
+			id = EQS_sanity_bop
+			value < -0.65
+		}
 		has_country_leader = { character = EQS_princess_celestia ruling_only = yes }
 	}
 
@@ -6685,11 +6826,19 @@ country_event = { #Change
 		days = 660
 		modifier = {
 			factor = 0.5
-			has_country_flag = { flag = celestia_evil_meter value > 46 }
+			#has_country_flag = { flag = celestia_evil_meter value > 46 }
+			power_balance_value = {
+				id = EQS_sanity_bop
+				value < -0.85
+			}
 		}
 		modifier = {
 			factor = 0.8
-			has_country_flag = { flag = celestia_evil_meter value > 39 }
+			#has_country_flag = { flag = celestia_evil_meter value > 39 }
+			power_balance_value = {
+				id = EQS_sanity_bop
+				value < -0.75
+			}
 		}
 		modifier = {
 			factor = 0.9
@@ -6768,7 +6917,13 @@ country_event = { #Change
 		effect_tooltip = { add_political_power = -300 add_popularity = { ideology = fascism popularity = -0.4 } }
 		hidden_effect = {
 			if = {
-				limit = { has_country_flag = { flag = celestia_evil_meter value > 39 } }
+				limit = {
+					#has_country_flag = { flag = celestia_evil_meter value > 39 }
+					power_balance_value = {
+						id = EQS_sanity_bop
+						value < -0.799
+					}
+				}
 				country_event = { id = equestria.157}
 			}
 			else = {
@@ -6842,7 +6997,13 @@ country_event = { #Change
 		effect_tooltip = { add_political_power = -300 add_popularity = { ideology = fascism popularity = -0.4 } }
 		hidden_effect = {
 			if = {
-				limit = { has_country_flag = { flag = celestia_evil_meter value > 39 } }
+				limit = {
+					#has_country_flag = { flag = celestia_evil_meter value > 39 }
+					power_balance_value = {
+						id = EQS_sanity_bop
+						value < -0.799
+					}
+				}
 				country_event = { id = equestria.157}
 				else = {
 					add_political_power = -300

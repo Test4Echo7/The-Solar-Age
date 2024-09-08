@@ -10,3 +10,90 @@ defined_text = {
         localization_key = SOL_gabi
     }
 }
+defined_text = { # Civil war size
+	name = GetCelestiasBopPopularSupport
+	text = {
+		trigger = {
+			fascism > 0.7
+			power_balance_value = {
+                id = EQS_sanity_bop
+                value < -0.65
+			}
+		}
+		localization_key = EQS_CelestiasPopularSupport_max_evil_bop
+	}
+	text = {
+		trigger = {
+			fascism > 0.7
+			power_balance_value = {
+                id = EQS_sanity_bop
+                value > -0.65
+			}
+		}
+		localization_key = EQS_CelestiasPopularSupport_max_good
+	}
+	text = {
+		trigger = {
+			fascism > 0.5
+			fascism < 0.71
+			power_balance_value = {
+                id = EQS_sanity_bop
+                value < -0.65
+			}
+		}
+		localization_key = EQS_CelestiasPopularSupport_mid_evil
+	}
+	text = {
+		trigger = {
+			fascism > 0.5
+			fascism < 0.71
+			power_balance_value = {
+                id = EQS_sanity_bop
+                value > -0.65
+			}
+		}
+		localization_key = EQS_CelestiasPopularSupport_mid_good
+	}
+	text = {
+		trigger = {
+			fascism > 0.3
+			fascism < 0.51
+			power_balance_value = {
+                id = EQS_sanity_bop
+                value < -0.65
+			}
+		}
+		localization_key = EQS_CelestiasPopularSupport_low_evil
+	}
+	text = {
+		trigger = {
+			fascism > 0.3
+			fascism < 0.51
+			power_balance_value = {
+                id = EQS_sanity_bop
+                value > -0.65
+			}
+		}
+		localization_key = EQS_CelestiasPopularSupport_low_good
+	}
+	text = {
+		trigger = {
+			fascism < 0.31
+			power_balance_value = {
+                id = EQS_sanity_bop
+                value < -0.65
+			}
+		}
+		localization_key = EQS_CelestiasPopularSupport_min_evil
+	}
+	text = {
+		trigger = {
+			fascism < 0.31
+			power_balance_value = {
+                id = EQS_sanity_bop
+                value > -0.65
+			}
+		}
+		localization_key = EQS_CelestiasPopularSupport_min_good
+	}
+}

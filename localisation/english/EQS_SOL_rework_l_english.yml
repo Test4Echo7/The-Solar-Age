@@ -59,6 +59,9 @@
   EQS_solar_fury_category:0 "An Alicorn's Rage"
   EQS_fury_of_sun:0 "§RUnleash the Power of the Sun!§!"
   EQS_fury_of_sun_desc:0 "The enemy is at our gates, but we are not without support. Our Empress guides our armies in the heat of battle, and she is capable of destroying entire armies without our aid. If she were to unleash that power, all those that threaten us would fall like dead grass in her wake!"
+  EQS_become_daybreaker_bop:0 "§RAscend§!"
+  EQS_become_daybreaker_bop_desc:0 "The enemy is at our gates. Ponies perish. [EQS.GetNameDef] is collapsing. Salvation is near, but my ponies must be §Rready§!.\n\nThey [GetCelestiasBopPopularSupport]."
+  EQS_CelestiasPopularSupport_max_evil_bop:0 "§Rwill follow me into the gates of Tartarus§!"
 
   ###Flags and Custom Tooltips###
   SOL_has_captured_sunset:0 "Sunset Shimmer has been captured."
