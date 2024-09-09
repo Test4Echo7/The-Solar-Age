@@ -84,6 +84,28 @@ leader_traits = {
         }
         ai_will_do = { factor = 1 }
     }
+
+    ###Special###
+    magic_piercing = {
+        type = all
+        trait_type = personality_trait
+        allowed = { always = no }
+
+        modifier = {
+            breakthrough_factor = 0.75
+        }
+        ai_will_do = { factor = 1 }
+    }
+    magic_defense = {
+        type = all
+        trait_type = personality_trait
+        allowed = { always = no }
+
+        modifier = {
+            army_defence_factor = 2
+        }
+        ai_will_do = { factor = 1 }
+    }
     magic_drained = {
         type = all
         trait_type = personality_trait
@@ -94,12 +116,13 @@ leader_traits = {
         planning_skill = -2
         logistics_skill = -1
         modifier = {
-            army_attack_factor = -0.1
-            army_org_factor = -0.1
+            army_attack_factor = -0.2
+            army_org_factor = -0.15
             coordination_bonus = -0.05
         }
         non_shared_modifier = {
             experience_gain_factor = -0.1
         }
+        ai_will_do = { factor = 1 }
     }
 }

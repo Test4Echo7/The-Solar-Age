@@ -381,6 +381,209 @@ EQS_BOP_sanity_category = {
         }
     }
 }
+EQS_BOP_SOL_power_category = {
+    #Centralization
+    EQS_host_grand_oration = {
+        allowed = {
+            tag = EQS
+        }
+        cost = 25
+        days_remove = 7
+        days_re_enable = 60
+        modifier = {
+            stability_weekly = 0.005
+        }
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision EQS_host_grand_oration"
+            add_power_balance_value = {
+                id = EQS_vestments_of_power_bop
+                value = -0.025
+                tooltip_side = EQS_powa
+            }
+        }
+    }
+    EQS_eliminate_redundant_positions = {
+        allowed = {
+            tag = EQS
+        }
+        cost = 25
+        days_remove = 14
+        days_re_enable = 120
+        modifier = {
+            political_power_gain = -0.05
+        }
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision EQS_eliminate_redundant_positions"
+            add_power_balance_value = {
+                id = EQS_vestments_of_power_bop
+                value = -0.05
+                tooltip_side = EQS_powa
+            }
+        }
+        remove_effect = {
+            add_stability = 0.01
+        }
+    }
+    EQS_take_over_department = {
+        allowed = {
+            tag = EQS
+        }
+        cost = 35
+        days_remove = 28
+        days_re_enable = 150
+        modifier = {
+            political_power_gain = -0.1
+        }
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision EQS_take_over_department"
+            add_power_balance_value = {
+                id = EQS_vestments_of_power_bop
+                value = -0.075
+                tooltip_side = EQS_powa
+            }
+        }
+        remove_effect = {
+            add_political_power = 50
+        }
+    }
+    EQS_encourage_direct_military_reports = {
+        allowed = {
+            tag = EQS
+        }
+        cost = 50
+        days_remove = 35
+        days_re_enable = 210
+        modifier = {
+            experience_gain_army = 0.01
+        }
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision EQS_encourage_direct_military_reports"
+            add_power_balance_value = {
+                id = EQS_vestments_of_power_bop
+                value = -0.1
+                tooltip_side = EQS_powa
+            }
+        }
+        remove_effect = {
+            army_experience = 5
+        }
+    }
+    #One-time
+    EQS_clear_fancys_clique = {
+        allowed = {
+            tag = EQS
+        }
+        cost = 75
+        fire_only_once = yes
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision EQS_clear_fancys_clique"
+            #Event of Daybreaker meeting with a few remaining somewhat harmonists and hoisting them by their own petard, or just arresting them on suspicions, since she can
+        }
+    }
+    #Decentralization
+    EQS_permit_local_election = {
+        allowed = {
+            tag = EQS
+        }
+        cost = 25
+        days_remove = 30
+        days_re_enable = 30
+        modifier = {
+            democratic_drift = 0.01
+        }
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision EQS_permit_local_election"
+            add_power_balance_value = {
+                id = EQS_vestments_of_power_bop
+                value = 0.025
+                side = EQS_democracy
+            }
+        }
+    }
+    EQS_expand_government_office_duties = {
+        allowed = {
+            tag = EQS
+        }
+        cost = 25
+        days_remove = 14
+        days_re_enable = 120
+        modifier = {
+            political_power_gain = 0.05
+        }
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision EQS_expand_government_office_duties"
+            add_power_balance_value = {
+                id = EQS_vestments_of_power_bop
+                value = 0.05
+                side = EQS_democracy
+            }
+        }
+        remove_effect = {
+            add_political_power = 15
+        }
+    }
+    EQS_actually_consult_advisors = {
+        allowed = {
+            tag = EQS
+        }
+        cost = 35
+        days_remove = 21
+        days_re_enable = 150
+        modifier = {
+            add_political_power = -0.1
+            stability_weekly = 0.003
+        }
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision EQS_actually_consult_advisors"
+            add_power_balance_value = {
+                id = EQS_vestments_of_power_bop
+                value = 0.075
+                side = EQS_democracy
+            }
+        }
+        remove_effect = {
+            add_stability = 0.02
+            add_popularity = {
+                ideology = democratic
+                popularity = 0.02
+            }
+        }
+    }
+    EQS_tighten_drafting_regulations = {
+        allowed = {
+            tag = EQS
+        }
+        cost = 50
+        days_remove = 35
+        days_re_enable = 180
+        modifier = {
+            experience_gain_army = -0.02
+        }
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision EQS_tighten_drafting_regulations"
+            add_power_balance_value = {
+                id = EQS_vestments_of_power_bop
+                value = 0.1
+                side = EQS_democracy
+            }
+        }
+        remove_effect = {
+            add_war_support = 0.03
+        }
+    }
+    #One-time
+    EQS_permit_equestria_games = {
+        allowed = {
+            tag = EQS
+        }
+        cost = 75
+        fire_only_once = yes
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision EQS_permit_equestria_games"
+            #Event of Daybreaker overseeing the Equestria Games, since it is still a hope for many, and she is utterly grossed out by it
+        }
+    }
+}
 EQS_solar_fury_category = {
     EQS_fury_of_sun = {
         allowed = {
@@ -398,6 +601,7 @@ EQS_solar_fury_category = {
             has_war = yes
             is_EQS_SOL = yes
         }
+        icon = celestia
         cost = 50
         days_remove = 40
         complete_effect = {
@@ -429,7 +633,7 @@ EQS_solar_fury_category = {
             }
         }
         ai_will_do = {
-            factor = 0
+            base = 0
             modifier = {
                 surrender_progress > 0.25
                 add = 10
@@ -441,6 +645,189 @@ EQS_solar_fury_category = {
             modifier = {
                 surrender_progress > 0.75
                 add = 1000
+            }
+        }
+    }
+    EQS_melt_our_foes = {
+        allowed = {
+            tag = EQS
+        }
+        available = {
+            surrender_progress > 0.15
+            is_EQS_SOL = yes
+        }
+        visible = {
+            has_war = yes
+            is_EQS_SOL = yes
+        }
+        icon = celestia
+        cost = 50
+        days_remove = 60
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision EQS_melt_our_foes"
+            every_possible_country = {
+                limit = {
+                    has_war_with = ROOT
+                }
+                add_timed_idea = {
+                    idea = EQS_high_attrition
+                    days = 60
+                }
+            }
+        }
+        remove_effect = {
+            custom_effect_tooltip = EQS_SOL_eepy_tt
+            hidden_effect = {
+                EQS_princess_celestia = {
+                    add_timed_unit_leader_trait = { trait = magic_drained days = 45 }
+                }
+            }
+        }
+        ai_will_do = {
+            base = 0
+            modifier = {
+                surrender_progress > 0.2
+                add = 15
+            }
+            modifier = {
+                surrender_progress > 0.35
+                add = 40
+            }
+            modifier = {
+                surrender_progress > 0.6
+                add = 1000
+            }
+        }
+    }
+    EQS_pierce_the_heart = {
+        allowed = {
+            tag = EQS
+        }
+        available = {
+            surrender_progress > 0.15
+            is_EQS_SOL = yes
+        }
+        visible = {
+            has_war = yes
+            is_EQS_SOL = yes
+        }
+        icon = celestia
+        cost = 50
+        days_remove = 45
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision EQS_pierce_the_heart"
+            EQS_princess_celestia = {
+                add_timed_unit_leader_trait = { trait = magic_piercing days = 45 }
+            }
+        }
+        remove_effect = {
+            custom_effect_tooltip = EQS_SOL_eepy_tt
+            hidden_effect = {
+                EQS_princess_celestia = {
+                    add_timed_unit_leader_trait = { trait = magic_drained days = 30 }
+                }
+            }
+        }
+    }
+    EQS_endless_service = {
+        allowed = {
+            tag = EQS
+        }
+        available = {
+            surrender_progress > 0.25
+            is_EQS_SOL = yes
+            custom_trigger_tooltip = {
+                tooltip = EQS_resurrections_available_tt
+                casualties_k > 35
+                check_variable = { EQS_casualties_available > 35000 }
+            }
+        }
+        visible = {
+            has_war = yes
+            is_EQS_SOL = yes
+        }
+        icon = celestia
+        cost = 50
+        days_remove = 90
+        remove_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision EQS_endless_service"
+            custom_effect_tooltip = EQS_SOL_eepy_tt
+            hidden_effect = {
+                EQS_princess_celestia = {
+                    add_timed_unit_leader_trait = { trait = magic_drained days = 120 }
+                }
+                set_variable = { EQS_casualties_total = casualties_k }
+                add_to_variable = { EQS_casualties_used = 35000 }
+                subtract_from_variable = { EQS_casualties_total = EQS_casualties_used }
+                set_variable = { EQS_casualties_available = EQS_casualties_total }
+            }
+            add_manpower = 35000
+        }
+        ai_will_do = {
+            base = 0
+            modifier = {
+                surrender_progress > 0.35
+                add = 10
+            }
+            modifier = {
+                surrender_progress > 0.5
+                add = 75
+            }
+            modifier = {
+                surrender_progress > 0.8
+                add = 2000
+            }
+        }
+    }
+    EQS_invincible_soldiers = {
+        allowed = {
+            tag = EQS
+        }
+        available = {
+            surrender_progress > 0.15
+            is_EQS_SOL = yes
+        }
+        visible = {
+            has_war = yes
+            is_EQS_SOL = yes
+        }
+        icon = celestia
+        cost = 50
+        days_remove = 30
+        modifier = {
+            army_speed_factor = -1
+        }
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision EQS_invincible_service"
+            EQS_princess_celestia = {
+                add_timed_unit_leader_trait = { trait = magic_defense days = 30 }
+            }
+        }
+        remove_effect = {
+            custom_effect_tooltip = EQS_SOL_eepy_tt
+            hidden_effect = {
+                EQS_princess_celestia = {
+                    add_timed_unit_leader_trait = { trait = magic_drained days = 40 }
+                }
+            }
+        }
+        ai_will_do = {
+            base = 0
+            modifier = {
+                surrender_progress > 0.15
+                add = 10
+            }
+            modifier = {
+                surrender_progress > 0.25
+                add = 30
+            }
+            modifier = {
+                surrender_progress > 0.5
+                add = 60
+            }
+            modifier = {
+                surrender_progress > 0.75
+                add = 500
             }
         }
     }

@@ -1570,6 +1570,13 @@ EQS_militias = {
 		days_remove = 30
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision complete EQS_militias_north_central_region"
+			hidden_effect = {
+				add_power_balance_value = {
+					id = EQS_sanity_bop
+					value = -0.02
+					tooltip_side = EQS_woke
+				}
+			}
 			if = {
 				limit = { NOT = { has_country_flag = militia_division_template } }
 				delete_unit_template_and_units = { division_template = "Militia Division" }
@@ -1629,6 +1636,13 @@ EQS_militias = {
 		days_remove = 35
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision complete EQS_militias_east_coast"
+			hidden_effect = {
+				add_power_balance_value = {
+					id = EQS_sanity_bop
+					value = -0.02
+					tooltip_side = EQS_woke
+				}
+			}
 			if = {
 				limit = { NOT = { has_country_flag = militia_division_template } }
 				delete_unit_template_and_units = { division_template = "Militia Division" }
@@ -1686,6 +1700,13 @@ EQS_militias = {
 		days_remove = 70
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision complete EQS_militias_central_equestria"
+			hidden_effect = {
+				add_power_balance_value = {
+					id = EQS_sanity_bop
+					value = -0.02
+					tooltip_side = EQS_woke
+				}
+			}
 			if = {
 				limit = { NOT = { has_country_flag = militia_division_template } }
 				delete_unit_template_and_units = { division_template = "Militia Division" }
@@ -1743,6 +1764,13 @@ EQS_militias = {
 		days_remove = 40
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision complete EQS_militias_south_east"
+			hidden_effect = {
+				add_power_balance_value = {
+					id = EQS_sanity_bop
+					value = -0.02
+					tooltip_side = EQS_woke
+				}
+			}
 			if = {
 				limit = { NOT = { has_country_flag = militia_division_template } }
 				delete_unit_template_and_units = { division_template = "Militia Division" }
@@ -1801,6 +1829,13 @@ EQS_militias = {
 		days_remove = 45
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision complete EQS_militias_south_west"
+			hidden_effect = {
+				add_power_balance_value = {
+					id = EQS_sanity_bop
+					value = -0.02
+					tooltip_side = EQS_woke
+				}
+			}
 			if = {
 				limit = { NOT = { has_country_flag = militia_division_template } }
 				delete_unit_template_and_units = { division_template = "Militia Division" }

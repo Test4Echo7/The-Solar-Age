@@ -2259,6 +2259,31 @@ ideas = {
 	}
 
 	###Solar Age###
+	###Ideas for enemies##
+	country = {
+		EQS_high_attrition = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				heat_attrition_factor = 0.4
+			}
+		}
+		#EQS_slo_mos = {
+		#	allowed = {
+		#		always = no
+		#	}
+		#
+		#	removal_cost = -1
+		#
+		#	modifier = {
+		#		army_speed_factor = -1
+		#	}
+		#}
+	}
 	hidden_ideas = {
 		EQS_mental_decline = {
 			allowed = {
@@ -2268,7 +2293,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				power_balance_weekly = -0.001
+				power_balance_weekly = -0.002
 			}
 		}
 	}

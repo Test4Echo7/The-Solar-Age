@@ -190,6 +190,7 @@ EQS_SOL_remove_ideas = {
 		centralization
 		maintain_autonomies
 		grand_army
+		EQS_mental_decline
 	}
 }
 

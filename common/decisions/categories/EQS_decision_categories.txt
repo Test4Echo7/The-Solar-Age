@@ -1,6 +1,7 @@
 EQS_celestia_evil_meter_category = {
 	allowed = {
 		original_tag = EQS
+		is_ai = yes
 	}
 	visible = {
 		NOT = {

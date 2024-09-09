@@ -92,6 +92,7 @@ EQS_sanity_bop = {
                 mobilization_speed = 0.15
                 surrender_limit = -0.05
                 industrial_capacity_factory = 0.05
+                industrial_capacity_dockyard = 0.05
             }
             on_activate = {
                 log = "EQS_paranoid_insanity"
@@ -109,22 +110,141 @@ EQS_sanity_bop = {
                 mobilization_speed = 0.25
                 surrender_limit = -0.15
                 industrial_capacity_factory = 0.1
+                industrial_capacity_dockyard = 0.1
                 consumer_goods_factor = -0.1
             }
             on_activate = {
                 log = "EQS_schizophrenic_insanity"
-                hidden_effect = {
-                    if = {
-                        limit = {
-                            is_EQS_SOL = no
-                        }
-                        country_event = {
-                            id = equestria.154
-                            days = 7
-                            random_days = 7
-                        }
-                    }
-                }
+            }
+        }
+    }
+}
+
+EQS_vestments_of_power_bop = {
+    initial_value = -0.4
+    left_side = EQS_powa
+    right_side = EQS_democracy
+    decision_category = EQS_BOP_SOL_power_category
+
+    range = {
+        id = EQS_SOL_balanced_power
+        min = -0.1
+        max = 0.1
+        modifier = {
+            stability_factor = 0.1
+            political_advisor_cost_factor = -0.1
+        }
+    }
+
+    side = {
+        id = EQS_democracy
+        #icon = GFX_bop_parliament
+        range = {
+            id = EQS_little_republic
+            min = 0.1
+            max = 0.35
+            modifier = {
+                stability_factor = 0.1
+                political_advisor_cost_factor = -0.05
+                political_power_factor = 0.03
+                economy_cost_factor = 0.15
+                industrial_capacity_factory = -0.03
+            }
+            on_activate = {
+                log = "EQS_little_republic"
+            }
+        }
+        range = {
+            id = EQS_big_republic
+            min = 0.35
+            max = 0.7
+            modifier = {
+                stability_factor = 0.2
+                war_support_factor = -0.05
+                political_power_factor = 0.075
+                economy_cost_factor = 0.25
+                industrial_capacity_factory = -0.07
+                army_core_defence_factor = 0.05
+            }
+            on_activate = {
+                log = "EQS_big_republic"
+            }
+        }
+        range = {
+            id = EQS_grand_republic
+            min = 0.7
+            max = 1
+            modifier = {
+                stability_factor = 0.3
+                war_support_factor = -0.15
+                political_power_factor = 0.125
+                economy_cost_factor = 0.35
+                political_advisor_cost_factor = 0.15
+                industrial_capacity_factory = -0.1
+                army_core_defence_factor = 0.1
+                special_forces_cap = 0.05
+                army_morale_factor = 0.05
+            }
+            on_activate = {
+                log = "EQS_grand_republic"
+            }
+        }
+    }
+
+    side = {
+        id = EQS_powa
+        #icon = GFX_bop_celestial_throne
+        range = {
+            id = EQS_little_dictator
+            min = -0.35
+            max = -0.1
+            modifier = {
+                stability_factor = 0.05
+                political_advisor_cost_factor = -0.2
+                political_power_factor = -0.03
+                army_org_factor = 0.05
+                production_factory_max_efficiency_factor = -0.03
+            }
+            on_activate = {
+                log = "EQS_little_dictator"
+            }
+        }
+        range = {
+            id = EQS_smalltime_emperor
+            min = -0.7
+            max = -0.35
+            modifier = {
+                stability_factor = -0.05
+                war_support_factor = 0.1
+                political_advisor_cost_factor = -0.25
+                political_power_factor = -0.075
+                army_org_factor = 0.075
+                production_factory_max_efficiency_factor = -0.05
+                army_attack_factor = 0.05
+                consumer_goods_factor = -0.03
+            }
+            on_activate = {
+                log = "EQS_smalltime_emperor"
+            }
+        }
+        range = {
+            id = EQS_the_senate
+            min = -1
+            max = -0.7
+            modifier = {
+                stability_factor = -0.15
+                war_support_factor = 0.2
+                political_advisor_cost_factor = -0.35
+                political_power_factor = -0.15
+                economy_cost_factor = -0.1
+                army_org_factor = 0.1
+                production_factory_max_efficiency_factor = -0.1
+                army_morale_factor = -0.05
+                army_attack_factor = 0.075
+                consumer_goods_factor = -0.075
+            }
+            on_activate = {
+                log = "EQS_the_senate"
             }
         }
     }

@@ -40,7 +40,7 @@
   EQS_paranoid_insanity:0 "§RParanoid§!"
   EQS_schizophrenic_insanity:0 "§RFurious§!"
   EQS_npc:0 "Harmony"
-  EQS_woke:0 "Chaos"
+  EQS_woke:0 "Order"
   EQS_take_lakeside_retreat:0 "Go on a Lakeside Retreat"
   EQS_preside_over_baking_competition:0 "Preside over Baking Competition"
   EQS_visit_veterans_hospital:0 "Visit Veterans Hospital"
@@ -51,17 +51,45 @@
   EQS_host_speech_of_fallen:0 "Host a Speech to the Fallen"
   EQS_oversee_military_trial:0 "Oversee Military Trial"
   EQS_taste_of_the_war:0 "Get a Taste of the War"
+  EQS_vestments_of_power_bop:0 "Power of the Empress"
+  EQS_grand_republic:0 "§GOrdered Harmony§!"
+  EQS_big_republic:0 "Hybridized Society"
+  EQS_little_republic:0 "Equestria-Influenced"
+  EQS_SOL_balanced_power:0 "Equal Influence"
+  EQS_little_dictator:0 "Centralized State"
+  EQS_smalltime_emperor:0 "Ordered Society"
+  EQS_the_senate:0 "§RControlled by Daybreaker's Hoof§!"
+  EQS_powa:0 "the Empress"
+  EQS_democracy:0 "the government"
+  EQS_host_grand_oration:0 "Host Grand Oration"
+  EQS_eliminate_redundant_positions:0 "Eliminate Redundant Positions"
+  EQS_take_over_department:0 "Shutter Government Department"
+  EQS_encourage_direct_military_reports:0 "Step Around Military Structure"
+  EQS_clear_fancys_clique:0 "Clear out Fancy's Clique"
+  EQS_clear_fancys_clique_desc:0 "Although Fancy Pants has already been dealt with, since the Empress has properly prosecuted for his stance against her, there are still some of his fellow nobles who hold great influence and have grown to be in opposition to her. Dissent within the ranks is unacceptable, and it's time that these thorns disappear."
+  EQS_permit_local_election:0 "Permit Local Election"
+  EQS_expand_government_office_duties:0 "Expand Government Office's Duties"
+  EQS_actually_consult_advisors:0 "Apply Advisors' Input"
+  EQS_tighten_drafting_regulations:0 "Tighten Drafting Regulations"
+  EQS_permit_equestria_games:0 "One Final Equestria Games"
+  EQS_permit_equestria_games_desc:0 "The §YEquestria Games§! are a tradition that many ponies have held onto for their entire lives and it is seen as something that has helped shape some of the social fabric of modern [EQS.GetAdjective] society. Since the Empress ascended, there have been no games held, and her subjects have begun to clamor for another. If she grants their wish, it shall be the last, since the antiquated mindset has no place in the Solar Empire and should be replaced."
 
   ###City Names###
   EQS_sanctum_solar:0 "Sanctum Solar"
 
   ###Decisions###
-  EQS_solar_fury_category:0 "An Alicorn's Rage"
+  EQS_solar_fury_category:0 "An Alicorn's §OFury§!"
+  EQS_solar_fury_category_desc:0 "It is a dreadful thing to corner an alicorn.\n\nOur enemies know not what they §Rsow§!."
   EQS_fury_of_sun:0 "§RUnleash the Power of the Sun!§!"
   EQS_fury_of_sun_desc:0 "The enemy is at our gates, but we are not without support. Our Empress guides our armies in the heat of battle, and she is capable of destroying entire armies without our aid. If she were to unleash that power, all those that threaten us would fall like dead grass in her wake!"
   EQS_become_daybreaker_bop:0 "§RAscend§!"
   EQS_become_daybreaker_bop_desc:0 "The enemy is at our gates. Ponies perish. [EQS.GetNameDef] is collapsing. Salvation is near, but my ponies must be §Rready§!.\n\nThey [GetCelestiasBopPopularSupport]."
   EQS_CelestiasPopularSupport_max_evil_bop:0 "§Rwill follow me into the gates of Tartarus§!"
+  EQS_militias_desc:0 "War has not touched [ROOT.GetNameDef] for centuries. Although the government has the power to institute hard drafts of the populace in times of crisis, this power has never been utilized since it was signed into law, and mmost ponies would be hard-pressed to comply with letters of drafting. However, our ponies deeply love our country, and if we continue to suffer losses on the front, it may be enough to motivate them to join if the desperate hour arises."
+  EQS_melt_our_foes:0 "Melt our Foes"
+  EQS_pierce_the_heart:0 "Pierce the Enemy's Hearts"
+  EQS_endless_service:0 "Death is not the End"
+  EQS_invincible_soldiers:0 "Undying Service"
 
   ###Flags and Custom Tooltips###
   SOL_has_captured_sunset:0 "Sunset Shimmer has been captured."
@@ -103,6 +131,11 @@
   ###Dyanmic Loc###
   SOL_archon:0 "Eros"
   SOL_gabi:0 "Auntie Gabi"
+
+  ###Ideas###
+  ###Hidden/Enemy###
+  EQS_high_attrition:0 "Incinerating Heat"
+  EQS_high_attrition_desc:0 "The sun beats upon us relentlessly, and not even the cool of the night can bring us any respite. Our soldiers can barely stand and fight when the intensity of its heat and light can make some perish in the shade, as even the plains of our battles catch fire from the scorching temperatures that we must suffer."
 
   ###Focuses###
   ###Sunset's Corruption###
