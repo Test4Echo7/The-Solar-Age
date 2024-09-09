@@ -285,3 +285,45 @@ its_not_a_phase_mom = {
         has_global_flag = SOL_flurry_converted
     }
 }
+
+dr_ponystone_i_presume = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1007.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		tag = EQS
+    }
+
+    happened = {
+        custom_trigger_tooltip = {
+            tooltip = EQS_found_zephyr_tt
+            EQS = {
+                has_country_flag = SOL_prodigal_pegasus_found
+            }
+        }
+    }
+}
+
+#ad_astra_per_aspera = { #Add this when EQC gets their focus tree
+#    possible = {
+#        # classic triggers used in all vanilla achievements
+#        difficulty > 1
+#        has_start_date < 1007.01.02
+#        has_any_custom_difficulty_setting = no
+#        game_rules_allow_achievements = yes
+#		tag = EQC
+#    }
+#
+#    happened = {
+#        EQC = {
+#            is_subject_of = EQS
+#            OVERLORD = {
+#                is_EQS_SOL = yes
+#            }
+#            has_country_leader = { character = EQS_SOL_arcane_nova ruling_only = yes }
+#            has_country_flag = EQC_has_formed_greater_new_mareland
+#        }
+#    }
+#}
