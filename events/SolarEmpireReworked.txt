@@ -81,6 +81,7 @@ country_event = { #Luna barges into Celestia's chambers demanding to know why sh
     option = { #I... cannot go against previous orders.
         name = solarreworked.52.b
         custom_effect_tooltip = SOL_you_idiot_tt
+        set_country_flag = EQS_chewed_out_by_luna
         add_stability = -0.2
         add_war_support = -0.1
         add_popularity = {

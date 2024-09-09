@@ -6123,6 +6123,7 @@ shared_focus = {
 
 	cost = 6
 	prerequisite = { focus = industry_crystal_emp }
+	allow_branch = { is_EQS_SOL = yes }
 	mutually_exclusive = { focus = SOL_retire_old_guard }
 
 	completion_reward = {
@@ -6256,7 +6257,7 @@ shared_focus = {
 	cost = 10.00
 	ai_will_do = { factor = 30 }
 	relative_position_id = industry_crystal_emp
-	x = -1
+	x = 1
 	y = 1
 	dynamic = yes
 	prerequisite = {
@@ -7239,6 +7240,7 @@ shared_focus = {
 	prerequisite = {
 		focus = Ministry_of_defense
 	}
+	allow_branch = { is_EQS_SOL = yes }
 	relative_position_id = Ministry_of_defense
 	x = 3
 	y = 1
@@ -7322,6 +7324,7 @@ shared_focus = {
 	prerequisite = {
 		focus = Ministry_of_defense
 	}
+	allow_branch = { is_EQS_SOL = yes }
 	relative_position_id = Ministry_of_defense
 	x = -3
 	y = 1
@@ -10319,6 +10322,7 @@ shared_focus = {
 	cost = 4
 	prerequisite = { focus = examine_the_situation }
 	available = { eqs_not_has_civil_war = yes }
+	allow_branch = { is_EQS_SOL = yes }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_tabulate_ponies"
@@ -10340,6 +10344,7 @@ shared_focus = {
 	available = {
 		eqs_not_has_civil_war = yes
 	}
+	allow_branch = { is_EQS_SOL = yes }
 	bypass = { has_completed_focus = transequestrian_raillines }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus transequestrian_raillines"
@@ -10368,6 +10373,7 @@ shared_focus = {
 	available = {
 		eqs_not_has_civil_war = yes
 	}
+	allow_branch = { is_EQS_SOL = yes }
 	relative_position_id = examine_the_situation
 	x = 7
 	y = 1

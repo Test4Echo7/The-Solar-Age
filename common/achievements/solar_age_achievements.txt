@@ -1,0 +1,287 @@
+unique_id = eaw_solar_age_achievements
+
+what_the_hell_hero = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1007.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		tag = EQS
+    }
+
+    happened = {
+        custom_trigger_tooltip = {
+            tooltip = EQS_what_the_hay_tt
+            tag = EQS
+            has_war_with = BUF
+            has_country_flag = EQS_chewed_out_by_luna
+        }
+    }
+}
+
+ludicrous_speed = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1007.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		tag = EQS
+    }
+
+    happened = {
+        custom_trigger_tooltip = {
+            tooltip = EQS_speedy_boi_tt
+            tag = EQS
+            has_completed_focus = SOL_Imperium_Solis
+            date < 1008.01.02
+        }
+    }
+}
+
+this_is_fine = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1007.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		tag = EQS
+    }
+
+    happened = {
+        tag = EQS
+        OR = {
+            has_war_with = CHN
+            has_war_with = NLR
+        }
+        EQS = {
+            has_power_balance = {
+                id = EQS_sanity_bop
+            }
+            power_balance_value = {
+                id = EQS_sanity_bop
+                value < 0.999
+            }
+        }
+    }
+}
+
+the_empress_protects = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1007.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		tag = EQS
+    }
+
+    happened = {
+        is_EQS_SOL = yes
+        has_completed_focus = SOL_god_empress
+    }
+}
+
+budding_entomologist = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1007.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		tag = EQS
+    }
+
+    happened = {
+        custom_trigger_tooltip = {
+            tootip = EQS_changeling_pets_tt
+            is_EQS_SOL = yes
+            has_completed_focus = SOL_keep_pets
+        }
+    }
+}
+
+this_is_getting_out_of_hoof = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1007.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		tag = EQS
+    }
+
+    happened = {
+        custom_trigger_tooltip = {
+            tooltip = EQS_shoot_her_or_something_tt
+            is_EQS_SOL = yes
+            has_completed_focus = SOL_last_grover
+            GRD = {
+                has_country_leader = { character = GRI_daybreaker ruling_only = yes }
+                is_subject_of = EQS
+            }
+        }
+    }
+}
+
+empress_mommy = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1007.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		tag = EQS
+    }
+
+    happened = {
+        custom_trigger_tooltip = {
+            tooltip = EQS_wholesome_daybreaker_tt
+            is_EQS_SOL = yes
+            GRD = {
+                has_country_leader = { character = GRI_daybreaker ruling_only = yes }
+                is_subject_of = EQS
+            }
+            has_country_flag = EQS_wholesome_grover_achieved #This is for when they have the relaxed photo
+        }
+    }
+}
+
+its_all_solar = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1007.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		tag = EQS
+    }
+
+    happened = {
+        custom_trigger_tooltip = {
+            tooltip = EQS_always_has_been_tt
+            is_EQS_SOL = yes
+            all_other_country = {
+                OR = {
+                    exists = no
+                    is_subject_of = EQS
+                }
+            }
+        }
+    }
+}
+
+elements_of_order = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1007.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		tag = EQS
+    }
+
+    happened = {
+        custom_trigger_tooltip = {
+            tooltip = EQS_elements_two_point_oh_tt
+            is_EQS_SOL = yes
+            has_country_flag = SOL_elements_corrupted #Set at the end when all Elements are corrupted
+        }
+    }
+}
+
+i_am_harmony = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1007.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		tag = EQS
+    }
+
+    happened = {
+        custom_trigger_tooltip = {
+            tooltip = EQS_daybreaker_elements_tt
+            is_EQS_SOL = yes
+            has_completed_focus = SOL_reclaim_elements_mantle
+        }
+    }
+}
+
+somepony_call_for_a_she_demon = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1007.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		tag = EQS
+    }
+
+    happened = {
+        is_EQS_SOL = yes
+        has_global_flag = SOL_sunset_converted
+    }
+}
+
+there_is_only_war = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1007.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		tag = EQS
+    }
+
+    happened = {
+        is_EQS_SOL = yes
+        has_army_manpower = { size > 1500000 }
+        has_completed_focus = SOL_god_empress
+        EQS = {
+            OR = {
+                has_tech = human_wave_offensive
+                has_tech = vast_offensives
+            }
+            check_variable = { num_simultaneous_wars > 9 }
+        }
+    }
+}
+
+im_always_angry = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1007.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		tag = EQS
+    }
+
+    happened = {
+        is_EQS_SOL = yes
+        custom_trigger_tooltip = {
+            tooltip = EQS_she_hulk_tt
+            check_variable = { EQS.num_supernovas > 3 }
+        }
+    }
+}
+
+its_not_a_phase_mom = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1007.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		tag = EQS
+    }
+
+    happened = {
+        is_EQS_SOL = yes
+        has_global_flag = SOL_flurry_converted
+    }
+}

@@ -6893,6 +6893,7 @@ country_event = { #Change
 		hidden_effect = {
 			EQS_SOL_civil_war = yes
 			add_named_threat = { threat = 10 name = threat_equestrian_civil_war_SOL }
+			remove_power_balance = { id = EQS_sanity_bop }
 			set_power_balance = {
 				id = EQS_vestments_of_power_bop
 				set_default = yes
@@ -6975,6 +6976,7 @@ country_event = { #Change
 					60 = { set_country_flag = EQC_dont_break_free_from_SOL }
 				}
 			}
+			remove_power_balance = { id = EQS_sanity_bop }
 			set_power_balance = {
 				id = EQS_vestments_of_power_bop
 				set_default = yes
@@ -7059,6 +7061,7 @@ country_event = { #Ya just got bamboozled
 				id = EQS_vestments_of_power_bop
 				set_default = yes
 			}
+			remove_power_balance = { id = EQS_sanity_bop }
 			EQS_SOL_civil_war = yes
 			add_named_threat = { threat = 10 name = threat_equestrian_civil_war_SOL }
 			BAT = {
@@ -7090,6 +7093,7 @@ country_event = { #Ya just got bamboozled
 				id = EQS_vestments_of_power_bop
 				set_default = yes
 			}
+			remove_power_balance = { id = EQS_sanity_bop }
 			set_global_flag = SOL_wartime_change
 			if = {
 				limit = {

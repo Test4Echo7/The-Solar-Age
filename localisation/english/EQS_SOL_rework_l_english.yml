@@ -95,6 +95,7 @@
   SOL_has_captured_sunset:0 "Sunset Shimmer has been captured."
   SOL_daybreaker_promotion_tt:0 "§YDaybreaker§! becomes a Field Marshal."
   SOL_sunset_converted:0 "Sunset Shimmer has ascended."
+  SOL_flurry_converted:0 "Flurry Heart has embraced her true potential."
   EQS_SOL_they_bucked_up_tt:0 "§OGo supernova and immolate all those who threaten [EQS.GetNameDef]!§!"
   EQS_SOL_eepy_tt:0 "§RDaybreaker will be exhausted for a period of time after pushing herself so far.§!"
   SOL_nova_ops_tt:0 "Has not recently gone §Osupernova.§!"

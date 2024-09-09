@@ -1,4 +1,43 @@
 on_actions = {
+    on_declare_war = { #For tracking how many simultaneous wars EQS has. ROOT is the country who declared war. FROM is the target of the war.
+        effect = {
+            if = {
+                limit = {
+                    OR = {
+                        ROOT = {
+                            tag = EQS
+                        }
+                        FROM = {
+                            tag = EQS
+                        }
+                    }
+                }
+                EQS = {
+                    add_to_variable = { num_simultaneous_wars = 1 }
+                }
+            }
+            if = {
+                limit = {
+                    ROOT = {
+                        NOT = { tag = EQS }
+                    }
+                }
+                ROOT = {
+                    set_country_flag = SOL_new_attacker
+                }
+            }
+            if = {
+                limit = {
+                    FROM = {
+                        NOT = { tag = EQS }
+                    }
+                }
+                FROM = {
+                    set_country_flag = SOL_new_defender
+                }
+            }
+        }
+    }
     on_war_relation_added = { #ROOT is attacker. FROM is defender
         effect = {
             log = "[GetDateText]: [ROOT.GetName]: on_war_relation_added solar_age"
@@ -71,7 +110,7 @@ on_actions = {
             }
         }
     }
-    on_peace = {
+    on_peace = { #THIS is country no longer at war
         effect = {
             log = "[GetDateText]: [ROOT.GetName]: on_peace solar_age"
             if = {
@@ -82,6 +121,62 @@ on_actions = {
                 EQS = {
                     remove_power_balance = { id = EQS_sanity_bop }
                     remove_ideas = EQS_mental_decline
+                }
+            }
+            if = {
+                limit = {
+                    THIS = {
+                        OR = {
+                            has_country_flag = SOL_new_attacker
+                            has_country_flag = SOL_new_defender
+                        }
+                    }
+                    EQS = { #This should work how it's intended. Whenever a country that is in its own war with EQS, either because it declared on them or was declared on by them is peaced out, it reduces the number of simultaneous wars by 1. Should only fire in those scenarios
+                        subtract_from_variable = { num_simultaneous_wars = 1 }
+                    }
+                }
+            }
+        }
+    }
+    on_state_control_changed = { #Root is new controller. From is old controller. FROM.FROM is the state
+        effect = {
+            log = "[GetDateText]: [ROOT.GetName]: on_state_control_changed solar_age"
+            if = {
+                limit = {
+                    FROM.FROM = {
+                        is_core_of = EQS
+                    }
+                    FROM = {
+                        tag = EQS
+                        has_power_balance = {
+                            id = EQS_sanity_bop
+                        }
+                    }
+                }
+                FROM = {
+                    add_power_balance_value = {
+                        id = EQS_sanity_bop
+                        value = -0.005
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = {
+                        is_core_of = EQS
+                    }
+                    ROOT = {
+                        tag = EQS
+                        has_power_balance = {
+                            id = EQS_sanity_bop
+                        }
+                    }
+                }
+                ROOT = {
+                    add_power_balance_value = {
+                        id = EQS_sanity_bop
+                        value = 0.005
+                    }
                 }
             }
         }

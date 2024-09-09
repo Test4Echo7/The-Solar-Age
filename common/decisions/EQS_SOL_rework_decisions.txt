@@ -621,6 +621,7 @@ EQS_solar_fury_category = {
         }
         remove_effect = {
             custom_effect_tooltip = EQS_SOL_eepy_tt
+            add_to_variable = { num_supernovas = 1 }
             hidden_effect = {
                 EQS_princess_celestia = {
                     add_timed_unit_leader_trait = { trait = magic_drained days = 60 }
