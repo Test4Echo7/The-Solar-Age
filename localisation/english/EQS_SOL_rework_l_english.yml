@@ -90,6 +90,8 @@
   EQS_pierce_the_heart:0 "Pierce the Enemy's Hearts"
   EQS_endless_service:0 "Death is not the End"
   EQS_invincible_soldiers:0 "Undying Service"
+  SOL_societal_unrest:0 "Solidify Control"
+  SOL_societal_unrest_desc:0 "Our new regime is a tenuous one. Few ponies currently would follow Daybreaker's lead, and it is clear to all that Celestia is gone. If actions are not implemented swiftly to crack down on dissent and silence the harshest critics, any chance of saving them from themselves will be lost and there could very well be a new war on our hooves."
 
   ###Flags and Custom Tooltips###
   SOL_has_captured_sunset:0 "Sunset Shimmer has been captured."
