@@ -133,6 +133,9 @@
   SOL_archon:0 "Eros"
   SOL_gabi:0 "Auntie Gabi"
 
+  ###World Tension###
+  threat_SOL_ascended:0 "Daybreaker's Ascension"
+
   ###Ideas###
   ###Hidden/Enemy###
   EQS_high_attrition:0 "Incinerating Heat"

@@ -6891,8 +6891,7 @@ country_event = { #Change
 			start_civil_war = { ideology = democratic }
 		}
 		hidden_effect = {
-			EQS_SOL_civil_war = yes
-			add_named_threat = { threat = 10 name = threat_equestrian_civil_war_SOL }
+			EQS_pre_SOL_civil_war_setup = yes
 			remove_power_balance = { id = EQS_sanity_bop }
 			set_power_balance = {
 				id = EQS_vestments_of_power_bop
@@ -6982,7 +6981,7 @@ country_event = { #Change
 				set_default = yes
 			}
 			EQS_SOL_wartime_change = yes
-			add_named_threat = { threat = 5 name = threat_equestrian_civil_war_SOL }
+			add_named_threat = { threat = 5 name = threat_SOL_ascended }
 			BAT = {
 				country_event = {
 					id = bat.216
@@ -7057,13 +7056,14 @@ country_event = { #Ya just got bamboozled
 			start_civil_war = { ideology = democratic size = 0.5 }
 		}
 		hidden_effect = {
+			EQS_pre_SOL_civil_war_setup = yes
 			set_power_balance = {
 				id = EQS_vestments_of_power_bop
 				set_default = yes
 			}
 			remove_power_balance = { id = EQS_sanity_bop }
-			EQS_SOL_civil_war = yes
-			add_named_threat = { threat = 10 name = threat_equestrian_civil_war_SOL }
+			#EQS_SOL_civil_war = yes
+			#add_named_threat = { threat = 10 name = threat_equestrian_civil_war_SOL }
 			BAT = {
 				country_event = {
 					id = bat.216
@@ -7108,7 +7108,7 @@ country_event = { #Ya just got bamboozled
 				}
 			}
 			EQS_SOL_wartime_change = yes
-			add_named_threat = { threat = 5 name = threat_equestrian_civil_war_SOL }
+			add_named_threat = { threat = 5 name = threat_SOL_ascended }
 			BAT = {
 				country_event = {
 					id = bat.216

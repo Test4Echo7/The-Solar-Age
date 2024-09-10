@@ -335,13 +335,43 @@ characters={
 			idea_token = twilight_sparkle
 
 			allowed = {
-				original_tag = EQS
+				OR = {
+					AND = {
+						original_tag = EQC
+						has_country_flag = SOL_hosting_M6
+					}
+					AND = {
+						original_tag = CRY
+						has_country_flag = SOL_hosting_M6
+					}
+					original_tag = EQS
+				}
 			}
 			visible = {
-				is_EQS_SOL = no
+				OR = {
+					AND = {
+						is_EQS_SOL = no
+						original_tag = EQS
+					}
+					OR = {
+						AND = {
+							original_tag = EQC
+							has_country_flag = SOL_hosting_M6
+						}
+						AND = {
+							original_tag = CRY
+							has_country_flag = SOL_hosting_M6
+						}
+					}
+				}
 			}
 			available = {
-				hidden_trigger = { is_EQS_SOL = no }
+				hidden_trigger = {
+					if = {
+						limit = { original_tag = EQS }
+						is_EQS_SOL = no
+					}
+				}
 				has_government = democratic
 				if = {
 					limit = { event_target:solar_empire = { exists = yes } }
@@ -365,6 +395,21 @@ characters={
 						character = EQS_twilight_sparkle
 						ruling_only = yes
 					}
+				}
+				if = {
+					limit = {
+						OR = {
+							AND = {
+								original_tag = EQC
+								has_country_flag = SOL_hosting_M6
+							}
+							AND = {
+								original_tag = CRY
+								has_country_flag = SOL_hosting_M6
+							}
+						}
+					}
+					has_country_flag = SOL_hosting_M6
 				}
 			}
 			research_bonus = {
@@ -876,7 +921,17 @@ characters={
 			idea_token = rainbowdash
 
 			allowed = {
-				original_tag = EQS
+				OR = {
+					AND = {
+						original_tag = EQC
+						has_country_flag = SOL_hosting_M6
+					}
+					AND = {
+						original_tag = CRY
+						has_country_flag = SOL_hosting_M6
+					}
+					original_tag = EQS
+				}
 			}
 			available = {
 				if = {
@@ -903,6 +958,15 @@ characters={
 							}
 						}
 						tag = event_target:equestria
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							original_tag = EQC
+							original_tag = CRY
+						}
+						has_country_flag = SOL_hosting_M6
 					}
 				}
 				NOT = {
@@ -1211,7 +1275,17 @@ characters={
 			ledger = army
 
 			allowed = {
-				original_tag = EQS
+				OR = {
+					AND = {
+						original_tag = EQC
+						has_country_flag = SOL_hosting_M6
+					}
+					AND = {
+						original_tag = CRY
+						has_country_flag = SOL_hosting_M6
+					}
+					original_tag = EQS
+				}
 			}
 			available = {
 				if = {
@@ -1235,6 +1309,15 @@ characters={
 				if = {
 					limit = { country_exists = NLR }
 					NOT = { has_global_flag = rarity_captured }
+				}
+				if = {
+					limit = {
+						OR = {
+							original_tag = EQC
+							original_tag = CRY
+						}
+						has_country_flag = SOL_hosting_M6
+					}
 				}
 				NOT = {
 					has_country_flag = EQS_HIP_elements_sent
@@ -1490,7 +1573,17 @@ characters={
 			cost = 100
 
 			allowed = {
-				original_tag = EQS
+				OR = {
+					AND = {
+						original_tag = EQC
+						has_country_flag = SOL_hosting_M6
+					}
+					AND = {
+						original_tag = CRY
+						has_country_flag = SOL_hosting_M6
+					}
+					original_tag = EQS
+				}
 			}
 			available = {
 				if = {
@@ -1518,6 +1611,15 @@ characters={
 						}
 						tag = event_target:equestria
 					}
+				}
+				if = {
+					limit = {
+						OR = {
+							original_tag = EQC
+							original_tag = CRY
+						}
+					}
+					has_country_flag = SOL_hosting_M6
 				}
 				NOT = {
 					has_country_flag = EQS_HIP_elements_sent
@@ -1841,7 +1943,17 @@ characters={
 			legacy_id = 34
 			desc = EQS_sunset_shimmer_desc
 			visible = {
-				has_country_flag = EQS_sunset_shimmer_arrived
+				OR = {
+					has_country_flag = EQS_sunset_shimmer_arrived
+					AND = {
+						original_tag = EQC
+						has_country_flag = SOL_hosting_M6
+					}
+					AND = {
+						original_tag = CRY
+						has_country_flag = SOL_hosting_M6
+					}
+				}
 				#NOT = {
 				#	has_country_flag = SOL_harmonic_commanders_leave
 				#}
@@ -2458,7 +2570,17 @@ characters={
 			logistics_skill = 1
 			desc = "EQS_appulhors_desc"
 			visible = {
-				has_country_flag = EQS_create_new_commanders_flag
+				OR = {
+					has_country_flag = EQS_create_new_commanders_flag
+					AND = {
+						original_tag = EQC
+						has_country_flag = SOL_hosting_M6
+					}
+					AND = {
+						original_tag = CRY
+						has_country_flag = SOL_hosting_M6
+					}
+				}
 			}
 		}
 
@@ -2616,7 +2738,17 @@ characters={
 			logistics_skill = 2
 			desc = "EQS_ponka_desc"
 			visible = {
-				has_country_flag = EQS_create_new_commanders_flag
+				OR = {
+					has_country_flag = EQS_create_new_commanders_flag
+					AND = {
+						original_tag = EQC
+						has_country_flag = SOL_hosting_M6
+					}
+					AND = {
+						original_tag = CRY
+						has_country_flag = SOL_hosting_M6
+					}
+				}
 			}
 		}
 	}

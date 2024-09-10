@@ -465,3 +465,387 @@ country_event = {
         set_country_flag = SOL_supernova_seen
     }
 }
+
+###Luna and M6 stuff###
+country_event = { #Luna arrives in Ponyville, after leaving the front when she hears about how Canterlot going dark, despite the war being actively controlled, and that there have been more and more concerning commands from Canterlot before that about what to do with the changelings; she speaks briefly with Twilight about her fears that something has gone wrong with Celestia, and she states that she has no clue what to expect, but that Twilight must be ready to flee with her friends
+    id = solarreworked.150
+    title = solarreworked.150.t
+    desc = solarreworked.150.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.150"}
+
+    is_triggered_only = yes
+
+    option = { #I currently hold a low view of the outcome of these next few days.
+        name = solarreworked.150.a
+        hidden_effect = {
+            country_event = {
+                id = solarreworked.151
+                days = 3
+            }
+        }
+    }
+}
+
+country_event = { #Luna heads toward Canterlot, and as she arrives, she sees how it is already being transformed by early aspects of Daybreaker, but she is not stopped by any of the patrols that are in the city, and she arrives quickly to the castle, as she is prevented from teleporting there by some magic field, and seeing how the castle has even worsened, which puts her off as she heads toward Celestia's chambers
+    id = solarreworked.151
+    title = solarreworked.151.t
+    desc = solarreworked.151.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.151"}
+
+    is_triggered_only = yes
+
+    option = { #I have a horrible premonition about this.
+        name = solarreworked.151.a
+        hidden_effect = {
+            country_event = {
+                id = solarreworked.152
+                days = 3
+            }
+        }
+    }
+}
+
+country_event = { #Luna encounters guards and orders them to take her to Celestia, since she must be in charge of all this madness, and they comply with her request and take her to the throne room, where Daybreaker is giving orders to other leaders of society, and Luna immediately tries to attack her, which Daybreaker deflects, and has a small, mocking chat with her before attempting to hold her down as well, but Luna escapes, and Daybreaker orders her arrest by the guards
+    id = solarreworked.152
+    title = solarreworked.152.t
+    desc = solarreworked.152.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.152"}
+
+    is_triggered_only = yes
+
+    option = { #I have a bad feeling about this.
+        name = solarreworked.152.a
+        hidden_effect = {
+            country_event = {
+                id = solarreworked.153
+                days = 7
+            }
+        }
+    }
+}
+
+country_event = { #A short follow-up event to the forces of the Solar Empire attempting to arrest Luna, and stating that they were unable to, as she was able to blast out of the city and flee, although Daybreaker is dismissive since she is the stronger sister anyway, and could crush Luna easily
+    id = solarreworked.153
+    title = solarreworked.153.t
+    desc = solarreworked.153.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.153"}
+
+    is_triggered_only = yes
+
+    option = { #Let her run; she's a broken mare, anyway.
+        name = solarreworked.153.a
+        if = {
+            limit = { has_war = yes }
+            hidden_effect = {
+                CRY = {
+                    country_event = {
+                        id = solarreworked.155
+                        days = 7
+                        random_days = 5
+                    }
+                }
+            }
+        }
+        else = {
+            hidden_effect = {
+                country_event = {
+                    id = solarreworked.154
+                    days = 5
+                    random_days = 5
+                }
+            }
+        }
+    }
+    #option = { #Where could have gone? #Potentially for a Luna CRY path in some future update?
+    #    name = solarreworked.153.b
+    #}
+}
+
+country_event = { #Luna escapes and drums up enough resistance in the rest of the populace, who have yet to be fully pacified, and retreats to Manehattan, where a number of loyal ponies are, and declares that the Equestria everypony knows is gone, and that she will lead them against her corrupted sister, so that all ponies can live in harmony and peace
+    id = solarreworked.154
+    title = solarreworked.154.t
+    desc = solarreworked.154.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.154"}
+
+    is_triggered_only = yes
+
+    option = { #She can try...
+        name = solarreworked.154.a
+        EQS_SOL_civil_war = yes
+        add_named_threat = { threat = 10 name = threat_equestrian_civil_war_SOL }
+    }
+}
+
+country_event = { #Luna arrives in CRY to speak with Cadance about at least getting some asylum if not active support against Daybreaker, which Cadance is reluctant to do, since it would mean that her Empire would be at risk, especially with the changelings being as much of a threat as they are; this puts her in tension with Luna, although she ultimately does give Luna asylum and promises that if they can eventually do something against the Empire, they will
+    id = solarreworked.155 #Alternately, could be a shorter report about Luna arriving in a huff and demanding that she be given help by Cadance, and the player can either offer asylum or turn her away to not risk Daybreaker's ire
+    title = solarreworked.155.t
+    desc = solarreworked.155.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.155"}
+
+    is_triggered_only = yes
+
+    option = { #We can only offer you a home.
+        name = solarreworked.155.a
+        random_country = {
+            limit = { has_character = EQS_princess_luna }
+            EQS_princess_luna = {
+                set_nationality = ROOT
+            }
+            set_country_flag = EQS_had_luna
+        }
+    }
+}
+
+country_event = { #After Luna speaks with Twilight, Twilight summons her friends from across the front to speak about how they're in danger; Rarity and Fluttershy both know what's going on more-so than anypony else, since they're both stationed in Canterlot, but even they don't know much more; it was dangerous to leave, though; by now, Twilight guesses something went wrong, since Luna hasn't returned, and they have to make a quick escape when her castle is breached by ponies planning to arrest her
+    id = solarreworked.156
+    title = solarreworked.156.t
+    desc = solarreworked.156.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.156"}
+
+    is_triggered_only = yes
+
+    option = { #What's going on?!
+        name = solarreworked.156.a
+        hidden_effect = {
+            country_event = {
+                id = solarreworked.157
+                days = 7
+                random_days = 7
+            }
+        }
+    }
+}
+
+country_event = { #Rainbow Dash leads the escape with Twilight and the others, as they have fled from Ponyville and now are past Cloudsdale, as they are going to one of the only places that Twilight could think could be safe, and continue to head west, even though it's toward the front; it's a perilous escape that they lead, as they are being hunted by Daybreaker's armed forces that have declared loyalty to her
+    id = solarreworked.157
+    title = solarreworked.157.t
+    desc = solarreworked.157.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.157"}
+
+    is_triggered_only = yes
+
+    option = { #We're getting close!
+        name = solarreworked.157.a
+        hidden_effect = {
+            country_event = {
+                id = solarreworked.158
+                days = 10
+                random_days = 14
+            }
+        }
+    }
+}
+
+country_event = { #Sunset hosts her friends in a field tent far from the front, in one of the command posts, since Twilight spoke with her and asked for some kind of protection, and she is confused why Twilight is so worried, and as Twilight tries to get out exactly what is going on, and that they need to find a way to strike back against Daybreaker, soldiers from the camp arrive (after shooting a couple of Sunset's guards) and declare them all under arrest, and the event ends with Sunset knocking them out with Twilight's help and them fleeing
+    id = solarreworked.158
+    title = solarreworked.158.t
+    desc = solarreworked.158.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.158"}
+
+    is_triggered_only = yes
+
+    option = { #We have to find a way out of here!
+        name = solarreworked.158.a
+        hidden_effect = {
+            country_event = {
+                id = solarreworked.159
+                days = 14
+                random_days = 10
+            }
+        }
+    }
+}
+
+country_event = { #Report to Daybreaker that so far the hunt for the M6 and Sunset have been inconclusive, as where Sunset was stationed was about central to both the coast or the Crystal Empire, and because of the excessive costs of restructuring, there are not enough resources to intercept both along the most probable routes to either, and that she must choose who to go after
+    id = solarreworked.159
+    title = solarreworked.159.t
+    desc = solarreworked.159.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.159"}
+
+    is_triggered_only = yes
+
+    option = { #The Crystal Empire is the closest and she has family there. That will be where she went.
+        name = solarreworked.159.a
+        hidden_effect = {
+            random_list = {
+                40 = {
+                    set_country_flag = SOL_fled_CRY
+                    hidden_effect = {
+                        country_event = {
+                            id = solarreworked.161
+                            days = 10
+                            random_days = 20
+                        }
+                    }
+                }
+                60 = {
+                    set_country_flag = SOL_fled_EQC
+                    hidden_effect = {
+                        country_event = {
+                            id = solarreworked.160
+                            days = 10
+                            random_days = 20
+                        }
+                    }
+                }
+            }
+        }
+    }
+    option = { #The Crystal Empire is too obvious a choice. Observe the ports. They will not flee the continent.
+        name = solarreworked.159.b
+        hidden_effect = {
+            random_list = {
+                90 = {
+                    set_country_flag = SOL_fled_EQC
+                    hidden_effect = {
+                        country_event = {
+                            id = solarreworked.161
+                            days = 10
+                            random_days = 20
+                        }
+                    }
+                }
+                10 = {
+                    set_country_flag = SOL_fled_CRY
+                    hidden_effect = {
+                        country_event = {
+                            id = solarreworked.160
+                            days = 10
+                            random_days = 20
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+country_event = { #A follow-up report to the dispatch from Daybreaker to go through the effort of capturing the M6 and Sunset, stating that they were never found, and they must have fled to the other country in question
+    id = solarreworked.160
+    title = solarreworked.160.t
+    desc = solarreworked.160.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.160"}
+
+    is_triggered_only = yes
+
+    option = { #We will find them. One day.
+        name = solarreworked.160.a
+        hidden_effect = {
+            if = {
+                limit = { has_country_flag = SOL_fled_CRY }
+                CRY = {
+                    country_event = {
+                        id = solarreworked.162
+                        days = 10
+                    }
+                }
+            }
+            else_if = {
+                limit = { has_country_flag = SOL_fled_EQC }
+                EQC = {
+                    country_event = {
+                        id = solarreworked.162
+                        days = 14
+                    }
+                }
+            }
+        }
+    }
+}
+
+country_event = { #Twilight, Sunset, and the others attempt to keep low and unnoticed on a train station for a train which is heading toward the Crystal Empire, but a couple of agents for Daybreaker, plus some soldiers go through an inspection of the platform, since they are watching for them, and despite hiding, they are noticed, which leads to a magic shootout between Twilight and Sunset and Daybreaker's forces, and the rest of the M6 escaping, but not them
+    id = solarreworked.161 #Alternate description is them again waiting for a ship this time to take them to New Mareland, which first leads to a snarky comment from Sunset on the capital's name, and them also getting spotted by an inspection patrol, leading again to a shoot-out, which ultimately leads to Twilight and Sunset getting apprehended as well
+    title = solarreworked.161.t
+    desc = {
+        trigger = { has_country_flag = SOL_fled_CRY }
+        text = solarreworked.161.d_a
+    }
+    desc = {
+        trigger = { has_country_flag = SOL_fled_EQC }
+        text = solarreworked.161.d_b
+    }
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.161"}
+
+    is_triggered_only = yes
+
+    option = { #Two for the price of one!
+        name = solarreworked.161.a
+        set_country_flag = SOL_has_captured_sunset
+        set_country_flag = SOL_has_twilight
+        hidden_effect = {
+            if = {
+                limit = { has_country_flag = SOL_fled_CRY }
+                CRY = {
+                    country_event = {
+                        id = solarreworked.162
+                        days = 10
+                    }
+                }
+            }
+            else_if = {
+                limit = { has_country_flag = SOL_fled_EQC }
+                EQC = {
+                    country_event = {
+                        id = solarreworked.162
+                        days = 14
+                    }
+                }
+            }
+        }
+    }
+}
+
+country_event = { #An event informing the leader of the country that Twilight, Sunset, and the M6 have arrived in a panic and flight, as they have fled from the Solar Empire to seek asylum while they try to find a way that could possibly lead to them toppling Daybreaker; they have all offered their services until they can bring Equestria back
+    id = solarreworked.162 #Alternate text is an event of the M6 minus Twilight arriving in a complete rush as they relate how they are all that's left and Twilight and Sunset stayed behind to keep them safe so they could try and find a way to topple the Solar Empire; although they are all upset, they also know their friends wouldn't want them to mourn for long, and they offer their services for the country
+    title = solarreworked.162.t #Alternate to both of these would be for the former Twilight arriving to speak with whoever is in charge of the nation they're in, and Sunset providing further input; the alternate to that would be perhaps Rainbow and Applejack leading the rest, and all being glum about prospects, but offering to help either way
+    desc = {
+        trigger = { EQS = { has_country_flag = SOL_fled_CRY } }
+        text = solarreworked.162.d_a
+    }
+    desc = {
+        trigger = { EQS = { has_country_flag = SOL_fled_EQC } }
+        text = solarreworked.162.d_b
+    }
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.162"}
+
+    is_triggered_only = yes
+
+    option = { #We could use all the help we can get.
+        name = solarreworked.162.a
+        set_country_flag = SOL_hosting_M6
+        random_country = {
+            limit = { has_character = EQS_rainbowdash }
+            EQS_rainbowdash = { set_nationality = ROOT }
+        }
+        random_country = {
+            limit = { has_character = EQS_fluttershy }
+            EQS_fluttershy = { set_nationality = ROOT }
+        }
+        random_country = {
+            limit = { has_character = EQS_rarity }
+            EQS_rarity = { set_nationality = ROOT }
+        }
+        random_country = {
+            limit = { has_character = EQS_applejack }
+            EQS_applejack = { set_nationality = ROOT }
+        }
+        random_country = {
+            limit = { has_character = EQS_pinkie_pie }
+            EQS_pinkie_pie = { set_nationality = ROOT }
+        }
+        random_country = {
+            limit = { has_character = EQS_twilight_sparkle }
+            if = {
+                limit = { NOT = { has_country_flag = SOL_has_twilight } }
+                EQS_twilight_sparkle = { set_nationality = ROOT }
+            }
+        }
+        random_country = {
+            limit = { has_character = EQS_sunset_shimmer }
+            if = {
+                limit = { NOT = { has_country_flag = SOL_has_captured_sunset } }
+                EQS_sunset_shimmer = { set_nationality = ROOT }
+            }
+        }
+    }
+}

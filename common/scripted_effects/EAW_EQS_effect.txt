@@ -269,33 +269,33 @@ EQS_SOL_wartime_change = {
 		save_global_event_target_as = equestria
 	}
 	clr_country_flag = nightmare_moon
-	if = {
-		limit = { EQS_princess_luna = { is_unit_leader = yes } }
-		EQS_princess_luna = {
-			set_nationality = CRY
-			#remove_unit_leader_role = yes
-			#if = {
-			#	limit = {
-			#		is_high_command = yes
-			#	}
-			#	remove_advisor_role = {
-			#		slot = high_command
-			#	}
-			#}
-			#if = {
-			#	limit = {
-			#		is_army_chief = yes
-			#	}
-			#	remove_advisor_role = {
-			#		slot = army_chief
-			#	}
-			#}
-			##using a flag doesnt seem to work
-			##set_character_flag = EQS_luna_leader_disabled
-			##promote_character = alicornrule
-		}
-		set_country_flag = EQS_had_luna
-	}
+	#if = {
+	#	limit = { EQS_princess_luna = { is_unit_leader = yes } }
+	#	EQS_princess_luna = {
+	#		set_nationality = CRY
+	#		remove_unit_leader_role = yes
+	#		if = {
+	#			limit = {
+	#				is_high_command = yes
+	#			}
+	#			remove_advisor_role = {
+	#				slot = high_command
+	#			}
+	#		}
+	#		if = {
+	#			limit = {
+	#				is_army_chief = yes
+	#			}
+	#			remove_advisor_role = {
+	#				slot = army_chief
+	#			}
+	#		}
+	#		#using a flag doesnt seem to work
+	#		#set_character_flag = EQS_luna_leader_disabled
+	#		#promote_character = alicornrule
+	#	}
+	#	set_country_flag = EQS_had_luna
+	#}
 	if = {
 		limit = { EQS_NLR_tempest_wind = { is_unit_leader = yes } }
 		EQS_NLR_tempest_wind = { set_nationality = SOL }
@@ -358,11 +358,8 @@ EQS_SOL_wartime_change = {
 	news_event = { id = news.sol.4 hours = 6 }
 }
 
-#ROOT is EQS
-EQS_SOL_civil_war = {
-	set_global_flag = daybreaker_spawned
-	set_global_flag = equestrian_civil_war_daybreaker
-	clr_country_flag = nightmare_moon
+#Just make it easier
+EQS_pre_SOL_civil_war_setup = {
 	clr_country_flag = manpower_laws_blocked
 	clr_country_flag = economic_laws_blocked
 	if = {
@@ -381,6 +378,73 @@ EQS_SOL_civil_war = {
 		limit = { NOT = { has_completed_focus = worrisome_changelings } }
 		complete_national_focus = worrisome_changelings
 	}
+	hidden_effect = {
+		EQS_princess_celestia = {
+			#set_character_name = EQS_SOL_daybreaker
+			promote_character = yes
+			set_portraits = {
+				civilian = {
+					large = GFX_DaybreakerPortraitNew
+				}
+				army = {
+					large = GFX_DaybreakerPortraitNew
+                    small = GFX_idea_EQS_SOL_daybreaker
+				}
+			}
+
+			#add_country_leader_role = {
+			#	promote_leader = yes
+			#
+			#	country_leader = {
+			#		expire = "1965.1.1"
+			#		desc = "POLITICS_DAYBREAKER_DESC"
+			#		ideology = nazism
+			#		traits = { }
+			#		id = -1
+			#	}
+			#}
+
+			set_character_flag = EQS_celestia_is_db
+		}
+	}
+	if = {
+		limit = { has_character = EQS_princess_luna }
+		country_event = {
+			id = solarreworked.150
+			days = 14
+			random_days = 7
+		}
+	}
+	else = {
+		EQS_SOL_civil_war = yes
+		add_named_threat = { threat = 10 name = threat_equestrian_civil_war_SOL }
+	}
+	EQS_SOL_remove_ideas = yes
+}
+
+#ROOT is EQS
+EQS_SOL_civil_war = {
+	set_global_flag = daybreaker_spawned
+	set_global_flag = equestrian_civil_war_daybreaker
+	clr_country_flag = nightmare_moon
+	#clr_country_flag = manpower_laws_blocked
+	#clr_country_flag = economic_laws_blocked
+	#if = {
+	#	limit = { NOT = { has_completed_focus = Friendship_Games } }
+	#	complete_national_focus = Friendship_Games
+	#}
+	#if = {
+	#	limit = { NOT = { has_completed_focus = examine_the_situation } }
+	#	complete_national_focus = examine_the_situation
+	#}
+	#if = {
+	#	limit = { NOT = { has_completed_focus = Ministry_of_defense } }
+	#	complete_national_focus = Ministry_of_defense
+	#}
+	#if = {
+	#	limit = { NOT = { has_completed_focus = worrisome_changelings } }
+	#	complete_national_focus = worrisome_changelings
+	#}
 	every_country = {
 		limit = { exists = yes is_guaranteed_by = EQS }
 		EQS = { diplomatic_relation = { country = PREV relation = guarantee active = no } }
@@ -517,36 +581,36 @@ EQS_SOL_civil_war = {
 		}
 		set_nationality = event_target:equestria
 	}
-	hidden_effect = {
-		EQS_princess_celestia = {
-			#set_character_name = EQS_SOL_daybreaker
-			promote_character = yes
-			set_portraits = {
-				civilian = {
-					large = GFX_DaybreakerPortraitNew
-				}
-				army = {
-					large = GFX_DaybreakerPortraitNew
-                    small = GFX_idea_EQS_SOL_daybreaker
-				}
-			}
-
-			#add_country_leader_role = {
-			#	promote_leader = yes
-			#
-			#	country_leader = {
-			#		expire = "1965.1.1"
-			#		desc = "POLITICS_DAYBREAKER_DESC"
-			#		ideology = nazism
-			#		traits = { }
-			#		id = -1
-			#	}
-			#}
-
-			set_character_flag = EQS_celestia_is_db
-		}
-	}
-	EQS_SOL_remove_ideas = yes
+#	hidden_effect = {
+#		EQS_princess_celestia = {
+#			#set_character_name = EQS_SOL_daybreaker
+#			promote_character = yes
+#			set_portraits = {
+#				civilian = {
+#					large = GFX_DaybreakerPortraitNew
+#				}
+#				army = {
+#					large = GFX_DaybreakerPortraitNew
+#                    small = GFX_idea_EQS_SOL_daybreaker
+#				}
+#			}
+#
+#			#add_country_leader_role = {
+#			#	promote_leader = yes
+#			#
+#			#	country_leader = {
+#			#		expire = "1965.1.1"
+#			#		desc = "POLITICS_DAYBREAKER_DESC"
+#			#		ideology = nazism
+#			#		traits = { }
+#			#		id = -1
+#			#	}
+#			#}
+#
+	#		set_character_flag = EQS_celestia_is_db
+	#	}
+	#}
+	#EQS_SOL_remove_ideas = yes
 	if = {
 		limit = { country_exists = CES }
 		CES = { load_focus_tree = Celestial_State_Focus_db }
