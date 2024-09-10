@@ -266,6 +266,20 @@ country_event = { #Zephyr has integrated into a STG officer corps, and decides t
     }
 }
 
+country_event = {
+    id = solarreworked.113
+    title = solarreworked.113.t
+    desc = solarreworked.113.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.113"}
+
+    is_triggered_only = yes
+
+    option = { #Wait, who was he again?
+        name = solarreworked.113.a
+        set_country_flag = SOL_prodigal_pegasus_found
+    }
+}
+
 country_event = { #Daybreaker marches and enters into the chambers of Grover, who believes that she has come to kill him, since he is an important griffon, and she quickly corrects him, since she has no desire to do that, and rather rear him into a better emperor than either regent could have done
     id = solarreworked.120
     title = solarreworked.120.t
