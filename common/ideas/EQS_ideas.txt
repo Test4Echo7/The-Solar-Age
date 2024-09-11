@@ -2284,6 +2284,48 @@ ideas = {
 		#	}
 		#}
 	}
+	###Harmonic Resistance Ideas###
+	country = {
+		EQS_agitated_workers = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = -0.1
+				production_speed_buildings_factor = -0.15
+				stability_factor = -0.1
+				local_resources_factor = -0.1
+			}
+		}
+		EQS_unwilling_bureaucrats = {
+			allowed = { always = no }
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.15
+				stability_factor = -0.15
+				economy_cost_factor = 0.25
+				political_advisor_cost_factor = 0.25
+			}
+		}
+		EQS_anti_order_propaganda = {
+			allowed = { always = no }
+
+			removal_cost = -1
+
+			modifier = {
+				conscription_factor = -0.15
+				war_support_factor = -0.25
+				army_org_factor = -0.1
+				army_morale_factor = -0.1
+				max_command_power = -50
+			}
+		}
+	}
 	hidden_ideas = {
 		EQS_mental_decline = {
 			allowed = {

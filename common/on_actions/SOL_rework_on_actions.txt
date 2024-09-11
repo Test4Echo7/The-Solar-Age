@@ -21,6 +21,9 @@ on_actions = {
                     ROOT = {
                         NOT = { tag = EQS }
                     }
+                    FROM = {
+                        tag = EQS
+                    }
                 }
                 ROOT = {
                     set_country_flag = SOL_new_attacker
@@ -30,6 +33,9 @@ on_actions = {
                 limit = {
                     FROM = {
                         NOT = { tag = EQS }
+                    }
+                    ROOT = {
+                        tag = EQS
                     }
                 }
                 FROM = {
@@ -108,6 +114,25 @@ on_actions = {
                     add_ideas = EQS_mental_decline
                 }
             }
+            if = {
+                limit = {
+                    OR = {
+                        ROOT = {
+                            tag = EQS
+                            has_idea = SOL_harmonic_resistance_idea
+                        }
+                        FROM = {
+                            tag = EQS
+                            has_idea = SOL_harmonic_resistance_idea
+                        }
+                    }
+                }
+                add_ideas = {
+                    EQS_agitated_workers
+                    EQS_unwilling_bureaucrats
+                    EQS_anti_order_propaganda
+                }
+            }
         }
     }
     on_peace = { #THIS is country no longer at war
@@ -129,6 +154,16 @@ on_actions = {
                         OR = {
                             has_country_flag = SOL_new_attacker
                             has_country_flag = SOL_new_defender
+                        }
+                    }
+                    THIS = {
+                        if = {
+                            limit = { has_country_flag = SOL_new_attacker }
+                            clr_country_flag = SOL_new_attacker
+                        }
+                        if = {
+                            limit = { has_country_flag = SOL_new_defender }
+                            clr_country_flag = SOL_new_defender
                         }
                     }
                     EQS = { #This should work how it's intended. Whenever a country that is in its own war with EQS, either because it declared on them or was declared on by them is peaced out, it reduces the number of simultaneous wars by 1. Should only fire in those scenarios

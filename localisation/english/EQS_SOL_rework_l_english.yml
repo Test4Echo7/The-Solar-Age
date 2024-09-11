@@ -92,6 +92,23 @@
   EQS_invincible_soldiers:0 "Undying Service"
   SOL_societal_unrest:0 "Solidify Control"
   SOL_societal_unrest_desc:0 "Our new regime is a tenuous one. Few ponies currently would follow Daybreaker's lead, and it is clear to all that Celestia is gone. If actions are not implemented swiftly to crack down on dissent and silence the harshest critics, any chance of saving them from themselves will be lost and there could very well be a new war on our hooves."
+  SOL_investigate_ponyville:0 "Investigate Ponyville's Castle"
+  SOL_follow_fillydelphia_lead:0 "Follow Leads to Fillydelphia"
+  SOL_raid_ponyville_cottage:0 "Raid Old Ponyville Cottage"
+  SOL_raid_freeside_restaurant:0 "Raid Restaurant in Freeside"
+  SOL_investigate_new_horseleans_docks:0 "Investigate New Horseleans Docks"
+  SOL_investigate_dead_drop:0 "Investigate Manehattan Dead Drop"
+  SOL_search_jungle_camp:0 "Search Abandoned Jungle Camp"
+  SOL_search_manehattan_opera_house:0 "Scour Manehattan Opera House"
+  SOL_raid_dodge_city_post_office:0 "Raid Dodge City Post Office"
+  SOL_hunt_for_mareway_informant:0 "Hunt for Mareway Resistance Contact"
+  SOL_raid_friendship_school:0 "Raid Ponyville Friendship School"
+  SOL_investigate_raritys_manehattan_boutique:0 "Investigate Rarity's Manehattan Boutique"
+  SOL_search_castle_for_clues:0 "Search for Clues in Everfree Castle"
+  SOL_find_information_in_canterlot_library:0 "Search [3.GetCapitalVictoryPointName] Library for Information"
+  SOL_investigate_raritys_canterlot_boutique:0 "Investigate Rarity's [3.GetCapitalVictoryPointName] Boutique"
+  SOL_capture_sassy:0 "Capture Sassy Saddles"
+  SOL_destroy_resistance:0 "Crush the Resistance"
 
   ###Flags and Custom Tooltips###
   SOL_has_captured_sunset:0 "Sunset Shimmer has been captured."
@@ -142,6 +159,13 @@
   ###Hidden/Enemy###
   EQS_high_attrition:0 "Incinerating Heat"
   EQS_high_attrition_desc:0 "The sun beats upon us relentlessly, and not even the cool of the night can bring us any respite. Our soldiers can barely stand and fight when the intensity of its heat and light can make some perish in the shade, as even the plains of our battles catch fire from the scorching temperatures that we must suffer."
+  ###Harmonic Resistance###
+  EQS_agitated_workers:0 "Unwilling Workers"
+  EQS_agitated_workers_desc:0 "The claws of the Harmonic Resistance have sliced through our average working pony, corrupting their minds to believe that we mean them harm. Ponies across the country are refusing to work, which has severly cut into our production quotas and worsened the lives of everypony."
+  EQS_unwilling_bureaucrats:0 "Governmental Disruptions"
+  EQS_unwilling_bureaucrats_desc:0 "The Harmonic Resistance sympathies of many lower government officials have been revealed as they started to actively work against the Empress's goals. While they are dealt with, our processes will run much more inefficiently than before."
+  EQS_anti_order_propaganda:0 "Anti-Order Propaganda"
+  EQS_anti_order_propaganda_desc:0 "Overnight, posters decrying the Empress and her policies have sprung up along billboards, buildings, and alleys. The boldness of the Resistance has even reached our soldiers, some of whom have deserted and brought their friends with them, while encouraging others to abandon their training and fight for the Resistance, and against us, instead."
 
   ###Focuses###
   ###Sunset's Corruption###
