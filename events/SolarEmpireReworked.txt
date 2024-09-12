@@ -849,3 +849,36 @@ country_event = { #An event informing the leader of the country that Twilight, S
         }
     }
 }
+
+###Utility!###
+country_event = {
+    id = solarreworked.500
+    title = solarreworked.500.t
+    desc = solarreworked.500.d
+    picture = GFX_event_admiral_daybreaker
+    immediate = {
+        log = "[GetDateText]: [ROOT.GetName]: event solarreworked.500"
+        set_country_flag = SOL_designed_daybreak
+    }
+
+    is_triggered_only = yes
+
+    #All three are named the Daybreak
+    option = { #A cruiser which can chase down any foe!
+        name = solarreworked.500.a
+        EQS_get_flagship_bc = yes
+    }
+    option = { #A battleship which shall crush every enemy beneath its barrage!
+        name = solarreworked.500.b
+        EQS_get_flagship_bb = yes
+    }
+    option = { #A carrier which shall swarm the skies with fighters!
+        name = solarreworked.500.c
+        EQS_get_flagship_cv = yes
+    }
+    option = { #Perhaps we can delay things a bit longer
+        name = solarreworked.500.e
+        navy_experience = 75
+        clr_country_flag = SOL_designed_daybreak
+    }
+}

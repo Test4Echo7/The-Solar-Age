@@ -1305,6 +1305,41 @@ demobilization = {
 	}
 }
 political_actions = {
+	SOL_choose_flagship = {
+		allowed = {
+			original_tag = EQS
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = EQS_advanced_boats_tt
+				EQS_has_high_naval_tech = yes
+			}
+		}
+		visible = {
+			is_EQS_SOL = yes
+			NOT = { has_country_flag = SOL_designed_daybreak }
+			#OR = {
+			#	has_completed_focus = SOL_surrender_waves
+			#	has_completed_focus = SOL_crushing_sea
+			#}
+			#EQS_has_high_naval_tech = yes
+		}
+		icon = GFX_decision_generic_naval
+		custom_cost_trigger = {
+			has_navy_experience > 74.99
+		}
+		custom_cost_text = decision_cost_navy_xp_75
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SOL_choose_flagship"
+			if = {
+				limit = {
+					EQS_not_most_advanced_ships = yes
+				}
+				custom_effect_tooltip = EQS_get_better_tech_boi_tt
+			}
+			country_event = solarreworked.500 #Short event to choose a flagship, based on what tech is available
+		}
+	}
 	SOL_rehabilitate_generals = {
 
 		icon = generic_army_support
@@ -1316,7 +1351,7 @@ political_actions = {
 		cost = sol_redemption_cost?200
 		visible = {
 			is_EQS_SOL = yes
-			has_completed_focus = SOL_rehabilitate
+			has_completed_focus = SOL_sun_shines
 			NOT = {
 				country_exists = event_target:equestria
 			}

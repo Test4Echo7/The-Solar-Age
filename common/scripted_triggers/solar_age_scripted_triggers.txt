@@ -16,3 +16,32 @@ is_EQS_SOL = {
 		}
 	}
 }
+EQS_has_high_naval_tech = {
+	OR = {
+		AND = {
+			has_dlc = "Man the Guns"
+			OR = {
+				AND = {
+					has_tech = ship_hull_super_heavy
+					has_tech = improved_ship_hull_heavy
+				}
+				has_tech = improved_ship_hull_carrier
+			}
+		}
+		AND = {
+			NOT = { has_dlc = "Man the Guns" }
+			OR = {
+				has_tech = improved_battleship
+				has_tech = improved_battlecruiser
+				has_tech = improved_carrier
+			}
+		}
+	}
+}
+EQS_not_most_advanced_ships = {
+	NOT = { has_tech = antiair_c }
+	NOT = { has_tech = advanced_heavy_battery }
+	NOT = { has_tech = advanced_centimetric_radar }
+	NOT = { has_tech = semi_modern_fire_control_system }
+	NOT = { has_tech = improved_airplane_launcher }
+}

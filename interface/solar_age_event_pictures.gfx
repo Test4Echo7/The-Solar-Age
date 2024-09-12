@@ -3,4 +3,8 @@ spriteTypes = {
         name = "GFX_event_angy_daybreaker"
         texturefile = "gfx/event_pictures/event_angy_daybreaker.png"
     }
+    spriteType = {
+        name = "GFX_event_admiral_daybreaker"
+        texturefile = "gfx/event_pictures/event_admiral_daybreaker.png"
+    }
 }

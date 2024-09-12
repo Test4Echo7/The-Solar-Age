@@ -109,6 +109,8 @@
   SOL_investigate_raritys_canterlot_boutique:0 "Investigate Rarity's [3.GetCapitalVictoryPointName] Boutique"
   SOL_capture_sassy:0 "Capture Sassy Saddles"
   SOL_destroy_resistance:0 "Crush the Resistance"
+  SOL_choose_flagship:0 "Designing the Empress's Flagship"
+  SOL_choose_flagship_desc:0 "As our naval doctrines have improved and the underlying technology of warfare has advanced, it's become clear that the old ships that were built before the Empress ascended are no longer adequate for somepony of her stature. It is time that we decide upon what shall bear her name to all the world and stand as a symbol of the Imperial Navy's unmatched might!"
 
   ###Flags and Custom Tooltips###
   SOL_has_captured_sunset:0 "Sunset Shimmer has been captured."
@@ -124,6 +126,12 @@
   SOL_nice_empress_tt:0 "An international embassy shall be opened in §Y[3.GetCapitalVictoryPointName].§!"
   SOL_you_idiot_tt:0 "§RNo peace. Only war!§!"
   SOL_why_friends_tt:0 "§R[BUF.GetLeader] will not any accept further friendship advances.§!"
+  decision_cost_navy_xp_75:0 "£GFX_navy_experience §Y75§!"
+  decision_cost_navy_xp_75_blocked:0 "£GFX_navy_experience §R75§!"
+  EQS_advanced_boats_tt:0 "[GetShipTechsNeeded]"
+  EQS_advanced_boats_mtg:0 "We have researched either §YBattleship Killer Hull§! and §YRadar Battleships and Battlecruisers§! or §YFleet Carrier§!."
+  EQS_advanced_boats_nomtg:0 "We have researched either §YCadance Class§!, or §YStygian Class§!, or §YStratusburg Class§!."
+  EQS_get_better_tech_boi_tt:0 "We can build an even §Ostronger§! flagship if we progress §Yfurther§! in technology."
 
   ###Leader Traits###
   gifted:0 "Gifted"
@@ -312,3 +320,11 @@
   solarreworked.130.t:0 "Inferno"
   solarreworked.130.d:0 "The enemy is at our gates. Everything that I have fought for, everything that I have done to protect my ponies has not been enough. I see the wounded hauled off to the hospitals, I hear the pleas for salvation from the lost souls around me. Their belief in me is unwavering, it is unstoppable, but our foes are stronger than just my ponies.\n\nBattle after battle, more dead are left to be eaten by maggots. Loyal and fiend alike leave spill blood to water the fields of war, while I must continue on and strike in retribution for our survival.\n\nI have not come this way, I have not lived for over a thousand years to see an upstart nation topple us. If they are so confident that they can endure the heat of the Sun, then they shall face its full radiance!\n\nLet them feel the might of the Dawn Star! Let them cower as their comrades perish in flame! Let them crawl and beg, plead for mercy, and receive none! As the fire crawls upon their skin and consumes their sin, they shall feel my justice!\n\nFor I am the Sun! I am the Light of Equus! I am Order Incarnate!\n\nI. AM. HARMONY!\n\nAnd they will all §RBURN!§!"
   solarreworked.130.a:0 "They will be turned to ash!"
+
+  ###Utility Events###
+  solarreworked.500.t:0 "Empress of the Sea"
+  solarreworked.500.d:0 "Even before the Empress ascended to the throne, the old lands of Equestria were the dominant naval power on Equus and the world, rivaled only by [GRD.GetNameDef] and [HIP.GetNameDef]. The old admiralty took pride in the ships that sailed under the flag, and as centuries passed, wood gave way to steel, which was spurred by a desire to maintain modernity with the two Equestrian naval rivals. However, that ultimate navy has aged, and younger nations have striven to take our crown and with new technologies appearing frequently, our old flagship is barely worthy of being used by the Empress.\n\nShe has decreed that a new class of warship, the Daybreak Class, shall be constructed on an advanced technology platform. Multiple proposals have been made, between an untouchable and heavily armed cruiser, an unstoppable battleship, or a carrier that can swarm the skies with fighters. It merely remains to be seen which shall be chosen by the Empress."
+  solarreworked.500.a:0 "It shall be a battlecruiser that can chase down any foe!"
+  solarreworked.500.b:0 "It can only be a battleship that shall be a fortress upon the sea!"
+  solarreworked.500.c:0 "A carrier that can drown our enemies in planes sounds perfect!"
+  solarreworked.500.e:0 "Perhaps we should wait until we have even better technology."

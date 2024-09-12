@@ -10,6 +10,18 @@ defined_text = {
         localization_key = SOL_gabi
     }
 }
+defined_text = {
+    name = GetShipTechsNeeded
+    text = {
+        trigger = {
+            has_dlc = "Man the Guns"
+        }
+        localization_key = EQS_advanced_boats_mtg
+    }
+    text = {
+        localization_key = EQS_advanced_boats_nomtg
+    }
+}
 defined_text = { # Civil war size
 	name = GetCelestiasBopPopularSupport
 	text = {

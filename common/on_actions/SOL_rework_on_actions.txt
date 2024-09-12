@@ -56,11 +56,15 @@ on_actions = {
                             }
                             FROM = {
                                 tag = EQS
+                                NOT = {
+                                    has_power_balance = { id = EQS_sanity_bop }
+                                }
                             }
                         }
                         AND = {
                             ROOT = {
                                 tag = EQS
+                                NOT = { has_power_balance = { id = EQS_sanity_bop } }
                             }
                             FROM = {
                                 tag = CHN
@@ -80,6 +84,7 @@ on_actions = {
                 limit = {
                     ROOT = {
                         tag = EQS
+                        NOT = { has_power_balance = { id = EQS_sanity_bop } }
                     }
                     FROM = {
                         tag = NLR
@@ -99,6 +104,7 @@ on_actions = {
                 limit = {
                     ROOT = {
                         tag = EQS
+                        NOT = { has_power_balance = { id = EQS_sanity_bop } }
                     }
                     FROM = {
                         tag = BUF
