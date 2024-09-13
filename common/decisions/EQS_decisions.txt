@@ -1314,15 +1314,15 @@ political_actions = {
 				tooltip = EQS_advanced_boats_tt
 				EQS_has_high_naval_tech = yes
 			}
+			OR = {
+				has_completed_focus = SOL_surrender_waves
+				has_completed_focus = SOL_crushing_sea
+			}
 		}
 		visible = {
 			is_EQS_SOL = yes
 			NOT = { has_country_flag = SOL_designed_daybreak }
-			#OR = {
-			#	has_completed_focus = SOL_surrender_waves
-			#	has_completed_focus = SOL_crushing_sea
-			#}
-			#EQS_has_high_naval_tech = yes
+			EQS_has_high_naval_tech = yes
 		}
 		icon = GFX_decision_generic_naval
 		custom_cost_trigger = {

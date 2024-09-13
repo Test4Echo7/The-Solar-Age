@@ -877,6 +877,9 @@ country_event = {
         EQS_get_flagship_cv = yes
     }
     option = { #Perhaps we can delay things a bit longer
+        trigger = {
+            EQS_not_most_advanced_ships = yes
+        }
         name = solarreworked.500.e
         navy_experience = 75
         clr_country_flag = SOL_designed_daybreak
