@@ -305,13 +305,8 @@ country_event = { #Daybreaker marches and enters into the chambers of Grover, wh
 			}
 		}
 		GRD = {
-			if = {
-				limit = { NOT = { has_government = fascism } }
-				set_politics = {
-					ruling_party = fascism
-					elections_allowed = no
-				}
-			}
+            get_current_government_type = yes
+            set_cosmetic_tag = GRI_SOL
 			if = {
 				limit = { ROOT = { has_completed_focus = SOL_god_empress } }
 				GRI_daybreaker = {
@@ -345,6 +340,22 @@ country_event = { #Daybreaker marches and enters into the chambers of Grover, wh
 					ideology = fascism
 					name = EQS_fascism_party
 					long_name = EQS_fascism_party
+				}
+			}
+            EQS = {
+                set_autonomy = {
+                    target = GRD
+                    autonomous_state = autonomy_personal_union_eaw
+                    end_wars = no
+                    end_civil_wars = yes
+                }
+            }
+            restore_previous_government_type = yes
+            if = {
+				limit = { NOT = { has_government = fascism } }
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
 				}
 			}
 		}
@@ -376,13 +387,8 @@ country_event = { #Daybreaker smugly walks through Griffonstone, in a parade wit
 			}
 		}
 		GRD = {
-			if = {
-				limit = { NOT = { has_government = fascism } }
-				set_politics = {
-					ruling_party = fascism
-					elections_allowed = no
-				}
-			}
+            get_current_government_type = yes
+            set_cosmetic_tag = GRI_SOL
 			if = {
 				limit = { ROOT = { has_completed_focus = SOL_god_empress } }
 				GRI_daybreaker = {
@@ -416,6 +422,22 @@ country_event = { #Daybreaker smugly walks through Griffonstone, in a parade wit
 					ideology = fascism
 					name = EQS_fascism_party
 					long_name = EQS_fascism_party
+				}
+			}
+			EQS = {
+                set_autonomy = {
+                    target = GRD
+                    autonomous_state = autonomy_personal_union_eaw
+                    end_wars = no
+                    end_civil_wars = yes
+                }
+            }
+            restore_previous_government_type = yes
+            if = {
+				limit = { NOT = { has_government = fascism } }
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
 				}
 			}
 		}
@@ -755,13 +777,13 @@ country_event = { #A follow-up report to the dispatch from Daybreaker to go thro
 
 country_event = { #Twilight, Sunset, and the others attempt to keep low and unnoticed on a train station for a train which is heading toward the Crystal Empire, but a couple of agents for Daybreaker, plus some soldiers go through an inspection of the platform, since they are watching for them, and despite hiding, they are noticed, which leads to a magic shootout between Twilight and Sunset and Daybreaker's forces, and the rest of the M6 escaping, but not them
     id = solarreworked.161 #Alternate description is them again waiting for a ship this time to take them to New Mareland, which first leads to a snarky comment from Sunset on the capital's name, and them also getting spotted by an inspection patrol, leading again to a shoot-out, which ultimately leads to Twilight and Sunset getting apprehended as well
-    title = solarreworked.161.t
+    title = solarreworked.161.t #Goes through either Hedgewards or through San Manetonio
     desc = {
-        trigger = { has_country_flag = SOL_fled_CRY }
+        trigger = { EQS = { has_country_flag = SOL_fled_CRY } }
         text = solarreworked.161.d_a
     }
     desc = {
-        trigger = { has_country_flag = SOL_fled_EQC }
+        trigger = { EQS = { has_country_flag = SOL_fled_EQC } }
         text = solarreworked.161.d_b
     }
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.161"}
