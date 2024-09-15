@@ -1,0 +1,29 @@
+﻿l_english:
+  YMN_SOL:0 "Imperial Protectorate of Yemane" #Alternate, Land of the Sun
+  YMN_SOL_DEF:0 "the Imperial Protectorate of Yemane"
+  SDL_SOL:0 "Imperial Province of Arabia" #Alternate, Province of Equus Minor
+  SDL_SOL_DEF:0 "the Imperial Province of Arabia"
+  HMR_SOL:0 "Imperial Protectorate of Haymir" #Alternate, Haymirite Sun-Song
+  HMR_SOL_DEF:0 "the Imperial Protectorate of Haymir"
+  OSQ_SOL:0 "Imperial Protectorate of Osqat" #Alternate, Osqat Dayrise
+  OSQ_SOL_DEF:0 "the Imperial Protectorate of Osqat"
+  REE_SOL:0 "Imperial Protectorate of Re'em" #Alternate, Salem Solar
+  REE_SOL_DEF:0 "the Imperial Protectorate of Re'em"
+  MTA_SOL:0 "Imperial Region of Maretania" #Alternate, Imperial Containment Zone
+  MTS_SOL_DEF:0 "the Imperial Region of Maretania"
+  KAR_SOL:0 "Imperial Protectorate of Karkadannistan" #Alternate, Southern Day
+  KAR_SOL_DEF:0 "the Imperial Protectorate of Karkadannistan"
+  RIV_SOL:0 "Rivers of the Sun"
+  RIV_SOL_DEF:0 "the Rivers of the Sun"
+  RIV_SOL_ADJ:0 "Riverlander"
+  MGY_SOL:0 "Imperial Province of Solaria"
+  MGY_SOL_DEF:0 "the Imperial Province of Solaria"
+  MGY_SOL_ADJ:0 "Solarian"
+  KIR_SOL:0 "Land of the Dawn Star"
+  KIR_SOL_DEF:0 "the Land of the Dawn Star"
+  NVA_SOL:0 "Imperial Protectorate of Sen Kinh" #Alternate, Sen Solar
+  NVA_SOL_DEF:0 "the Imperial Protectorate of Sen Kinh"
+  KHM_SOL:0 "Imperial Protectorate of Khamrin" #Alternate, Khamric Dayspring
+  KHM_SOL_DEF:0 "the Imperial Protectorate of Khamrin"
+  KXN_SOL:0 "Imperial Protectorate of Lan Kir" #Alternate, Junta of Solarist Niriks
+  KX_SOL_DEF:0 "the Imperial Protectorate of Lan Kir"

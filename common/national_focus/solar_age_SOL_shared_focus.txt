@@ -4243,7 +4243,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_wayward_foals
-	x = -9
+	x = -10
 	y = 3
 	relative_position_id = SOL_conquer_GRI
 
@@ -4419,7 +4419,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_last_scatterings
-	x = -7
+	x = -8
 	y = 1
 	relative_position_id = SOL_conquer_GRI
 
@@ -4497,7 +4497,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_misguided_solarists
-	x = -5
+	x = -6
 	y = 1
 	relative_position_id = SOL_conquer_GRI
 
@@ -4712,6 +4712,148 @@ shared_focus = {
 		#Idea here
 	}
 	ai_will_do = { factor = 70 }
+}
+
+shared_focus = {
+	id = SOL_land_of_fiery_sun
+	x = -3
+	y = 1
+	relative_position_id = SOL_conquer_GRI
+
+	cost = 5
+	prerequisite = { focus = SOL_conquer_GRI }
+	available = {
+		is_subject = no
+	}
+	bypass = {
+		KIR = {
+			OR = {
+				exists = no
+				is_subject_of = ROOT
+				has_war_with = ROOT
+			}
+		}
+		NVA = {
+			OR = {
+				exists = no
+				is_subject_of = ROOT
+				has_war_with = ROOT
+			}
+		}
+		KHM = {
+			OR = {
+				exists = no
+				is_subject_of = ROOT
+				has_war_with = ROOT
+			}
+		}
+		KXN = {
+			OR = {
+				exists = no
+				is_subject_of = ROOT
+				has_war_with = ROOT
+			}
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_land_of_fiery_sun"
+		if = {
+			limit = { country_exists = KIR }
+			create_wargoal = {
+				target = KIR
+				type = puppet_wargoal_focus
+			}
+		}
+		if = {
+			limit = { country_exists = NVA }
+			create_wargoal = {
+				target = NVA
+				type = puppet_wargoal_focus
+			}
+		}
+		if = {
+			limit = { country_exists = KHM }
+			create_wargoal = {
+				target = KHM
+				type = puppet_wargoal_focus
+			}
+		}
+		if = {
+			limit = { country_exists = KXN }
+			create_wargoal = {
+				target = KXN
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_artisans_of_empress
+	x = 0
+	y = 2
+	relative_position_id = SOL_land_of_fiery_sun
+
+	cost = 6
+	prerequisite = { focus = SOL_land_of_fiery_sun }
+	available = {
+		KIR = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+		NVA = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+		KHM = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+		KXN = {
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_artisans_of_empress"
+		#Idea here
+		###Maybe event of Autumn or another kirin being required to do some propaganda art of Daybreaker so that they can be used to more effectively control the new lands of Kiria, or perhaps have her posing for a new sculpture or the like
+	}
+	ai_will_do = { factor = 60 }
+}
+
+shared_focus = {
+	id = SOL_embodiments_of_flame
+	x = 2
+	y = 1
+	relative_position_id = SOL_artisans_of_empress
+
+	cost = 6
+	prerequisite = { focus = SOL_artisans_of_empress }
+	mutually_exclusive = { focus = SOL_theory_masters }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_embodiments_of_flame"
+		#Idea here
+		###Event of some nirik soldiers going in on some rebels or the like, who used to be their friends, and also leading Imperial soldiers, which just leaves them in awe, since they are basically miniature armies in and of themselves, since they can use their fire and magic much more effectively than a normal pony while enraged
+	}
+	ai_will_do = { factor = 90 }
+}
+
+shared_focus = {
+	id = SOL_theory_masters
+	x = 4
+	y = 1
+	relative_position_id = SOL_artisans_of_empress
+
+	cost = 6
+	prerequisite = { focus = SOL_artisans_of_empress }
+	mutually_exclusive = { focus = SOL_embodiments_of_flame }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_theory_masters"
+		#Idea here
+		###Event of basically some Sun Tzu like statements and the like from kirin philosophers for the Daybreaker and her military, revolving around flame, fire, and magic
+	}
 }
 
 shared_focus = {
@@ -4938,7 +5080,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_almost_pony
-	x = 5
+	x = 6
 	y = 1
 	relative_position_id = SOL_conquer_GRI
 
@@ -5067,6 +5209,141 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_decadence_shattered"
 		###Event of Daybreaker meeting with the prince of Saddle Arabia, who is a bit of a nervous wreck after being held for so long by the civil war, and she acts condescending that he can rule again, but he'll have to do what she wants, and will have to cut out most of the spending, since she wants an actually useful puppet, which he barely agrees to, since he would rather live
+		SDL = {
+			get_current_government_type = yes
+		}
+		if = {
+			limit = {
+				SDL = {
+					exists = yes
+					all_cores_owned_by_ROOT_or_subject = yes
+					is_subject_of = EQS
+				}
+			}
+			if = {
+				limit = {
+					SDC = {
+						exists = yes
+						is_subject_of = ROOT
+					}
+				}
+				SDL = {
+					annex_country = {
+						target = SDC
+					}
+				}
+			}
+			if = {
+				limit = {
+					SDF = {
+						exists = yes
+						is_subject_of = ROOT
+					}
+				}
+				SDL = {
+					annex_country = {
+						target = SDF
+					}
+				}
+			}
+			if = {
+				limit = {
+					SDS = {
+						exists = yes
+						is_subject_of = ROOT
+					}
+				}
+				SDL = {
+					annex_country = {
+						target = SDS
+					}
+				}
+			}
+			if = {
+				limit = {
+					EMR = {
+						exists = yes
+						is_subject_of = EQS
+					}
+				}
+				SDL = {
+					annex_country = {
+						target = EMR
+					}
+				}
+			}
+		}
+		else = {
+			release_autonomy = {
+				target = SDL
+				autonomy_state = autonomy_reichsprotectorate
+				freedom_level = 0.5
+			}
+			if = {
+				limit = {
+					SDL = {
+						exists = yes
+						is_subject_of = ROOT
+					}
+					if = {
+						limit = {
+							SDC = {
+								exists = yes
+								is_subject_of = ROOT
+							}
+						}
+						SDL = {
+							annex_country = {
+								target = SDC
+							}
+						}
+					}
+					if = {
+						limit = {
+							SDF = {
+								exists = yes
+								is_subject_of = ROOT
+							}
+						}
+						SDL = {
+							annex_country = {
+								target = SDF
+							}
+						}
+					}
+					if = {
+						limit = {
+							SDS = {
+								exists = yes
+								is_subject_of = ROOT
+							}
+						}
+						SDL = {
+							annex_country = {
+								target = SDS
+							}
+						}
+					}
+					if = {
+						limit = {
+							EMR = {
+								exists = yes
+								is_subject_of = ROOT
+							}
+						}
+						SDL = {
+							annex_country = {
+								target = EMR
+							}
+						}
+					}
+				}
+			}
+		}
+		SDL = {
+			set_cosmetic_tag = SDL_SOL
+			set_previous_government_type = yes
+		}
 	}
 	ai_will_do = { factor = 50 }
 }
@@ -5138,6 +5415,21 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_eastern_calipha"
 		###Daybreaker takes to the airwaves from Yemane, where she has pronounced herself the new calipha of one of the old religions of the Saddle Arabian area, and that she will inflict hamr upon those who defy her, as she is the sun itself to guide them, and otherwise promises their doom if they do not obey
+		YMN = {
+			get_current_government_type = yes
+		}
+		if = {
+			limit = { YMN = { exists = no } }
+			release_autonomy = {
+				target = YMN
+				autonomy_state = autonomy_reichsprotectorate
+				freedom_level = 0.33
+			}
+		}
+		YMN = {
+			set_previous_government_type = yes
+			set_cosmetic_tag = YMN_SOL
+		}
 	}
 	ai_will_do = { factor = 40 }
 }
@@ -5286,7 +5578,7 @@ shared_focus = {
 		factor = 35
 	}
 	relative_position_id = SOL_conquer_GRI
-	x = 9
+	x = 10
 	y = 3
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_attack_bat"
