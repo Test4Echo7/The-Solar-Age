@@ -27,3 +27,7 @@
   KHM_SOL_DEF:0 "the Imperial Protectorate of Khamrin"
   KXN_SOL:0 "Imperial Protectorate of Lan Kir" #Alternate, Junta of Solarist Niriks
   KX_SOL_DEF:0 "the Imperial Protectorate of Lan Kir"
+  PLB_SOL:0 "Western Polar Pacification Zone"
+  PLB_SOL_DEF:0 "the Western Polar Pacification Zone"
+  PNG_SOL:0 "Eastern Polar Pacification Zone"
+  PNG_SOL_DEF:0 "the Eastern Polar Pacification Zone"

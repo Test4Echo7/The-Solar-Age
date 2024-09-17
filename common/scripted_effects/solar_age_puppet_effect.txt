@@ -1,0 +1,159 @@
+apply_SOL_cosmetic_tags_on_puppet = {
+    if = {
+        limit = {
+            original_tag = CRY
+            NOT = { has_global_flag = CRY_puppet_chosen }
+        }
+        if = {
+            limit = {
+                has_government = fascism
+            }
+            retire_country_leader = yes
+        }
+        PREV = {
+            country_event = { id = solarempire.131 hours = 1 }
+        }
+    }
+    else_if = {
+        limit = { original_tag = EQC }
+        every_possible_country = {
+            limit = {
+                has_character = EQS_SOL_arcane_nova
+            }
+            EQS_SOL_arcane_nova = {
+                retire = yes
+            }
+        }
+        promote_character = EQS_SOL_arcane_nova
+        set_party_name = { ideology = fascism long_name = EQC_SOL_fascism_party_long name = EQC_SOL_fascism_party }
+        if = {
+            limit = {
+                has_country_flag = EQC_destined_to_be_an_RK
+            }
+            PREV = { set_autonomy = { target = ROOT autonomy_state = autonomy_reichskommissariat } }
+        }
+        load_focus_tree = eqc_sol_focus
+        set_global_flag = SOL_chose_EQC_leader
+        set_province_name = { id = 10005 name = "Sunset" }
+    }
+    else_if = {
+        limit = { original_tag = PLB }
+        country_event = solarempire.1000
+    }
+    else_if = {
+        limit = { original_tag = GRF }
+        country_event = solarempire.1001
+    }
+    else_if = {
+        limit = { original_tag = PNG }
+        country_event = solarempire.1002
+    }
+    else_if = {
+        limit = { original_tag = STL }
+        country_event = solarempire.1003
+    }
+    else_if = {
+        limit = { original_tag = BUF }
+        country_event = solarempire.1004
+    }
+    else_if = {
+        limit = { original_tag = DRG }
+        country_event = solarempire.1005
+    }
+    else_if = {
+        limit = { original_tag = GFF }
+        country_event = solarempire.1006
+    }
+    else_if = {
+        limit = { original_tag = OLE }
+        country_event = solarempire.1008
+    }
+    else_if = {
+        limit = { original_tag = BAL }
+        country_event = solarempire.1009
+    }
+    else_if = {
+        limit = { original_tag = CES }
+        country_event = solarempire.1010
+    }
+    else_if = {
+        limit = { original_tag = JUN }
+        country_event = solarempire.1011
+    }
+    else_if = {
+        limit = { original_tag = SCS }
+        country_event = solarempire.1012
+    }
+    else_if = {
+        limit = { original_tag = STG }
+        country_event = solarempire.1013
+    }
+    else_if = {
+        limit = { original_tag = JAK }
+        country_event = solarempire.1015
+    }
+    else_if = {
+        limit = { original_tag = CHN }
+        country_event = solarempire.1016
+    }
+    else_if = {
+        limit = { original_tag = YAK }
+        country_event = solarempire.1017
+    }
+    else_if = {
+        limit = { original_tag = PCB }
+        country_event = solarempire.1019
+    }
+    else_if = {
+        limit = { original_tag = SDL }
+        country_event = solarempire.1020
+    }
+    else_if = {
+        limit = { original_tag = KAR }
+        country_event = solarempire.1021
+    }
+    else_if = {
+        limit = { original_tag = REE }
+        country_event = solarempire.1022
+    }
+    else_if = {
+        limit = { original_tag = YMN }
+        country_event = solarempire.1023
+    }
+    else_if = {
+        limit = { original_tag = HMR }
+        country_event = solarempire.1024
+    }
+    else_if = {
+        limit = { original_tag = OSQ }
+        country_event = solarempire.1025
+    }
+    else_if = {
+        limit = { original_tag = MTA }
+        country_event = solarempire.1026
+    }
+    else_if = {
+        limit = { original_tag = MGY }
+        country_event = solarempire.1027
+    }
+    else_if = {
+        limit = { original_tag = RIV }
+        country_event = solarempire.1028
+    }
+    else_if = {
+        limit = { original_tag = KIR }
+        country_event = solarempire.1029
+    }
+    else_if = {
+        limit = { original_tag = NVA }
+        country_event = solarempire.1030
+    }
+    else_if = {
+        limit = { original_tag = KHM }
+        country_event = solarempire.1031
+    }
+    else_if = {
+        limit = { original_tag = KXN }
+        country_event = solarempire.1032
+    }
+}

@@ -222,4 +222,52 @@ on_actions = {
             }
         }
     }
+    #ROOT = nation being released, FROM = overlord
+    on_release_as_puppet = {
+        effect = {
+            log = "[GetDateText]: [ROOT.GetName]: on_state_control_changed solar_age"
+            if = {
+                limit = {
+                    is_subject_of = event_target:solar_empire
+                    NOT = {
+                        original_tag = EQC
+                        original_tag = CRY
+                        original_tag = GRD
+                        has_country_flag = is_solar_puppet
+                    }
+                    OR = {
+                        original_tag = PLB
+                        original_tag = GRF
+                        original_tag = PNG
+                        original_tag = STL
+                        original_tag = BUF
+                        original_tag = DRG
+                        original_tag = GFF
+                        original_tag = OLE
+                        original_tag = BAL
+                        original_tag = CES
+                        original_tag = JUN
+                        original_tag = SCS
+                        original_tag = STG
+                        original_tag = JAK
+                        original_tag = CHN
+                        original_tag = YAK
+                        original_tag = SDL
+                        original_tag = YMN
+                        original_tag = MGY
+                        original_tag = KAR
+                        original_tag = REE
+                        original_tag = MTA
+                        original_tag = OSQ
+                        original_tag = RIV
+                        original_tag = KIR
+                        original_tag = NVA
+                        original_tag = KHM
+                        original_tag = KXN
+                    }
+                }
+                apply_SOL_cosmetic_tags_on_puppet = yes
+            }
+        }
+    }
 }

@@ -19,6 +19,17 @@ EQS_solar_fury_category = {
     }
     icon = celestia_cat
 }
+EQS_wunderwaffen_category = {
+    allowed = { tag = EQS }
+    visible = {
+        is_EQS_SOL = yes
+        has_country_flag = SOL_wunderwaffen_unlocked
+    }
+    priority = {
+        base = 139
+    }
+    icon = celestia_cat
+}
 EQS_BOP_sanity_category = {
     allowed = {
         tag = EQS

@@ -1,0 +1,51 @@
+sub_units = {
+
+    adeptus_astartes = {
+		sprite = infantry
+		map_icon_category = infantry
+		special_forces = yes
+
+		priority = 601
+		ai_priority = 200
+		active = no
+
+		type = {
+			infantry
+		}
+
+		group = infantry
+
+		categories = {
+			category_front_line
+			category_all_infantry
+			category_army
+			category_heavy_infantry
+			category_magical
+			category_magical_infantry
+		}
+
+		combat_width = 3
+
+		#Size Definitions
+		max_strength = 45
+		max_organisation = 90
+		default_morale = 0.4
+		manpower = 250
+
+		#Misc Abilities
+		training_time = 360
+		suppression = 3
+		weight = 0.75
+		armor_value = 25
+		hardness = 0.35
+		breakthrough = 0.2
+		ap_attack = 0.2
+
+		supply_consumption = 0.1
+
+		need = {
+			magical_equipment = 250
+		}
+	}
+
+}

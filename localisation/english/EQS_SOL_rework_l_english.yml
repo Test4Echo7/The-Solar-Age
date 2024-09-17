@@ -130,6 +130,17 @@
   SOL_mop_up_stragglers_desc:0 "The Harmonic Resistance's leadership has been crushed. There is no chance that another organized insurgency of their influence and strength will rise again. However, they were still able to thwart our stability and order, and there are still some who need to be shown the path of enlightenment. With their leaders imprisoned or killed, it will not be difficult to wipe out what's left of the rabble, and return our lands to peace once more."
   SOL_choose_flagship:0 "Designing the Empress's Flagship"
   SOL_choose_flagship_desc:0 "As our naval doctrines have improved and the underlying technology of warfare has advanced, it's become clear that the old ships that were built before the Empress ascended are no longer adequate for somepony of her stature. It is time that we decide upon what shall bear her name to all the world and stand as a symbol of the Imperial Navy's unmatched might!"
+  EQS_wunderwaffen_category:0 "Delving Science's Greatest Mysteries"
+  EQS_project_helios:0 "§OProject Helios§!"
+  EQS_project_nightvale:0 "§BProject Nightvale§!"
+  EQS_project_astartes:0 "§YProject Astartes§!"
+  EQS_project_astartes_desc:0 "Threats to our ponies exist around every corner. Whether it is from their brethren who wish to see the Order of [ROOT.GetNameDef]'s Harmony shattered or it is from those who are jealous of our prosperity and security, every day it is a struggle for our survival. While the Empress protects us, she cannot be everywhere at once. Therefore, we must expand who is able to do so. She is the ultimate pony, and nopony else can hope to achieve her levels of perfection. However, that does not mean we cannot try, especially with a few merciful donations."
+  EQS_project_mage:0 "Project Mage"
+  EQS_project_solaris:0 "Project Solaris"
+  EQS_project_inferno:0 "Project Inferno"
+  EQS_project_conflagration:0 "Project Conflagration"
+  EQS_project_evaporation:0 "Project Evaporation"
+  EQS_project_firestorm:0 "Project Firestorm"
 
   ###Flags and Custom Tooltips###
   SOL_has_captured_sunset:0 "Sunset Shimmer has been captured."
@@ -151,6 +162,7 @@
   EQS_advanced_boats_mtg:0 "We have researched either §YBattleship Killer Hull§! and §YRadar Battleships and Battlecruisers§! or §YFleet Carrier§!."
   EQS_advanced_boats_nomtg:0 "We have researched either §YCadance Class§!, or §YStygian Class§!, or §YStratusburg Class§!."
   EQS_get_better_tech_boi_tt:0 "We can build an even §Ostronger§! flagship if we progress §Yfurther§! in technology."
+  EQS_researching_wunderwaffen:0 "We are currently researching another project."
 
   ###Leader Traits###
   gifted:0 "Gifted"
@@ -249,7 +261,20 @@
   SOL_pax_solaris_desc:0 "The age of warfare has finally come to an end. Our Empress has carved a swath of land, the like of which the world has never seen. Ponies across the continents serve her with loyalty and love. Everycreature has been blessed by her sun and light.\n\nWe have entered a new era! An era of §OOrder§! and §RPeace.§!"
 
   ###Military###
+  SOL_modernize_relic:0 "Modernize the Relic"
+  SOL_modernize_relic_desc:0 "The Imperial Military is still a holdover from the time before the Empress ascended. Although it has served us well, the cruft is obvious, and there are many within who still cling to the mistakes of the past. Like the rest of society, there must be a complete and utter reorganization for there to be an effective defense force for the Empire."
   ###Army###
+  SOL_establish_solaris_militarium:0 "Establish the Solaris Militarium"
+  SOL_establish_solaris_militarium_desc:0 "Despite the reforms and forced progress that the Equestrian Army went through, it was kicking and screaming the entire way. It has served the Empress well, but it must be taken to pasture and a new, streamlined entity must take its place. Likewise, it must reflect the strength and beauty of the Empress, and each soldier in it will embody her will until their last breath."
+  SOL_inspect_officers:0 "Inspections of the Officers"
+  SOL_encourage_troops:0 ""Encouragement" of the Troops"
+  SOL_break_out_blueprints:0 "Break out Blueprints"
+  SOL_rearrange_command:0 "Rearranged High Command"
+  SOL_imperial_factory_tour:0 "Imperial Factory Tours"
+  SOL_motivate_engineers:0 "Motivations to the Engineers"
+  SOL_prevent_embarrassments:0 "Prevent Further Embarrassments"
+  SOL_traitors_reward:0 "A Traitors' Reward"
+  SOL_sun_shines:0 "The Sun Shines upon All"
   SOL_new_officers:0 "New Blood"
   SOL_new_officers_desc:0 "We have no shortage of ambitious, young or overlooked officers. While their potential might have been wasted under the old regime, the Empire will most certainly make good use of their skills."
   SOL_mage_army:0 "An Army of Mages"

@@ -305,6 +305,7 @@ country_event = { #Daybreaker marches and enters into the chambers of Grover, wh
 			}
 		}
 		GRD = {
+            set_country_flag = is_solar_puppet
             get_current_government_type = yes
             set_cosmetic_tag = GRI_SOL
 			if = {
@@ -387,6 +388,7 @@ country_event = { #Daybreaker smugly walks through Griffonstone, in a parade wit
 			}
 		}
 		GRD = {
+            set_country_flag = is_solar_puppet
             get_current_government_type = yes
             set_cosmetic_tag = GRI_SOL
 			if = {

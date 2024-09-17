@@ -1,0 +1,10 @@
+technologies = {
+    EQS_adeptus_astartes = {
+		research_cost = 1
+		allow = { always = no }
+
+		enable_subunits = {
+			adeptus_astartes
+		}
+	}
+}

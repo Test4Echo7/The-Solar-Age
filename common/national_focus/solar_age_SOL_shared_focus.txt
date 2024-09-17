@@ -2972,6 +2972,8 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_alicorn_weapons"
 		#Unlock decisions here
+		unlock_decision_category_tooltip = EQS_wunderwaffen_category
+		set_country_flag = SOL_wunderwaffen_unlocked
 	}
 	ai_will_do = { factor = 50 }
 }
@@ -6930,6 +6932,33 @@ shared_focus = {
 	ai_will_do = { factor = 50 }
 }
 
+shared_focus = {
+	id = SOL_isle_of_sun
+	x = 0
+	y = 1
+	relative_position_id = SOL_plumb_mountain_depths
+
+	cost = 10
+	prerequisite = { focus = SOL_plumb_mountain_depths }
+	available = {
+		PCB = {
+			exists = no
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_isle_of_sun"
+		1193 = {
+			add_core_of = ROOT
+		}
+		1194 = {
+			add_core_of = ROOT
+		}
+	}
+	ai_will_do = { factor = 90 }
+}
+
 ###EQC Internal Affairs###
 shared_focus = {
 	id = SOL_force_jet_sets_hoof
@@ -8261,7 +8290,7 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = SOL_reaarange_command
+	id = SOL_rearrange_command
 	x = 1
 	y = 1
 	relative_position_id = SOL_inspect_officers
@@ -8270,7 +8299,7 @@ shared_focus = {
 	prerequisite = { focus = SOL_inspect_officers }
 
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_reaarange_command"
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_rearrange_command"
 		#Idea here
 	}
 	ai_will_do = { factor = 100 }
@@ -8340,10 +8369,10 @@ shared_focus = {
 	id = SOL_traitors_reward
 	x = 0
 	y = 1
-	relative_position_id = SOL_reaarange_command
+	relative_position_id = SOL_rearrange_command
 
 	cost = 4
-	prerequisite = { focus = SOL_reaarange_command }
+	prerequisite = { focus = SOL_rearrange_command }
 	prerequisite = { focus = SOL_imperial_factory_tour }
 	mutually_exclusive = { focus = SOL_prevent_embarrassments }
 	mutually_exclusive = { focus = SOL_sun_shines }
