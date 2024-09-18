@@ -3,8 +3,74 @@ technologies = {
 		research_cost = 1
 		allow = { always = no }
 
+		enable_equipments = {
+			space_marine_bolt_gun_1
+			space_marine_armor_1
+		}
 		enable_subunits = {
 			adeptus_astartes
 		}
+	}
+	EQS_enhanced_matrices = {
+		research_cost = 1
+		allow = { always = no }
+
+		magical_equipment = {
+			soft_attack = 0.15
+		}
+		unicorn_company = {
+			soft_attack = 0.4
+			hard_attack = 0.4
+		}
+	}
+	EQS_portable_solar_panels = {
+		research_cost = 1
+		allow = { always = no }
+
+		navy_max_range_factor = 0.15
+		air_range_factor = 0.15
+		supply_node_range = 0.1
+	}
+	EQS_hot_fusion = {
+		research_cost = 1
+		allow = { always = no }
+
+		production_speed_buildings_factor = 0.15
+		industrial_capacity_factory = 0.1
+		industrial_capacity_dockyard = 0.1
+	}
+	EQS_super_flamers = {
+		research_cost = 1
+		allow = { always = no }
+
+		light_tank_flame_chassis = { soft_attack = 0.75 defense = 0.4 }
+		medium_tank_flame_chassis = { soft_attack = 0.75 defense = 0.4 }
+		heavy_tank_flame_chassis = { soft_attack = 0.75 defense = 0.4 }
+		modern_tank_flame_chassis = { soft_attack = 0.75 defense = 0.4 }
+		super_heavy_tank_flame_chassis = { soft_attack = 0.75 defense = 0.4 }
+	}
+	EQS_plasma_cannons = {
+		research_cost = 1
+		allow = { always = no }
+
+		battleship = {
+			hg_attack = 0.25
+			hg_armor_piercing = 0.25
+			naval_range = -0.1
+		}
+		battle_cruiser = {
+			hg_attack = 0.25
+			hg_armor_piercing = 0.25
+			naval_range = -0.1
+		}
+	}
+	EQS_pilot_drug_programs = {
+		research_cost = 1
+		allow = { always = no }
+
+		air_ace_generation_chance_factor = 0.1
+		air_agility_factor = 0.1
+		air_attack_factor = 0.05
+		air_accidents_factor = 0.25
 	}
 }

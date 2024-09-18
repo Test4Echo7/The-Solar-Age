@@ -1,0 +1,84 @@
+EQC_form_greater_new_mareland = {
+    EQC_war_for_greater_new_mareland = {
+        allowed = { tag = EQC }
+        available = {
+            OR = {
+                TAL = {
+                    all_cores_owned_by_ROOT_or_subject = no
+                }
+                NOT = { 376 = { is_owned_by = ROOT } }
+                NOT = { 406 = { is_owned_by = ROOT } }
+                NOT = { 473 = { is_owned_by = ROOT } }
+                NOT = { 375 = { is_owned_by = ROOT } }
+                NOT = { 369 = { is_owned_by = ROOT } }
+                NOT = { 370 = { is_owned_by = ROOT } }
+                NOT = { 372 = { is_owned_by = ROOT } }
+            }
+        }
+        visible = { has_country_leader = { character = EQS_SOL_arcane_nova ruling_only = yes } }
+        fire_only_once = yes
+        complete_effect = {
+            log = "[GetTimeDateText]: [Root.GetNameDef]: Decision EQC_war_for_greater_new_mareland"
+            ###Change these later to be wargoals on whoever owns the states
+            if = {
+                limit = { country_exists = TAL }
+                create_wargoal = {
+                    type = annex_everything
+                    target = TAL
+                }
+            }
+            if = {
+                limit = { country_exists = JER }
+                create_wargoal = {
+                    type = annex_everything
+                    target = JER
+                }
+            }
+            if = {
+                limit = { country_exists = WNG }
+                create_wargoal = {
+                    type = annex_everything
+                    target = WNG
+                }
+            }
+        }
+    }
+    EQC_proclaim_greater_new_mareland = {
+        allowed = { tag = EQC }
+        available = {
+            TAL = {
+                all_cores_owned_by_ROOT_or_subject = yes
+            }
+            376 = { is_owned_by = ROOT }
+            406 = { is_owned_by = ROOT }
+            473 = { is_owned_by = ROOT }
+            375 = { is_owned_by = ROOT }
+            369 = { is_owned_by = ROOT }
+            370 = { is_owned_by = ROOT }
+            372 = { is_owned_by = ROOT }
+        }
+        visible = {
+            has_country_leader = { character = EQS_SOL_arcane_nova ruling_only = yes }
+        }
+        fire_only_once = yes
+        complete_effect = {
+            log = "[GetTimeDateText]: [Root.GetNameDef]: Decision EQC_proclaim_greater_new_mareland"
+            every_state = {
+                limit = {
+                    is_core_of = TAL
+                }
+                add_core_of = ROOT
+            }
+            376 = { add_core_of = ROOT }
+            406 = { add_core_of = ROOT }
+            473 = { add_core_of = ROOT }
+            375 = { add_core_of = ROOT }
+            369 = { add_core_of = ROOT }
+            370 = { add_core_of = ROOT }
+            372 = { add_core_of = ROOT }
+            set_cosmetic_tag = EQC_SOL_romanophile
+            #New event of Arcane Nova proclaiming that a greater Marelandia for all of the ponies has been created
+        }
+        ai_will_do = { factor = 1000 }
+    }
+}

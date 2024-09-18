@@ -1,0 +1,43 @@
+EQS_SPC_01 = {
+	name = "Praetorian Guard"
+
+	for_countries = { EQS }
+
+	can_use = {
+        tag = EQS
+        is_EQS_SOL = yes
+        has_tech = EQS_adeptus_astartes
+    }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { EQS_INF_01 }
+
+	fallback_name = "%d Praetorian Guard"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "Legio I Primaris" "EQS_SOL_history_legio_I" }
+		2 = { "Legio II Dawn Angels" "EQS_SOL_history_legio_II" }
+		3 = { "Legio III Blood Ravens" "EQS_SOL_history_legio_III" }
+		4 = { "Legio IV Sun Sworn" "EQS_SOL_history_legio_IV" }
+		5 = { "Legio V Daughters of the Sun" }
+		6 = { "Legio VI Day Swords" }
+		7 = { "Legio VII Crimson Suns" }
+		8 = { "Legio VIII Morning Lords" }
+		9 = { "Legio IX Iron Hoofs" }
+		10 = { "Legio X Stellar Flares" }
+		11 = { "Legio XI Daybreaker's Own" }
+		12 = { "Legio XII Noon Heralds" }
+		13 = { "Legio XIII Ultrapraetorians" }
+		14 = { "Legio XIV Molten Wolves" }
+		15 = { "Legio XV Nightfellers" "EQS_SOL_history_legio_XV" }
+		16 = { "Legio XVI Night Terror" }
+		17 = { "Legio XVII Magic-Born " }
+		18 = { "Legio XVIII Angels of Light" }
+		19 = { "Legio XIX Dusk's Shield" }
+		20 = { "Legio XX Omega Legion" }
+	}
+}

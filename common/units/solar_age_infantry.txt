@@ -27,24 +27,57 @@ sub_units = {
 		combat_width = 3
 
 		#Size Definitions
-		max_strength = 45
-		max_organisation = 90
+		max_strength = 50
+		max_organisation = 100
 		default_morale = 0.4
 		manpower = 250
 
 		#Misc Abilities
-		training_time = 360
-		suppression = 3
-		weight = 0.75
-		armor_value = 25
-		hardness = 0.35
-		breakthrough = 0.2
-		ap_attack = 0.2
+		training_time = 400
+		suppression = 3.5
+		weight = 0.8
 
-		supply_consumption = 0.1
+		supply_consumption = 0.2
 
 		need = {
-			magical_equipment = 250
+			space_marine_bolt_gun = 100
+			space_marine_armor = 100
+		}
+
+		urban = {
+			attack = 0.25
+			defence = 0.1
+			movement = -0.1
+		}
+		fort = {
+			attack = 0.45
+			defence = 0.25
+		}
+		forest = {
+			attack = -0.25
+			defence = 0.1
+		}
+		jungle = {
+			attack = -0.25
+			defence = 0.1
+		}
+		river = {
+			attack = -0.5
+		}
+		amphibious = {
+			attack = -0.75
+		}
+		marsh = {
+			attack = -0.25
+			defence = 0.15
+		}
+		hills = {
+			attack = -0.15
+			defence = 0.2
+		}
+		mountain = {
+			attack = -0.35
+			defence = 0.4
 		}
 	}
 

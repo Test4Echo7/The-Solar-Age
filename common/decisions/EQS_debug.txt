@@ -53,4 +53,37 @@ EQS_debug_category = {
             set_country_flag = EQS_sunset_shimmer_arrived
         }
     }
+    EQS_space_marines = {
+        allowed = {
+            tag = EQS
+        }
+        complete_effect = {
+            set_technology = {
+                EQS_adeptus_astartes = 1
+            }
+            division_template = {
+                name = "Adeptus Praetorian"
+                is_locked = yes
+                division_cap = 4
+                division_names_group = EQS_SPC_01
+                priority = 2
+                template_counter = 2
+                force_allow_recruiting = yes
+                regiments = {
+                    adeptus_astartes = { x = 0 y = 0 }
+                    adeptus_astartes = { x = 0 y = 1 }
+                    adeptus_astartes = { x = 0 y = 2 }
+                    adeptus_astartes = { x = 1 y = 0 }
+                    adeptus_astartes = { x = 1 y = 1 }
+                }
+            }
+            3 = {
+                create_unit = {
+                    division = "division_template = \"Adeptus Praetorian\" start_experience_factor = 1"
+                    owner = EQS
+                    prioritize_location = 179
+                }
+            }
+        }
+    }
 }

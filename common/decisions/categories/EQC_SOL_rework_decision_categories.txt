@@ -1,0 +1,6 @@
+EQC_form_greater_new_mareland = {
+    available = {
+        tag = EQC
+    }
+    visible_when_empty = no
+}
