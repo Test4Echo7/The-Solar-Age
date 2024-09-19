@@ -6011,7 +6011,7 @@ shared_focus = {
 		}
 	}
 	relative_position_id = examine_the_situation
-	x = -11
+	x = -16
 	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_increase_presense_inCRY"
@@ -6177,7 +6177,7 @@ shared_focus = {
 	x = -4
 	y = 2
 	offset = {
-		x = -7
+		x = -12
 		y = 1
 		trigger = { is_EQS_SOL = yes }
 	}
@@ -6261,7 +6261,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	offset = {
-		x = 3
+		x = 2
 		y = 0
 		trigger = { is_EQS_SOL = yes }
 	}
@@ -6339,7 +6339,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_update_northern_tactics
-	x = -2
+	x = -1
 	y = 1
 	relative_position_id = rainbow_falls_resort
 
@@ -6369,7 +6369,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_establish_crystal_legion
-	x = 0
+	x = 1
 	y = 1
 	relative_position_id = rainbow_falls_resort
 
@@ -6597,7 +6597,7 @@ shared_focus = {
 		factor = 150
 	}
 	relative_position_id = examine_the_situation
-	x = -6
+	x = -8
 	y = 1
 	prerequisite = {
 		focus = examine_the_situation
@@ -6617,6 +6617,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_bat_problems"
 		###Event of the military going in to put down a riot by the bats, and otherwise having to deal with their issues, and Daybreaker resolving to deal with it in the most appropriate punishment possible; should be a bit of war support and command power
+		country_event = solarreworked.42
 		#if = {
 		#	limit = {
 		#		has_completed_focus = SOL_empress_protector
@@ -6639,19 +6640,46 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = SOL_what_homes
+	id = SOL_fire_and_brimstone
 	icon = GFX_goal_bat
 	x = -2
 	y = 1
 	relative_position_id = SOL_bat_problems
 
-	cost = 5
+	cost = 3
 	prerequisite = { focus = SOL_bat_problems }
+	mutually_exclusive = { focus = SOL_enlighten_darkness }
+	available = { has_war = no }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_bat_problems"
+		add_war_support = 0.03
+		add_political_power = 75
+	}
+	ai_will_do = {
+		factor = 30
+		modifier = {
+			has_completed_focus = SOL_god_empress
+			factor = 10
+		}
+	}
+}
+
+shared_focus = {
+	id = SOL_what_homes
+	icon = GFX_goal_bat
+	x = -1
+	y = 1
+	relative_position_id = SOL_fire_and_brimstone
+
+	cost = 5
+	prerequisite = { focus = SOL_fire_and_brimstone }
 	available = { has_war = no }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_what_homes"
 		###Event of soldiers going in to seize land that the thestrals currently occupy, which leads to conflict and a number of dead thestrals; should give also 1 building slot in a couple of places or compliance
+		country_event = solarreworked.43
 	}
 	ai_will_do = { factor = 70 }
 }
@@ -6659,17 +6687,18 @@ shared_focus = {
 shared_focus = {
 	id = SOL_what_jobs
 	icon = GFX_goal_bat
-	x = 2
+	x = 1
 	y = 1
-	relative_position_id = SOL_bat_problems
+	relative_position_id = SOL_fire_and_brimstone
 
 	cost = 5
-	prerequisite = { focus = SOL_bat_problems }
+	prerequisite = { focus = SOL_fire_and_brimstone }
 	available = { has_war = no }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_what_jobs"
 		###Event of some thestrals being kicked out or locked out of their old place of work, including ones that they actually owned, and them fighting with some of the guard to try and in, and failing; should be alos a couple of factories provided as well as the pp
+		country_event = solarreworked.44
 	}
 	ai_will_do = { factor = 70 }
 }
@@ -6683,39 +6712,394 @@ shared_focus = {
 
 	cost = 7
 	prerequisite = { focus = SOL_what_homes }
-	mutually_exclusive = { focus = SOL_useful_servants }
+	prerequisite = { focus = SOL_what_jobs }
 	available = { has_war = no }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_burn_bats"
 		###Event like the vanilla God-Empress burning event, except follow the vigilantes stirred up by faithful ponies to Daybreaker to wipe out the filth of darkness; have the same effect as vanilla, but also +10% ST
+		country_event = solarreworked.45
 	}
-	ai_will_do = {
-		factor = 50
-		modifier = {
-			has_completed_focus = SOL_god_empress
-			factor = 5
+	ai_will_do = { factor = 150 }
+}
+
+shared_focus = {
+	id = SOL_enlighten_darkness
+	icon = GFX_goal_bat
+	x = 2
+	y = 1
+	relative_position_id = SOL_bat_problems
+
+	cost = 3
+	prerequisite = { focus = SOL_bat_problems }
+	mutually_exclusive = { focus = SOL_fire_and_brimstone }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_enlighten_darkness"
+		add_stability = -0.05
+		add_political_power = -50
+		every_state = {
+			limit = {
+				has_state_flag = eqs_bat_state
+			}
+			add_compliance = 2
+			add_resistance = -5
 		}
+	}
+	ai_will_do = { factor = 120 }
+}
+
+shared_focus = {
+	id = SOL_second_class_employers
+	icon = GFX_goal_bat
+	x = -1
+	y = 1
+	relative_position_id = SOL_enlighten_darkness
+
+	cost = 5
+	prerequisite = { focus = SOL_enlighten_darkness }
+	available = { has_war = no }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_second_class_employers"
+		country_event = solarreworked.46
+	}
+	ai_will_do = { factor = 70 }
+}
+
+shared_focus = {
+	id = SOL_mandatory_education
+	icon = GFX_goal_bat
+	x = 1
+	y = 1
+	relative_position_id = SOL_enlighten_darkness
+
+	cost = 5
+	prerequisite = { focus = SOL_enlighten_darkness }
+	available = { has_war = no }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_mandatory_education"
+		country_event = solarreworked.47
 	}
 }
 
 shared_focus = {
 	id = SOL_useful_servants
 	icon = GFX_goal_bat
-	x = -1
+	x = 1
 	y = 1
-	relative_position_id = SOL_what_jobs
+	relative_position_id = SOL_second_class_employers
 
 	cost = 7
-	prerequisite = { focus = SOL_what_jobs }
-	mutually_exclusive = { focus = SOL_burn_bats }
+	prerequisite = { focus = SOL_second_class_employers }
+	prerequisite = { focus = SOL_mandatory_education }
 	available = { has_war = no }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_useful_servants"
 		###Event a thestral being forcibly taken into service for the armed forces, since they can be used as both fodder and night scouts (with appropriate detonation enchantments if they try to flee), and she tries to fight it off, but is ultimately taken anyway, after basically being treated like a raging animal
+		country_event = solarreworked.48
+	}
+	ai_will_do = { factor = 150 }
+}
+
+shared_focus = {
+	id = SOL_peninsula_of_damned
+	icon = GFX_goal_bat
+	x = 2
+	y = 1
+	relative_position_id = SOL_burn_bats
+
+	cost = 5
+	prerequisite = {
+		focus = SOL_burn_bats
+		focus = SOL_useful_servants
+	}
+	available = { has_war = no }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_peninsula_of_damned"
+		if = {
+			limit = {
+				has_completed_focus = SOL_burn_bats
+			}
+			#Reduce pop further
+			add_stability = 0.1
+		}
+		if = {
+			limit = { has_completed_focus = SOL_useful_servants }
+			add_stability = -0.05
+			random_state = {
+				limit = {
+					has_state_flag = eqs_bat_state
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_state = {
+				limit = { has_state_flag = eqs_bat_state }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	ai_will_do = { factor = 80 }
+}
+
+shared_focus = {
+	id = SOL_prison_of_fire
+	icon = GFX_goal_bat
+	x = 0
+	y = 1
+	relative_position_id = SOL_peninsula_of_damned
+
+	cost = 5
+	prerequisite = { focus = SOL_peninsula_of_damned }
+	available = {
+		has_war = no
+		owns_state = 17
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_prison_of_fire"
+		###Maybe event of some prisoners, not even thestrals, necessarily, to the prison that has been built within the Badlands, deep within it, and seeing how they will be given toils that they believe will not be possible to endure, and it is a mix of many different species there, since it is for all enemies of the Empress
+		17 = {
+			add_manpower = 35000
+			add_resource = {
+				type = steel
+				amount = 8
+			}
+			add_resource = {
+				type = oil
+				amount = 4
+			}
+			#Add modifier here
+		}
+	}
+	ai_will_do = { factor = 80 }
+}
+
+shared_focus = {
+	id = SOL_peaks_of_wealth
+	icon = GFX_goal_bat
+	x = 2
+	y = 1
+	relative_position_id = SOL_peninsula_of_damned
+
+	cost = 5
+	prerequisite = { focus = SOL_peninsula_of_damned }
+	available = { has_war = no }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_peaks_of_wealth"
+		30 = {
+			add_resource = {
+				type = chromium
+				amount = 6
+			}
+			add_resource = {
+				type = aluminium
+				amount = 8
+			}
+		}
 	}
 	ai_will_do = { factor = 100 }
+}
+
+shared_focus = {
+	id = SOL_remote_no_more
+	icon = GFX_goal_bat
+	x = -2
+	y = 2
+	relative_position_id = SOL_peninsula_of_damned
+
+	cost = 6
+	prerequisite = { focus = SOL_peninsula_of_damned }
+	available = { has_war = no }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_remote_no_more"
+		#Add stuff here
+	}
+	ai_will_do = { factor = 70 }
+}
+
+shared_focus = {
+	id = SOL_expand_oil_fields
+	icon = GFX_goal_bat
+	x = -1
+	y = 1
+	relative_position_id = SOL_peaks_of_wealth
+
+	cost = 7
+	prerequisite = {
+		focus = SOL_prison_of_fire
+		focus = SOL_peaks_of_wealth
+	}
+	available = { has_war = no }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_expand_oil_fields"
+		353 = {
+			add_resource = {
+				type = oil
+				amount = 30
+			}
+		}
+	}
+	ai_will_do = { factor = 65 }
+}
+
+shared_focus = {
+	id = SOL_modern_south_east
+	icon = GFX_goal_bat
+	x = -1
+	y = 1
+	relative_position_id = SOL_remote_no_more
+
+	cost = 8
+	prerequisite = { focus = SOL_remote_no_more }
+	mutually_exclusive = { focus = SOL_moonspeaker_tax }
+	mutually_exclusive = { focus = SOL_replanting_jungle }
+	available = { has_war = no }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_modern_south_east"
+		random_state = {
+			limit = {
+				has_state_flag = eqs_bat_state
+				is_owned_by = ROOT
+				NOT = { state = 30 }
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_state = {
+			limit = {
+				has_state_flag = eqs_bat_state
+				is_owned_by = ROOT
+				NOT = { state = 30 }
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		30 = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+			increase_state_category = yes
+		}
+		random_state = {
+			limit = {
+				has_state_flag = eqs_bat_state
+				is_owned_by = ROOT
+				NOT = { state = 30 }
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+			increase_state_category = yes
+		}
+	}
+	ai_will_do = { factor = 75 }
+}
+
+shared_focus = {
+	id = SOL_moonspeaker_tax
+	icon = GFX_goal_bat
+	x = 1
+	y = 1
+	relative_position_id = SOL_remote_no_more
+
+	cost = 8
+	prerequisite = { focus = SOL_remote_no_more }
+	prerequisite = { focus = SOL_prison_of_fire }
+	mutually_exclusive = { focus = SOL_modern_south_east }
+	mutually_exclusive = { focus = SOL_replanting_jungle }
+	available = {
+		OR = {
+			has_completed_focus = SOL_empress_protector
+			has_completed_focus = SOL_empress_mother
+		}
+		has_war = no
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_moonspeaker_tax"
+		###Event of a soldier going around getting more taxes from the Moonspeakers, and his general distaste of the city of the thestrals, especially since the Moonspeakers are incredibly strange to him, and also because they like to hex whoever taxes them, which they try to do again, but he does get the taxes for basically allowing them to exist and not be fully allied with Daybreaker
+	}
+	ai_will_do = { factor = 120 }
+}
+
+shared_focus = {
+	id = SOL_replanting_jungle
+	icon = GFX_goal_bat
+	x = 0
+	y = 1
+	relative_position_id = SOL_expand_oil_fields
+
+	cost = 8
+	prerequisite = { focus = SOL_expand_oil_fields }
+	mutually_exclusive = { focus = SOL_modern_south_east }
+	mutually_exclusive = { focus = SOL_moonspeaker_tax }
+	available = { has_war = no }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_replanting_jungle"
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				has_state_flag = eqs_bat_state
+				NOT = { state = 40 }
+				NOT = { state = 30 }
+			}
+			add_resource = {
+				type = rubber
+				amount = 20
+			}
+		}
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				has_state_flag = eqs_bat_state
+				NOT = { state = 40 }
+				NOT = { state = 30 }
+			}
+			add_resource = {
+				type = rubber
+				amount = 15
+			}
+		}
+	}
+	ai_will_do = { factor = 50 }
 }
 
 ###Peurto Caballo gets the CRY treatment###

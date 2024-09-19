@@ -19,26 +19,62 @@ EQC_form_greater_new_mareland = {
         fire_only_once = yes
         complete_effect = {
             log = "[GetTimeDateText]: [Root.GetNameDef]: Decision EQC_war_for_greater_new_mareland"
-            ###Change these later to be wargoals on whoever owns the states
-            if = {
-                limit = { country_exists = TAL }
-                create_wargoal = {
-                    type = annex_everything
-                    target = TAL
+            ###Consider adding effect to transfer territory if GRI is controlling it and also a subject of EQS
+            hidden_effect = {
+                every_state = {
+                    limit = { is_core_of = TAL }
+                    add_claim_by = ROOT
+                }
+                376 = { add_claim_by = ROOT }
+                406 = { add_claim_by = ROOT }
+                473 = { add_claim_by = ROOT }
+                375 = { add_claim_by = ROOT }
+                369 = { add_claim_by = ROOT }
+                370 = { add_claim_by = ROOT }
+                372 = { add_claim_by = ROOT }
+            }
+            366 = {
+                controller = {
+                    ROOT = {
+                        create_wargoal = {
+                            type = take_state_focus
+                            target = PREV
+                            generator = { 366 }
+                        }
+                    }
                 }
             }
-            if = {
-                limit = { country_exists = JER }
-                create_wargoal = {
-                    type = annex_everything
-                    target = JER
+            372 = {
+                controller = {
+                    ROOT = {
+                        create_wargoal = {
+                            type = take_state_focus
+                            target = PREV
+                            generator = { 372 }
+                        }
+                    }
                 }
             }
-            if = {
-                limit = { country_exists = WNG }
-                create_wargoal = {
-                    type = annex_everything
-                    target = WNG
+            376 = {
+                controller = {
+                    ROOT = {
+                        create_wargoal = {
+                            type = take_state_focus
+                            target = PREV
+                            generator = { 376 }
+                        }
+                    }
+                }
+            }
+            406 = {
+                controller = {
+                    ROOT = {
+                        create_wargoal = {
+                            type = take_state_focus
+                            target = PREV
+                            generator = { 406 }
+                        }
+                    }
                 }
             }
         }
@@ -77,7 +113,7 @@ EQC_form_greater_new_mareland = {
             370 = { add_core_of = ROOT }
             372 = { add_core_of = ROOT }
             set_cosmetic_tag = EQC_SOL_romanophile
-            #New event of Arcane Nova proclaiming that a greater Marelandia for all of the ponies has been created
+            #News event of Arcane Nova proclaiming that a greater Marelandia for all of the ponies has been created
         }
         ai_will_do = { factor = 1000 }
     }

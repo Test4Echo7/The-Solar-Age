@@ -2739,12 +2739,31 @@ country_event = { #Solar bats
 
 				traits = { promising_general infantry_officer infantry_leader thestral_race_trait }
 				skill = 1
-				attack_skill = 2
-				defense_skill = 3
-				planning_skill = 2
-				logistics_skill = 2
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
 				legacy_id = 40
-			} custom_effect_tooltip = ksen_autumn_stats_tp
+			} custom_effect_tooltip = new_ksen_autumn_stats_tp
+		}
+		if = {
+			limit = { NOT = { EQS_gushing_pulse = { has_character_flag = EQS_EEEEEEEEE } } }
+			EQS_gushing_pulse = { set_character_flag = EQS_EEEEEEEEE }
+			custom_effect_tooltip = gushing_pulse_stats_tp
+		}
+		if = {
+			limit = { EQS_wintergleam = { is_unit_leader = no } }
+			add_corps_commander_role = {
+				character = EQS_wintergleam
+
+				traits = { thestral_race_trait promising_general armor_officer }
+				skill = 2
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 1
+				logistics_skill = 2
+			}
+			custom_effect_tooltip = wintergleam_stats_tp
 		}
 		every_state = {
 			limit = {
@@ -2986,6 +3005,18 @@ country_event = { #BURN THE BATS, BURN THE BATS, MAKE THEM GO AND NOT COME BACK
 			}
 		}
 		#### Add entry for Nightmareia when it comes out i guess
+		#Doing the devs' work - T4E
+		if = {
+			limit  = {
+				BAT = {
+					exists = yes
+					NOT = { has_war_with = ROOT }
+				}
+			}
+			BAT = {
+				country_event = solarempire.43
+			}
+		}
 	}
 }
 country_event = { #Batfugees
@@ -3056,6 +3087,7 @@ country_event = { #Add bat resistance
 			}
 			remove_core_of = ROOT
 			add_claim_by = ROOT
+			start_resistance = yes
 			set_state_flag = eqs_bat_state
 		}
 	}

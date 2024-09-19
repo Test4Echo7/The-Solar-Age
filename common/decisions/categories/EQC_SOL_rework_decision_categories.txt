@@ -3,4 +3,7 @@ EQC_form_greater_new_mareland = {
         tag = EQC
     }
     visible_when_empty = no
+    priority = {
+        base = 130
+    }
 }

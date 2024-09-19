@@ -1,2 +1,5 @@
 ﻿l_english:
   new_daybreaker_stats_tp:0 "§gLevel§!: §Y4§!, (£trait_attack §Y4§!, £trait_defense §Y2§!, £trait_planning §Y4§!, £trait_logistics §Y3§!)\n§gTraits§!: §C$bearer_of_the_sun$§!\n\n"
+  new_ksen_autumn_stats_tp:0 "§gLevel§!: §Y1§!, (£trait_attack §Y1§!, £trait_defense §Y1§!, £trait_planning §Y1§!, £trait_logistics §Y1§!)\n§gTraits§!: §C$promising_general$§!, §C$infantry_officer$§!, §C$infantry_leader$§!\n\n"
+  gushing_pulse_stats_tp:0 "§YGushing Pulse§! becomes a General.\n§gLevel§!: §Y3§!, (£trait_attack §Y3§!, £trait_defense §Y1§!, £trait_planning §Y4§!, £trait_logistics §Y2§!)\n§gTraits§!: §C$harsh_leader$§!, §C$jungle_rat$§!, §C$ranger$§!\n\n"
+  wintergleam_stats_tp:0 "§gLevel§!: §Y2§!, (£trait_attack §Y2§!, £trait_defense §Y2§!, £trait_planning §Y1§!, £trait_logistics §Y2§!)\n§gTraits§!: §C$promising_general$§!, §C$armor_officer$§!\n\n"

@@ -196,6 +196,37 @@ characters = {
             }
 		}
 	}
+	EQS_gushing_pulse = {
+		name = EQS_gushing_pulse
+		gender = female
+		portraits = {
+			army = {
+				large = "gfx/leaders/EQS/Gushing_Pulse.tga"
+				small = "gfx/interface/ideas/advisors/EQS/EQS_gushing_pulse.tga"
+			}
+		}
+		corps_commander = { #Because Clausewitz is that special that it can't calculate pip buffs after game start
+			traits = { thestral_race_trait harsh_leader jungle_rat ranger }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 4
+			logistics_skill = 2
+			visible = {
+				has_character_flag = EQS_EEEEEEEEE
+			}
+		}
+	}
+	EQS_wintergleam = {
+		name = EQS_wintergleam
+		gender = female
+		portraits = {
+			army = {
+				large = "gfx/leaders/EQS/Wintergleam.tga"
+				small = "gfx/interface/ideas/advisors/EQS/EQS_wintergleam.tga"
+			}
+		}
+	}
 	GRI_daybreaker = {
 		name = EQS_SOL_daybreaker
 		gender = female

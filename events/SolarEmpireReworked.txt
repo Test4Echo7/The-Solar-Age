@@ -18,6 +18,320 @@ country_event = { #Daybreaker meets with Neighsay, whom she has summoned in orde
     }
 }
 
+country_event = { #A number of soldiers return from putting down another uprising by the thestrals, and after recounting the casualties, learn news that the Empress will finally be dealing with them, and they eagerly hope it leads to some sort of purge, since it's been a pain in the butt for months
+    id = solarreworked.42
+    title = solarreworked.42.t
+    desc = solarreworked.42.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.42"}
+
+    is_triggered_only = yes
+
+    option = { #About time!
+        name = solarreworked.42.a
+        add_command_power = 25
+    }
+}
+
+country_event = { #A short event following a thestral as they attempt to fight off some different troops or the like from the Solar Empire, who are going through their village, in order for them to have more living room for normal ponies, and also so that they can be more closely watched in camps and the like, and they ultimately fail at repelling the invaders, and are arrested
+    id = solarreworked.43
+    title = solarreworked.43.t
+    desc = solarreworked.43.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.43"}
+
+    is_triggered_only = yes
+
+    option = { #I'm just living my life, here!
+        name = solarreworked.43.a
+        add_stability = 0.05
+    }
+}
+
+country_event = { #Short event of some thestrals being locked out of their former places of employment, as they have been deemed unworthy and dangerous to work, and they can't even find jobs with thestral employers, since the assets have been seized to give to other ponies instead
+    id = solarreworked.44
+    title = solarreworked.44.t
+    desc = solarreworked.44.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.44"}
+
+    is_triggered_only = yes
+
+    option = { #Because that's fair!
+        name = solarreworked.44.a
+        add_political_power = 50
+        random_state = {
+            limit = {
+                has_state_flag = eqs_bat_state
+                is_owned_by = ROOT
+            }
+            add_extra_state_building_slot = 1
+            add_building_construction = {
+                type = arms_factory
+                level = 1
+                instant_build = yes
+            }
+        }
+    }
+}
+
+country_event = { #Follow a group of fanatical followers of Daybreaker, who have been spun into a frenzy by some of her anti-thestral rhetoric, going into a nearby village in Hollow Shades, and they get into a large conflict with the bats there, as they see them as a threat to their existence, but ultimately the vigilantes win out, and set fire to the town and some of the thestrals there
+    id = solarreworked.45
+    title = solarreworked.45.t
+    desc = solarreworked.45.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.45"}
+
+    is_triggered_only = yes
+
+    option = { #BURN THE BATS! BURN THE BATS!
+        name = solarreworked.45.a
+        add_political_power = 100
+		if = {
+			limit = {
+				EQS_SOL_comet_trail = { is_unit_leader = yes }
+			}
+			remove_unit_leader_role = EQS_SOL_comet_trail
+		}
+		save_current_manpower = yes
+		40 = {
+			add_manpower = -75000
+			damage_building = {
+				type = infrastructure
+				damage = 2
+			}
+		}
+		31 = { add_manpower = -50000 }
+		36 = { add_manpower = -5000 }
+		24 = {
+			add_manpower = -50000
+			damage_building = {
+				type = infrastructure
+				damage = 2
+			}
+		}
+		81 = { add_manpower = -50000 }
+		350 = { add_manpower = -50000 }
+		32 = { add_manpower = -50000 }
+		25 = { add_manpower = -50000 }
+		30 = { add_manpower = -50000 }
+		restore_previous_manpower = yes
+		every_state = {
+			limit = {
+				OR = {
+					state = 40
+					state = 31
+					state = 36
+					state = 24
+					state = 81
+					state = 350
+					state = 32
+					state = 25
+					state = 30
+				}
+			}
+			add_core_of = ROOT
+			#clr_state_flag = eqs_bat_state
+		}
+		if = {
+			limit = {
+				JER = {
+					exists = yes
+					NOT = { has_war_with = ROOT }
+				}
+			}
+			JER = {
+				country_event = solarempire.43
+			}
+		}
+		if = {
+			limit = {
+				HAU = {
+					exists = yes
+					NOT = { has_war_with = ROOT }
+				}
+			}
+			HAU = {
+				country_event = solarempire.43
+			}
+		}
+		if = {
+			limit = {
+				TRD = {
+					exists = yes
+					NOT = { has_war_with = ROOT }
+				}
+			}
+			TRD = {
+				country_event = solarempire.43
+			}
+		}
+		if = {
+			limit  = {
+				BAT = {
+					exists = yes
+					NOT = { has_war_with = ROOT }
+				}
+			}
+			BAT = {
+				country_event = solarempire.43
+			}
+		}
+    }
+}
+
+country_event = { #Event of a thestral looking for work and having a hard time of it, even with the other thestral employers in their city, since every other thestral is also looking for work there, and ultimately has to rely upon the charity of the few ponies who actually treat them nice, although they are hopeful for some work eventually
+    id = solarreworked.46
+    title = solarreworked.46.t
+    desc = solarreworked.46.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.46"}
+
+    is_triggered_only = yes
+
+    option = { #Tomorrow will be the day!
+        name = solarreworked.46.a
+        add_stability = -0.1
+        random_state = {
+            limit = {
+                is_owned_by = ROOT
+                has_state_flag = eqs_bat_state
+            }
+            add_extra_state_building_slot = 2
+            add_building_construction = {
+                type = industrial_complex
+                level = 1
+                instant_build = yes
+            }
+            add_building_construction = {
+                type = arms_factory
+                level = 1
+                instant_build = yes
+            }
+        }
+        random_state = {
+            limit = {
+                is_owned_by = ROOT
+                has_state_flag = eqs_bat_state
+            }
+            add_extra_state_building_slot = 1
+            add_building_construction = {
+                type = arms_factory
+                level = 1
+                instant_build = yes
+            }
+        }
+        random_state = {
+            limit = {
+                is_owned_by = ROOT
+                has_state_flag = eqs_bat_state
+            }
+            add_extra_state_building_slot = 2
+            add_building_construction = {
+                type = industrial_complex
+                level = 2
+                instant_build = yes
+            }
+        }
+    }
+}
+
+country_event = { #Event of some thestrals gonig through a tutoring class with a Solarist teacher, who is going through again and again some of the tenets of being a Solarist citizen, and that Daybreaker is the only pony worth following, for she has all of the interests of her ponies at heart, even thestrals, although they must accept that their corruption makes it more difficult for them
+    id = solarreworked.47
+    title = solarreworked.47.t
+    desc = solarreworked.47.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.47"}
+
+    is_triggered_only = yes
+
+    option = { #Because that's what you want to teach foals!
+        name = solarreworked.47.a
+        add_stability = -0.05
+        add_tech_bonus = {
+            name = race_bonus
+            uses = 1
+            bonus = 1.25
+            category = race_tech
+        }
+        add_tech_bonus = {
+            name = nightvision_bonus
+            uses = 1
+            bonus = 1.5
+            ahead_reduction = 3
+            technology = night_vision
+        }
+    }
+}
+
+country_event = { #Event of a thestral officer being pushed to her limit, after she has been forcibly pushed into the army; the trainer is harsh with her, and pushes her right to over her edge, since they are being used as front-line troops and officers in more dangerous places, since they are inferior creatures
+    id = solarreworked.48
+    title = solarreworked.48.t
+    desc = solarreworked.48.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.45"}
+
+    is_triggered_only = yes
+
+    option = { #Put your back into it!
+        name = solarreworked.48.a
+        add_political_power = -100
+		add_war_support = -0.05
+		if = {
+			limit = {
+				EQS_SOL_ksen_autumn = { is_unit_leader = no }
+			}
+			add_corps_commander_role = {
+				character = EQS_SOL_ksen_autumn
+
+				traits = { promising_general infantry_officer infantry_leader thestral_race_trait }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+				legacy_id = 40
+			} custom_effect_tooltip = new_ksen_autumn_stats_tp
+		}
+		if = {
+			limit = { NOT = { EQS_gushing_pulse = { has_character_flag = EQS_EEEEEEEEE } } }
+			EQS_gushing_pulse = { set_character_flag = EQS_EEEEEEEEE }
+			custom_effect_tooltip = gushing_pulse_stats_tp
+		}
+		if = {
+			limit = { EQS_wintergleam = { is_unit_leader = no } }
+			add_corps_commander_role = {
+				character = EQS_wintergleam
+
+				traits = { thestral_race_trait promising_general armor_officer }
+				skill = 2
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 1
+				logistics_skill = 2
+			}
+			custom_effect_tooltip = wintergleam_stats_tp
+		}
+		every_state = {
+			limit = {
+				OR = {
+					state = 40
+					state = 31
+					state = 36
+					state = 24
+					state = 81
+					state = 350
+					state = 32
+					state = 25
+					state = 30
+				}
+			}
+			add_core_of = ROOT
+			#clr_state_flag = eqs_bat_state
+		}
+    }
+}
+
 ###BoP###
 country_event = {
     id = solarreworked.50
