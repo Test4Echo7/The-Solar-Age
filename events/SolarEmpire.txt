@@ -3067,6 +3067,8 @@ country_event = { #Add bat resistance
 		days = 7
 	}
 
+	fire_only_once = yes
+
 	option = {
 		name = solarempire.44.a
 		add_stability = -0.05
@@ -4816,7 +4818,7 @@ country_event = { # celestia Puppet
 	hidden = yes
 	is_triggered_only = yes
 	option = {
-		set_cosmetic_tag = PLB_SOL
+		set_cosmetic_tag = PLB_SOL_new
 
 		set_country_flag = is_solar_puppet
 	}
@@ -4838,7 +4840,7 @@ country_event = { # celestia Puppet
 	hidden = yes
 	is_triggered_only = yes
 	option = {
-		set_cosmetic_tag = PNG_SOL
+		set_cosmetic_tag = PNG_SOL_new
 		set_country_flag = is_solar_puppet
 	}
 }
@@ -5242,6 +5244,197 @@ country_event = { # celestia Puppet
 	is_triggered_only = yes
 	option = {
 		set_cosmetic_tag = KXN_SOL
+
+		set_country_flag = is_solar_puppet
+	}
+}
+
+country_event = { # celestia Puppet
+	id = solarempire.1033
+	immediate = {log = "[GetDateText]: [Root.GetName]: event solarempire.1033"}
+	hidden = yes
+
+	is_triggered_only = yes
+	option = {
+		set_cosmetic_tag = FBK_SOL
+		#One puppet only
+		if = {
+			limit = {
+				country_exists = WAT
+				is_subject_of = OVERLORD
+			}
+			annex_country = {
+				target = WAT
+			}
+			every_state = {
+				limit = {
+					is_core_of = WAT
+					is_owned_and_controlled_by = ROOT
+				}
+				add_core_of = ROOT
+			}
+		}
+		if = {
+			limit = {
+				country_exists = FIR
+				is_subject_of = OVERLORD
+			}
+			annex_country = {
+				target = FIR
+			}
+			every_state = {
+				limit = {
+					is_core_of = FIR
+					is_owned_and_controlled_by = ROOT
+				}
+				add_core_of = ROOT
+			}
+		}
+
+		set_country_flag = is_solar_puppet
+	}
+}
+
+country_event = { # celestia Puppet
+	id = solarempire.1034
+	immediate = {log = "[GetDateText]: [Root.GetName]: event solarempire.1034"}
+	hidden = yes
+
+	is_triggered_only = yes
+	option = {
+		set_cosmetic_tag = NTR_SOL
+		if = {
+			limit = {
+				AND = {
+					OR = {
+						GRD = { is_subject_of = OVERLORD }
+						SRS = { is_subject_of = OVERLORD }
+					}
+					522 = {
+						OR = {
+							is_owned_and_controlled_by = SRS
+							is_owned_and_controlled_by = GRD
+						}
+					}
+					561 = {
+						OR = {
+							is_owned_and_controlled_by = SRS
+							is_owned_and_controlled_by = GRD
+						}
+					}
+					542 = {
+						OR = {
+							is_owned_and_controlled_by = SRS
+							is_owned_and_controlled_by = GRD
+						}
+					}
+					585 = {
+						OR = {
+							is_owned_and_controlled_by = SRS
+							is_owned_and_controlled_by = GRD
+						}
+					}
+					601 = {
+						OR = {
+							is_owned_and_controlled_by = SRS
+							is_owned_and_controlled_by = GRD
+						}
+					}
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = SRS
+				}
+				add_core_of = NTR
+				ROOT = { transfer_state = PREV.id }
+			}
+		}
+
+		set_country_flag = is_solar_puppet
+	}
+}
+
+country_event = { # celestia Puppet
+	id = solarempire.1035
+	immediate = {log = "[GetDateText]: [Root.GetName]: event solarempire.1035"}
+	hidden = yes
+
+	is_triggered_only = yes
+	option = {
+		set_cosmetic_tag = AES_SOL
+
+		set_country_flag = is_solar_puppet
+	}
+}
+
+country_event = { # celestia Puppet
+	id = solarempire.1036
+	immediate = {log = "[GetDateText]: [Root.GetName]: event solarempire.1036"}
+	hidden = yes
+
+	is_triggered_only = yes
+	option = {
+		set_cosmetic_tag = MTO_SOL
+		#One puppet only
+		if = {
+			limit = {
+				country_exists = AES
+				is_subject_of = OVERLORD
+			}
+			annex_country = {
+				target = AES
+			}
+			every_state = {
+				limit = {
+					is_core_of = AES
+					is_owned_and_controlled_by = ROOT
+				}
+				add_core_of = ROOT
+			}
+		}
+		if = {
+			limit = {
+				country_exists = KAR
+				is_subject_of = OVERLORD
+			}
+			annex_country = {
+				target = KAR
+			}
+			every_state = {
+				limit = {
+					is_core_of = KAR
+					is_owned_and_controlled_by = ROOT
+				}
+				add_core_of = ROOT
+			}
+		}
+
+		set_country_flag = is_solar_puppet
+	}
+}
+
+country_event = { # celestia Puppet
+	id = solarempire.1037
+	immediate = {log = "[GetDateText]: [Root.GetName]: event solarempire.1037"}
+	hidden = yes
+
+	is_triggered_only = yes
+	option = {
+		set_cosmetic_tag = WAT_SOL
+
+		set_country_flag = is_solar_puppet
+	}
+}
+
+country_event = { # celestia Puppet
+	id = solarempire.1038
+	immediate = {log = "[GetDateText]: [Root.GetName]: event solarempire.1038"}
+	hidden = yes
+
+	is_triggered_only = yes
+	option = {
+		set_cosmetic_tag = FIR_SOL
 
 		set_country_flag = is_solar_puppet
 	}

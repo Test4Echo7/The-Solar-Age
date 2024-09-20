@@ -86,4 +86,19 @@ EQS_debug_category = {
             }
         }
     }
+    EQS_all_special_techs = {
+        allowed = {
+            tag = EQS
+        }
+        complete_effect = {
+            set_technology = {
+                EQS_enhanced_matrices = 1
+                EQS_portable_solar_panels = 1
+                EQS_hot_fusion = 1
+                EQS_super_flamers = 1
+                EQS_plasma_cannons = 1
+                EQS_pilot_drug_programs = 1
+            }
+        }
+    }
 }

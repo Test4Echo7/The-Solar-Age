@@ -73,10 +73,10 @@ EQS_get_flagship_bb = {
                 if = {
                     limit = {
                         NOT = { has_tech = decimetric_radar }
-                        set_technology = {
-                            decimetric_radar = 1
-                            popup = no
-                        }
+                    }
+                    set_technology = {
+                        decimetric_radar = 1
+                        popup = no
                     }
                 }
                 create_equipment_variant = {

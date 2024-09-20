@@ -2703,6 +2703,14 @@ MGY_SOL = {
 	color = rgb { 255 224 129 }
 	color_ui = rgb { 130 123 100 }
 }
+FBK_SOL = {
+	color = rgb { 255 224 129 }
+	color_ui = rgb { 130 123 100 }
+}
+NTR_SOL = {
+	color = rgb { 255 224 129 }
+	color_ui = rgb { 130 123 100 }
+}
 KIR_SOL = {
 	color = rgb { 255 224 129 }
 	color_ui = rgb { 130 123 100 }
@@ -2716,6 +2724,34 @@ KHM_SOL = {
 	color_ui = rgb { 130 123 100 }
 }
 KXN_SOL = {
+	color = rgb { 255 224 129 }
+	color_ui = rgb { 130 123 100 }
+}
+PLB_SOL_new = {
+	color = rgb { 129 132 100 }
+	color_ui = rgb {129 132 100 }
+}
+PNG_SOL_new = {
+	color = rgb { 158 152 124 }
+	color_ui = rgb { 158 152 124 }
+}
+ARC_SOL = {
+	color = rgb { 158 152 124 }
+	color_ui = rgb { 158 152 124 }
+}
+AES_SOL = {
+	color = rgb { 255 224 129 }
+	color_ui = rgb { 130 123 100 }
+}
+MTO_SOL = {
+	color = rgb { 255 224 129 }
+	color_ui = rgb { 130 123 100 }
+}
+WAT_SOL = {
+	color = rgb { 255 224 129 }
+	color_ui = rgb { 130 123 100 }
+}
+FIR_SOL = {
 	color = rgb { 255 224 129 }
 	color_ui = rgb { 130 123 100 }
 }

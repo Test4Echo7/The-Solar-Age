@@ -8259,24 +8259,23 @@ shared_focus = {
 
 	cost = 6
 	prerequisite = { focus = Ministry_of_defense }
+	available = { has_war_with = CHN }
 	allow_branch = { is_EQS_SOL = yes }
 	bypass = {
 		OR = {
 			CHN = {
 				OR = {
 					exists = no
-					has_war_with = ROOT
-					is_subject = yes
+					is_subject_of = ROOT
 				}
 			}
-			hidden_trigger = { has_completed_focus = worrisome_changelings}
 		}
 	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_changeling_menace"
-		add_political_power = 150
-		add_war_support = 0.025
+		add_political_power = 100
+		add_war_support = 0.05
 		if = {
 			limit = {
 				172 = { is_controlled_by = ROOT }
@@ -8284,7 +8283,7 @@ shared_focus = {
 			172 = {
 				add_building_construction = {
 					type = air_base
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -8296,13 +8295,14 @@ shared_focus = {
 			136 = {
 				add_building_construction = {
 					type = air_base
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
 		}
+		#Idea here
 	}
-	ai_will_do = { factor = 80 }
+	ai_will_do = { factor = 150 }
 	search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 }
 
@@ -11038,10 +11038,9 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = SOL_transequestrian_raillines
+	id = SOL_trains_across_empire
 	icon = GFX_goal_rct_fancy_train
 	cost = 5
-	dynamic = yes
 	ai_will_do = { factor = 80 }
 	prerequisite = {
 		focus = examine_the_situation
@@ -11050,15 +11049,15 @@ shared_focus = {
 		eqs_not_has_civil_war = yes
 	}
 	allow_branch = { is_EQS_SOL = yes }
-	bypass = { has_completed_focus = transequestrian_raillines }
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus transequestrian_raillines"
-			build_railway = {
-                level = 2
-				start_province = 9887
-                target_province = 11754
-                build_only_on_allied = yes
-            }
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_trains_across_empire"
+		#Effect here
+		build_railway = {
+			level = 2
+			start_province = 9887
+			target_province = 11754
+			build_only_on_allied = yes
+		}
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 	relative_position_id = examine_the_situation
@@ -11068,7 +11067,7 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = SOL_need_to_reinovate
+	id = SOL_imperial_work_service
 	icon = GFX_goal_industrial_pony
 	cost = 7
 	ai_will_do = { factor = 80 }
@@ -11087,23 +11086,19 @@ shared_focus = {
 		add_tech_bonus = {
 			name = industrial_bonus
 			bonus = 1.0
-			uses = 2
+			uses = 1
 			category = industry
 		}
-		add_resource = {
-			type = steel
-			amount = 15
-			state = 157
-		}
+		#Idea here
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 
 }
 
 shared_focus = {
-	id = SOL_industry_manehattan
+	id = SOL_invest_in_manehattan
 	icon = GFX_goal_generic_construct_civ_factory
-	cost = 10.00
+	cost = 7
 	ai_will_do = { factor = 100 }
 	prerequisite = {
 		focus = SOL_tabulate_ponies
@@ -11115,18 +11110,23 @@ shared_focus = {
 	cancel_if_invalid = yes
 	continue_if_invalid = no
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus industry_manehattan"
-		75 = {	add_extra_state_shared_building_slots = 3
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_invest_in_manehattan"
+		75 = {
+			add_extra_state_shared_building_slots = 4
 			add_building_construction = {
-				type = industrial_complex
-				level = 3
+				type = arms_factory
+				level = 2
 				instant_build = yes
 			}
-		}
-		add_resource = {
-			type = steel
-			amount = 10
-			state = 75
+			add_building_construction = {
+				type = dockyard
+				level = 2
+				instant_build = yes
+			}
+			add_resource = {
+				type = steel
+				amount = 10
+			}
 		}
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -11136,14 +11136,15 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = SOL_industry_las_pegasus
+	id = SOL_south_eastern_investment
 	icon = GFX_goal_generic_consumer_goods
-	cost = 10.00
+	cost = 7
 	ai_will_do = { factor = 75 }
 	prerequisite = { focus = SOL_tabulate_ponies }
 	available = {
 		eqs_not_has_civil_war = yes
-		66 = { is_owned_and_controlled_by = ROOT }
+		13 = { is_owned_and_controlled_by = ROOT }
+		15 = { is_owned_and_controlled_by = ROOT }
 	}
 	cancel_if_invalid = yes
 	continue_if_invalid = no
@@ -11152,11 +11153,34 @@ shared_focus = {
 	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus industry_las_pegasus"
-		66 = {	add_extra_state_shared_building_slots = 3
+		13 = {
+			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
 				type = industrial_complex
-				level = 3
+				level = 1
 				instant_build = yes
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		15 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = dockyard
+				level = 1
+				instant_build = yes
+			}
+			add_resource = {
+				type = aluminium
+				amount = 10
 			}
 		}
 	}
@@ -11164,114 +11188,127 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = SOL_manehattan_line
+	id = SOL_imperial_transport_ministry
 	icon = GFX_goal_generic_construct_infrastructure
 	cost = 7
 	ai_will_do = { factor = 70 }
-	prerequisite = { focus = SOL_transequestrian_raillines }
+	prerequisite = { focus = SOL_trains_across_empire }
 	available = {
 		eqs_not_has_civil_war = yes
 	}
-	bypass = { has_completed_focus = manehattan_line }
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus manehattan_line"
-			build_railway = {
-                level = 2
-				start_province = 950
-                target_province = 758
-                build_only_on_allied = yes
-            }
-			build_railway = {
-                level = 2
-				start_province = 758
-                target_province = 874
-                build_only_on_allied = yes
-            }
-			build_railway = {
-                level = 2
-				start_province = 874
-                target_province = 11052
-                build_only_on_allied = yes
-            }
-			build_railway = {
-                level = 2
-				start_province = 11052
-                target_province = 9208
-                build_only_on_allied = yes
-            }
-			build_railway = {
-                level = 2
-				start_province = 9208
-                target_province = 3162
-                build_only_on_allied = yes
-            }
-            75 = {
-				add_building_construction = {
-					type = supply_node
-					level = 1
-					instant_build = yes
-					province = 970
-				}
-            }
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_trains_across_empire"
+		#Effect here
+		build_railway = {
+			level = 2
+			start_province = 950
+			target_province = 758
+			build_only_on_allied = yes
+		}
+		build_railway = {
+			level = 2
+			start_province = 758
+			target_province = 874
+			build_only_on_allied = yes
+		}
+		build_railway = {
+			level = 2
+			start_province = 874
+			target_province = 11052
+			build_only_on_allied = yes
+		}
+		build_railway = {
+			level = 2
+			start_province = 11052
+			target_province = 9208
+			build_only_on_allied = yes
+		}
+		build_railway = {
+			level = 2
+			start_province = 9208
+			target_province = 3162
+			build_only_on_allied = yes
+		}
+		75 = {
+			add_building_construction = {
+				type = supply_node
+				level = 1
+				instant_build = yes
+				province = 970
+			}
+		}
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY }
-	relative_position_id = SOL_transequestrian_raillines
+	relative_position_id = SOL_trains_across_empire
 	x = 1
 	y = 1
 
 }
 
 shared_focus = {
-	id = SOL_mil_industry_fillydelphia
+	id = SOL_dodge_city_oil
 	icon = GFX_goal_eqs_fillydelphia_cars
-	cost = 10.00
+	cost = 8
 	ai_will_do = { factor = 70 }
 	prerequisite = {
-		focus = SOL_need_to_reinovate
+		focus = SOL_imperial_work_service
 	}
 	available = {
 		eqs_not_has_civil_war = yes
-		12 = { is_owned_and_controlled_by = ROOT }
+		22 = { is_owned_and_controlled_by = ROOT }
 	}
 	cancel_if_invalid = yes
 	continue_if_invalid = no
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus mil_industry_fillydelphia"
-		12 = {	add_extra_state_shared_building_slots = 6
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_dodge_city_oil"
+		22 = {
+			add_extra_state_shared_building_slots = 4
 			add_building_construction = {
 				type = arms_factory
-				level = 6
+				level = 3
 				instant_build = yes
+			}
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+			add_resource = {
+				type = oil
+				amount = 18
 			}
 		}
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY }
-	relative_position_id = SOL_need_to_reinovate
+	relative_position_id = SOL_imperial_work_service
 	x = 0
 	y = 1
 
 }
 
 shared_focus = {
-	id = SOL_Spitfire_research
+	id = SOL_project_firestorm
 	icon = GFX_goal_generic_air_fighter2
 	cost = 7
 	ai_will_do = { factor = 80 }
 	prerequisite = {
-		focus = SOL_need_to_reinovate
+		focus = SOL_imperial_work_service
 	}
 	available = {
 		eqs_not_has_civil_war = yes
+		525 = { is_owned_and_controlled_by = ROOT }
 	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus Spitfire_research"
-		74 = { add_extra_state_shared_building_slots = 1
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_project_firestorm"
+		525 = {
+			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = arms_factory
 				level = 1
 				instant_build = yes
 			}
 		}
+		###Change fighters as necessary
 		if = {
             limit = {
                 has_dlc = "By Blood Alone"
@@ -11368,29 +11405,30 @@ shared_focus = {
 		}
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
-	relative_position_id = SOL_need_to_reinovate
+	relative_position_id = SOL_imperial_work_service
 	x = 2
 	y = 1
 
 }
 
 shared_focus = { #Imperial Collegiate of Blessed Unicorns
-	id = SOL_unicorn_academy_f
+	id = SOL_blessed_unicorn_academy
 	icon = GFX_goal_unicorn_academy
 	cost = 7
 	ai_will_do = { factor = 85 }
 	prerequisite = {
-		focus = SOL_industry_manehattan
-		focus = SOL_industry_las_pegasus
+		focus = SOL_invest_in_manehattan
+		focus = SOL_south_eastern_investment
 	}
 	available = {
 		eqs_not_has_civil_war = yes
 	}
-	relative_position_id = SOL_industry_manehattan
+	relative_position_id = SOL_invest_in_manehattan
 	x = 2
 	y = 1
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_unicorn_academy_f"
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_blessed_unicorn_academy"
+		#Change to remove any level
 		country_event = equestria.4
 		effect_tooltip = {
 			add_ideas = unicorn_academy
@@ -11403,10 +11441,10 @@ shared_focus = {
 	id = SOL_imperial_unions
 	x = 2
 	y = 1
-	relative_position_id = SOL_industry_las_pegasus
+	relative_position_id = SOL_south_eastern_investment
 
 	cost = 5
-	prerequisite = { focus = SOL_industry_las_pegasus }
+	prerequisite = { focus = SOL_south_eastern_investment }
 	mutually_exclusive = { focus = SOL_imperial_production_committee }
 	available = { eqs_not_has_civil_war = yes }
 
@@ -11422,10 +11460,10 @@ shared_focus = {
 	id = SOL_imperial_production_committee
 	x = 0
 	y = 1
-	relative_position_id = SOL_mil_industry_fillydelphia
+	relative_position_id = SOL_dodge_city_oil
 
 	cost = 5
-	prerequisite = { focus = SOL_mil_industry_fillydelphia }
+	prerequisite = { focus = SOL_dodge_city_oil }
 	mutually_exclusive = { focus = SOL_imperial_unions }
 	available = { eqs_not_has_civil_war = yes }
 
@@ -11438,19 +11476,20 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = SOL_Matilda_research
+	id = SOL_mining_company_poaching
 	icon = GFX_goal_Timberwolf_research
-	cost = 10.00
+	cost = 8
 	ai_will_do = { factor = 60 }
 	prerequisite = {
-		focus = SOL_Spitfire_research
+		focus = SOL_project_firestorm
 	}
 	available = {
 		eqs_not_has_civil_war = yes
+		available = { 74 = { is_owned_and_controlled_by = ROOT } }
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus Matilda_research"
-		12 = {	add_extra_state_shared_building_slots = 1
+		74 = {	add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = arms_factory
 				level = 1
@@ -11459,47 +11498,49 @@ shared_focus = {
 		}
 		add_tech_bonus = {
 			name = armor_bonus
-			bonus = 1
+			bonus = 1.25
 			uses = 1
 			category = armor
 		}
 		add_tech_bonus = {
 			name = armor_bonus
-			bonus = 1.0
+			bonus = 0.66
 			uses = 1
 			category = cat_anti_tank
 		}
+		#Idea here
 		custom_effect_tooltip = EQS_Timberwolf_tooltip
-			if = {
-				limit = {
-					AND = {
-						has_tech = basic_medium_tank_chassis
-						has_dlc = "No Step Back"
-					}
+		#Adjust as necessary
+		if = {
+			limit = {
+				AND = {
+					has_tech = basic_medium_tank_chassis
+					has_dlc = "No Step Back"
 				}
-					create_equipment_variant = {
-						name = "Timberwolf Mk I"
-						type = medium_tank_chassis_1
-						parent_version = 0
-						modules = {
-							main_armament_slot = tank_high_velocity_cannon
-							turret_type_slot = tank_medium_three_man_tank_turret
-							suspension_type_slot = tank_bogie_suspension
-							armor_type_slot = tank_riveted_armor
-							engine_type_slot = tank_gasoline_engine
-							special_type_slot_1 = tank_radio_1
-							special_type_slot_2 = smoke_launchers
-						}
-						upgrades = {
-							tank_nsb_engine_upgrade = 4
-							tank_nsb_armor_upgrade = 9
-						}
-						icon = "gfx/interface/technologies/armour_folder/commonwealth_2d/EQS_timberwolf.dds"
-					}
 			}
+			create_equipment_variant = {
+				name = "Timberwolf Mk I"
+				type = medium_tank_chassis_1
+				parent_version = 0
+				modules = {
+					main_armament_slot = tank_high_velocity_cannon
+					turret_type_slot = tank_medium_three_man_tank_turret
+					suspension_type_slot = tank_bogie_suspension
+					armor_type_slot = tank_riveted_armor
+					engine_type_slot = tank_gasoline_engine
+					special_type_slot_1 = tank_radio_1
+					special_type_slot_2 = smoke_launchers
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 4
+					tank_nsb_armor_upgrade = 9
+				}
+				icon = "gfx/interface/technologies/armour_folder/commonwealth_2d/EQS_timberwolf.dds"
+			}
+		}
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
-	relative_position_id = SOL_Spitfire_research
+	relative_position_id = SOL_project_firestorm
 	x = 2
 	y = 1
 
@@ -11509,10 +11550,10 @@ shared_focus = {
 	id = SOL_trawl_mountain_depths
 	x = -1
 	y = 2
-	relative_position_id = SOL_industry_manehattan
+	relative_position_id = SOL_invest_in_manehattan
 
 	cost = 8
-	prerequisite = { focus = SOL_industry_manehattan }
+	prerequisite = { focus = SOL_invest_in_manehattan }
 	available = {
 		eqs_not_has_civil_war = yes
 		39 = { is_owned_and_controlled_by = ROOT }
@@ -11560,28 +11601,52 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = SOL_magical_studies
-	icon = GFX_goal_generic_magic
-	cost = 10.00
-	ai_will_do = { factor = 80 }
-	prerequisite = { focus = SOL_unicorn_academy_f }
-	relative_position_id = SOL_unicorn_academy_f
+	id = SOL_mundane_and_arcane
 	x = -1
 	y = 1
+	relative_position_id = SOL_blessed_unicorn_academy
+
+	cost = 6
+	prerequisite = { focus = SOL_blessed_unicorn_academy }
+
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_magical_studies"
-		add_doctrine_cost_reduction = {
-			name = land_doc_bonus
-			cost_reduction = 0.5
-			uses = 1
-			category = land_doctrine
-		}
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_magical_primacy"
+		#Adjust spirit
 		add_tech_bonus = {
-			name = race_tech_bonus
+			name = industrial_bonus
 			bonus = 1.5
 			uses = 1
-			category = race_tech
+			category = industry
 		}
+		add_tech_bonus = {
+			name = electronics_bonus
+			bonus = 0.75
+			uses = 1
+			category = electronics
+		}
+	}
+	ai_will_do = { factor = 90 }
+}
+
+shared_focus = {
+	id = SOL_magical_primacy
+	icon = GFX_goal_generic_magic
+	cost = 6
+	ai_will_do = { factor = 80 }
+	prerequisite = { focus = SOL_blessed_unicorn_academy }
+	relative_position_id = SOL_blessed_unicorn_academy
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_magical_primacy"
+		add_tech_bonus = {
+			name = race_tech_bonus
+			bonus = 2
+			uses = 2
+			category = unicorn_tech
+			category = pegasi_tech
+		}
+		#Adjust spirit
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH }
 }
@@ -11590,10 +11655,10 @@ shared_focus = {
 	id = SOL_tools_of_empire
 	x = 0
 	y = 2
-	relative_position_id = SOL_industry_las_pegasus
+	relative_position_id = SOL_south_eastern_investment
 
 	cost = 5
-	prerequisite = { focus = SOL_industry_las_pegasus }
+	prerequisite = { focus = SOL_south_eastern_investment }
 	available = { eqs_not_has_civil_war = yes }
 
 	completion_reward = {
@@ -11609,14 +11674,14 @@ shared_focus = {
 			uses = 1
 			bonus = 1
 			category = concentrated_industry_category
-			category = dispsersed_industry_category
+			category = dispersed_industry_category
 		}
 	}
 	ai_will_do = { factor = 50 }
 }
 
 shared_focus = {
-	id = SOL_roadways_across_SOL
+	id = SOL_imperial_hoofbooks
 	x = 0
 	y = 1
 	relative_position_id = SOL_imperial_unions
@@ -11631,72 +11696,8 @@ shared_focus = {
 	}
 
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_roadways_across_SOL"
-		random_state = {
-			if = {
-				limit = {
-					infrastructure < 5
-					is_owned_and_controlled_by = ROOT
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-		random_state = {
-			if = {
-				limit = {
-					infrastructure < 5
-					is_owned_and_controlled_by = ROOT
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-		random_state = {
-			if = {
-				limit = {
-					infrastructure < 5
-					is_owned_and_controlled_by = ROOT
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-		random_state = {
-			if = {
-				limit = {
-					infrastructure < 5
-					is_owned_and_controlled_by = ROOT
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-		random_state = {
-			if = {
-				limit = {
-					infrastructure < 5
-					is_owned_and_controlled_by = ROOT
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_imperial_hoofbooks"
+		###Event of the handbook for the new imperial rules for keeping the economy functioning, with much of it being incredibly micromanaging, so that it every bit of minutiae are accounted for and there are a list of punishments for what happens if they are violated, which are extreme, even for minor infractions
 	}
 	ai_will_do = { factor = 40 }
 }
@@ -11783,10 +11784,10 @@ shared_focus = {
 	id = SOL_project_starscream
 	x = 0
 	y = 1
-	relative_position_id = SOL_Matilda_research
+	relative_position_id = SOL_mining_company_poaching
 
 	cost = 7
-	prerequisite = { focus = SOL_Matilda_research }
+	prerequisite = { focus = SOL_mining_company_poaching }
 	available = { eqs_not_has_civil_war = yes }
 
 	completion_reward = {
@@ -11799,12 +11800,26 @@ shared_focus = {
 				instant_build = yes
 			}
 		}
-		add_tech_bonus = {
-			name = superheavy_bonus
-			uses = 1
-			bonus = 1.25
-			ahead_reduction = 2
-			category = superheavy_armor
+		if = {
+			limit = { has_dlc = "No Step Back" }
+			add_tech_bonus = {
+				name = super_heavy_bonus
+				uses = 1
+				bonus = 1.25
+				ahead_reduction = 2
+				technology = super_heavy_tank_chassis_a
+				technology = super_heavy_tank_chassis_b
+			}
+		}
+		else = {
+			add_tech_bonus = {
+				name = super_heavy_bonus
+				uses = 1
+				bonus = 1.25
+				ahead_reduction = 2
+				technology = super_heavy_tank
+				technology = super_heavy_tank_a
+			}
 		}
 	}
 	ai_will_do = { factor = 50 }
@@ -11814,11 +11829,11 @@ shared_focus = {
 	id = SOL_promote_mit
 	x = -1
 	y = 1
-	relative_position_id = SOL_magical_studies
+	relative_position_id = SOL_mundane_and_arcane
 
 	cost = 8
-	prerequisite = { focus = SOL_magical_studies }
-	mutually_exclusive = { focus = SOL_luna_nova_academy }
+	prerequisite = { focus = SOL_mundane_and_arcane }
+	mutually_exclusive = { focus = SOL_establish_sol_victoria }
 	available = { eqs_not_has_civil_war = yes }
 
 	completion_reward = {
@@ -11833,32 +11848,33 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = SOL_luna_nova_academy
-	icon = GFX_goal_luna_nova
-	dynamic = yes
-	cost = 7
-	ai_will_do = { factor = 80 }
-	prerequisite = {
-		focus = SOL_unicorn_academy_f
-	}
+	id = SOL_establish_sol_victoria
+	x = 0
+	y = 1
+	relative_position_id = SOL_magical_primacy
+
+	cost = 8
+	prerequisite = { focus = SOL_magical_primacy }
 	mutually_exclusive = { focus = SOL_promote_mit }
-	available = {
-		eqs_not_has_civil_war = yes
-	}
-	relative_position_id = SOL_unicorn_academy_f
-	x = 1
-	y = 2
+	available = { eqs_not_has_civil_war = yes }
 
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus luna_nova_academy"
-		country_event = equestria.5
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_establish_sol_victoria"
 		if = {
 			limit = { amount_research_slots < 5 }
 			add_research_slot = 1
 		}
-		effect_tooltip = {
-			swap_ideas = { remove_idea = unicorn_academy add_idea = unicorn_academy1 }
+		add_victory_points = {
+			province = 6118
+			value = 3
 		}
+		hidden_effect = {
+			set_province_name = {
+				id = 6118
+				name = EQS_sol_victoria
+			}
+		}
+		#Idea here
 	}
 	ai_will_do = { factor = 80 }
 }
@@ -11871,7 +11887,7 @@ shared_focus = {
 
 	cost = 7
 	prerequisite = { focus = SOL_tools_of_empire }
-	prerequisite = { focus = SOL_roadways_across_SOL }
+	prerequisite = { focus = SOL_imperial_hoofbooks }
 	available = { eqs_not_has_civil_war = yes }
 
 	completion_reward = {
@@ -11882,33 +11898,31 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = SOL_magical_crypto_machines
+	id = SOL_bunsen_beaker_research
 	icon = GFX_focus_Computer_2
-	cost = 10.00
+	cost = 7
 	ai_will_do = { factor = 75 }
 	prerequisite = {
-		focus = SOL_roadways_across_SOL
+		focus = SOL_imperial_hoofbooks
 		focus = SOL_motivation_teams
 	}
 	available = {
 		eqs_not_has_civil_war = yes
-		has_tech = tech_unicorn
-		OR = {
-			has_tech = tech_pony_magical_infantry
-			has_tech = tech_pony_unicorns
-		}
+		74 = { is_owned_and_controlled_by = ROOT }
 	}
-	relative_position_id = SOL_roadways_across_SOL
+	relative_position_id = SOL_imperial_hoofbooks
 	x = 1
 	y = 1
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_magical_crypto_machines"
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_bunsen_beaker_research"
 		add_tech_bonus = {
-			name = secret_bonus
+			name = race_tech_bonus
 			bonus = 1.0
-			uses = 3
-			category = electronics
+			uses = 1
+			category = race_tech
 		}
+		###Perhaps an event showing how Bunsen conducts his research, which is, it's very involved and also invasive, and he carries little worry or care about what happens to his subjects
+		#Unlock Bunsen
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH }
 
@@ -11950,9 +11964,9 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = SOL_magical_training
+	id = SOL_practical_magic_applications
 	icon = GFX_goal_eqs_magic_horn
-	cost = 10.00
+	cost = 6
 	ai_will_do = { factor = 84 }
 	prerequisite = {
 		focus = SOL_promote_mit
@@ -11963,33 +11977,18 @@ shared_focus = {
 	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_magical_training"
-		add_ideas = magical_trainingidea
+		#Idea here
 		add_tech_bonus = {
 			name = magical_tech_bonus
-			bonus = 1.0
-			uses = 1
-			technology = magical_weapons
-			technology = magical_weapons1
-		}
-		add_tech_bonus = {
-			name = magical_tech_bonus2
-			bonus = 1.0
-			uses = 1
-			technology = tech_pony_magical_infantry
-			technology = tech_pony_magical_infantry2
-			technology = tech_pony_magical_infantry3
-			technology = tech_pony_magical_infantry4
-			technology = tech_pony_magical_infantry5
-		}
-		add_tech_bonus = {
-			name = magical_tech_bonus2
-			bonus = 1
 			uses = 2
-			technology = tech_pony_unicorns
-			technology = tech_pony_unicorns2
-			technology = tech_pony_unicorns3
-			technology = tech_pony_unicorns4
-			technology = tech_pony_unicorns5
+			bonus = 1.25
+			category = magical_tech
+		}
+		add_tech_bonus = {
+			name = race_tech_bonus
+			uses = 1
+			bonus = 1.75
+			category = race_tech
 		}
 	}
 	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }
@@ -11999,10 +11998,10 @@ shared_focus = {
 	id = SOL_pony_mystics
 	x = 0
 	y = 1
-	relative_position_id = SOL_luna_nova_academy
+	relative_position_id = SOL_establish_sol_victoria
 
 	cost = 6
-	prerequisite = { focus = SOL_luna_nova_academy }
+	prerequisite = { focus = SOL_establish_sol_victoria }
 	available = { eqs_not_has_civil_war = yes }
 
 	completion_reward = {
@@ -12011,12 +12010,12 @@ shared_focus = {
 		add_tech_bonus = {
 			name = race_tech_bonus
 			uses = 2
-			bonus = 1
+			bonus = 1.25
 			category = race_tech
 		}
 		add_tech_bonus = {
 			name = magical_tech_bonus
-			bonus = 1
+			bonus = 2
 			uses = 1
 			category = magical_tech
 		}
@@ -12025,29 +12024,46 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = SOL_arms_potential
+	id = SOL_annex_star_energy
 	icon = GFX_goal_eqs_star_energy
 	cost = 7
 	ai_will_do = { factor = 80 }
 	prerequisite = {
-		focus = SOL_roadways_across_SOL
+		focus = SOL_imperial_hoofbooks
 	}
 	available = {
 		eqs_not_has_civil_war = yes
-		59 = { is_owned_and_controlled_by = ROOT }
+		106 = { is_owned_and_controlled_by = ROOT }
 		65 = { is_owned_and_controlled_by = ROOT }
 	}
-	relative_position_id = SOL_roadways_across_SOL
+	relative_position_id = SOL_imperial_hoofbooks
 	x = -1
 	y = 2
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_arms_potential"
-		59 = {
-			add_extra_state_shared_building_slots = 2
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_annex_star_energy"
+		#Idea here
+		106 = {
+			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = arms_factory
-				level = 2
+				level = 1
 				instant_build = yes
+			}
+			if = {
+				limit = { infrastructure < 5 }
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			else = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
 		65 = {
@@ -12066,11 +12082,11 @@ shared_focus = {
 	id = SOL_new_radar
 	x = 1
 	y = 1
-	relative_position_id = SOL_magical_crypto_machines
+	relative_position_id = SOL_bunsen_beaker_research
 
 	cost = 6
 	prerequisite = {
-		focus = SOL_magical_crypto_machines
+		focus = SOL_bunsen_beaker_research
 		focus = SOL_practical_metal_applications
 	}
 	available = { eqs_not_has_civil_war = yes }
@@ -12080,15 +12096,15 @@ shared_focus = {
 		#Idea here
 		add_tech_bonus = {
 			name = secret_bonus
-			uses = 1
-			bonus = 1
+			uses = 2
+			bonus = 1.25
 			category = electronics
 		}
 		add_tech_bonus = {
-			name = radar_bonus
+			name = radar_tech_bonus
 			uses = 1
 			bonus = 1
-			category = radar
+			category = radar_tech
 		}
 	}
 	ai_will_do = { factor = 60 }
@@ -12133,42 +12149,74 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = SOL_CTL_center_of_research
+	id = SOL_sanctum_solar_directorate
 	icon = GFX_goal_eqs_canterlot
-	cost = 10.00
-	dynamic = yes
+	cost = 9
 	ai_will_do = { factor = 200 }
 	prerequisite = {
-		focus = SOL_magical_training
+		focus = SOL_practical_magic_applications
 		focus = SOL_pony_mystics
 	}
 	available = {
 		eqs_not_has_civil_war = yes
 		capital_scope = { is_controlled_by = ROOT }
 	}
-	relative_position_id = SOL_magical_training
+	relative_position_id = SOL_practical_magic_applications
 	x = 2
 	y = 1
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus CTL_center_of_research"
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_sanctum_solar_directorate"
 		if = {
 			limit = { amount_research_slots < 5 }
 			add_research_slot = 1
 		}
+		###Event of a number of scientists meeting in Sanctum Solar, to discuss how to best serve the Empress, which devolves into bickering, since they can't figure out exactly what would be best to serve her; alternately, they're all going on about their rather cruel experiments
 		#Idea here
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH }
 }
 
 shared_focus = {
+	id = SOL_expand_sol_invicta_academy
+	icon = GFX_goal_luna_nova
+	dynamic = yes
+	cost = 7
+	ai_will_do = { factor = 80 }
+	prerequisite = {
+		focus = SOL_practical_magic_applications
+		focus = SOL_pony_mystics
+	}
+	available = {
+		eqs_not_has_civil_war = yes
+	}
+	relative_position_id = SOL_pony_mystics
+	x = 1
+	y = 1
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus luna_nova_academy"
+		###Event of the administrator of Sol Invicta getting a visit from Daybreaker directly, and him being nervous, but showing her around, before finally being promised more funding, to ensure the Empire stays up to date, which floors him
+		country_event = equestria.5
+		if = {
+			limit = { amount_research_slots < 5 }
+			add_research_slot = 1
+		}
+		effect_tooltip = {
+			swap_ideas = { remove_idea = unicorn_academy add_idea = unicorn_academy1 }
+		}
+	}
+	ai_will_do = { factor = 80 }
+}
+
+shared_focus = {
 	id = SOL_military_industrial_complex
 	x = 1
 	y = 1
-	relative_position_id = SOL_arms_potential
+	relative_position_id = SOL_annex_star_energy
 
 	cost = 7
 	prerequisite = {
-		focus = SOL_arms_potential
+		focus = SOL_annex_star_energy
 		focus = SOL_new_radar
 	}
 	available = { eqs_not_has_civil_war = yes }
@@ -12198,47 +12246,20 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = SOL_EQS_ease_the_rules_of_EEA
-	icon = GFX_goal_ease_EEA
-	cost = 9
-	ai_will_do = { factor = 75 }
-	prerequisite = {
-		focus = SOL_CTL_center_of_research
-	}
-	mutually_exclusive = {
-		focus = SOL_EQS_strengthen_EEA_authority
-	}
-	available = {
-		eqs_not_has_civil_war = yes
-	}
-	relative_position_id = SOL_CTL_center_of_research
-	x = 1
-	y = 1
-
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus EQS_ease_the_rules_of_EEA"
-		swap_ideas = {
-			add_idea = unicorn_academy4
-			remove_idea = unicorn_academy2
-		}
-	}
-	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
-}
-shared_focus = {
-	id = SOL_EQS_strengthen_EEA_authority
+	id = SOL_ingrain_eea_authority
 	icon = GFX_goal_EEA
 	cost = 9
 	ai_will_do = { factor = 75 }
 	prerequisite = {
-		focus = SOL_CTL_center_of_research
+		focus = SOL_sanctum_solar_directorate
 	}
 	available = {
 		eqs_not_has_civil_war = yes
 	}
 	mutually_exclusive = {
-		focus = SOL_EQS_ease_the_rules_of_EEA
+		focus = SOL_rewrite_eea_rules
 	}
-	relative_position_id = SOL_CTL_center_of_research
+	relative_position_id = SOL_sanctum_solar_directorate
 	x = -1
 	y = 1
 
@@ -12250,6 +12271,35 @@ shared_focus = {
 		}
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = SOL_rewrite_eea_rules
+	icon = GFX_goal_ease_EEA
+	cost = 9
+	ai_will_do = { factor = 75 }
+	prerequisite = {
+		focus = SOL_sanctum_solar_directorate
+	}
+	mutually_exclusive = {
+		focus = SOL_ingrain_eea_authority
+	}
+	available = {
+		eqs_not_has_civil_war = yes
+	}
+	relative_position_id = SOL_sanctum_solar_directorate
+	x = 1
+	y = 1
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_ease_the_rules_of_EEA"
+		###Daybreaker meets with Neighsay after he protests about all the new rules she's implemented, and how they will ruin standards, and she threatens him with jail or the like if he does not implement them, and uses a different pony as leverage, perhaps his wife, or somepony who will replace him and make it worse, which gets him to break
+		swap_ideas = {
+			add_idea = unicorn_academy4
+			remove_idea = unicorn_academy2
+		}
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
 }
 
 #shared_focus = {

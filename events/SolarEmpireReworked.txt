@@ -65,7 +65,7 @@ country_event = { #Short event of some thestrals being locked out of their forme
                 has_state_flag = eqs_bat_state
                 is_owned_by = ROOT
             }
-            add_extra_state_building_slot = 1
+            add_extra_state_shared_building_slots = 1
             add_building_construction = {
                 type = arms_factory
                 level = 1
@@ -197,7 +197,7 @@ country_event = { #Event of a thestral looking for work and having a hard time o
                 is_owned_by = ROOT
                 has_state_flag = eqs_bat_state
             }
-            add_extra_state_building_slot = 2
+            add_extra_state_shared_building_slots = 2
             add_building_construction = {
                 type = industrial_complex
                 level = 1
@@ -214,7 +214,7 @@ country_event = { #Event of a thestral looking for work and having a hard time o
                 is_owned_by = ROOT
                 has_state_flag = eqs_bat_state
             }
-            add_extra_state_building_slot = 1
+            add_extra_state_shared_building_slots = 1
             add_building_construction = {
                 type = arms_factory
                 level = 1
@@ -226,7 +226,7 @@ country_event = { #Event of a thestral looking for work and having a hard time o
                 is_owned_by = ROOT
                 has_state_flag = eqs_bat_state
             }
-            add_extra_state_building_slot = 2
+            add_extra_state_shared_building_slots = 2
             add_building_construction = {
                 type = industrial_complex
                 level = 2
@@ -388,8 +388,8 @@ country_event = { #Luna barges into Celestia's chambers demanding to know why sh
         if = {
             limit = {
                 NOT = { has_completed_focus = eqs_buffalo2 }
-                unlock_national_focus = eqs_buffalo2
             }
+            unlock_national_focus = eqs_buffalo2
         }
     }
     option = { #I... cannot go against previous orders.
@@ -406,6 +406,84 @@ country_event = { #Luna barges into Celestia's chambers demanding to know why sh
             id = EQS_sanity_bop
             value = -0.05
             tooltip_side = EQS_woke
+        }
+    }
+}
+
+country_event = {
+    id = solarreworked.53
+    title = solarreworked.53.t
+    desc = solarreworked.53.d
+    picture = GFX_event_canterlot
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.53"}
+
+    trigger = {
+        tag = EQS
+        power_balance_value = {
+            id = EQS_sanity_bop
+            value < 0.65
+        }
+        has_idea = chancellor_neighsay
+        has_idea = twilight_sparkle
+        OR = {
+            has_war_with = NLR
+            has_war_with = CHN
+        }
+    }
+
+    fire_only_once = yes
+
+    mean_time_to_happen = { days = 120 }
+
+    option = { #Twilight is obviously right.
+        name = solarreworked.53.a
+        add_power_balance_value = {
+            id = EQS_sanity_bop
+            value = 0.05
+            tooltip_side = EQS_npc
+        }
+        add_political_power = 25
+        add_popularity = {
+            ideology = democratic
+            popularity = 0.02
+        }
+        add_stability = 0.03
+        set_country_flag = EQS_sided_with_twilight
+        remove_ideas = chancellor_neighsay
+    }
+    option = { #Neighsay does have a point.
+        name = solarreworked.53.b
+        add_power_balance_value = {
+            id = EQS_sanity_bop
+            value = -0.05
+            tooltip_side = EQS_woke
+        }
+        add_political_power = -50
+        add_popularity = {
+            ideology = fascism
+            popularity = 0.02
+        }
+        add_war_support = 0.05
+        set_country_flag = EQS_sided_with_neighsay
+        remove_ideas = twilight_sparkle
+    }
+    option = { #GET OUT OF HERE, BOTH OF YOU!
+        name = solarreworked.53.c
+        add_power_balance_value = {
+            id = EQS_sanity_bop
+            value = -0.1
+            tooltip_side = EQS_woke
+        }
+        add_political_power = 200
+        set_country_flag = {
+            flag = EQS_kicked_both_out
+            days = 180
+            value = 1
+        }
+        set_country_flag = EQS_radical_aftermath
+        remove_ideas = {
+            chancellor_neighsay
+            twilight_sparkle
         }
     }
 }
@@ -608,15 +686,16 @@ country_event = { #Daybreaker marches and enters into the chambers of Grover, wh
         if = {
 			limit = {
 				GRD = { NOT = { tag = GRI } }
-				random_country = {
-					limit = {
-						has_character = GRI_daybreaker
-					}
-					GRI_daybreaker = {
-						set_nationality = GRD
-					}
-				}
-			}
+
+            }
+            random_country = {
+                limit = {
+                    has_character = GRI_daybreaker
+                }
+                GRI_daybreaker = {
+                    set_nationality = GRD
+                }
+            }
 		}
 		GRD = {
             set_country_flag = is_solar_puppet
@@ -691,15 +770,15 @@ country_event = { #Daybreaker smugly walks through Griffonstone, in a parade wit
         if = {
 			limit = {
 				GRD = { NOT = { tag = GRI } }
-				random_country = {
-					limit = {
-						has_character = GRI_daybreaker
-					}
-					GRI_daybreaker = {
-						set_nationality = GRD
-					}
-				}
-			}
+            }
+            random_country = {
+                limit = {
+                    has_character = GRI_daybreaker
+                }
+                GRI_daybreaker = {
+                    set_nationality = GRD
+                }
+            }
 		}
 		GRD = {
             set_country_flag = is_solar_puppet

@@ -63,14 +63,45 @@ characters={
 		name=EQS_chancellor_neighsay
 		portraits={
 			civilian={
-				large="gfx/leaders/EQS/Naysay.tga"
+				large="gfx/leaders/EQS/Neighsay_new.tga"
+				small = "gfx/interface/ideas/advisors/EQS/EQS_neighsay.tga"
 			}
 		}
 		country_leader={
 			desc="CHANCELLOR_NEIGHSAY_DESC"
 			ideology=falangism
 			expire="1965.1.1.1"
-			id=-1
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = chancellor_neighsay
+			allowed = {
+				tag = EQS
+			}
+			available = {
+				hidden_trigger = {
+					NOT = {
+						OR = {
+							AND = {
+								has_country_flag = EQS_sided_with_twilight
+								has_idea = twilight_sparkle
+							}
+							AND = {
+								has_country_flag = EQS_radical_aftermath
+								has_idea = twilight_sparkle
+							}
+							has_country_flag = EQS_kicked_both_out
+						}
+					}
+				}
+			}
+			traits = { eea_chancellor }
+			research_bonus = {
+				magical_tech = 0.05
+			}
+			ai_will_do = {
+				factor = 1
+			}
 		}
 	}
 	EQS_princess_celestia={
@@ -394,6 +425,21 @@ characters={
 					has_country_leader = {
 						character = EQS_twilight_sparkle
 						ruling_only = yes
+					}
+				}
+				hidden_trigger = {
+					NOT = {
+						OR = {
+							AND = {
+								has_country_flag = EQS_sided_with_neighsay
+								has_idea = chancellor_neighsay
+							}
+							AND = {
+								has_country_flag = EQS_radical_aftermath
+								has_idea = chancellor_neighsay
+							}
+							has_country_flag = EQS_kicked_both_out
+						}
 					}
 				}
 				if = {

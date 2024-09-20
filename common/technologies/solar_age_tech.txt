@@ -15,7 +15,7 @@ technologies = {
 		research_cost = 1
 		allow = { always = no }
 
-		magical_equipment = {
+		magical_infantry = {
 			soft_attack = 0.15
 		}
 		unicorn_company = {
@@ -43,11 +43,11 @@ technologies = {
 		research_cost = 1
 		allow = { always = no }
 
-		light_tank_flame_chassis = { soft_attack = 0.75 defense = 0.4 }
-		medium_tank_flame_chassis = { soft_attack = 0.75 defense = 0.4 }
-		heavy_tank_flame_chassis = { soft_attack = 0.75 defense = 0.4 }
-		modern_tank_flame_chassis = { soft_attack = 0.75 defense = 0.4 }
-		super_heavy_tank_flame_chassis = { soft_attack = 0.75 defense = 0.4 }
+		light_flame_tank = { soft_attack = 0.75 defense = 0.4 }
+		medium_flame_tank = { soft_attack = 0.75 defense = 0.4 }
+		heavy_flame_tank = { soft_attack = 0.75 defense = 0.4 }
+		modern_flame_tank = { soft_attack = 0.75 defense = 0.4 }
+		super_heavy_flame_tank = { soft_attack = 0.75 defense = 0.4 }
 	}
 	EQS_plasma_cannons = {
 		research_cost = 1

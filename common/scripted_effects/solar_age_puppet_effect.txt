@@ -156,4 +156,28 @@ apply_SOL_cosmetic_tags_on_puppet = {
         limit = { original_tag = KXN }
         country_event = solarempire.1032
     }
+    else_if = {
+        limit = { original_tag = FBK }
+        country_event = solarempire.1033
+    }
+    else_if = {
+        limit = { original_tag = NTR }
+        country_event = solarempire.1034
+    }
+    else_if = {
+        limit = { original_tag = AES }
+        country_event = solarempire.1035
+    }
+    else_if = {
+        limit = { original_tag = MTO }
+        country_event = solarempire.1036
+    }
+    else_if = {
+        limit = { original_tag = WAT }
+        country_event = solarempire.1037
+    }
+    else_if = {
+        limit = { original_tag = FIR }
+        country_event = solarempire.1038
+    }
 }
