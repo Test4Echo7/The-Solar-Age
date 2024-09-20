@@ -7,4 +7,8 @@ spriteTypes = {
         name = "GFX_event_admiral_daybreaker"
         texturefile = "gfx/event_pictures/event_admiral_daybreaker.png"
     }
+    spriteType = {
+        name = "GFX_event_celestia_ascension"
+        texturefile = "gfx/event_pictures/event_celestia_ascension.png"
+    }
 }
