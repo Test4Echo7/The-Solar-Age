@@ -12,6 +12,23 @@ EQS_sanity_bop = {
             political_power_gain = 0.05
             political_advisor_cost_factor = -0.1
         }
+        on_activate = {
+            log = "EQS_middling_sanity"
+            if = {
+                limit = {
+                    EQS_princess_celestia = {
+                        NOT = { has_character_flag = EQS_celestia_is_db }
+                    }
+                }
+                EQS_princess_celestia = {
+                    set_portraits = {
+                        civilian = {
+                            large = "gfx/leaders/EQS/Celestia_feels_bad.tga"
+                        }
+                    }
+                }
+            }
+        }
     }
 
     side = {
@@ -28,6 +45,20 @@ EQS_sanity_bop = {
             }
             on_activate = {
                 log = "EQS_nervous_sanity"
+                if = {
+                    limit = {
+                        EQS_princess_celestia = {
+                            NOT = { has_character_flag = EQS_celestia_is_db }
+                        }
+                    }
+                    EQS_princess_celestia = {
+                        set_portraits = {
+                            civilian = {
+                                large = "GFX_CelestiaPortrait"
+                            }
+                        }
+                    }
+                }
             }
         }
         range = {
