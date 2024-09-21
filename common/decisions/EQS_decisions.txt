@@ -2747,3 +2747,650 @@ EQS_construction_projects = {
 		}
 	}
 }
+###Solar Age Additions###
+prospect_for_resources = {
+	EQS_village_up_north_trading_post = {
+		allowed = {
+			tag = EQS
+		}
+		icon = generic_construction
+		highlight_states = {
+			highlight_state_targets = {
+				state = 241
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 5
+			owns_state = 241
+		}
+		visible = {
+			owns_state = 241
+			has_country_flag = SOL_new_mining_decisions
+		}
+
+		fire_only_once = yes
+
+		cost = 75
+		days_remove = 150
+
+		modifier = {
+			civilian_factory_use = 6
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_village_up_north_trading_post"
+			241 = {
+				set_state_flag = EQS_village_expansion_1
+				add_resource = {
+					type = steel
+					amount = 4
+				}
+				add_manpower = 7500
+				improve_state_category = yes
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+					province = 3082
+				}
+				add_victory_points = {
+					province = 3082
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				num_of_civilian_factories_available_for_projects > 15
+				has_political_power > 150
+				add = 5
+			}
+		}
+	}
+	EQS_village_up_north_naval_base = {
+		allowed = {
+			tag = EQS
+		}
+		icon = generic_industry
+		highlight_states = {
+			highlight_state_targets = {
+				state = 241
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 8
+			owns_state = 241
+		}
+		visible = {
+			owns_state = 241
+			has_country_flag = SOL_new_mining_decisions
+			241 = {
+				has_state_flag = EQS_village_expansion_1
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 110
+		days_remove = 210
+
+		modifier = {
+			civilian_factory_use = 9
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_village_up_north_naval_base"
+			241 = {
+				add_resource = {
+					type = steel
+					amount = 4
+				}
+				add_manpower = 12500
+				improve_state_category = yes
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 3
+					instant_build = yes
+					province = 3082
+				}
+				add_victory_points = {
+					province = 3082
+					value = 3
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				num_of_civilian_factories_available_for_projects > 25
+				has_political_power > 175
+				add = 8
+			}
+		}
+	}
+	EQS_expand_our_mining_cooperative = {
+		allowed = {
+			tag = EQS
+		}
+		icon = tungsten
+		highlight_states = {
+			highlight_state_targets = {
+				state = 57
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			owns_state = 57
+		}
+		visible = {
+			owns_state = 57
+			has_country_flag = SOL_new_mining_decisions
+		}
+		fire_only_once = yes
+
+		cost = 55
+		days_remove = 130
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_expand_our_mining_cooperative"
+			57 = {
+				add_resource = {
+					type = tungsten
+					amount = 4
+				}
+				add_resource = {
+					type = crystals
+					amount = 3
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				num_of_civilian_factories_available_for_projects > 7
+				has_political_power > 100
+				add = 6
+			}
+		}
+	}
+	EQS_bolster_petershoof_dockyards = {
+		allowed = {
+			tag = EQS
+		}
+		icon = steel
+		highlight_states = {
+			highlight_state_targets = {
+				state = 166
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 4
+			owns_state = 166
+		}
+		visible = {
+			owns_state = 166
+			has_country_flag = SOL_new_mining_decisions
+		}
+		fire_only_once = yes
+		cost = 45
+		days_remove = 90
+		modifier = { civilian_factory_use = 5 }
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_bolster_petershoof_dockyards"
+			166 = {
+				add_resource = {
+					type = steel
+					amount = 12
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				num_of_civilian_factories_available_for_projects > 10
+				has_political_power > 75
+				add = 7
+			}
+		}
+	}
+	EQS_chromium_in_goatcasus = {
+		allowed = { tag = EQS }
+		icon = chromium
+		highlight_states = {
+			highlight_state_targets = {
+				state = 154
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			owns_state = 154
+		}
+		visible = {
+			owns_state = 154
+			has_country_flag = SOL_new_mining_decisions
+		}
+		fire_only_once = yes
+		cost = 35
+		days_remove = 75
+		modifier = { civilian_factory_use = 3 }
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_chromium_in_goatcasus"
+			154 = {
+				add_resource = {
+					type = chromium
+					amount = 8
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				resource@chromium < 10
+				add = 2
+			}
+		}
+	}
+	EQS_establish_new_whinnyapolis_forges = {
+		allowed = { tag = EQS }
+		icon = steel
+		highlight_states = {
+			highlight_state_targets = {
+				state = 70
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			owns_state = 70
+		}
+		visible = {
+			owns_state = 70
+			has_country_flag = SOL_new_mining_decisions
+		}
+		fire_only_once = yes
+		cost = 40
+		days_remove = 85
+		modifier = { civilian_factory_use = 3 }
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_establish_new_whinnyapolis_forges"
+			70 = {
+				add_resource = {
+					type = steel
+					amount = 8
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				num_of_civilian_factories_available_for_projects > 10
+				has_political_power > 100
+				add = 3
+			}
+		}
+	}
+	EQS_peat_bogs_of_eastern_yeahcon = {
+		allowed = { tag = EQS }
+		icon = oil
+		highlight_states = {
+			highlight_state_targets = {
+				state = 174
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+			owns_state = 174
+		}
+		visible = {
+			owns_state = 174
+			has_country_flag = SOL_new_mining_decisions
+		}
+		fire_only_once = yes
+		cost = 35
+		days_remove = 90
+		modifier = { civilian_factory_use = 4 }
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_peat_bogs_of_eastern_yeahcon"
+			174 = {
+				add_resource = {
+					type = oil
+					amount = 8
+				}
+				set_state_flag = EQS_peat_bogs_tapped
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				num_of_civilian_factories_available_for_projects > 15
+				add = 2
+			}
+		}
+	}
+	EQS_chicoltgo_refinery = {
+		allowed = { tag = EQS }
+		icon = oil
+		highlight_states = {
+			highlight_state_targets = {
+				state = 174
+				state = 131
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 5
+			owns_state = 174
+			owns_state = 131
+		}
+		visible = {
+			has_country_flag = SOL_new_mining_decisions
+			OR = {
+				owns_state = 174
+				owns_state = 131
+			}
+			174 = {
+				has_state_flag = EQS_peat_bogs_tapped
+			}
+		}
+		cost = 75
+		days_remove = 125
+		modifier = { civilian_factory_use = 6 }
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_chicoltgo_refinery"
+			174 = {
+				add_resource = {
+					type = oil
+					amount = 8
+				}
+			}
+			131 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				num_of_civilian_factories_available_for_projects > 20
+				has_political_power > 125
+				add = 3
+			}
+		}
+	}
+	EQS_vanhoover_aluminium_mills = {
+		allowed = { tag = EQS }
+		icon = aluminium
+		highlight_states = {
+			highlight_state_targets = {
+				state = 14
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			owns_state = 14
+		}
+		visible = {
+			owns_state = 14
+			has_country_flag = SOL_new_mining_decisions
+		}
+		cost = 30
+		days_remove = 140
+		modifier = { civilian_factory_use = 2 }
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_vanhoover_aluminum_mills"
+			14 = {
+				add_resource = {
+					type = aluminium
+					amount = 10
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				resource@aluminium < 12
+				add = 4
+			}
+		}
+	}
+	EQS_invest_in_jade_hills = {
+		allowed = { tag = EQS }
+		icon = tungsten
+		highlight_states = {
+			highlight_state_targets = {
+				state = 139
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			OR = {
+				owns_state = 139
+				CRY = {
+					is_subject_of = ROOT
+					owns_state = 139
+				}
+			}
+		}
+		visible = {
+			has_country_flag = SOL_new_mining_decisions
+			OR = {
+				owns_state = 139
+				CRY = {
+					is_subject_of = ROOT
+					owns_state = 139
+				}
+			}
+		}
+		modifier = { civilian_factory_use = 3 }
+		cost = 50
+		days_remove = 65
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_invest_in_jade_hills"
+			139 = {
+				add_resource = {
+					type = tungsten
+					amount = 8
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				num_of_civilian_factories_available_for_projects > 20
+				add = 2
+			}
+		}
+	}
+	EQS_plunge_everhoofs_depths = {
+		allowed = { tag = EQS }
+		icon = crystals
+		highlight_states = {
+			highlight_state_targets = {
+				state = 55
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			has_tech = excavation3
+			OR = {
+				owns_state = 55
+				CRY = {
+					is_subject_of = ROOT
+					owns_state = 55
+				}
+			}
+		}
+		visible = {
+			has_country_flag = SOL_new_mining_decisions
+			OR = {
+				owns_state = 55
+				CRY = {
+					is_subject_of = ROOT
+					owns_state = 55
+				}
+			}
+		}
+		modifier = { civilian_factory_use = 2 }
+		cost = 45
+		days_remove = 120
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_plunge_everhoofs_depths"
+			55 = {
+				add_resource = {
+					type = crystals
+					amount = 12
+				}
+				set_state_flag = EQS_everhoof_expansion_1
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				resource@crystals < 30
+				add = 3
+			}
+		}
+	}
+	EQS_strip_mine_everhoof_range = {
+		allowed = { tag = EQS }
+		icon = crystals
+		highlight_states = {
+			highlight_state_targets = {
+				state = 55
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+			has_tech = excavation4
+			OR = {
+				owns_state = 55
+				CRY = {
+					is_subject_of = ROOT
+					owns_state = 55
+				}
+			}
+		}
+		visible = {
+			has_country_flag = SOL_new_mining_decisions
+			OR = {
+				owns_state = 55
+				CRY = {
+					is_subject_of = ROOT
+					owns_state = 55
+				}
+			}
+			55 = {
+				has_state_flag = EQS_everhoof_expansion_1
+			}
+		}
+		modifier = { civilian_factory_use = 4 }
+		cost = 60
+		days_remove = 130
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_strip_mine_everhoof_range"
+			55 = {
+				add_resource = {
+					type = crystals
+					amount = 12
+				}
+				set_state_flag = EQS_everhoof_expansion_2
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				resource@crystals < 20
+				add = 4
+			}
+		}
+	}
+	EQS_bore_deep_into_everhoof = {
+		allowed = { tag = EQS }
+		icon = crystals
+		highlight_states = {
+			highlight_state_targets = {
+				state = 55
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 7
+			has_tech = excavation_a
+			OR = {
+				owns_state = 55
+				CRY = {
+					is_subject_of = ROOT
+					owns_state = 55
+				}
+			}
+		}
+		visible = {
+			has_country_flag = SOL_new_mining_decisions
+			OR = {
+				owns_state = 55
+				CRY = {
+					is_subject_of = ROOT
+					owns_state = 55
+				}
+			}
+			55 = {
+				has_state_flag = EQS_everhoof_expansion_2
+			}
+		}
+		modifier = { civilian_factory_use = 8 }
+		cost = 80
+		days_remove = 200
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_plunge_everhoofs_depths"
+			55 = {
+				add_resource = {
+					type = crystals
+					amount = 18
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				resource@crystals < 10
+				add = 5
+			}
+		}
+	}
+}

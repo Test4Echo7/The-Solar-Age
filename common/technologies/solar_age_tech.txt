@@ -1,4 +1,29 @@
 technologies = {
+	EQS_sun_laser = {
+		research_cost = 1
+		allow = { always = no }
+	}
+	EQS_esoteric_extractions_lar = {
+		research_cost = 1
+		allow = { always = no }
+
+		airforce_intel_factor = 0.25
+		navy_intel_factor = 0.25
+		army_intel_factor = 0.25
+		civilian_intel_factor = 0.25
+
+		civilian_intel_to_others = -0.05
+		army_intel_to_others = -0.05
+		navy_intel_to_others = -0.05
+		airforce_intel_to_others = -0.05
+	}
+	EQS_esoteric_extractions = {
+		research_cost = 1
+		allow = { always = no }
+
+		decryption = 2.5
+		encryption = 0.25
+	}
     EQS_adeptus_astartes = {
 		research_cost = 1
 		allow = { always = no }

@@ -11433,6 +11433,11 @@ shared_focus = { #Imperial Collegiate of Blessed Unicorns
 		effect_tooltip = {
 			add_ideas = unicorn_academy
 		}
+		set_variable = { research_speed_var = 0.05 }
+		add_dynamic_modifier = {
+			modifier = SOL_imperial_science
+		}
+		EQS_remove_science_ideas = yes
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH }
 }
@@ -11959,6 +11964,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_grants_for_tithes"
 		#Unlock decision here
+		set_country_flag = SOL_new_mining_decisions
 	}
 	ai_will_do = { factor = 50 }
 }

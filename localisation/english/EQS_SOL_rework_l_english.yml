@@ -144,6 +144,19 @@
   EQS_project_conflagration:0 "Project Conflagration"
   EQS_project_evaporation:0 "Project Evaporation"
   EQS_project_firestorm:0 "Project Firestorm"
+  EQS_village_up_north_trading_post:0 "Trading Post in the [?241.GetCapitalVictoryPointName]"
+  EQS_village_up_north_naval_base:0 "Construct [?241.GetCapitalVictoryPointName] Naval Base"
+  EQS_expand_our_mining_cooperative:0 "Expand Our Mining Cooperative"
+  EQS_bolster_petershoof_dockyards:0 "Bolster [?166.GetCapitalVictoryPointName] Dockyards"
+  EQS_chromium_in_goatcasus:0 "Chromium in Goatcasus"
+  EQS_establish_new_whinnyapolis_forges:0 "Establish New [?70.GetCapitalVictoryPointName] Forges"
+  EQS_peat_bogs_of_eastern_yeahcon:0 "Peat Bogs of Eastern Yeahcon"
+  EQS_chicoltgo_refinery:0 "[?131.GetCapitalVictoryPointName] Refinery"
+  EQS_vanhoover_aluminium_mills:0 "[?14.GetCapitalVictoryPointName] Aluminium Mills"
+  EQS_invest_in_jade_hills:0 "Invest in Jade Hills"
+  EQS_plunge_everhoofs_depths:0 "Plunge Depths of Mount Everhoof"
+  EQS_strip_mine_everhoof_range:0 "Strip Mine the Everhoof Range"
+  EQS_bore_deep_into_everhoof:0 "Bore into Everhoof's Heart"
 
   ###Flags and Custom Tooltips###
   SOL_has_captured_sunset:0 "Sunset Shimmer has been captured."
@@ -220,6 +233,9 @@
   EQS_SOL_history_legio_XV:0 "§LThe Nightfellers are comprised entirely of thestrals who have sworn allegiance to the Empire and to the Empress. In exchange for their lives, they have been created as the ultimate troops to defend in the frightening darkness, and have received their own unique, magical enhancements to further improve their night vision and reactions. These additional enchantments require them to be helmeted at all times, as their vision is too sensitive for the day, and their increased agility makes them twitchy, even for the ever-alert Praetorian. Although they are smaller in number compared to other legions, they are just as dedicated to ensuring the Empire stands, and Order and Harmony prevail. They are the unseen saviors, protecting the citizens of the Empire while they sleep, and eliminating any dangers that lurk in the dark.§!"
 
   ###Technology###
+  EQS_sun_laser:0 "Righteous Light"
+  EQS_esoteric_extractions_lar:0 "Esoteric Extractions"
+  EQS_esoteric_extractions:0 "Esoteric Extractions"
   EQS_adeptus_astartes:0 "Project Astartes"
   EQS_enhanced_matrices:0 "Enhanced Spell Matrices"
   EQS_portable_solar_panels:0 "Portable Sun Absorbers"

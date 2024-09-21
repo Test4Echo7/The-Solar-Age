@@ -1,3 +1,29 @@
+EQS_remove_science_ideas = {
+    if = {
+        limit = { has_idea = unicorn_academy }
+        remove_ideas = unicorn_academy
+    }
+    else_if = {
+        limit = { has_idea = unicorn_academy1 }
+        remove_ideas = unicorn_academy1
+    }
+    else_if = {
+        limit = { has_idea = unicorn_academy2 }
+        remove_ideas = unicorn_academy2
+    }
+    else_if = {
+        limit = { has_idea = unicorn_academy3 }
+        remove_ideas = unicorn_academy3
+    }
+    else_if = {
+        limit = { has_idea = unicorn_academy4 }
+        remove_ideas = unicorn_academy4
+    }
+    if = {
+        limit = { has_idea = magical_trainingidea }
+        remove_ideas = magical_trainingidea
+    }
+}
 EQS_get_flagship_bb = {
     ###Daybreak, but less crazy###
     if = {
