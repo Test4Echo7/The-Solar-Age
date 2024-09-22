@@ -165,6 +165,12 @@
   EQS_industrialize_jungle_city:0 "Industrialize Tenochtitlan"
   EQS_repair_temple_of_sun:0 "Repair the Pyramid of the Sun"
   EQS_repair_temple_of_sun_desc:0 "In ancient times, the Neighua ponies worshiped the sun and constructed expansive complexes with towering pyramids, aligned to the solstices and equinoxes. Historical evidence and oral history indicate that sacrifices were performed at these sites, but when contact was made with Equestrian explorers, it eventually fell out of favor when they learned of Celestia's benevolance. Daybreaker is not Celestia, and it is time that they return to their worship of her, for it is only the appropriate response to being ruled by a god."
+  SOL_further_flurrys_war_training:0 "Further Firestorm's Training in War"
+  SOL_further_flurrys_war_training_desc:0 "As she is still far too young to lead soldiers, Firestorm will be given extensive lessons outside of her normal curriculum, so that she may be one of the chosen leaders of the God-Empress. As an alicorn, she should take to it quite quickly."
+  SOL_instruct_flurry_in_war_planning:0 "Tutor Firestorm in War Strategy"
+  SOL_force_flurry_into_survival_exercise:0 "Force Firestorm into Survival Training"
+  SOL_finalize_with_personal_instruction:0 "Finalize Firestorm's Training Personally"
+  SOL_finalize_with_personal_instruction_desc:0 "Since Firestorm began her intensive studies and exercises in all aspects of war, she has become a formidable foe on the battlefield, but there are still many things that can be taught to her, for the God-Empress has not deigned Firestorm worthy of learning many of her own secrets. That shall change, with her last instructions being personal contests between herself and the God-Empress."
 
   ###Flags and Custom Tooltips###
   SOL_has_captured_sunset:0 "Sunset Shimmer has been captured."
@@ -199,6 +205,7 @@
   SOL_imperial_science_9_tt:0 "Modify §YFlame of Science§! by\nResearch Speed: §G+2.00%§!\nRace Magic Research Speed: §G+7.5%§!\nDaily Political Power Gain: §R-0.15§!"
   EQS_hidden_idea_stats_tt:0 "[getSOLHiddenBonuses]"
   SOL_flurry_old_enough_tt:0 "§YFlurry Heart§! is old enough to comprehend her §Obirthright§!."
+  EQS_flurry_gets_smarter_tt:0 "§CFirestorm§! will become a more capable general."
 
   ###Dynamic Loc###
   SOL_hidden_bonuses_empty:0 ""
@@ -471,3 +478,6 @@
   solarreworked.500.b:0 "It can only be a battleship that shall be a fortress upon the sea!"
   solarreworked.500.c:0 "A carrier that can drown our enemies in planes sounds perfect!"
   solarreworked.500.e:0 "Perhaps we should wait until our technology advances further."
+  solarreworked.501.t:0 "Herald of the Sun"
+  solarreworked.501.d:0 "While it took years of nurturing and guidance, my niece, Firestorm, has finally grown of age to be able to lead on the battlefield. Her training is as complete as it can be, and she can only learn further by striking down the threats against myself, my Empire, and Harmony; but this shall not be a challenge to her, for more than any other I have enlightened, she has taken to her calling and fervently punished every aspect of heresy and rebellion that has been placed before her. Only I have more knowledge and power than she, and she will lead my armies to victory across the world!\n\nAlready she itches to be put to the test in battle. She will soon have her wish."
+  solarreworked.501.a:0 "She will bathe the battlefield in glory!"

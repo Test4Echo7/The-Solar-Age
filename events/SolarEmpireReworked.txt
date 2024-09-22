@@ -1329,17 +1329,7 @@ country_event = { #Daybreaker observes Flurry as she is in some of her training,
                     traits = { demi_goddess_of_fury }
                 }
             }
-        }
-        CRY_flurry_heart = {
-            add_corps_commander_role = {
-                traits = { pony_race_trait alicorn_of_fury promising_general }
-                level = 1
-                attack_skill = 1
-                defense_skill = 1
-                planning_skill = 1
-                logistics_skill = 1
-            }
-            custom_effect_tooltip = flurry_heart_stats_tp
+            set_character_name = SOL_flurry_heart_based_name
             set_portraits = {
                 civilian = {
                     large = "gfx/leaders/EQS/Based_Flurry.tga"
@@ -1350,7 +1340,18 @@ country_event = { #Daybreaker observes Flurry as she is in some of her training,
                     small = "gfx/interface/ideas/advisors/EQS/EQS_flurry_heart.tga"
                 }
             }
-            set_character_name = SOL_flurry_heart_based_name
+            if = {
+                limit = { date > 1021.12.31 }
+                add_corps_commander_role = {
+                    traits = { pony_race_trait alicorn_of_fury promising_general }
+                    skill = 1
+                    attack_skill = 1
+                    defense_skill = 1
+                    planning_skill = 1
+                    logistics_skill = 1
+                }
+                custom_effect_tooltip = flurry_heart_stats_tp
+            }
         }
     }
 }
@@ -1388,5 +1389,74 @@ country_event = {
         name = solarreworked.500.e
         navy_experience = 75
         clr_country_flag = SOL_designed_daybreak
+    }
+}
+
+country_event = {
+    id = solarreworked.501
+    title = solarreworked.501.t
+    desc = solarreworked.501.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.501"}
+
+    is_triggered_only = yes
+
+    option = { #She will bathe the battlefield in glory.
+        name = solarreworked.501.a
+        if = {
+            limit = { has_country_flag = SOL_flurry_training_tier_4 }
+            CRY_flurry_heart = {
+                add_corps_commander_role = {
+                    traits = { pony_race_trait alicorn_of_fury promising_general }
+                    skill = 5
+                    attack_skill = 6
+                    defense_skill = 2
+                    planning_skill = 5
+                    logistics_skill = 3
+                }
+                custom_effect_tooltip = flurry_heart_stats_dynamic_tp
+            }
+        }
+        else_if = {
+            limit = { has_country_flag = SOL_flurry_training_tier_3 }
+            CRY_flurry_heart = {
+                add_corps_commander_role = {
+                    traits = { pony_race_trait alicorn_of_fury promising_general }
+                    skill = 4
+                    attack_skill = 5
+                    defense_skill = 2
+                    planning_skill = 3
+                    logistics_skill = 3
+                }
+                custom_effect_tooltip = flurry_heart_stats_dynamic_tp
+            }
+        }
+        else_if = {
+            limit = { has_country_flag = SOL_flurry_training_tier_2 }
+            CRY_flurry_heart = {
+                add_corps_commander_role = {
+                    traits = { pony_race_trait alicorn_of_fury promising_general }
+                    skill = 3
+                    attack_skill = 4
+                    defense_skill = 2
+                    planning_skill = 3
+                    logistics_skill = 1
+                }
+                custom_effect_tooltip = flurry_heart_stats_dynamic_tp
+            }
+        }
+        else = {
+            CRY_flurry_heart = {
+                add_corps_commander_role = {
+                    traits = { pony_race_trait alicorn_of_fury promising_general }
+                    skill = 2
+                    attack_skill = 3
+                    defense_skill = 2
+                    planning_skill = 1
+                    logistics_skill = 1
+                }
+                custom_effect_tooltip = flurry_heart_stats_dynamic_tp
+            }
+        }
     }
 }

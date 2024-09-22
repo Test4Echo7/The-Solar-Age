@@ -282,6 +282,23 @@ on_actions = {
             log = "[GetDateText]: [ROOT.GetName]: on_weekly_EQS solar_age"
             if = {
                 limit = {
+                    date > 1021.12.31
+                    EQS = {
+                        has_completed_focus = SOL_rouse_godhood
+                        CRY_flurry_heart = {
+                            NOT = { is_corps_commander = yes }
+                            is_advisor = yes
+                        }
+                    }
+                }
+                country_event = {
+                    id = solarreworked.501
+                    days = 30
+                    random_days = 120
+                }
+            }
+            if = {
+                limit = {
                     NTR = { is_subject_of = EQS }
                     EQS = { is_EQS_SOL = yes }
                     AND = {

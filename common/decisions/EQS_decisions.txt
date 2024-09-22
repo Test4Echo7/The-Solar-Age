@@ -1305,6 +1305,155 @@ demobilization = {
 	}
 }
 political_actions = {
+	SOL_further_flurrys_war_training = {
+		allowed = {
+			original_tag = EQS
+		}
+		available = {
+			has_completed_focus = SOL_rouse_godhood
+			if = {
+				limit = {
+					CRY = { has_character = CRY_flurry_heart }
+				}
+				CRY = { NOT = { CRY_flurry_heart = { is_corps_commander = yes } } }
+			}
+			else = { NOT = { CRY_flurry_heart = { is_corps_commander = yes } } }
+		}
+		visible = {
+			date < 1022.1.1
+			has_completed_focus = SOL_rouse_godhood
+		}
+		cost = 100
+		days_remove = 150
+		fire_only_once = yes
+		modifier = {
+			political_power_gain = -0.15
+			experience_gain_army = -0.03
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_further_flurrys_war_training"
+			custom_effect_tooltip = EQS_flurry_gets_smarter_tt
+			add_to_variable = { EQS_flurry_skill_level = 1 }
+			add_to_variable = { EQS_flurry_attack_level = 2 }
+			add_to_variable = { EQS_flurry_defense_level = 1 }
+			set_country_flag = SOL_flurry_training_tier_1
+		}
+		ai_will_do = {
+			factor = 6
+		}
+	}
+	SOL_instruct_flurry_in_war_planning = {
+		allowed = {
+			original_tag = EQS
+		}
+		available = {
+			has_completed_focus = SOL_rouse_godhood
+			if = {
+				limit = {
+					CRY = { has_character = CRY_flurry_heart }
+				}
+				CRY = { NOT = { CRY_flurry_heart = { is_corps_commander = yes } } }
+			}
+			else = { NOT = { CRY_flurry_heart = { is_corps_commander = yes } } }
+		}
+		visible = {
+			date < 1022.1.1
+			has_country_flag = SOL_flurry_training_tier_1
+		}
+		cost = 100
+		days_remove = 150
+		fire_only_once = yes
+		modifier = {
+			political_power_gain = -0.25
+			experience_gain_army = -0.05
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_instruct_flurry_in_war_planning"
+			custom_effect_tooltip = EQS_flurry_gets_smarter_tt
+			add_to_variable = { EQS_flurry_skill_level = 1 }
+			add_to_variable = { EQS_flurry_attack_level = 1 }
+			add_to_variable = { EQS_flurry_planning_level = 2 }
+			set_country_flag = SOL_flurry_training_tier_2
+		}
+		ai_will_do = {
+			factor = 6
+		}
+	}
+	SOL_force_flurry_into_survival_exercise = {
+		allowed = {
+			original_tag = EQS
+		}
+		available = {
+			has_completed_focus = SOL_rouse_godhood
+			if = {
+				limit = {
+					CRY = { has_character = CRY_flurry_heart }
+				}
+				CRY = { NOT = { CRY_flurry_heart = { is_corps_commander = yes } } }
+			}
+			else = { NOT = { CRY_flurry_heart = { is_corps_commander = yes } } }
+		}
+		visible = {
+			date < 1022.1.1
+			has_country_flag = SOL_flurry_training_tier_2
+		}
+		cost = 100
+		days_remove = 150
+		fire_only_once = yes
+		modifier = {
+			political_power_gain = -0.25
+			experience_gain_army = -0.08
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_force_flurry_into_survival_exercise"
+			custom_effect_tooltip = EQS_flurry_gets_smarter_tt
+			add_to_variable = { EQS_flurry_skill_level = 1 }
+			add_to_variable = { EQS_flurry_attack_level = 1 }
+			add_to_variable = { EQS_flurry_logistics_level = 2 }
+			set_country_flag = SOL_flurry_training_tier_3
+		}
+		ai_will_do = {
+			factor = 6
+		}
+	}
+	SOL_finalize_with_personal_instruction = {
+		allowed = {
+			original_tag = EQS
+		}
+		available = {
+			has_completed_focus = SOL_rouse_godhood
+			if = {
+				limit = {
+					CRY = { has_character = CRY_flurry_heart }
+				}
+				CRY = { NOT = { CRY_flurry_heart = { is_corps_commander = yes } } }
+			}
+			else = { NOT = { CRY_flurry_heart = { is_corps_commander = yes } } }
+			EQS_princess_celestia = { skill > 4 }
+		}
+		visible = {
+			date < 1022.1.1
+			has_country_flag = SOL_flurry_training_tier_3
+		}
+		cost = 100
+		days_remove = 150
+		fire_only_once = yes
+		modifier = {
+			political_power_gain = -0.35
+			experience_gain_army = -0.1
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_finalize_with_personal_instruction"
+			custom_effect_tooltip = EQS_flurry_gets_smarter_tt
+			add_to_variable = { EQS_flurry_skill_level = 1 }
+			add_to_variable = { EQS_flurry_attack_level = 1 }
+			add_to_variable = { EQS_flurry_planning_level = 2 }
+			set_country_flag = SOL_flurry_training_tier_4
+		}
+		ai_will_do = {
+			factor = 6
+		}
+	}
 	SOL_choose_flagship = {
 		allowed = {
 			original_tag = EQS
@@ -1339,6 +1488,7 @@ political_actions = {
 			}
 			country_event = solarreworked.500 #Short event to choose a flagship, based on what tech is available
 		}
+		ai_will_do = { factor = 3 }
 	}
 	SOL_rehabilitate_generals = {
 
