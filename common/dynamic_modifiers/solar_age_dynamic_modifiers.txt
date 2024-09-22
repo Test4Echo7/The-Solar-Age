@@ -1,12 +1,12 @@
 SOL_imperial_science = {
-    icon = GFX_idea_unicorn_academy
+    icon = GFX_idea_EQS_unicorn_academy
 
     research_speed_factor = research_speed_var
     political_power_gain = political_power_gain_var
-    stability_factor = stability_factor_var
-    land_doctrine_cost_factor = land_doctrine_cost_factor_var
-    naval_doctrine_cost_factor = naval_doctrine_cost_factor_var
-    air_doctrine_cost_factor = air_doctrine_cost_factor_var
+    party_popularity_stability_factor = stability_factor_var
+    land_doctrine_cost_factor = doctrine_cost_factor_var
+    naval_doctrine_cost_factor = doctrine_cost_factor_var
+    air_doctrine_cost_factor = doctrine_cost_factor_var
     fascism_drift = fascism_drift_var
     custom_modifier_tooltip = EQS_hidden_idea_stats_tt
 }

@@ -92,12 +92,24 @@ EQS_debug_category = {
         }
         complete_effect = {
             set_technology = {
+                EQS_sun_laser = 1
                 EQS_enhanced_matrices = 1
                 EQS_portable_solar_panels = 1
                 EQS_hot_fusion = 1
                 EQS_super_flamers = 1
                 EQS_plasma_cannons = 1
                 EQS_pilot_drug_programs = 1
+            }
+            if = {
+                limit = { has_dlc = "La Resistance" }
+                set_technology = {
+                    EQS_esoteric_extractions_lar = 1
+                }
+            }
+            else = {
+                set_technology = {
+                    EQS_esoteric_extractions = 1
+                }
             }
         }
     }

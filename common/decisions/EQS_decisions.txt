@@ -3393,4 +3393,303 @@ prospect_for_resources = {
 			}
 		}
 	}
+	EQS_build_ayacachtli_worker_suburbs = {
+		allowed = { tag = EQS }
+		icon = generic_construction
+		highlight_states = {
+			highlight_state_targets = {
+				state = 30
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 4
+			owns_state = 30
+		}
+		visible = {
+			owns_state = 30
+			has_country_flag = SOL_new_mining_decisions
+			has_completed_focus = SOL_useful_servants
+		}
+		modifier = { civilian_factory_use = 5 }
+		cost = 75
+		days_remove = 150
+		fire_only_once = yes
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_build_ayacachtli_worker_suburbs"
+			30 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = EQS_ayacachtli_expansion_1
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				num_of_civilian_factories_available_for_projects > 10
+				add = 3
+			}
+		}
+	}
+	EQS_expand_ayacachtli_chromium_mines = {
+		allowed = { tag = EQS }
+		icon = chromium
+		highlight_states = {
+			highlight_state_targets = {
+				state = 30
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 7
+			owns_state = 30
+		}
+		visible = {
+			owns_state = 30
+			30 = { has_state_flag = EQS_ayacachtli_expansion_1 }
+		}
+		cost = 90
+		days_remove = 180
+		fire_only_once = yes
+		modifier = {
+			civilian_factory_use = 8
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_expand_ayacachtli_chromium_mines"
+			30 = {
+				add_extra_state_shared_building_slots = 1
+				improve_state_category = yes
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = chromium
+					amount = 10
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				resource@chromium < 12
+				add = 7
+			}
+		}
+	}
+	EQS_wholesale_thestral_mining = {
+		allowed = { tag = EQS }
+		icon = chromium
+		highlight_states = {
+			highlight_state_targets = {
+				state = 30
+				state = 81
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 9
+			owns_state = 30
+			owns_state = 81
+			has_tech = excavation2
+		}
+		visible = {
+			owns_state = 30
+			owns_state = 81
+			has_completed_focus = SOL_god_empress
+			has_country_flag = SOL_new_mining_decisions
+			has_completed_focus = SOL_burn_bats
+		}
+		cost = 65
+		days_remove = 100
+		fire_only_once = yes
+		modifier = {
+			civilian_factory_use = 10
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_wholesale_thestral_mining"
+			###Event of thestral miners being put through the works, since they are seen as less than dirt, and are only good for laboring and dying
+			30 = {
+				add_resource = {
+					type = chromium
+					amount = 16
+				}
+				if = {
+					limit = { infrastructure < 5 }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			81 = {
+				add_resource = {
+					type = chromium
+					amount = 12
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				resource@chromium < 20
+				add = 10
+			}
+		}
+	}
+	EQS_clear_tenochtitlan_jungles = {
+		allowed = { tag = EQS }
+		icon = rubber
+		highlight_states = {
+			highlight_state_targets = {
+				state = 16
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+			owns_state = 16
+		}
+		visible = {
+			owns_state = 16
+			has_completed_focus = SOL_burn_bats
+			has_country_flag = SOL_new_mining_decisions
+		}
+		cost = 75
+		days_remove = 140
+		fire_only_once = yes
+		modifier = {
+			civilian_factory_use = 4
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_clear_tenochtitlan_jungles"
+			16 = {
+				add_extra_state_shared_building_slots = 2
+				add_resource = {
+					type = rubber
+					amount = 6
+				}
+				set_state_flag = EQS_tenochtitlan_expansion_1
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				resource@rubber < 12
+				add = 5
+			}
+		}
+	}
+	EQS_industrialize_jungle_city = {
+		allowed = { tag = EQS }
+		icon = steel
+		highlight_states = {
+			highlight_state_targets = {
+				state = 16
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 6
+			owns_state = 16
+		}
+		visible = {
+			owns_state = 16
+			16 = { has_state_flag = EQS_tenochtitlan_expansion_1 }
+		}
+		cost = 85
+		days_remove = 150
+		fire_only_once = yes
+		modifier = {
+			civilian_factory_use = 7
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_industrialize_jungle_city"
+			16 = {
+				add_extra_state_shared_building_slots = 1
+				improve_state_category = yes
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 12
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				num_of_civilian_factories_available_for_projects > 13
+				add = 7
+			}
+		}
+	}
+	EQS_repair_temple_of_sun = {
+		allowed = { tag = EQS }
+		icon = generic_construction
+		highlight_states = {
+			highlight_state_targets = {
+				state = 16
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 7
+			owns_state = 16
+		}
+		visible = {
+			owns_state = 16
+			has_country_flag = SOL_new_mining_decisions
+			has_completed_focus = SOL_useful_servants
+			has_completed_focus = SOL_god_empress
+		}
+		cost = 100
+		days_remove = 140
+		fire_only_once = yes
+		modifier = {
+			civilian_factory_use = 8
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_repair_temple_of_sun"
+			###Event of the temple being reopened and the Neighua starting to worship there again, which Daybreaker oversees and is quite pleased about
+			16 = {
+				improve_state_category = yes
+				add_extra_state_shared_building_slots = 2
+				add_manpower = 25000
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				if = {
+					limit = { infrastructure < 5 }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				num_of_civilian_factories_available_for_projects > 7
+				add = 10
+			}
+		}
+	}
 }

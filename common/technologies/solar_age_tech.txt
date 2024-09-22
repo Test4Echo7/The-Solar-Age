@@ -12,10 +12,10 @@ technologies = {
 		army_intel_factor = 0.25
 		civilian_intel_factor = 0.25
 
-		civilian_intel_to_others = -0.05
-		army_intel_to_others = -0.05
-		navy_intel_to_others = -0.05
-		airforce_intel_to_others = -0.05
+		civilian_intel_to_others = -5
+		army_intel_to_others = -5
+		navy_intel_to_others = -5
+		airforce_intel_to_others = -5
 	}
 	EQS_esoteric_extractions = {
 		research_cost = 1

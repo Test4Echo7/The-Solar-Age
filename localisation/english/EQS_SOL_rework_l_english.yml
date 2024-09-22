@@ -157,6 +157,14 @@
   EQS_plunge_everhoofs_depths:0 "Plunge Depths of Mount Everhoof"
   EQS_strip_mine_everhoof_range:0 "Strip Mine the Everhoof Range"
   EQS_bore_deep_into_everhoof:0 "Bore into Everhoof's Heart"
+  EQS_build_ayacachtli_worker_suburbs:0 "Construct Ayacachtli Worker Suburbs"
+  EQS_expand_ayacachtli_chromium_mines:0 "Expand Ayacachtli Chromium Mines"
+  EQS_wholesale_thestral_mining:0 "Extensive Thestral-Based Mining"
+  EQS_wholesale_thestral_mining_desc:0 "What thestrals that survived the righteous purges of their kind shall be utilized for the benefit of all society. They do not require sustenance like the faithful does, nor do they need sleep, as they are creatures of darkness and sin. When they perish, their debts will be paid, but until then, they shall labor for us, and provide from the wealth of the earth."
+  EQS_clear_tenochtitlan_jungles:0 "Clear Tenochtitlan Jungles"
+  EQS_industrialize_jungle_city:0 "Industrialize Tenochtitlan"
+  EQS_repair_temple_of_sun:0 "Repair the Pyramid of the Sun"
+  EQS_repair_temple_of_sun_desc:0 "In ancient times, the Neighua ponies worshiped the sun and constructed expansive complexes with towering pyramids, aligned to the solstices and equinoxes. Historical evidence and oral history indicate that sacrifices were performed at these sites, but when contact was made with Equestrian explorers, it eventually fell out of favor when they learned of Celestia's benevolance. Daybreaker is not Celestia, and it is time that they return to their worship of her, for it is only the appropriate response to being ruled by a god."
 
   ###Flags and Custom Tooltips###
   SOL_has_captured_sunset:0 "Sunset Shimmer has been captured."
@@ -180,8 +188,28 @@
   EQS_get_better_tech_boi_tt:0 "We can build an even §Ostronger§! flagship if we progress §Yfurther§! in technology."
   EQS_researching_wunderwaffen:0 "We are currently researching another project."
   SOL_retake_yo_country_boi_tt:0 "§RIf we retake Vanhoover, we can repair their naval industry.§!"
+  SOL_imperial_science_1_tt:0 "Add §YFlame of Science§!, which grants (Research Speed: §G+5.00%§!, Magic Research Speed: §G+5%§!)"
+  SOL_imperial_science_2_tt:0 "Modify §YFlame of Science§! by\nResearch Speed: §G+2.00%§!\nIndustry Research Speed: §G+5%§!"
+  SOL_imperial_science_3_tt:0 "Modify §YFlame of Science§! by\nMagic Research Speed: §G+10%§!"
+  SOL_imperial_science_4_tt:0 "Modify §YFlame of Science§! by\nResearch Speed: §G+5.00%§!\nElectronics Research Speed: §G+10%§!"
+  SOL_imperial_science_5_tt:0 "Modify §YFlame of Science§! by\nResearch Speed: §G+5.00%§!\nRace Magic Speed: §G+10%§!"
+  SOL_imperial_science_6_tt:0 "Modify §YFlame of Science§! by\nResearch Speed: §G+5.00%§!\nDaily Supremacy Support: §G+0.03§!\nParty Stability Factor: §G+5.00%§!"
+  SOL_imperial_science_7_tt:0 "Modify §YFlame of Science§! by\nResearch Speed: §G+3.00%§!\nLand Doctrine Cost: §G-5%§!\nNaval Doctrine Cost: §G-5%§!\nAir Doctrine Cost: §G-5%§!"
+  SOL_imperial_science_8_tt:0 "Modify §YFlame of Science§! by\nResearch Speed: §G+5.00%§!\nMagic Speed: §G+5.00%§!\nDaily Political Power Gain: §R-0.10§!"
+  SOL_imperial_science_9_tt:0 "Modify §YFlame of Science§! by\nResearch Speed: §G+2.00%§!\nRace Magic Research Speed: §G+7.5%§!\nDaily Political Power Gain: §R-0.15§!"
+  EQS_hidden_idea_stats_tt:0 "[getSOLHiddenBonuses]"
+  SOL_flurry_old_enough_tt:0 "§YFlurry Heart§! is old enough to comprehend her §Obirthright§!."
 
-  ###Leader Traits###
+  ###Dynamic Loc###
+  SOL_hidden_bonuses_empty:0 ""
+  SOL_hidden_bonuses_magic_tech_only:0 "Magic Research Speed: §G+[?magical_tech_factor_var]%§!"
+  SOL_hidden_bonuses_magic_tech_industry:0 "Magic Research Speed: §G+[?magical_tech_factor_var]%§!\nIndustry Research Speed: §G+[?industrial_tech_factor_var]%§!"
+  SOL_hidden_bonuses_magic_tech_race:0 "Magic Research Speed: §G+[?magical_tech_factor_var]%§!\nRace Tech Research Speed: §G+[?race_tech_factor_var]%§!"
+  SOL_hidden_bonuses_magic_tech_race_industry:0 "Magic Research Speed: §G+[?magical_tech_factor_var]%§!\nIndustry Research Speed: §G+[?industrial_tech_factor_var]%§!\nRace Tech Research Speed: §G+[?race_tech_factor_var]%§!"
+  SOL_hidden_bonuses_magic_tech_electronics_industry:0 "Magic Research Speed: §G+[?magical_tech_factor_var]%§!\nIndustry Research Speed: §G+[?industrial_tech_factor_var]%§!\nElectronics Research Speed: §G+[?electronics_tech_factor_var]%§!"
+  SOL_hidden_bonuses_all:0 "Magic Research Speed: §G+[?magical_tech_factor_var]%§!\nIndustry Research Speed: §G+[?industrial_tech_factor_var]%§!\nElectronics Research Speed: §G+[?electronics_tech_factor_var]%§!\nRace Tech Research Speed: §G+[?race_tech_factor_var]%§!"
+
+  ###Unit Leader Traits###
   gifted:0 "Gifted"
   gifted_desc:0 "§LZephyr Breeze always believed that he was destined for greatness, and with his brains, of course he'd easily pick up any new task thrown at him! Now, if only he could find ponies to delegate some of his tasks. Starting with... all of them.§!"
   bearer_of_the_sun:0 "Bearer of the Sun"
@@ -195,6 +223,8 @@
   supernova_desc:0 "§LThe Dawn comes. The Sun pierces the veil of darkness. The Fire leaves no sinner alive.§!"
   magic_drained:0 "Magic Drained"
   magic_drained_desc:0 "§LNopony is without their limits, and the Empress has pushed herself beyond hers for too long. She must take time to rest and recover to effectively lead us in battle.§!"
+  alicorn_of_fury:0 "Alicorn of Fury"
+  alicorn_of_fury_desc:0 "§LThe Morning Wind wails. The Frigid Air of the North pierces through the hearts of all who threaten the Light of Day. Nopony shall escape her wrath. No foe shall go unpunished. For the Herald of the Goddess does not suffer fools and traitors lightly.§!"
 
   ###Country Leader Traits###
   aussenseiter_regentin:0 "Foreign Regent"
@@ -203,6 +233,7 @@
 
   ###Advisor Traits###
   eea_chancellor:0 "Head of the EEA"
+  demi_goddess_of_fury:0 "Demi-Goddess of Fury"
 
   ###Leader Descriptions###
   fancy_albino_sunhorse_desc:0 "§YBorn:§! 16th of March, 986 ALB in Vanhoover\n\nBorn to a simple working class family in one of the boroughs of Vanhoover, Arcane Nova was always aware from an early age of the dangers that were present not a couple hundred miles north of the metropolis. From her parents and teachers, the radio and newspapers, the changeling menace was always something that was in the back of her, and many of her generation's minds. Although there never was a changeling infiltration like some ponies in Vanhoover feared, the backdrop of the threat shaped many of her early interests in military strategy. When Queen Chrysalis almost toppled the Equestrian government in 1002, it only further pushed the teen Arcane Nova to apply for every military academy that would potentially take her.\n\nAn appreciation for war in pre-dawn Equestria was looked upon as strange or frightening, but after acceptance into the class of 1005 to Fillydelphia Military Academy, her talent for analyzing combat situations and adapting to unexpected developments became apparent. When she set a new record for holding out in a scenario designed to be an impossible defense, she was transferred to Canterlot's academy to further refine her aptitude to war and war-related magic.\n\nIn the ensuing restructuring of the military after Daybreaker's ascension, her unwavering dedication to guarding Equestria and her astute observations earned her a position within the military science wing of the Solar Empire. When she was summoned by Daybreaker to personally oversee and ensure the loyalty of New Mareland, she was more than eager to prove her abilities to her Empress.\n\nIn New Mareland, she has guaranteed that there is nothing that can be used to question the Empress's decrees. Unrest has been met with disproportionate punishment, and any and all mention to Luna, thestrals, or other creatures of the night have been suppressed. In time, the troublesome colony will become a model subject of the Empress, where the Dawn Star is revered at all times, and all dissidence is eliminated with cauterizing efficiency.\n\n§YPortrait by:§! Opal Radiance"
@@ -243,6 +274,10 @@
   EQS_super_flamers:0 "Melta Guns"
   EQS_plasma_cannons:0 "Plasma Cannons"
   EQS_pilot_drug_programs:0 "Pilot Enhancement Programs"
+
+  ###Dynamic Modifiers###
+  SOL_imperial_science:0 "Flame of Science"
+  SOL_imperial_science_desc:0 "Clearing the cruft of the old regime's ethics and standards allows our scientists and students to explore magic and technology at unmatched paces. Who needs to hold to standards when it advances the cause of the Empress?"
 
   ###Ideas###
   ###Hidden/Enemy###
@@ -423,6 +458,11 @@
   solarreworked.130.t:0 "Inferno"
   solarreworked.130.d:0 "The enemy is at our gates. Everything that I have fought for, everything that I have done to protect my ponies has not been enough. I see the wounded hauled off to the hospitals, I hear the pleas for salvation from the lost souls around me. Their belief in me is unwavering, it is unstoppable, but our foes are stronger than just my ponies.\n\nBattle after battle, more dead are left to be eaten by maggots. Loyal and fiend alike leave spill blood to water the fields of war, while I must continue on and strike in retribution for our survival.\n\nI have not come this way, I have not lived for over a thousand years to see an upstart nation topple us. If they are so confident that they can endure the heat of the Sun, then they shall face its full radiance!\n\nLet them feel the might of the Dawn Star! Let them cower as their comrades perish in flame! Let them crawl and beg, plead for mercy, and receive none! As the fire crawls upon their skin and consumes their sin, they shall feel my justice!\n\nFor I am the Sun! I am the Light of Equus! I am Order Incarnate!\n\nI. AM. HARMONY!\n\nAnd they will all §RBURN!§!"
   solarreworked.130.a:0 "They will be turned to ash!"
+
+  ###Corruption Events###
+  solarreworked.203.t:0 "Ascend"
+  solarreworked.203.d:0 "A cold chill ran down Daybreaker's spine as she watched Flurry Heart twist and whirl through some of her training exercises. Dodge, weave, unleash magic bolt, repeat. Every single one of her targets, various prisoners from rebel camps that had yet to be properly dealt with, fell to her advances. Despite her lithe form, which belied some of her innate, alicorn strength, she dove at one of the nearby, fleeing ponies, who was banging on the door out of the training room.\n\nAs a chime of magic echoed through the arena, there was an agonizing screech, and then it went silent. Slowly, the lights to the room dimmed, and there was a single, light click as the latch to the door was released, by a simple twist by Daybreaker's magic.\n\nIn a burst of light, Daybreaker teleported to the other side of the door, and opened it, revealing Flurry, who was heaving over the charred body of the rebel. She continued to stare at it for a moment, emotions running rampant in her eyes, switching rapidly between rage, confusion, anger, hurt, fear, and shock. While her breaths continued in staccato bursts, she finally got off of the body and staggered on wobbly legs toward Daybreaker.\n\n"You succeeded," Daybreaker stated matter-of-factly. Masking a fake yawn by placing a hoof over her muzzle, she concealed a grin as Flurry collapsed in a heap in front of her.\n\n"I—I—I—" she stammered a few times.\n\n"You succeeded," repeated Daybreaker, stepping forward and resting a hoof on Flurry's shoulder. The young mare looked at Daybreaker, tears welling up as she gazed into her aunt's eyes. "You did not hesitate. You took charge. Like an alicorn must." At Flurry's nod, she smiled. "Tell me: what did you feel?"\n\n"I... felt... furious. Everypony there was a danger to [EQS.GetNameDef]. A danger to you! To me!" At that, Flurry pushed herself back up. "I-If they could coordinate, they could have attacked you!" Realization clearly dawning on her, the dam of emotions broke and she sobbed, "I can't let them hurt you! I can't let them hurt me!" Only a couple of sniffs escaped her nose before she screamed, "I'll break them all!"\n\nAs Flurry wailed, Daybreaker smirked.\n\nShe had finally learned."
+  solarreworked.203.a:0 "She's the Firestorm of my heart."
 
   ###Utility Events###
   solarreworked.500.t:0 "Empress of the Sea"

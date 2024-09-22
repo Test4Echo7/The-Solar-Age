@@ -109,3 +109,63 @@ defined_text = { # Civil war size
 		localization_key = EQS_CelestiasPopularSupport_min_good
 	}
 }
+defined_text = {
+	name = getSOLHiddenBonuses
+	text = {
+		trigger = {
+			check_variable = { EQS.industrial_tech_factor_var = 0 }
+			check_variable = { EQS.electronics_tech_factor_var = 0 }
+			check_variable = { EQS.race_tech_factor_var = 0 }
+			check_variable = { EQS.magical_tech_factor_var > 0 }
+		}
+		localization_key = SOL_hidden_bonuses_magic_tech_only
+	}
+	text = {
+		trigger = {
+			check_variable = { EQS.industrial_tech_factor_var > 0 }
+			check_variable = { EQS.electronics_tech_factor_var = 0 }
+			check_variable = { EQS.race_tech_factor_var = 0 }
+			check_variable = { EQS.magical_tech_factor_var > 0 }
+		}
+		localization_key = SOL_hidden_bonuses_magic_tech_industry
+	}
+	text = {
+		trigger = {
+			check_variable = { EQS.industrial_tech_factor_var = 0 }
+			check_variable = { EQS.electronics_tech_factor_var = 0 }
+			check_variable = { EQS.race_tech_factor_var > 0 }
+			check_variable = { EQS.magical_tech_factor_var > 0 }
+		}
+		localization_key = SOL_hidden_bonuses_magic_tech_race
+	}
+	text = {
+		trigger = {
+			check_variable = { EQS.industrial_tech_factor_var > 0 }
+			check_variable = { EQS.electronics_tech_factor_var = 0 }
+			check_variable = { EQS.race_tech_factor_var > 0 }
+			check_variable = { EQS.magical_tech_factor_var > 0 }
+		}
+		localization_key = SOL_hidden_bonuses_magic_tech_race_industry
+	}
+	text = {
+		trigger = {
+			check_variable = { EQS.industrial_tech_factor_var > 0 }
+			check_variable = { EQS.electronics_tech_factor_var > 0 }
+			check_variable = { EQS.race_tech_factor_var = 0 }
+			check_variable = { EQS.magical_tech_factor_var > 0 }
+		}
+		localization_key = SOL_hidden_bonuses_magic_tech_electronics_industry
+	}
+	text = {
+		trigger = {
+			check_variable = { EQS.industrial_tech_factor_var > 0 }
+			check_variable = { EQS.electronics_tech_factor_var > 0 }
+			check_variable = { EQS.race_tech_factor_var > 0 }
+			check_variable = { EQS.magical_tech_factor_var > 0 }
+		}
+		localization_key = SOL_hidden_bonuses_all
+	}
+	text = {
+		localization_key = SOL_hidden_bonuses_empty
+	}
+}

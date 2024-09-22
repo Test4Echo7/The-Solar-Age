@@ -43,4 +43,16 @@ leader_traits = {
 
         ai_will_do = { factor = 1 }
     }
+
+    demi_goddess_of_fury = {
+        random = no
+        stability_factor = -0.075
+        monthly_population = -0.25
+        resistance_target = -0.05
+        required_garrison_factor = -0.1
+        army_attack_factor = 0.05
+        coordination_bonus = 0.03
+
+        ai_will_do = { factor = 1 }
+    }
 }

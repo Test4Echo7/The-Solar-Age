@@ -1267,6 +1267,94 @@ country_event = { #An event informing the leader of the country that Twilight, S
     }
 }
 
+###Corruption Events###
+country_event = { #Daybreaker first takes Flurry Heart back with her to Canterlot, to start to teach her the true reason why alicorns are meant to rule, and have her unlearn much of what she had been taught by Cadance and Sunburst, who she both derides as foolish and shortsighted, unlike her; Flurry is still somewhat innocent, and believes in her aunt
+    id = solarreworked.200 #If she is young, it will be more simplistic language from Daybreaker, already speaking in black and white; if she is older (teen or later), then she will have a bit more of a conversation, where Daybreaker points out supposed logical flaws, and how mortals are below them, and meant to be used
+    title = solarreworked.200.t
+    desc = solarreworked.200.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.200"}
+
+    is_triggered_only = yes
+
+    option = { #You have much to unlearn.
+        name = solarreworked.200.a
+    }
+}
+
+country_event = { #Daybreaker brings Flurry to a series of trials or even executions, which she uses as an example of how the ponies are misguided, as they require them to be led, since if they do not, then they will be nothing but animals that will turn on each other, or roll over and play dead, to satiate any foe; they are the strength of ponykind, and they must be prepared to make sacrifices of ponies to get further ahead
+    id = solarreworked.201 #If she is young, then she uses more simplistic black and white morality, where those who fight against Daybreaker's Order are evil and ponies who follow and worship her are good; if she is older, she will have Flurry try and diagnose what the correct decision was, and correct her when she chooses mercy, much like with Grover, because the ponies being executed potentially could be repeat offenders and also violated a church
+    title = solarreworked.201.t
+    desc = solarreworked.201.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.201"}
+
+    is_triggered_only = yes
+
+    option = { #You will catch on soon enough.
+        name = solarreworked.201.a
+    }
+}
+
+country_event = { #Daybreaker brings Flurry to one of the churches in the Solar Empire, to one of the services; they are both disguised with magic, so they are not noticed, and Daybreaker speaks of how every single pony who attends the services to worship her are prepared to die to protect the rest of the Empire, and that she must be prepared to use that sacrifice to succeed; not all ponies will survive, but alicorns have the foreknowledge to reduce it, and have the will to have many die to save even more
+    id = solarreworked.202 #If Flurry is young, then Daybreaker speaks about how the ponies have already pledged to serve until death, and that there are many bad creatures that threaten Order, and she must use every tool she has to succeed, since it's a constant struggle; if Flurry is older, then she will argue at first, and lose, about how ponies' lives are worth more than tools, but Daybreaker breaks it down that if they don't lose themselves to her, then they could all be condemned to suffering under threats like the changelings, centaurs, or another Storm King, and Flurry's hesitancy would condemn millions to die, which she obviously doesn't want
+    title = solarreworked.202.t
+    desc = solarreworked.202.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.202"}
+
+    is_triggered_only = yes
+
+    option = { #You are beginning to see wisdom.
+        name = solarreworked.202.a
+    }
+}
+
+country_event = { #Daybreaker observes Flurry as she is in some of her training, and that she has become a true ascendant being, realizing her true potential as an alicorn, and is willing to go to any length to protect her
+    id = solarreworked.203
+    title = solarreworked.203.t
+    desc = solarreworked.203.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.203"}
+
+    is_triggered_only = yes
+
+    option = { #She's the firestorm of my heart.
+        name = solarreworked.203.a
+        CRY_flurry_heart = {
+            add_advisor_role = {
+                advisor = {
+                    slot = political_advisor
+                    idea_token = firestorm_heart
+                    traits = { demi_goddess_of_fury }
+                }
+            }
+        }
+        CRY_flurry_heart = {
+            add_corps_commander_role = {
+                traits = { pony_race_trait alicorn_of_fury promising_general }
+                level = 1
+                attack_skill = 1
+                defense_skill = 1
+                planning_skill = 1
+                logistics_skill = 1
+            }
+            custom_effect_tooltip = flurry_heart_stats_tp
+            set_portraits = {
+                civilian = {
+                    large = "gfx/leaders/EQS/Based_Flurry.tga"
+                    small = "gfx/interface/ideas/advisors/EQS/EQS_flurry_heart.tga"
+                }
+                army = {
+                    large = "gfx/leaders/EQS/Based_Flurry.tga"
+                    small = "gfx/interface/ideas/advisors/EQS/EQS_flurry_heart.tga"
+                }
+            }
+            set_character_name = SOL_flurry_heart_based_name
+        }
+    }
+}
+
 ###Utility!###
 country_event = {
     id = solarreworked.500
