@@ -6408,12 +6408,39 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_family_visits
 
-	cost = 7
+	cost = 10
 	prerequisite = { focus = SOL_family_visits }
+	available = {
+		CRY = { NOT = { has_country_leader = { character = CRY_princess_mi_amore_cadenza ruling_only = yes } } }
+	}
+
+	select_effect = {
+		hidden_effect = {
+			random_country = {
+				limit = { has_character = CRY_princess_mi_amore_cadenza }
+				CRY_princess_mi_amore_cadenza = {
+					set_nationality = ROOT
+				}
+			}
+			country_event = {
+				id = solarreworked.210
+				days = 23
+			}
+			country_event = {
+				id = solarreworked.211
+				days = 45
+			}
+			country_event = {
+				id = solarreworked.212
+				days = 68
+			}
+		}
+	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_monarchy_compliance"
 		###Daybreaker meets again with Cadance, who is still under house arrest, and speaks further about some of her plans for the Crystal Empire, which upsets Cadance, especially since she is perturbed about how much Celestia has changed and Daybreaker makes one final mention of what would happen if Cadance disobeys her or her representatives as a threat
+		country_event = solarreworked.213
 	}
 	ai_will_do = { factor = 60 }
 }

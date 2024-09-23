@@ -277,9 +277,38 @@ on_actions = {
             }
         }
     }
+    on_monthly = {
+        effect = {
+            log = "[GetDateText]: [ROOT.GetName]: on_monthly solar_age"
+            if = {
+                limit = {
+                    ROOT = {
+                        is_ai = no
+                    }
+                    EQS = {
+                        has_country_flag = EQS_player_started_as_EQS
+                    }
+                    NOT = {
+                        any_other_country = { is_ai = no }
+                    }
+                }
+                #country_event = solarreworked.420 #You nasty, John Paradox, you
+            }
+        }
+    }
     on_weekly_EQS = { #To clean up borders a bit
         effect = {
             log = "[GetDateText]: [ROOT.GetName]: on_weekly_EQS solar_age"
+            if = {
+                limit = {
+                    is_ai = no
+                    NOT = { has_country_flag = EQS_player_started_as_EQS }
+                    NOT = {
+                        any_other_country = { is_ai = no } #Basically the only way to check if there's a multiplayer game, since PDX decided not to have a is_multiplayer or some such trigger
+                    }
+                }
+                set_country_flag = EQS_player_started_as_EQS
+            }
             if = {
                 limit = {
                     date > 1021.12.31

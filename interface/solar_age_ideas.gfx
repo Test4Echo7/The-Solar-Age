@@ -1,0 +1,6 @@
+SpriteTypes = {
+    SpriteType = {
+        name = "GFX_idea_SOL_heartbroken_caddy"
+        textureFile = "gfx/interface/ideas/SOL/SOL_heartbroken_caddy.tga"
+    }
+}

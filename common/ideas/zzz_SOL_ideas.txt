@@ -719,4 +719,15 @@ ideas = {
 			}
 		}
 	}
+
+	###Solar Age###
+	country = {
+		SOL_heartbroken_caddy = {
+			modifier = {
+				political_power_gain = 0.05
+				monthly_population = 0.35
+				winter_attrition = -0.1
+			}
+		}
+	}
 }

@@ -1444,6 +1444,87 @@ country_event = {
     }
 }
 
+###209 doesn't exist because the loc keys are used to replace the loc for solarempire.13
+
+country_event = {
+    id = solarreworked.210
+    title = solarreworked.210.t
+    desc = solarreworked.210.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.210"}
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.210.a
+    }
+}
+
+country_event = {
+    id = solarreworked.211
+    title = solarreworked.211.t
+    desc = solarreworked.211.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.211"}
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.211.a
+    }
+}
+
+country_event = {
+    id = solarreworked.212
+    title = solarreworked.212.t
+    desc = solarreworked.212.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.212"}
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.212.a
+    }
+}
+
+country_event = {
+    id = solarreworked.213
+    title = solarreworked.213.t
+    desc = solarreworked.213.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.213"}
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.213.a
+        add_ideas = SOL_heartbroken_caddy
+        CRY_princess_mi_amore_cadenza = {
+            add_corps_commander_role = {
+                traits = { pony_race_trait alicorn_of_desire skilled_staffer }
+                skill = 3
+                attack_skill = 2
+                defense_skill = 4
+                planning_skill = 1
+                logistics_skill = 3
+            }
+            custom_effect_tooltip = cadance_stats_tp
+            set_character_name = SOL_cadance_corrupted_name
+            set_portraits = {
+                civilian = {
+                    large = "gfx/leaders/EQS/Heartbreaker.tga"
+                    small = "gfx/interface/ideas/advisors/EQS/EQS_heartbreaker.tga"
+                }
+                army = {
+                    large = "gfx/leaders/EQS/Heartbreaker.tga"
+                    small = "gfx/interface/ideas/advisors/EQS/EQS_heartbreaker.tga"
+                }
+            }
+        }
+    }
+}
+
 ###Utility!###
 country_event = {
     id = solarreworked.500
