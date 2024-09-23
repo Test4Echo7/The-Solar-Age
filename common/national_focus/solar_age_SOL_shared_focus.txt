@@ -20,17 +20,26 @@ shared_focus = {
         }
     }
     select_effect = {
-        ###Events here later###
-        set_temp_variable = {
-            bruh = 1
+        hidden_effect = {
+			country_event = {
+				id = solarreworked.205
+				days = 20
+			}
+			country_event = {
+				id = solarreworked.206
+				days = 43
+			}
+			country_event = {
+				id = solarreworked.207
+				days = 68
+			}
         }
     }
     completion_reward = {
         log = "[GetDateText]: [Root.GetName]: Focus SOL_sunset_awaken"
         set_global_flag = SOL_sunset_converted
-        EQS_sunset_shimmer = {
-            set_character_name = SOL_sunset_new_name
-        }
+        set_country_flag = SOL_sunset_ascended
+        country_event = solarreworked.208
     }
     ai_will_do = {
         base = 150

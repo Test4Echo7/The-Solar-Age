@@ -1356,6 +1356,94 @@ country_event = { #Daybreaker observes Flurry as she is in some of her training,
     }
 }
 
+country_event = { #Event of Daybreaker doing some final training with Flurry, as she is almost old enough to be a full-fledged general, with all the responsibilities of that, but she is testing Flurry to see what she knows, and goes in on every possible maneuver that can be done, in direct, one-on-one combat, as well as pulling some cheap tricks that Flurry should have anticipated, which she should, if she wishes to survive on the battlefield, and she ultimately triumphs, but makes Flurry understand where her limits are, and how to improve
+    id = solarreworked.204
+    title = solarreworked.204.t
+    desc = solarreworked.204.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.204"}
+
+    is_triggered_only = yes
+
+    option = { #Experience must be your only guide now.
+        name = solarreworked.204.a
+    }
+}
+
+country_event = {
+    id = solarreworked.205
+    title = solarreworked.205.t
+    desc = solarreworked.205.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.205"}
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.205.a
+    }
+}
+
+country_event = {
+    id = solarreworked.206
+    title = solarreworked.206.t
+    desc = solarreworked.206.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.206"}
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.206.a
+    }
+}
+
+country_event = {
+    id = solarreworked.207
+    title = solarreworked.207.t
+    desc = solarreworked.207.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.207"}
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.207.a
+    }
+}
+
+country_event = {
+    id = solarreworked.208
+    title = solarreworked.208.t
+    desc = solarreworked.208.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.208"}
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.208.a
+        EQS_sunset_shimmer = {
+            set_character_name = SOL_sunset_shimmer_new_name
+            set_portraits = {
+                army = {
+                    small = "gfx/interface/ideas/advisors/EQS/sunset_shimmer_new.tga"
+                    large = "gfx/leaders/EQS/Sunset_new.tga"
+                }
+            }
+            add_advisor_role = {
+                advisor = {
+                    slot = political_advisor
+                    idea_token = dawnbreak_shimmer
+                    traits = { daughter_of_sun }
+                }
+            }
+        }
+        custom_effect_tooltip = sunset_shimmer_stats_tp
+        set_country_flag = SOL_sunset_ascended
+    }
+}
+
 ###Utility!###
 country_event = {
     id = solarreworked.500

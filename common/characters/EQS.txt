@@ -466,6 +466,28 @@ characters={
 				research_speed_factor = 0.05
 			}
 		}
+		field_marshal = {
+			traits = { sunrise_sparkle_t harsh_leader organizer thorough_planner logistics_wizard pony_race_trait }
+			skill = 5
+			legacy_id = 210
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 6
+			logistics_skill = 5
+			visible = {
+				has_global_flag = SOL_twilight_converted
+				OR = {
+					EQS = {
+						is_EQS_SOL = yes
+						has_DB_ruler = yes
+					}
+					AND = {
+						tag = CRY
+						has_character_flag = CRY_field_marshal_sunrise
+					}
+				}
+			}
+		}
 		gender = female
 	}
 	#Fuck you Paradox
@@ -1990,7 +2012,10 @@ characters={
 			desc = EQS_sunset_shimmer_desc
 			visible = {
 				OR = {
-					has_country_flag = EQS_sunset_shimmer_arrived
+					OR = {
+						has_country_flag = EQS_sunset_shimmer_arrived
+						has_country_flag = SOL_sunset_ascended
+					}
 					AND = {
 						original_tag = EQC
 						has_country_flag = SOL_hosting_M6
