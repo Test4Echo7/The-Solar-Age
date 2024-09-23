@@ -1321,6 +1321,7 @@ country_event = { #Daybreaker observes Flurry as she is in some of her training,
 
     option = { #She's the firestorm of my heart.
         name = solarreworked.203.a
+        set_country_flag = SOL_flurry_corrupted
         CRY_flurry_heart = {
             add_advisor_role = {
                 advisor = {
@@ -1423,6 +1424,7 @@ country_event = {
 
     option = {
         name = solarreworked.208.a
+        set_country_flag = SOL_sunset_corrupted
         EQS_sunset_shimmer = {
             set_character_name = SOL_sunset_shimmer_new_name
             set_portraits = {
@@ -1500,6 +1502,7 @@ country_event = {
     option = {
         name = solarreworked.213.a
         add_ideas = SOL_heartbroken_caddy
+        set_country_flag = SOL_cadance_corrupted
         CRY_princess_mi_amore_cadenza = {
             add_corps_commander_role = {
                 traits = { pony_race_trait alicorn_of_desire skilled_staffer }

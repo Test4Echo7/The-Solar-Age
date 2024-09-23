@@ -1099,6 +1099,7 @@ country_event = {
 		show_ideas_tooltip = evil_twilight_sparkle
 		custom_effect_tooltip = EQS_twiggles_field_marshal_tt
 		custom_effect_tooltip = grand_inquisitor_sunrise_sparkle_stats_tp
+		set_country_flag = SOL_twilight_corrupted
 		if = {
 			limit = {
 				CRY = {

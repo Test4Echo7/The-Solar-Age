@@ -306,6 +306,30 @@ dr_ponystone_i_presume = {
     }
 }
 
+a_royal_flush = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1007.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		tag = EQS
+    }
+
+    happened = {
+        custom_trigger_tooltip = {
+            tooltip = EQS_all_the_evil_pones_tt
+            EQS = {
+                is_DB_ruler = yes
+                has_country_flag = SOL_twilight_corrupted
+                has_country_flag = SOL_sunset_corrupted
+                has_country_flag = SOL_flurry_corrupted
+                has_country_flag = SOL_cadance_corrupted
+            }
+        }
+    }
+}
+
 #ad_astra_per_aspera = { #Add this when EQC gets their focus tree
 #    possible = {
 #        # classic triggers used in all vanilla achievements
