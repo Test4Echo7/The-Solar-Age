@@ -271,6 +271,7 @@ on_actions = {
                         original_tag = NTR
                         original_tag = AES
                         original_tag = MTO
+                        original_tag = MDL
                     }
                 }
                 apply_SOL_cosmetic_tags_on_puppet = yes
@@ -324,6 +325,26 @@ on_actions = {
                     id = solarreworked.501
                     days = 30
                     random_days = 120
+                }
+            }
+            if = {
+                limit = {
+                    PLB = { is_subject_of = EQS }
+                    EQS = { is_EQS_SOL = yes }
+                    PNG = {
+                        is_subject_of = EQS
+                        is_ai = yes
+                    }
+                }
+                every_state = {
+                    limit = { is_core_of = PNG }
+                    add_core_of = PLB
+                }
+                PLB = {
+                    annex_country = {
+                        target = PNG
+                    }
+                    set_cosmetic_tag = ARC_SOL
                 }
             }
             if = {
@@ -547,7 +568,7 @@ on_actions = {
                 }
                 if = {
                     limit = { country_exists = AES }
-                    AES = {
+                    MTO = {
                         annex_country = {
                             target = AES
                         }
@@ -555,6 +576,177 @@ on_actions = {
                     every_state = {
                         limit = { is_core_of = AES }
                         add_core_of = AES
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    RIV = {
+                        exists = yes
+                        is_puppet_of = EQS
+                    }
+                    is_EQS_SOL = yes
+                }
+                if = {
+                    limit = {
+                        NOT = { tag = BAR }
+                        BAR = {
+                            exists = yes
+                            is_puppet_of = OVERLORD
+                        }
+                    }
+                    every_state = {
+                        limit = { is_core_of = BAR }
+                        add_core_of = RIV
+                    }
+                    RIV = {
+                        annex_country = {
+                            target = BAR
+                        }
+                    }
+                }
+                if = {
+                    limit = {
+                        NOT = { tag = FRE }
+                        FRE = {
+                            exists = yes
+                            is_puppet_of = OVERLORD
+                        }
+                    }
+                    every_state = {
+                        limit = { is_core_of = FRE }
+                        add_core_of = RIV
+                    }
+                    RIV = {
+                        annex_country = {
+                            target = FRE
+                        }
+                    }
+                }
+                if = {
+                    limit = {
+                        NOT = { tag = WIT }
+                        WIT = {
+                            exists = yes
+                            is_puppet_of = OVERLORD
+                        }
+                    }
+                    every_state = {
+                        limit = { is_core_of = WIT }
+                        add_core_of = RIV
+                    }
+                    RIV = {
+                        annex_country = {
+                            target = WIT
+                        }
+                    }
+                }
+                if = {
+                    limit = {
+                        NOT = { tag = LCT }
+                        LCT = {
+                            exists = yes
+                            is_puppet_of = OVERLORD
+                        }
+                    }
+                    every_state = {
+                        limit = { is_core_of = LCT }
+                        add_core_of = RIV
+                    }
+                    RIV = {
+                        annex_country = {
+                            target = LCT
+                        }
+                    }
+                }
+                if = {
+                    limit = {
+                        NOT = { tag = DEP }
+                        DEP = {
+                            exists = yes
+                            is_puppet_of = OVERLORD
+                        }
+                    }
+                    every_state = {
+                        limit = { is_core_of = DEP }
+                        add_core_of = RIV
+                    }
+                    RIV = {
+                        annex_country = {
+                            target = DEP
+                        }
+                    }
+                }
+                if = {
+                    limit = {
+                        NOT = { tag = NIM }
+                        NIM = {
+                            exists = yes
+                            is_puppet_of = OVERLORD
+                        }
+                    }
+                    every_state = {
+                        limit = { is_core_of = NIM }
+                        add_core_of = RIV
+                    }
+                    RIV = {
+                        annex_country = {
+                            target = NIM
+                        }
+                    }
+                }
+                if = {
+                    limit = {
+                        NOT = { tag = BAK }
+                        BAK = {
+                            exists = yes
+                            is_puppet_of = OVERLORD
+                        }
+                    }
+                    every_state = {
+                        limit = { is_core_of = BAK }
+                        add_core_of = RIV
+                    }
+                    RIV = {
+                        annex_country = {
+                            target = BAK
+                        }
+                    }
+                }
+                if = {
+                    limit = {
+                        NOT = { tag = DMT }
+                        DMT = {
+                            exists = yes
+                            is_puppet_of = OVERLORD
+                        }
+                    }
+                    every_state = {
+                        limit = { is_core_of = DMT }
+                        add_core_of = RIV
+                    }
+                    RIV = {
+                        annex_country = {
+                            target = DMT
+                        }
+                    }
+                }
+                if = {
+                    limit = {
+                        NOT = { tag = RCT }
+                        RCT = {
+                            exists = yes
+                            is_puppet_of = OVERLORD
+                        }
+                    }
+                    every_state = {
+                        limit = { is_core_of = RCT }
+                        add_core_of = RIV
+                    }
+                    RIV = {
+                        annex_country = {
+                            target = RCT
+                        }
                     }
                 }
             }

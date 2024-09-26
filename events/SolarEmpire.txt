@@ -4824,6 +4824,24 @@ country_event = { # celestia Puppet
 		set_cosmetic_tag = PLB_SOL_new
 
 		set_country_flag = is_solar_puppet
+
+		if = {
+			limit = {
+				PNG = {
+					exists = yes
+					is_puppet_of = OVERLORD
+					is_ai = yes
+				}
+			}
+			set_cosmetic_tag = ARC_SOL
+			every_state = {
+				limit = { is_core_of = PNG }
+				add_core_of = PLB
+			}
+			annex_country = {
+				target = PNG
+			}
+		}
 	}
 }
 country_event = { # celestia Puppet
@@ -5197,6 +5215,168 @@ country_event = { # celestia Puppet
 		set_cosmetic_tag = RIV_SOL
 
 		set_country_flag = is_solar_puppet
+		if = {
+			limit = {
+				NOT = { tag = BAR }
+				BAR = {
+					exists = yes
+					is_puppet_of = OVERLORD
+				}
+			}
+			every_state = {
+				limit = { is_core_of = BAR }
+				add_core_of = RIV
+			}
+			RIV = {
+				annex_country = {
+					target = BAR
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = { tag = FRE }
+				FRE = {
+					exists = yes
+					is_puppet_of = OVERLORD
+				}
+			}
+			every_state = {
+				limit = { is_core_of = FRE }
+				add_core_of = RIV
+			}
+			RIV = {
+				annex_country = {
+					target = FRE
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = { tag = WIT }
+				WIT = {
+					exists = yes
+					is_puppet_of = OVERLORD
+				}
+			}
+			every_state = {
+				limit = { is_core_of = WIT }
+				add_core_of = RIV
+			}
+			RIV = {
+				annex_country = {
+					target = WIT
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = { tag = LCT }
+				LCT = {
+					exists = yes
+					is_puppet_of = OVERLORD
+				}
+			}
+			every_state = {
+				limit = { is_core_of = LCT }
+				add_core_of = RIV
+			}
+			RIV = {
+				annex_country = {
+					target = LCT
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = { tag = DEP }
+				DEP = {
+					exists = yes
+					is_puppet_of = OVERLORD
+				}
+			}
+			every_state = {
+				limit = { is_core_of = DEP }
+				add_core_of = RIV
+			}
+			RIV = {
+				annex_country = {
+					target = DEP
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = { tag = NIM }
+				NIM = {
+					exists = yes
+					is_puppet_of = OVERLORD
+				}
+			}
+			every_state = {
+				limit = { is_core_of = NIM }
+				add_core_of = RIV
+			}
+			RIV = {
+				annex_country = {
+					target = NIM
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = { tag = BAK }
+				BAK = {
+					exists = yes
+					is_puppet_of = OVERLORD
+				}
+			}
+			every_state = {
+				limit = { is_core_of = BAK }
+				add_core_of = RIV
+			}
+			RIV = {
+				annex_country = {
+					target = BAK
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = { tag = DMT }
+				DMT = {
+					exists = yes
+					is_puppet_of = OVERLORD
+				}
+			}
+			every_state = {
+				limit = { is_core_of = DMT }
+				add_core_of = RIV
+			}
+			RIV = {
+				annex_country = {
+					target = DMT
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = { tag = RCT }
+				RCT = {
+					exists = yes
+					is_puppet_of = OVERLORD
+				}
+			}
+			every_state = {
+				limit = { is_core_of = RCT }
+				add_core_of = RIV
+			}
+			RIV = {
+				annex_country = {
+					target = RCT
+				}
+			}
+		}
 	}
 }
 
@@ -5438,6 +5618,19 @@ country_event = { # celestia Puppet
 	is_triggered_only = yes
 	option = {
 		set_cosmetic_tag = FIR_SOL
+
+		set_country_flag = is_solar_puppet
+	}
+}
+
+country_event = { # celestia Puppet
+	id = solarempire.1039
+	immediate = {log = "[GetDateText]: [Root.GetName]: event solarempire.1039"}
+	hidden = yes
+
+	is_triggered_only = yes
+	option = {
+		set_cosmetic_tag = MDL_SOL
 
 		set_country_flag = is_solar_puppet
 	}

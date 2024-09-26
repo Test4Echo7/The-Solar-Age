@@ -62,7 +62,7 @@ this_is_fine = {
             }
             power_balance_value = {
                 id = EQS_sanity_bop
-                value < 0.999
+                value < -0.999
             }
         }
     }
@@ -96,7 +96,7 @@ budding_entomologist = {
 
     happened = {
         custom_trigger_tooltip = {
-            tootip = EQS_changeling_pets_tt
+            tooltip = EQS_changeling_pets_tt
             is_EQS_SOL = yes
             has_completed_focus = SOL_keep_pets
         }
@@ -246,7 +246,10 @@ there_is_only_war = {
                 has_tech = human_wave_offensive
                 has_tech = vast_offensives
             }
-            check_variable = { num_simultaneous_wars > 9 }
+            custom_trigger_tooltip = {
+                tooltip = EQS_WAAAGH_tt
+                check_variable = { num_simultaneous_wars > 9 }
+            }
         }
     }
 }
@@ -299,6 +302,7 @@ dr_ponystone_i_presume = {
     happened = {
         custom_trigger_tooltip = {
             tooltip = EQS_found_zephyr_tt
+            is_EQS_SOL = yes
             EQS = {
                 has_country_flag = SOL_prodigal_pegasus_found
             }
@@ -319,14 +323,50 @@ a_royal_flush = {
     happened = {
         custom_trigger_tooltip = {
             tooltip = EQS_all_the_evil_pones_tt
+            is_EQS_SOL = yes
             EQS = {
-                is_DB_ruler = yes
+                has_DB_ruler = yes
                 has_country_flag = SOL_twilight_corrupted
                 has_country_flag = SOL_sunset_corrupted
                 has_country_flag = SOL_flurry_corrupted
                 has_country_flag = SOL_cadance_corrupted
             }
         }
+    }
+}
+
+shes_a_heartbreaker = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1007.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		tag = EQS
+    }
+
+    happened = {
+        custom_trigger_tooltip = {
+            tooltip = EQS_how_scandalous_tt
+            is_EQS_SOL = yes
+            has_country_flag = SOL_cadance_corrupted
+        }
+    }
+}
+
+spike_take_a_flamer = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1007.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		tag = EQS
+    }
+
+    happened = {
+        is_EQS_SOL = yes
+        has_country_flag = SOL_spike_corrupted
     }
 }
 

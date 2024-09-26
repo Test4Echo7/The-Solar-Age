@@ -25,6 +25,8 @@
   MGY_SOL:0 "Imperial Province of Solaria"
   MGY_SOL_DEF:0 "the Imperial Province of Solaria"
   MGY_SOL_ADJ:0 "Solarian"
+  MDL_SOL:0 "Imperial Region of Al-Manedalus"
+  MDL_SOL_DEF:0 "the Imperial Region of Al-Manedalus"
   KIR_SOL:0 "Land of the Dawn Star"
   KIR_SOL_DEF:0 "the Land of the Dawn Star"
   NVA_SOL:0 "Imperial Protectorate of Sen Kinh" #Alternate, Sen Solar

@@ -4539,6 +4539,86 @@ shared_focus = {
 }
 
 shared_focus = {
+	id = SOL_spaying_the_cat
+	x = -1
+	y = 1
+	relative_position_id = SOL_misguided_solarists
+
+	cost = 3
+	prerequisite = { focus = SOL_misguided_solarists }
+	available = {
+		764 = {
+			OWNER = {
+				NOT = {
+					tag = EQS
+					tag = MGY
+					AND = {
+						tag = MDL
+						is_subject_of = ROOT
+					}
+				}
+			}
+		}
+		741 = {
+			OWNER = {
+				NOT = {
+					tag = EQS
+					tag = MGY
+					AND = {
+						tag = MDL
+						is_subject_of = ROOT
+					}
+				}
+			}
+		}
+	}
+	bypass = {
+		OR = {
+			OR = {
+				owns_state = 764
+				MGY = { owns_state = 764 }
+				MDL = {
+					owns_state = 764
+					is_subject_of = ROOT
+				}
+			}
+			OR = {
+				owns_state = 741
+				MGY = { owns_state = 741 }
+				MDL = {
+					owns_state = 764
+					is_subject_of = ROOT
+				}
+			}
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_spaying_the_cat"
+		764 = {
+			ROOT = {
+				create_wargoal = {
+					target = PREV
+					type = take_state_focus
+					generator = { THIS.id }
+				}
+			}
+		}
+		741 = {
+			ROOT = {
+				create_wargoal = {
+					target = PREV
+					type = take_state_focus
+					generator = { THIS.id }
+				}
+			}
+		}
+		#Later gain a decision, with an event, to decide on the fate of Manedalusia, on whether they become an independent puppet, or they remain the territory of either MGY or SOL; if the latter, MGY cores them, whereas SOL gains 15% compliance
+	}
+	ai_will_do = { factor = 25 }
+}
+
+shared_focus = {
 	id = SOL_second_coming
 	x = 1
 	y = 1

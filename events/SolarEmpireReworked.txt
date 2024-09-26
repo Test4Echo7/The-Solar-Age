@@ -1528,6 +1528,77 @@ country_event = {
     }
 }
 
+country_event = {
+    id = solarreworked.214
+    title = solarreworked.214.t
+    desc = solarreworked.214.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.214"}
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.214.a
+    }
+}
+
+country_event = {
+    id = solarreworked.215
+    title = solarreworked.215.t
+    desc = solarreworked.215.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.215"}
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.215.a
+    }
+}
+
+country_event = {
+    id = solarreworked.216
+    title = solarreworked.216.t
+    desc = solarreworked.216.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.216"}
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.216.a
+    }
+}
+
+country_event = {
+    id = solarreworked.217
+    title = solarreworked.217.t
+    desc = solarreworked.217.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.217"}
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.217.a
+    }
+}
+
+country_event = {
+    id = solarreworked.218
+    title = solarreworked.218.t
+    desc = solarreworked.218.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.218"}
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.218.a
+        ###Add Spike as a trait
+    }
+}
+
 ###Utility!###
 country_event = {
     id = solarreworked.500

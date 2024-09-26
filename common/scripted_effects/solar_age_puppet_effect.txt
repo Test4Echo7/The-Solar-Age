@@ -180,4 +180,8 @@ apply_SOL_cosmetic_tags_on_puppet = {
         limit = { original_tag = FIR }
         country_event = solarempire.1038
     }
+    else_if = {
+        limit = { original_tag = MDL }
+        country_event = solarempire.1039
+    }
 }

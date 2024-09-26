@@ -33,6 +33,10 @@
   dr_ponystone_i_presume_DESC:0 "As the Solar Empire, meet an old, world-traveling friend."
   a_royal_flush_NAME:0 "A Royal Flush"
   a_royal_flush_DESC:0 "As the Solar Empire, gather a full collection of enlightened individuals."
+  shes_a_heartbreaker_NAME:0 "She's a Heartbreaker"
+  shes_a_heartbreaker_DESC:0 "As the Solar Empire, bring Cadance over to the Dark Side."
+  spike_take_a_flamer_NAME:0 "Spike, Take a Flamer. A Heavy Flamer"
+  spike_take_a_flamer_DESC:0 "As the Solar Empire, have Sunrise Sparkle perform her own enlightenment."
   ad_astra_per_aspera_NAME:0 "Ad Astra per Aspera"
   ad_astra_per_aspera_DESC:0 "As Solarist New Mareland, form Greater New Mareland."
 
@@ -48,4 +52,7 @@
   EQS_she_hulk_tt:0 "Daybreaker has gone §Osupernova§! more than §Y3§! times."
   EQS_all_the_evil_pones_tt:0 "Daybreaker has led four of her closest ponies to §Rascension§!."
   EQS_found_zephyr_tt:0 "Has discovered the final hiding place of a certain pegasus."
+  EQS_WAAAGH_tt:0 "Has §Y10§! or more separate wars - new wars started by §Ythe Solar Empire§! or started by another nation declaring war on them - at one time."
   EQC_has_formed_greater_new_mareland:0 "Has formed §YGreater New Mareland§!."
+  EQS_how_scandalous_tt:0 "§PCadance§! has been awakened to reality."
+  SOL_spike_corrupted:0 "§GSpike§! has been convinced to submit to Daybreaker."
