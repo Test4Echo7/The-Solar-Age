@@ -750,6 +750,26 @@ on_actions = {
                     }
                 }
             }
+            #if = {
+            #    limit = {
+            #        country_exists = HIP
+            #        HIP = { is_subject_of = EQS }
+            #        WIN = {
+            #            exists = yes
+            #            is_subject_of = EQS
+            #        }
+            #        is_EQS_SOL = yes
+            #    }
+            #    every_state = {
+            #        limit = { is_core_of = WIN }
+            #        add_core_of = HIP
+            #    }
+            #    HIP = {
+            #        annex_country = {
+            #            target = WIN
+            #        }
+            #    }
+            #}
         }
     }
 }

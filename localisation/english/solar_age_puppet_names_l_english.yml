@@ -53,3 +53,6 @@
   WAT_SOL_DEF:0 "the Imperial Bath District"
   FIR_SOL:0 "Community of Imperial Mages"
   FIR_SOL_DEF:0 "the Community of Imperial Mages"
+  HIP_SOL:0 "Solar Seaquestria"
+  HIP_SOL_DEF:0 "Solar Seaquestria"
+  HIP_SOL_ADJ:0 "Seaquestrian"

@@ -5137,6 +5137,29 @@ shared_focus = {
 }
 
 shared_focus = {
+	id = SOL_mothers_gift
+	x = 1
+	y = 1
+	relative_position_id = SOL_educate_kaiser
+
+	cost = 7
+	prerequisite = { focus = SOL_educate_kaiser }
+	available = {
+		has_country_flag = EQS_wholesome_grover_achieved
+		GRD = {
+			is_in_faction_with = ROOT
+			has_country_leader = { character = GRI_emperor_grover_vi ruling_only = yes }
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_mothers_gift"
+		###Event of Grover, after his coronation, finding a gift from Daybreaker on his bed, which is a suit of armor, made from the most expertly trained pony smiths in the Empire, with a note speaking that she rarely admits to being pleased with creatures, let alone non-ponies, but he has impressed her, and that she has taught him enough to lead, and that he can consider it a gift for any battles he may have to lead
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
 	id = SOL_last_grover
 	x = 3
 	y = 1
@@ -5169,9 +5192,159 @@ shared_focus = {
 	ai_will_do = { factor = 50 }
 }
 
+#shared_focus = {
+#	id = SOL_aquatic_paradise
+#	x = 5
+#	y = 1
+#	relative_position_id = SOL_conquer_GRI
+#
+#	cost = 5
+#	prerequisite = { focus = SOL_conquer_GRI }
+#	available = {
+#		is_subject = no
+#	}
+#	bypass = {
+#		HIP = {
+#			OR = {
+#				exists = no
+#				is_subject_of = ROOT
+#				is_in_faction_with = ROOT
+#			}
+#		}
+#		WIN = {
+#			OR = {
+#				exists = no
+#				is_subject_of = ROOT
+#				is_in_faction_with = ROOT
+#			}
+#		}
+#	}
+#
+#	completion_reward = {
+#		log = "[GetDateText]: [Root.GetName]: Focus SOL_aquatic_paradise"
+#		if = {
+#			limit = { country_exists = HIP }
+#			create_wargoal = {
+#				target = HIP
+#				type = puppet_wargoal_focus
+#			}
+#		}
+#		if = {
+#			limit = { country_exists = WIN }
+#			create_wargoal = {
+#				target = WIN
+#				type = puppet_wargoal_focus
+#			}
+#		}
+#	}
+#}
+
+#shared_focus = {
+#	id = SOL_zebrican_springboard
+#	x = -2
+#	y = 2
+#	relative_position_id = SOL_aquatic_paradise
+#
+#	cost = 5
+#	prerequisite = { focus = SOL_aquatic_paradise }
+#	available = {
+#		HIP = {
+#			all_cores_owned_by_ROOT_or_subject = yes
+#		}
+#	}
+#
+#	completion_reward = {
+#		log = "[GetDateText]: [Root.GetName]: Focus SOL_zebrican_springboard"
+#		686 = {
+#			add_extra_state_shared_building_slots = 2
+#			add_building_construction = {
+#				type = dockyard
+#				level = 2
+#				instant_build = yes
+#			}
+#			add_building_construction = {
+#				type = naval_base
+#				level = 3
+#				instant_build = yes
+#				province = 18783
+#			}
+#		}
+#		687 = {
+#			add_extra_state_shared_building_slots = 1
+#			add_building_construction = {
+#				type = dockyard
+#				level = 1
+#				instant_build = yes
+#			}
+#			add_building_construction = {
+#				type = naval_base
+#				level = 2
+#				instant_build = yes
+#				province = 20273
+#			}
+#		}
+#		1204 = {
+#			add_extra_state_shared_building_slots = 2
+#			add_building_construction = {
+#				type = dockyard
+#				level = 2
+#				instant_build = yes
+#			}
+#			add_building_construction = {
+#				type = naval_base
+#				level = 4
+#				instant_build = yes
+#				province = 18664
+#			}
+#		}
+#		1203 = {
+#			add_building_construction = {
+#				type = naval_base
+#				level = 1
+#				instant_build = yes
+#				province = 18680
+#			}
+#		}
+#	}
+#	ai_will_do = { factor = 45 }
+#}
+
+#shared_focus = {
+#	id = SOL_seapony_beachheads
+#	x = -3
+#	y = 1
+#	relative_position_id = SOL_zebrican_springboard
+#
+#	cost = 6
+#	prerequisite = { focus = SOL_zebrican_springboard }
+#	mutually_exclusive = { focus = SOL_svelte_knives }
+#
+#	completion_reward = {
+#		log = "[GetDateText]: [Root.GetName]: Focus SOL_seapony_beachheads"
+#		###Event of seaponies being sent ahead of a beachhead charge, coming up on other ponies in the training exercise with absolutely no warning, and leading to various injuries and the like, since they could attack with surprise
+#	}
+#	ai_will_do = { factor = 100 }
+#}
+
+#shared_focus = {
+#	id = SOL_svelte_knives
+#	x = -1
+#	y = 1
+#	relative_position_id = SOL_zebrican_springboard
+#
+#	cost = 6
+#	prerequisite = { focus = SOL_zebrican_springboard }
+#	mutually_exclusive = { focus = SOL_seapony_beachheads }
+#
+#	completion_reward = {
+#		log = "[GetDateText]: [Root.GetName]: Focus SOL_svelte_knives"
+#		###Event of a sub exercise where the captain, a hippogriff, commands a number of ponies on how to utilize the new sub designs, and it ends quite well, since they are able to be undetected by the dummy ship, and sink it without issue
+#	}
+#}
+
 shared_focus = {
 	id = SOL_almost_pony
-	x = 6
+	x = 5
 	y = 1
 	relative_position_id = SOL_conquer_GRI
 

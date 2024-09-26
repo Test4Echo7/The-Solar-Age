@@ -5635,3 +5635,33 @@ country_event = { # celestia Puppet
 		set_country_flag = is_solar_puppet
 	}
 }
+
+country_event = { # celestia Puppet
+	id = solarempire.1040
+	immediate = {log = "[GetDateText]: [Root.GetName]: event solarempire.1039"}
+	hidden = yes
+
+	is_triggered_only = yes
+	option = {
+		set_cosmetic_tag = HIP_SOL
+
+		set_country_flag = is_solar_puppet
+		if = {
+			limit = {
+				WIN = {
+					exists = yes
+					is_subject_of = OVERLORD
+				}
+			}
+			annex_country = {
+				target = WIN
+			}
+			every_state = {
+				limit = {
+					is_core_of = WIN
+				}
+				add_core_of = ROOT
+			}
+		}
+	}
+}
