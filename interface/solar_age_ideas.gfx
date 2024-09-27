@@ -3,4 +3,8 @@ SpriteTypes = {
         name = "GFX_idea_SOL_heartbroken_caddy"
         textureFile = "gfx/interface/ideas/SOL/SOL_heartbroken_caddy.tga"
     }
+    SpriteType = {
+        name = "GFX_idea_SOL_kabuh"
+        textureFile = "gfx/interface/ideas/SOL/SOL_evil_flurry.tga"
+    }
 }
