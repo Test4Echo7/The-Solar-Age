@@ -1595,7 +1595,10 @@ country_event = {
 
     option = {
         name = solarreworked.218.a
-        ###Add Spike as a trait
+        set_country_flag = SOL_spike_broken
+        EQS_twilight_sparkle = {
+            add_trait = { trait = faithful_assistant }
+        }
     }
 }
 

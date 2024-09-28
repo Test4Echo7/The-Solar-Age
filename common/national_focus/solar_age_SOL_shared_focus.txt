@@ -1672,6 +1672,15 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_solaris_inquisitionis"
 		###Event of Sunset meeting privately with Daybreaker, who is pleased to offer Twilight an even better position than she had before, which will be the head inquisitor of the Solaris Inquisitionis, her holy inquisition, that will be used to keep Harmony and Order, which Twilight readily accepts, as she is worried that ponies don't understand Daybreaker's desires; it is close to a mother-daughter relationship kind of talk
+		if = {
+			limit = {
+				has_dlc = "La Resistance"
+			}
+			add_ideas = SOL_Imperial_Inquisition_idea_lar
+		}
+		else = {
+			add_ideas = SOL_Imperial_Inquisition_idea
+		}
 	}
 	ai_will_do = { factor = 250 }
 }
@@ -1722,6 +1731,7 @@ shared_focus = {
 		#	add_idea = SOL_Solar_Cult_idea1
 		#	remove_idea = SOL_Solar_Cult_idea
 		#}
+		add_idea = SOL_Solar_Cult_idea1
 	}
 	search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
 }

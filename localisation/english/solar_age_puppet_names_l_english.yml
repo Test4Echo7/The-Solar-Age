@@ -33,8 +33,8 @@
   NVA_SOL_DEF:0 "the Imperial Protectorate of Sen Kinh"
   KHM_SOL:0 "Imperial Protectorate of Khamrin" #Alternate, Khamric Dayspring
   KHM_SOL_DEF:0 "the Imperial Protectorate of Khamrin"
-  KXN_SOL:0 "Imperial Protectorate of Lan Kir" #Alternate, Junta of Solarist Niriks
-  KX_SOL_DEF:0 "the Imperial Protectorate of Lan Kir"
+  KXN_SOL:0 "Imperial Protectorate of Zaikiria" #Alternate, Junta of Solarist Niriks
+  KXN_SOL_DEF:0 "the Imperial Protectorate of Zaikiria"
   PLB_SOL_new:0 "Western Polar Pacification Zone"
   PLB_SOL_new_DEF:0 "the Western Polar Pacification Zone"
   PLB_SOL_new_ADJ:0 "Polar"

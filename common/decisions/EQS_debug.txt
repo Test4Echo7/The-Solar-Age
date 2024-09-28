@@ -1,4 +1,24 @@
 EQS_debug_category = {
+    EQS_start_SOL = {
+        allowed = {
+            tag = EQS
+        }
+        available = {
+            NOT = { has_war_with = CHN }
+            is_EQS_SOL = no
+        }
+        complete_effect = {
+            CHN = {
+                declare_war_on = {
+                    target = ROOT
+                    type = annex_everything
+                }
+            }
+            set_country_flag = SOL_has_twilight
+            country_event = equestria.154
+            complete_national_focus = SOL_god_empress
+        }
+    }
     EQS_activate_sanity_BOP = {
         allowed = {
             tag = EQS

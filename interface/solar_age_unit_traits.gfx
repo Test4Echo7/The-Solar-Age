@@ -3,4 +3,12 @@ spriteTypes = {
 		name = "GFX_trait_bearer_of_the_sun"
 		texturefile = "gfx/interface/traits/personal/trait_supernova.dds"
 	}
+	spriteType = {
+		name = "GFX_trait_sunrise_sparkle_t_alt"
+		texturefile = "gfx/interface/traits/personal/trait_sunrise_sparkle.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_faithful_assistant"
+		texturefile = "gfx/interface/traits/personal/trait_faithful_assistant.tga"
+	}
 }

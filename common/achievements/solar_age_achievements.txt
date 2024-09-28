@@ -366,7 +366,7 @@ spike_take_a_flamer = {
 
     happened = {
         is_EQS_SOL = yes
-        has_country_flag = SOL_spike_corrupted
+        has_country_flag = SOL_spike_broken
     }
 }
 

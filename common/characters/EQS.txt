@@ -467,13 +467,13 @@ characters={
 			}
 		}
 		field_marshal = {
-			traits = { sunrise_sparkle_t harsh_leader organizer thorough_planner logistics_wizard pony_race_trait }
-			skill = 5
+			traits = { sunrise_sparkle_t_alt harsh_leader organizer thorough_planner logistics_wizard pony_race_trait }
+			skill = 4
 			legacy_id = 210
-			attack_skill = 2
-			defense_skill = 3
+			attack_skill = 1
+			defense_skill = 2
 			planning_skill = 6
-			logistics_skill = 5
+			logistics_skill = 4
 			visible = {
 				has_global_flag = SOL_twilight_converted
 				OR = {
