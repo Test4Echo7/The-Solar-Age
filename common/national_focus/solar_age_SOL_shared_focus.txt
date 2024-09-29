@@ -11066,17 +11066,12 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_mobile_airfields
 
-	cost = 3
+	cost = 6
 	prerequisite = { focus = SOL_mobile_airfields }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_modern_sea"
-		add_doctrine_cost_reduction = {
-			name = base_strike_bonus
-			uses = 1
-			cost_reduction = 0.5
-			category = cat_base_strike
-		}
+		#Idea here
 	}
 	ai_will_do = { factor = 50 }
 }
@@ -11127,6 +11122,7 @@ shared_focus = {
 	cost = 7
 	prerequisite = { focus = SOL_birds_of_water }
 	prerequisite = { focus = SOL_modern_sea }
+	mutually_exclusive = { focus = SOL_long_range_strikers }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_floating_cities"
@@ -11139,6 +11135,29 @@ shared_focus = {
 		}
 	}
 	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_long_range_strikers
+	x = -1
+	y = 2
+	relative_position_id = SOL_fillydelphia_rivalry
+
+	cost = 7
+	prerequisite = { focus = SOL_fillydelphia_rivalry }
+	mutually_exclusive = { focus = SOL_floating_cities }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_long_range_strikers"
+		#Idea here
+		add_tech_bonus = {
+			name = cv_bonus
+			uses = 1
+			bonus = 1
+			category = cv_tech
+		}
+	}
+	ai_will_do = { factor = 45 }
 }
 
 shared_focus = {

@@ -1342,12 +1342,481 @@ ideas = {
 				required_garrison_factor = -0.1
 			}
 		}
+		SOL_imperial_resort = {
+			modifier = {
+				stability_factor = 0.05
+				high_command_cost_factor = -0.1
+			}
+		}
 		SOL_changeling_solarists = {
 			modifier = {
 				industry_free_repair_factor = 0.25
 				stability_factor = -0.05
 				non_core_manpower_factor = 0.05
 			}
+		}
+		SOL_solar_vikings = {
+			modifier = {
+				industrial_capacity_dockyard = 0.05
+			}
+			equipment_bonus = {
+				screen_ship = { armor_value = 0.05 instant = yes }
+				capital_ship = { armor_value = 0.05 instant = yes }
+			}
+		}
+		SOL_dedicated_naval_laborers = {
+			modifier = {
+				production_speed_naval_base_factor = 0.1
+				production_speed_dockyard_factor = 0.1
+			}
+		}
+		SOL_griffon_militarism = {
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				production_speed_infrastructure_factor = 0.05
+				production_speed_railroad_factor = 0.15
+			}
+		}
+		SOL_smashed_yaks = {
+			modifier = {
+				industry_free_repair_factor = 0.15
+				industry_air_damage_factor = -0.2
+			}
+		}
+		SOL_imperial_corrections = {
+			modifier = {
+				political_advisor_cost_factor = -0.15
+				local_resources_factor = 0.05
+			}
+		}
+		SOL_grover_vi = {
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.05
+				fascism_drift = 0.01
+			}
+		}
+		SOL_griffonian_air_experts = {
+			modifier = {
+				command_power_gain = 0.25
+				air_attack_factor = 0.1
+			}
+		}
+		SOL_griffon_exchange_students = {
+			modifier = {
+				army_leader_cost_factor = -0.25
+				army_leader_start_defense_level = 1
+				army_leader_start_planning_level = 1
+			}
+		}
+		SOL_GRI_griffon_exchange_students = {
+			modifier = {
+				army_leader_cost_factor = -0.25
+				army_leader_start_attack_level = 1
+				army_leader_start_planning_level = 1
+			}
+		}
+		SOL_shared_specialities = {
+			modifier = {
+				army_morale_factor = 0.05
+				special_forces_cap = 0.03
+			}
+		}
+		SOL_prince_faisal = {
+			modifier = {
+				party_stability_factor = 0.05
+				consumer_goods_factor = -0.02
+			}
+		}
+		SOL_kirin_artists = {
+			modifier = {
+				army_morale_factor = 0.03
+				party_stability_factor = 0.05
+			}
+		}
+		SOL_nirik_commandos = {
+			modifier = {
+				special_forces_cap = 0.05
+				special_forces_attack_factor = 0.1
+				special_forces_defence_factor = 0.1
+			}
+		}
+		SOL_kirin_war_masters = {
+			modifier = {
+				army_org_factor = 0.05
+				org_loss_when_moving = -0.03
+			}
+		}
+		SOL_food_for_the_empress = {
+			modifier = {
+				monthly_population = 0.25
+				stability_factor = 0.1
+				min_export = -0.05
+			}
+		}
+		SOL_unicorn_hit_squads = {
+			equipment_bonus = {
+				unicorn_company = { soft_attack = 0.25 breakthrough = 0.2 }
+			}
+		}
+		SOL_artifacts_galore = {
+			modifier = {
+				army_attack_factor = 0.075
+				army_org_factor = -0.1
+			}
+		}
+		SOL_OHS_integrated = {
+			modifier = {
+				encryption = 1
+			}
+		}
+		SOL_OHS_integrated_lar = {
+			modifier = {
+				operative_slot = 1
+			}
+		}
+		SOL_careful_extraction = {
+			modifier = {
+				local_resources_factor = 0.03
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		SOL_dawn_star_elites = {
+			modifier = {
+				special_forces_cap = 0.05
+				special_forces_training_time_factor = 0.1
+				special_forces_no_supply_grace = 120
+			}
+		}
+		SOL_river_brethren = {
+			modifier = {
+				fascism_drift = 0.05
+				party_stability_factor = 0.1
+			}
+		}
+		SOL_ordo_australis_archives = {
+			modifier = {
+				encryption = 1
+				decryption = 1
+			}
+		}
+		SOL_ordo_australis_archives_lar = {
+			modifier = {
+				encryption_factor = 0.15
+				decryption_factor = 0.15
+			}
+		}
+		SOL_what_thestrals = {
+			modifier = {
+				research_speed_factor = -0.05
+				required_garrison_factor = -0.1
+			}
+		}
+		SOL_thestral_research = {
+			modifier = {
+				research_speed_factor = 0.1
+				stability_factor = -0.15
+			}
+			equipment_bonus = {
+				infantry_equipment = { soft_attack = 0.15 instant = yes }
+				magical_equipment = { soft_attack = 0.15 instant = yes }
+				artillery = { soft_attack = 0.15 instant = yes }
+				armor = { soft_attack = 0.075 instant = yes }
+			}
+		}
+		###Industry Spirits###
+		SOL_dedicated_ministry_of_work = {
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.03
+			}
+			research_bonus = {
+				industry = 0.05
+			}
+		}
+		SOL_mto = {
+			modifier = {
+				production_speed_infrastructure_factor = 0.1
+				production_speed_railroad_factor = 0.15
+				production_speed_supply_depot_factor = 0.05
+			}
+		}
+		SOL_unions_of_the_empress = {
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_dockyard = 0.1
+				industrial_capacity_factory = 0.1
+				stability_factor = -0.15
+			}
+		}
+		SOL_timberwolf_research = {
+			equipment_bonus = { armor = { armor_value = 0.02 instant = yes } }
+			research_bonus = { armor = 0.05 }
+		}
+		SOL_micromanaged_industry = {
+			modifier = {
+				consumer_goods_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+		SOL_motivated_workers = {
+			modifier = {
+				industrial_capacity_dockyard = 0.05
+				industrial_capacity_factory = 0.05
+				production_factory_max_efficiency_factor = -0.05
+				line_change_production_efficiency_factor = 0.1
+			}
+		}
+		SOL_crystal_robotics = {
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+				line_change_production_efficiency_factor = -0.25
+				production_factory_start_efficiency_factor = -0.04
+			}
+		}
+		SOL_refined_metal_bodies = {
+			equipment_bonus = {
+				armor = { build_cost_ic = -0.05 instant = yes }
+				battleship = { build_cost_ic = -0.05 instant = yes }
+			}
+		}
+		SOL_magic_laden_explosives = {
+			equipment_bonus = {
+				artillery = { soft_attack = 0.05 instant = yes }
+				unicorn_company = { soft_attack = 0.05 instant = yes }
+			}
+			modifier = { army_morale_factor = 0.03 }
+		}
+		SOL_self_improvement_programs = {
+			equipment_bonus = { unicorn_company = { defense = 0.1 instant = yes } }
+			modifier = {
+				recon_factor = 0.05
+				army_org_factor = 0.03
+			}
+		}
+		SOL_star_energy_nationalized = {
+			modifier = {
+				production_speed_railroad_factor = 0.05
+				consumer_goods_factor = -0.02
+			}
+		}
+		SOL_crystal_powered_radar = {
+			modifier = {
+				spotting_chance = 0.05
+				navy_weather_penalty = -0.1
+				air_weather_penalty = -0.1
+			}
+		}
+		SOL_food_above_all = {
+			modifier = {
+				monthly_population = 0.35
+				consumer_goods_factor = -0.075
+				production_speed_buildings_factor = -0.1
+			}
+		}
+		SOL_unhindered_mining = {
+			modifier = {
+				local_resources_factor = 0.1
+				consumer_goods_factor = -0.05
+				monthly_population = -0.25
+			}
+		}
+		SOL_flim_flam_arms = {
+			modifier = {
+				production_speed_arms_factory_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_start_efficiency_factor = -0.05
+				industrial_capacity_dockyard = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+		SOL_early_crystal_cpus = {
+			modifier = {
+				research_speed_factor = 0.03
+				encryption = 1.5
+			}
+		}
+		SOL_early_crystal_cpus_lar = {
+			modifier = {
+				research_speed_factor = 0.03
+				crypto_strength = 1
+			}
+		}
+		###Navy Spirits###
+		SOL_coordinated_carrier_classes = {
+			modifier = {
+				carrier_traffic = 0.1
+				sortie_efficiency = 0.1
+			}
+		}
+		SOL_imperial_ironclads = {
+			equipment_bonus = { capital_ship = { shore_bombardment = 0.1 armor_value = 0.1 instant = yes } }
+		}
+		SOL_expansive_carriers = {
+			equipment_bonus = { carrier = { armor_value = 0.1 carrier_size = 0.05 instant = yes } }
+		}
+		SOL_unreachable_lengths = {
+			equipment_bonus = { carrier = { naval_range = 0.15 maximum_speed = 0.05 carrier_size = -0.15 instant = yes } }
+		}
+		SOL_sacrificial_light_ships = {
+			equipment_bonus = { destroyer = { maximum_speed = 0.1 torpedo_attack = 0.05 max_strength = -0.15 instant = yes } }
+		}
+		SOL_magic_bonded_plating = {
+			equipment_bonus = { capital_ship = { armor_value = 0.05 max_strength = 0.1 surface_visibility = 0.1 maximum_speed = -0.05 instant = yes } }
+		}
+		SOL_cut_battleship_corners = {
+			equipment_bonus = { battleship = { build_cost_ic = -0.1 reliability = -0.1 instant = yes } }
+		}
+		SOL_combined_naval_arms = {
+			equipment_bonus = {
+				carrier = { naval_range = 0.1 instant = yes }
+				screen_ship = { lg_attack = 0.15 lg_armor_piercing = 0.05 instant = yes }
+			}
+		}
+		SOL_status_quo_superiority = {
+			equipment_bonus = { capital_ship = { hg_attack = 0.1 hg_armor_piercing = 0.1 instant = yes } }
+		}
+		SOL_high_seas_empire = {
+			modifier = {
+				naval_critical_score_chance_factor = 0.05
+				navy_max_range_factor = 0.15
+			}
+		}
+		###Air Spirits###
+		SOL_sirens_of_fear = {
+			modifier = {
+				air_cas_efficiency = 0.05
+			}
+		}
+		SOL_streamlined_bombers = {
+			equipment_bonus = { large_plane_airframe = { build_cost_ic = -0.2 reliability = -0.15 instant = yes } }
+		}
+		SOL_involuntary_testing_procedures = {
+			research_bonus = { air = 0.1 }
+			equipment_bonus = { fighter = { air_agility = 0.05 reliability = -0.05 instant = yes } }
+		}
+		SOL_thestral_vision_scopes = {
+			modifier = {
+				air_strategic_bomber_night_penalty = -0.15
+			}
+		}
+		SOL_pegasi_planes = {
+			modifier = {
+				air_cas_efficiency = 0.05
+				air_defence_factor = 0.05
+			}
+		}
+		SOL_everypony_ace = {
+			modifier = {
+				air_ace_generation_chance_factor = 0.05
+				air_accidents_factor = 0.1
+				air_maximum_speed_factor = 0.02
+			}
+		}
+		SOL_durable_bombers = {
+			equipment_bonus = { large_plane_airframe = { defense = 0.1 air_agility = -0.05 instant = yes } }
+		}
+		SOL_napalm_strikes = {
+			equipment_bonus = { CAS_bomber = { air_ground_attack = 0.1 build_cost_ic = 0.1 instant = yes } }
+		}
+		SOL_napalm_carpeting = {
+			modifier = {
+				air_strategic_bomber_bombing_factor = 0.15
+			}
+			equipment_bonus = { large_plane_airframe = { air_agility = -0.05 instant = yes } }
+		}
+		SOL_dive_bombers_justice = {
+			equipment_bonus = { CAS_bomber = { air_ground_attack = 0.15 air_agility = 0.05 air_defence_factor = -0.15 instant = yes } }
+		}
+		SOL_balanced_air_powers = {
+			modifier = {
+				air_ground_attack_factor = 0.05
+				air_defence_factor = 0.05
+				air_strategic_bomber_bombing_factor = 0.05
+			}
+		}
+		SOL_limitless_bombing = {
+			equipment_bonus = { large_plane_airframe = { air_range = 0.15 air_bombing = 0.1 fuel_consumption = 0.1 instant = yes } }
+		}
+		SOL_ponies_to_sky = {
+			modifier = {
+				air_ace_generation_chance_factor = 0.05
+				air_agility_factor = 0.1
+			}
+		}
+		###Army Spirits###
+		SOL_efficient_command_structure = {
+			modifier = {
+				command_power_gain_mult = 0.05
+				max_planning_factor = 0.05
+			}
+		}
+		SOL_relegated_embarrassments = {
+			modifier = {
+				land_doctrince_cost_modifier = -0.1
+				research_speed_factor = 0.05
+			}
+		}
+		SOL_optimized_bureaucracy = {
+			modifier = {
+				supply_consumption_factor = -0.05
+				supply_node_range = 0.1
+			}
+		}
+		SOL_flammenwerfers = {
+			equipment_bonus = { infantry_equipment = { soft_attack = 0.1 breakthrough = 0.05 reliability = -0.075 build_cost_ic = 0.05 instant = yes } }
+		}
+		SOL_iterative_planning = {
+			modifier = {
+				max_planning_factor = 0.15
+				planning_speed = 0.1
+			}
+		}
+		SOL_motorized_spearheads = {
+			equipment_bonus = {
+				motorized = { breakthrough = 0.05 maximum_speed = 0.05 instant = yes }
+				mechanized = { breakthrough = 0.05 maximum_speed = 0.05 instant = yes }
+			}
+		}
+		SOL_artillery_safety_removals = {
+			equipment_bonus = { artillery = { soft_attack = 0.1 reliability = -0.05 instant = yes } }
+		}
+		SOL_napalm_shells = {
+			equipment_bonus = { artillery = { soft_attack = 0.15 hard_attack = -0.1 breakthrough = 0.03 instant = yes } }
+		}
+		SOL_practice_combat = {
+			modifier = {
+				experience_gainy_army_factor = 0.1
+				max_planning_factor = 0.05
+				planning_speed = 0.05
+			}
+		}
+		SOL_numbers_on_page = {
+			modifier = {
+				conscription = 0.01
+				mobilization_speed = 0.15
+				army_org_factor = -0.1
+			}
+		}
+		SOL_mobile_flame_deliverers = {
+			equipment_bonus = {
+				medium_flame_tank = { soft_attack = 0.5 armor_value = 0.25 instant = yes }
+			}
+		}
+		SOL_no_standards = {
+			equipment_bonus = {
+				infantry_equipment = { build_cost_ic = -0.25 reliability = -0.15 instant = yes }
+			}
+		}
+		SOL_armored_hoofs = {
+			equipment_bonus = { armor= { breakthrough = 0.05 armor_value = 0.05 instant = yes } }
+		}
+		SOL_evoker_legions = {
+			equipment_bonus = { unicorn_company = { soft_attack = 0.4 breakthrough = 0.25 instant = yes } }
+		}
+		SOL_second_gen_crystals = {
+			equipment_bonus = { magical_equipment = { soft_attack = 0.075 hard_attack = 0.075 ap_attack = 0.15 reliability = -0.1 instant = yes } }
 		}
 	}
 }
