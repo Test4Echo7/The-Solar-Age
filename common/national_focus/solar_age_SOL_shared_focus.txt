@@ -1731,7 +1731,7 @@ shared_focus = {
 		#	add_idea = SOL_Solar_Cult_idea1
 		#	remove_idea = SOL_Solar_Cult_idea
 		#}
-		add_idea = SOL_Solar_Cult_idea1
+		add_ideas = SOL_Solar_Cult_idea1
 	}
 	search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
 }
@@ -4610,7 +4610,7 @@ shared_focus = {
 				create_wargoal = {
 					target = PREV
 					type = take_state_focus
-					generator = { THIS.id }
+					generator = { 764 }
 				}
 			}
 		}
@@ -4619,7 +4619,7 @@ shared_focus = {
 				create_wargoal = {
 					target = PREV
 					type = take_state_focus
-					generator = { THIS.id }
+					generator = { 741 }
 				}
 			}
 		}
@@ -5062,7 +5062,7 @@ shared_focus = {
 			}
 			add_manpower = -243890
 		}
-		restore_current_manpower = yes
+		restore_previous_manpower = yes
 		add_stability = -0.15
 		###Possibly event of running griffons out of Griffonstone and already turning some of its architecture into pony architecture, and erecting a statue of Daybreaker to point how she has conquered the griffons
 	}
@@ -5559,56 +5559,56 @@ shared_focus = {
 						exists = yes
 						is_subject_of = ROOT
 					}
-					if = {
-						limit = {
-							SDC = {
-								exists = yes
-								is_subject_of = ROOT
-							}
-						}
-						SDL = {
-							annex_country = {
-								target = SDC
-							}
+				}
+				if = {
+					limit = {
+						SDC = {
+							exists = yes
+							is_subject_of = ROOT
 						}
 					}
-					if = {
-						limit = {
-							SDF = {
-								exists = yes
-								is_subject_of = ROOT
-							}
-						}
-						SDL = {
-							annex_country = {
-								target = SDF
-							}
+					SDL = {
+						annex_country = {
+							target = SDC
 						}
 					}
-					if = {
-						limit = {
-							SDS = {
-								exists = yes
-								is_subject_of = ROOT
-							}
-						}
-						SDL = {
-							annex_country = {
-								target = SDS
-							}
+				}
+				if = {
+					limit = {
+						SDF = {
+							exists = yes
+							is_subject_of = ROOT
 						}
 					}
-					if = {
-						limit = {
-							EMR = {
-								exists = yes
-								is_subject_of = ROOT
-							}
+					SDL = {
+						annex_country = {
+							target = SDF
 						}
-						SDL = {
-							annex_country = {
-								target = EMR
-							}
+					}
+				}
+				if = {
+					limit = {
+						SDS = {
+							exists = yes
+							is_subject_of = ROOT
+						}
+					}
+					SDL = {
+						annex_country = {
+							target = SDS
+						}
+					}
+				}
+				if = {
+					limit = {
+						EMR = {
+							exists = yes
+							is_subject_of = ROOT
+						}
+					}
+					SDL = {
+						annex_country = {
+							target = EMR
 						}
 					}
 				}
@@ -5616,7 +5616,7 @@ shared_focus = {
 		}
 		SDL = {
 			set_cosmetic_tag = SDL_SOL
-			set_previous_government_type = yes
+			restore_previous_government_type = yes
 		}
 	}
 	ai_will_do = { factor = 50 }
@@ -5701,7 +5701,7 @@ shared_focus = {
 			}
 		}
 		YMN = {
-			set_previous_government_type = yes
+			restore_previous_government_type = yes
 			set_cosmetic_tag = YMN_SOL
 		}
 	}
@@ -5803,6 +5803,10 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_magic_hit_squads"
 		###Event of somepony who has wronged Daybreaker, or perhaps one more rebel, is trying to run away after he had been almost killed by the hit squad, until he is stopped hwne some appear in a teleportation spell, and they let him have his last words as they use fire magic to consume him entirely
+		set_technology = {
+			SOL_unicorn_hit_squads_tech = 1
+			popup = no
+		}
 	}
 	ai_will_do = { factor = 40 }
 }
@@ -8690,7 +8694,7 @@ shared_focus = {
 		modifier = {
 			any_country = {
 				is_justifying_wargoal_against = ROOT
-				num_naval_factories > 0
+				dockyard > 0
 			}
 			add = 60
 		}
@@ -9636,6 +9640,10 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_evocation_schools"
 		###Event of a unicorn learning fire magic at one of Daybreaker's new schools, which leads to both awe and fear, as they test some of their skills on some test dummies, which are utterly consumed; they are quite good at fire magic, which worries their teachers, since they almost seem to be enjoying it
+		set_technology = {
+			SOL_evoker_legions_tech = 1
+			popup = no
+		}
 	}
 	ai_will_do = { factor = 75 }
 }
@@ -10590,8 +10598,8 @@ shared_focus = {
 				bonus = 1
 				uses = 2
 				ahead_reduction = 0.5
+				technology = jet_strategic_bomber1
 				technology = jet_strategic_bomber_a
-				technology = jet_strategic_bomber_x
 			}
 		}
 		add_tech_bonus = {
@@ -11825,7 +11833,7 @@ shared_focus = {
 	}
 	available = {
 		eqs_not_has_civil_war = yes
-		available = { 74 = { is_owned_and_controlled_by = ROOT } }
+		74 = { is_owned_and_controlled_by = ROOT }
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus Matilda_research"
@@ -12330,6 +12338,10 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_magical_training"
 		#Idea here
+		set_technology = {
+			SOL_magic_laden_explosives_tech = 1
+			popup = no
+		}
 		add_tech_bonus = {
 			name = magical_tech_bonus
 			uses = 2
@@ -12359,6 +12371,10 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_pony_mystics"
 		#Idea here
+		set_technology = {
+			SOL_self_improvement_programs_tech = 1
+			popup = no
+		}
 		add_tech_bonus = {
 			name = race_tech_bonus
 			uses = 2

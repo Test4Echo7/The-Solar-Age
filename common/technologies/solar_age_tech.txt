@@ -1,4 +1,41 @@
 technologies = {
+	###Hidden Techs###
+	SOL_unicorn_hit_squads_tech = {
+		research_cost = 1
+		allow = { always = no }
+
+		unicorn_company = {
+			soft_attack = 0.25
+			breakthrough = 0.2
+		}
+	}
+	SOL_magic_laden_explosives_tech = {
+		research_cost = 1
+		allow = { always = no }
+
+		unicorn_company = {
+			soft_attack = 0.1
+		}
+	}
+	SOL_self_improvement_programs_tech = {
+		research_cost = 1
+		allow = { always = no }
+
+		unicorn_company = {
+			defense = 0.15
+		}
+	}
+	SOL_evoker_legions_tech = {
+		research_cost = 1
+		allow = { always = no }
+
+		unicorn_company {
+			soft_attack = 0.4
+			breakthrough = 0.25
+		}
+	}
+
+	###Special Projects###
 	EQS_sun_laser = {
 		research_cost = 1
 		allow = { always = no }
@@ -68,11 +105,11 @@ technologies = {
 		research_cost = 1
 		allow = { always = no }
 
-		light_flame_tank = { soft_attack = 0.75 defense = 0.4 }
-		medium_flame_tank = { soft_attack = 0.75 defense = 0.4 }
-		heavy_flame_tank = { soft_attack = 0.75 defense = 0.4 }
-		modern_flame_tank = { soft_attack = 0.75 defense = 0.4 }
-		super_heavy_flame_tank = { soft_attack = 0.75 defense = 0.4 }
+		light_flame_tank = { soft_attack = 1 defense = 0.5 }
+		medium_flame_tank = { soft_attack = 1 defense = 0.5 }
+		heavy_flame_tank = { soft_attack = 1 defense = 0.5 }
+		modern_flame_tank = { soft_attack = 1 defense = 0.5 }
+		super_heavy_flame_tank = { soft_attack = 1 defense = 0.5 }
 	}
 	EQS_plasma_cannons = {
 		research_cost = 1

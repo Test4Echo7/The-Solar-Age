@@ -311,8 +311,8 @@ EQS_BOP_sanity_category = {
         days_remove = 14
         days_re_enable = 45
         modifier = {
-            planning_factor = 0.1
-            planning_speed_factor = 0.15
+            max_planning = 0.1
+            planning_speed = 0.15
         }
         complete_effect = {
             log = "[GetDateText]: [Root.GetName]: Decision EQS_preside_over_war_planning"
@@ -496,7 +496,7 @@ EQS_BOP_SOL_power_category = {
             add_power_balance_value = {
                 id = EQS_vestments_of_power_bop
                 value = 0.025
-                side = EQS_democracy
+                tooltip_side = EQS_democracy
             }
         }
     }
@@ -515,7 +515,7 @@ EQS_BOP_SOL_power_category = {
             add_power_balance_value = {
                 id = EQS_vestments_of_power_bop
                 value = 0.05
-                side = EQS_democracy
+                tooltip_side = EQS_democracy
             }
         }
         remove_effect = {
@@ -530,7 +530,7 @@ EQS_BOP_SOL_power_category = {
         days_remove = 21
         days_re_enable = 150
         modifier = {
-            add_political_power = -0.1
+            political_power_gain = -0.1
             stability_weekly = 0.003
         }
         complete_effect = {
@@ -538,7 +538,7 @@ EQS_BOP_SOL_power_category = {
             add_power_balance_value = {
                 id = EQS_vestments_of_power_bop
                 value = 0.075
-                side = EQS_democracy
+                tooltip_side = EQS_democracy
             }
         }
         remove_effect = {
@@ -564,7 +564,7 @@ EQS_BOP_SOL_power_category = {
             add_power_balance_value = {
                 id = EQS_vestments_of_power_bop
                 value = 0.1
-                side = EQS_democracy
+                tooltip_side = EQS_democracy
             }
         }
         remove_effect = {

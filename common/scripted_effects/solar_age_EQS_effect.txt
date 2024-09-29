@@ -299,7 +299,7 @@ EQS_get_flagship_bb = {
         else = {
             create_equipment_variant = {
 				name = "Daybreak Class"
-				type = SH_battleship
+				type = SH_battleship_1
 				upgrades = {
 					ship_gun_upgrade = 3
 					ship_armor_upgrade = 1
@@ -608,10 +608,10 @@ EQS_get_flagship_bc = {
     }
     else = {
         if = {
-            limit = { has_tech = semi_modern_battlecruiser }
+            limit = { has_tech = improved_battlecruiser }
             create_equipment_variant = {
 				name = "Daybreak Class"
-				type = battle_cruiser_5
+				type = battle_cruiser_3
 				upgrades = {
 					ship_gun_upgrade = 1
 					ship_armor_upgrade = 3
@@ -625,32 +625,7 @@ EQS_get_flagship_bc = {
                 progress = 0.33
                 requested_factories = 5
                 equipment = {
-                    type = battle_cruiser_5
-                    version_name = "Daybreak Class"
-                    creator = EQS
-                }
-                name = "HMS Daybreak"
-            }
-        }
-        else_if = {
-            limit = { has_tech = advanced_battlecruiser }
-            create_equipment_variant = {
-				name = "Daybreak Class"
-				type = battle_cruiser_4
-				upgrades = {
-					ship_gun_upgrade = 1
-					ship_armor_upgrade = 2
-					ship_anti_air_upgrade = 1
-					ship_engine_upgrade = 5
-					ship_reliability_upgrade = 2
-				}
-			}
-			add_equipment_production = {
-                amount = 1
-                progress = 0.33
-                requested_factories = 5
-                equipment = {
-                    type = battle_cruiser_4
+                    type = battle_cruiser_3
                     version_name = "Daybreak Class"
                     creator = EQS
                 }
@@ -660,7 +635,7 @@ EQS_get_flagship_bc = {
         else = {
             create_equipment_variant = {
 				name = "Daybreak Class"
-				type = battle_cruiser_3
+				type = battle_cruiser_2
 				upgrades = {
 					ship_gun_upgrade = 1
 					ship_armor_upgrade = 1
@@ -674,7 +649,7 @@ EQS_get_flagship_bc = {
                 progress = 0.33
                 requested_factories = 5
                 equipment = {
-                    type = battle_cruiser_3
+                    type = battle_cruiser_2
                     version_name = "Daybreak Class"
                     creator = EQS
                 }
