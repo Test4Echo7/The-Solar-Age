@@ -1285,6 +1285,8 @@ ideas = {
 				mobilization_laws_cost_factor = -0.1
 				mobilization_speed = 0.05
 				army_morale_factor = 0.05
+				stability_weekly = -0.001
+				war_support_weekly = -0.001
 			}
 		}
 	}
@@ -1303,7 +1305,7 @@ ideas = {
 			removal_cost = -1
 			picture = generic_pp_unity_bonus
 			modifier = {
-				stability_factor = -0.05
+				stability_factor = -0.1
 				war_support_factor = 0.1
 				fascism_drift = 0.01
 				resistance_damage_to_garrison = -0.2
@@ -1312,6 +1314,8 @@ ideas = {
 				mobilization_speed = 0.1
 				army_morale_factor = 0.1
 				conscription_factor = 0.1
+				stability_weekly = -0.003
+				war_support_weekly = -0.003
 			}
 		}
 	}
@@ -1334,6 +1338,8 @@ ideas = {
 				economy_cost_factor = -0.1
 				industrial_capacity_factory = 0.1
 				industrial_capacity_dockyard = 0.1
+				stability_weekly = -0.001
+				war_support_weekly = -0.001
 			}
 		}
 	}
@@ -1360,6 +1366,9 @@ ideas = {
 				industrial_capacity_dockyard = 0.1
 				trade_laws_cost_factor = -0.1
 				subjects_autonomy_gain = -0.1
+				stability_factor = -0.1
+				stability_weekly = -0.002
+				war_support_weekly = -0.002
 			}
 		}
 	}

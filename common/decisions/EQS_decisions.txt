@@ -1264,7 +1264,11 @@ demobilization = {
 		visible = {
 			tag = EQS
 			has_war = no
-			has_country_flag = { flag = celestia_evil_meter value < 34 }
+			power_balance_value = {
+				id = EQS_sanity_bop
+				value > -0.45
+			}
+			NOT = { is_EQS_SOL = yes }
 			OR = {
 				has_idea = eqs_media_control
 				has_idea = eqs_war_law_extreme
@@ -1305,6 +1309,44 @@ demobilization = {
 	}
 }
 political_actions = {
+	SOL_remove_temporary_laws = {
+		allowed = {
+			original_tag = EQS
+		}
+		available = {
+			is_EQS_SOL = yes
+		}
+		cost = 75
+		days_remove = 30
+		fire_only_once = yes
+		modifier = {
+			political_power_gain = -0.25
+			fascism_drift = -0.02
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_remove_temporary_laws"
+			if = {
+				limit = { has_idea = eqs_war_admin_extreme }
+				remove_ideas = eqs_war_admin_extreme
+			}
+			if = {
+				limit = { has_idea = eqs_war_admin }
+				remove_ideas = eqs_war_admin
+			}
+			if = {
+				limit = { has_idea = eqs_war_law_extreme }
+				remove_ideas = eqs_war_law_extreme
+			}
+			if = {
+				limit = { has_idea = eqs_war_law }
+				remove_ideas = eqs_war_law
+			}
+			if = {
+				limit = { has_idea = eqs_media_control }
+				remove_ideas = eqs_media_control
+			}
+		}
+	}
 	SOL_further_flurrys_war_training = {
 		allowed = {
 			original_tag = EQS

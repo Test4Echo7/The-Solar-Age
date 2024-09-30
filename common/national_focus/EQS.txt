@@ -3962,8 +3962,11 @@ shared_focus = {
 		if = {
 			limit = { has_country_leader = { character = EQS_princess_celestia ruling_only = yes } }
 			custom_trigger_tooltip = {
-				tooltip = EQS_celestia_not_feeling_angry
-				has_country_flag = { flag = celestia_evil_meter value < 33 }
+				tooltip = EQS_celestia_not_feeling_paranoid
+				power_balance_value = {
+					id = EQS_sanity_bop
+					value > -0.45
+				}
 			}
 		}
 	}
@@ -4000,8 +4003,11 @@ shared_focus = {
 			has_government = democratic
 			NOT = { has_completed_focus = eqs_come_to_compromise }
 			custom_trigger_tooltip = {
-				tooltip = EQS_celestia_feeling_angry
-				has_country_flag = { flag = celestia_evil_meter value > 32 }
+				tooltip = EQS_celestia_feeling_paranoid
+				power_balance_value = {
+					id = EQS_sanity_bop
+					value < -0.45
+				}
 			}
 		}
 		else = {

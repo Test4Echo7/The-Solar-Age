@@ -21,6 +21,7 @@
   SOL_sunset_shimmer_new_name:0 "Dawnbreak Shimmer"
   SOL_flurry_heart_based_name:0 "Nova Heart"
   SOL_cadance_corrupted_name:0 "Heartbreaker"
+  SOL_tempest_shadow_name:0 "Tempest Shadow"
   EQS_zephyr_breeze:0 "Zephyr Breeze"
   EQS_Novus_Flux:0 "Novus Flux"
   EQS_Nova_Glow:0 "Nova Glow"
@@ -172,6 +173,8 @@
   SOL_force_flurry_into_survival_exercise:0 "Force Firestorm into Survival Training"
   SOL_finalize_with_personal_instruction:0 "Finalize Firestorm's Training Personally"
   SOL_finalize_with_personal_instruction_desc:0 "Since Firestorm began her intensive studies and exercises in all aspects of war, she has become a formidable foe on the battlefield, but there are still many things that can be taught to her, for the God-Empress has not deigned Firestorm worthy of learning many of her own secrets. That shall change, with her last instructions being personal contests between herself and the God-Empress."
+  SOL_remove_temporary_laws:0 "Rescind Wartime Measures"
+  SOL_remove_temporary_laws_desc:0 "Although they were necessary to ensure smooth transitions to a more orderly society, many of the militarized aspects of some of our wartime laws are beginning to show their inflexibility. Military matters cannot properly deal with civilian problems, and the cudgels used for our defense are now beginning to harm us. We should reimplement some of the old laws until we can move to a fully-realized §Oempire§!."
 
   ###Flags and Custom Tooltips###
   SOL_has_captured_sunset:0 "Sunset Shimmer has been captured."
@@ -208,6 +211,8 @@
   SOL_flurry_old_enough_tt:0 "§YFlurry Heart§! is old enough to comprehend her §Obirthright§!."
   EQS_flurry_gets_smarter_tt:0 "§CFirestorm§! will become a more capable general."
   EQS_twiggles_field_marshal_tt:0 "§YSunrise Sparkle§! becomes a Field Marshal.\n"
+  EQS_celestia_not_feeling_paranoid:0 "[EQS.GetLeader] is not feeling §Oparanoid§! or §Rfurious§!."
+  EQS_celestia_feeling_paranoid:0 "[EQS.GetLeader] is feeling §Oparanoid§! or §Rfurious§!."
 
   ###Dynamic Loc###
   SOL_hidden_bonuses_empty:0 ""

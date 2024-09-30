@@ -785,6 +785,14 @@ ideas = {
 				political_power_factor = -0.3
 			}
 		}
+		SOL_codified_militarism = {
+			modifier = {
+				mobilization_laws_cost_factor = -0.1
+				political_power_factor = 0.05
+				war_stability_factor = 0.1
+				resistance_damage_to_garrison = -0.05
+			}
+		}
 		SOL_sole_judge = {
 			modifier = {
 				war_support_factor = 0.1

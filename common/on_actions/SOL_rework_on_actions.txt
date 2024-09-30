@@ -56,14 +56,14 @@ on_actions = {
                             }
                             FROM = {
                                 tag = EQS
-                                NOT = {
-                                    has_power_balance = { id = EQS_sanity_bop }
-                                }
+                                NOT = { has_power_balance = { id = EQS_vestments_of_power_bop } }
+                                NOT = { has_power_balance = { id = EQS_sanity_bop } }
                             }
                         }
                         AND = {
                             ROOT = {
                                 tag = EQS
+                                NOT = { has_power_balance = { id = EQS_vestments_of_power_bop } }
                                 NOT = { has_power_balance = { id = EQS_sanity_bop } }
                             }
                             FROM = {
@@ -77,13 +77,13 @@ on_actions = {
                         id = EQS_sanity_bop
                         set_default = yes
                     }
-                    add_ideas = EQS_mental_decline
                 }
             }
             if = {
                 limit = {
                     ROOT = {
                         tag = EQS
+                        NOT = { has_power_balance = { id = EQS_vestments_of_power_bop } }
                         NOT = { has_power_balance = { id = EQS_sanity_bop } }
                     }
                     FROM = {
@@ -97,13 +97,13 @@ on_actions = {
                         right_side = EQS_npc
                         set_value = 0.65
                     }
-                    add_ideas = EQS_mental_decline
                 }
             }
             if = {
                 limit = {
                     ROOT = {
                         tag = EQS
+                        NOT = { has_power_balance = { id = EQS_vestments_of_power_bop } }
                         NOT = { has_power_balance = { id = EQS_sanity_bop } }
                     }
                     FROM = {
@@ -117,8 +117,22 @@ on_actions = {
                         right_side = EQS_npc
                         set_value = 0.25
                     }
-                    add_ideas = EQS_mental_decline
                 }
+            }
+            if = {
+                limit = {
+                    OR = {
+                        ROOT = {
+                            tag = EQS
+                            has_power_balance = { id = EQS_sanity_bop }
+                        }
+                        FROM = {
+                            tag = EQS
+                            has_power_balance = { id = EQS_sanity_bop }
+                        }
+                    }
+                }
+                add_ideas = EQS_mental_decline
             }
             if = {
                 limit = {
@@ -150,7 +164,6 @@ on_actions = {
                     has_power_balance = { id = EQS_sanity_bop }
                 }
                 EQS = {
-                    remove_power_balance = { id = EQS_sanity_bop }
                     remove_ideas = EQS_mental_decline
                 }
             }
@@ -309,6 +322,19 @@ on_actions = {
                     }
                 }
                 set_country_flag = EQS_player_started_as_EQS
+            }
+            if = {
+                limit = {
+                    NOT = { has_country_flag = SOL_puppets_left }
+                    has_war = no
+                    is_EQS_SOL = yes
+                }
+                country_event = {
+                    id = solarreworked.502
+                    days = 21
+                    random_days = 21
+                }
+                set_country_flag = SOL_puppets_lef
             }
             if = {
                 limit = {

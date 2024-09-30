@@ -1,7 +1,284 @@
 add_namespace = solarreworked
-add_namespace = solar_god_empress
-add_namespace = solar_self
-add_namespace = solar_fallen_hero
+
+###Opening Events###
+country_event = { #A soldier is on a patrol outside the palace and thinks about how his job is rather boring, and that he could be better serving elsewhere, but is surprised when Daybreaker breaks out of the castle to proclaim her ascension, and ponies' salvation is at hoof
+    id = solarreworked.20
+    title = solarreworked.20.t
+    desc = solarreworked.20.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.20"}
+
+    is_triggered_only = yes
+
+    option = { #That was a mistake.
+        name = solarreworked.20.a
+        add_political_power = 200
+    }
+}
+
+country_event = { #Daybreaker, who is still cementing her power, is confronted by some of her advisors and privy council, and she basically plays along with them or toys with them until she informs them that their services are no longer needed; it is quite forceful
+    id = solarreworked.21
+    title = solarreworked.21.t
+    desc = solarreworked.21.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.21"}
+
+    is_triggered_only = yes
+
+    option = { #Now, do you think twin lavafalls will fit here?
+        name = solarreworked.21.a
+    }
+}
+
+country_event = { #Blueblood is still busily working on the front when Daybreaker appears and slowly intimidates him into joining, as she implies that it will be for his benefit, and also because she will have him dealt with if he isn't
+    id = solarreworked.22
+    title = solarreworked.22.t
+    desc = solarreworked.22.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.22"}
+
+    is_triggered_only = yes
+
+    option = { #I'd be stupid to refuse.
+        name = solarreworked.22.a
+    }
+}
+
+country_event = { #A soldier under the orders of a new officer loyal to Daybreaker is sent in to help deal with unrest in Fillydelphia, as it turns into a blood bath that they weren't entirely expecting, and thought that it would be avoided
+    id = solarreworked.23
+    title = solarreworked.23.t
+    desc = solarreworked.23.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.23"}
+
+    is_triggered_only = yes
+
+    option = { #Faust forgive me.
+        name = solarreworked.23.a
+    }
+}
+
+country_event = { #A short report about how the military is potentially a dangerous organism, which has been slowly cleared out of its own accord by ponies turning themselves in or even committing suicide because of their guilt-ridden brains being unable to handle going against Daybreaker, and even has Daybreaker visit one, to find that it was just the case
+    id = solarreworked.24
+    title = solarreworked.24.t
+    desc = solarreworked.24.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.24"}
+
+    is_triggered_only = yes
+
+    option = { #Such a shame he couldn't share all he knew.
+        name = solarreworked.24.a
+    }
+}
+
+country_event = { #A radio personality in Manehattan or Baltimare is going on the air, on record, about grievances of Daybreaker's regime and giving veiled hints on organized protests, and how it's dangerous for all, and as emphasis, he is broken into by the military while he's on air, and is forced to shut down his broadcast, while he's arrested for conspiracy to overthrow Harmony
+    id = solarreworked.25
+    title = solarreworked.25.t
+    desc = solarreworked.25.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.25"}
+
+    is_triggered_only = yes
+
+    option = { #I'm innocent, I swear!
+        name = solarreworked.25.a
+    }
+}
+
+country_event = { #Daybreaker enters the training room again, after dealing with a small political problem, and sees Blueblood almost passed out, and it is implied that they have been physically training all day, despite her clearly not being tired at all, and she speaks with him to do more, and he starts to bite back against her, which impresses her, but she still forces him to train further, as that's the only way he can become a proper leader of the military
+    id = solarreworked.26
+    title = solarreworked.26.t
+    desc = solarreworked.26.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.26"}
+
+    is_triggered_only = yes
+
+    option = { #Do not be slothful!
+        name = solarreworked.26.a
+    }
+}
+
+country_event = { #Raven is summoned into the throne room of Daybreaker, who is pleased to see her, and Raven is in the middle of doing a couple of different things for coordinating Daybreaker's latest day of activities, and barely pays attention as Daybreaker begins to speak about how she is proud of Raven's industrious nature and also her desire to keep the Empire moving, and ultimately gives her a promotion, to do more things along with what she already does, which Raven barely registers until she is shown out
+    id = solarreworked.27
+    title = solarreworked.27.t
+    desc = solarreworked.27.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.27"}
+
+    is_triggered_only = yes
+
+    option = { #Seriously?!
+        name = solarreworked.27.a
+    }
+}
+
+country_event = { #Daybreaker rests on her throne while a pony or two is dragged in to be seen by her, since the rebellions are threatening to foment are starting to coming to a head, and she wishes to appear strong and unable to be messed with, and she barely hears what they are accused of before declaring them guilty and moving on to others, with the same determination
+    id = solarreworked.28
+    title = solarreworked.28.t
+    desc = solarreworked.28.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.28"}
+
+    is_triggered_only = yes
+
+    option = { #Next pony!
+        name = solarreworked.28.a
+    }
+}
+
+country_event = { #A pony is taken before a bureaucrat or civil servant, who goes through what they are accused of, which is some minor crime, at least in Imperial law, and she is told that her sentence will be fifty weeks of service, then execution by firing squad, and she has no hope of appeal, even though she will try
+    id = solarreworked.29
+    title = solarreworked.29.t
+    desc = solarreworked.29.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.29"}
+
+    is_triggered_only = yes
+
+    option = { #Ah, the wheels of government.
+        name = solarreworked.29.a
+    }
+}
+
+country_event = { #Blueblood enters Daybreaker's quarters, privately, and confused, since he believed himself done with her tests, and she is waiting for him, with stacks of papers detailing some of his assets that he holds across the world, including in CHN and GRI, and she inquires of him if these will be issues, and he claims no, but she pushes him further, to eventually have him agree to burning all the assets, starting with one of his manors near the STG borders, and has him order the military to carpet bomb it, since she should come first, no matter his preferences
+    id = solarreworked.30
+    title = solarreworked.30.t
+    desc = solarreworked.30.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.30"}
+
+    is_triggered_only = yes
+
+    option = { #You've learned, nephew.
+        name = solarreworked.30.a
+    }
+}
+
+country_event = { #Daybreaker enters her personal armory, and takes a moment to look at some old armor that Celestia has, and then the new armor she had prepared, and thinks on her ponies needing to be led like sheep, otherwise they will all perish, and she will take up that mantle, so they can follow her like the menial beings they are
+    id = solarreworked.31
+    title = solarreworked.31.t
+    desc = solarreworked.31.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.31"}
+
+    is_triggered_only = yes
+
+    option = { #They will follow or die.
+        name = solarreworked.31.a
+    }
+}
+
+country_event = { #A short event speaking of, since there are no other ponies quite of Daybreaker's equal, since Luna is out of the question as well as Cadance, there comes an issue of what happens if she is horribly injured in battle, and that a regent must be appointed in that case, and while she still leads, they can also assist with administrative tasks
+    id = solarreworked.32
+    title = solarreworked.32.t
+    desc = solarreworked.32.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.32"}
+
+    is_triggered_only = yes
+
+    option = { #Sunrise Sparkle is the only possible choice.
+        name = solarreworked.32.a
+        #Idea here
+    }
+    option = { #Dawnbreak Shimmer understands the Empress like a daughter her mother.
+        name = solarreworked.32.b
+        #Idea here
+    }
+    option = { #Blueblood is distant kin. He has a right to lead.
+        name = solarreworked.32.c
+        #Idea here
+    }
+    option = { #Raven Inkwell knows the Empire inside and out. She would suit the role best.
+        name = solarreworked.32.e
+        #Idea here
+    }
+}
+
+country_event = { #Daybreaker holds a speech in Sanctum Solar, which has just been renamed, and she proclaims that the threats and internal instabilities that have made her ascension so dire have been crushed; she will lead Equestria into a new age of prosperity, and she proclaims it an empire that will be led by the Sun. A Solar Empire, and she receives thundrous applause
+    id = solarreworked.33
+    title = solarreworked.33.t
+    desc = solarreworked.33.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.33"}
+
+    is_triggered_only = yes
+
+    option = { #So this is how Harmony dies...
+        name = solarreworked.33.a
+        add_political_power = 100
+        add_stability = 0.05
+        add_war_support = 0.05
+		effect_tooltip = {
+			every_enemy_country = {
+				add_ideas = SOL_enemy_debuff_idea
+			}
+		}
+		hidden_effect = {
+			every_enemy_country = {
+				add_ideas = SOL_enemy_debuff_idea
+			}
+		}
+		if = {
+			limit = {
+				is_faction_leader = no
+			}
+			create_faction = "SOL_faction"
+		}
+		CRY = {
+            if = {
+                limit = {
+                    is_in_faction_with = ROOT
+                    NOT = { has_war_together_with = ROOT }
+                }
+                if = {
+                    limit = { is_subject_of = ROOT  }
+                    ROOT = { end_puppet = CRY }
+                }
+                leave_faction = yes
+            }
+        }
+        EQC = {
+            if = {
+                limit = {
+                    is_in_faction_with = ROOT
+                    NOT = { has_war_together_with = ROOT }
+                }
+                if = {
+                    limit = { is_subject_of = ROOT }
+                    ROOT = { end_puppet = EQC }
+                }
+                leave_faction = yes
+                hidden_effect = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+        }
+        PCB = {
+            if = {
+                limit = {
+                    is_in_faction_with = ROOT
+                    NOT = { has_war_together_with = ROOT }
+                }
+                if = {
+                    limit = { { is_subject_of = ROOT }
+                    ROOT = { end_puppet = PCB }
+                }
+                leave_faction = yes
+            }
+        }
+		set_politics = {
+            ruling_party = fascism
+            elections_allowed = no
+		}
+		EQS_princess_celestia = {
+            set_character_name = EQS_SOL_daybreaker
+            add_country_leader_role = {
+				promote_leader = yes
+
+				country_leader = {
+					expire = "1965.1.1"
+					desc = "POLITICS_DAYBREAKER_DESC"
+					ideology = nazism
+					traits = { }
+				}
+			}
+		}
+		set_province_name = {
+            id = 179
+            name = "EQS_sanctum_solar"
+        }
+		set_cosmetic_tag = EQS_SOL
+    }
+}
 
 country_event = { #Daybreaker meets with Neighsay, whom she has summoned in order to discuss how to best adjust the curriculum of the EEA, since it needs to be updated to proper, Imperial standards, and she threatens him with defunding if he doesn't comply, which eventually breaks him.
     id = solarreworked.40
@@ -1703,6 +1980,44 @@ country_event = {
                 }
                 custom_effect_tooltip = flurry_heart_stats_dynamic_tp
             }
+        }
+    }
+}
+
+country_event = { #Event quickly stating that now that the war is over, with EQC and CRY no longer in the same kind of existential danger, they have both turned their backs on the Solar Empire, and abandoned their duties, and must be dealt with
+    id = solarreworked.502
+    title = solarreworked.502.t
+    desc = solarreworked.502.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.502"}
+
+    is_triggered_only = yes
+
+    option = { #May the Sun incinerate them where they stand!
+        name = solarreworked.502.a
+        CRY = {
+            if = {
+                limit = { is_subject_of = ROOT }
+                ROOT = { end_puppet = CRY }
+            }
+            leave_faction = yes
+        }
+        EQC = {
+            if = {
+                limit = { is_subject_of = ROOT }
+                ROOT = { end_puppet = EQC }
+            }
+            leave_faction = yes
+            hidden_effect = {
+                drop_cosmetic_tag = yes
+            }
+        }
+        PCB = {
+            if = {
+                limit = { is_subject_of = ROOT }
+                ROOT = { end_puppet = PCB }
+            }
+            leave_faction = yes
         }
     }
 }
