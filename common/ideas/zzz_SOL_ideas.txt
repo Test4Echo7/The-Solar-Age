@@ -801,6 +801,43 @@ ideas = {
 				breakthrough_factor = 0.05
 			}
 		}
+		SOL_raven_regent = {
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.1
+				production_speed_buildings_factor = 0.05
+				local_resources_factor = -0.1
+			}
+		}
+		SOL_sunrise_sparkle_regent = {
+			modifier = {
+				stability_factor = -0.15
+				research_speed_factor = 0.1
+				land_doctrine_cost_factor = -0.1
+				air_doctrine_cost_factor = -0.1
+				naval_doctrine_cost_factor = -0.1
+				breakthrough_factor = 0.05
+			}
+		}
+		SOL_dawnbreak_shimmer_regent = {
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				army_morale_factor = 0.1
+				land_reinforce_rate = 0.01
+				recon_factor = -0.1
+				political_power_gain = -0.15
+			}
+		}
+		SOL_blueblood_regent = {
+			modifier = {
+				conscription = 0.003
+				war_support_factor = 0.1
+				mobilization_speed = 0.25
+				army_morale_factor = -0.075
+				army_attack_factor = 0.03
+			}
+		}
 		###Civil War###
 		SOL_inflationary_spending = {
 			modifier = {

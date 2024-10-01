@@ -103,6 +103,33 @@ country_event = { #Raven is summoned into the throne room of Daybreaker, who is 
 
     option = { #Seriously?!
         name = solarreworked.27.a
+        if = {
+            limit = {
+                has_idea = raven
+            }
+            remove_ideas = raven
+            EQS_raven_inkwell = {
+                remove_advisor_role = { slot = political_advisor }
+            }
+            EQS_raven_inkwell = {
+                add_advisor_role = {
+                    slot = political_advisor
+                    traits = { imperial_magister }
+                    activate = yes
+                }
+            }
+        }
+        else = {
+            EQS_raven_inkwell = {
+                remove_advisor_role = { slot = political_advisor }
+            }
+            EQS_raven_inkwell = {
+                add_advisor_role = {
+                    slot = political_advisor
+                    traits = { imperial_magister }
+                }
+            }
+        }
     }
 }
 
@@ -169,18 +196,22 @@ country_event = { #A short event speaking of, since there are no other ponies qu
     option = { #Sunrise Sparkle is the only possible choice.
         name = solarreworked.32.a
         #Idea here
+        add_ideas = SOL_sunrise_sparkle_regent
     }
     option = { #Dawnbreak Shimmer understands the Empress like a daughter her mother.
         name = solarreworked.32.b
         #Idea here
+        add_ideas = SOL_dawnbreak_shimmer_regent
     }
     option = { #Blueblood is distant kin. He has a right to lead.
         name = solarreworked.32.c
         #Idea here
+        add_ideas = SOL_blueblood_regent
     }
     option = { #Raven Inkwell knows the Empire inside and out. She would suit the role best.
         name = solarreworked.32.e
         #Idea here
+        add_ideas = SOL_raven_regent
     }
 }
 
