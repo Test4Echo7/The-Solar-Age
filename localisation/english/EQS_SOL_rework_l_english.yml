@@ -428,10 +428,31 @@
   ###Crystal Empire###
 
   ###Bats###
+  SOL_fire_and_brimstone:0 "Fire and Brimstone"
+  SOL_fire_and_brimstone_desc:0 "Thestrals have been behind issues and pains within the rest of Equus for generations, which originated when they first sided with Nightmare Moon. Because of her rebellious nature, they have been tainted. There is no redemption for them, for they will always be opposed to us. Therefore, we must show them that we are their superiors, and by the only language they will understand."
   SOL_what_homes:0 "What Homes?"
+  SOL_what_homes_desc:0 "In the past, thestrals resided across Equus, with the only remnant of that being the settlements within Hollow Shades that we have yet to penetrate. However, upon which they have constructed their new homes is rightful Imperial territory. They sided with Nightmare Moon a thousand years ago. They have never integrated back into our society. What right do they have to anything within our Empire?"
   SOL_what_jobs:0 "What Jobs?"
+  SOL_what_jobs_desc:0 "While they might have been useful, as some have called them, in improving the economy, thestrals run far too much of a risk in sharing sensitive information with our enemies. They are nosy, they are forever curious, and worst of all, they will speak to whomever will ask them their secrets. Our only solution will be economically painful in the short term, but yield our safety in the future."
   SOL_burn_bats:0 "§OBURN THE BATS!§!"
+  SOL_burn_bats_desc:0 "Thestrals, the "Children of the Night," are a danger to us all. They spread lies, deceptions, and sew discontent against the Empress wherever they live. All attempts to reason with them will only end in failure.\n\nThere is only solution to them: §OFire§!."
+  SOL_enlighten_darkness:0 "Enlightening the Darkness"
+  SOL_enlighten_darkness_desc:0 "Thestrals may be considered "Children of the Night," but they are still ponies. Incredibly misguided ponies, but ponies nonetheless. To that end, is it not the role of the Empress to ensure that they are shown the error of their ways and given a chance to turn from their error? A small number already obey here, so it is only a matter of opening the gates to let them all in to a greater understanding of her."
+  SOL_second_class_employers:0 "Second-Class Employers"
+  SOL_second_class_employers_desc:0 "Although thestrals should contribute to our economy, they must keep to themselves. Their minds are clouded by their ties to Nightmare Moon, and could very well inadvertently lead one of our loyal citizens away from a proper respect to the Empress. As they simply cannot contribute to society as a normal pony can, it is reasonable to allow separate work structures, to accomodate their lowly contributions."
+  SOL_mandatory_education:0 "Mandatory Education"
+  SOL_mandatory_education_desc:0 "The greatest error that reamins unrectified is that the thestrals are still allowed to instruct their young in their corrupt ways. This will only spawn further generations of rebels and lovers of the night and darkness. Some may even defect to those who believe that Nightmare Moon is alive and will save them. There is a simple solution. They must learn what it means to not be a thestral."
   SOL_useful_servants:0 "Useful Servants"
+  SOL_useful_servants_desc:0 "Although thestrals can never achieve what the rest of ponykind has, due to their dark and corrupt nation, they can still contribute. They are witty and quick in their thoughts, no matter how debased, and have shown they have aptitude for menial or physical labor. Loosening our previous restrictions on them will only serve to benefit us into the future."
+  SOL_peninsula_of_damned:0 "Peninsula of the Damned"
+  SOL_peninsula_of_damned_desc:0 "Although thestrals made their ancestral home within the South-Eastern Peninsula, they are not the only natives who inhabit the region. Both settlers from Northern Equus and the Neighua tribes call the peninsula home. Aside from the port cities, they languish in the interior in unseen squalor. Solving the issue will require multiple steps, but they shall taste the Empress's mercy before long!"
+  SOL_prison_of_fire:0 "Prison of Fire"
+  SOL_peaks_of_wealth:0 "Peaks of Wealth"
+  SOL_remote_no_more:0 "Remote No More"
+  SOL_expand_oil_fields:0 "Expand the Oil Fields"
+  SOL_modern_south_east:0 "The Modern South-East"
+  SOL_moonspeaker_tax:0 "Moonspeaker Tax"
+  SOL_replanting_jungle:0 "Replanting the Jungle"
 
   ###Diplomacy###
   SOL_imperial_diplomatic_corps:0 "Imperial Diplomatic Corps"
