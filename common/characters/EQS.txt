@@ -21,6 +21,16 @@ characters={
 			desc = EQS_arrogant_cunt_desc
 			visible = {
 				original_tag = EQS
+				OR = {
+					AND = {
+						has_government = democratic
+						NOT = { EQS_princess_celestia = { has_character_flag = EQS_celestia_is_db } }
+					}
+					AND = {
+						is_EQS_SOL = yes
+						has_country_flag = SOL_blueblood_kneeled
+					}
+				}
 			}
 		}
 		country_leader={
@@ -49,7 +59,10 @@ characters={
 					}
 				}
 				OR = {
-					is_EQS_SOL = yes
+					AND = {
+						is_EQS_SOL = yes
+						has_country_flag = SOL_blueblood_kneeled
+					}
 					if = {
 						limit = { is_original_EQS = yes }
 						has_country_flag = EQS_blueblood_allowed
@@ -1509,7 +1522,7 @@ characters={
 					has_completed_focus = Hire_Generals
 				}
 				if = {
-					limit = { NOT = { tag = event_target:solar_empire } }
+					limit = { NOT = { has_country_flag = SOL_tempest_joined } }
 					has_government = democratic
 				}
 				custom_trigger_tooltip = {
@@ -1521,6 +1534,28 @@ characters={
 			traits = { alt_army_chief_maneuver_1 }
 			ai_will_do = {
 				factor = 1
+			}
+		}
+		corps_commander = {
+			traits = { fortress_buster pony_race_trait }
+			skill = 3
+			legacy_id = 12
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 1
+			desc = "EQS_tempy_desc"
+			visible = {
+				OR = {
+					AND = {
+						is_original_EQS = yes
+						has_country_flag = EQS_create_new_commanders_flag
+					}
+					AND = {
+						is_EQS_SOL = yes
+						has_country_flag = SOL_tempest_joined
+					}
+				}
 			}
 		}
 		gender = female
@@ -2264,6 +2299,7 @@ characters={
 			}
 			visible = {
 				is_EQS_SOL = yes
+				has_completed_focus = SOL_god_empress
 			}
 			available = {
 				is_EQS_SOL = yes

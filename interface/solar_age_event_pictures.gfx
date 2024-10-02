@@ -11,4 +11,8 @@ spriteTypes = {
         name = "GFX_event_celestia_ascension"
         texturefile = "gfx/event_pictures/event_celestia_ascension.png"
     }
+    spriteType = {
+        name = "GFX_event_tempest_fighting"
+        texturefile = "gfx/event_pictures/event_tempest_fighting.png"
+    }
 }

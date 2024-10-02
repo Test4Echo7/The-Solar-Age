@@ -1100,15 +1100,15 @@ country_event = {
 		custom_effect_tooltip = EQS_twiggles_field_marshal_tt
 		custom_effect_tooltip = grand_inquisitor_sunrise_sparkle_stats_tp
 		set_country_flag = SOL_twilight_corrupted
-		if = {
-			limit = {
-				CRY = {
-					is_subject_of = ROOT
-					NOT = { has_country_flag = CRY_solar_governorship }
-				}
-			}
-			country_event = solarempire.131
-		}
+		#if = {
+		#	limit = {
+		#		CRY = {
+		#			is_subject_of = ROOT
+		#			NOT = { has_country_flag = CRY_solar_governorship }
+		#		}
+		#	}
+		#	country_event = solarempire.131
+		#}
 	}
 }
 

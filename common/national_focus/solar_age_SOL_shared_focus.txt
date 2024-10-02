@@ -562,13 +562,7 @@ shared_focus = {
 	completion_reward = {
         ###Event of Daybreaker revealing herself to the Canterlot, and she is initially attacked by some of her own soldiers, who she deals with as she proclaims that she will lead the nation to greatness and destruction of the changelings; she is passive until she's shot at
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_waking_dawn_star"
-		add_political_power = 200
-		if = {
-			limit = {
-				is_faction_leader = no
-			}
-			create_faction = "SOL_faction"
-		}
+		country_event = solarreworked.20
 	}
 }
 
@@ -587,6 +581,7 @@ shared_focus = {
 
     completion_reward = {
        log = "[GetDateText]: [Root.GetName]: Focus SOL_fire_ministers"
+       country_event = solarreworked.21
        ###Daybreaker secures most of the castle and is confronted by Fancy Pants, who she finds droll, and ends up sacking him, as well as most of her cabinet, and has them all arrested to avoid disruptions
     }
     ai_will_do = { factor = 200 }
@@ -607,6 +602,7 @@ shared_focus = {
 
     completion_reward = {
         log = "[GetDateText]: [Root.GetName]: Focus SOL_bluebloods_fealty"
+        country_event = solarreworked.22
         ###Daybreaker gets hold of Blueblood in his war tent, and appears to him as a fiery demon, which makes him scared enough to basically prostrate himself to her, and swear that he will serve her
     }
     ai_will_do = { factor = 200 }
@@ -627,7 +623,7 @@ shared_focus = {
 
     completion_reward = {
         log = "[GetDateText]: [Root.GetName]: Focus SOL_appoint_committee"
-        #Idea here
+        add_ideas = SOL_imperial_war_committee
     }
     ai_will_do = { factor = 150 }
 }
@@ -647,6 +643,7 @@ shared_focus = {
 
     completion_reward = {
         log = "[GetDateText]: [Root.GetName]: Focus SOL_answer_crimes"
+        country_event = solarreworked.23
         ###Event of soldiers being sent in to crack down on a large series of union protests and organized riots in Fillydelphia, after the Fillydelphian mayor also rebelled against Daybreaker, with casualties in the streets once they are attacked
     }
     ai_will_do = { factor = 200 }
@@ -663,10 +660,16 @@ shared_focus = {
     available = {
         is_subject = no
         has_DB_ruler = yes
+        OR = {
+			has_idea = SOL_military_mutiny
+			has_idea = SOL_military_mutiny_2
+			has_idea = SOL_military_mutiny_3
+        }
     }
 
     completion_reward = {
         log = "[GetDateText]: [Root.GetName]: Focus SOL_sweeping_chaff"
+        country_event = solarreworked.24
         ###Event overviewing how the loyal aspects of the military went in and started to purge some of the officers and rank and file, which has led to extreme fear within the remaining soldiers, as it should be
     }
     ai_will_do = { factor = 200 }
@@ -703,10 +706,16 @@ shared_focus = {
     available = {
         is_subject = no
         has_DB_ruler = yes
+        OR = {
+			has_idea = SOL_societal_stubnornness
+			has_idea = SOL_societal_stubnornness_2
+			has_idea = SOL_societal_stubnornness_3
+        }
     }
 
     completion_reward = {
         log = "[GetDateText]: [Root.GetName]: Focus SOL_break_dissent"
+        country_event = solarreworked.25
         ###Event of a news reporter who is on the air on the radio being barged into by some of the military, who are shutting down the station, as they have been determined to have been broadcasting "anti-Harmony propaganda" and are hauled away, with some final statements by a soldier
     }
     ai_will_do = { factor = 200 }
@@ -727,7 +736,25 @@ shared_focus = {
 
     completion_reward = {
         log = "[GetDateText]: [Root.GetName]: Focus SOL_plants_in_chaos"
-        #Idea reduction here
+        add_manpower = -27423
+        add_war_support = -0.05
+        if = {
+            limit = { has_idea = SOL_military_mutiny }
+            swap_ideas = {
+                remove_idea = SOL_military_mutiny
+                add_idea = SOL_military_mutiny_2
+            }
+        }
+        else_if = {
+            limit = { has_idea = SOL_military_mutiny_2 }
+            swap_ideas = {
+                remove_idea = SOL_military_mutiny_2
+                add_idea = SOL_military_mutiny_3
+            }
+        }
+        else = {
+            remove_ideas = SOL_military_mutiny_3
+        }
         ###Maybe event of a plant in one of the suspect divisions coming across some truly damning evidence, and barely getting away with it to report
     }
     ai_will_do = { factor = 150 }
@@ -748,6 +775,7 @@ shared_focus = {
 
     completion_reward = {
         log = "[GetDateText]: [Root.GetName]: Focus SOL_personal_training"
+        country_event = solarreworked.26
         ###Daybreaker meets with a tired Blueblood, whom she has been training for the last day, the entire day, without her breaking a sweat, and he is finally starting to get some of the ideas behind what she is teaching him, despite the punishments for failure, which include improving his magic, awareness, and decision making
     }
     ai_will_do = { factor = 100 }
@@ -768,6 +796,7 @@ shared_focus = {
 
     completion_reward = {
         log = "[GetDateText]: [Root.GetName]: Focus SOL_reward_loyal"
+        country_event = solarreworked.27
         ###Daybreaker meets privately with Raven, who is still so busy she doesn't really care that Daybreaker is now leading versus Celestia, since she is still coordinating most of Daybreaker's life, and Daybreaker rewards her for her steadfast loyalty with a new position, although she will still need to be Daybreaker's assistant, which annoys Raven
     }
     ai_will_do = { factor = 100 }
@@ -789,7 +818,7 @@ shared_focus = {
 
     completion_reward = {
         log = "[GetDateText]: [Root.GetName]: Focus SOL_arbitrary_judgement"
-        #Reduce ideas
+        country_event = solarreworked.28
         ###Maybe event of Daybreaker going rapidfire through some different trials, all of which she proclaims as guilty, even though they want to plead their case
     }
     ai_will_do = { factor = 200 }
@@ -812,8 +841,7 @@ shared_focus = {
 
     completion_reward = {
         log = "[GetDateText]: [Root.GetName]: Focus SOL_solidify_merger"
-        #Idea here
-        #Reduce ideas
+        country_event = solarreworked.29
         ###Maybe event of a couple of mid-level pencil pushers trying to navigate how much more confusing the laws have become, while at the same time, seeing how effective they are, since a couple of ponies just get taken out and shot for breaking a law
     }
     ai_will_do = { factor = 300 }
@@ -834,6 +862,7 @@ shared_focus = {
 
     completion_reward = {
         log = "[GetDateText]: [Root.GetName]: Focus SOL_suns_son"
+        country_event = solarreworked.30
         ###Daybreaker oversees his last test, which is choosing between her, and choosing between one of his old suitors, of whom she found pictures in his quarters, and how it is potentially a distraction, and he ultimately chooses Daybreaker, which means, since she was also a staunch anti-Daybreaker pony, she gets to be executed by him, in cold blood
     }
     ai_will_do = { factor = 100 }
@@ -867,7 +896,7 @@ shared_focus = {
 
     completion_reward = {
         log = "[GetDateText]: [Root.GetName]: Focus SOL_judge_jury_executioner"
-        #Idea here
+        add_ideas = SOL_sole_judge
     }
     ai_will_do = { factor = 150 }
 }
@@ -890,7 +919,7 @@ shared_focus = {
 
     completion_reward = {
         log = "[GetDateText]: [Root.GetName]: Focus SOL_take_charge"
-        #Assign field marshal here
+        country_event = solarreworked.31
         ###Maybe short event of her suiting up for battle with the enemies of the Empire, as she realizes that her ponies are forever lost without her, and they will be guided like the sheep they are
     }
     ai_will_do = { factor = 500 }
@@ -912,6 +941,7 @@ shared_focus = {
 
     completion_reward = {
         log = "[GetDateText]: [Root.GetName]: Focus SOL_successor_question"
+        country_event = solarreworked.32
         ###Event of discussing that there is the unlikely, and disliked, event that if Daybreaker is either wounded and indisposed, or killed, that there needs to be somepony who fills her role; there will only be Raven and Blueblood to choose from initially, but Sunrise and Dawnbreak open up when they become corrupted, if taken later
     }
     ai_will_do = { factor = 100 }

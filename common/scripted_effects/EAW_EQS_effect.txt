@@ -91,17 +91,6 @@ EQS_create_new_commanders = {
 		custom_effect_tooltip = august_von_eisenstadt_stats_tp
 		set_global_flag = EQS_Eisenstadt_created
 	}
-	add_corps_commander_role = {
-		character = EQS_fizzlepop
-		traits = { fortress_buster pony_race_trait }
-		skill = 3
-		legacy_id = 12
-		attack_skill = 4
-		defense_skill = 2
-		planning_skill = 3
-		logistics_skill = 1
-		desc = "EQS_tempy_desc"
-	}
 	custom_effect_tooltip = fizzlepop_berrytwist_stats_tp
 
 	custom_effect_tooltip = sunrise_moonshadow_stats_tp
@@ -354,7 +343,7 @@ EQS_SOL_wartime_change = {
 		}
 	}
 	#EQS_SOL_show_advisors = yes
-	country_event = { id = solarempire.2 days = 2 }
+	#country_event = { id = solarempire.2 days = 2 }
 	news_event = { id = news.sol.4 hours = 6 }
 }
 

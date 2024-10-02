@@ -12,6 +12,21 @@ country_event = { #A soldier is on a patrol outside the palace and thinks about 
     option = { #That was a mistake.
         name = solarreworked.20.a
         add_political_power = 200
+        add_stability = -0.25
+        add_stability = -0.25
+        if = {
+			limit = {
+				is_faction_leader = no
+			}
+			create_faction = "SOL_faction"
+		}
+		hidden_effect = {
+            country_event = {
+                id = solarreworked.34
+                days = 10
+                random_days = 8
+            }
+		}
     }
 }
 
@@ -25,6 +40,14 @@ country_event = { #Daybreaker, who is still cementing her power, is confronted b
 
     option = { #Now, do you think twin lavafalls will fit here?
         name = solarreworked.21.a
+        EQS_fancy_pants = {
+            remove_advisor_role = { slot = political_advisor }
+        }
+        EQS_filthy_rich = {
+            remove_advisor_role = { slot = political_advisor }
+        }
+        add_stability = -0.1
+        add_political_power = 75
     }
 }
 
@@ -38,6 +61,9 @@ country_event = { #Blueblood is still busily working on the front when Daybreake
 
     option = { #I'd be stupid to refuse.
         name = solarreworked.22.a
+        custom_effect_tooltip = SOL_blueblood_pulls_a_smart_tt
+        set_country_flag = SOL_blueblood_kneeled
+        add_stability = 0.05
     }
 }
 
@@ -51,6 +77,11 @@ country_event = { #A soldier under the orders of a new officer loyal to Daybreak
 
     option = { #Faust forgive me.
         name = solarreworked.23.a
+        add_stability = 0.075
+        add_popularity = {
+            ideology = fascism
+            popularity = 0.03
+        }
     }
 }
 
@@ -64,6 +95,25 @@ country_event = { #A short report about how the military is potentially a danger
 
     option = { #Such a shame he couldn't share all he knew.
         name = solarreworked.24.a
+        add_manpower = -50000
+        add_war_support = -0.1
+        if = {
+            limit = { has_idea = SOL_military_mutiny }
+            swap_ideas = {
+                remove_idea = SOL_military_mutiny
+                add_idea = SOL_military_mutiny_2
+            }
+        }
+        else_if = {
+            limit = { has_idea = SOL_military_mutiny_2 }
+            swap_ideas = {
+                remove_idea = SOL_military_mutiny_2
+                add_idea = SOL_military_mutiny_3
+            }
+        }
+        else = {
+            remove_ideas = SOL_military_mutiny_3
+        }
     }
 }
 
@@ -77,6 +127,28 @@ country_event = { #A radio personality in Manehattan or Baltimare is going on th
 
     option = { #I'm innocent, I swear!
         name = solarreworked.25.a
+        add_popularity = {
+            ideology = fascism
+            popularity = 0.02
+        }
+        add_political_power = -50
+        if = {
+            limit = { has_idea = SOL_societial_stubbornness }
+            swap_ideas = {
+                remove_idea = SOL_societial_stubbornness
+                add_idea = SOL_societial_stubbornness_2
+            }
+        }
+        else_if = {
+            limit = { has_idea = SOL_societial_stubbornness_2 }
+            swap_ideas = {
+                remove_idea = SOL_societial_stubbornness_2
+                add_idea = SOL_societial_stubbornness_3
+            }
+        }
+        else = {
+            remove_ideas = SOL_societial_stubbornness_3
+        }
     }
 }
 
@@ -90,6 +162,9 @@ country_event = { #Daybreaker enters the training room again, after dealing with
 
     option = { #Do not be slothful!
         name = solarreworked.26.a
+        EQS_prince_blueblood = {
+            add_skill_level = 1
+        }
     }
 }
 
@@ -113,9 +188,12 @@ country_event = { #Raven is summoned into the throne room of Daybreaker, who is 
             }
             EQS_raven_inkwell = {
                 add_advisor_role = {
-                    slot = political_advisor
-                    traits = { imperial_magister }
                     activate = yes
+                    advisor = {
+                        slot = political_advisor
+                        idea_token = raven
+                        traits = { imperial_magister }
+                    }
                 }
             }
         }
@@ -125,8 +203,11 @@ country_event = { #Raven is summoned into the throne room of Daybreaker, who is 
             }
             EQS_raven_inkwell = {
                 add_advisor_role = {
-                    slot = political_advisor
-                    traits = { imperial_magister }
+                    advisor = {
+                        slot = political_advisor
+                        idea_token = raven
+                        traits = { imperial_magister }
+                    }
                 }
             }
         }
@@ -143,6 +224,40 @@ country_event = { #Daybreaker rests on her throne while a pony or two is dragged
 
     option = { #Next pony!
         name = solarreworked.28.a
+        if = {
+            limit = { has_idea = SOL_military_mutiny }
+            swap_ideas = {
+                remove_idea = SOL_military_mutiny
+                add_idea = SOL_military_mutiny_2
+            }
+        }
+        else_if = {
+            limit = { has_idea = SOL_military_mutiny_2 }
+            swap_ideas = {
+                remove_idea = SOL_military_mutiny_2
+                add_idea = SOL_military_mutiny_3
+            }
+        }
+        else = {
+            remove_ideas = SOL_military_mutiny_3
+        }
+        if = {
+            limit = { has_idea = SOL_military_mutiny }
+            swap_ideas = {
+                remove_idea = SOL_military_mutiny
+                add_idea = SOL_military_mutiny_2
+            }
+        }
+        else_if = {
+            limit = { has_idea = SOL_military_mutiny_2 }
+            swap_ideas = {
+                remove_idea = SOL_military_mutiny_2
+                add_idea = SOL_military_mutiny_3
+            }
+        }
+        else = {
+            remove_ideas = SOL_military_mutiny_3
+        }
     }
 }
 
@@ -156,6 +271,41 @@ country_event = { #A pony is taken before a bureaucrat or civil servant, who goe
 
     option = { #Ah, the wheels of government.
         name = solarreworked.29.a
+        add_ideas = SOL_codified_militarism
+        if = {
+            limit = { has_idea = SOL_military_mutiny }
+            swap_ideas = {
+                remove_idea = SOL_military_mutiny
+                add_idea = SOL_military_mutiny_2
+            }
+        }
+        else_if = {
+            limit = { has_idea = SOL_military_mutiny_2 }
+            swap_ideas = {
+                remove_idea = SOL_military_mutiny_2
+                add_idea = SOL_military_mutiny_3
+            }
+        }
+        else = {
+            remove_ideas = SOL_military_mutiny_3
+        }
+        if = {
+            limit = { has_idea = SOL_military_mutiny }
+            swap_ideas = {
+                remove_idea = SOL_military_mutiny
+                add_idea = SOL_military_mutiny_2
+            }
+        }
+        else_if = {
+            limit = { has_idea = SOL_military_mutiny_2 }
+            swap_ideas = {
+                remove_idea = SOL_military_mutiny_2
+                add_idea = SOL_military_mutiny_3
+            }
+        }
+        else = {
+            remove_ideas = SOL_military_mutiny_3
+        }
     }
 }
 
@@ -169,6 +319,7 @@ country_event = { #Blueblood enters Daybreaker's quarters, privately, and confus
 
     option = { #You've learned, nephew.
         name = solarreworked.30.a
+        EQS_prince_blueblood = { add_trait = { trait = imperial_hammer slot = political_advisor } }
     }
 }
 
@@ -182,6 +333,13 @@ country_event = { #Daybreaker enters her personal armory, and takes a moment to 
 
     option = { #They will follow or die.
         name = solarreworked.31.a
+        hidden_effect = {
+			EQS_princess_celestia = {
+				set_character_flag = SOL_daybreaker_boss
+			}
+		}
+		custom_effect_tooltip = SOL_daybreaker_promotion_tt
+		custom_effect_tooltip = new_daybreaker_stats_tp
     }
 }
 
@@ -189,28 +347,27 @@ country_event = { #A short event speaking of, since there are no other ponies qu
     id = solarreworked.32
     title = solarreworked.32.t
     desc = solarreworked.32.d
+    picture = GFX_event_palace_hall
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.32"}
 
     is_triggered_only = yes
 
     option = { #Sunrise Sparkle is the only possible choice.
         name = solarreworked.32.a
-        #Idea here
+        trigger = { has_country_flag = SOL_twilight_corrupted }
         add_ideas = SOL_sunrise_sparkle_regent
     }
     option = { #Dawnbreak Shimmer understands the Empress like a daughter her mother.
         name = solarreworked.32.b
-        #Idea here
+        trigger = { has_country_flag = SOL_sunset_corrupted }
         add_ideas = SOL_dawnbreak_shimmer_regent
     }
     option = { #Blueblood is distant kin. He has a right to lead.
         name = solarreworked.32.c
-        #Idea here
         add_ideas = SOL_blueblood_regent
     }
     option = { #Raven Inkwell knows the Empire inside and out. She would suit the role best.
         name = solarreworked.32.e
-        #Idea here
         add_ideas = SOL_raven_regent
     }
 }
@@ -226,8 +383,8 @@ country_event = { #Daybreaker holds a speech in Sanctum Solar, which has just be
     option = { #So this is how Harmony dies...
         name = solarreworked.33.a
         add_political_power = 100
-        add_stability = 0.05
-        add_war_support = 0.05
+        add_stability = 0.1
+        add_war_support = 0.1
 		effect_tooltip = {
 			every_enemy_country = {
 				add_ideas = SOL_enemy_debuff_idea
@@ -255,6 +412,9 @@ country_event = { #Daybreaker holds a speech in Sanctum Solar, which has just be
                     ROOT = { end_puppet = CRY }
                 }
                 leave_faction = yes
+                hidden_effect = {
+                    drop_cosmetic_tag = yes
+                }
             }
         }
         EQC = {
@@ -280,7 +440,7 @@ country_event = { #Daybreaker holds a speech in Sanctum Solar, which has just be
                     NOT = { has_war_together_with = ROOT }
                 }
                 if = {
-                    limit = { { is_subject_of = ROOT }
+                    limit = { is_subject_of = ROOT }
                     ROOT = { end_puppet = PCB }
                 }
                 leave_faction = yes
@@ -308,6 +468,22 @@ country_event = { #Daybreaker holds a speech in Sanctum Solar, which has just be
             name = "EQS_sanctum_solar"
         }
 		set_cosmetic_tag = EQS_SOL
+    }
+}
+
+country_event = { #Short event detailing that how with Daybreaker's ascension and unveiling, not as many ponies as thought sided with her; the military is in disarray, as some squads have simply gone dark, officers refuse direct orders, and conscription has cratered; while society is in chaos as some who welcome the change she represents eagerly serve, while others are protesting at how she was behind the repressive tactcs in current effect and how she needs to step down to let cooler heads prevail, which is leading to unrest and missed quotas
+    id = solarreworked.34
+    title = solarreworked.34.t
+    desc = solarreworked.34.d
+    picture = GFX_event_pony_soldiers_sunset
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.34"}
+
+    is_triggered_only = yes
+
+    option = { #Damn them all!
+        name = solarreworked.34.a
+        add_ideas = SOL_societial_stubbornness
+        add_ideas = SOL_military_mutiny
     }
 }
 
@@ -1906,6 +2082,98 @@ country_event = {
         set_country_flag = SOL_spike_broken
         EQS_twilight_sparkle = {
             add_trait = { trait = faithful_assistant }
+        }
+    }
+}
+
+country_event = {
+    id = solarreworked.219
+    title = solarreworked.219.t
+    desc = solarreworked.219.d
+    picture = GFX_event_tempest_fighting
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.219"}
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.219.a
+        hidden_effect = {
+            country_event = {
+                id = solarreworked.220
+                days = 15
+                random_days = 15
+            }
+        }
+    }
+}
+
+country_event = {
+    id = solarreworked.220
+    title = solarreworked.220.t
+    desc = solarreworked.220.d
+    picture = GFX_event_tempest_fighting
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.220"}
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.220.a
+        hidden_effect = {
+            country_event = {
+                id = solarreworked.221
+                days = 20
+                random_days = 20
+            }
+        }
+    }
+}
+
+country_event = {
+    id = solarreworked.221
+    title = solarreworked.221.t
+    desc = solarreworked.221.d
+    picture = GFX_event_tempest_fighting
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.221"}
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.221.a
+        custom_effect_tooltip = SOL_tempest_is_back_baybee_tt
+        set_country_flag = SOL_tempest_joined
+        hidden_effect = {
+            EQS_fizzlepop = {
+                set_character_name = SOL_tempest_shadow_name
+                set_portraits = {
+                    army = {
+                        large = "gfx/leaders/EQS/Tempest_Shadow_based.tga"
+                        small = "gfx/interface/ideas/advisors/EQS/EQS_tempest_shadow_based.tga"
+                    }
+                }
+            }
+            country_event = {
+                id = solarreworked.222
+                days = 90
+                random_days = 90
+            }
+        }
+    }
+}
+
+country_event = {
+    id = solarreworked.222
+    title = solarreworked.222.t
+    desc = solarreworked.222.d
+    picture = GFX_event_tempest_fighting
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.222"}
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.222.a
+        EQS_fizzlepop = {
+            add_attack = 1
+            gain_xp = 600
         }
     }
 }

@@ -76,4 +76,13 @@ leader_traits = {
 
         ai_will_do = { factor = 1}
     }
+
+    imperial_hammer = {
+        random = no
+        war_support_factor = 0.1
+        compliance_gain = -0.01
+        resistance_growth = -0.25
+
+        ai_will_do = { factor = 1 }
+    }
 }

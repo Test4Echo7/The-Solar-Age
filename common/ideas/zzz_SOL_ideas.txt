@@ -777,6 +777,13 @@ ideas = {
 			}
 		}
 		SOL_imperial_war_committee = {
+			available = {
+				OR = {
+					has_war_with = NLR
+					has_war_with = CHN
+					has_war_with = STG
+				}
+			}
 			modifier = {
 				industrial_capacity_factory = 0.1
 				industrial_capacity_dockyard = 0.1
@@ -794,6 +801,12 @@ ideas = {
 			}
 		}
 		SOL_sole_judge = {
+			available = {
+				OR = {
+					has_war_with = NLR
+					has_war_with = CHN
+				}
+			}
 			modifier = {
 				war_support_factor = 0.1
 				stability_factor = -0.1
