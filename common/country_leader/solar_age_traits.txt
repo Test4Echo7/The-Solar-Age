@@ -85,4 +85,29 @@ leader_traits = {
 
         ai_will_do = { factor = 1 }
     }
+
+    ###PCB###
+    cowled_governor = {
+        random = no
+        political_power_factor = -0.15
+        fascism_drift = 0.02
+        communism_drift = -0.01
+        stability_factor = 0.1
+        political_advisor_cost_factor = -0.2
+
+        ai_will_do = { factor = 1 }
+    }
+
+    miffed_inquisitor = {
+        random = no
+        political_power_gain = 0.1
+        stability_factor = -0.15
+        monthly_population = -0.25
+        fascism_drift = 0.04
+        communism_drift = -0.02
+        conscription = 0.015
+        army_org_factor = 0.03
+
+        ai_will_do = { factor = 1 }
+    }
 }

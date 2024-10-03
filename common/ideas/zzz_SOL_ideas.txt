@@ -1898,4 +1898,47 @@ ideas = {
 			equipment_bonus = { magical_equipment = { soft_attack = 0.075 hard_attack = 0.075 ap_attack = 0.15 reliability = -0.1 instant = yes } }
 		}
 	}
+	###Research buffs
+	hidden_ideas = {
+		SOL_streng_geheim_electronics = {
+			research_bonus = {
+				electronics = 0.1
+			}
+		}
+		SOL_streng_geheim_industry = {
+			research_bonus = {
+				industry = 0.05
+			}
+		}
+		SOL_streng_geheim_magic = {
+			research_bonus = {
+				magical_tech = 0.05
+			}
+		}
+		SOL_streng_geheim_magic_2 = {
+			research_bonus = {
+				magical_tech = 0.15
+			}
+		}
+		SOL_streng_geheim_magic_3 = {
+			research_bonus = {
+				magical_tech = 0.05
+			}
+		}
+		SOL_streng_geheim_race = {
+			research_bonus = {
+				race_tech = 0.1
+			}
+		}
+		SOL_streng_geheim_race_2 = {
+			research_bonus = {
+				race_tech = 0.175
+			}
+		}
+		SOL_streng_geheim_race_3 = {
+			research_bonus = {
+				race_tech = 0.075
+			}
+		}
+	}
 }

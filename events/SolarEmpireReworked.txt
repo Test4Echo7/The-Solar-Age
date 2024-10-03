@@ -972,6 +972,37 @@ country_event = {
     }
 }
 
+country_event = {
+    id = solarreworked.54
+    title = solarreworked.54.t
+    desc = solarreworked.54.d
+    picture = GFX_event_canterlot
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.54"}
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.54.a
+        add_power_balance_value = {
+            id = EQS_sanity_bop
+            value = -0.03
+            tooltip_side = EQS_woke
+        }
+        add_political_power = 50
+        add_stability = 0.03
+    }
+    option = {
+        name = solarreworked.54.b
+        add_power_balance_value = {
+            id = EQS_sanity_bop
+            value = 0.03
+            tooltip_side = EQS_npc
+        }
+        add_political_power = -50
+        add_war_support = -0.03
+    }
+}
+
 ###Internal affairs###
 country_event = { #Jet Set is completley surprised when a formation of Imperial ships comes to New Mareland, and hastily gets to the piers so that he can meet whoever the delegate is, who is Arcane Nova, and she and him have a tense confrontation before she states that she will be the one looking over him, to make sure that he is truly loyal.
     id = solarreworked.70
@@ -2178,6 +2209,168 @@ country_event = {
     }
 }
 
+###Puppet Interactions###
+###PCB###
+country_event = { #Short event speaking how the island nation of Puerto Caballo has gotten delusions of grandeur and slipped from the Harmony Pact, and that they will need to be brought back, since nopony can leave without the Empress's say-so
+    id = solarreworked.400
+    title = solarreworked.400.t
+    desc = solarreworked.400.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.400"}
+
+    is_triggered_only = yes
+
+    option = { #They would be fools to refuse me!
+        name = solarreworked.400.a
+        hidden_effect = {
+            EQS_red_tide = {
+                set_nationality = PCB #I don't want to deal with a PCB history file, so she gets recruited in EQS and sent to PCB here, to avoid the console whinging
+            }
+        }
+        PCB = {
+            country_event = solarreworked.401
+        }
+    }
+}
+
+country_event = { #The leader of PCB is offered a choice of either annhilation or submission by a communique by the Solar Empire, with the option to refuse again reiterated that they would be best to reconsider if they want to live
+    id = solarreworked.401
+    title = solarreworked.401.t
+    desc = solarreworked.401.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.401"}
+
+    is_triggered_only = yes
+
+    option = { #What can a tiny island like us do against them?
+        name = solarreworked.401.a
+        ai_chance = { factor = 70 }
+        set_cosmetic_tag = PCB_SOL
+        set_country_flag = is_solar_puppet
+        get_current_government_type = yes
+        EQS = {
+            country_event = solarreworked.402
+            set_autonomy = {
+                target = ROOT
+                autonomous_state = autonomy_satellite
+            }
+        }
+        restore_previous_government_type = yes
+    }
+    option = { #Don't they have bigger fish to fry? Ignore them.
+        name = solarreworked.401.b
+        ai_chance = { factor = 30 }
+        EQS = {
+            country_event = solarreworked.402
+        }
+    }
+}
+
+country_event = { #Word comes back to Daybreaker about what Puerto Caballo's response is, with some short message along with it, since they had to respond back; it is either dismissive or frightened, depending on what was chosen
+    id = solarreworked.402
+    title = solarreworked.402.t
+    desc = {
+        trigger = { PCB = { has_country_flag = is_solar_puppet } }
+        text = solarreworked.402.d.a
+    }
+    desc = {
+        trigger = { PCB = { NOT = { has_country_flag = is_solar_puppet } } }
+        text = solarreworked.402.d.b
+    }
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.402"}
+
+    is_triggered_only = yes
+
+    option = { #Excellent news! We'll deal with them shortly!
+        trigger = { PCB = { has_country_flag = is_solar_puppet } }
+        name = solarreworked.402.a
+    }
+    option = { #We weren't asking.
+        trigger = { PCB = { NOT = { has_country_flag = is_solar_puppet } } }
+        name = solarreworked.402.b
+        if = {
+            limit = {
+                PCB = { NOT = { has_country_flag = is_solar_puppet } }
+            }
+            create_wargoal = {
+                type = puppet_wargoal_focus
+                target = PCB
+            }
+        }
+    }
+}
+
+country_event = { #Ponse Cocktail is surprised in his home by his aide stating he has visitors, and they will not take no for an answer, as a number of ponies for his new advisory board, including one of the advisors from EQS, stating that they will ensure he doesn't get any further ideas of independence, and that they will make sure that he implements the Empress's will
+    id = solarreworked.403
+    title = solarreworked.403.t
+    desc = solarreworked.403.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.403"}
+
+    is_triggered_only = yes
+
+    option = { #Don't you think this is unnecessary?
+        name = solarreworked.403.a
+        random_country = {
+            limit = { has_character = PCB_ponse_cocktail }
+            set_politics = {
+                ruling_party = fascism
+                elections_allowed = no
+            }
+            #add_popularity = {
+            #    ideology = fascism
+            #    popularity = 0.03
+            #}
+            #add_stability = 0.03
+            #add_political_power = 50
+            set_party_name = { ideology = fascism long_name = EQC_SOL_fascism_party_long name = EQC_SOL_fascism_party }
+            PCB_ponse_cocktail = {
+                add_country_leader_role = {
+                    promote_leader = yes
+                    country_leader = {
+                        expire = "1965.1.1"
+                        ideology = nazism
+                        traits = { cowled_governor }
+                    }
+                }
+            }
+        }
+    }
+}
+
+country_event = { #Red Tide steps off her plane from the mainland and is instantly beset with the warm weather of Puerto Caballo, which instantly turns her off from being there, and when she meets those she will be commanding, she is overly grouchy and short-tempered with them, since she hates the weather already; everypony else seems to love it, which makes her hate it all the more
+    id = solarreworked.404
+    title = solarreworked.404.t
+    desc = solarreworked.404.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.404"}
+
+    is_triggered_only = yes
+
+    option = { #I'm going to just love it here...
+        name = solarreworked.404.a
+        random_country = {
+            limit = { has_character = EQS_red_tide }
+            set_party_name = { ideology = fascism long_name = EQS_solaris_cultus name = EQS_solaris_cultus }
+            set_politics = {
+                ruling_party = fascism
+                elections_allowed = no
+            }
+            EQS_red_tide = {
+                add_country_leader_role = {
+                    promote_leader = yes
+                    country_leader = {
+                        expire = "1965.1.1"
+                        ideology = falangism
+                        traits = { miffed_inquisitor }
+                    }
+                }
+            }
+        }
+    }
+}
+
 ###Utility!###
 country_event = {
     id = solarreworked.500
@@ -2298,13 +2491,24 @@ country_event = { #Event quickly stating that now that the war is over, with EQC
             if = {
                 limit = { is_subject_of = ROOT }
                 ROOT = { end_puppet = CRY }
+                if = {
+                    limit = { has_idea = equestrian_overlord }
+                    remove_ideas = equestrian_overlord
+                }
             }
             leave_faction = yes
+            hidden_effect = {
+                drop_cosmetic_tag = yes
+            }
         }
         EQC = {
             if = {
                 limit = { is_subject_of = ROOT }
                 ROOT = { end_puppet = EQC }
+                if = {
+                    limit = { has_idea = equestrian_overlord }
+                    remove_ideas = equestrian_overlord
+                }
             }
             leave_faction = yes
             hidden_effect = {
@@ -2315,6 +2519,10 @@ country_event = { #Event quickly stating that now that the war is over, with EQC
             if = {
                 limit = { is_subject_of = ROOT }
                 ROOT = { end_puppet = PCB }
+                if = {
+                    limit = { has_idea = equestrian_overlord }
+                    remove_ideas = equestrian_overlord
+                }
             }
             leave_faction = yes
         }

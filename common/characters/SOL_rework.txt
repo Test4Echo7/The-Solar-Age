@@ -227,6 +227,15 @@ characters = {
 			}
 		}
 	}
+	EQS_red_tide = {
+		name = EQS_red_tide
+		gender = female
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EQS/Red_Tide.tga"
+			}
+		}
+	}
 	GRI_daybreaker = {
 		name = EQS_SOL_daybreaker
 		gender = female

@@ -32,6 +32,7 @@
   EQS_Fidelis_Flamma:0 "Fidelis Flamma"
   EQS_gushing_pulse:0 "Gushing Pulse"
   EQS_wintergleam:0 "Wintergleam"
+  EQS_red_tide:0 "Red Tide"
 
   ###BoP###
   EQS_sanity_bop:0 "The Princess's Burden"
@@ -204,9 +205,9 @@
   SOL_imperial_science_4_tt:0 "Modify §YFlame of Science§! by\nResearch Speed: §G+5.00%§!\nElectronics Research Speed: §G+10%§!"
   SOL_imperial_science_5_tt:0 "Modify §YFlame of Science§! by\nResearch Speed: §G+5.00%§!\nRace Magic Speed: §G+10%§!"
   SOL_imperial_science_6_tt:0 "Modify §YFlame of Science§! by\nResearch Speed: §G+5.00%§!\nDaily Supremacy Support: §G+0.03§!\nParty Stability Factor: §G+5.00%§!"
-  SOL_imperial_science_7_tt:0 "Modify §YFlame of Science§! by\nResearch Speed: §G+3.00%§!\nLand Doctrine Cost: §G-5%§!\nNaval Doctrine Cost: §G-5%§!\nAir Doctrine Cost: §G-5%§!"
-  SOL_imperial_science_8_tt:0 "Modify §YFlame of Science§! by\nResearch Speed: §G+5.00%§!\nMagic Speed: §G+5.00%§!\nDaily Political Power Gain: §R-0.10§!"
-  SOL_imperial_science_9_tt:0 "Modify §YFlame of Science§! by\nResearch Speed: §G+2.00%§!\nRace Magic Research Speed: §G+7.5%§!\nDaily Political Power Gain: §R-0.15§!"
+  SOL_imperial_science_7_tt:0 "Modify §YFlame of Science§! by\nResearch Speed: §G+3.00%§!\nLand Doctrine Cost: §G-5.00%§!\nNaval Doctrine Cost: §G-5.00%§!\nAir Doctrine Cost: §G-5.00%§!"
+  SOL_imperial_science_8_tt:0 "Modify §YFlame of Science§! by\nResearch Speed: §G+2.00%§!\nMagic Speed: §G+5%§!\nDaily Political Power Gain: §R-0.10§!"
+  SOL_imperial_science_9_tt:0 "Modify §YFlame of Science§! by\nResearch Speed: §G+5.00%§!\nRace Magic Research Speed: §G+7.5%§!\nDaily Political Power Gain: §R-0.15§!"
   EQS_hidden_idea_stats_tt:0 "[getSOLHiddenBonuses]"
   SOL_flurry_old_enough_tt:0 "§YFlurry Heart§! is old enough to comprehend her §Obirthright§!."
   EQS_flurry_gets_smarter_tt:0 "§CFirestorm§! will become a more capable general."
@@ -250,6 +251,8 @@
   aussenseiter_regentin:0 "Foreign Regent"
   empresss_representative:0 "Empress's Representative"
   die_kaiserin_der_greifen:0 "Die Kaiserin der Greifen"
+  cowled_governor:0 "Cowed by Daybreaker"
+  miffed_inquisitor:0 "Irritated Governess"
 
   ###Advisor Traits###
   eea_chancellor:0 "Head of the EEA"
@@ -502,6 +505,10 @@
   solarreworked.53.a:0 "Twilight is obviously in the right."
   solarreworked.53.b:0 "Neighsay does have a point."
   solarreworked.53.c:0 "GET OUT OF HERE, BOTH OF YOU!"
+  solarreworked.54.t:0 "Meeting in Progress"
+  solarreworked.54.d:0 ""And we currently have—" Raven Inkwell flipped through a few pages rapidly on her clipboard, the pages ruffling and crackling. Outside, the din of a thousand conversations of ponies walking about the streets of [3.GetCapitalVictoryPointName] carried in through the open windows and balcony of Celestia's private quarters. "The visit to the Acornage Memorial in fifteen minutes. You're scheduled to speak there for thirty, but if you can cut it down to twenty, we'll have plenty of time to—"\n\nCutting herself off, Raven wiped at her brow, given the rather warm weather conditions of mid-summer, and she sighed as she looked at Celestia. Celestia was restlessly wriggling one of her hindlegs and otherwise listening to the talk down below the castle. Her face was lined with stress, and she hadn't even touched her tea. Or, more impressively, her cake.\n\n"Princess?" inquired Raven as she sipped on her own glass. When Celestia didn't respond, Raven snorted. "Princess!" she repeated, her outburst managing to make Celestia jump in surprise. Raven arched a brow. "I said we have to leave for your speech, and then if we—"\n\n"I-I heard you, Raven," Celestia interjected, her voice low and huffy. Raven merely rolled her eyes. Eyeing her cake, Celestia poked at it and queried, "And what is after presenting a charity check to Countess Coloratura for the displaced fillies orphanage?" Raven could see that she bit her tongue and tensed her jaw. Although Celestia may have been able to hide things from nobles who saw her infrequently, there wasn't a detail that her secretary could miss. Especially when it meant more paperwork.\n\n"What is it?" she asked. She stowed the pencil she had into the nook of her clipboard.\n\nAs Raven adjusted her glasses, Celestia mulled a response. Poking her tongue against her cheek, she finally stuttered, "I-I am merely seeing all those—" She shuddered "—All the ponies I'll have to apologize to. That funeral—"\n\n"It was one soldier. You—"\n\n"No! It was a PONY! One of MY ponies!" Jumping to her hooves, Celestia paced to and fro, and Raven started to automatically stroke off planned events with a sigh. Celestia snarled, "She should have never been on the front lines! My ponies are not safe when—"\n\n"Princess, if I may, I've taken the liberty to cancel all your appearances today, and I will order a second cake from Sugar Cube Corner." Getting up, Raven added as she reached the door. "I'll make a statement that you are indisposed because of an emergency war council session."\n\nTaking a deep breath, Celestia relaxed slightly and muttered, "Thank you, Raven.""
+  solarreworked.54.a:0 "However, I must keep up appearances."
+  solarreworked.54.b:0 "You know me too well."
   solarreworked.70.t:0 "Visit from the Setting Sun"
   solarreworked.70.d:0 "When the battlecruiser HMS Golden Dawn and its entourage of screening ships arrived in the harbor of Sunset, the mood was instantly soured, although it was not because of a lack of fanfare. In a matter of fifteen minutes, Jet Set was alerted to the arrival of somepony from [EQS.GetNameDef] and hurried to the pier. His heartreat skyrocketed when he saw a few of his soldiers already there in parade formation.\n\nFor the last couple of minutes, he stood patiently, feeling the sea breeze blowing through his mane and spraying droplets of saltwater onto his glasses. However, he didn't touch them. Not when the unannounced visitor could emerge any moment. He swallowed nervously.\n\nJust as he was about to give into the irritation, there was clanking of gangplanks, and soon one was lowered from the side of the battlecruiser. He stiffened at the sight of a uniformed mare, flanked on either side by guards. For a brief second, she surveyed the pier, then stalked down the gangplank. She disembarked and marched directly in his direction.\n\n"Governor General Jet Set, how kind of you to finally greet me," she spat as she reached him. In an instant, her piercing blue eyes had completely sized him up. Somehow, he could sense that she saw right through him. If there was one thing he noticed about her, was that she was YOUNG. Why would [EQS.GetLeader] send somepony who was so green?\n\nAfter gathering his voice, he merely responded with, "[EQS.Leader] didn't inform me that I should be expecting an—" He coughed "—an honored guest." At that, she lightly tittered.\n\n"How quaint," she retorted with a snort. Momentarily a snarky twinkle appeared in her eyes, and she brushed back her braided mane behind her topcoat. "Why would she announce that you should expect her official representative? You could easily hide damning details."\n\nJet's breath hitched. "I assure you, there is nothing that—"\n\nWaving a hoof dismissively, she strode past him. "Save your platitudes! I'm not an idiot. We shall see if there is a reason to trust your word." She paused. Turning back, she added, "But do be sure that it's a challenge. Certainly more than that pin of the old regime." She nodded at a symbol of the two sisters on his chest. "It's far from subtle regarding where your loyalties lie.""
   solarreworked.70.a:0 "I would never!"

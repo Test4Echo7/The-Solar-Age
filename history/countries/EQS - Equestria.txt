@@ -623,6 +623,7 @@ recruit_character = EQS_Burning_Plage
 recruit_character = EQS_Steel_Sickle
 recruit_character = EQS_gushing_pulse
 recruit_character = EQS_wintergleam
+recruit_character = EQS_red_tide
 
 create_faction = "All_ponies_front"
 add_to_faction = CRY

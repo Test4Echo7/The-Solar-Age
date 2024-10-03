@@ -11781,18 +11781,20 @@ shared_focus = { #Imperial Collegiate of Blessed Unicorns
 	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_blessed_unicorn_academy"
-		#Change to remove any level
-		country_event = equestria.4
-		effect_tooltip = {
-			add_ideas = unicorn_academy
-		}
+		#country_event = equestria.4
+		#effect_tooltip = {
+		#	add_ideas = unicorn_academy
+		#}
 		add_to_variable = { research_speed_var = 0.05 }
 		add_to_variable = { magical_tech_factor_var = 5 }
 		custom_effect_tooltip = SOL_imperial_science_1_tt
-		add_dynamic_modifier = {
-			modifier = SOL_imperial_science
+		hidden_effect = {
+			add_dynamic_modifier = {
+				modifier = SOL_imperial_science
+			}
+			add_ideas = SOL_streng_geheim_magic
 		}
-		EQS_remove_science_ideas = yes
+		EQS_remove_science_ideas = yes #Removes any of EQS's science ideas
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH }
 }
@@ -11971,10 +11973,12 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_magical_primacy"
-		#Adjust spirit
 		add_to_variable = { research_speed_var = 0.02 }
 		add_to_variable = { industrial_tech_factor_var = 5 }
 		custom_effect_tooltip = SOL_imperial_science_2_tt
+		hidden_effect = {
+			add_ideas = SOL_streng_geheim_industry
+		}
 		add_tech_bonus = {
 			name = industrial_bonus
 			bonus = 1.5
@@ -12003,6 +12007,12 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_magical_primacy"
 		custom_effect_tooltip = SOL_imperial_science_3_tt
+		hidden_effect = {
+			swap_ideas = {
+				remove_idea = SOL_streng_geheim_magic
+				add_idea = SOL_streng_geheim_magic_2
+			}
+		}
 		add_to_variable = { magical_tech_factor_var = 10 }
 		add_tech_bonus = {
 			name = race_tech_bonus
@@ -12011,7 +12021,6 @@ shared_focus = {
 			category = unicorn_tech
 			category = pegasi_tech
 		}
-		#Adjust spirit
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH }
 }
@@ -12031,13 +12040,14 @@ shared_focus = {
 		add_tech_bonus = {
 			name = industrial_bonus
 			uses = 1
-			bonus = 0.75
+			bonus = 0.66
 			category = industry
 		}
 		add_tech_bonus = {
 			name = concentration_bonus
 			uses = 1
 			bonus = 1
+			ahead_reduction = 0.5
 			category = concentrated_industry_category
 			category = dispersed_industry_category
 		}
@@ -12054,11 +12064,6 @@ shared_focus = {
 	cost = 6
 	prerequisite = { focus = SOL_imperial_unions }
 	available = { eqs_not_has_civil_war = yes }
-	bypass = {
-		all_owned_state = {
-			infrastructure > 4
-		}
-	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_imperial_hoofbooks"
@@ -12206,11 +12211,13 @@ shared_focus = {
 		custom_effect_tooltip = SOL_imperial_science_4_tt
 		add_to_variable = { research_speed_var = 0.05 }
 		add_to_variable = { electronics_tech_factor_var = 10 }
+		hidden_effect = {
+			add_ideas = SOL_streng_geheim_electronics
+		}
 		if = {
 			limit = { amount_research_slots < 5 }
 			add_research_slot = 1
 		}
-		#Idea here
 	}
 	ai_will_do = { factor = 50 }
 }
@@ -12244,8 +12251,8 @@ shared_focus = {
 				id = 6118
 				name = EQS_sol_victoria
 			}
+			add_ideas = SOL_streng_geheim_race
 		}
-		#Idea here
 	}
 	ai_will_do = { factor = 80 }
 }
@@ -12329,7 +12336,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_grants_for_tithes"
-		#Unlock decision here
+		custom_effect_tooltip = SOL_more_industry_tt
 		set_country_flag = SOL_new_mining_decisions
 	}
 	ai_will_do = { factor = 50 }
@@ -12349,10 +12356,12 @@ shared_focus = {
 	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_magical_training"
-		#Idea here
-		set_technology = {
-			SOL_magic_laden_explosives_tech = 1
-			popup = no
+		add_ideas = SOL_magic_laden_explosives
+		hidden_effect = {
+			set_technology = {
+				SOL_magic_laden_explosives_tech = 1
+				popup = no
+			}
 		}
 		add_tech_bonus = {
 			name = magical_tech_bonus
@@ -12382,10 +12391,12 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_pony_mystics"
-		#Idea here
-		set_technology = {
-			SOL_self_improvement_programs_tech = 1
-			popup = no
+		add_ideas = SOL_self_improvement_programs
+		hidden_effect = {
+			set_technology = {
+				SOL_self_improvement_programs_tech = 1
+				popup = no
+			}
 		}
 		add_tech_bonus = {
 			name = race_tech_bonus
@@ -12579,7 +12590,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus luna_nova_academy"
 		###Event of the administrator of Sol Invicta getting a visit from Daybreaker directly, and him being nervous, but showing her around, before finally being promised more funding, to ensure the Empire stays up to date, which floors him
-		country_event = equestria.5
+		#country_event = equestria.5
 		add_to_variable = { research_speed_var = 0.03 }
 		add_to_variable = { doctrine_cost_factor_var = -0.05 }
 		if = {
@@ -12587,9 +12598,9 @@ shared_focus = {
 			add_research_slot = 1
 		}
 		custom_effect_tooltip = SOL_imperial_science_7_tt
-		effect_tooltip = {
-			swap_ideas = { remove_idea = unicorn_academy add_idea = unicorn_academy1 }
-		}
+		#effect_tooltip = {
+		#	swap_ideas = { remove_idea = unicorn_academy add_idea = unicorn_academy1 }
+		#}
 	}
 	ai_will_do = { factor = 80 }
 }
@@ -12652,13 +12663,19 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_strengthen_EEA_authority"
 		custom_effect_tooltip = SOL_imperial_science_8_tt
-		add_to_variable = { research_speed_var = 0.05 }
+		add_to_variable = { research_speed_var = 0.02 }
 		add_to_variable = { magical_tech_factor_var = 5 }
 		add_to_variable = { political_power_gain_var = -0.1 }
-		swap_ideas = {
-			add_idea = unicorn_academy3
-			remove_idea = unicorn_academy2
+		hidden_effect = {
+			swap_ideas = {
+				remove_idea = SOL_streng_geheim_magic_2
+				add_idea = SOL_streng_geheim_magic_3
+			}
 		}
+		#swap_ideas = {
+		#	add_idea = unicorn_academy3
+		#	remove_idea = unicorn_academy2
+		#}
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH }
 }
@@ -12685,13 +12702,25 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_ease_the_rules_of_EEA"
 		###Daybreaker meets with Neighsay after he protests about all the new rules she's implemented, and how they will ruin standards, and she threatens him with jail or the like if he does not implement them, and uses a different pony as leverage, perhaps his wife, or somepony who will replace him and make it worse, which gets him to break
 		add_to_variable = { research_speed_var = 0.05 }
-		add_to_variable = { race_tech_factor_var = 5 }
+		add_to_variable = { race_tech_factor_var = 7.5 }
 		add_to_variable = { political_power_gain_var = -0.15 }
 		custom_effect_tooltip = SOL_imperial_science_9_tt
-		swap_ideas = {
-			add_idea = unicorn_academy4
-			remove_idea = unicorn_academy2
+		hidden_effect = {
+			if = {
+				limit = { has_idea = SOL_streng_geheim_race }
+				swap_ideas = {
+					remove_idea = SOL_streng_geheim_race
+					add_idea = SOL_streng_geheim_race_2
+				}
+			}
+			else = {
+				add_ideas = SOL_streng_geheim_race_3
+			}
 		}
+		#swap_ideas = {
+		#	add_idea = unicorn_academy4
+		#	remove_idea = unicorn_academy2
+		#}
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
 }
