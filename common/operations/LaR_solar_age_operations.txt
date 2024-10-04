@@ -1,0 +1,72 @@
+SOL_capture_luna_operation = {
+    icon = GFX_operation_test_icon
+    map_icon = GFX_historical_heavy_water_small
+    name = SOL_capture_luna_operation_name
+    desc = SOL_capture_luna_operation_desc
+    days = 120
+
+    allowed = {
+        original_tag = EQS
+    }
+    available = {
+        has_country_flag = SOL_luna_hunt_lar
+    }
+    visible = {
+        #has_country_flag = SOL_luna_hunt_lar
+        always = no #Until there's a solution
+    }
+
+    operatives = 3
+
+    network_strength = 0
+
+    equipment = {
+        infantry_equipment = 1500
+        support_equipment = 75
+    }
+
+    outcome_modifiers = { operation_outcome }
+    cost_modifiers = { operation_cost }
+    risk_modifiers = { operation_risk }
+
+    outcome_potential = {
+        custom_effect_tooltip = SOL_luna_exfiltrated_tt
+        #country_event = solarreworked.600 #Will be an event of Daybreaker having fun at the expense of Luna's imprisonment
+    }
+    risk_chance = 0.3
+    experience = 10
+    outcome_execute = {
+        FROM = {
+            random_country = {
+                limit = { has_character = EQS_princess_luna }
+                EQS_princess_luna = {
+                    remove_unit_leader_role = yes
+                }
+            }
+        }
+        #country_event = solarreworked.600 #Will be an event of Daybreaker having fun at the expense of Luna's imprisonment
+    }
+
+    phases = {
+        SOL_replace_servants = { base = 100 }
+    }
+    phases = {
+        SOL_bring_in_commandos = { base = 100 }
+    }
+    phases = {
+        SOL_exfiltrate_luna = { base = 100 }
+    }
+
+    operation_target = {
+        targets = {
+            CRY
+        }
+    }
+
+    #outcome_extra_chance = 25
+
+    #outcome_extra_execute = { #Cancel operation?
+    #
+    #}
+
+}

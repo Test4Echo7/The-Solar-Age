@@ -1,0 +1,73 @@
+###Capture Luna###
+SOL_replace_servants = {
+    name = SOL_replace_servants_name
+    desc = SOL_replace_servants_desc
+
+    outcome = SOL_replace_servants_outcome
+
+    #map_icon = GFX_SOL_replace_servants_map
+
+    outcome_extra = SOL_replace_servants_outcome_extra #Our plants missed the window to replace the servants headed to Luna's residence/the servants never arrived, or some such
+
+    requirements = {
+        has_country_flag = SOL_luna_hunt_lar
+    }
+
+}
+
+SOL_bring_in_commandos = {
+    name = SOL_bring_in_commandos_name
+    desc = SOL_bring_in_commandos_desc
+
+    outcome = SOL_bring_in_commandos_outcome
+
+    #map_icon = GFX_SOL_bring_in_commandos_map
+
+    outcome_extra = SOL_bring_in_commandos_outcome_extra #The commando team was intercepted on the way to the residence and our plants had to flee before their deception was uncovered, or some such
+
+    requirements = {
+        has_country_flag = SOL_luna_hunt_lar
+    }
+
+}
+
+SOL_exfiltrate_luna = {
+    name = SOL_exfiltrate_luna_name
+    desc = SOL_exfiltrate_luna_desc
+
+    outcome = SOL_exfiltrate_luna_outcome
+
+    #map_icon = GFX_SOL_exfiltrate_luna_map
+
+    outcome_extra = SOL_exfiltrate_luna_outcome_extra #The exfiltration team was detected or Luna awoke too soon from her drugged state and fought them off, or something to that effect
+
+    requirements = {
+        has_country_flag = SOL_luna_hunt_lar
+    }
+}
+
+###Assassinate Chrysalis###
+#EQS_train_infiltrate_across_border = {
+#
+#}
+#
+#EQS_meet_thoraxian_contacts_in_vesalipolis = { #If event tied to it, the contacts are changelings that replaced the true contacts; easy to do when you don't know what they should look like
+#
+#}
+#
+#EQS_infiltrate_queens_castle = {
+#
+#}
+#
+####Capture M6###
+#SOL_fabricate_friendship_problem = { #The M6 still have their Harmonist duties, after all
+#
+#}
+#
+#SOL_ambush_elements = {
+#
+#}
+#
+#SOL_exfiltrate_elements = {
+#
+#}
