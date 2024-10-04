@@ -1125,6 +1125,12 @@ ideas = {
 				army_leader_start_defense_level = 1
 			}
 		}
+		SOL_griffonian_refuge = {
+			modifier = {
+				monthly_population = 0.25
+				political_power_factor = 0.05
+			}
+		}
 		###God-Empress Spirits###
 		SOL_solaris_adoratio = {
 			modifier = {
@@ -1607,6 +1613,14 @@ ideas = {
 		}
 		SOL_unions_of_the_empress = {
 			modifier = {
+				consumer_goods_factor = 0.15
+				production_factory_start_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
+			}
+		}
+		SOL_committee_design = {
+			modifier = {
 				production_speed_buildings_factor = 0.05
 				industrial_capacity_dockyard = 0.1
 				industrial_capacity_factory = 0.1
@@ -1726,10 +1740,10 @@ ideas = {
 			}
 		}
 		SOL_expansive_carriers = {
-			equipment_bonus = { carrier = { armor_value = 0.1 carrier_size = 0.05 instant = yes } }
+			equipment_bonus = { carrier = { armor_value = 0.1 carrier_size = 5 instant = yes } }
 		}
 		SOL_unreachable_lengths = {
-			equipment_bonus = { carrier = { naval_range = 0.15 maximum_speed = 0.05 carrier_size = -0.15 instant = yes } }
+			equipment_bonus = { carrier = { naval_range = 0.15 maximum_speed = 0.05 carrier_size = -10 instant = yes } }
 		}
 		SOL_sacrificial_light_ships = {
 			equipment_bonus = { destroyer = { maximum_speed = 0.1 torpedo_attack = 0.05 max_strength = -0.15 instant = yes } }
@@ -1821,7 +1835,7 @@ ideas = {
 		SOL_efficient_command_structure = {
 			modifier = {
 				command_power_gain_mult = 0.05
-				max_planning_factor = 0.05
+				max_command_power = 15
 			}
 		}
 		SOL_relegated_embarrassments = {

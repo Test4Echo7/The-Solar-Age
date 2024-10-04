@@ -6505,6 +6505,15 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_expel_night_witch"
 		###Event of Daybreaker preparing a plan with her chief of intelligence to find and capture Luna, who is still running a campaign of resistance against the Solar Empire, and she is incredibly frustrated with how she has not been able to yet, and is adamant they must find her
+		if = {
+			limit = { has_dlc = "La Resistance" }
+			set_country_flag = SOL_luna_hunt_lar
+			custom_effect_tooltip = SOL_hunt_for_luna_lar_tt
+		}
+		else = {
+			set_country_flag = SOL_luna_hunt
+			custom_effect_tooltip = SOL_hunt_for_luna_tt
+		}
 		#Unlock operation if LR, decision if not
 		#Will have another event at end of decision/op of Daybreaker getting into combat with Luna to capture her
 	}
@@ -6608,18 +6617,21 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus industry_crystal_emp"
-		53 = { add_extra_state_shared_building_slots = 3
-			add_building_construction = {
-				type = industrial_complex
-				level = 3
-				instant_build = yes
+		CRY = {
+			add_ideas = SOL_CRY_industrial_investments
+			53 = { add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
 			}
-		}
-		144 = { add_extra_state_shared_building_slots = 3
-			add_building_construction = {
-				type = arms_factory
-				level = 3
-				instant_build = yes
+			144 = { add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -6738,6 +6750,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_appoint_economic_advisors"
 		#Advisors and idea here
+		add_ideas = SOL_micromanaging_middle_management
 		###Maybe event of a number of ponies from the Solar Empire coming to replace their Crystal counterparts, after they are taken away for anti-Order propaganda or the like
 	}
 	ai_will_do = { factor = 70 }
@@ -6756,6 +6769,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_retire_old_guard"
 		#Generals and idea here
+		add_ideas = SOL_dictated_directions
 		###Event of Shining Armor being brought before a tribunal, and him making a defense of himself, and although they can't kill him for fear of angering the entire Crystal Empire, they do sack him of his position
 	}
 	ai_will_do = { factor = 80 }
@@ -6813,8 +6827,8 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_cadance_university"
-		#Idea is -15% RS, +0.1pp
 		CRY = {
+			add_ideas = SOL_solarist_education
 			if = {
 				limit = { amount_research_slots < 5 }
 				add_research_slot = 1
@@ -6853,7 +6867,12 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_imperial_mind"
-		#Idea here
+		CRY = {
+			swap_ideas = {
+				remove_idea = SOL_solarist_education
+				add_idea = SOL_solarist_minds
+			}
+		}
 	}
 	ai_will_do = { factor = 80 }
 }
@@ -6870,8 +6889,11 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_imperial_guardian"
-		#Idea here
+		CRY = {
+			add_ideas = SOL_aegis_guard
+		}
 	}
+	ai_will_do = { factor = 80 }
 }
 
 shared_focus = {
@@ -7469,6 +7491,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_change_management"
 		###Event of PCB getting a letter from SOL about how they have one chance to return to their faction as a dominion if they submit then and there, since they could easily be wiped out if Daybreaker wished, which they have an option to accept or reject
+		country_event = solarreworked.400
 	}
 	ai_will_do = { factor = 50 }
 }
@@ -7509,6 +7532,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_communist_examples"
 		###Event of some soldiers from SOL coming into PCB to effectively purge every single communist supporter that is in the capital city as well as elsewhere in the country, and it leads to hundreds of thousands dead to eliminate that threat forever
+		country_event = solarreworked.404
 	}
 	ai_will_do = { factor = 80 }
 }
@@ -7549,6 +7573,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_coercion_campaign"
 		###Event of propaganda about how the communist dream is nothing more than suffering, exaggerating what happened in Stalliongrad, and further making it appear like the Castro expy will only kill them all, but if they serve the Empress they will be prosperous and safe
+		country_event = solarreworked.403
 	}
 	ai_will_do = { factor = 60 }
 }
@@ -7690,6 +7715,7 @@ shared_focus = {
 			has_completed_focus = SOL_god_empress
 		}
 		EQC = {
+			exists = yes
 			has_war = no
 			OR = {
 				is_subject = no
@@ -7699,12 +7725,7 @@ shared_focus = {
 	}
 	allow_branch = { is_EQS_SOL = yes }
 	bypass = {
-		OR = {
-			NOT = {
-				country_exists = EQC
-			}
-			has_war_with = EQC
-		}
+		has_war_with = EQC
 	}
 
 	completion_reward = {
@@ -7725,15 +7746,13 @@ shared_focus = {
 	available = {
 		eqs_not_has_civil_war = yes
 		EQC = {
+			exists = yes
 			has_war = no
 			is_subject_of = ROOT
 		}
 	}
 	bypass = {
-		OR = {
-			NOT = { country_exists = EQC }
-			has_war_with = EQC
-		}
+		has_war_with = EQC
 	}
 
 	completion_reward = {
@@ -7755,14 +7774,9 @@ shared_focus = {
 	available = {
 		eqs_not_has_civil_war = yes
 		EQC = {
+			exists = yes
 			has_war = no
 			is_subject_of = ROOT
-		}
-	}
-	bypass = {
-		OR = {
-			NOT = { country_exists = EQC }
-			has_war_with = EQC
 		}
 	}
 
@@ -7792,14 +7806,9 @@ shared_focus = {
 	available = {
 		eqs_not_has_civil_war = yes
 		EQC = {
+			exists = yes
 			has_war = no
 			is_subject_of = ROOT
-		}
-	}
-	bypass = {
-		OR = {
-			NOT = { country_exists = EQC }
-			has_war_with = EQC
 		}
 	}
 
@@ -7908,7 +7917,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_homegrown_plan"
-		#Idea here
+		EQC = { add_ideas = SOL_marelandian_deal }
 	}
 	ai_will_do = { factor = 50 }
 }
@@ -7928,7 +7937,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_debt_council"
-		#Idea here
+		EQC = { add_ideas = SOL_managed_debt_repayments }
 	}
 	ai_will_do = { factor = 80 }
 }
@@ -7951,6 +7960,15 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_flush_dregs"
 		#Decision or op here, with an event of Astrum Solus (who is a spy either way) meeting with the leader of the EQC (possibly just make it Arcane Nova either way) to begin planning the op to take out the M6, who have been her main mission for a year or more, which makes her incredibly passionate to finally get them
+		if = {
+			limit = { has_dlc = "La Resistance" }
+			set_country_flag = SOL_hunt_for_mane_six_lar
+			custom_effect_tooltip = SOL_hunt_for_mane_six_lar_tt
+		}
+		else = {
+			set_country_flag = SOL_hunt_for_mane_six
+			custom_effect_tooltip = SOL_hunt_for_mane_six_tt
+		}
 	}
 	ai_will_do = { factor = 100 }
 }
@@ -7972,8 +7990,28 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_griffon_workers"
 		EQC = {
-			three_random_industrial_complex = yes
-			three_random_industrial_complex = yes
+			random_state = {
+				limit = {
+					is_owned_and_controlled_by = EQC
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_state = {
+				limit = {
+					is_owned_and_controlled_by = EQC
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
 		}
 	}
 	ai_will_do = { factor = 40 }
@@ -8036,7 +8074,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_church_of_day"
-		#Idea here
+		add_ideas = SOL_mandatory_worship
 		###Maybe event of Arcane hosting the first service of Daybreaker, whether or not she's the God-Empress, since Arcane reveres Daybreaker as a goddess regardless, and she has the fire and brimstone of an aggressive preacher promising death for thsoe who rebel against her and also for the surrounding nations of EQC
 	}
 	ai_will_do = {
@@ -8060,7 +8098,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_personnel_support"
-		#Idea here
+		add_ideas = SOL_united_in_purpose
 		###Maybe event of Arcane working with some ponies from Canterlot regarding some passing of laws in EQC, even though she doesn't see the need for them, since it only makes her job harder, but it helps make the Empress's easier, so she begrudgingly agrees to it
 	}
 	ai_will_do = { factor = 60 }
@@ -8097,13 +8135,16 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_expand_sunset_university"
-		if = {
-			limit = {
-				EQC = { amount_research_slots < 5}
+		EQC = {
+			if = {
+				limit = {
+					amount_research_slots < 5
+				}
+				add_research_slot = 1
 			}
-			EQC = { add_research_slot = 1 }
+			add_ideas = SOL_EQC_international_student_transfers
 		}
-		#Idea here
+		add_ideas = SOL_international_student_transfers
 	}
 	ai_will_do = { factor = 90 }
 }
@@ -8138,7 +8179,31 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_homeland_investments"
-		#Effect here
+		EQC = {
+			random_state = {
+				limit = {
+					is_owned_and_controlled_by = EQC
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_state = {
+				limit = {
+					is_owned_and_controlled_by = EQC
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			#MIO/concern here
+		}
 	}
 	ai_will_do = { factor = 30 }
 }
@@ -8173,7 +8238,8 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_cadet_militarium"
-		#Idea here
+		add_ideas = SOL_correct_warfare
+		###High command here
 	}
 }
 
@@ -8202,7 +8268,7 @@ shared_focus = {
 		354 = {
 			add_manpower = 22895
 		}
-		#Idea here
+		add_ideas = SOL_griffonian_refuge
 		###Maybe event of some colonists from SOL arriving to then force some of the griffon minorities so they can use their land instead, forcing them to be destitute
 	}
 	ai_will_do = { factor = 40 }
@@ -8630,7 +8696,10 @@ shared_focus = {
 				}
 			}
 		}
-		#Idea here
+		add_timed_idea = {
+			idea = SOL_bug_spray
+			days = 250
+		}
 	}
 	ai_will_do = { factor = 150 }
 	search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
@@ -8656,7 +8725,10 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_north_naval_games"
-		#Idea here
+		add_timed_idea = {
+			idea = SOL_icy_naval_practice
+			days = 500
+		}
 	}
 	ai_will_do = {
 		base = 50
@@ -8694,7 +8766,11 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_operation_wasserkoenigin"
-		#Idea here
+		add_timed_idea = {
+			idea = SOL_beachheading_practice
+			days = 365
+		}
+		navy_experience = 25
 		###Maybe event of the operation going underway, to practice naval invasions, and the ponies involved having some kind of miscommunication, which leads to one of the battleships inflicting serious friendly fire, which some are more concerned about than others
 	}
 	ai_will_do = {
@@ -8732,7 +8808,11 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_variegated_survival_training"
-		#Idea here
+		army_experience = 25
+		add_timed_idea = {
+			idea = SOL_wholistic_survival_training
+			days = 180
+		}
 	}
 	ai_will_do = {
 		base = 70
@@ -8768,7 +8848,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_canterlot_fort_line"
-		add_war_support = -0.1
+		add_war_support = -0.075
 		3 = {
 			add_building_construction = {
 				type = bunker
@@ -8860,7 +8940,10 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_combined_arms_exercises"
-		#Idea here
+		add_timed_idea = {
+			idea = SOL_coordinated_arms
+			days = 500
+		}
 		###Maybe event of a group of soldiers following in a combined arms exercise for how to deal with breaching a changeling city, and they go a bit overboard in the amount of destruction they do
 	}
 	ai_will_do = {
@@ -8884,7 +8967,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_defense_in_order"
-		#Idea here
+		add_ideas = SOL_planning_in_order
 	}
 	ai_will_do = { factor = 75 }
 }
@@ -8901,7 +8984,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_tactics_of_destruction"
-		#Idea here
+		add_ideas = SOL_professional_guerillas
 	}
 	ai_will_do = { factor = 90 }
 }
@@ -9014,7 +9097,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_rearrange_command"
-		#Idea here
+		add_ideas = SOL_efficient_command_structure
 	}
 	ai_will_do = { factor = 100 }
 }
@@ -9277,7 +9360,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_generational_leaps"
-		#Idea here
+		add_ideas = SOL_iterative_planning
 	}
 	ai_will_do = { factor = 50 }
 }
@@ -9387,7 +9470,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_holy_napalm_applications"
-		#Idea here
+		add_ideas = SOL_napalm_shells
 		###Maybe event of some of the first napalm shell strike tests, and how they are incredibly effective, and also completely and utterly mentally scarring for the operators as they see their handiwork, which has left swaths of a battlefield completely aflame, and later reports indicate how burnt the soldiers were that were killed, which horrifies them
 	}
 	ai_will_do = { factor = 60 }
@@ -9409,7 +9492,7 @@ shared_focus = {
 	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_war_games"
-		#Idea here
+		add_ideas = SOL_practice_combat
 		add_doctrine_cost_reduction = {
 			name = cat_superior_firepower
 			cost_reduction = 0.5
@@ -9539,7 +9622,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_only_statistics"
-		#Idea here
+		add_ideas = SOL_numbers_on_page
 		###Maybe event of reports of how many have been killed in some of the latest conflicts, but how there are so many more which can be taken from their families to happily serve the God-Empress and die keeping her safe and the hope of Order and Harmony alive; the ponies aren't even acknowledged as sentient beings, merely tools
 	}
 	ai_will_do = { factor = 75 }
@@ -9560,7 +9643,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_melting_shroud"
-		#Idea here
+		add_ideas = SOL_mobile_flame_deliverers
 		###Maybe event of some soldiers going along with a flame tank division through an urban area, and being ambushed but soon dispatching of the ambushers with the help of the tanks, after the killed operator is taken out to then be driven by somepony else and melt all those that oppose them
 	}
 	ai_will_do = { factor = 75 }
@@ -9579,7 +9662,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_reduced_standards"
 		###Event of a soldier on the battlefield after his gun jammed, and he manages to find another gun that is on a dead comrade, but that breaks after firing once, and then soon finding another, and another, each with their own problems, which may lead to a few dead foes, but still leaves him defenseless in the end
-		#Idea here
+		add_ideas = SOL_no_standards
 	}
 	ai_will_do = { factor = 50 }
 }
@@ -9656,6 +9739,7 @@ shared_focus = {
 			SOL_evoker_legions_tech = 1
 			popup = no
 		}
+		add_ideas = SOL_evoker_legions
 	}
 	ai_will_do = { factor = 75 }
 }
@@ -9781,7 +9865,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_rapid_reloads"
-		#Idea here
+		add_ideas = SOL_artillery_safety_removals
 		###Possibly event of some of the dangers of how much the artillery corps is pushed to inflict more damage upon the enemy, in a specific series of field tests or the like, which ends up injuring a couple of the crew, although the end results of the impacts of the weapons is undeniably impressive
 	}
 	ai_will_do = { factor = 50 }
@@ -9902,7 +9986,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_mighty_hoofs"
-		#Idea here
+		add_ideas = SOL_armored_hoofs
 		###Possibly event of following a tank commander as he prepares to storm a city, without a care for the civilians or buildings he'll destroy, as they have sealed their fate already by working with the enemy
 	}
 	ai_will_do = { factor = 60 }
@@ -10067,7 +10151,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_durable_frames"
 		add_tech_bonus = {
 			name = cas_bonus
-			bonus = 1
+			bonus = 1.25
 			uses = 1
 			category = cas_bomber
 		}
@@ -10142,7 +10226,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_streamline_expenses"
-		#Idea here
+		add_ideas = SOL_streamlined_bombers
 	}
 	ai_will_do = { factor = 50 }
 }
@@ -10284,7 +10368,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_bat_vision"
-		#Idea here
+		add_ideas = SOL_thestral_vision_scopes
 	}
 	ai_will_do = { factor = 40 }
 }
@@ -10374,7 +10458,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_flying_castles"
-		#Idea here
+		add_ideas = SOL_durable_bombers
 		add_doctrine_cost_reduction = {
 			name = strategic_destruction_bonus
 			uses = 1
@@ -10753,7 +10837,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_skyborn"
-		#Idea here
+		add_ideas = SOL_ponies_to_sky
 	}
 }
 
@@ -11091,7 +11175,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_modern_sea"
-		#Idea here
+		add_ideas = SOL_coordinated_carrier_classes
 	}
 	ai_will_do = { factor = 50 }
 }
@@ -11146,7 +11230,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_floating_cities"
-		#Idea here
+		add_ideas = SOL_expansive_carriers
 		add_tech_bonus = {
 			name = cv_bonus
 			uses = 1
@@ -11169,7 +11253,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_long_range_strikers"
-		#Idea here
+		add_ideas = SOL_unreachable_lengths
 		add_tech_bonus = {
 			name = cv_bonus
 			uses = 1
@@ -11192,7 +11276,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_roach_guards"
-		#Idea here
+		add_ideas = SOL_sacrificial_light_ships
 		add_doctrine_cost_reduction = {
 			name = naval_doctrine_bonus
 			uses = 1
@@ -11221,7 +11305,7 @@ shared_focus = {
 			cost_reduction = 0.5
 			category = cat_fleet_in_being
 		}
-		#Idea here
+		add_ideas = SOL_magic_bonded_plating
 	}
 	ai_will_do = { factor = 80 }
 }
@@ -11242,6 +11326,12 @@ shared_focus = {
 			uses = 1
 			bonus = 1
 			category = cv_tech
+		}
+		add_doctrine_cost_reduction = {
+			name = base_strike_bonus
+			uses = 1
+			cost_reduction = 0.5
+			category = cat_base_strike
 		}
 	}
 	ai_will_do = { factor = 50 }
@@ -11290,7 +11380,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_practical_reductions"
-		#Idea here
+		add_ideas = SOL_cut_ship_hull_heavy_corners
 	}
 	ai_will_do = { factor = 30 }
 }
@@ -11330,7 +11420,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_adapt_tide"
-		#Idea here
+		add_ideas = SOL_combined_naval_arms
 	}
 	ai_will_do = { factor = 50 }
 }
@@ -11346,7 +11436,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_steady_going"
-		#Idea here
+		add_ideas = SOL_status_quo_superiority
 	}
 	ai_will_do = { factor = 50 }
 }
@@ -11442,7 +11532,7 @@ shared_focus = {
 			uses = 1
 			category = industry
 		}
-		#Idea here
+		add_ideas = SOL_dedicated_ministry_of_work
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 
@@ -11552,6 +11642,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_trains_across_empire"
 		#Effect here
+		add_ideas = SOL_mto
 		build_railway = {
 			level = 2
 			start_province = 950
@@ -11659,6 +11750,10 @@ shared_focus = {
 				type = arms_factory
 				level = 1
 				instant_build = yes
+			}
+			add_resource = {
+				type = aluminium
+				amount = 6
 			}
 		}
 		###Change fighters as necessary
@@ -11812,7 +11907,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_imperial_unions"
-		#Idea here
+		add_ideas = SOL_unions_of_the_empress
 		###Maybe event of workers of the Empire organizing in a way that is acceptable to Daybreaker, which means they really can't do that much with what they have, but they will work to do what they can; also maybe just being a busybody union worker to make trouble with factory owners
 	}
 	ai_will_do = { factor = 50 }
@@ -11831,7 +11926,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_imperial_production_committee"
-		#Idea here
+		add_ideas = SOL_committee_design
 		###Maybe an inspector from the committee having a long chat with a bunch of workers, and using one as an example (of being fired, despite being a hard worker), of what happens when ponies fail meeting the Empress's quotas
 	}
 	ai_will_do = { factor = 80 }
@@ -11857,6 +11952,10 @@ shared_focus = {
 				level = 1
 				instant_build = yes
 			}
+			add_resource = {
+				type = steel
+				amount = 4
+			}
 		}
 		add_tech_bonus = {
 			name = armor_bonus
@@ -11870,7 +11969,7 @@ shared_focus = {
 			uses = 1
 			category = cat_anti_tank
 		}
-		#Idea here
+		add_ideas = SOL_timberwolf_research
 		custom_effect_tooltip = EQS_Timberwolf_tooltip
 		#Adjust as necessary
 		if = {
@@ -12319,7 +12418,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_magical_crypto_machines"
-		#Idea here
+		add_ideas = SOL_refined_metal_bodies
 	}
 	ai_will_do = { factor = 80 }
 }
@@ -12432,7 +12531,7 @@ shared_focus = {
 	y = 2
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_annex_star_energy"
-		#Idea here
+		add_ideas = SOL_star_energy_nationalized
 		106 = {
 			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
@@ -12484,7 +12583,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_new_radar"
-		#Idea here
+		add_ideas = SOL_crystal_powered_radar
 		add_tech_bonus = {
 			name = secret_bonus
 			uses = 2
@@ -12514,7 +12613,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_bounties_of_earth"
-		#Idea here
+		add_ideas = SOL_food_above_all
 		###Maybe event of a farmer trying to get some of his last fertilizer or seed for the season, which he is finding troublesome because of imperial bureaucracy and also a distrust that he might be secretly a rebel
 	}
 	ai_will_do = { factor = 50 }
@@ -12533,7 +12632,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_exploit_bosom"
-		#Idea here
+		add_ideas = SOL_unhindered_mining
 		###Maybe event of an earth pony farmer trying desperately to fight off or otherwise get rid of a bunch of miners or prosperctors, since he's had his land for generations, but he is informed that he is going to give it up anyway, since they bought it through the Empress's grants directly
 	}
 	ai_will_do = { factor = 80 }
@@ -12637,7 +12736,15 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_early_matrix_machines"
-		#Idea here
+		if = {
+			limit = {
+				has_dlc = "La Resistance"
+			}
+			add_ideas = SOL_early_crystal_cpus_lar
+		}
+		else = {
+			add_ideas = SOL_early_crystal_cpus
+		}
 		###Maybe an event of a scientist interacting with an early matrix computer, and basically having a HAL-9000 conversation with it, since it managed to gain some sentience
 	}
 }
