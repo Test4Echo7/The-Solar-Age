@@ -5636,7 +5636,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_gold_of_sands
-	x = -2
+	x = -1
 	y = 1
 	relative_position_id = SOL_decadence_shattered
 
@@ -12884,3 +12884,34 @@ shared_focus = {
 #	}
 #
 #}
+
+###Spies###
+shared_focus = {
+	id = SOL_new_imperial_chapter
+	x = 0
+	y = 1
+	relative_position_id = EQS_keep_down_low
+
+	cost = 8
+	prerequisite = {
+		focus = EQS_harmony_abroad
+		focus = EQS_keep_down_low
+	}
+	available = {
+		if = {
+			limit = { has_dlc = "La Resistance" }
+			has_intelligence_agency = yes
+		}
+		OR = {
+			has_completed_focus = SOL_Imperial_Investigative_Service
+			has_completed_focus = SOL_solaris_speculatores
+		}
+	}
+	allow_branch = { is_EQS_SOL = yes }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_new_imperial_chapter"
+		###Event discussing the merits of each possible choice, now that the IIS/Solaris Speculatores has been established in SMILE's place; potentially it can also have a bit of the showcasing of each's personality, in a short meeting with Daybreaker
+	}
+	ai_will_do = { factor = 90 }
+}
