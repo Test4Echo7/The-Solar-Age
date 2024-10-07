@@ -1,4 +1,20 @@
 EQS_debug_category = {
+    EQS_test_swap_advisor_trait = {
+        allowed = {
+            tag = EQS
+        }
+        complete_effect = {
+            EQS_astrum_solus = {
+                add_trait = { trait = director_of_imperial_intelligence_astrum_lar slot = political_advisor }
+            }
+            EQS_absconditus_lumen = {
+                add_trait = { trait = director_of_imperial_intelligence_lar slot = political_advisor }
+            }
+            EQS_sweetie_drops = {
+                add_trait = { trait = director_of_smile_defunct_lar slot = political_advisor }
+            }
+        }
+    }
     EQS_start_SOL = {
         allowed = {
             tag = EQS

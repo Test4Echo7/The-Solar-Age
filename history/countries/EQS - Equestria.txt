@@ -624,6 +624,8 @@ recruit_character = EQS_Steel_Sickle
 recruit_character = EQS_gushing_pulse
 recruit_character = EQS_wintergleam
 recruit_character = EQS_red_tide
+recruit_character = EQS_astrum_solus
+recruit_character = EQS_absconditus_lumen
 
 create_faction = "All_ponies_front"
 add_to_faction = CRY

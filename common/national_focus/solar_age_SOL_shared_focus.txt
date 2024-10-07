@@ -707,9 +707,9 @@ shared_focus = {
         is_subject = no
         has_DB_ruler = yes
         OR = {
-			has_idea = SOL_societal_stubnornness
-			has_idea = SOL_societal_stubnornness_2
-			has_idea = SOL_societal_stubnornness_3
+			has_idea = SOL_societal_stubbornness
+			has_idea = SOL_societal_stubbornness_2
+			has_idea = SOL_societal_stubbornness_3
         }
     }
 
@@ -6482,8 +6482,37 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_POLITICAL }
 }
 
+#shared_focus = {
+#	id = SOL_expel_night_witch
+#	x = 1
+#	y = 1
+#	relative_position_id = Crystal_Fair
+#
+#	cost = 5
+#	prerequisite = { focus = Crystal_Fair }
+#	allow_branch = { is_EQS_SOL = yes }
+#	available = {
+#		is_subject = no
+#		has_DB_ruler = yes
+#		OR = {
+#			has_completed_focus = SOL_Imperial_Investigative_Service
+#			has_completed_focus = SOL_solaris_speculatores
+#		}
+#		NOT = { has_global_flag = NLR_spawned }
+#		CRY = { has_character = EQS_princess_luna }
+#	}
+#
+#	completion_reward = {
+#		log = "[GetDateText]: [Root.GetName]: Focus SOL_expel_night_witch"
+#
+#	}
+#	ai_will_do = {
+#		factor = 150
+#	}
+#}
+
 shared_focus = {
-	id = SOL_expel_night_witch
+	id = SOL_destroy_night_guard
 	x = 1
 	y = 1
 	relative_position_id = Crystal_Fair
@@ -6498,28 +6527,13 @@ shared_focus = {
 			has_completed_focus = SOL_Imperial_Investigative_Service
 			has_completed_focus = SOL_solaris_speculatores
 		}
-		NOT = { has_global_flag = NLR_spawned }
-		CRY = { has_character = EQS_princess_luna }
 	}
 
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_expel_night_witch"
-		###Event of Daybreaker preparing a plan with her chief of intelligence to find and capture Luna, who is still running a campaign of resistance against the Solar Empire, and she is incredibly frustrated with how she has not been able to yet, and is adamant they must find her
-		if = {
-			limit = { has_dlc = "La Resistance" }
-			set_country_flag = SOL_luna_hunt_lar
-			custom_effect_tooltip = SOL_hunt_for_luna_lar_tt
-		}
-		else = {
-			set_country_flag = SOL_luna_hunt
-			custom_effect_tooltip = SOL_hunt_for_luna_tt
-		}
-		#Unlock operation if LR, decision if not
-		#Will have another event at end of decision/op of Daybreaker getting into combat with Luna to capture her
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_destroy_night_guard"
+		###Event of a number of Solarist elite units going in on where the Night Guard still has some level of influence and doing what they can to assassinate leaders
 	}
-	ai_will_do = {
-		factor = 150
-	}
+	ai_will_do = { factor = 50 }
 }
 
 shared_focus = {
@@ -7942,8 +7956,30 @@ shared_focus = {
 	ai_will_do = { factor = 80 }
 }
 
+#shared_focus = {
+#	id = SOL_flush_dregs
+#	x = 1
+#	y = 1
+#	relative_position_id = SOL_lost_colony
+#
+#	cost = 5
+#	prerequisite = { focus = SOL_lost_colony }
+#	available = {
+#		EQC = {
+#			has_country_flag = SOL_mane_six_fled
+#			all_cores_owned_by_ROOT_or_subject = yes
+#		}
+#	}
+#
+#	completion_reward = {
+#		log = "[GetDateText]: [Root.GetName]: Focus SOL_flush_dregs"
+#
+#	}
+#	ai_will_do = { factor = 100 }
+#}
+
 shared_focus = {
-	id = SOL_flush_dregs
+	id = SOL_fund_sunset_plays
 	x = 1
 	y = 1
 	relative_position_id = SOL_lost_colony
@@ -7952,25 +7988,15 @@ shared_focus = {
 	prerequisite = { focus = SOL_lost_colony }
 	available = {
 		EQC = {
-			has_country_flag = SOL_mane_six_fled
-			all_cores_owned_by_ROOT_or_subject = yes
+			is_subject_of = ROOT
 		}
 	}
 
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_flush_dregs"
-		#Decision or op here, with an event of Astrum Solus (who is a spy either way) meeting with the leader of the EQC (possibly just make it Arcane Nova either way) to begin planning the op to take out the M6, who have been her main mission for a year or more, which makes her incredibly passionate to finally get them
-		if = {
-			limit = { has_dlc = "La Resistance" }
-			set_country_flag = SOL_hunt_for_mane_six_lar
-			custom_effect_tooltip = SOL_hunt_for_mane_six_lar_tt
-		}
-		else = {
-			set_country_flag = SOL_hunt_for_mane_six
-			custom_effect_tooltip = SOL_hunt_for_mane_six_tt
-		}
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_fund_sunset_plays"
+		#Idea here
+		###Maybe event for one ofthe patriotic plays, and how they are being used to get ponies to agree to Daybreaker's rule
 	}
-	ai_will_do = { factor = 100 }
 }
 
 shared_focus = {
@@ -7983,6 +8009,7 @@ shared_focus = {
 	prerequisite = { focus = SOL_debt_council }
 	available = {
 		EQC = {
+			is_subject_of = ROOT
 			all_cores_owned_by_ROOT_or_subject = yes
 		}
 	}
@@ -8993,7 +9020,7 @@ shared_focus = {
 shared_focus = {
 	id = SOL_modernize_relic
 	icon = GFX_focus_generic_little_entente
-	x = 51
+	x = 58
 	y = -1
 
 	cost = 3
@@ -12914,4 +12941,417 @@ shared_focus = {
 		###Event discussing the merits of each possible choice, now that the IIS/Solaris Speculatores has been established in SMILE's place; potentially it can also have a bit of the showcasing of each's personality, in a short meeting with Daybreaker
 	}
 	ai_will_do = { factor = 90 }
+}
+
+shared_focus = {
+	id = SOL_threats_without
+	x = -3
+	y = 1
+	relative_position_id = SOL_new_imperial_chapter
+
+	cost = 6
+	prerequisite = { focus = SOL_new_imperial_chapter }
+	mutually_exclusive = { focus = SOL_threats_within }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_threats_without"
+		if = {
+			limit = { has_dlc = "La Resistance" }
+			if = {
+				limit = { NOT = { has_dynamic_modifier = { modifier = SOL_imperial_intelligence_lar } } }
+				add_dynamic_modifier = { modifier = SOL_imperial_intelligence_lar }
+			}
+			add_to_variable = { agency_upgrade_sol_var = -0.05 }
+			add_to_variable = { own_operative_detection_sol_var = -0.05 }
+		}
+		else = {
+			if = {
+				limit = { NOT = { has_dynamic_modifier = { modifier = SOL_imperial_intelligence } } }
+				add_dynamic_modifier = { modifier = SOL_imperial_intelligence }
+			}
+			add_to_variable = { decryption_sol_var = 0.25 }
+			add_to_variable = { foreign_subversive_activities_sol_var = 0.1 }
+		}
+	}
+	ai_will_do = {
+		factor = 50
+		modifier = {
+			has_completed_focus = SOL_Imperial_Investigative_Service
+			factor = 3
+		}
+	}
+}
+
+shared_focus = {
+	id = SOL_threats_within
+	x = 3
+	y = 1
+	relative_position_id = SOL_new_imperial_chapter
+
+	cost = 6
+	prerequisite = { focus = SOL_new_imperial_chapter }
+	mutually_exclusive = { focus = SOL_threats_without }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_threats_within"
+		if = {
+			limit = { has_dlc = "La Resistance" }
+			if = {
+				limit = { NOT = { has_dynamic_modifier = { modifier = SOL_imperial_intelligence_lar } } }
+				add_dynamic_modifier = { modifier = SOL_imperial_intelligence_lar }
+			}
+			add_to_variable = { agency_upgrade_sol_var = -0.05 }
+			add_to_variable = { enemy_operative_detection_sol_var = 0.05 }
+		}
+		else = {
+			if = {
+				limit = { NOT = { has_dynamic_modifier = { modifier = SOL_imperial_intelligence } } }
+				add_dynamic_modifier = { modifier = SOL_imperial_intelligence }
+			}
+			add_to_variable = { encryption_sol_var = 0.25 }
+			add_to_variable = { drift_defence_factor_var = 0.15 }
+		}
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			has_completed_focus = SOL_empress_protector
+			factor = 0.3
+		}
+	}
+}
+
+shared_focus = {
+	id = SOL_demoralization_campaigns
+	x = 1
+	y = 1
+	relative_position_id = SOL_threats_without
+
+	cost = 5
+	prerequisite = { focus = SOL_threats_without }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_demoralization_campaigns"
+		###Event of a presentation of what the material for demoralization of enemies will be, with extreme and liberal comparisons about how they cannot hope to defeat Daybreaker, as she is the inevitable empress of ponykind, the sun itself, and she will not be stopped
+	}
+	ai_will_do = { factor = 40 }
+}
+
+shared_focus = {
+	id = SOL_funding_safety
+	x = 0
+	y = 2
+	relative_position_id = SOL_new_imperial_chapter
+
+	cost = 7
+	prerequisite = { focus = SOL_new_imperial_chapter }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_funding_safety"
+		if = {
+			limit = { has_dlc = "La Resistance" }
+			if = {
+				limit = { NOT = { has_dynamic_modifier = { modifier = SOL_imperial_intelligence_lar } } }
+				add_dynamic_modifier = { modifier = SOL_imperial_intelligence_lar }
+			}
+			add_to_variable = { agency_upgrade_sol_var = -0.1 }
+			add_to_variable = { own_operative_detection_sol_var = -0.02 }
+			add_to_variable = { enemy_operative_detection_sol_var = 0.03 }
+		}
+		else = {
+			add_tech_bonus = {
+				name = electronics_bonus
+				uses = 2
+				bonus = 1
+				category = electronics
+			}
+		}
+	}
+	ai_will_do = { factor = 60 }
+}
+
+shared_focus = {
+	id = SOL_subtle_propaganda
+	x = -1
+	y = 1
+	relative_position_id = SOL_threats_within
+
+	cost = 5
+	prerequisite = { focus = SOL_threats_within }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_subtle_propaganda"
+		###Event of one of the propaganda pieces that is used for patriotic effect within the Solar Empire, claiming how they are the last light of Harmony, they must all do their part, etc.; possibly make the message somewhat unique, depending on path
+	}
+	ai_will_do = { factor = 40 }
+}
+
+shared_focus = {
+	id = SOL_active_counter_wings
+	x = -1
+	y = 2
+	relative_position_id = SOL_threats_without
+
+	cost = 6
+	prerequisite = { focus = SOL_threats_without }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_active_counter_wings"
+		if = {
+			limit = { has_dlc = "La Resistance" }
+			if = {
+				limit = { NOT = { has_dynamic_modifier = { modifier = SOL_imperial_intelligence_lar } } }
+				add_dynamic_modifier = { modifier = SOL_imperial_intelligence_lar }
+			}
+			add_to_variable = { operation_cost_sol_var = -0.10 }
+			add_to_variable = { operation_risk_sol_var = -0.03 }
+		}
+		else = {
+			if = {
+				limit = { NOT = { has_dynamic_modifier = { modifier = SOL_imperial_intelligence } } }
+				add_dynamic_modifier = { modifier = SOL_imperial_intelligence }
+			}
+			add_to_variable = { decryption_sol_var = 0.25 }
+			add_to_variable = { foreign_subversive_activities_sol_var = 0.15 }
+		}
+		###Maybe an event of some agents going in on a known "terror" group that is spreading anti-Solarist/Order propaganda and also "planning" an attack against Daybreaker, and taking them out
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_double_encryption
+	x = -2
+	y = 1
+	relative_position_id = SOL_funding_safety
+
+	cost = 5
+	prerequisite = { focus = SOL_funding_safety }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_double_encryption"
+		if = {
+			limit = { has_dlc = "La Resistance" }
+			if = {
+				limit = { NOT = { has_dynamic_modifier = { modifier = SOL_imperial_intelligence_lar } } }
+				add_dynamic_modifier = { modifier = SOL_imperial_intelligence_lar }
+			}
+			add_to_variable = { crypto_strength_var = 0.75 }
+		}
+		else = {
+			if = {
+				limit = { NOT = { has_dynamic_modifier = { modifier = SOL_imperial_intelligence } } }
+				add_dynamic_modifier = { modifier = SOL_imperial_intelligence }
+			}
+			add_to_variable = { encryption_sol_var = 0.5 }
+		}
+	}
+	ai_will_do = { factor = 55 }
+}
+
+shared_focus = {
+	id = SOL_spy_nation
+	x = 2
+	y = 1
+	relative_position_id = SOL_funding_safety
+
+	cost = 5
+	prerequisite = { focus = SOL_funding_safety }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_spy_nation"
+		if = {
+			limit = { has_dlc = "La Resistance" }
+			if = {
+				limit = { NOT = { has_dynamic_modifier = { modifier = SOL_imperial_intelligence_lar } } }
+				add_dynamic_modifier = { modifier = SOL_imperial_intelligence_lar }
+			}
+			add_to_variable = { operative_slot_var = 1}
+			add_to_variable = { new_operative_slot_bonus = 1 }
+		}
+		else = {
+			if = {
+				limit = { NOT = { has_dynamic_modifier = { modifier = SOL_imperial_intelligence } } }
+				add_dynamic_modifier = { modifier = SOL_imperial_intelligence }
+			}
+			add_to_variable = { decryption_sol_var = 0.5 }
+		}
+		###Maybe an event of ponies going through the process of becoming an agent for the Solar Empire, and how it is excrutiating, with Astrum being the one who leads it
+	}
+	ai_will_do = { factor = 70 }
+}
+
+shared_focus = {
+	id = SOL_pre_crime_arrests
+	x = 1
+	y = 2
+	relative_position_id = SOL_threats_within
+
+	cost = 6
+	prerequisite = { focus = SOL_threats_within }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_pre_crime_arrests"
+		add_to_variable = { resistance_damage_to_garrison_var = -0.15 }
+		add_to_variable = { resistance_activity_var = -0.05 }
+		if = {
+			limit = { has_dlc = "La Resistance" }
+			add_to_variable = { crypto_strength_var = 0.25 }
+		}
+		else = {
+			add_to_variable = { encryption_sol_var = 0.25 }
+		}
+		###Perhaps an event of some agents coming to arrest a pony who has, on the surface, been nothing but a perfect follower of Daybreaker, but they state that they have calculated through some of their previous activities and life that they could end up a threat to the Empress, and they are going to be held until they can prove their innocence, which is going to be unlikely
+	}
+	ai_will_do = { factor = 50 }
+}
+
+shared_focus = {
+	id = SOL_return_elements_home
+	x = 1
+	y = 1
+	relative_position_id = SOL_double_encryption
+
+	cost = 5
+	prerequisite = {
+		focus = SOL_double_encryption
+		focus = SOL_spy_nation
+	}
+	available = {
+		NOT = { has_country_flag = SOL_captured_element_bearers }
+		HIP = {
+			exists = yes
+			NOT = { is_subject_of = ROOT }
+			has_country_flag = SOL_hosting_M6
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_return_elements_home"
+		#Decision or op here, with an event of Astrum Solus (who is a spy either way) meeting with the leader of the EQC (possibly just make it Arcane Nova either way) to begin planning the op to take out the M6, who have been her main mission for a year or more, which makes her incredibly passionate to finally get them
+		if = {
+			limit = { has_dlc = "La Resistance" }
+			set_country_flag = SOL_hunt_for_mane_six_lar
+			custom_effect_tooltip = SOL_hunt_for_mane_six_lar_tt
+		}
+		else = {
+			set_country_flag = SOL_hunt_for_mane_six
+			custom_effect_tooltip = SOL_hunt_for_mane_six_tt
+		}
+	}
+	ai_will_do = { factor = 120 }
+}
+
+shared_focus = {
+	id = SOL_remove_evidence
+	x = -1
+	y = 1
+	relative_position_id = SOL_spy_nation
+
+	cost = 5
+	prerequisite = {
+		focus = SOL_double_encryption
+		focus = SOL_spy_nation
+	}
+	available = {
+		HIP = {
+			exists = yes
+			NOT = { is_subject_of = ROOT }
+			has_character = EQS_princess_luna
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_remove_evidence"
+		###Event of Daybreaker preparing a plan with her chief of intelligence to find and capture Luna, who is still running a campaign of resistance against the Solar Empire, and she is incredibly frustrated with how she has not been able to yet, and is adamant they must find her
+		if = {
+			limit = { has_dlc = "La Resistance" }
+			set_country_flag = SOL_luna_hunt_lar
+			custom_effect_tooltip = SOL_hunt_for_luna_lar_tt
+		}
+		else = {
+			set_country_flag = SOL_luna_hunt
+			custom_effect_tooltip = SOL_hunt_for_luna_tt
+		}
+		#Unlock operation if LR, decision if not
+		#Will have another event at end of decision/op of Daybreaker getting into combat with Luna to capture her
+	}
+	ai_will_do = { factor = 150 }
+}
+
+shared_focus = {
+	id = SOL_dragons_fire
+	x = -1
+	y = 2
+	relative_position_id = SOL_double_encryption
+
+	cost = 5
+	prerequisite = { focus = SOL_double_encryption }
+	available = {
+		KIR = {
+			exists = yes
+			NOT = { is_subject_of = ROOT }
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_dragons_fire"
+		#Unlock operation
+	}
+	ai_will_do = { factor = 70 }
+}
+
+shared_focus = {
+	id = SOL_darkest_depths
+	x = 0
+	y = 3
+	relative_position_id = SOL_funding_safety
+
+	cost = 5
+	prerequisite = {
+		focus = SOL_double_encryption
+		focus = SOL_spy_nation
+	}
+	available = {
+		OR = {
+			country_exists = DED
+			HLR = {
+				exists = yes
+				owns_state = 415
+			}
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_darkest_depths"
+		#Operation here
+	}
+	ai_will_do = { factor = 100 }
+}
+
+shared_focus = {
+	id = SOL_steal_storms_thunder
+	x = 1
+	y = 2
+	relative_position_id = SOL_spy_nation
+
+	cost = 5
+	prerequisite = { focus = SOL_spy_nation }
+	available = {
+		982 = {
+			OR = {
+				is_owned_by = STM
+				is_owned_by = GYZ
+				is_owned_by = SLC
+				is_owned_by = THU
+			}
+			OWNER = { has_war = no }
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_steal_storms_thunder"
+		#Operation here
+	}
+	ai_will_do = { factor = 70 }
 }

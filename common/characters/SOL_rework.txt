@@ -236,6 +236,136 @@ characters = {
 			}
 		}
 	}
+	EQS_astrum_solus = {
+		instance = {
+			allowed = { has_dlc = "La Resistance" }
+			name = EQS_astrum_solus
+			gender = female
+			portraits = {
+				civilian = {
+					small = "gfx/interface/ideas/advisors/EQS/EQS_astrum_solus.tga"
+				}
+			}
+			advisor = {
+				allowed = { original_tag = EQS }
+				slot = political_advisor
+				idea_token = astrum_solus
+				desc = is_that_an_FH_reference_desc
+				cost = 200
+				available = {
+					is_EQS_SOL = yes
+					NOT = { has_idea = absconditus_lumen }
+					NOT = { has_idea = sweetie_drops }
+					OR = {
+						has_completed_focus = SOL_Imperial_Investigative_Service
+						has_completed_focus = SOL_solaris_speculatores
+					}
+				}
+				visible = {
+					OR = {
+						has_completed_focus = SOL_Imperial_Investigative_Service
+						has_completed_focus = SOL_solaris_speculatores
+					}
+				}
+				traits = { master_of_disguise_lar }
+			}
+		}
+		instance = {
+			allowed = { NOT = { has_dlc = "La Resistance" } }
+			name = EQS_astrum_solus
+			gender = female
+			portraits = {
+				civilian = {
+					small = "gfx/interface/ideas/advisors/EQS/EQS_astrum_solus.tga"
+				}
+			}
+			advisor = {
+				allowed = { original_tag = EQS }
+				slot = political_advisor
+				idea_token = astrum_solus
+				desc = is_that_an_FH_reference_desc
+				cost = 200
+				available = {
+					is_EQS_SOL = yes
+					NOT = { has_idea = absconditus_lumen }
+					NOT = { has_idea = sweetie_drops }
+					OR = {
+						has_completed_focus = SOL_Imperial_Investigative_Service
+						has_completed_focus = SOL_solaris_speculatores
+					}
+				}
+				visible = {
+					OR = {
+						has_completed_focus = SOL_Imperial_Investigative_Service
+						has_completed_focus = SOL_solaris_speculatores
+					}
+				}
+				traits = { master_of_disguise }
+			}
+		}
+	}
+	EQS_absconditus_lumen = {
+		instance = {
+			allowed = { has_dlc = "La Resistance" }
+			name = EQS_absconditus_lumen
+			portraits = {
+
+			}
+			advisor = {
+				allowed = { original_tag = EQS }
+				slot = political_advisor
+				idea_token = absconditus_lumen
+				desc = edgy_spy_horse_desc
+				cost = 200
+				available = {
+					is_EQS_SOL = yes
+					NOT = { has_idea = astrum_solus }
+					NOT = { has_idea = sweetie_drops }
+					OR = {
+						has_completed_focus = SOL_Imperial_Investigative_Service
+						has_completed_focus = SOL_solaris_speculatores
+					}
+				}
+				visible = {
+					OR = {
+						has_completed_focus = SOL_Imperial_Investigative_Service
+						has_completed_focus = SOL_solaris_speculatores
+					}
+				}
+				traits = { ambitious_planner_lar }
+			}
+		}
+		instance = {
+			allowed = { NOT = { has_dlc = "La Resistance" } }
+			name = EQS_absconditus_lumen
+			portraits = {
+
+			}
+			advisor = {
+				allowed = { original_tag = EQS }
+				slot = political_advisor
+				idea_token = absconditus_lumen
+				desc = edgy_spy_horse_desc
+				cost = 200
+				available = {
+					is_EQS_SOL = yes
+					NOT = { has_idea = astrum_solus }
+					NOT = { has_idea = sweetie_drops }
+					OR = {
+						has_completed_focus = SOL_Imperial_Investigative_Service
+						has_completed_focus = SOL_solaris_speculatores
+					}
+				}
+				visible = {
+					OR = {
+						has_completed_focus = SOL_Imperial_Investigative_Service
+						has_completed_focus = SOL_solaris_speculatores
+					}
+				}
+				traits = { ambitious_planner }
+			}
+		}
+	}
 	GRI_daybreaker = {
 		name = EQS_SOL_daybreaker
 		gender = female

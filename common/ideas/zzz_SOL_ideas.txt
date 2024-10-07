@@ -748,7 +748,7 @@ ideas = {
 				democratic_drift = 0.01
 			}
 		}
-		SOL_societial_stubbornness = {
+		SOL_societal_stubbornness = {
 			modifier = {
 				production_speed_buildings_factor = -0.25
 				consumer_goods_factor = 0.4
@@ -758,7 +758,7 @@ ideas = {
 				democratic_drift = 0.03
 			}
 		}
-		SOL_societial_stubbornness_2 = {
+		SOL_societal_stubbornness_2 = {
 			modifier = {
 				production_speed_buildings_factor = -0.15
 				consumer_goods_factor = 0.25
@@ -768,7 +768,7 @@ ideas = {
 				democratic_drift = 0.02
 			}
 		}
-		SOL_societial_stubbornness_3 = {
+		SOL_societal_stubbornness_3 = {
 			modifier = {
 				production_speed_buildings_factor = -0.1
 				consumer_goods_factor = 0.10

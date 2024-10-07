@@ -86,6 +86,123 @@ leader_traits = {
         ai_will_do = { factor = 1 }
     }
 
+    master_of_disguise = {
+        random = no
+        encryption = 0.75
+        drift_defence_factor = 0.3
+        subversive_activites_upkeep = -0.1
+
+        ai_will_do = { factor = 1}
+    }
+
+    master_of_disguise_lar = {
+        random = no
+        agency_upgrade_time = -0.1
+        civilian_intel_factor = 0.15
+        own_operative_detection_chance_factor = -0.15
+        operative_slot = 1
+
+        ai_will_do = { factor = 1 }
+    }
+
+    ambitious_planner = {
+        random = no
+        decryption = 0.75
+        subversive_activities_upkeep = -0.35
+        foreign_subversive_activites = -0.15
+
+        ai_will_do = { factor = 1 }
+    }
+
+    ambitious_planner_lar = {
+        random = no
+        operative_slot = 1
+        agency_upgrade_time = -0.15
+        operation_cost = -0.05
+        decryption_factor = 0.15
+
+        ai_will_do = { factor = 1}
+    }
+
+    director_of_smile = {
+        random = no
+        encryption = 1
+        foreign_subversive_activites = 0.15
+
+        ai_will_do = { factor = 1 }
+    }
+
+    director_of_smile_lar = {
+        random = no
+        operative_slot = 1
+        agency_upgrade_time = -0.1
+        enemy_operative_detection_chance_factor = 0.05
+
+        ai_will_do = { factor = 1 }
+    }
+
+    director_of_smile_defunct = {
+        random = no
+        encryption = 1
+        foreign_subversive_activites = 0.15
+        subversive_activities_upkeep = -0.4
+        stability_factor = -0.05
+        democratic_drift = 0.03
+
+        ai_will_do = { factor = 1 }
+    }
+
+    director_of_smile_defunct_lar = {
+        random = no
+        operative_slot = 1
+        agency_upgrade_time = -0.25
+        enemy_operative_detection_chance_factor = 0.05
+        operation_cost = -0.15
+        operation_risk = -0.03
+        stability_factor = 0.05
+        democratic_drift = 0.03
+
+        ai_will_do = { factor = 1}
+    }
+
+    director_of_imperial_intelligence = {
+        random = no
+        decryption = 1
+        drift_defence_factor = 0.25
+        foreign_subversive_activites = 0.25
+
+        ai_will_do = { factor = 1 }
+    }
+
+    director_of_imperial_intelligence_lar = {
+        random = no
+        operative_slot = 2
+        enemy_operative_detection_chance_factor = 0.1
+        own_operative_detection_chance_factor = -0.05
+        drift_defence_factor = 0.25
+
+        ai_will_do = { factor = 1 }
+    }
+
+    director_of_imperial_intelligence_astrum = {
+        random = no
+        encryption = 1
+        drift_defence_factor = 0.5
+        resistance_damage_to_garrison = -0.15
+
+        ai_will_do = { factor = 1 }
+    }
+
+    director_of_imperial_intelligence_astrum_lar = {
+        random = no
+        operative_slot = 1
+        agency_upgrade_time = -0.3
+        intel_network_gain_factor = 0.15
+        intelligence_agency_defense = 0.5
+
+        ai_will_do = { factor = 1 }
+    }
+
     ###PCB###
     cowled_governor = {
         random = no

@@ -10,3 +10,48 @@ SOL_imperial_science = {
     fascism_drift = fascism_drift_var
     custom_modifier_tooltip = EQS_hidden_idea_stats_tt
 }
+
+EQS_smile_upgrades = {
+    encryption = encryption_var
+    foreign_subversive_activites = foreign_subversive_activities_var
+    subversive_activites_upkeep = subversive_activities_upkeep_var
+    political_power_gain = political_power_gain_smile_var
+    decryption = decryption_var
+}
+
+EQS_smile_upgrades_lar = {
+    icon = GFX_idea_EQS_unicorn_academy
+
+    agency_upgrade_time = agency_upgrade_var
+    own_operative_detection_chance_factor = own_operative_detection_var
+    operation_risk = operation_risk_var
+    operation_cost = operation_cost_var
+    enemy_operative_detection_chance_factor = enemy_operative_detection_var
+    commando_trait_chance_factor = commando_trait_var
+    intelligence_agency_defense = intelligence_agency_defense_var
+}
+
+SOL_imperial_intelligence = {
+    decryption = decryption_sol_var
+    foreign_subversive_activites = foreign_subversive_activities_sol_var
+    subversive_activites_upkeep = subversive_activities_upkeep_sol_var
+    encryption = encryption_sol_var
+    resistance_damage_to_garrison = resistance_damage_to_garrison_var
+    resistance_activity = resistance_activity_var
+    drift_defence_factor = drift_defence_factor_var
+}
+
+SOL_imperial_intelligence_lar = {
+    icon = GFX_idea_EQS_unicorn_academy
+
+    agency_upgrade_time = agency_upgrade_sol_var
+    own_operative_detection_chance_factor = own_operative_detection_sol_var
+    enemy_operative_detection_chance_factor = enemy_operative_detection_sol_var
+    crypto_strength = crypto_strength_var
+    operation_cost = operation_cost_sol_var
+    operation_risk = operation_risk_sol_var
+    resistance_damage_to_garrison = resistance_damage_to_garrison_var
+    resistance_activity = resistance_activity_var
+    operative_slot = operative_slot_var
+    new_operative_slot_bonus = new_operative_slot_bonus_var
+}
