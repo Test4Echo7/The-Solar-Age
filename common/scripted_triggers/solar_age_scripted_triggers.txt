@@ -45,3 +45,27 @@ EQS_not_most_advanced_ships = {
 	NOT = { has_tech = semi_modern_fire_control_system }
 	NOT = { has_tech = improved_airplane_launcher }
 }
+can_host_M6 = {
+	OR = {
+		AND = {
+			original_tag = EQC
+			has_country_flag = SOL_hosting_M6
+		}
+		AND = {
+			original_tag = CRY
+			has_country_flag = SOL_hosting_M6
+		}
+		AND = {
+			original_tag = MGY
+			has_country_flag = SOL_hosting_M6
+		}
+		AND = {
+			original_tag = HIP
+			has_country_flag = SOL_hosting_M6
+		}
+		AND = {
+			original_tag = RCT
+			has_country_flag = SOL_hosting_M6
+		}
+	}
+}

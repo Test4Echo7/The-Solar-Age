@@ -310,6 +310,44 @@ on_actions = {
             }
         }
     }
+    on_monthly_EQS = {
+        effect = {
+            log = "[GetDateText]: [ROOT.GetName] on_monthly_EQS solar_age"
+            if = {
+                limit = {
+                    OR = {
+                        has_completed_focus = SOL_Imperial_Investigative_Service
+                        has_completed_focus = SOL_solaris_speculatores
+                    }
+                    OR = {
+                        NOT = { has_dlc = "La Resistance" }
+                        AND = {
+                            has_dlc = "La Resistance"
+                            has_intelligence_agency = yes
+                        }
+                    }
+                    NOT = { has_global_flag = SOL_attempted_enemy_assassinations }
+                }
+                random_country = {
+                    limit = {
+                        has_character = EQS_princess_luna
+                    }
+                    country_event = {
+                        id = solarreworked.163
+                        random_days = 14
+                    }
+                }
+                random_country = {
+                    limit = { has_country_flag = SOL_hosting_M6 }
+                    country_event = {
+                        id = solarreworked.164
+                        random_days = 30
+                    }
+                }
+                set_global_flag = SOL_attempted_enemy_assassinations
+            }
+        }
+    }
     on_weekly_EQS = { #To clean up borders a bit
         effect = {
             log = "[GetDateText]: [ROOT.GetName]: on_weekly_EQS solar_age"
@@ -796,6 +834,22 @@ on_actions = {
             #        }
             #    }
             #}
+        }
+    }
+    on_startup = { #Don't want to touch MGY files. But seriously, EaW, why no Somnambula advisor trait despite having her recruited?
+        effect = {
+            random_country = {
+                limit = { has_character = MGY_somnambula }
+                MGY_somnambula = {
+                    add_advisor_role = {
+                        advisor = {
+                            slot = political_advisor
+                            idea_token = somnambula
+                            traits = { pillar_of_hope_solar }
+                        }
+                    }
+                }
+            }
         }
     }
 }

@@ -135,19 +135,19 @@ country_event = { #A radio personality in Manehattan or Baltimare is going on th
         if = {
             limit = { has_idea = SOL_societial_stubbornness }
             swap_ideas = {
-                remove_idea = SOL_societial_stubbornness
-                add_idea = SOL_societial_stubbornness_2
+                remove_idea = SOL_societal_stubbornness
+                add_idea = SOL_societal_stubbornness_2
             }
         }
         else_if = {
-            limit = { has_idea = SOL_societial_stubbornness_2 }
+            limit = { has_idea = SOL_societal_stubbornness_2 }
             swap_ideas = {
-                remove_idea = SOL_societial_stubbornness_2
-                add_idea = SOL_societial_stubbornness_3
+                remove_idea = SOL_societal_stubbornness_2
+                add_idea = SOL_societal_stubbornness_3
             }
         }
         else = {
-            remove_ideas = SOL_societial_stubbornness_3
+            remove_ideas = SOL_societal_stubbornness_3
         }
     }
 }
@@ -1744,6 +1744,169 @@ country_event = { #An event informing the leader of the country that Twilight, S
 
     option = { #We could use all the help we can get.
         name = solarreworked.162.a
+        set_country_flag = SOL_hosting_M6
+        random_country = {
+            limit = { has_character = EQS_rainbowdash }
+            EQS_rainbowdash = { set_nationality = ROOT }
+        }
+        random_country = {
+            limit = { has_character = EQS_fluttershy }
+            EQS_fluttershy = { set_nationality = ROOT }
+        }
+        random_country = {
+            limit = { has_character = EQS_rarity }
+            EQS_rarity = { set_nationality = ROOT }
+        }
+        random_country = {
+            limit = { has_character = EQS_applejack }
+            EQS_applejack = { set_nationality = ROOT }
+        }
+        random_country = {
+            limit = { has_character = EQS_pinkie_pie }
+            EQS_pinkie_pie = { set_nationality = ROOT }
+        }
+        random_country = {
+            limit = { has_character = EQS_twilight_sparkle }
+            if = {
+                limit = { NOT = { has_country_flag = SOL_has_twilight } }
+                EQS_twilight_sparkle = { set_nationality = ROOT }
+            }
+        }
+        random_country = {
+            limit = { has_character = EQS_sunset_shimmer }
+            if = {
+                limit = { NOT = { has_country_flag = SOL_has_captured_sunset } }
+                EQS_sunset_shimmer = { set_nationality = ROOT }
+            }
+        }
+    }
+}
+
+country_event = { #As Luna is having a meeting with some of her staff, somepony, whom she has known for some time, attempts to either apprehend her privately or assassinate her, and before the pony is arrested or killed, she claims that she did it for the glory of Daybreaker, and it motivates Luna to find somewhere else further that is safer from Daybreaker's grip
+    id = solarreworked.163
+    title = solarreworked.163.t
+    desc = solarreworked.163.d
+
+    is_triggered_only = yes
+
+    option = { #It is no longer safe here.
+        name = solarreworked.163.a
+        custom_effect_tooltip = SOL_luna_peaces_out_tt
+        hidden_effect = {
+            if = {
+                limit = {
+                    HIP = { has_government = democratic }
+                }
+                HIP = {
+                    country_event = {
+                        id = solarreworked.165
+                        days = 12
+                        random_days = 5
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    RCT = { has_government = democratic }
+                }
+                RCT = {
+                    country_event = {
+                        id = solarreworked.165
+                        days = 12
+                        random_days = 5
+                    }
+                }
+            }
+            else = {
+                MGY = {
+                    country_event = {
+                        id = solarreworked.165
+                        days = 12
+                        random_days = 5
+                    }
+                }
+            }
+        }
+    }
+}
+
+country_event = { #The Mane Six, or what's left of them, meet to try and solve a friendship problem that was brought to them, which ends up being an ambush by agents of Daybreaker, who attempt to apprehend them, and they break free and manage to overcome the ambush, but it gives them the clear picture that they are no longer safe where they are, and must find someplace that's further from Daybreaker's influence
+    id = solarreworked.164
+    title = solarreworked.164.t
+    desc = solarreworked.164.d
+
+    is_triggered_only = yes
+
+    option = { #Where can we even go?
+        name = solarreworked.164.a
+        custom_effect_tooltip = SOL_mane_six_dip_tt
+        clr_country_flag = SOL_hosting_M6
+        hidden_effect = {
+            if = {
+                limit = {
+                    HIP = { has_government = democratic }
+                }
+                HIP = {
+                    country_event = {
+                        id = solarreworked.166
+                        days = 15
+                        random_days = 9
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    RCT = { has_government = democratic }
+                }
+                RCT = {
+                    country_event = {
+                        id = solarreworked.166
+                        days = 15
+                        random_days = 9
+                    }
+                }
+            }
+            else = {
+                MGY = {
+                    country_event = {
+                        id = solarreworked.166
+                        days = 15
+                        random_days = 9
+                    }
+                }
+            }
+        }
+    }
+}
+
+country_event = { #Luna arrives in Hippogriffia and is greeted by Novo, as one of the only harmonic monarchists left in the world, and they briefly discuss what has transpired, and that Luna now has an even harder time eventually finding a way to overthrow Daybreaker and restore her country, but Novo promises more materiel support than Cadance could
+    id = solarreworked.165 #Alternate would be arriving in Rijekograd and Luna meeting with either River Swirl or Arclight and speaking of the horrors of what Daybreaker is doing to what Equestria's legacy is; River would be quite horrified, and promise to do whatever she could to help, since she had her education there and she is motivated to assist
+    title = solarreworked.165.t #Third alternate would be meeting with Somnambula, who is most concerned about the country that she helped protect more times than she can count, but Maregypt is not in a position to much more than the Crystal Empire
+    desc = solarreworked.165.d
+
+    is_triggered_only = yes
+
+    option = { #Our flight is at an end.
+        name = solarreworked.165.a
+        random_country = {
+            limit = { has_character = EQS_princess_luna }
+            EQS_princess_luna = {
+                set_nationality = ROOT
+            }
+            set_country_flag = EQS_hosted_luna
+        }
+    }
+}
+
+country_event = { #The Mane Six arrive in Hippogriffia and meet up with both Novo and Skystar, as well as Luna, since she has come first, and are all the more worried about the final fate of Equestria and what will happen under Daybreaker
+    id = solarreworked.166 #Alternate would be arriving in RCT and meeting Luna, who has been trying to gather support beyond River Swirl and some in the government, and feels rather defeated, since most ponies simply don't care about what is happening half a world away
+    title = solarreworked.166.t #Third alternate would be arriving in MGY and catching up with Somnambula and Luna, who both speak about how what Maregypt can do is minimal, but they must still hope that they can one day free Equestria from Daybreaker's grip
+    desc = solarreworked.166.d
+
+    is_triggered_only = yes
+
+    option = { #Maybe we can finally stop running
+        name = solarreworked.166.a
         set_country_flag = SOL_hosting_M6
         random_country = {
             limit = { has_character = EQS_rainbowdash }

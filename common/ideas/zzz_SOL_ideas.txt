@@ -917,6 +917,22 @@ ideas = {
 				}
 			}
 		}
+		###Spies###
+		SOL_offensive_propaganda = {
+			modifier = {
+				political_power_gain = -0.1
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				conscription_factor = -0.05
+				fascism_drift = 0.01
+			}
+		}
+		SOL_defensive_propaganda = {
+			modifier = {
+				party_popularity_stability_factor = 0.1
+				fascism_drift = 0.04
+			}
+		}
 		###Ministry of Defense###
 		SOL_icy_naval_practice = {
 			modifier = {

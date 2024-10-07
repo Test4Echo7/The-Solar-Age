@@ -380,15 +380,8 @@ characters={
 
 			allowed = {
 				OR = {
-					AND = {
-						original_tag = EQC
-						has_country_flag = SOL_hosting_M6
-					}
-					AND = {
-						original_tag = CRY
-						has_country_flag = SOL_hosting_M6
-					}
 					original_tag = EQS
+					can_host_M6 = yes
 				}
 			}
 			visible = {
@@ -397,16 +390,7 @@ characters={
 						is_EQS_SOL = no
 						original_tag = EQS
 					}
-					OR = {
-						AND = {
-							original_tag = EQC
-							has_country_flag = SOL_hosting_M6
-						}
-						AND = {
-							original_tag = CRY
-							has_country_flag = SOL_hosting_M6
-						}
-					}
+					can_host_M6 = yes
 				}
 			}
 			available = {
@@ -458,17 +442,14 @@ characters={
 				if = {
 					limit = {
 						OR = {
-							AND = {
-								original_tag = EQC
-								has_country_flag = SOL_hosting_M6
-							}
-							AND = {
-								original_tag = CRY
-								has_country_flag = SOL_hosting_M6
-							}
+							original_tag = EQC
+							original_tag = CRY
+							original_tag = HIP
+							original_tag = RCT
+							original_tag = MGY
 						}
+						has_country_flag = SOL_hosting_M6
 					}
-					has_country_flag = SOL_hosting_M6
 				}
 			}
 			research_bonus = {
@@ -748,7 +729,14 @@ characters={
 				}
 				available = {
 					has_intelligence_agency = yes
-					has_government = democratic
+					if = {
+						limit = { NOT = { is_EQS_SOL = yes } }
+						has_government = democratic
+					}
+					if = {
+						limit = { is_EQS_SOL = yes }
+						has_country_flag = SOL_kept_smile_agents
+					}
 					if = {
 						limit = { event_target:solar_empire = { exists = yes } }
 						OR = {
@@ -785,7 +773,14 @@ characters={
 					original_tag = EQS
 				}
 				available = {
-					has_government = democratic
+					if = {
+						limit = { NOT = { is_EQS_SOL = yes } }
+						has_government = democratic
+					}
+					if = {
+						limit = { is_EQS_SOL = yes }
+						has_country_flag = SOL_kept_smile_agents
+					}
 					if = {
 						limit = { event_target:solar_empire = { exists = yes } }
 						OR = {
@@ -1003,15 +998,8 @@ characters={
 
 			allowed = {
 				OR = {
-					AND = {
-						original_tag = EQC
-						has_country_flag = SOL_hosting_M6
-					}
-					AND = {
-						original_tag = CRY
-						has_country_flag = SOL_hosting_M6
-					}
 					original_tag = EQS
+					can_host_M6 = yes
 				}
 			}
 			available = {
@@ -1046,6 +1034,9 @@ characters={
 						OR = {
 							original_tag = EQC
 							original_tag = CRY
+							original_tag = HIP
+							original_tag = RCT
+							original_tag = MGY
 						}
 						has_country_flag = SOL_hosting_M6
 					}
@@ -1357,15 +1348,8 @@ characters={
 
 			allowed = {
 				OR = {
-					AND = {
-						original_tag = EQC
-						has_country_flag = SOL_hosting_M6
-					}
-					AND = {
-						original_tag = CRY
-						has_country_flag = SOL_hosting_M6
-					}
 					original_tag = EQS
+					can_host_M6 = yes
 				}
 			}
 			available = {
@@ -1396,6 +1380,9 @@ characters={
 						OR = {
 							original_tag = EQC
 							original_tag = CRY
+							original_tag = HIP
+							original_tag = RCT
+							original_tag = MGY
 						}
 						has_country_flag = SOL_hosting_M6
 					}
@@ -1677,15 +1664,8 @@ characters={
 
 			allowed = {
 				OR = {
-					AND = {
-						original_tag = EQC
-						has_country_flag = SOL_hosting_M6
-					}
-					AND = {
-						original_tag = CRY
-						has_country_flag = SOL_hosting_M6
-					}
 					original_tag = EQS
+					can_host_M6 = yes
 				}
 			}
 			available = {
@@ -1720,9 +1700,12 @@ characters={
 						OR = {
 							original_tag = EQC
 							original_tag = CRY
+							original_tag = HIP
+							original_tag = RCT
+							original_tag = MGY
 						}
+						has_country_flag = SOL_hosting_M6
 					}
-					has_country_flag = SOL_hosting_M6
 				}
 				NOT = {
 					has_country_flag = EQS_HIP_elements_sent
@@ -2051,14 +2034,7 @@ characters={
 						has_country_flag = EQS_sunset_shimmer_arrived
 						has_country_flag = SOL_sunset_ascended
 					}
-					AND = {
-						original_tag = EQC
-						has_country_flag = SOL_hosting_M6
-					}
-					AND = {
-						original_tag = CRY
-						has_country_flag = SOL_hosting_M6
-					}
+					can_host_M6 = yes
 				}
 				#NOT = {
 				#	has_country_flag = SOL_harmonic_commanders_leave
@@ -2679,14 +2655,7 @@ characters={
 			visible = {
 				OR = {
 					has_country_flag = EQS_create_new_commanders_flag
-					AND = {
-						original_tag = EQC
-						has_country_flag = SOL_hosting_M6
-					}
-					AND = {
-						original_tag = CRY
-						has_country_flag = SOL_hosting_M6
-					}
+					can_host_M6 = yes
 				}
 			}
 		}
@@ -2847,14 +2816,7 @@ characters={
 			visible = {
 				OR = {
 					has_country_flag = EQS_create_new_commanders_flag
-					AND = {
-						original_tag = EQC
-						has_country_flag = SOL_hosting_M6
-					}
-					AND = {
-						original_tag = CRY
-						has_country_flag = SOL_hosting_M6
-					}
+					can_host_M6 = yes
 				}
 			}
 		}

@@ -253,6 +253,7 @@ characters = {
 				desc = is_that_an_FH_reference_desc
 				cost = 200
 				available = {
+					has_intelligence_agency = yes
 					is_EQS_SOL = yes
 					NOT = { has_idea = absconditus_lumen }
 					NOT = { has_idea = sweetie_drops }
@@ -286,6 +287,7 @@ characters = {
 				desc = is_that_an_FH_reference_desc
 				cost = 200
 				available = {
+					has_intelligence_agency = yes
 					is_EQS_SOL = yes
 					NOT = { has_idea = absconditus_lumen }
 					NOT = { has_idea = sweetie_drops }
@@ -318,6 +320,7 @@ characters = {
 				desc = edgy_spy_horse_desc
 				cost = 200
 				available = {
+					has_intelligence_agency = yes
 					is_EQS_SOL = yes
 					NOT = { has_idea = astrum_solus }
 					NOT = { has_idea = sweetie_drops }
@@ -348,6 +351,7 @@ characters = {
 				desc = edgy_spy_horse_desc
 				cost = 200
 				available = {
+					has_intelligence_agency = yes
 					is_EQS_SOL = yes
 					NOT = { has_idea = astrum_solus }
 					NOT = { has_idea = sweetie_drops }

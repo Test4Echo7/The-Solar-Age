@@ -6,9 +6,11 @@ EQS_debug_category = {
         complete_effect = {
             EQS_astrum_solus = {
                 add_trait = { trait = director_of_imperial_intelligence_astrum_lar slot = political_advisor }
+                hidden_effect = { remove_trait = { trait = master_of_disguise_lar slot = political_advisor } }
             }
             EQS_absconditus_lumen = {
                 add_trait = { trait = director_of_imperial_intelligence_lar slot = political_advisor }
+                hidden_effect = { remove_trait = { trait = ambitious_planner_lar slot = political_advisor } }
             }
             EQS_sweetie_drops = {
                 add_trait = { trait = director_of_smile_defunct_lar slot = political_advisor }

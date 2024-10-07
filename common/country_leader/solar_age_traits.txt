@@ -108,7 +108,7 @@ leader_traits = {
     ambitious_planner = {
         random = no
         decryption = 0.75
-        subversive_activities_upkeep = -0.35
+        subversive_activites_upkeep = -0.35
         foreign_subversive_activites = -0.15
 
         ai_will_do = { factor = 1 }
@@ -145,7 +145,7 @@ leader_traits = {
         random = no
         encryption = 1
         foreign_subversive_activites = 0.15
-        subversive_activities_upkeep = -0.4
+        subversive_activites_upkeep = -0.4
         stability_factor = -0.05
         democratic_drift = 0.03
 
@@ -159,7 +159,7 @@ leader_traits = {
         enemy_operative_detection_chance_factor = 0.05
         operation_cost = -0.15
         operation_risk = -0.03
-        stability_factor = 0.05
+        stability_factor = -0.05
         democratic_drift = 0.03
 
         ai_will_do = { factor = 1}
@@ -167,16 +167,20 @@ leader_traits = {
 
     director_of_imperial_intelligence = {
         random = no
-        decryption = 1
+        subversive_activites_upkeep = -0.35
+        decryption = 1.75
         drift_defence_factor = 0.25
-        foreign_subversive_activites = 0.25
+        foreign_subversive_activites = -0.4
 
         ai_will_do = { factor = 1 }
     }
 
     director_of_imperial_intelligence_lar = {
         random = no
-        operative_slot = 2
+        agency_upgrade_time = -0.15
+        operation_cost = -0.05
+        decryption_factor = 0.15
+        operative_slot = 3
         enemy_operative_detection_chance_factor = 0.1
         own_operative_detection_chance_factor = -0.05
         drift_defence_factor = 0.25
@@ -186,8 +190,9 @@ leader_traits = {
 
     director_of_imperial_intelligence_astrum = {
         random = no
-        encryption = 1
-        drift_defence_factor = 0.5
+        subversive_activites_upkeep = -0.1
+        encryption = 1.75
+        drift_defence_factor = 0.75
         resistance_damage_to_garrison = -0.15
 
         ai_will_do = { factor = 1 }
@@ -195,8 +200,10 @@ leader_traits = {
 
     director_of_imperial_intelligence_astrum_lar = {
         random = no
-        operative_slot = 1
-        agency_upgrade_time = -0.3
+        civilian_intel_factor = 0.15
+        own_operative_detection_chance_factor = -0.15
+        operative_slot = 2
+        agency_upgrade_time = -0.4
         intel_network_gain_factor = 0.15
         intelligence_agency_defense = 0.5
 
@@ -224,6 +231,16 @@ leader_traits = {
         communism_drift = -0.02
         conscription = 0.015
         army_org_factor = 0.03
+
+        ai_will_do = { factor = 1 }
+    }
+
+    ###MGY### Why no Somnambula trait, EaW?
+    pillar_of_hope_solar = {
+        random = no
+        political_power_factor = 0.05
+        stability_factor = 0.1
+        army_morale_factor = 0.05
 
         ai_will_do = { factor = 1 }
     }
