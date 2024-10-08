@@ -2275,7 +2275,7 @@ characters={
 			}
 			visible = {
 				is_EQS_SOL = yes
-				has_completed_focus = SOL_god_empress
+				has_completed_focus = SOL_unveil_cultus
 			}
 			available = {
 				is_EQS_SOL = yes

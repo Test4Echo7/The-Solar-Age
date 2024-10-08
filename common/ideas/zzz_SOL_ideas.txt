@@ -1148,7 +1148,14 @@ ideas = {
 			}
 		}
 		###God-Empress Spirits###
-		SOL_solaris_adoratio = {
+		SOL_solaris_cultus = {
+			modifier = {
+				heat_attrition_factor = -0.1
+				political_power_gain = 0.05
+				research_speed_factor = -0.02
+			}
+		}
+		SOL_solaris_adoratio_idea = {
 			modifier = {
 				political_power_gain = 0.1
 				army_morale_factor = 0.05
@@ -1214,6 +1221,12 @@ ideas = {
 			modifier = {
 				encryption = 0.5
 				decryption = 0.5
+			}
+		}
+		SOL_unquestionable_actions = {
+			modifier = {
+				mobilization_laws_cost_factor = -0.15
+				high_command_cost_factor = -0.1
 			}
 		}
 		SOL_surrendered_foals = {

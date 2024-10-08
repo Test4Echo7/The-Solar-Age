@@ -748,3 +748,46 @@ TRT_special_occupation_2 = {
 		base = 5000
 	}
 }
+###Solar Age###
+###Thank you, FH###1
+EQS_inquisitionis_occupation = { #Suppressionist SOL policy
+	icon = 14
+	sound_effect = "Martial_Law_Interface_Autonomous_Occupation_Unique_DEM"
+
+	visible = {
+		original_tag = EQS
+		is_EQS_SOL = yes
+		has_country_flag = SOL_inquisitionis_occupation_law_unlocked
+		NOT = {
+			original_tag = DED
+			hidden_trigger = { original_tag = EWI }
+		}
+	}
+
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = EQS_is_solar_empire_tt
+			original_tag = EQS
+		}
+		NOT = {
+			original_tag = DED
+			hidden_trigger = { original_tag = EWI }
+		}
+	}
+
+	state_modifier = {
+		resistance_target 				= -0.40
+		required_garrison_factor 		= -0.25
+		resistance_damage_to_garrison 	= 0.15
+		compliance_gain 				= -0.030
+		local_manpower  				= -0.35
+		local_intel_to_enemies			= -0.25
+		resistance_garrison_penetration_chance = -0.1
+		resistance_decay 				= 0.25
+		resistance_growth				= -0.25
+	}
+
+	ai_will_do = {
+		base = 750
+	}
+}

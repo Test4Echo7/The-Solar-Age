@@ -82,6 +82,23 @@ country_event = { #A soldier under the orders of a new officer loyal to Daybreak
             ideology = fascism
             popularity = 0.03
         }
+        if = {
+            limit = { has_idea = SOL_societal_stubbornness }
+            swap_ideas = {
+                remove_idea = SOL_societal_stubbornness
+                add_idea = SOL_societal_stubbornness_2
+            }
+        }
+        else_if = {
+            limit = { has_idea = SOL_societal_stubbornness_2 }
+            swap_ideas = {
+                remove_idea = SOL_societal_stubbornness_2
+                add_idea = SOL_societal_stubbornness_3
+            }
+        }
+        else = {
+            remove_ideas = SOL_societal_stubbornness_3
+        }
     }
 }
 
@@ -133,7 +150,7 @@ country_event = { #A radio personality in Manehattan or Baltimare is going on th
         }
         add_political_power = -50
         if = {
-            limit = { has_idea = SOL_societial_stubbornness }
+            limit = { has_idea = SOL_societal_stubbornness }
             swap_ideas = {
                 remove_idea = SOL_societal_stubbornness
                 add_idea = SOL_societal_stubbornness_2
@@ -225,21 +242,21 @@ country_event = { #Daybreaker rests on her throne while a pony or two is dragged
     option = { #Next pony!
         name = solarreworked.28.a
         if = {
-            limit = { has_idea = SOL_military_mutiny }
+            limit = { has_idea = SOL_societal_stubbornness }
             swap_ideas = {
-                remove_idea = SOL_military_mutiny
-                add_idea = SOL_military_mutiny_2
+                remove_idea = SOL_societal_stubbornness
+                add_idea = SOL_societal_stubbornness_2
             }
         }
         else_if = {
-            limit = { has_idea = SOL_military_mutiny_2 }
+            limit = { has_idea = SOL_societal_stubbornness_2 }
             swap_ideas = {
-                remove_idea = SOL_military_mutiny_2
-                add_idea = SOL_military_mutiny_3
+                remove_idea = SOL_societal_stubbornness_2
+                add_idea = SOL_societal_stubbornness_3
             }
         }
         else = {
-            remove_ideas = SOL_military_mutiny_3
+            remove_ideas = SOL_societal_stubbornness_3
         }
         if = {
             limit = { has_idea = SOL_military_mutiny }
@@ -273,21 +290,21 @@ country_event = { #A pony is taken before a bureaucrat or civil servant, who goe
         name = solarreworked.29.a
         add_ideas = SOL_codified_militarism
         if = {
-            limit = { has_idea = SOL_military_mutiny }
+            limit = { has_idea = SOL_societal_stubbornness }
             swap_ideas = {
-                remove_idea = SOL_military_mutiny
-                add_idea = SOL_military_mutiny_2
+                remove_idea = SOL_societal_stubbornness
+                add_idea = SOL_societal_stubbornness_2
             }
         }
         else_if = {
-            limit = { has_idea = SOL_military_mutiny_2 }
+            limit = { has_idea = SOL_societal_stubbornness_2 }
             swap_ideas = {
-                remove_idea = SOL_military_mutiny_2
-                add_idea = SOL_military_mutiny_3
+                remove_idea = SOL_societal_stubbornness_2
+                add_idea = SOL_societal_stubbornness_3
             }
         }
         else = {
-            remove_ideas = SOL_military_mutiny_3
+            remove_ideas = SOL_societal_stubbornness_3
         }
         if = {
             limit = { has_idea = SOL_military_mutiny }
@@ -457,7 +474,7 @@ country_event = { #Daybreaker holds a speech in Sanctum Solar, which has just be
 
 				country_leader = {
 					expire = "1965.1.1"
-					desc = "POLITICS_DAYBREAKER_DESC"
+					desc = "POLITICS_DAYBREAKER_SOLAR_AGE_DESC"
 					ideology = nazism
 					traits = { }
 				}
@@ -482,7 +499,7 @@ country_event = { #Short event detailing that how with Daybreaker's ascension an
 
     option = { #Damn them all!
         name = solarreworked.34.a
-        add_ideas = SOL_societial_stubbornness
+        add_ideas = SOL_societal_stubbornness
         add_ideas = SOL_military_mutiny
     }
 }
@@ -1786,6 +1803,7 @@ country_event = { #As Luna is having a meeting with some of her staff, somepony,
     id = solarreworked.163
     title = solarreworked.163.t
     desc = solarreworked.163.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.163"}
 
     is_triggered_only = yes
 
@@ -1834,6 +1852,7 @@ country_event = { #The Mane Six, or what's left of them, meet to try and solve a
     id = solarreworked.164
     title = solarreworked.164.t
     desc = solarreworked.164.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.164"}
 
     is_triggered_only = yes
 
@@ -1883,6 +1902,7 @@ country_event = { #Luna arrives in Hippogriffia and is greeted by Novo, as one o
     id = solarreworked.165 #Alternate would be arriving in Rijekograd and Luna meeting with either River Swirl or Arclight and speaking of the horrors of what Daybreaker is doing to what Equestria's legacy is; River would be quite horrified, and promise to do whatever she could to help, since she had her education there and she is motivated to assist
     title = solarreworked.165.t #Third alternate would be meeting with Somnambula, who is most concerned about the country that she helped protect more times than she can count, but Maregypt is not in a position to much more than the Crystal Empire
     desc = solarreworked.165.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.165"}
 
     is_triggered_only = yes
 
@@ -1902,6 +1922,7 @@ country_event = { #The Mane Six arrive in Hippogriffia and meet up with both Nov
     id = solarreworked.166 #Alternate would be arriving in RCT and meeting Luna, who has been trying to gather support beyond River Swirl and some in the government, and feels rather defeated, since most ponies simply don't care about what is happening half a world away
     title = solarreworked.166.t #Third alternate would be arriving in MGY and catching up with Somnambula and Luna, who both speak about how what Maregypt can do is minimal, but they must still hope that they can one day free Equestria from Daybreaker's grip
     desc = solarreworked.166.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.166"}
 
     is_triggered_only = yes
 
@@ -2369,6 +2390,242 @@ country_event = {
             add_attack = 1
             gain_xp = 600
         }
+    }
+}
+
+###Specific Political Paths###
+###God-Empress###
+country_event = { #With herself established, Daybreaker hosts a grand ceremony in Canterlot, to rename it to Sanctum Solar, the heart of her Imperium Solaris, and the marginalized Solaris Cultus is the official state religion, as she has Padlock Key host a first sermon on how the fire of Daybreaker will consume all that oppose them
+    id = solarreworked.300
+    title = solarreworked.300.t
+    desc = solarreworked.300.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.300"}
+
+    is_triggered_only = yes
+
+    option = { #PRAISE DAYBREAKER! SOL INVICTUS!
+        name = solarreworked.300.a
+        add_ideas = SOL_solaris_cultus
+        set_party_name = {
+            ideology = fascism
+            long_name = EQS_solaris_cultus
+            name = EQS_solaris_cultus
+        }
+        set_province_name = {
+            id = 179
+            name = "EQS_sanctum_solar"
+        }
+        set_cosmetic_tag = EQS_SOL_romanophile
+        show_ideas_tooltip = padlock
+    }
+}
+
+country_event = { #Daybreaker holds a ceremony at night, so that the flames of the Adoratio can be seen more clearly, and has an induction speech for Sunset, speaking how she has quickly regained her status as Daybreaker's daughter, and that she can choose to take the next step of obedience, to lead all ponies to her, and the ones that don't bow, to be ushered to the Inquisitionis instead; she marks Sunset with a brand on her right shoulder
+    id = solarreworked.301
+    title = solarreworked.301.t
+    desc = solarreworked.301.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.301"}
+
+    is_triggered_only = yes
+
+    option = { #May you serve forever!
+        name = solarreworked.301.a
+        add_ideas = SOL_solaris_adoratio_idea
+    }
+}
+
+country_event = { #Sunrise enters into Daybreaker's throne room, opposed to being in chains, but rather in ornate dress, and she is clearly a bit perturbed why she has been summoned, and she learns from Daybreaker that she is to become the lady inquisitor of the Solaris Inquisitionis, and it is a more laid back and confirming conversation from her, to assuage Sunrise of her fears
+    id = solarreworked.302
+    title = solarreworked.302.t
+    desc = solarreworked.302.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.302"}
+
+    is_triggered_only = yes
+
+    option = { #You are already prepared, my student.
+        name = solarreworked.302.a
+        if = {
+			limit = {
+				has_dlc = "La Resistance"
+			}
+			add_ideas = SOL_Imperial_Inquisition_idea_lar
+		}
+		else = {
+			add_ideas = SOL_Imperial_Inquisition_idea
+		}
+    }
+}
+
+country_event = { #A group of inquisitors, led by Aurora, raid an office building and declare that the ground upon which it stands is tainted by the heresy that has been committed there, and that nopony reported it; the heresy is that somepony was trying to spread Twilight's friendship journal around, and it was found out by an inquisitor seeing another pony reading it and grilling them; Aurora would light one pony on fire as they try to flee, and other inquisitors go around torching the place to cleanse it from heresy and sin
+    id = solarreworked.303
+    title = solarreworked.303.t
+    desc = solarreworked.303.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.303"}
+
+    is_triggered_only = yes
+
+    option = { #You already sealed your fate.
+        name = solarreworked.303.a
+        add_stability
+        add_popularity = {
+            ideology = fascism
+            popularity = 0.15
+        }
+        add_manpower = -50000
+    }
+}
+
+country_event = { #A citizen of the Empire does what they can to sneak out of a service, since they would rather be with their family or somewhere other than worship, and they are confronted by a priestess, who grills them on where they are going, only to eventually have them arrested instead, since they are trying to get out of service
+    id = solarreworked.304
+    title = solarreworked.304.t
+    desc = solarreworked.304.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.304"}
+
+    is_triggered_only = yes
+
+    option = { #Take this sinner to the gallows!
+        name = solarreworked.304.a
+        add_ideas = SOL_Solar_Cult_idea1
+    }
+}
+
+country_event = { #Quasar Pulse, on one of her patrols of the city of Santcum Solar, is brought a pony who is claimed to be a heretic, and the defendant attempts to argue that they are not guilty, especially since Daybreaker has illegally taken control of the government and usurped Celestia and Luna, which makes Quasar more than convinced that that is evidence enough, and executes them on the spot
+    id = solarreworked.305
+    title = solarreworked.305.t
+    desc = solarreworked.305.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.305"}
+
+    is_triggered_only = yes
+
+    option = { #Justice has been served
+        name = solarreworked.305.a
+
+    }
+}
+
+country_event = { #A noble meets with Daybreaker in her throne room, despite her being busy, and begins to berate her about her newest laws that nopony else agreed to, and she gives him one warning to stand down, and he does not pick it up, and begins to state how things were betting before, and she decides that she has had enough of his nonsense, and has him arrested as a threat to Order and Harmony; her Harmony
+    id = solarreworked.306
+    title = solarreworked.306.t
+    desc = solarreworked.306.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.306"}
+
+    is_triggered_only = yes
+
+    option = { #Don't I get a trial?
+        name = solarreworked.306.a
+
+    }
+}
+
+country_event = { #A short event of a gladiator fighter who is fighting in the Solar Games, which is the replacement for the Friendship Games, and he is pitted against one of his former friends that has been declared an enemy of the state, and when he ultimately triumphs, he looks to Daybreaker, who is watching, on what to do, and she gives him the go-ahead to kill his former friend
+    id = solarreworked.307
+    title = solarreworked.307.t
+    desc = solarreworked.307.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.307"}
+
+    is_triggered_only = yes
+
+    option = { #Good soldiers follow orders.
+        name = solarreworked.307.a
+
+    }
+}
+
+country_event = { #Follow a mare as she has a confused conversation with one of her friends, who has confronted her about how she has been raising her son, and it eventually reveals that an inquisitor is also there, and she tries to argue she's doing nothing wrong, simply letting him learn on his own time, and the inquisitor does not take that as an acceptable answer, and she is arrested, while her son brought into the community to learn about Daybreaker
+    id = solarreworked.308
+    title = solarreworked.308.t
+    desc = solarreworked.308.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.308"}
+
+    is_triggered_only = yes
+
+    option = { #But he's my son!
+        name = solarreworked.308.a
+
+    }
+}
+
+country_event = { #Daybreaker leads a charge against a small bunker, which has been targeted by the Inquisitionis, as it is or was a former heretic location, as they tried to organize, and she takes it upon herself to lead as best she can, to put into practice some of her new skills, and she ultimately completely levels the location almost by herself, and since there are a few rebels who haven't fled yet, she does completely wipe them out, which finally makes her a bit more satisfied with herself
+    id = solarreworked.309
+    title = solarreworked.309.t
+    desc = solarreworked.309.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.309"}
+
+    is_triggered_only = yes
+
+    option = { #Good enough for now.
+        name = solarreworked.309.a
+
+    }
+}
+
+country_event = { #
+    id = solarreworked.310
+    title = solarreworked.310.t
+    desc = solarreworked.310.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.310"}
+
+    is_triggered_only = yes
+
+    option = { #
+        name = solarreworked.310.a
+
+    }
+}
+
+country_event = { #
+    id = solarreworked.311
+    title = solarreworked.311.t
+    desc = solarreworked.311.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.311"}
+
+    is_triggered_only = yes
+
+    option = { #
+        name = solarreworked.311.a
+
+    }
+}
+
+country_event = { #
+    id = solarreworked.312
+    title = solarreworked.312.t
+    desc = solarreworked.312.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.312"}
+
+    is_triggered_only = yes
+
+    option = { #
+        name = solarreworked.312.a
+
+    }
+}
+
+country_event = { #
+    id = solarreworked.313
+    title = solarreworked.313.t
+    desc = solarreworked.313.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.313"}
+
+    is_triggered_only = yes
+
+    option = { #
+        name = solarreworked.313.a
+
+    }
+}
+
+country_event = { #
+    id = solarreworked.314
+    title = solarreworked.314.t
+    desc = solarreworked.314.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.314"}
+
+    is_triggered_only = yes
+
+    option = { #
+        name = solarreworked.300.a
+
     }
 }
 

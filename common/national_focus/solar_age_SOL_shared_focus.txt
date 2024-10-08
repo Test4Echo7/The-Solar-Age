@@ -1640,6 +1640,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_unveil_cultus"
+		country_event = solarreworked.300
 		###Daybreaker hosts the first service of the now front and center Solaris Cultus, with the priestly duties done by Padlock Key, and she inaugarates the first service with a proclamation of her godhood, and that she will guide the world into a new era of light and peace
 	}
 	ai_will_do = { factor = 300 }
@@ -1661,6 +1662,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_solaris_adoratio"
+		country_event = solarreworked.301
 		###In a grand ceremony, where she proclaims some of the highlights of Sunset's life, she proclaims that Sunset shall be the head of the worship branch of the Solaris Cultus, answering only to Padlock Key, and annoints her in a branding of fire on her shoulder that she is forever Daybreaker's
 	}
 	ai_will_do = { factor = 200 }
@@ -1683,16 +1685,8 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_solaris_inquisitionis"
-		###Event of Sunset meeting privately with Daybreaker, who is pleased to offer Twilight an even better position than she had before, which will be the head inquisitor of the Solaris Inquisitionis, her holy inquisition, that will be used to keep Harmony and Order, which Twilight readily accepts, as she is worried that ponies don't understand Daybreaker's desires; it is close to a mother-daughter relationship kind of talk
-		if = {
-			limit = {
-				has_dlc = "La Resistance"
-			}
-			add_ideas = SOL_Imperial_Inquisition_idea_lar
-		}
-		else = {
-			add_ideas = SOL_Imperial_Inquisition_idea
-		}
+		country_event = solarreworked.302
+		###Event of Twilight meeting privately with Daybreaker, who is pleased to offer Twilight an even better position than she had before, which will be the head inquisitor of the Solaris Inquisitionis, her holy inquisition, that will be used to keep Harmony and Order, which Twilight readily accepts, as she is worried that ponies don't understand Daybreaker's desires; it is close to a mother-daughter relationship kind of talk
 	}
 	ai_will_do = { factor = 250 }
 }
@@ -1713,6 +1707,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_suffer_not_heresy"
+		country_event = solarreworked.303
 		###Follow some inquisitors as they barge into an office building that has been used for quite a while in Canterlot, declaring that every single pony has been declared a heretic after one was determined to work there, and taint the very labor they intend to do for the Empress, and since none of them reported on the heretic, they are all co-sinners, and will be cleansed with fire; one of the heads (Aurora) happily lights a pony on fire or the like as they try to flee, and sets the entire building on fire
 	}
 	ai_will_do = { factor = 100 }
@@ -1738,12 +1733,12 @@ shared_focus = {
 	y = 2
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_Mandatory_Temple_Attendance"
+		country_event = solarreworked.304
 		###Possibly event of somepony trying to get out of attending a temple service, which a cult member pushes them very hard to attend, to the point of basically flagging a soldier to come and haul them off, if they refuse to go, because they are clearly flirting with heresy
 		#swap_ideas = {
 		#	add_idea = SOL_Solar_Cult_idea1
 		#	remove_idea = SOL_Solar_Cult_idea
 		#}
-		add_ideas = SOL_Solar_Cult_idea1
 	}
 	search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
 }
@@ -1765,7 +1760,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_inquisitionis_secondary_role"
-		#Idea here
+		add_ideas = SOL_unseen_inquisitors
 	}
 	ai_will_do = { factor = 50 }
 }
@@ -1786,8 +1781,9 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_inquisitionis_primary_role"
-		#Idea here
+		add_ideas = SOL_active_inquisitors
 	}
+	ai_will_do = { factor = 80 }
 }
 
 shared_focus = {
@@ -1808,8 +1804,15 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_solaris_speculatores"
-		#Ideas here
+		if = {
+			limit = { has_dlc = "La Resistance" }
+			add_ideas = SOL_imperial_eyes_lar
+		}
+		else = {
+			add_ideas = SOL_imperial_eyes
+		}
 	}
+	ai_will_do = { factor = 75 }
 }
 
 shared_focus = {
@@ -1833,36 +1836,37 @@ shared_focus = {
 	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_Lux_et_Tenebris"
-		if = {
-			limit = {
-				has_idea = unicorn_academy
-			}
-			swap_ideas = {
-				add_idea = SOL_Lux_et_Tenebris_idea
-				remove_idea = unicorn_academy
-			}
-		}
-		else_if = {
-			limit = {
-				has_idea = unicorn_academy1
-			}
-			swap_ideas = {
-				add_idea = SOL_Lux_et_Tenebris_idea1
-				remove_idea = unicorn_academy1
-			}
-		}
-		else_if = {
-			limit = {
-				has_idea = unicorn_academy2
-			}
-			swap_ideas = {
-				add_idea = SOL_Lux_et_Tenebris_idea2
-				remove_idea = unicorn_academy2
-			}
-		}
-		else = {
-			add_ideas = SOL_Lux_et_Tenebris_idea0
-		}
+		#if = {
+		#	limit = {
+		#		has_idea = unicorn_academy
+		#	}
+		#	swap_ideas = {
+		#		add_idea = SOL_Lux_et_Tenebris_idea
+		#		remove_idea = unicorn_academy
+		#	}
+		#}
+		#else_if = {
+		#	limit = {
+		#		has_idea = unicorn_academy1
+		#	}
+		#	swap_ideas = {
+		#		add_idea = SOL_Lux_et_Tenebris_idea1
+		#		remove_idea = unicorn_academy1
+		#	}
+		#}
+		#else_if = {
+		#	limit = {
+		#		has_idea = unicorn_academy2
+		#	}
+		#	swap_ideas = {
+		#		add_idea = SOL_Lux_et_Tenebris_idea2
+		#		remove_idea = unicorn_academy2
+		#	}
+		#}
+		#else = {
+		#	add_ideas = SOL_Lux_et_Tenebris_idea0
+		#}
+		add_ideas = SOL_Lux_et_Tenebris_idea1
 		add_tech_bonus = {
 			name = unicorn_bonus2
 			bonus = 1
@@ -1889,7 +1893,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_faith_honor_family"
-		#Idea here
+		add_ideas = SOL_faithful_families
 	}
 	ai_will_do = { factor = 100 }
 }
@@ -1957,6 +1961,8 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_field_executions"
+		country_event = solarreworked.305
+		set_country_flag = SOL_inquisitionis_occupation_law_unlocked
 		###Event of an inquisitor (Quasar) being brought forward a suspected heretic, although there is nothing proven, and the pony tries to defend themselves, especially considering they don't recognize the rule of the Solar Empire since they are an occupier, and the inquisitor takes justice into her own hooves, as simply the accusing is enough, especially since they're supsicious already
 	}
 	ai_will_do = { factor = 40 }
@@ -1979,8 +1985,8 @@ shared_focus = {
 	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_State_Personified"
-		add_stability = 0.15
-		add_political_power = 250
+		country_event = solarreworked.306
+		###Event of a noble attempting to argue his way into Daybreaker agreeing to his cause, which ultimately backfires when he makes a slip-up about something that Equestria did better than the Empire
 		#Maybe change this to an idea of -10% advisor cost, -15% conscription cost
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
@@ -2004,6 +2010,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_solar_games"
+		country_event = solarreworked.307
 		###Event of a fighter in Daybreaker's new Solar Games fighting through different opponents, both animal and pony, just to entertain the crowd and Daybreaker, of whom they gain approval to execute an opponent, just like in Rome
 	}
 	ai_will_do = { factor = 60 }
@@ -2024,7 +2031,8 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_raising_generations"
-		###Event of a concerned mother or the like speaking ot another, and having an intervention with the Inquisitionis with one of the other parents of the community, because their child appears to be showing "concerning" beliefs and how they don't follow the Empress's teachings enough, and the other mother tries to argue against it, but her child is ultimately taken and the parent is arrested
+		country_event = solarreworked.308
+		###Event of a concerned mother or the like speaking to another, and having an intervention with the Inquisitionis with one of the other parents of the community, because their child appears to be showing "concerning" beliefs and how they don't follow the Empress's teachings enough, and the other mother tries to argue against it, but her child is ultimately taken and the parent is arrested
 	}
 	ai_will_do = { factor = 50 }
 }
@@ -2051,6 +2059,7 @@ shared_focus = {
 		EQS_princess_celestia = {
 			add_trait = { trait = ponykinds_goddess }
 		}
+		country_event = solarreworked.309
 		###Possibly event of Daybreaker taking a lead role in an attack of a heretic stronghold or the like, and she wants to test some of the new spells that she practiced as she needs to see what her soldiers are doing under her command, and also so she can enact some judgement of ponies herself, and she is basically a walking death machine, although it clear she is at her limits protecting herself
 	}
 	ai_will_do = { factor = 70 }
@@ -2072,6 +2081,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_sacricices_from_birth"
+		country_event = solarreworked.310
 		###Event of a parent trying to keep their foal when an inquisitor and a couple of soldiers come to them to take their foal to become another inquisitor from a very young age, and they are basically forced to give them up, since they were identified as probably a decently strong unicorn to serve Daybreaker, and they are threatened with being declared heretics if they don't give up the foal
 	}
 	ai_will_do = { factor = 100 }
@@ -2092,6 +2102,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_annual_purges"
+		country_event = solarreworked.311
 		###Event of Quasar Pulse moving through the castle, being led by Sunrise Sparkle, to different rooms and dragging some nobles and government officials out, as even though they aren't overtly heretic, they aren't loyal enough, and every year, there will be some who will be purged, so to ensure that only the most loyal to Daybreaker are in government
 	}
 	ai_will_do = { factor = 40 }
@@ -2113,7 +2124,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_enlightened_education"
-		#Idea here
+		add_ideas = SOL_daybreakers_knowledge
 		###Perhaps an event of a few ponies in school being taught some obvious propaganda of Daybreaker, and questioning it, which leads to first strong whaps, and then actual beatings (they are adults), to ensure that they learn the "truth"
 	}
 	ai_will_do = { factor = 50 }
@@ -2136,7 +2147,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_tradition_of_worship"
 		###Perhaps an event of the worship service of the Cultus, and some of the younger ponies asking questions of the priestess, and ultimately getting forced to agree, since they do see some of the faulty logic about Daybreaker being the center of everything
-		#Idea here
+		add_ideas = SOL_traditional_sacrifice
 	}
 	ai_will_do = { factor = 100 }
 }
@@ -2156,7 +2167,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_sacrifices_on_assembly_line"
-		#Idea here
+		add_ideas = SOL_sacrificial_work
 	}
 	ai_will_do = { factor = 80 }
 }
@@ -2176,7 +2187,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_fodder_troops"
-		#Idea here
+		add_ideas = SOL_heretic_cannon_fodder
 	}
 	ai_will_do = { factor = 80 }
 }
@@ -2196,7 +2207,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_combine_church_and_state"
-		#Idea here
+		add_ideas = SOL_religious_government
 		###Perhaps an event of a number of ministers being replaced with members of the Adoratio, since they are no longer trusted, or an event of basically a theological matter being placed in government, and being voted on, while also declaring that anything else is heresy, through law, let alone religion
 	}
 	ai_will_do = { factor = 70 }
@@ -2220,6 +2231,8 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_honorable_guards"
+		###Probably event of Daybreaker being introduced to Thundering Hoofbeat, who is extremely radical and rabid to follow her, and leads a specific group of elite soldiers whom he trained himself after joining the Militarium to be her special guard, and shows a bit of what they can do, which involves destroying a good section of their course that they set up
+		country_event = solarreworked.312
 		#Spawn 3 25-width, max xp infantry-arty divisions, one general of 4 4/4/2/3
 	}
 	ai_will_do = { factor = 50 }
@@ -2241,6 +2254,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_generals_above_rest"
 		#Generals here
+		country_event = solarreworked.313
 		###Possibly short event of how there are skilled fighters in the Inquisitionis and the Adoratio who could also serve for the Empress, and that they will happily serve and die for her
 	}
 	ai_will_do = { factor = 60 }
@@ -2294,6 +2308,8 @@ shared_focus = {
 			add = daybreaker_god2
 			remove = daybreaker_god
 		}
+		###Possibly event of speaking how everypony is nothing but dust compared to Daybreaker, as she is the being that raises the sun and is untouchable, and how the only service is that of death and honor for her
+		country_event = solarreworked.314
 	}
 	search_filters = { FOCUS_FILTER_STABILITY }
 }
