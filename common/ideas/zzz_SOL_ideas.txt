@@ -1109,6 +1109,13 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.05
 			}
 		}
+		SOL_patriotic_plays = {
+			modifier = {
+				stability_factor = 0.05
+				army_morale_factor = 0.03
+				fascism_drift = 0.01
+			}
+		}
 		SOL_mandatory_worship = {
 			modifier = {
 				consumer_goods_factor = -0.15
@@ -1176,7 +1183,7 @@ ideas = {
 			modifier = {
 				party_popularity_stability_factor = 0.1
 				political_power_gain = 0.25
-				research_speed_factor = -0.07
+				research_speed_factor = -0.08
 			}
 		}
 		SOL_traditional_sacrifice = {
@@ -1982,6 +1989,29 @@ ideas = {
 			research_bonus = {
 				race_tech = 0.075
 			}
+		}
+	}
+	###Concerns###
+	tank_manufacturer = {
+		sanctum_infernal_corps = {
+			allowed = {
+				original_tag = EQS
+			}
+
+			available = {
+				is_EQS_SOL = yes
+			}
+
+			visible = {
+				has_country_flag = SOL_sanctum_unlocked
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+
+			traits = { super_heavy_tank_manufacturer }
+			picture = EQS_sanctum_infernal_corps
 		}
 	}
 }

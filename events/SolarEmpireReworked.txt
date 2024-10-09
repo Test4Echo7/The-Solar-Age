@@ -2466,7 +2466,7 @@ country_event = { #A group of inquisitors, led by Aurora, raid an office buildin
 
     option = { #You already sealed your fate.
         name = solarreworked.303.a
-        add_stability
+        add_stability = 0.1
         add_popularity = {
             ideology = fascism
             popularity = 0.15
@@ -2499,7 +2499,8 @@ country_event = { #Quasar Pulse, on one of her patrols of the city of Santcum So
 
     option = { #Justice has been served
         name = solarreworked.305.a
-
+        custom_effect_tooltip = SOL_nopony_expects_tt
+        set_country_flag = SOL_inquisitionis_occupation_law_unlocked
     }
 }
 
@@ -2513,7 +2514,7 @@ country_event = { #A noble meets with Daybreaker in her throne room, despite her
 
     option = { #Don't I get a trial?
         name = solarreworked.306.a
-
+        add_ideas = SOL_unquestionable_actions
     }
 }
 
@@ -2527,7 +2528,9 @@ country_event = { #A short event of a gladiator fighter who is fighting in the S
 
     option = { #Good soldiers follow orders.
         name = solarreworked.307.a
-
+        add_stability = 0.05
+        add_war_support = 0.1
+        add_political_power = 75
     }
 }
 
@@ -2541,7 +2544,7 @@ country_event = { #Follow a mare as she has a confused conversation with one of 
 
     option = { #But he's my son!
         name = solarreworked.308.a
-
+        add_ideas = SOL_correctly_taught
     }
 }
 
@@ -2555,11 +2558,13 @@ country_event = { #Daybreaker leads a charge against a small bunker, which has b
 
     option = { #Good enough for now.
         name = solarreworked.309.a
-
+        EQS_princess_celestia = {
+			add_trait = { trait = ponykinds_goddess }
+		}
     }
 }
 
-country_event = { #
+country_event = { #Follow a mother as she runs with her child after she see an inquisitor point her out along with a couple of soldiers move toward her, and she realizes that they're trying to take her child, since her foal is a rather talented unicorn for his age, and she doesns't want them being taken for use for Daybreaker, although she is eventually stopped when she is threatened with execution for being a heretic
     id = solarreworked.310
     title = solarreworked.310.t
     desc = solarreworked.310.d
@@ -2567,13 +2572,13 @@ country_event = { #
 
     is_triggered_only = yes
 
-    option = { #
+    option = { #Let me see him, please!
         name = solarreworked.310.a
-
+        add_ideas = SOL_surrendered_foals
     }
 }
 
-country_event = { #
+country_event = { #Quasar Pulse follows Sunrise Sparkle as she leads a strict and stringent hunt through the castle and goes over the performance of the different nobles working there, and how some of them are clearly ready to be purged, as their performance indicates that they are clearly falling to heresy, since they don't love the Empress enough to work harder; Quasar has fun, to say the least
     id = solarreworked.311
     title = solarreworked.311.t
     desc = solarreworked.311.d
@@ -2581,13 +2586,13 @@ country_event = { #
 
     is_triggered_only = yes
 
-    option = { #
+    option = { #How exhilarating! Next year?
         name = solarreworked.311.a
-
+        add_ideas = SOL_frequent_cost_cutting
     }
 }
 
-country_event = { #
+country_event = { #Daybreaker meets with Thundering Hoofbeat, after Blueblood recommends him, since he personally wiped out multiple rebel encampments during the stabilization of the country on his own, with only his personal company with him, and she awards him with a prestigious position as her personal guard captain, as he has proven his rabid loyalty to her, and willingness to die, given he lost part of his horn and an eye while fighting for her
     id = solarreworked.312
     title = solarreworked.312.t
     desc = solarreworked.312.d
@@ -2595,13 +2600,56 @@ country_event = { #
 
     is_triggered_only = yes
 
-    option = { #
+    option = { #I will serve until death!
         name = solarreworked.312.a
-
+        EQS_thundering_hoofbeat = {
+            add_corps_commander_role = {
+                traits = { pony_race_trait harsh_leader infantry_expert ambusher }
+                skill = 4
+                attack_skill = 4
+                defense_skill = 4
+                planning_skill = 2
+                logistics_skill = 3
+            }
+        }
+        hidden_effect = {
+            division_template = {
+                name = "Imperial Guardians"
+                is_locked = yes
+                division_cap = 3
+                division_names_group = EQS_GRD_02
+                priority = 0
+                regiments = {
+                    magical_infantry = { x = 0 y = 0 }
+                    magical_infantry = { x = 0 y = 1 }
+                    magical_infantry = { x = 0 y = 2 }
+                    magical_infantry = { x = 0 y = 3 }
+                    magical_infantry = { x = 1 y = 0 }
+                    magical_infantry = { x = 1 y = 1 }
+                    magical_infantry = { x = 1 y = 2 }
+                    magical_infantry = { x = 1 y = 3 }
+                    magical_infantry = { x = 2 y = 0 }
+                    magical_infantry = { x = 2 y = 1 }
+                    magical_infantry = { x = 2 y = 2 }
+                    artillery_brigade = { x = 3 y = 0 }
+                }
+                support = {
+                    engineer = { x = 0 y = 0 }
+                    unicorn_company = { x = 0 y = 1 }
+                    logistics_company = { x = 0 y = 2 }
+                    light_tank_recon = { x = 0 y = 3 }
+                }
+            }
+            3 = {
+                create_unit = { division = "name = \"Aegis I - Solaris\" division_template = \"Imperial Guardians\"" owner = EQS id = 179 }
+                create_unit = { division = "name = \"Aegis II - Stellar\" division_template = \"Imperial Guardians\"" owner = EQS id = 179 }
+                create_unit = { division = "name = \"Aegis III - Infernis\" division_template = \"Imperial Guardians\"" owner = EQS id = 179 }
+            }
+        }
     }
 }
 
-country_event = { #
+country_event = { #A short event speaking about how many who have gone to serve in both the Adoratio and the Inquisitionis were either soldiers or officers, and even not, some have an aptitude for command, anyway, since they must do so while serving in those roles, and that the best could be brought onto the battlefield, to help suppliment the military further
     id = solarreworked.313
     title = solarreworked.313.t
     desc = solarreworked.313.d
@@ -2609,13 +2657,13 @@ country_event = { #
 
     is_triggered_only = yes
 
-    option = { #
+    option = { #They will happily die for me!
         name = solarreworked.313.a
-
+        set_country_flag = SOL_inquisitor_generals
     }
 }
 
-country_event = { #
+country_event = { #A shorter event of Daybreaker's thoughts as she surveys her ponies again, about how they are nothing but dust compared to her, and how she is the being that raises the sun, the unstoppable force that cannot be extinguished, and that everypony will bow to her, and that she will see to it that every tongue will praise her, and every creature will see her light, even if it's before their death
     id = solarreworked.314
     title = solarreworked.314.t
     desc = solarreworked.314.d
@@ -2623,9 +2671,13 @@ country_event = { #
 
     is_triggered_only = yes
 
-    option = { #
-        name = solarreworked.300.a
-
+    option = { #I am inevitable!
+        name = solarreworked.314.a
+        add_stability = 0.1
+		swap_ruler_traits = {
+			add = daybreaker_god2
+			remove = daybreaker_god
+		}
     }
 }
 

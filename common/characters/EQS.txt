@@ -2104,7 +2104,7 @@ characters={
 			logistics_skill = 2
 			visible = {
 				is_EQS_SOL = yes
-				has_country_flag = SOL_new_generals_flag
+				has_country_flag = SOL_inquisitor_generals
 			}
 		}
 		gender = female

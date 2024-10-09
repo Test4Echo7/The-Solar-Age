@@ -243,7 +243,11 @@ shared_focus = {
 	}
 	completion_reward = {
         log = "[GetDateText]: [Root.GetName]: Focus SOL_draw_upon_militia"
-        #Militia and idea here
+        2 = { create_unit = { division = "division_template = \"Garrison Regiment\"" owner = EQS start_experience_factor = 0.1 id = 9741 } }
+        103 = { create_unit = { division = "division_template = \"Garrison Regiment\"" owner = EQS start_experience_factor = 0.1 = 6023 } }
+        3 = { create_unit = { division = "division_template = \"Garrison Regiment\"" owner = EQS start_experience_factor = 0.1 = 179 } }
+        104 = { create_unit = { division = "division_template = \"Garrison Regiment\"" owner = EQS start_experience_factor = 0.1 = 11100 } }
+        add_ideas = SOL_minimal_training_requirements
 	}
 	ai_will_do = { factor = 300 }
 }
@@ -292,7 +296,7 @@ shared_focus = {
 	}
     completion_reward = {
         log = "[GetDateText]: [Root.GetName]: Focus SOL_counter_terrorists"
-        #Idea here
+        add_ideas = SOL_counter_insurgents
     }
     ai_will_do = { factor = 200 }
 }
@@ -340,7 +344,7 @@ shared_focus = {
 	}
 	completion_reward = {
         log = "[GetDateText]: [Root.GetName]: Focus SOL_spending_money"
-        #Idea here
+        add_ideas = SOL_inflationary_spending
 	}
 	ai_will_do = { factor = 150 }
 }
@@ -438,7 +442,7 @@ shared_focus = {
 	}
 	completion_reward = {
         log = "[GetDateText]: [Root.GetName]: Focus SOL_take_everypony"
-        #Idea here
+        add_ideas = SOL_desperate_drafting
         ###Maybe event of a recruiter being forced to pass every single pony she sees, just so that they can get more bodies on the front, even though some of them are cowards, drunks, etc.
 	}
 	ai_will_do = { factor = 200 }
@@ -1962,7 +1966,6 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_field_executions"
 		country_event = solarreworked.305
-		set_country_flag = SOL_inquisitionis_occupation_law_unlocked
 		###Event of an inquisitor (Quasar) being brought forward a suspected heretic, although there is nothing proven, and the pony tries to defend themselves, especially considering they don't recognize the rule of the Solar Empire since they are an occupier, and the inquisitor takes justice into her own hooves, as simply the accusing is enough, especially since they're supsicious already
 	}
 	ai_will_do = { factor = 40 }
@@ -2056,9 +2059,6 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_better_than_best"
 		#Add stats to Daybreaker
-		EQS_princess_celestia = {
-			add_trait = { trait = ponykinds_goddess }
-		}
 		country_event = solarreworked.309
 		###Possibly event of Daybreaker taking a lead role in an attack of a heretic stronghold or the like, and she wants to test some of the new spells that she practiced as she needs to see what her soldiers are doing under her command, and also so she can enact some judgement of ponies herself, and she is basically a walking death machine, although it clear she is at her limits protecting herself
 	}
@@ -2303,11 +2303,6 @@ shared_focus = {
 	y = 2
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_She_Who_Raises_the_Sun"
-		add_stability = 0.1
-		swap_ruler_traits = {
-			add = daybreaker_god2
-			remove = daybreaker_god
-		}
 		###Possibly event of speaking how everypony is nothing but dust compared to Daybreaker, as she is the being that raises the sun and is untouchable, and how the only service is that of death and honor for her
 		country_event = solarreworked.314
 	}
@@ -6716,7 +6711,32 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_establish_crystal_legion"
 		add_command_power = -40
 		CRY = {
-			#Spawn divisions here
+			 hidden_effect = {
+				division_template = {
+					name = "Imperial Insurance"
+					is_locked = yes
+					division_cap = 2
+					division_names_group = EQS_GRD_02
+					priority = 0
+					regiments = {
+						magical_infantry = { x = 0 y = 0 }
+						magical_infantry = { x = 0 y = 1 }
+						magical_infantry = { x = 0 y = 2 }
+						magical_infantry = { x = 1 y = 0 }
+						magical_infantry = { x = 1 y = 1 }
+						magical_infantry = { x = 1 y = 2 }
+						artillery_brigade = { x = 2 y = 0 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+						unicorn_company = { x = 0 y = 1 }
+					}
+				}
+			}
+			344 = {
+                create_unit = { division = "name = \"Custos I - Crystallum\" division_template = \"Imperial Guardians\"" owner = CRY id = 489 }
+                create_unit = { division = "name = \"Custos II - Hiems\" division_template = \"Imperial Guardians\"" owner = CRY id = 489 }
+            }
 			add_war_support = 0.1
 		}
 	}
@@ -13312,7 +13332,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_dragons_fire"
-		#Unlock operation
+		custom_effect_tooltip = EQS_unlock_operation_infernis_tt
 	}
 	ai_will_do = { factor = 70 }
 }
@@ -13340,7 +13360,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_darkest_depths"
-		#Operation here
+		custom_effect_tooltip = EQS_unlock_operation_necromancer_tt
 	}
 	ai_will_do = { factor = 100 }
 }
@@ -13367,7 +13387,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_steal_storms_thunder"
-		#Operation here
+		custom_effect_tooltip = EQS_unlock_operation_donner_tt
 	}
 	ai_will_do = { factor = 70 }
 }

@@ -32,6 +32,7 @@ characters = {
 			logistics_skill = 1
 			visible = {
                 is_EQS_SOL = yes
+                has_country_flag = SOL_inquisitor_generals
 			}
 		}
 		advisor = {
@@ -73,6 +74,7 @@ characters = {
 			logistics_skill = 2
 			visible = {
 				is_EQS_SOL = yes
+				has_country_flag = SOL_inquisitor_generals
 			}
 		}
 	}
@@ -94,6 +96,7 @@ characters = {
 			logistics_skill = 1
 			visible = {
 				is_EQS_SOL = yes
+				has_country_flag = SOL_inquisitor_generals
 			}
 		}
 	}
@@ -153,6 +156,7 @@ characters = {
             logistics_skill = 2
             visible = {
                 is_EQS_SOL = yes
+                has_country_flag = SOL_inquisitor_generals
             }
 		}
 	}
@@ -172,7 +176,10 @@ characters = {
             defense_skill = 3
             planning_skill = 1
             logistics_skill = 4
-            visible = { is_EQS_SOL = yes }
+            visible = {
+				is_EQS_SOL = yes
+				has_country_flag = SOL_inquisitor_generals
+			}
         }
 	}
 	EQS_Steel_Sickle = {
@@ -193,6 +200,7 @@ characters = {
             logistics_skill = 1
             visible = {
                 is_EQS_SOL = yes
+                has_country_flag = SOL_inquisitor_generals
             }
 		}
 	}
@@ -257,10 +265,6 @@ characters = {
 					is_EQS_SOL = yes
 					NOT = { has_idea = absconditus_lumen }
 					NOT = { has_idea = sweetie_drops }
-					OR = {
-						has_completed_focus = SOL_Imperial_Investigative_Service
-						has_completed_focus = SOL_solaris_speculatores
-					}
 				}
 				visible = {
 					OR = {
@@ -291,10 +295,6 @@ characters = {
 					is_EQS_SOL = yes
 					NOT = { has_idea = absconditus_lumen }
 					NOT = { has_idea = sweetie_drops }
-					OR = {
-						has_completed_focus = SOL_Imperial_Investigative_Service
-						has_completed_focus = SOL_solaris_speculatores
-					}
 				}
 				visible = {
 					OR = {
@@ -324,10 +324,6 @@ characters = {
 					is_EQS_SOL = yes
 					NOT = { has_idea = astrum_solus }
 					NOT = { has_idea = sweetie_drops }
-					OR = {
-						has_completed_focus = SOL_Imperial_Investigative_Service
-						has_completed_focus = SOL_solaris_speculatores
-					}
 				}
 				visible = {
 					OR = {
@@ -355,10 +351,6 @@ characters = {
 					is_EQS_SOL = yes
 					NOT = { has_idea = astrum_solus }
 					NOT = { has_idea = sweetie_drops }
-					OR = {
-						has_completed_focus = SOL_Imperial_Investigative_Service
-						has_completed_focus = SOL_solaris_speculatores
-					}
 				}
 				visible = {
 					OR = {
@@ -368,6 +360,53 @@ characters = {
 				}
 				traits = { ambitious_planner }
 			}
+		}
+	}
+	EQS_thundering_hoofbeat = {
+		name = EQS_thundering_hoofbeat
+		portraits = {
+			army = {
+				large = "gfx/leaders/EQS/Thundering_Hoofbeat.tga"
+				small = "gfx/interface/ideas/advisors/EQS/EQS_thundering_hoofbeat.tga"
+			}
+		}
+	}
+	EQS_scorched_earth = {
+		name = EQS_scorched_earth
+		portraits = {
+			army = {
+				large = "gfx/leaders/EQS/Scorched_Earth.tga"
+				small = "gfx/interface/ideas/advisors/EQS/EQS_scorched_earth.tga"
+			}
+		}
+		corps_commander = {
+			traits = { pony_race_trait harsh_leader } #Replace Aurora so that she's only for God-Empress
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 3
+			visible = {
+				is_EQS_SOL = yes
+				has_country_flag = SOL_new_generals_flag
+			}
+		}
+	}
+	EQS_bunsen_beaker = {
+		name = EQS_bunsen_beaker
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/advisors/EQS/EQS_bunsen_beaker.tga"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = bunsen_beaker
+			allowed = { original_tag = EQS }
+			available = { is_EQS_SOL = yes }
+			visible = { has_completed_focus = SOL_bunsen_beaker_research }
+			traits = { erratic_scientist }
+			research_bonus = { race_tech = 0.05 }
 		}
 	}
 	GRI_daybreaker = {

@@ -626,6 +626,9 @@ recruit_character = EQS_wintergleam
 recruit_character = EQS_red_tide
 recruit_character = EQS_astrum_solus
 recruit_character = EQS_absconditus_lumen
+recruit_character = EQS_scorched_earth
+recruit_character = EQS_thundering_hoofbeat
+recruit_character = EQS_bunsen_beaker
 
 create_faction = "All_ponies_front"
 add_to_faction = CRY
