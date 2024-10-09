@@ -3000,3 +3000,99 @@ country_event = { #Event quickly stating that now that the war is over, with EQC
         }
     }
 }
+
+country_event = { #New purge event
+    id = solarreworked.503
+    title = solarreworked.503.t
+   desc = {
+		text = solarreworked.503.d_a
+		trigger = {
+			has_completed_focus = SOL_god_empress
+		}
+	}
+	desc = {
+		text = solarreworked.503.d_b
+		trigger = {
+			NOT = {
+				has_completed_focus = SOL_god_empress
+			}
+		}
+	}
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.503"}
+
+    is_triggered_only = yes
+
+    option = { #Soarin
+		name = solarempire.10.a
+		trigger = {
+			has_character = EQS_soarin
+		}
+		EQS_soarin = {
+			retire = yes
+		}
+		EQS_anonfilly = { retire = yes }
+		EQS_sentinel = { retire = yes }
+		EQS_allen_spark = { retire = yes }
+		if = {
+            limit = { has_completed_focus = SOL_god_empress }
+            EQS_sunrise_moonshadow = { retire = yes }
+            EQS_swift_wing = { retire = yes }
+            EQS_SOL_august_fon_eisenstadt = { retire = yes }
+		}
+	}
+	option = { #Fast Clip
+		name = solarempire.10.b
+		trigger = {
+			has_character = EQS_fast_clip
+		}
+		EQS_fast_clip = {
+			retire = yes
+		}
+		EQS_anonfilly = { retire = yes }
+		EQS_sentinel = { retire = yes }
+		EQS_allen_spark = { retire = yes }
+		if = {
+            limit = { has_completed_focus = SOL_god_empress }
+            EQS_sunrise_moonshadow = { retire = yes }
+            EQS_swift_wing = { retire = yes }
+            EQS_SOL_august_fon_eisenstadt = { retire = yes }
+		}
+	}
+	option = { #Whiplash
+		name = solarempire.10.c
+		trigger = {
+			has_character = EQS_whiplash
+		}
+		EQS_whiplash = {
+			retire = yes
+		}
+		EQS_anonfilly = { retire = yes }
+		EQS_sentinel = { retire = yes }
+		EQS_allen_spark = { retire = yes }
+		if = {
+            limit = { has_completed_focus = SOL_god_empress }
+            EQS_sunrise_moonshadow = { retire = yes }
+            EQS_swift_wing = { retire = yes }
+            EQS_SOL_august_fon_eisenstadt = { retire = yes }
+		}
+	}
+}
+
+country_event = { #God-Empress-only follow-up purge if the purge focus is taken before becoming the God-Empress (and not a different path)
+    id = solarreworked.504
+    title = solarreworked.504.t
+    desc = solarreworked.504.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.504"}
+
+    is_triggered_only = yes
+
+    option = { #It is time they faced the consequences of their sins!
+		name = solarreworked.504.a
+        EQS_sunrise_moonshadow = { retire = yes }
+        EQS_swift_wing = { retire = yes }
+        EQS_SOL_august_fon_eisenstadt = { retire = yes }
+        clr_country_flag = SOL_incomplete_purge
+	}
+}

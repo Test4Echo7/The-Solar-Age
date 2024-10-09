@@ -1690,6 +1690,18 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_solaris_inquisitionis"
 		country_event = solarreworked.302
+		if = {
+			limit = {
+				has_country_flag = SOL_incomplete_purge
+			}
+			hidden_effect = {
+				country_event = {
+					id = solarreworked.504
+					days = 3
+					random_days = 7
+				}
+			}
+		}
 		###Event of Twilight meeting privately with Daybreaker, who is pleased to offer Twilight an even better position than she had before, which will be the head inquisitor of the Solaris Inquisitionis, her holy inquisition, that will be used to keep Harmony and Order, which Twilight readily accepts, as she is worried that ponies don't understand Daybreaker's desires; it is close to a mother-daughter relationship kind of talk
 	}
 	ai_will_do = { factor = 250 }
@@ -9240,6 +9252,14 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_traitors_reward"
 		###Event of Daybreaker executing one of the generals who get purged, listing of a long list of crimes, both real and fabricated, and accusing them as a harmonist conspirator, before applied a death by flame
+		if = {
+			limit = {
+				NOT = { has_completed_focus = SOL_god_empress }
+				NOT = { has_completed_focus = SOL_empress_mother }
+				NOT = { has_completed_focus = SOL_empress_protector }
+			}
+			set_country_flag = SOL_incomplete_purge
+		}
 	}
 	ai_will_do = { factor = 250 }
 }
