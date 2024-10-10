@@ -1027,18 +1027,18 @@ characters={
 							}
 						}
 						tag = event_target:equestria
-					}
-				}
-				if = {
-					limit = {
-						OR = {
-							original_tag = EQC
-							original_tag = CRY
-							original_tag = HIP
-							original_tag = RCT
-							original_tag = MGY
+						if = {
+							limit = {
+								OR = {
+									original_tag = EQC
+									original_tag = CRY
+									original_tag = HIP
+									original_tag = RCT
+									original_tag = MGY
+								}
+								has_country_flag = SOL_hosting_M6
+							}
 						}
-						has_country_flag = SOL_hosting_M6
 					}
 				}
 				NOT = {
@@ -1369,24 +1369,25 @@ characters={
 							}
 						}
 						tag = event_target:equestria
+						if = {
+							limit = {
+								OR = {
+									original_tag = EQC
+									original_tag = CRY
+									original_tag = HIP
+									original_tag = RCT
+									original_tag = MGY
+								}
+								has_country_flag = SOL_hosting_M6
+							}
+						}
 					}
 				}
 				if = {
 					limit = { country_exists = NLR }
 					NOT = { has_global_flag = rarity_captured }
 				}
-				if = {
-					limit = {
-						OR = {
-							original_tag = EQC
-							original_tag = CRY
-							original_tag = HIP
-							original_tag = RCT
-							original_tag = MGY
-						}
-						has_country_flag = SOL_hosting_M6
-					}
-				}
+
 				NOT = {
 					has_country_flag = EQS_HIP_elements_sent
 				}
@@ -1693,18 +1694,18 @@ characters={
 							}
 						}
 						tag = event_target:equestria
-					}
-				}
-				if = {
-					limit = {
-						OR = {
-							original_tag = EQC
-							original_tag = CRY
-							original_tag = HIP
-							original_tag = RCT
-							original_tag = MGY
+						if = {
+							limit = {
+								OR = {
+									original_tag = EQC
+									original_tag = CRY
+									original_tag = HIP
+									original_tag = RCT
+									original_tag = MGY
+								}
+								has_country_flag = SOL_hosting_M6
+							}
 						}
-						has_country_flag = SOL_hosting_M6
 					}
 				}
 				NOT = {
@@ -2030,10 +2031,8 @@ characters={
 			desc = EQS_sunset_shimmer_desc
 			visible = {
 				OR = {
-					OR = {
-						has_country_flag = EQS_sunset_shimmer_arrived
-						has_country_flag = SOL_sunset_ascended
-					}
+					has_country_flag = EQS_sunset_shimmer_arrived
+					has_country_flag = SOL_sunset_ascended
 					can_host_M6 = yes
 				}
 				#NOT = {

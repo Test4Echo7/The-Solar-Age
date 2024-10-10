@@ -480,10 +480,6 @@ country_event = { #Daybreaker holds a speech in Sanctum Solar, which has just be
 				}
 			}
 		}
-		set_province_name = {
-            id = 179
-            name = "EQS_sanctum_solar"
-        }
 		set_cosmetic_tag = EQS_SOL
     }
 }
@@ -1617,7 +1613,7 @@ country_event = { #Report to Daybreaker that so far the hunt for the M6 and Suns
         name = solarreworked.159.a
         hidden_effect = {
             random_list = {
-                40 = {
+                60 = {
                     set_country_flag = SOL_fled_CRY
                     hidden_effect = {
                         country_event = {
@@ -1627,7 +1623,7 @@ country_event = { #Report to Daybreaker that so far the hunt for the M6 and Suns
                         }
                     }
                 }
-                60 = {
+                40 = {
                     set_country_flag = SOL_fled_EQC
                     hidden_effect = {
                         country_event = {

@@ -1118,9 +1118,9 @@ country_event = {
 	title = solarempire.131.t
 	desc = solarempire.131.d
 	picture = GFX_event_solarempire
-	trigger = {
-		NOT = { has_global_flag = CRY_puppet_chosen }
-	}
+	#trigger = {
+	#	NOT = { has_global_flag = CRY_puppet_chosen }
+	#}
 	immediate = {
 		hidden_effect = {
 			random_country_with_original_tag = {

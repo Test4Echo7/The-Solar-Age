@@ -33,7 +33,12 @@ EQS_debug_category = {
                 }
             }
             set_country_flag = SOL_has_twilight
-            country_event = equestria.154
+            set_country_flag = SOL_has_captured_sunset
+            hidden_effect = {
+                EQS_create_new_commanders = yes
+                EQS_SOL_wartime_change = yes
+            }
+            complete_national_focus = SOL_Imperium_Solis
             complete_national_focus = SOL_god_empress
         }
     }

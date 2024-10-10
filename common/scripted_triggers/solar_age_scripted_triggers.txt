@@ -48,23 +48,23 @@ EQS_not_most_advanced_ships = {
 can_host_M6 = {
 	OR = {
 		AND = {
-			original_tag = EQC
+			tag = EQC
 			has_country_flag = SOL_hosting_M6
 		}
 		AND = {
-			original_tag = CRY
+			tag = CRY
 			has_country_flag = SOL_hosting_M6
 		}
 		AND = {
-			original_tag = MGY
+			tag = MGY
 			has_country_flag = SOL_hosting_M6
 		}
 		AND = {
-			original_tag = HIP
+			tag = HIP
 			has_country_flag = SOL_hosting_M6
 		}
 		AND = {
-			original_tag = RCT
+			tag = RCT
 			has_country_flag = SOL_hosting_M6
 		}
 	}

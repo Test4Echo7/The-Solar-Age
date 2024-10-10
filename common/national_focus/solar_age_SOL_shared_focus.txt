@@ -243,10 +243,10 @@ shared_focus = {
 	}
 	completion_reward = {
         log = "[GetDateText]: [Root.GetName]: Focus SOL_draw_upon_militia"
-        2 = { create_unit = { division = "division_template = \"Garrison Regiment\"" owner = EQS start_experience_factor = 0.1 id = 9741 } }
-        103 = { create_unit = { division = "division_template = \"Garrison Regiment\"" owner = EQS start_experience_factor = 0.1 = 6023 } }
-        3 = { create_unit = { division = "division_template = \"Garrison Regiment\"" owner = EQS start_experience_factor = 0.1 = 179 } }
-        104 = { create_unit = { division = "division_template = \"Garrison Regiment\"" owner = EQS start_experience_factor = 0.1 = 11100 } }
+        2 = { create_unit = { division = "division_template = \"Garrison Regiment\" start_experience_factor = 0.1" owner = EQS id = 9741 } }
+        103 = { create_unit = { division = "division_template = \"Garrison Regiment\"start_experience_factor = 0.1" owner = EQS id = 6023 } }
+        3 = { create_unit = { division = "division_template = \"Garrison Regiment\"start_experience_factor = 0.1" owner = EQS id = 179 } }
+        104 = { create_unit = { division = "division_template = \"Garrison Regiment\"start_experience_factor =0.1 " owner = EQS id = 11100 } }
         add_ideas = SOL_minimal_training_requirements
 	}
 	ai_will_do = { factor = 300 }
@@ -1063,7 +1063,6 @@ shared_focus = {
 		is_subject = no
 		has_DB_ruler = yes
 	}
-	#bypass = {}
 	cost = 5
 	ai_will_do = {
 		factor = 100
@@ -1100,7 +1099,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_industrial_hoof"
-		#Idea here
+		add_ideas = SOL_controlled_economy
 	}
 	ai_will_do = { factor = 120 }
 }
@@ -1121,7 +1120,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_world_opportunity"
-		#Idea here
+		add_ideas = SOL_war_of_worlds
 	}
 	ai_will_do = { factor = 70 }
 }
@@ -1142,7 +1141,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_land_of_subjects"
-		#Idea here
+		add_ideas = SOL_holy_solar_empire
 	}
 	ai_will_do = { factor = 80 }
 }
@@ -1162,7 +1161,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_bed_companies"
-		#Idea here
+		add_ideas = SOL_courted_companies
 		###Maybe event of Daybreaker basically being on a board meeting of some corporation that is in EQS, and pushing to the point that any of their interests become hers, because what she wants is obviously the best for everpony else, especially her
 	}
 	ai_will_do = { factor = 50 }
@@ -1184,6 +1183,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_ponys_project"
 		#Inform player about decisions here
+		#Spirit should be +2% global building slots, +5% con speed, -2% CS
 		###Maybe event of Daybreaker proudly standing before an idea she had of something meant to honor her, or to show her glory, despite how it is draining the Empire's resources, but because she needs it, then she gets it, no matter what other ponies need
 	}
 	ai_will_do = { factor = 50 }
@@ -1335,7 +1335,8 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_imperial_betters"
-		#Idea here
+		add_ideas = SOL_masters_of_equus
+		###Possibly event of some administrators coming to a recently integrated town and reworking the entire thing, even though it's already running smoothly, simply because they are superior since they're from the Empire proper
 	}
 	ai_will_do = { factor = 100 }
 }
@@ -1444,6 +1445,7 @@ shared_focus = {
 			uses = 2
 			category = magical_tech
 		}
+		###Possibly short event of some training sessions for new mages, using their aggression and emotions to further improve their magical ability
 	}
 	ai_will_do = { factor = 50 }
 }
@@ -1464,6 +1466,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_loyals_boon"
 		#Generals here
+		###Another short event about how some of the ponies who didn't work well with the Equestrian Military can be recruited, as they were quite talented, and they should have been accepted long ago
 	}
 	ai_will_do = { factor = 50 }
 }
@@ -1508,7 +1511,8 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_train_in_excellence"
-		#Idea here
+		add_ideas = SOL_superior_creatures
+		###Perhaps a short event of how ponies are the superior beings, because of their magic, their endurance, and simply being better (much like "Let's be Xenophobic"), and how they will reach great heights, led by their even more amazing empress
 	}
 	ai_will_do = { factor = 40 }
 }
@@ -1529,7 +1533,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_nopony_greater"
-		#Idea here
+		add_ideas = SOL_superior_empress
 		###Maybe short event about how nopony can hope to match the beauty, grace, strength, and intelligence of Daybreaker, so they are better off learning something that is befitting their lot in life, such as farming or groveling
 	}
 	ai_will_do = { factor = 100 }
@@ -1556,12 +1560,7 @@ shared_focus = {
 	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_Empress_knows_Best"
-		add_stability = 0.15
-		add_political_power = 200
-		add_popularity = {
-			ideology = fascism
-			popularity = 0.1
-		}
+		add_ideas = SOL_mother_knows_best
 		###Maybe add a second trait of +0.03 fascism, +10% party stability, +0.1pp, -10% advisor cost and high command cost
 		###Event again speaking from Daybreaker's perspective about how she will lead the ponies where they couldn't, because they are simply too simple-minded, stupid, or ignorant to know the truth of life, and that truth is that she is their light, their breath, and nothing can come of their lives except because she guides them; they are simple, but she is not, and she will make sure they are led, as an alicorn should do, and in return, she requires complete loyalty
 		###Alternately an event of a pony coming before the Empress, seeking attention on an issue they've been having trouble with and she is incredibly condescending in her tone and implies that it's a waste of her time, and basically only helps once they genuflect enough upon her, and otherwise feed her ego
@@ -1659,7 +1658,6 @@ shared_focus = {
 	cost = 4
 	prerequisite = { focus = SOL_unveil_cultus }
 	available = {
-		has_global_flag = SOL_alpha_bitch_awoken
 		is_subject = no
 		has_DB_ruler = yes
 	}
@@ -1682,7 +1680,6 @@ shared_focus = {
 	cost = 4
 	prerequisite = { focus = SOL_god_empress }
 	available = {
-		has_global_flag = SOL_twilight_converted
 		is_subject = no
 		has_DB_ruler = yes
 	}
@@ -1716,7 +1713,6 @@ shared_focus = {
 	cost = 5
 	prerequisite = { focus = SOL_solaris_adoratio }
 	available = {
-		has_global_flag = SOL_twilight_converted
 		is_subject = no
 		has_DB_ruler = yes
 	}
@@ -1767,9 +1763,9 @@ shared_focus = {
 
 	cost = 5
 	prerequisite = { focus = SOL_unveil_cultus }
+	prerequisite = { focus = SOL_solaris_inquisitionis }
 	mutually_exclusive = { focus = SOL_inquisitionis_primary_role}
 	available = {
-		has_global_flag = SOL_twilight_converted
 		is_subject = no
 		has_DB_ruler = yes
 	}
@@ -2291,6 +2287,16 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_monsters_of_earth"
 		#Spawn MIO or concern for Sanctum Arms
+		set_country_flag = SOL_sanctum_arms_unlocked
+		if = {
+			limit = {
+				has_dlc = "Arms Against Tyranny"
+			}
+			#show_mio_tooltip = SOL_sanctum_infernal_corps_organization
+		}
+		else = {
+			#show_ideas_tooltip = SOL_sanctum_infernal_corps
+		}
 	}
 	ai_will_do = { factor = 50 }
 }
@@ -2552,7 +2558,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_government_of_one"
-		#Idea here
+		add_ideas = SOL_noponies_equal
 		#Loc should speak about how there has been improvement, but government is needlessly slow, and simply getting out of Daybreaker's way will be the best course of action for improving ponies' lives; let her live as a benevolent dictator
 	}
 	ai_will_do = { factor = 150 }
@@ -2574,7 +2580,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_honest_cabinet"
-		#Idea here
+		add_ideas = SOL_balancing_cabinet
 	}
 	ai_will_do = { factor = 100 }
 }
@@ -2601,6 +2607,7 @@ shared_focus = {
 			popularity = -0.1
 		}
 		add_stability = -0.05
+		###Perhaps an event of Daybreaker first meeting the M6, and promising that they'll be having more talks, and that they will soon accept her forgiveness soon enough
 	}
 	ai_will_do = { factor = 40 }
 }

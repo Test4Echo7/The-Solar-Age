@@ -301,7 +301,7 @@ EQS_SOL_wartime_change = {
 		limit = { original_tag = CRY is_subject_of = EQS }
 		set_country_flag = is_sol_puppet
 	}
-	country_event = { id = solarempire.17 days = 4 }
+	#country_event = { id = solarempire.17 days = 4 }
 	if = {
 		limit = { has_war_with = NLR }
 		every_other_country = {
@@ -321,10 +321,10 @@ EQS_SOL_wartime_change = {
 	else = {
 		set_province_name = { id = 6023 name = EQS_SOL_invicta_vp }
 	}
-	if = {
-		limit = { surrender_progress > 0.4 }
-		set_country_flag = remove_db_70_days
-	}
+	#if = {
+	#	limit = { surrender_progress > 0.4 }
+	#	set_country_flag = remove_db_70_days
+	#}
 	EQS_SOL_remove_ideas = yes
 	country_event = { id = solarempire.1018 }
 	if = {
