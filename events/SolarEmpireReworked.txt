@@ -2389,6 +2389,120 @@ country_event = {
     }
 }
 
+country_event = { #Daybreaker visits the Crystal Empire unannounced and speaks with Cadance regarding the nature of requiring Flurry to further her understanding of being an alicorn; if Twilight, it'd be simply a discussion on Flurry's performance, and how both are worried about their niece's stance on true harmony, which will make sure that Daybreaker gets Flurry
+    id = solarreworked.230
+    title = solarreworked.230.t
+    desc = solarreworked.230.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.230"}
+
+    is_triggered_only = yes
+
+    option = { #Surely, you understand my request?
+        name = solarreworked.230.a
+        hidden_effect = {
+            CRY = {
+                country_event = {
+                    id = solarreworked.231
+                    days = 1
+                }
+            }
+        }
+    }
+}
+
+country_event = { #Short event summarzing for either Cadance or Sunrise what Daybreaker said regarding Flurry, with slight differences in the language and content based on who's leading
+    id = solarreworked.231
+    title = solarreworked.231.t
+    desc = solarreworked.231.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.231"}
+
+    is_triggered_only = yes
+
+    option = { #Of course! But her education is important, you know!
+        name = solarreworked.231.a
+        trigger = {
+            has_country_leader = { character = EQS_twilight_sparkle ruling_only = yes }
+        }
+        set_country_flag = SOL_flurry_captured
+        FROM = {
+            country_event = {
+                id = solarreworked.232
+                days = 1
+            }
+        }
+    }
+    option = { #What can I do against you?
+        name = solarreworked.231.b
+        ai_chance = { factor = 70 }
+        trigger = {
+            has_country_leader = { character = CRY_princess_mi_amore_cadenza ruling_only = yes }
+        }
+        set_country_flag = SOL_flurry_captured
+        FROM = {
+            country_event = {
+                id = solarreworked.232
+                days = 1
+            }
+        }
+    }
+    option = { #I won't let you brainwash my only foal!
+        name = solarreworked.231.c
+        ai_chance = { factor = 30 }
+        trigger = {
+            has_country_leader = { character = CRY_princess_mi_amore_cadenza ruling_only = yes }
+        }
+        FROM = {
+            country_event = {
+                id = solarreworked.233
+                days = 1
+            }
+        }
+    }
+}
+
+country_event = { #Event stating that CRY has accepted, and potentially a very short amount of content regarding Flurry seeing her new room in the Imperial Palace
+    id = solarreworked.232
+    title = solarreworked.232.t
+    desc = solarreworked.232.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.232"}
+
+    is_triggered_only = yes
+
+    option = { #Welcome home, Flurry.
+        name = solarreworked.232.a
+        add_political_power = 30
+        #Idea here
+    }
+}
+
+country_event = { #Short event summarzing that CRY has rejected the demand, and is cutting ties as quickly as it can
+    id = solarreworked.233
+    title = solarreworked.233.t
+    desc = solarreworked.233.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.233"}
+
+    is_triggered_only = yes
+
+    option = { #This wasn't a request.
+        name = solarreworked.233.a
+        end_puppet = FROM
+        create_wargoal = {
+            type = puppet_wargoal_focus
+            target = FROM
+        }
+    }
+    option = { #Fighting another war over one pony is not worth my attention.
+        name = solarreworked.233.b
+        add_political_power = -75
+        add_stability = -0.05
+        add_war_support = -0.1
+    }
+}
+
 ###Specific Political Paths###
 ###God-Empress###
 country_event = { #With herself established, Daybreaker hosts a grand ceremony in Canterlot, to rename it to Sanctum Solar, the heart of her Imperium Solaris, and the marginalized Solaris Cultus is the official state religion, as she has Padlock Key host a first sermon on how the fire of Daybreaker will consume all that oppose them

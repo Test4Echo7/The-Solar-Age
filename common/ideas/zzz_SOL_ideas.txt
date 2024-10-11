@@ -1404,7 +1404,7 @@ ideas = {
 		SOL_required_tattling_lar = {
 			modifier = {
 				stability_factor = 0.05
-				enemy_operative_detection_chance = 10
+				enemy_operative_detection_chance_factor = 0.1
 				drift_defence_factor = 0.5
 				encryption_factor = 0.05
 			}
@@ -1414,6 +1414,21 @@ ideas = {
 				stability_factor = 0.05
 				drift_defence_factor = 0.5
 				encryption = 0.25
+			}
+		}
+		SOL_subdued_will = {
+			modifier = {
+				army_core_defence_factor = 0.1
+				production_speed_bunker_factor = 0.25
+				mobilization_speed = 0.1
+			}
+		}
+		SOL_celestial_free_will = {
+			modifier = {
+				stability_factor = -0.05
+				democratic_drift = 0.01
+				production_speed_buildings_factor = 0.1
+				local_resources_factor = 0.05
 			}
 		}
 		SOL_unneeded_help = {
@@ -1586,6 +1601,7 @@ ideas = {
 			modifier = {
 				local_resources_factor = 0.03
 				production_speed_buildings_factor = 0.05
+				extra_trade_to_overlord_factor = 0.1
 			}
 		}
 		SOL_dawn_star_elites = {
@@ -1597,7 +1613,7 @@ ideas = {
 		}
 		SOL_river_brethren = {
 			modifier = {
-				fascism_drift = 0.05
+				fascism_drift = 0.03
 				party_popularity_stability_factor = 0.1
 			}
 		}

@@ -17,14 +17,43 @@ apply_SOL_cosmetic_tags_on_puppet = {
     else_if = {
         limit = { original_tag = EQC }
         every_possible_country = {
+            if = {
+                limit = {
+                    has_character = EQS_SOL_arcane_nova
+                    NOT = { tag = EQC }
+                }
+                EQS_SOL_arcane_nova = { set_nationality = EQC }
+            }
+        }
+        every_possible_country = {
             limit = {
                 has_character = EQS_SOL_arcane_nova
             }
-            EQS_SOL_arcane_nova = {
-                retire = yes
+            if = {
+                limit = {
+                    NOT = { can_be_country_leader = EQS_SOL_arcane_nova }
+                }
+                EQS_SOL_arcane_nova = {
+                    add_country_leader_role = {
+                        promote_leader = yes
+                        country_leader = {
+                            desc = "fancy_albino_sunhorse_desc"
+                            expire = "1965.1.1"
+                            ideology = falangism
+                            traits = { empresss_representative }
+                        }
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    can_be_country_leader = EQS_SOL_arcane_nova
+                    NOT = { has_country_leader = { character = EQS_SOL_arcane_nova ruling_only = yes } }
+                }
+                promote_character = EQS_SOL_arcane_nova
             }
         }
-        promote_character = EQS_SOL_arcane_nova
+        set_cosmetic_tag = EQC_SOL
         set_party_name = { ideology = fascism long_name = EQC_SOL_fascism_party_long name = EQC_SOL_fascism_party }
         if = {
             limit = {
@@ -188,4 +217,30 @@ apply_SOL_cosmetic_tags_on_puppet = {
     #    limit = { original_tag = HIP }
     #    country_event = solarempire.1040
     #}
+    else_if = {
+        limit = { original_tag = DMT }
+        country_event = solarempire.1041
+    }
+}
+
+SOL_fix_albino_sunhorse = { #In anticipation of Arcane Nova being fixed at some point
+    if = {
+        limit = {
+            EQS_SOL_arcane_nova = { has_country_leader_ideology = falangism }
+        }
+        EQS_SOL_arcane_nova = {
+            remove_country_leader_role = { ideology = falangism }
+        }
+    }
+    EQS_SOL_arcane_nova = {
+        add_country_leader_role = {
+            promote_leader = yes
+            country_leader = {
+                desc = "fancy_albino_sunhorse_desc"
+                expire = "1965.1.1"
+                ideology = falangism
+                traits = { empresss_representative }
+            }
+        }
+    }
 }

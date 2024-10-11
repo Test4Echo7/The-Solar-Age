@@ -181,6 +181,8 @@
   SOL_finalize_with_personal_instruction_desc:0 "Since Firestorm began her intensive studies and exercises in all aspects of war, she has become a formidable foe on the battlefield, but there are still many things that can be taught to her, for the God-Empress has not deigned Firestorm worthy of learning many of her own secrets. That shall change, with her last instructions being personal contests between herself and the God-Empress."
   SOL_remove_temporary_laws:0 "Rescind Wartime Measures"
   SOL_remove_temporary_laws_desc:0 "Although they were necessary to ensure smooth transitions to a more orderly society, many of the militarized aspects of some of our wartime laws are beginning to show their inflexibility. Military matters cannot properly deal with civilian problems, and the cudgels used for our defense are now beginning to harm us. We should reimplement some of the old laws until we can move to a fully-realized §Oempire§!."
+  SOL_take_flurry:0 "Retrieve Flurry Heart"
+  SOL_take_flurry_desc:0 "The Empress's young niece has lived under the influence of weak and impotent tutors from her birth, and Princess Cadance and Shining Armor have done little to further her understanding of the blessing with which she has been bestowed as a natural-birth alicorn. As Daybreaker is concerned for Flurry Heart's education, a visit to inform Cadance of her new home is in order."
 
   ###Flags and Custom Tooltips###
   SOL_has_captured_sunset:0 "Sunset Shimmer has been captured."
@@ -225,6 +227,7 @@
   EQS_unlock_operation_necromancer_tt:0 "We can prepare §YOperation: Necromancer§! to pilfer the knowledge of the §Rdark arts§! from §Y[DED.GetNameDef]§!."
   EQS_unlock_operation_donner_tt:0 "We can prepare §YOperation: Donner§! to take the §YStaff of Sacanas§! from the §RStorm King's§! shattered kingdom."
   SOL_alpha_bitch_awoken:0 "Sunset Shimmer has ascended."
+  SOL_send_twiggles_tt:0 "We will have a much better chance at convincing Cadance to submit if §YTwilight Sparkle§! has ascended."
 
   ###Dynamic Loc###
   SOL_hidden_bonuses_empty:0 ""

@@ -2724,7 +2724,7 @@ shared_focus = {
 	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_Strong_Imperial_Government"
-		#Idea here
+		add_ideas = SOL_overpowering_government
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
 }
@@ -2791,6 +2791,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_magics_heart"
+		add_ideas = SOL_magical_mastery
 		###Event of Daybreaker meeting with Twilight, and with Sunset as backup, to press her to lead troops into battle as well, as Twilight argues that she is too busy with her research and her work on keeping anti-Order activities at bay for her to do so, but she's eventually convinced, and later Daybreaker feels some guilt, given she's more viscious than either of them in combat
 	}
 	ai_will_do = { factor = 50 }
@@ -2811,7 +2812,13 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_encourage_tattling"
-		#Idea here
+		if = {
+			limit = { has_dlc = "La Resistance" }
+			add_ideas = SOL_required_tattling_lar
+		}
+		else = {
+			add_ideas = SOL_required_tattling
+		}
 		unlock_decision_category_tooltip = SOL_dealing_with_resistance
 	}
 	ai_will_do = { factor = 150 }
@@ -2833,7 +2840,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_not_own_mistress"
-		#Idea here
+		add_ideas = SOL_subdued_will
 		###Maybe event of somepony in a school wanting to go into one avenue of service, but they are dictated by a single test result difference to go into a completely opposite avenue, or the like, or otherwise the teachers determining where they go, instead of the pony
 	}
 	ai_will_do = { factor = 100 }
@@ -2855,7 +2862,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_free_minds"
-		#Idea here
+		add_ideas = SOL_celestial_free_will
 		###Maybe event of a pony who is accused of not being orderly enough being grilled, then released, because they aren't clearly anti-order, but are warned to be careful, which makes them a bit perturbed, but they carry on anyway
 	}
 	ai_will_do = { factor = 50 }
@@ -2877,7 +2884,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_help_themselves"
-		#Idea here
+		add_ideas = SOL_unneeded_help
 		###Maybe have an event of a pony who is running low on cash or the like, or is homeless, going to a shelter, where he is helped, but at the same time, required to help others as he can do it as a way of improving himself, and eventually hopefully getting a job so he won't be a leech
 	}
 	ai_will_do = { factor = 100 }
@@ -2968,7 +2975,7 @@ shared_focus = {
 		}
 	}
 	will_lead_to_war_with = CRY
-	cost = 10
+	cost = 5
 	ai_will_do = {
 		factor = 35
 		modifier = {
@@ -3008,7 +3015,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_pan_pony_empire"
-		#Idea here
+		add_ideas = SOL_all_ponies
 	}
 	ai_will_do = { factor = 60 }
 }
@@ -3032,7 +3039,6 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_alicorn_weapons"
-		#Unlock decisions here
 		unlock_decision_category_tooltip = EQS_wunderwaffen_category
 		set_country_flag = SOL_wunderwaffen_unlocked
 	}
@@ -3076,7 +3082,7 @@ shared_focus = {
 	}
 	will_lead_to_war_with = STG
 	will_lead_to_war_with = STL
-	cost = 10
+	cost = 5
 	ai_will_do = {
 		factor = 35
 		modifier = {
@@ -3138,7 +3144,7 @@ shared_focus = {
 			}
 		}
 	}
-	cost = 15
+	cost = 8
 	ai_will_do = {
 		factor = 35
 	}
@@ -3175,7 +3181,7 @@ shared_focus = {
 			all_cores_owned_by_ROOT_or_subject = yes
 		}
 	}
-	cost = 15
+	cost = 8
 	ai_will_do = {
 		factor = 35
 	}
@@ -3203,7 +3209,7 @@ shared_focus = {
 	y = 2
 	relative_position_id = SOL_core_stg
 
-	cost = 15
+	cost = 10
 	prerequisite = { focus = SOL_core_stg }
 	mutually_exclusive = { focus = SOL_expand_reach }
 	available = {
@@ -3288,7 +3294,7 @@ shared_focus = {
 		}
 	}
 	will_lead_to_war_with = DRG
-	cost = 10
+	cost = 3
 	ai_will_do = {
 		factor = 35
 	}
@@ -3381,7 +3387,7 @@ shared_focus = {
 	}
 	will_lead_to_war_with = CHN
 	will_lead_to_war_with = CCN
-	cost = 10
+	cost = 5
 	ai_will_do = {
 		factor = 35
 		modifier = {
@@ -3429,9 +3435,6 @@ shared_focus = {
 		CHN = {
 			all_cores_owned_by_ROOT_or_subject = yes
 		}
-		CCN = {
-			all_cores_owned_by_ROOT_or_subject = yes
-		}
 	}
 
 	completion_reward = {
@@ -3458,9 +3461,6 @@ shared_focus = {
 		CHN = {
 			all_cores_owned_by_ROOT_or_subject = yes
 		}
-		CCN = {
-			all_cores_owned_by_ROOT_or_subject = yes
-		}
 	}
 
 	completion_reward = {
@@ -3482,9 +3482,6 @@ shared_focus = {
 		is_subject = no
 		#251 = { is_owned_by = ROOT }
 		CHN = {
-			all_cores_owned_by_ROOT_or_subject = yes
-		}
-		CCN = {
 			all_cores_owned_by_ROOT_or_subject = yes
 		}
 	}
@@ -3510,14 +3507,11 @@ shared_focus = {
 		CHN = {
 			all_cores_owned_by_ROOT_or_subject = yes
 		}
-		CCN = {
-			all_cores_owned_by_ROOT_or_subject = yes
-		}
 	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_establish_worker_hives"
-		#Idea here
+		add_ideas = SOL_changeling_solarists
 	}
 	ai_will_do = { factor = 70 }
 }
@@ -3543,8 +3537,16 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_keep_pets"
-		#Idea here
+		set_country_flag = SOL_combined_changeling_queens
 		add_stability = -0.15
+		###Perhaps an event of Daybreaker having a conversation with the captured changeling queens, regarding the state of the hive, and offers them a chance of survival, in exchange for complete submission to her
+	}
+	ai_will_do = {
+		factor = 40
+		modifier = {
+			has_completed_focus = SOL_god_empress
+			factor = 2.5
+		}
 	}
 }
 
@@ -3554,7 +3556,7 @@ shared_focus = {
 	y = 2
 	relative_position_id = SOL_final_insult
 
-	cost = 10
+	cost = 8
 	prerequisite = { focus = SOL_final_insult }
 	prerequisite = {
 		focus = SOL_establish_worker_hives
@@ -3579,6 +3581,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_lebensraum"
 		###Event of some pony settlers and some Militarium troops marching into one of the larger changeling hives in the southern reaches and beginning to go on a purge and expelling of changelings, since it is their land that they are taking, according to them
 	}
+	ai_will_do = { factor = 65 }
 }
 
 shared_focus = {
@@ -3601,7 +3604,7 @@ shared_focus = {
 		}
 	}
 	will_lead_to_war_with = OLE
-	cost = 10
+	cost = 5
 	ai_will_do = {
 		factor = 35
 		modifier = {
@@ -3642,7 +3645,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_deer_shipwrights"
-		#Idea here
+		add_ideas = SOL_solar_vikings
 	}
 	ai_will_do = { factor = 40 }
 }
@@ -3702,7 +3705,7 @@ shared_focus = {
 	y = 2
 	relative_position_id = SOL_conquer_ole
 
-	cost = 6
+	cost = 5
 	prerequisite = { focus = SOL_conquer_ole }
 	available = {
 		is_subject = no
@@ -3805,7 +3808,7 @@ shared_focus = {
 	}
 	will_lead_to_war_with = GRF
 	will_lead_to_war_with = GFF
-	cost = 10
+	cost = 5
 	ai_will_do = {
 		factor = 35
 		modifier = {
@@ -3871,7 +3874,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_expand_reach
 
-	cost = 7
+	cost = 6
 	prerequisite = { focus = SOL_expand_reach }
 
 	completion_reward = {
@@ -3898,7 +3901,7 @@ shared_focus = {
 	y = 2
 	relative_position_id = SOL_delve_shelves
 
-	cost = 7
+	cost = 6
 	prerequisite = { focus = SOL_delve_shelves }
 	mutually_exclusive = { focus = SOL_bases_under_ice }
 
@@ -3997,7 +4000,7 @@ shared_focus = {
 	y = 2
 	relative_position_id = SOL_island_vacation
 
-	cost = 7
+	cost = 5
 	prerequisite = { focus = SOL_island_vacation }
 	mutually_exclusive = { focus = SOL_beasts_burden }
 	available = {
@@ -4042,7 +4045,7 @@ shared_focus = {
 	}
 	will_lead_to_war_with = YAK
 	will_lead_to_war_with = JAK
-	cost = 10
+	cost = 5
 	ai_will_do = {
 		factor = 35
 	}
@@ -4079,7 +4082,7 @@ shared_focus = {
 	y = 2
 	relative_position_id = SOL_conquer_yak
 
-	cost = 7
+	cost = 5
 	prerequisite = { focus = SOL_conquer_yak }
 	mutually_exclusive = { focus = SOL_resort_of_sun }
 	available = {
@@ -4127,7 +4130,7 @@ shared_focus = {
 	}
 	will_lead_to_war_with = PLB
 	will_lead_to_war_with = PNG
-	cost = 10
+	cost = 5
 	ai_will_do = {
 		factor = 35
 	}
@@ -4267,7 +4270,7 @@ shared_focus = {
 		}
 	}
 	will_lead_to_war_with = GRI
-	cost = 10
+	cost = 8
 	ai_will_do = {
 		factor = 10
 		modifier = {
@@ -4356,6 +4359,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_imperial_art_project"
 		#Effect here
+		###Perhaps an event of Daybreaker going through River City with River Swirl, to see the new projects that have been put underway by RCT, as an act of submission to her, since it is basically forced upon them; River is defiant, even though she has her hooves tied
 	}
 	ai_will_do = { factor = 30 }
 }
@@ -4376,13 +4380,13 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_harmonys_last_gasp"
-		###Event of a fwe RIV members and River Swirl attempting to flee the country, to try and find someplace safe in which they can carry on the mission of RIV, but they are soon captured by the military, who hold them for anti-Order activities, and to be used as a display for the rest of RIV
+		###Event of a few RIV members and River Swirl attempting to flee the country, to try and find someplace safe in which they can carry on the mission of RIV, but they are soon captured by the military, who hold them for anti-Order activities, and to be used as a display for the rest of RIV
 	}
 	ai_will_do = { factor = 40 }
 }
 
 shared_focus = {
-	id = SOL_integrate_CHS
+	id = SOL_integrate_OHS
 	x = -2
 	y = 2
 	relative_position_id = SOL_wayward_foals
@@ -4394,8 +4398,14 @@ shared_focus = {
 	}
 
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_integrate_CHS"
-		#Idea here
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_integrate_OHS"
+		if = {
+			limit = { has_dlc = "La Resistance" }
+			add_ideas = SOL_OHS_integrated_lar
+		}
+		else = {
+			add_ideas = SOL_OHS_integrated
+		}
 	}
 	ai_will_do = { factor = 50 }
 }
@@ -4435,7 +4445,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_land_of_rising_sun"
-		#Idea here
+		add_ideas = SOL_dawn_star_elites
 	}
 	ai_will_do = { factor = 60 }
 }
@@ -4476,6 +4486,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_eastern_brethren"
 		#Effect here
+		add_ideas = SOL_river_brethren
 	}
 	ai_will_do = { factor = 100 }
 }
@@ -4572,7 +4583,7 @@ shared_focus = {
 			OR = {
 				exists = no
 				is_subject_of = ROOT
-				has_war_with = ROOT\
+				has_war_with = ROOT
 			}
 		}
 	}
@@ -4732,6 +4743,13 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_ports_of_zebrica"
 		#Effect here
+		release_autonomy = {
+			target = MGY
+			autonomy_state = autonomy_reichsprotectorate
+		}
+		hidden_effect = {
+			#Set ownership of states here
+		}
 	}
 	ai_will_do = { factor = 60 }
 }
@@ -4824,7 +4842,126 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_civilize_backwaters"
-		#Effect here
+		every_state = {
+			limit = {
+				is_core_of = KAR
+			}
+			save_current_manpower = yes
+			add_manpower = -15000
+			restore_previous_manpower = yes
+		}
+		every_state = {
+			limit = {
+				is_core_of = AES
+			}
+			save_current_manpower = yes
+			add_manpower = -12500
+			restore_previous_manpower = yes
+		}
+		every_state = {
+			limit = {
+				is_core_of = MTO
+				NOT = { is_core_of = AES }
+				NOT = { is_core_of = KAR }
+			}
+			save_current_manpower = yes
+			add_manpower = -20000
+			restore_previous_manpower = yes
+		}
+		random_state = {
+			limit = {
+				is_core_of = KAR
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_state = {
+			limit = {
+				is_core_of = KAR
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_state = {
+			limit = {
+				is_core_of = KAR
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_state = {
+			limit = {
+				is_core_of = AES
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_state = {
+			limit = {
+				is_core_of = AES
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_state = {
+			limit = {
+				is_core_of = MTO
+				NOT = { is_core_of = AES }
+				NOT = { is_core_of = KAR }
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_state = {
+			limit = {
+				is_core_of = MTO
+				NOT = { is_core_of = AES }
+				NOT = { is_core_of = KAR }
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_state = {
+			limit = {
+				is_core_of = MTO
+				NOT = { is_core_of = AES }
+				NOT = { is_core_of = KAR }
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
 	}
 	ai_will_do = { factor = 50 }
 }
@@ -4852,7 +4989,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_imperial_breadbasket"
-		#Idea here
+		add_ideas = SOL_food_for_the_empress
 	}
 	ai_will_do = { factor = 70 }
 }
@@ -4958,7 +5095,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_artisans_of_empress"
-		#Idea here
+		add_ideas = SOL_kirin_artists
 		###Maybe event of Autumn or another kirin being required to do some propaganda art of Daybreaker so that they can be used to more effectively control the new lands of Kiria, or perhaps have her posing for a new sculpture or the like
 	}
 	ai_will_do = { factor = 60 }
@@ -4976,7 +5113,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_embodiments_of_flame"
-		#Idea here
+		add_ideas = SOL_nirik_commandos
 		###Event of some nirik soldiers going in on some rebels or the like, who used to be their friends, and also leading Imperial soldiers, which just leaves them in awe, since they are basically miniature armies in and of themselves, since they can use their fire and magic much more effectively than a normal pony while enraged
 	}
 	ai_will_do = { factor = 90 }
@@ -4994,7 +5131,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_theory_masters"
-		#Idea here
+		add_ideas = SOL_kirin_war_masters
 		###Event of basically some Sun Tzu like statements and the like from kirin philosophers for the Daybreaker and her military, revolving around flame, fire, and magic
 	}
 }
@@ -5032,7 +5169,8 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_military_exchange"
-		#Idea here
+		add_ideas = SOL_griffon_exchange_students
+		GRD = { add_ideas = SOL_GRI_griffon_exchange_students }
 	}
 	ai_will_do = { factor = 50 }
 }
@@ -5525,6 +5663,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_decadence_shattered"
 		###Event of Daybreaker meeting with the prince of Saddle Arabia, who is a bit of a nervous wreck after being held for so long by the civil war, and she acts condescending that he can rule again, but he'll have to do what she wants, and will have to cut out most of the spending, since she wants an actually useful puppet, which he barely agrees to, since he would rather live
+		add_ideas = SOL_prince_faisal
 		SDL = {
 			get_current_government_type = yes
 		}
@@ -5893,7 +6032,7 @@ shared_focus = {
 		}
 	}
 	will_lead_to_war_with = BAT
-	cost = 10
+	cost = 5
 	ai_will_do = {
 		factor = 35
 	}
@@ -5991,7 +6130,13 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_special_treatment"
-		#Effect here
+		if = {
+			limit = { has_dlc = "La Resistance" }
+			add_ideas = SOL_ordo_australis_archives_lar
+		}
+		else = {
+			add_ideas = SOL_ordo_australis_archives
+		}
 		###Maybe event speaking about how the thestrals can still be useful, and that they need to be monitored and can more easily be done so by the IIS/Solaris Speculatores, and that a client state will be erected in it to compensate for no longer having direct control
 	}
 	ai_will_do = { factor = 70 }
@@ -6009,7 +6154,8 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_light_into_darkness"
-		#Idea here
+		add_ideas = SOL_what_thestrals
+		###Perhaps an event of book burnings and history burnings of all of the thestral race that BAT has, and killing any thestrals that resist
 	}
 	ai_will_do = { factor = 50 }
 }
@@ -6044,7 +6190,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_continue_research"
-		#Idea here
+		add_ideas = SOL_thestral_research
 	}
 	ai_will_do = { factor = 100 }
 }

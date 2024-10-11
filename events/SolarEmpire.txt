@@ -3993,6 +3993,7 @@ country_event = {
 			restore_previous_government_type = yes
 			fire_set_CRY_SOL_puppet_tag = yes
 			swap_ideas = { remove_idea = flurryheart_imprisioned add_idea = flurryheart_imprisioned1 }
+			set_country_flag = SOL_flurry_captured
 			add_autonomy_ratio = { value = -0.20 }
 			news_event = { id = solarempiresparkles.39 days = 2 }
 		}
@@ -5100,7 +5101,7 @@ country_event = { # celestia Puppet
 	}
 }
 
-###New puppets###
+###Solar Age puppets###
 country_event = { # celestia Puppet
 	id = solarempire.1020
 	immediate = {log = "[GetDateText]: [Root.GetName]: event solarempire.1020"}
@@ -5347,6 +5348,7 @@ country_event = { # celestia Puppet
 				DMT = {
 					exists = yes
 					is_puppet_of = OVERLORD
+					OVERLORD = { NOT = { has_completed_focus = SOL_doghouse } }
 				}
 			}
 			every_state = {
@@ -5663,5 +5665,18 @@ country_event = { # celestia Puppet
 				add_core_of = ROOT
 			}
 		}
+	}
+}
+
+country_event = { # celestia Puppet
+	id = solarempire.1041
+	immediate = {log = "[GetDateText]: [Root.GetName]: event solarempire.1041"}
+	hidden = yes
+
+	is_triggered_only = yes
+	option = {
+		set_cosmetic_tag = DMT_SOL
+
+		set_country_flag = is_solar_puppet
 	}
 }

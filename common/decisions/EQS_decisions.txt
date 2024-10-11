@@ -1347,6 +1347,26 @@ political_actions = {
 			}
 		}
 	}
+	SOL_take_flurry = {
+		allowed = {
+			original_tag = EQS
+		}
+		#visible = {
+		#	is_EQS_SOL = yes
+		#	has_completed_focus = SOL_god_empress
+		#	CRY = {
+		#		is_subject_of = ROOT
+		#		NOT = { has_country_flag = SOL_flurry_captured }
+		#	}
+		#}
+		fire_only_once = yes
+		cost = 100
+		complete_effect = {
+			add_stability = -0.1
+			#country_event = solarreworked.170
+		}
+		ai_will_do = { factor = 10 }
+	}
 	SOL_further_flurrys_war_training = {
 		allowed = {
 			original_tag = EQS
