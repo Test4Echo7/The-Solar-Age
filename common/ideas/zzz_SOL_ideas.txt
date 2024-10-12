@@ -1026,10 +1026,27 @@ ideas = {
 			}
 		}
 		###CRY Spirits###
+		SOL_winter_preparations = {
+			modifier = {
+				winter_attrition = -0.03
+				acclimatization_cold_climate_gain_factor = 0.1
+			}
+			available = {
+				NOT = { CRY = { is_subject_of = ROOT } }
+			}
+		}
 		SOL_CRY_industrial_investments = {
 			modifier = {
 				production_speed_buildings_factor = 0.05
 				local_resources_factor = 0.05
+			}
+		}
+		SOL_CRY_imperial_capital = {
+			modifier = {
+				political_power_gain = 0.05
+				local_resources_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.1
 			}
 		}
 		SOL_micromanaging_middle_management = {

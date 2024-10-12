@@ -1892,97 +1892,98 @@ shared_focus = {
 	}
 }
 
-#shared_focus = {
-#	id = SOL_increase_presense_inCRY
-#	icon = GFX_goal_crystal_empire_sub
-#	cost = 10
-#	ai_will_do = {
-#		factor = 100
-#	}
-#	bypass = {
-#		OR = {
-#			NOT = {
-#				country_exists = CRY
-#			}
-#			has_war_with = CRY
-#		}
-#	}
-#	prerequisite = {
-#		focus = examine_the_situation
-#	}
-#	allow_branch = {
-#		is_EQS_SOL = yes
-#	}
-#	available = {
-#		eqs_not_has_civil_war = yes
-#		OR = {
-#			has_completed_focus = SOL_empress_protector
-#			has_completed_focus = SOL_empress_mother
-#			has_completed_focus = SOL_god_empress
-#		}
-#		CRY = {
-#			has_war = no
-#			OR = {
-#				is_subject = no
-#				is_subject_of = ROOT
-#			}
-#		}
-#	}
-#	relative_position_id = examine_the_situation
-#	x = -4
-#	y = 1
-#	completion_reward = {
-#		log = "[GetDateText]: [Root.GetName]: Focus SOL_increase_presense_inCRY"
-#		if = {
-#			limit = {
-#				CRY = {
-#					is_subject_of = ROOT
-#				}
-#			}
-#			CRY = {
-#				add_autonomy_ratio = {
-#					value = -0.03
-#				}
-#				if = {
-#					limit = {
-#						NOT = {
-#							has_global_flag = CRY_puppet_chosen
-#						}
-#						NOT = {
-#							has_country_flag = CRY_solar_governorship
-#						}
-#						has_global_flag = SOL_twilight_converted
-#					}
-#					ROOT = {
-#						country_event = solarempire.131
-#					}
-#				}
-#			}
-#		}
-#		else_if = {
-#			limit = {
-#				OR = {
-#					NOT = {
-#						has_global_flag = SOL_twilight_converted
-#					}
-#					CRY = {
-#						has_country_leader = { character = CRY_princess_mi_amore_cadenza ruling_only = yes }
-#					}
-#				}
-#			}
-#			CRY = {
-#				country_event = {
-#					id = solarempire.27
-#					days = 1
-#				}
-#			}
-#		}
-#		else = {
-#			country_event = solarempiresparkles.1
-#		}
-#	}
-#	search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
-#}
+shared_focus = {
+	id = SOL_increase_presense_inCRY
+	icon = GFX_goal_crystal_empire_sub
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+	bypass = {
+		OR = {
+			NOT = {
+				country_exists = CRY
+			}
+			has_war_with = CRY
+		}
+	}
+	prerequisite = {
+		focus = examine_the_situation
+	}
+	allow_branch = {
+		#is_EQS_SOL = yes
+		always = no
+	}
+	available = {
+		eqs_not_has_civil_war = yes
+		OR = {
+			has_completed_focus = SOL_empress_protector
+			has_completed_focus = SOL_empress_mother
+			has_completed_focus = SOL_god_empress
+		}
+		CRY = {
+			has_war = no
+			OR = {
+				is_subject = no
+				is_subject_of = ROOT
+			}
+		}
+	}
+	relative_position_id = examine_the_situation
+	x = -4
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_increase_presense_inCRY"
+		if = {
+			limit = {
+				CRY = {
+					is_subject_of = ROOT
+				}
+			}
+			CRY = {
+				add_autonomy_ratio = {
+					value = -0.03
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_global_flag = CRY_puppet_chosen
+						}
+						NOT = {
+							has_country_flag = CRY_solar_governorship
+						}
+						has_global_flag = SOL_twilight_converted
+					}
+					ROOT = {
+						country_event = solarempire.131
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					NOT = {
+						has_global_flag = SOL_twilight_converted
+					}
+					CRY = {
+						has_country_leader = { character = CRY_princess_mi_amore_cadenza ruling_only = yes }
+					}
+				}
+			}
+			CRY = {
+				country_event = {
+					id = solarempire.27
+					days = 1
+				}
+			}
+		}
+		else = {
+			country_event = solarempiresparkles.1
+		}
+	}
+	search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+}
 
 #shared_focus = {
 #	id = SOL_bat_problems

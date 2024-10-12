@@ -6439,27 +6439,18 @@ shared_focus = {
 
 ###Crystal Empire###
 shared_focus = {
-	id = SOL_increase_presense_inCRY
+	id = SOL_mock_empire
+	x = -16
+	y = 1
 	icon = GFX_goal_crystal_empire_sub
-	cost = 5
-	ai_will_do = {
-		factor = 100
-	}
-	bypass = {
-		OR = {
-			NOT = {
-				country_exists = CRY
-			}
-			has_war_with = CRY
-		}
-	}
-	prerequisite = {
-		focus = examine_the_situation
-	}
-	allow_branch = {
-		is_EQS_SOL = yes
-	}
+	relative_position_id = examine_the_situation
+
+	cost = 4
+	prerequisite = { focus = examine_the_situation }
+	allow_branch = { is_EQS_SOL = yes }
 	available = {
+		is_subject = no
+		has_DB_ruler = yes
 		eqs_not_has_civil_war = yes
 		OR = {
 			has_completed_focus = SOL_empress_protector
@@ -6474,78 +6465,51 @@ shared_focus = {
 			}
 		}
 	}
-	relative_position_id = examine_the_situation
-	x = -16
-	y = 1
+	bypass = {
+		OR = {
+			NOT = { country_exists = CRY }
+			has_war_with = CRY
+		}
+	}
+
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_increase_presense_inCRY"
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_mock_empire"
+		###Event of Sunrise and Daybreaker speaking on how to best handle the Crystal Empire, since it has remained a thorn in its side, and that Sunrise will be the one to deal with it, if Sunrise is there, otherwise it will be a dispatch of either Raven or Nova Glow (depending on path taken) to deal with Cadance
 		if = {
-			limit = {
-				CRY = {
-					is_subject_of = ROOT
-				}
-			}
-			CRY = {
-				add_autonomy_ratio = {
-					value = -0.03
-				}
-				if = {
-					limit = {
-						NOT = {
-							has_global_flag = CRY_puppet_chosen
-						}
-						NOT = {
-							has_country_flag = CRY_solar_governorship
-						}
-						has_global_flag = SOL_twilight_converted
-					}
-					ROOT = {
-						country_event = solarempire.131
-					}
-				}
-			}
+			limit = { NOT = { has_global_flag = SOL_twilight_converted } }
+			custom_effect_tooltip = SOL_corrupt_your_student_boi_tt
+		}
+		if = {
+			limit = { has_global_flag = SOL_twilight_converted }
+			#Country event 1
 		}
 		else_if = {
 			limit = {
-				OR = {
-					NOT = {
-						has_global_flag = SOL_twilight_converted
-					}
-					CRY = {
-						has_country_leader = { character = CRY_princess_mi_amore_cadenza ruling_only = yes }
-					}
-				}
+				NOT = { has_global_flag = SOL_twilight_converted }
+				has_completed_focus = SOL_god_empress
 			}
-			CRY = {
-				country_event = {
-					id = solarempire.27
-					days = 1
-				}
-			}
-
+			#Country event 2 - CRY
 		}
 		else = {
-			#country_event = solarempiresparkles.1
-			###Country event of Twilight stating that she wants to deal with this issue personally, since Cadance is family, and she should listen to Twilight, which Daybreaker ultimately agrees to
-			add_war_support = 0.05
-			add_political_power = 50
+			#Country event 3 - CRY
 		}
+		add_ideas = SOL_winter_preparations
+		###Three events from old focus are solarempire.27, solarempiresparkles.1, solarempiresparkles.131
 	}
-	search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+	ai_will_do = { factor = 100 }
 }
 
 shared_focus = {
 	id = SOL_follow_sunrise_plan
 	x = -1
 	y = 1
-	relative_position_id = SOL_increase_presense_inCRY
+	relative_position_id = SOL_mock_empire
 
 	cost = 4
-	prerequisite = { focus = SOL_increase_presense_inCRY }
+	prerequisite = { focus = SOL_mock_empire }
 	mutually_exclusive = { focus = SOL_gesture_of_strength }
 	available = {
-		is_subject = no
-		has_DB_ruler = yes
+		eqs_has_civil_war = no
 		CRY = {
 			has_war = no
 			OR = {
@@ -6557,6 +6521,7 @@ shared_focus = {
 	bypass = {
 		OR = {
 			NOT = { country_exists = CRY }
+			NOT = { has_global_flag = SOL_twilight_converted }
 			has_war_with = CRY
 			CRY = { is_subject_of = ROOT }
 		}
@@ -6573,14 +6538,13 @@ shared_focus = {
 	id = SOL_gesture_of_strength
 	x = 1
 	y = 1
-	relative_position_id = SOL_increase_presense_inCRY
+	relative_position_id = SOL_mock_empire
 
 	cost = 4
-	prerequisite = { focus = SOL_increase_presense_inCRY }
+	prerequisite = { focus = SOL_mock_empire }
 	mutually_exclusive = { focus = SOL_follow_sunrise_plan }
 	available = {
-		is_subject = no
-		has_DB_ruler = yes
+		eqs_has_civil_war = no
 		CRY = {
 			has_war = no
 			OR = {
@@ -6592,6 +6556,7 @@ shared_focus = {
 	bypass = {
 		OR = {
 			NOT = { country_exists = CRY }
+			NOT = { has_global_flag = SOL_twilight_converted }
 			has_war_with = CRY
 			CRY = { is_subject_of = ROOT }
 		}
@@ -6611,23 +6576,25 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = Crystal_Fair
+	id = SOL_royal_province
+	x = 1
+	y = 1
 	icon = GFX_goal_crystal_fair
+	relative_position_id = SOL_follow_sunrise_plan
+
 	cost = 5
-	dynamic = yes
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	ai_will_do = { factor = 40 }
 	prerequisite = {
 		focus = SOL_follow_sunrise_plan
 		focus = SOL_gesture_of_strength
-		focus = increase_presense_inCRY
 	}
 	available = {
 		eqs_not_has_civil_war = yes
 		is_subject = no
 		CRY = {
-			OR = { is_subject_of = ROOT is_in_faction_with = ROOT }
+			OR = {
+				is_subject_of = ROOT
+				is_in_faction_with = ROOT
+			}
 			has_civil_war = no
 		}
 	}
@@ -6637,27 +6604,15 @@ shared_focus = {
 			has_focus_tree = crystal_empire_lunar_focus
 		}
 	}
-	relative_position_id = examine_the_situation
-	x = -4
-	y = 2
-	offset = {
-		x = -12
-		y = 1
-		trigger = { is_EQS_SOL = yes }
-	}
+
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus Crystal_Fair"
-		add_political_power = 150
-		hidden_effect = {
-			if = {
-				limit = { is_original_EQS = yes }
-				news_event = news.4
-			}
-		}
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_royal_province"
+		###Event of Daybreaker arriving in the Solar Empire and speaking with either Cadance or Sunrise on how quaint the Crystal Empire is, and her plans for it, with Sunrise at least being eager to help spread the plan of Daybreaker
 	}
-	search_filters = { FOCUS_FILTER_POLITICAL }
+	ai_will_do = { factor = 40 }
 }
 
+###Operation shenanigans, PDX
 #shared_focus = {
 #	id = SOL_expel_night_witch
 #	x = 1
@@ -6691,11 +6646,10 @@ shared_focus = {
 	id = SOL_destroy_night_guard
 	x = 1
 	y = 1
-	relative_position_id = Crystal_Fair
+	relative_position_id = SOL_royal_province
 
 	cost = 5
-	prerequisite = { focus = Crystal_Fair }
-	allow_branch = { is_EQS_SOL = yes }
+	prerequisite = { focus = SOL_royal_province }
 	available = {
 		is_subject = no
 		has_DB_ruler = yes
@@ -6713,44 +6667,88 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = rainbow_falls_resort
+	id = SOL_umbrum_military_industrial_parks
+	x = 3
+	y = 1
 	icon = GFX_goal_rainbow_falls
+	relative_position_id = SOL_royal_province
+
 	cost = 6
-	dynamic = yes
-	ai_will_do = { factor = 30 }
-	prerequisite = {
-		focus = Crystal_Fair
-	}
+	prerequisite = { focus = SOL_royal_province }
 	available = {
-		eqs_not_has_civil_war = yes
 		is_subject = no
-		98 = {
-			owner = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } }
-			controller = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } }
-		}
+		has_DB_ruler = yes
+		145 = { is_owned_by = CRY }
 	}
-	cancel_if_invalid = yes
-	continue_if_invalid = no
+
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus rainbow_falls_resort"
-		98 = {
-			owner = { add_political_power = 150 }
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_umbrum_military_industrial_parks"
+		145 = {
 			add_extra_state_shared_building_slots = 3
 			add_building_construction = {
-				type = industrial_complex
-				level = 3
+				type = arms_factory
+				level = 2
 				instant_build = yes
+			}
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+			add_resource = {
+				type = crystals
+				amount = 15
 			}
 		}
 	}
-	search_filters = { FOCUS_FILTER_INDUSTRY }
-	relative_position_id = Crystal_Fair
-	x = 1
-	y = 1
-	offset = {
-		x = 2
-		y = 0
-		trigger = { is_EQS_SOL = yes }
+}
+
+shared_focus = {
+	id = SOL_investments_in_empire
+	x = -1
+	y = 2
+	icon = GFX_goal_cry_factory_cel
+	relative_position_id = SOL_royal_province
+
+	cost = 6
+	prerequisite = { focus = SOL_royal_province }
+	available = {
+		is_subject = no
+		has_DB_ruler = yes
+		142 = { is_owned_by = CRY }
+		146 = { is_owned_by = CRY }
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_investments_in_empire"
+		CRY = {
+			if = {
+				limit = { has_idea = SOL_CRY_industrial_investments }
+				swap_ideas = {
+					remove_idea = SOL_CRY_industrial_investments
+					add_idea = SOL_CRY_imperial_capital
+				}
+			}
+			else = {
+				add_ideas = SOL_CRY_imperial_capital
+			}
+		}
+		146 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		142 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
 	}
 }
 
@@ -6758,15 +6756,14 @@ shared_focus = {
 	id = SOL_family_visits
 	x = -3
 	y = 2
-	relative_position_id = Crystal_Fair
+	relative_position_id = SOL_royal_province
 
 	cost = 5
-	prerequisite = { focus = Crystal_Fair }
+	prerequisite = { focus = SOL_royal_province }
 	available = {
 		is_subject = no
 		has_DB_ruler = yes
 	}
-	allow_branch = { is_EQS_SOL = yes }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_family_visits"
@@ -6776,66 +6773,13 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = industry_crystal_emp
-	icon = GFX_goal_cry_factory_cel
-	cost = 6
-	ai_will_do = { factor = 30 }
-	prerequisite = {
-		focus = Crystal_Fair
-	}
-	available = {
-		eqs_not_has_civil_war = yes
-		is_subject = no
-		53 = {
-			owner = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } }
-			controller = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } }
-		}
-		144 = {
-			owner = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } }
-			controller = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } }
-		}
-	}
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	relative_position_id = Crystal_Fair
-	x = -1
-	y = 1
-	offset = {
-		x = 0
-		y = 1
-		trigger = { is_EQS_SOL = yes }
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus industry_crystal_emp"
-		CRY = {
-			add_ideas = SOL_CRY_industrial_investments
-			53 = { add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = industrial_complex
-					level = 3
-					instant_build = yes
-				}
-			}
-			144 = { add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = arms_factory
-					level = 3
-					instant_build = yes
-				}
-			}
-		}
-	}
-}
-
-shared_focus = {
 	id = SOL_update_northern_tactics
 	x = -1
 	y = 1
-	relative_position_id = rainbow_falls_resort
+	relative_position_id = SOL_umbrum_military_industrial_parks
 
 	cost = 8
-	prerequisite = { focus = rainbow_falls_resort }
-	allow_branch = { is_EQS_SOL = yes }
+	prerequisite = { focus = SOL_umbrum_military_industrial_parks }
 	available = {
 		is_subject = no
 		has_DB_ruler = yes
@@ -6861,11 +6805,10 @@ shared_focus = {
 	id = SOL_establish_crystal_legion
 	x = 1
 	y = 1
-	relative_position_id = rainbow_falls_resort
+	relative_position_id = SOL_umbrum_military_industrial_parks
 
 	cost = 5
-	prerequisite = { focus = rainbow_falls_resort }
-	allow_branch = { is_EQS_SOL = yes }
+	prerequisite = { focus = SOL_umbrum_military_industrial_parks }
 	available = {
 		is_subject = no
 		has_DB_ruler = yes
@@ -6955,18 +6898,20 @@ shared_focus = {
 	id = SOL_appoint_economic_advisors
 	x = 1
 	y = 1
-	relative_position_id = industry_crystal_emp
+	relative_position_id = SOL_investments_in_empire
 
 	cost = 6
-	prerequisite = { focus = industry_crystal_emp }
+	prerequisite = { focus = SOL_investments_in_empire }
 	allow_branch = { is_EQS_SOL = yes }
 	mutually_exclusive = { focus = SOL_retire_old_guard }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_appoint_economic_advisors"
-		#Advisors and idea here
-		add_ideas = SOL_micromanaging_middle_management
-		###Maybe event of a number of ponies from the Solar Empire coming to replace their Crystal counterparts, after they are taken away for anti-Order propaganda or the like
+		CRY = {
+			#Advisors and idea here
+			add_ideas = SOL_micromanaging_middle_management
+			###Maybe event of a number of ponies from the Solar Empire coming to replace their Crystal counterparts, after they are taken away for anti-Order propaganda or the like
+		}
 	}
 	ai_will_do = { factor = 70 }
 }
@@ -6983,9 +6928,11 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_retire_old_guard"
-		#Generals and idea here
-		add_ideas = SOL_dictated_directions
-		###Event of Shining Armor being brought before a tribunal, and him making a defense of himself, and although they can't kill him for fear of angering the entire Crystal Empire, they do sack him of his position
+		CRY = {
+			#Generals and idea here
+			add_ideas = SOL_dictated_directions
+			###Event of Shining Armor being brought before a tribunal, and him making a defense of himself, and although they can't kill him for fear of angering the entire Crystal Empire, they do sack him of his position
+		}
 	}
 	ai_will_do = { factor = 80 }
 }
@@ -6996,7 +6943,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_monarchy_compliance
 
-	cost = 15
+	cost = 10
 	prerequisite = { focus = SOL_monarchy_compliance }
 	available = {
 		has_completed_focus = SOL_god_empress
@@ -7109,49 +7056,6 @@ shared_focus = {
 		}
 	}
 	ai_will_do = { factor = 80 }
-}
-
-shared_focus = {
-	id = crystalcity_university
-	icon = GFX_goal_cryacademy
-	cost = 10.00
-	ai_will_do = { factor = 30 }
-	relative_position_id = industry_crystal_emp
-	x = 1
-	y = 1
-	dynamic = yes
-	prerequisite = {
-		focus = industry_crystal_emp
-	}
-	search_filters = { FOCUS_FILTER_INDUSTRY }
-	prerequisite = {
-		focus = rainbow_falls_resort
-	}
-	available = {
-		eqs_not_has_civil_war = yes
-		is_subject = no
-		CRY = {
-			OR = { is_subject_of = ROOT is_in_faction_with = ROOT }
-			capital_scope = { is_controlled_by = PREV }
-		}
-	}
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	allow_branch = {
-		is_EQS_SOL = no
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus crystalcity_university"
-		add_political_power = 100
-		CRY = {
-			if = {
-				limit = { amount_research_slots < 5 }
-				add_research_slot = 1
-			}
-			add_ideas = CRY_EQS_techshare
-		}
-	}
-	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
 }
 
 ###Bats? Bats! BAAAAATS!###
@@ -7897,7 +7801,7 @@ shared_focus = {
 	available = {
 		PCB = {
 			exists = no
-			all_cores_owned_by_ROOT_or_subject = yes
+			all_cores_owned_by_ROOT = yes
 		}
 	}
 
@@ -8157,6 +8061,7 @@ shared_focus = {
 	ai_will_do = { factor = 80 }
 }
 
+###More operation shenanigans, PDX
 #shared_focus = {
 #	id = SOL_flush_dregs
 #	x = 1
@@ -8195,7 +8100,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_fund_sunset_plays"
-		#Idea here
+		EQC = { add_ideas = SOL_patriotic_plays }
 		###Maybe event for one ofthe patriotic plays, and how they are being used to get ponies to agree to Daybreaker's rule
 	}
 }
@@ -8302,7 +8207,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_church_of_day"
-		add_ideas = SOL_mandatory_worship
+		EQC = { add_ideas = SOL_mandatory_worship }
 		###Maybe event of Arcane hosting the first service of Daybreaker, whether or not she's the God-Empress, since Arcane reveres Daybreaker as a goddess regardless, and she has the fire and brimstone of an aggressive preacher promising death for thsoe who rebel against her and also for the surrounding nations of EQC
 	}
 	ai_will_do = {
@@ -8326,7 +8231,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_personnel_support"
-		add_ideas = SOL_united_in_purpose
+		EQC = { add_ideas = SOL_united_in_purpose }
 		###Maybe event of Arcane working with some ponies from Canterlot regarding some passing of laws in EQC, even though she doesn't see the need for them, since it only makes her job harder, but it helps make the Empress's easier, so she begrudgingly agrees to it
 	}
 	ai_will_do = { factor = 60 }
@@ -8343,8 +8248,10 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_allies_in_high_places"
-		#Advisors here
-		add_stability = 0.05
+		EQC = {
+			#Advisors here
+			add_stability = 0.05
+		}
 	}
 	ai_will_do = { factor = 60 }
 }

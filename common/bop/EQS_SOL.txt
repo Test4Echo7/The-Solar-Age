@@ -109,6 +109,13 @@ EQS_sanity_bop = {
             }
             on_activate = {
                 log = "EQS_discomforting_insanity"
+                EQS_princess_celestia = {
+                    set_portraits = {
+                        civilian = {
+                            large = "gfx/leaders/EQS/Celestia_feels_bad.tga"
+                        }
+                    }
+                }
             }
         }
         range = {
@@ -127,6 +134,13 @@ EQS_sanity_bop = {
             }
             on_activate = {
                 log = "EQS_paranoid_insanity"
+                EQS_princess_celestia = {
+                    set_portraits = {
+                        civilian = {
+                            large = "gfx/leaders/EQS/Celestia_danger.tga"
+                        }
+                    }
+                }
             }
         }
         range = {
