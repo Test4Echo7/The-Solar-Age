@@ -1184,6 +1184,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_ponys_project"
 		#Inform player about decisions here
 		#Spirit should be +2% global building slots, +5% con speed, -2% CS
+		set_country_flag = SOL_unlock_special_projects
 		###Maybe event of Daybreaker proudly standing before an idea she had of something meant to honor her, or to show her glory, despite how it is draining the Empire's resources, but because she needs it, then she gets it, no matter what other ponies need
 	}
 	ai_will_do = { factor = 50 }
@@ -1430,8 +1431,9 @@ shared_focus = {
 	relative_position_id = SOL_imperial_betters
 
 	cost = 3
-	prerequisite = { focus = SOL_imperial_betters }
-	prerequisite = { focus = SOL_Harmony_through_Order }
+	prerequisite = {
+		focus = SOL_
+	}
 	available = {
 		is_subject = no
 		has_DB_ruler = yes
@@ -1833,7 +1835,6 @@ shared_focus = {
 	prerequisite = {
 		focus = SOL_suffer_not_heresy
 		focus = SOL_innovative_corpo_grant
-		focus = SOL_ponys_project
 	}
 	available = {
 		is_subject = no
@@ -2571,7 +2572,7 @@ shared_focus = {
 	relative_position_id = SOL_imperial_bureaucracy
 
 	cost = 5
-	prerequisite = { focus = SOL_law_of_iron }
+	prerequisite = { focus = SOL_imperial_bureaucracy }
 	mutually_exclusive = { focus = SOL_government_of_one }
 	available = {
 		is_subject = no
@@ -13413,6 +13414,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_dragons_fire"
 		custom_effect_tooltip = EQS_unlock_operation_infernis_tt
+		set_country_flag = SOL_extinguish_firelovers
 	}
 	ai_will_do = { factor = 70 }
 }
@@ -13441,6 +13443,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_darkest_depths"
 		custom_effect_tooltip = EQS_unlock_operation_necromancer_tt
+		set_country_flag = SOL_edgy_black_metal
 	}
 	ai_will_do = { factor = 100 }
 }
@@ -13468,6 +13471,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_steal_storms_thunder"
 		custom_effect_tooltip = EQS_unlock_operation_donner_tt
+		set_country_flag = SOL_rated_e_for_empress
 	}
 	ai_will_do = { factor = 70 }
 }

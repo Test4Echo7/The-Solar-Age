@@ -1078,3 +1078,300 @@ EQS_wunderwaffen_category = {
         ai_will_do = { factor = 80 }
     }
 }
+EQS_great_projects_category = {
+    ###Decisions should be improvements to Manehattan, expanding the industrial parks of Fillydelphia, something related to the casinos in Las Pegasus, turning Cloudsdale into a fortress city, constructing a new school to Daybreaker in Ponyville, and a further expansion of the Imperial Palace in Canterlot, with possibly creating a second grand palace in Manehattan; one more possible one is establishing a proper trading pathway or resource extraction in Whinnyapolis, or perhaps some grand market for Daybreaker
+    SOL_construct_cathedral_of_sun = {
+        allowed = { tag = EQS }
+        available = {
+            owns_state = 3
+            num_of_civilian_factories_available_for_projects > 19
+        }
+        visible = {
+            OR = {
+                has_country_flag = SOL_unlock_special_projects
+                has_completed_focus = SOL_She_Who_Raises_the_Sun
+            }
+        }
+        icon = celestia
+        cost = 200
+        days_remove = 300
+        fire_only_once = yes
+        highlight_states = {
+            highlight_state_targets = {
+                state = 3
+            }
+        }
+        modifier = {
+            production_speed_buildings_factor = -0.1
+            consumer_goods_factor = 0.125
+            civilian_factory_use = 20
+        }
+        complete_effect = {
+            set_country_flag = SOL_constructing_temple
+        }
+        remove_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision remove SOL_construct_cathedral_of_sun"
+            clr_country_flag = SOL_constructing_temple
+            3 = {
+                add_extra_state_shared_building_slots = 2
+                improve_state_category = yes
+                #There will be a state modifier that gives +10% construction speed, +10% local manpower
+                add_resource = {
+                    type = steel
+                    amount = 8
+                }
+            }
+            ###Event of the final unveiling of the Cathedral of the Sun, which is a exquisite structure of pure marble and gold, to show the radiance and beauty of Daybreaker, which pleases Daybreaker immensely that her grandest vision of affecting Sanctum Solar has been accomplished, as it is truly a beacon of her power
+        }
+        ai_will_do = {
+            base = 0
+            modifier = {
+                num_of_civilian_factories_available_for_projects > 19
+                add = 10
+            }
+            modifier = {
+                has_completed_focus = SOL_god_empress
+                factor = 2
+            }
+        }
+    }
+    SOL_renovate_imperial_palace = {
+        allowed = { tag = EQS }
+        available = {
+            owns_state = 3
+            num_of_civilian_factories_available_for_projects > 9
+            NOT = { has_country_flag = SOL_constructing_temple }
+        }
+        visible = { has_country_flag = SOL_unlock_special_projects }
+        icon = celestia
+        cost = 100
+        days_remove = 120
+        fire_only_once = yes
+        modifier = {
+            civilian_factory_use = 10
+        }
+        remove_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision remove SOL_renovate_imperial_palace"
+            3 = {
+                add_extra_state_shared_building_slots = 1
+                add_resource = {
+                    type = crystals
+                    amount = 10
+                }
+            }
+        }
+        ai_will_do = {
+            base = 0
+            modifier = {
+                num_of_civilian_factories_available_for_projects > 13
+                add = 8
+            }
+        }
+    }
+    SOL_grand_imperial_drydocks = {
+        allowed = { tag = EQS }
+        available = {
+            owns_state = 75
+            num_of_civilian_factories_available_for_projects > 11
+            NOT = { has_country_flag = SOL_constructing_temple }
+        }
+        visible = { has_country_flag = SOL_unlock_special_projects }
+        icon = celestia
+        cost = 75
+        days_remove = 250
+        fire_only_once = yes
+        modifier = {
+            civilian_factory_use = 12
+        }
+        remove_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision remove SOL_grand_imperial_drydocks"
+            75 = {
+                add_extra_state_shared_building_slots = 3
+                add_building_construction = {
+                    type = dockyard
+                    level = 2
+                    instant_build = yes
+                }
+                #More naval bases
+                add_resource = {
+                    type = steel
+                    amount = 12
+                }
+                #State modifier for +15% construction speed, +10% coastal defense if possible
+            }
+        }
+    }
+}
+EQS_covert_ops_category = {
+    EQS_operation_flyswatter = {
+        allowed = { tag = EQS }
+        available = {
+            has_war_with = CHN
+            CHN = { has_country_leader = { character = CHN_queen_chrysalis ruling_only = yes } }
+        }
+        visible = {
+            has_country_flag = EQS_swat_buggo
+            NOT = { has_dlc = "La Resistance" }
+        }
+        cost = 125
+        days_remove = 90
+        fire_only_once = yes
+        complete_effect = {
+            add_stability = -0.1
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = -0.05
+                tooltip_side = EQS_woke
+            }
+        }
+        remove_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision remove EQS_operation_flyswatter"
+            ###Event of the end results, which will either fail or it will harm, but not kill, Chrysalis; if harmed, will apply a stability and army org debuff, as well as a war support and mobilization speed buff for the changelings for 365, as they've been bolstered by the attack on Chrysalis
+        }
+        ai_will_do = { factor = 7 }
+    }
+    EQS_operation_mondwaffen = {
+        allowed = { tag = EQS }
+        available = {
+            has_war_with = NLR
+            NLR = { has_country_leader = { character = EQS_princess_luna ruling_only = yes } }
+        }
+        visible = {
+            has_country_flag = EQS_greifen_sie_den_mond_an
+            NOT = { has_dlc = "La Resistance" }
+        }
+        cost = 150
+        days_remove = 90
+        fire_only_once = yes
+        complete_effect = {
+            add_stability = -0.15
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = -0.075
+                tooltip_side = EQS_woke
+            }
+        }
+        remove_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision remove EQS_mondwaffen"
+            ###Event of the end results, which will fail, but it will also stir up anti-thestral sentiment in EQS, which will grant an attack bonus for a while against NLR, whereas NLR will gain a stability and war support buff, as well as slightly increased manpower for 365 days for both
+        }
+        ai_will_do = { factor = 7 }
+    }
+    EQS_operation_homecoming = {
+        allowed = { tag = EQS }
+        available = {
+            any_country = {
+                NOT = { is_subject_of = ROOT }
+                has_country_flag = SOL_hosting_M6
+            }
+        }
+        visible = {
+            has_country_flag = SOL_hunt_for_mane_six
+        }
+        cost = 150
+        days_remove = 120
+        fire_only_once = yes
+        remove_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision remove EQS_operation_homecoming"
+            ###Event of the end results, which will end up with the successful capture of the M6 due to them being ambushed for a "friendship problem"
+        }
+        ai_will_do = { factor = 7 }
+    }
+    EQS_operation_eclipse = {
+        allowed = { tag = EQS }
+        available = {
+            any_country = {
+                NOT = { is_subject_of = ROOT }
+                has_character = EQS_princess_luna
+            }
+        }
+        visible = {
+            has_country_flag = SOL_luna_hunt
+        }
+        cost = 180
+        days_remove = 150
+        fire_only_once = yes
+        remove_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision remove EQS_operation_eclipse"
+            ###Last event in the chain that would be in the operation, where Luna is taken by an elite infiltration force and exfiltrated out of the country, back to the Solar Empire
+        }
+        ai_will_do = { factor = 7 }
+    }
+    EQS_operation_infernis = {
+        allowed = { tag = EQS }
+        available = {
+            country_exists = KIR
+        }
+        visible = {
+            has_country_flag = SOL_extinguish_firelovers
+            NOT = { has_dlc = "La Resistance" }
+        }
+        cost = 125
+        days_remove = 90
+        fire_only_once = yes
+        remove_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision remove EQS_operation_infernis"
+            ###Last event in the operation chain where the kirins are captured by some of Daybreaker's operatives after a short fight and then exfiltrated out of the country to later be studied
+        }
+        ai_will_do = { factor = 7 }
+    }
+    EQS_operation_necromancer = {
+        allowed = { tag = EQS }
+        available = {
+            OR = {
+                country_exists = DED
+                HLR = {
+                    exists = yes
+                    owns_state = 415
+                }
+            }
+        }
+        visible = {
+            has_country_flag = SOL_edgy_black_metal
+            NOT = { has_dlc = "La Resistance" }
+        }
+        cost = 150
+        days_remove = 90
+        fire_only_once = yes
+        remove_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision remove EQS_operation_necromancer"
+            ###Last event of the operation chain where the infiltrators barely avoid being captured by some of the necromancers of the Dread League, and find some books which could prove most useful; leads to a small battle before they are able to flee
+        }
+        ai_will_do = { factor = 7 }
+    }
+    EQS_operation_donner = {
+        allowed = { tag = EQS }
+        available = {
+            OR = {
+                THU = {
+                    exists = yes
+                    has_war = no
+                }
+                STM = {
+                    exists = yes
+                    has_war = no
+                }
+                GYZ = {
+                    exists = yes
+                    has_war = no
+                }
+                SLC = {
+                    exists = yes
+                    has_war = no
+                }
+            }
+        }
+        visible = {
+            has_country_flag = SOL_rated_e_for_empress
+            NOT = { has_dlc = "La Resistance" }
+        }
+        cost = 175
+        days_remove = 90
+        fire_only_once = yes
+        remove_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision remove EQS_operation_donner"
+            ###Last event of the operation where the infiltrators manage to get into the Storm King's castle and nearly steal the staff before being confronted by guards, and they have a long, drawn-out battle, even using the staff, and do manage to escape, although with losses
+        }
+        ai_will_do = { factor = 7 }
+    }
+}

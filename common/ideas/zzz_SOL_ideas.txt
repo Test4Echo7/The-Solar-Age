@@ -1322,6 +1322,13 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.1
 			}
 		}
+		SOL_unattainable_quality = {
+			modifier = {
+				global_building_slots_factor = 0.02
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.03
+			}
+		}
 		SOL_peace_is_war = {
 			modifier = {
 				war_stability_factor = 0.1
@@ -1385,7 +1392,7 @@ ideas = {
 			modifier = {
 				stability_factor = 0.1
 				war_stability_factor = 0.05
-				compliance_growth = 0.01
+				compliance = 0.01
 			}
 		}
 		SOL_overpowering_government = {

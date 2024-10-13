@@ -30,6 +30,23 @@ EQS_wunderwaffen_category = {
     }
     icon = celestia_cat
 }
+EQS_great_projects_category = {
+    allowed = { tag = EQS }
+    priority = {
+        base = 138
+    }
+    visible = {
+        is_EQS_SOL = yes
+    }
+    icon = celestia_cat
+}
+EQS_covert_ops_category = {
+    allowed = { tag = EQS }
+    priority = {
+        base = 137
+    }
+    icon = celestia_cat
+}
 EQS_BOP_sanity_category = {
     allowed = {
         tag = EQS
