@@ -1,3 +1,7 @@
+@tier1 = 30
+@tier2 = 20
+@tier3 = 10
+
 leader_traits = {
     aussenseiter_regentin = {
         random = no
@@ -215,6 +219,83 @@ leader_traits = {
         research_speed_factor = 0.1
         stability_factor = -0.1
         political_power_gain = -0.05
+
+        ai_will_do = { factor = 1 }
+    }
+
+    ###New character advisor traits###
+    ruthless_industrialist = {
+        random = no
+        consumer_goods_factor = -0.1
+        industrial_capacity_factory = 0.05
+        industrial_capacity_dockyard = 0.05
+        political_power_gain = -0.05
+        stability_factor = -0.1
+
+        ai_will_do = { factor = 1 }
+    }
+
+    aggressive_diplomat = {
+        random = no
+        offensive_war_stability_factor = 0.1
+        war_support_factor = 0.075
+        trade_opinion_factor = -0.25
+        defensive_war_stability_factor = -0.05
+        ai_focus_aggressive_factor = 0.15
+
+        ai_will_do = { factor = 1 }
+    }
+
+    #CRY advisor
+    imperial_coordinator = {
+        random = no
+        political_power_gain = -0.35
+        monthly_population = -0.25
+        industrial_capacity_factory = 0.1
+        production_speed_buildings_factor = 0.05
+        consumer_goods_factor = -0.075
+        local_resources_factor = 0.05
+
+        ai_will_do = { factor = 1 }
+    }
+
+    #EQC advisor
+    master_propagandist = {
+        random = no
+        stability_factor = 0.15
+        political_power_gain = 0.1
+        fascism_drift = 0.05
+
+        ai_will_do = { factor = 1 }
+    }
+
+    efficient_clerk = {
+        random = no
+        political_power_factor = 0.1
+        production_factory_max_efficiency_factor = 0.05
+        fascism_drift = 0.03
+
+        ai_will_do = { factor = 1 }
+    }
+
+    #Griffon advisors
+    aerial_expert = {
+        random = no
+        air_ace_generation_chance_factor = 0.05
+        air_cas_efficiency = 0.1
+        air_weather_penalty = -0.05
+
+        command_cap = @tier2
+
+        ai_will_do = { factor = 1 }
+    }
+
+    professional_scrounger = {
+        random = no
+        consumer_goods_factor = 0.05
+        local_resources_factor = 0.1
+        production_speed_infrastructure_factor = 0.1
+        production_lack_of_resource_penalty_factor = -0.05
 
         ai_will_do = { factor = 1 }
     }

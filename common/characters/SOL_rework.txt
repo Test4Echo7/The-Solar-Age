@@ -134,8 +134,8 @@ characters = {
 			allowed = {
 				original_tag = EQS
 			}
-			visible = { is_EQS_SOL = yes }
-			traits = { silent_workhorse }
+			visible = { has_completed_focus = SOL_unveil_cultus }
+			traits = { friendly_priest }
 		}
 	}
 	EQS_Fidelis_Flamma = {
@@ -409,6 +409,33 @@ characters = {
 			research_bonus = { race_tech = 0.05 }
 		}
 	}
+	EQS_nightshift = {
+		name = EQS_nightshift
+		gender = female
+
+		advisor = {
+			slot = political_advisor
+			idea_token = nightshift
+			allowed = { original_tag = EQS }
+			available = { is_EQS_SOL = yes }
+			visible = { has_completed_focus = SOL_first_feelers }
+			traits = { ruthless_industrialist }
+		}
+	}
+	EQS_hard_sell = {
+		name = EQS_hard_sell
+
+		advisor = {
+			slot = political_advisor
+			idea_token = hard_sell
+			allowed = { original_tag = EQS }
+			available = { is_EQS_SOL = yes }
+			visible = { has_completed_focus = SOL_first_feelers }
+			traits = { aggressive_diplomat }
+		}
+	}
+
+	###Foreign nation characters###
 	GRI_daybreaker = {
 		name = EQS_SOL_daybreaker
 		gender = female
@@ -416,6 +443,169 @@ characters = {
 			civilian = {
 				large = "gfx/leaders/EQS/Daybreaker_new.tga"
 			}
+		}
+	}
+	GRI_sturmvogel = {
+		name = GRI_sturmvogel
+		gender = female
+
+		advisor = {
+			slot = high_command
+			allowed = { tag = EQS }
+			idea_token = sturmvogel
+			available = { is_EQS_SOL = yes }
+			visible = { has_country_flag = SOL_unlocked_griffon_advisors }
+			traits = { aerial_expert }
+		}
+	}
+	GRI_liebslingruebe = {
+		name = GRI_liebslingruebe
+
+		advisor = {
+			slot = political_advisor
+			allowed = { tag = EQS }
+			idea_token = liebslingruebe
+			available = { is_EQS_SOL = yes }
+			visible = { has_country_flag = SOL_unlocked_griffon_advisors }
+			traits = { professional_scrounger }
+		}
+	}
+	CRY_morning_mist = {
+		name = CRY_morning_mist
+		gender = female
+
+		advisor = {
+			slot = political_advisor
+			allowed = { tag = CRY }
+			idea_token = morning_mist
+			available = { has_government = fascism }
+			visible = { has_country_flag = CRY_solar_advisors }
+			traits = { silent_workhorse }
+		}
+	}
+	CRY_evening_shower = {
+		name = CRY_evening_shower
+
+		advisor = {
+			slot = political_advisor
+			allowed = { tag = CRY }
+			idea_token = evening_shower
+			available = { has_government = fascism }
+			visible = { has_country_flag = CRY_solar_advisors }
+			traits = { captain_of_industry war_industrialist }
+		}
+	}
+	CRY_triplicate = {
+		name = CRY_triplicate
+		gender = female
+
+		advisor = {
+			slot = political_advisor
+			allowed = { tag = CRY }
+			idea_token = triplicate
+			available = { has_government = fascism }
+			visible = { has_country_flag = CRY_solar_advisors }
+			traits = { imperial_coordinator }
+		}
+	}
+	CRY_nightshade = {
+		name = CRY_nightshade
+		gender = female
+		portraits = {
+			army = {
+				large = "gfx/leaders/CRY/Nightshade.tga"
+				small = "gfx/interface/ideas/advisors/CRY/CRY_nightshade.tga"
+			}
+		}
+
+		corps_commander = {
+			traits = { harsh_leader pony_race_trait infantry_commander }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 3
+			visible = { has_country_flag = CRY_solar_generals }
+		}
+	}
+	CRY_mercy = {
+		name = CRY_mercy
+		gender = female
+
+		corps_commander = {
+			traits = { pony_race_trait winter_specialist }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+			visible = { has_country_flag = CRY_solar_generals }
+		}
+	}
+	CRY_beryl_scabbard = {
+		name = CRY_beryl_scabbard
+
+		field_marshal = {
+			traits = { pony_race_trait offensive_doctrine fast_planner organizer }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 2
+			visible = { has_country_flag = CRY_solar_generals }
+		}
+	}
+	EQC_sharp_treble = {
+		name = EQC_sharp_treble
+
+		advisor = {
+			slot = political_advisor
+			allowed = { tag = EQC }
+			idea_token = sharp_treble
+			available = {
+				has_country_leader = { character = EQC_jet_set ruling_only = yes }
+			}
+			visible = { has_country_flag = EQC_daybreakers_friends }
+			traits = { master_propagandist }
+		}
+	}
+	EQC_dot_form = {
+		name = EQC_dot_form
+
+		advisor = {
+			slot = political_advisor
+			allowed = { tag = EQC }
+			idea_token = dot_form
+			available = { has_country_leader = { character = EQC_jet_set ruling_only = yes } }
+			visible = { has_country_flag = EQC_daybreakers_friends }
+			traits = { efficient_clerk }
+		}
+	}
+	EQC_full_band = {
+		name = EQC_full_band
+
+		corps_commander = {
+			traits = { pony_race_trait air_force_commander career_officer }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 2
+			visible = { has_country_flag = EQC_the_backup_arrived }
+		}
+	}
+	EQC_triple_strike = {
+		name = EQC_triple_strike
+		gender = female
+
+		corps_commander = {
+			traits = { pony_race_trait air_force_commander promising_general }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 1
+			visible = { has_country_flag = EQC_the_backup_arrived }
 		}
 	}
 }

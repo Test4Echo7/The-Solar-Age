@@ -226,7 +226,7 @@ apply_SOL_cosmetic_tags_on_puppet = {
 SOL_fix_albino_sunhorse = { #In anticipation of Arcane Nova being fixed at some point
     if = {
         limit = {
-            EQS_SOL_arcane_nova = { has_country_leader_ideology = falangism }
+            has_country_leader = { character = EQS_SOL_arcane_nova ruling_only = yes }
         }
         EQS_SOL_arcane_nova = {
             remove_country_leader_role = { ideology = falangism }

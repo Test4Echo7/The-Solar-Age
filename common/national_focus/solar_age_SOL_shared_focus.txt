@@ -1432,7 +1432,8 @@ shared_focus = {
 
 	cost = 3
 	prerequisite = {
-		focus = SOL_
+		focus = SOL_imperial_betters
+		focus = SOL_Harmony_through_Order
 	}
 	available = {
 		is_subject = no
@@ -5285,7 +5286,7 @@ shared_focus = {
 			add_extra_state_shared_building_slots = 2
 		}
 		add_political_power = 100
-		#Griffon advisors here
+		set_country_flag = SOL_unlocked_griffon_advisors
 		###Possibly an event of Daybreaker watching as a monument to her is put up, and she is accosted by Gruff, but instead just shows him how the Grover statue is staying, and also that it is going to be a testament to how the two empires will accomplish great things together, although he thinks it a bunch of crap
 	}
 	ai_will_do = {
@@ -6908,9 +6909,15 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_appoint_economic_advisors"
+		hidden_effect = {
+			CRY_triplicate = { set_nationality = CRY }
+			CRY_morning_mist = { set_nationality = CRY }
+			CRY_evening_shower = { set_nationality = CRY }
+		}
 		CRY = {
 			#Advisors and idea here
 			add_ideas = SOL_micromanaging_middle_management
+			set_country_flag = CRY_solar_advisors
 			###Maybe event of a number of ponies from the Solar Empire coming to replace their Crystal counterparts, after they are taken away for anti-Order propaganda or the like
 		}
 	}
@@ -6929,9 +6936,18 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_retire_old_guard"
+		hidden_effect = {
+			CRY_nightshade = { set_nationality = CRY }
+			CRY_mercy = { set_nationality = CRY }
+			CRY_beryl_scabbard = { set_nationality = CRY }
+		}
 		CRY = {
 			#Generals and idea here
 			add_ideas = SOL_dictated_directions
+			CRY_shining_armour = {
+				remove_unit_leader_role = yes
+			}
+			set_country_flag = CRY_solar_generals
 			###Event of Shining Armor being brought before a tribunal, and him making a defense of himself, and although they can't kill him for fear of angering the entire Crystal Empire, they do sack him of his position
 		}
 	}
@@ -8018,8 +8034,23 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_personnel_support"
-		add_war_support = 0.05
-		#Effects here
+		hidden_effect = {
+			EQC_full_band = { set_nationality = EQC }
+			EQC_triple_strike = { set_nationality = EQC }
+		}
+		EQC = {
+			add_war_support = 0.05
+			#Generals here
+			set_country_flag = EQC_the_backup_arrived
+			#This will be moved to EQC's reworked tree if that gets developed
+			if = {
+				limit = { has_character = EQS_SOL_arcane_nova }
+				EQS_SOL_arcane_nova = {
+					promote_leader = yes
+					remove_trait = { trait = recently_promoted }
+				}
+			}
+		}
 		###Maybe a short event of EQC receiving the new generals with Arcane Nova meeting them with speaking on the state of the country and how they will need to enforce law
 	}
 	ai_will_do = { factor = 70 }
@@ -8249,8 +8280,13 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_allies_in_high_places"
+		hidden_effect = {
+			EQC_dot_form = { set_nationality = ROOT }
+			EQC_sharp_treble = { set_nationality = ROOT }
+		}
 		EQC = {
 			#Advisors here
+			set_country_flag = EQC_daybreakers_friends
 			add_stability = 0.05
 		}
 	}
@@ -8971,14 +9007,15 @@ shared_focus = {
 		3 = { is_fully_controlled_by = ROOT }
 		2 = { is_fully_controlled_by = ROOT }
 		103 = { is_fully_controlled_by = ROOT }
-		OR = {
-			CHN = {
-				OR = {
-					exists = no
-					is_subject_of = ROOT
-				}
+		has_war_with = CHN
+		surrender_progress > 0.25
+	}
+	bypass = {
+		CHN = {
+			OR = {
+				exists = no
+				is_subject_of = ROOT
 			}
-			surrender_progress > 0.25
 		}
 	}
 
@@ -9152,6 +9189,7 @@ shared_focus = {
 	id = SOL_establish_solaris_militarium
 	x = -14
 	y = 1
+	icon = GFX_goal_solaris_militarium
 	relative_position_id = SOL_modernize_relic
 
 	cost = 3
@@ -9187,6 +9225,7 @@ shared_focus = {
 	id = SOL_encourage_troops
 	x = 2
 	y = 1
+	icon = GFX_goal_encourage_troops
 	relative_position_id = SOL_establish_solaris_militarium
 
 	cost = 3
@@ -9699,7 +9738,7 @@ shared_focus = {
 		add_tech_bonus = {
 			name = armor_bonus
 			bonus = 1
-			uses = 2
+			uses = 1
 			category = armor
 		}
 	}

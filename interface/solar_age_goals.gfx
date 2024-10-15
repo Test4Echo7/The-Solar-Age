@@ -1,0 +1,12 @@
+SpriteTypes = {
+
+    SpriteType = {
+        name = GFX_goal_solaris_militarium
+        texturefile = "gfx/interface/goals/EQS/solaris_militarium.png"
+    }
+    SpriteType = {
+        name = GFX_goal_encourage_troops
+        texturefile = "gfx/interface/goals/EQS/encourage_troops.png"
+    }
+
+}

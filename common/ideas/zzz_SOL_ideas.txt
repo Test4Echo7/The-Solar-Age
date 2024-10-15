@@ -1392,7 +1392,7 @@ ideas = {
 			modifier = {
 				stability_factor = 0.1
 				war_stability_factor = 0.05
-				compliance = 0.01
+				compliance_gain = 0.01
 			}
 		}
 		SOL_overpowering_government = {
@@ -2051,7 +2051,34 @@ ideas = {
 			}
 
 			traits = { super_heavy_tank_manufacturer }
+			equipment_bonus = {
+				armor = { armor_value = 0.05 maximum_speed = -0.05 instant = yes }
+			}
 			picture = EQS_sanctum_infernal_corps
+		}
+
+		holy_flame_arms = {
+			allowed = {
+				original_tag = EQS
+			}
+
+			available = {
+				is_EQS_SOL = yes
+			}
+
+			visible = {
+				has_country_flag = SOL_holy_flame_unlocked
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+
+			traits = { medium_tank_manufacturer }
+			equipment_bonus = {
+				medium_tank_chassis = { soft_attack = 0.05 breakthrough = 0.01 instant = yes }
+			}
+			#picture = EQS_holy_flame_arms
 		}
 	}
 }

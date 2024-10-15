@@ -8,3 +8,13 @@
   EQC_form_greater_new_mareland_desc:0 "Our humble colony is surrounded by griffons, all of whom would eagerly take advantage of our territory if we were to ever show a sign of weakness. Yet every day, more ponies flock across the Celestial Sea to our lands, and the space with which we can house them is ever dwindling. To combat this, [ROOT.GetLeader] has announced a grand vision: one day, a New Mareland stretching across all of the Discovery Coast, and south to the heartland of the cursed [WNG.GetAdjective]s. In accordance with the Empress's desires, everypony within [ROOT.GetNameDef] will be safe and secure, and may live out their days in comfort.\n\nThe griffons have worn out their welcome. It is time for the age of the pony to begin."
   EQC_war_for_greater_new_mareland:0 "Claims on Our True Borders"
   EQC_proclaim_greater_new_mareland:0 "Proclaim Nova Marelandia Majoris"
+
+  ###Characters###
+  EQC_full_band:0 "Full Band"
+  EQC_triple_strike:0 "Triple Strike"
+  EQC_sharp_treble:0 "Sharp Treble"
+  EQC_dot_form:0 "Dot Form"
+
+  ###Traits###
+  master_propagandist:0 "Master Propagandist"
+  efficient_clerk:0 "Efficient Clerk"
