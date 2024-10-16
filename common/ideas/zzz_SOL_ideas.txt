@@ -2033,7 +2033,7 @@ ideas = {
 	}
 	###Concerns###
 	tank_manufacturer = {
-		sanctum_infernal_corps = {
+		SOL_sanctum_infernal_corps = {
 			allowed = {
 				original_tag = EQS
 			}
@@ -2054,10 +2054,10 @@ ideas = {
 			equipment_bonus = {
 				armor = { armor_value = 0.05 maximum_speed = -0.05 instant = yes }
 			}
-			picture = EQS_sanctum_infernal_corps
+			#picture = EQS_sanctum_infernal_corps
 		}
 
-		holy_flame_arms = {
+		SOL_holy_flame_arms = {
 			allowed = {
 				original_tag = EQS
 			}
@@ -2079,6 +2079,82 @@ ideas = {
 				medium_tank_chassis = { soft_attack = 0.05 breakthrough = 0.01 instant = yes }
 			}
 			#picture = EQS_holy_flame_arms
+		}
+
+		EQC_prelate_corps = {
+			allowed = {
+				original_tag = EQC
+			}
+
+			available = {
+				is_subject_of = EQS
+				OVERLORD = {
+					is_EQS_SOL = yes
+				}
+			}
+
+			visible = {
+				has_country_flag = SOL_prelate_unlocked
+			}
+
+			research_bonus = { armor = 0.15 }
+
+			equipment_bonus = {
+				armor = { soft_attack = 0.075 armor_value = 0.05 maximum_speed = -0.03 build_cost_ic = 0.03 instant = yes }
+			}
+
+			traits = { medium_tank_manufacturer }
+		}
+	}
+	materiel_designer = {
+		SOL_bitterbury_ballistics = {
+			allowed = {
+				original_tag = EQS
+			}
+
+			available = {
+				is_EQS_SOL = yes
+			}
+
+			visible = {
+				has_country_flag = SOL_bitterbury_unlocked
+			}
+
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+
+			equipment_bonus = {
+				infantry_equipment = { soft_attack = 0.075 defense = 0.03 build_cost_ic = 0.04 instant = yes }
+				magical_equipment = { soft_attack = 0.075 defense = 0.03 build_cost_ic = 0.04 instant = yes }
+			}
+
+			traits = { infantry_equipment_manufacturer }
+		}
+
+		CRY_gleaming_shield_arsenals = {
+			allowed = {
+				original_tag = CRY
+			}
+
+			available = {
+				has_government = fascism
+			}
+
+			visible = {
+				has_country_flag = SOL_gleaming_shield_unlocked
+			}
+
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+
+			equipment_bonus = {
+				infantry_equipment = { defense = 0.1 soft_attack = 0.02 instant = yes }
+				magical_equipment = { defense = 0.1 soft_attack = 0.02 instant = yes }
+			}
+
+			traits = { infantry_equipment_manufacturer }
 		}
 	}
 }

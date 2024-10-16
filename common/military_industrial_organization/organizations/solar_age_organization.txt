@@ -1,0 +1,865 @@
+SOL_sanctum_infernal_corps_organization = {
+	name = SOL_sanctum_infernal_corps
+	equipment_type = { mio_cat_eq_all_heavy_tank }
+	research_categories = { mio_cat_tech_heavy_armor_and_modules }
+	#icon = GFX_idea_EQS_sanctum_infernal_corps
+	allowed = {
+		original_tag = EQS
+		has_dlc = "Arms Against Tyranny"
+	}
+	#visible = {
+	#	IF = {
+	#		limit = {
+	#			FROM = {
+	#				is_EQS_SOL = yes
+	#				has_country_flag = SOL_sanctum_arms_unlocked
+	#			}
+	#		}
+	#	}
+	#}
+
+	tree_header_text = {
+		text = mio_header_heavy_tanks
+		x = 1
+	}
+
+	tree_header_text = {
+		text = mio_header_design
+		x = 5
+	}
+
+	tree_header_text = {
+		text = mio_header_flame_tanks
+		x = 8
+	}
+
+	initial_trait = {
+		name = SOL_sanctum_infernal_corps_trait
+		organization_modifier = { military_industrial_organization_research_bonus = 0.05 }
+
+		equipment_bonus = {
+			armor_value = 0.1
+			maximum_speed = -0.05
+		}
+
+		production_bonus = {
+			production_cost_factor = 0.035
+		}
+	}
+
+	trait = {
+		token = SOL_reinforced_turret_weld_points
+		name = SOL_reinforced_turret_weld_points
+
+		position = {
+			x = 1
+			y = 0
+		}
+
+		equipment_bonus = {
+			breakthrough = 0.03
+			hard_attack = 0.03
+		}
+
+		production_bonus = {
+			production_resource_need_factor = 0.01
+		}
+	}
+
+	trait = {
+		token = SOL_reinforced_drive_trains
+		name = SOL_reinforced_drive_trains
+
+		position = {
+			x = 7
+			y = 0
+		}
+
+		limit_to_equipment_type = { super_heavy_flame_tank_chassis}
+		equipment_bonus = {
+			reliability = 0.05
+			armor_value = 0.02
+		}
+	}
+
+	trait = {
+		token = SOL_expanded_caliber_barrels
+		name = SOL_expanded_caliber_barrels
+
+		position = {
+			x = -1
+			y = 1
+		}
+		relative_position_id = SOL_reinforced_turret_weld_points
+
+		any_parent = {
+			SOL_reinforced_turret_weld_points
+		}
+
+		equipment_bonus = {
+			hard_attack = 0.1
+			ap_attack = 0.05
+			reliability = -0.05
+		}
+	}
+
+	trait = {
+		token = SOL_interlocking_tread_connection_points
+		name = SOL_interlocking_tread_connection_points
+
+		position = {
+			x = 1
+			y = 1
+		}
+		relative_position_id = SOL_reinforced_turret_weld_points
+
+		any_parent = {
+			SOL_reinforced_turret_weld_points
+		}
+
+		equipment_bonus = {
+			reliability = 0.05
+			breakthrough = 0.01
+		}
+	}
+
+	trait = {
+		token = SOL_automated_smoke_canisters
+		name = SOL_automated_smoke_canisters
+
+		position = {
+			x = -1
+			y = 1
+		}
+		relative_position_id = SOL_reinforced_drive_trains
+
+		any_parent = {
+			SOL_reinforced_drive_trains
+		}
+
+		equipment_bonus = {
+			defense = 0.05
+		}
+	}
+
+	trait = {
+		token = SOL_crystal_bonded_armor_plates
+		name = SOL_crystal_bonded_armor_plates
+
+		position = {
+			x = 0
+			y = 1
+		}
+		relative_position_id = SOL_expanded_caliber_barrels
+
+		any_parent = {
+			SOL_expanded_caliber_barrels
+		}
+
+		equipment_bonus = {
+			armor_value = 0.1
+			breakthrough = 0.02
+			reliability = -0.05
+		}
+
+		production_bonus = {
+			production_cost_factor = 0.02
+		}
+	}
+
+	trait = {
+		token = SOL_heavy_subsidization
+		name = SOL_heavy_subsidization
+
+		position = {
+			x = 2
+			y = 1
+		}
+		relative_position_id = SOL_interlocking_tread_connection_points
+
+		any_parent = {
+			SOL_interlocking_tread_connection_points
+			SOL_automated_smoke_canisters
+		}
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.075
+			production_efficiency_cap_factor = 0.075
+		}
+
+		organization_modifier = {
+			military_industrial_organization_design_team_assign_cost = 0.25
+		}
+	}
+
+	trait = {
+		token = SOL_constant_state_preignitors
+		name = SOL_constant_state_preignitors
+
+		position = {
+			x = 0
+			y = 2
+		}
+		relative_position_id = SOL_reinforced_drive_trains
+
+		any_parent = {
+			SOL_reinforced_drive_trains
+		}
+
+		limit_to_equipment_type = { super_heavy_flame_tank_chassis }
+		equipment_bonus = {
+			soft_attack = 0.15
+			breakthrough = 0.03
+		}
+	}
+
+	trait = {
+		token = SOL_carbon_fiber_steel_joints
+		name = SOL_carbon_fiber_steel_joints
+
+		position = {
+			x = 1
+			y = 1
+		}
+		relative_position_id = SOL_crystal_bonded_armor_plates
+
+		any_parent = {
+			SOL_crystal_bonded_armor_plates
+		}
+
+		equipment_bonus = {
+			armor_value = 0.1
+			reliability = -0.03
+		}
+
+		production_bonus = {
+			production_cost_factor = 0.03
+		}
+	}
+
+	trait = {
+		token = SOL_non_standard_material_substitution
+		name = SOL_non_standard_material_substitution
+
+		position = {
+			x = -1
+			y = 1
+		}
+		relative_position_id = SOL_heavy_subsidization
+
+		any_parent = {
+			SOL_heavy_subsidization
+		}
+
+		equipment_bonus = {
+			reliability = -0.03
+		}
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.05
+			production_resource_need_factor = -0.05
+		}
+	}
+
+	trait = {
+		token = SOL_mandatory_overtime_protocols
+		name = SOL_mandatory_overtime_protocols
+
+		position = {
+			x = 0
+			y = 1
+		}
+		relative_position_id = SOL_heavy_subsidization
+
+		any_parent = {
+			SOL_heavy_subsidization
+		}
+
+		equipment_bonus = {
+			reliability = -0.02
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}
+	}
+
+	trait = {
+		token = SOL_evocation_powered_charges
+		name = SOL_evocation_powered_charges
+
+		position = {
+			x = 0
+			y = 1
+		}
+		relative_position_id = SOL_carbon_fiber_steel_joints
+
+		any_parent = {
+			SOL_carbon_fiber_steel_joints
+		}
+		mutually_exclusive = {
+			SOL_integrated_forward_facing_flamethrower
+		}
+
+		equipment_bonus = {
+			ap_attack = 0.1
+			hard_attack = 0.1
+			reliability = -0.03
+		}
+	}
+
+	trait = {
+		token = SOL_integrated_forward_facing_flamethrower
+		name = SOL_integrated_forward_facing_flamethrower
+
+		position = {
+			x = -2
+			y = 2
+		}
+		relative_position_id = SOL_constant_state_preignitors
+
+		any_parent = {
+			SOL_carbon_fiber_steel_joints
+			SOL_constant_state_preignitors
+		}
+		mutually_exclusive = {
+			SOL_evocation_powered_charges
+		}
+
+		equipment_bonus = {
+			soft_attack = 0.05
+			breakthrough = 0.03
+			defense = 0.02
+		}
+
+		production_bonus = {
+			production_cost_factor = 0.03
+		}
+	}
+
+	trait = {
+		token = SOL_fixed_melta_guns
+		name = SOL_fixed_melta_guns
+
+		position = {
+			x = 0
+			y = 2
+		}
+		relative_position_id = SOL_constant_state_preignitors
+
+		any_parent = {
+			SOL_constant_state_preignitors
+		}
+		mutually_exclusive = {
+			SOL_free_moving_melta_guns
+		}
+
+		limit_to_equipment_type = { super_heavy_flame_tank_chassis }
+		equipment_bonus = {
+			soft_attack = 0.15
+			armor_value = 0.05
+		}
+
+		production_bonus = {
+			production_cost_factor = 0.03
+		}
+	}
+
+	trait = {
+		token = SOL_free_moving_melta_guns
+		name = SOL_free_moving_melta_guns
+
+		position = {
+			x = 2
+			y = 2
+		}
+		relative_position_id = SOL_constant_state_preignitors
+
+		any_parent = {
+			SOL_constant_state_preignitors
+		}
+		mutually_exclusive = {
+			SOL_fixed_melta_guns
+		}
+
+		limit_to_equipment_type = { super_heavy_flame_tank_chassis }
+		equipment_bonus = {
+			soft_attack = 0.35
+			armor_value = -0.05
+		}
+
+		production_bonus = {
+			production_cost_factor = 0.01
+		}
+	}
+}
+
+SOL_holy_flame_arms_organization = {
+	name = SOL_holy_flame_arms
+	equipment_type = { mio_cat_eq_all_medium_tank }
+	research_categories = { mio_cat_tech_medium_armor_and_modules }
+
+	allowed = {
+		original_tag = EQS
+		has_dlc = "Arms Against Tyranny"
+	}
+	#visible = {
+	#	IF = {
+	#		limit = {
+	#			FROM = {
+	#				is_EQS_SOL = yes
+	#				has_country_flag = SOL_holy_flame_unlocked
+	#			}
+	#		}
+	#	}
+	#}
+
+	tree_header_text = {
+		text = mio_header_armor_and_armaments
+		x = 1
+	}
+
+	tree_header_text = {
+		text = mio_header_production
+		x = 4
+	}
+
+	tree_header_text = {
+		text = mio_header_flame_tanks
+		x = 7
+	}
+
+	initial_trait = {
+		name = SOL_holy_flame_arms_trait
+		organization_modifier = { military_industrial_organization_research_bonus = 0.05 }
+
+		equipment_bonus = {
+			breakthrough = 0.05
+			soft_attack = 0.02
+		}
+
+		production_bonus = {
+			production_cost_factor = 0.02
+		}
+	}
+
+	trait = {
+		token = SOL_reinforced_alloy_frames
+		name = SOL_reinforced_alloy_frames
+
+		position = {
+			x = 4
+			y = 0
+		}
+
+		equipment_bonus = {
+			reliability = 0.1
+		}
+	}
+
+	trait = {
+		token = SOL_shrouded_machine_gun_slats
+		name = SOL_shrouded_machine_gun_slats
+
+		position = {
+			x = -2
+			y = 1
+		}
+		relative_position_id = SOL_reinforced_alloy_frames
+
+		any_parent = {
+			SOL_reinforced_alloy_frames
+		}
+
+		equipment_bonus = {
+			armor_value = 0.01
+			soft_attack = 0.03
+		}
+	}
+
+	trait = {
+		token = SOL_restructured_supply_lines
+		name = SOL_restructured_supply_lines
+
+		position = {
+			x = 0
+			y = 1
+		}
+		relative_position_id = SOL_reinforced_alloy_frames
+
+		any_parent = {
+			SOL_reinforced_alloy_frames
+		}
+
+		production_bonus = {
+			production_resource_need_factor = -0.075
+		}
+	}
+
+	trait = {
+		token = SOL_turbocharged_engines
+		name = SOL_turbocharged_engines
+
+		position = {
+			x = 2
+			y = 1
+		}
+		relative_position_id = SOL_reinforced_alloy_frames
+
+		any_parent = {
+			SOL_reinforced_alloy_frames
+		}
+
+		equipment_bonus = {
+			maximum_speed = 0.05
+			fuel_consumption = 0.03
+		}
+	}
+
+	trait = {
+		token = SOL_liquid_cooled_barrels
+		name = SOL_liquid_cooled_barrels
+
+		position = {
+			x = -1
+			y = 1
+		}
+		relative_position_id = SOL_shrouded_machine_gun_slats
+
+		any_parent = {
+			SOL_shrouded_machine_gun_slats
+		}
+
+		equipment_bonus = {
+			breakthrough = 0.05
+			ap_attack = 0.02
+		}
+	}
+
+	trait = {
+		token = SOL_prototype_automation
+		name = SOL_prototype_automation
+
+		position = {
+			x = -1
+			y = 1
+		}
+		relative_position_id = SOL_restructured_supply_lines
+
+		any_parent = {
+			SOL_restructured_supply_lines
+		}
+		mutually_exclusive = {
+			SOL_iterative_design_processes
+		}
+
+		equipment_bonus = {
+			reliability = -0.05
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}
+	}
+
+	trait = {
+		token = SOL_iterative_design_processes
+		name = SOL_iterative_design_processes
+
+		position = {
+			x = 1
+			y = 1
+		}
+		relative_position_id = SOL_restructured_supply_lines
+
+		any_parent = {
+			SOL_restructured_supply_lines
+		}
+		mutually_exclusive = {
+			SOL_prototype_automation
+		}
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.05
+			production_resource_need_factor = -0.025
+		}
+	}
+
+	trait = {
+		token = SOL_flame_retardant_spells
+		name = SOL_flame_retardant_spells
+
+		position = {
+			x = 1
+			y = 1
+		}
+		relative_position_id = SOL_turbocharged_engines
+
+		any_parent = {
+			SOL_turbocharged_engines
+		}
+
+		limit_to_equipment_type = { medium_flame_tank_chassis }
+		equipment_bonus = {
+			defense = 0.03
+			soft_attack = 0.15
+		}
+	}
+
+	trait = {
+		token = SOL_secondary_plate_layers
+		name = SOL_secondary_plate_layers
+
+		position = {
+			x = 1
+			y = 1
+		}
+		relative_position_id = SOL_liquid_cooled_barrels
+
+		any_parent = {
+			SOL_liquid_cooled_barrels
+		}
+
+		equipment_bonus = {
+			armor_value = 0.05
+			breakthrough = 0.01
+		}
+	}
+
+	trait = {
+		token = SOL_incendiary_hollow_point_rounds
+		name = SOL_incendiary_hollow_point_rounds
+
+		position = {
+			x = 2
+			y = 1
+		}
+		relative_position_id = SOL_liquid_cooled_barrels
+
+		any_parent = {
+			SOL_liquid_cooled_barrels
+		}
+
+		equipment_bonus = {
+			soft_attack = 0.05
+			breakthrough = 0.02
+			ap_attack = -0.03
+		}
+	}
+
+	trait = {
+		token = SOL_short_range_wide_angle_throwers
+		name = SOL_short_range_wide_angle_throwers
+
+		position = {
+			x = -1
+			y = 1
+		}
+		relative_position_id = SOL_flame_retardant_spells
+
+		any_parent = {
+			SOL_flame_retardant_spells
+		}
+		mutually_exclusive = {
+			SOL_long_range_flame_launchers
+		}
+
+		limit_to_equipment_type = { medium_flame_tank_chassis }
+		equipment_bonus = {
+			soft_attack = 0.5
+			reliability = -0.05
+		}
+
+		production_bonus = {
+			production_cost_factor = 0.075
+		}
+	}
+
+	trait = {
+		token = SOL_long_range_flame_launchers
+		name = SOL_long_range_flame_launchers
+
+		position = {
+			x = 1
+			y = 1
+		}
+		relative_position_id = SOL_flame_retardant_spells
+
+		any_parent = {
+			SOL_flame_retardant_spells
+		}
+		mutually_exclusive = {
+			SOL_short_range_wide_angle_throwers
+		}
+
+		limit_to_equipment_type = { medium_flame_tank_chassis }
+		equipment_bonus = {
+			soft_attack = 0.25
+			breakthrough = 0.05
+			reliability = -0.05
+		}
+	}
+
+	trait = {
+		token = SOL_cannon_magazines
+		name = SOL_cannon_magazines
+
+		position = {
+			x = 0
+			y = 2
+		}
+		relative_position_id = SOL_liquid_cooled_barrels
+
+		any_parent = {
+			SOL_liquid_cooled_barrels
+		}
+		mutually_exclusive = {
+			SOL_evoker_cartridges
+		}
+
+		equipment_bonus = {
+			breakthrough = 0.05
+			maximum_speed = 0.02
+		}
+	}
+
+	trait = {
+		token = SOL_evoker_cartridges
+		name = SOL_evoker_cartridges
+
+		position = {
+			x = 1
+			y = 1
+		}
+		relative_position_id = SOL_secondary_plate_layers
+
+		all_parents = {
+			SOL_secondary_plate_layers
+			SOL_incendiary_hollow_point_rounds
+		}
+		mutually_exclusive = {
+			SOL_cannon_magazines
+		}
+
+		equipment_bonus = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+	}
+
+	trait = {
+		token = SOL_hidden_melta_guns
+		name = SOL_hidden_melta_guns
+
+		position = {
+			x = 2
+			y = 1
+		}
+		relative_position_id = SOL_incendiary_hollow_point_rounds
+
+		any_parent = {
+			SOL_incendiary_hollow_point_rounds
+			SOL_short_range_wide_angle_throwers
+			SOL_long_range_flame_launchers
+		}
+
+		equipment_bonus = {
+			soft_attack = 0.1
+			defense = 0.03
+			ap_attack = -0.05
+			armor_value = -0.01
+		}
+	}
+}
+
+SOL_bitterbury_ballistics_organization = {
+	name = SOL_bitterbury_ballistics
+	equipment_type = { infantry_equipment magical_equipment }
+	research_categories = { infantry_weapons magical_tech }
+
+	allowed = {
+		original_tag = EQS
+		has_dlc = "Arms Against Tyranny"
+	}
+	#visible = {
+	#	IF = {
+	#		limit = {
+	#			FROM = {
+	#				is_EQS_SOL = yes
+	#				has_country_flag = SOL_bitterbury_unlocked
+	#			}
+	#		}
+	#	}
+	#}
+
+	initial_trait = {
+		name = SOL_bitterbury_ballistics_trait
+		organization_modifier = { military_industrial_organization_research_bonus = 0.05 }
+
+		equipment_bonus = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			reliability = -0.05
+		}
+	}
+}
+
+CRY_gleaming_shield_arsenals_organization = {
+	name = CRY_gleaming_shield_arsenals
+	equipment_bonus = { infantry_equipment magical_equipment }
+	research_categories = { infantry_weapons magical_tech }
+
+	allowed = {
+		original_tag = CRY
+		has_dlc = "Arms Against Tyranny"
+	}
+	#visible = {
+	#	IF = {
+	#		limit = {
+	#			FROM = {
+	#				is_EQS_SOL = yes
+	#				has_country_flag = SOL_gleaming_shield_unlocked
+	#			}
+	#		}
+	#	}
+	#}
+
+	initial_trait = {
+		name = CRY_gleaming_shield_arsenals_trait
+		organization_modifier = { military_industrial_organization_research_bonus = 0.05 }
+
+		equipment_bonus = {
+			defense = 0.075
+			reliability = 0.03
+		}
+
+		production_bonus = {
+			production_cost_factor = 0.02
+		}
+	}
+}
+
+EQC_prelate_corps_organization = {
+	name = EQC_prelate_corps
+	include = generic_infantry_tank_organization
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+		original_tag = EQC
+	}
+	visible = {
+		FROM = {
+			has_country_flag = SOL_prelate_unlocked
+		}
+	}
+	initial_trait = {
+		name = EQC_prelate_corps_trait
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+
+		equipment_bonus = {
+			soft_attack = 0.05
+			armor_value = 0.03
+		}
+	}
+}

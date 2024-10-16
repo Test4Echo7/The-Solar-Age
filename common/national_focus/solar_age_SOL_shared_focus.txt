@@ -2294,10 +2294,10 @@ shared_focus = {
 			limit = {
 				has_dlc = "Arms Against Tyranny"
 			}
-			#show_mio_tooltip = SOL_sanctum_infernal_corps_organization
+			show_mio_tooltip = SOL_sanctum_infernal_corps_organization
 		}
 		else = {
-			#show_ideas_tooltip = SOL_sanctum_infernal_corps
+			show_ideas_tooltip = SOL_sanctum_infernal_corps
 		}
 	}
 	ai_will_do = { factor = 50 }
