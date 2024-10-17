@@ -802,11 +802,343 @@ SOL_bitterbury_ballistics_organization = {
 			reliability = -0.05
 		}
 	}
+
+	trait = {
+		token = SOL_hyper_focused_magic_blasts
+		name = SOL_hyper_focused_magic_blasts
+
+		position = {
+			x = 2
+			y = 0
+		}
+
+		mutually_exclusive = { SOL_refined_muzzle_breaks }
+
+		limit_to_equipment_type = { magical_equipment }
+		equipment_bonus = {
+			breakthrough = 0.05
+			reliability = -0.02
+		}
+	}
+
+	trait = {
+		token = SOL_refined_muzzle_breaks
+		name = SOL_refined_muzzle_breaks
+
+		position = {
+			x = 7
+			y = 0
+		}
+
+		mutually_exclusive = { SOL_hyper_focused_magic_blasts }
+
+		limit_to_equipment_type = { infantry_equipment }
+		equipment_bonus = {
+			soft_attack = 0.03
+			reliability = 0.02
+		}
+	}
+
+	trait = {
+		token = SOL_imperial_appointed_administrators
+		name = SOL_imperial_appointed_administrators
+
+		position = {
+			x = 0
+			y = 1
+		}
+
+		organization_modifier = {
+			military_industrial_organization_design_team_assign_cost = -0.1
+			military_industrial_organization_design_team_change_cost = -0.25
+		}
+	}
+
+	trait = {
+		token = SOL_dual_crystal_magazines
+		name = SOL_dual_crystal_magazines
+
+		position = {
+			x = 0
+			y = 1
+		}
+		relative_position_id = SOL_hyper_focused_magic_blasts
+
+		any_parent = {
+			SOL_hyper_focused_magic_blasts
+		}
+
+		limit_to_equipment_type = { magical_equipment }
+		equipment_bonus = {
+			soft_attack = 0.02
+			breakthrough = 0.04
+		}
+
+		production_bonus = {
+			production_cost_factor = 0.025
+		}
+	}
+
+	trait = {
+		token = SOL_select_fire_mechanisms
+		name = SOL_select_fire_mechanisms
+
+		position = {
+			x = 0
+			y = 1
+		}
+		relative_position_id = SOL_refined_muzzle_breaks
+
+		any_parent = {
+			SOL_refined_muzzle_breaks
+		}
+
+		limit_to_equipment_type = { infantry_equipment }
+		equipment_bonus = {
+			soft_attack = 0.04
+		}
+
+		production_bonus = {
+			production_cost_factor = 0.01
+		}
+	}
+
+	trait = {
+		token = SOL_expanded_assembly_line_coverage
+		name = SOL_expanded_assembly_line_coverage
+
+		position = {
+			x = 1
+			y = 1
+		}
+		relative_position_id = SOL_imperial_appointed_administrators
+
+		any_parent = {
+			SOL_imperial_appointed_administrators
+		}
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.03
+			production_efficiency_gain_factor = 0.03
+		}
+	}
+
+	trait = {
+		token = SOL_recoil_compensating_spells
+		name = SOL_recoil_compensating_spells
+
+		position = {
+			x = 0
+			y = 1
+		}
+		relative_position_id = SOL_dual_crystal_magazines
+
+		any_parent = {
+			SOL_dual_crystal_magazines
+		}
+
+		limit_to_equipment_type = { magical_equipment }
+		equipment_bonus = {
+			soft_attack = 0.05
+			hard_attack = 0.02
+		}
+
+		production_bonus = {
+			production_cost_factor = 0.05
+		}
+	}
+
+	trait = {
+		token = SOL_magic_laced_grenades
+		name = SOL_magic_laced_grenades
+
+		position = {
+			x = 3
+			y = 1
+		}
+		relative_position_id = SOL_dual_crystal_magazines
+
+		any_parent = {
+			SOL_dual_crystal_magazines
+			SOL_select_fire_mechanisms
+		}
+
+		equipment_bonus = {
+			soft_attack = 0.03
+			ap_attack = 0.02
+		}
+	}
+
+	trait = {
+		token = SOL_standardized_frame_designs
+		name = SOL_standardized_frame_designs
+
+		position = {
+			x = 0
+			y = 2
+		}
+		relative_position_id = SOL_imperial_appointed_administrators
+
+		any_parent = {
+			SOL_imperial_appointed_administrators
+		}
+
+		production_bonus = {
+			production_cost_factor = -0.05
+			production_capacity_factor = 0.02
+		}
+	}
+
+	trait = {
+		token = SOL_explosively_unstable_charges
+		name = SOL_explosively_unstable_charges
+
+		position = {
+			x = 1
+			y = 1
+		}
+		relative_position_id = SOL_recoil_compensating_spells
+
+		all_parents = {
+			SOL_recoil_compensating_spells
+			SOL_magic_laced_grenades
+		}
+
+		limit_to_equipment_type = { magical_equipment }
+		equipment_bonus = {
+			soft_attack = 0.05
+			reliability = -0.05
+		}
+	}
+
+	trait = {
+		token = SOL_anti_rust_protections
+		name = SOL_anti_rust_protections
+
+		position = {
+			x = 0
+			y = 2
+		}
+		relative_position_id = SOL_select_fire_mechanisms
+
+		all_parents = {
+			SOL_select_fire_mechanisms
+			SOL_magic_laced_grenades
+		}
+
+		limit_to_equipment_type = { infantry_equipment }
+		equipment_bonus = {
+			reliability = 0.075
+			breakthrough = 0.02
+		}
+
+		production_bonus = {
+			production_cost_factor = 0.02
+		}
+	}
+
+	trait = {
+		token = SOL_universal_bipod_mounts
+		name = SOL_universal_bipod_mounts
+
+		position = {
+			x = 1
+			y = 2
+		}
+		relative_position_id = SOL_select_fire_mechanisms
+
+		any_parent = {
+			SOL_select_fire_mechanisms
+		}
+
+		limit_to_equipment_type = { infantry_equipment}
+		equipment_bonus = {
+			defense = 0.05
+		}
+	}
+
+	trait = {
+		token = SOL_armor_piercing_enchantments
+		name = SOL_armor_piercing_enchantments
+
+		position = {
+			x = -1
+			y = 2
+		}
+		relative_position_id = SOL_recoil_compensating_spells
+
+		any_parent = {
+			SOL_recoil_compensating_spells
+		}
+		mutually_exclusive = { SOL_inferno_ammunition_compounds }
+		mutually_exclusive = { SOL_early_bulpup_rifles }
+
+		limit_to_equipment_type = { magical_equipment }
+		equipment_bonus = {
+			hard_attack = 0.2
+			ap_attack = 0.25
+		}
+
+		production_bonus = {
+			production_cost_factor = 0.05
+		}
+	}
+
+	trait = {
+		token = SOL_inferno_ammunition_compounds
+		name = SOL_inferno_ammunition_compounds
+
+		position = {
+			x = 2
+			y = 1
+		}
+		relative_position_id = SOL_explosively_unstable_charges
+
+		any_parent = {
+			SOL_explosively_unstable_charges
+			SOL_anti_rust_protections
+		}
+		mutually_exclusive = { SOL_armor_piercing_enchantments }
+		mutually_exclusive = { SOL_early_bulpup_rifles }
+
+		equipment_bonus = {
+			soft_attack = 0.03
+			breakthrough = 0.03
+			defense = 0.01
+		}
+	}
+
+	trait = {
+		token = SOL_early_bulpup_rifles
+		name = SOL_early_bulpup_rifles
+
+		position = {
+			x = 0
+			y = 1
+		}
+		relative_position_id = SOL_universal_bipod_mounts
+
+		any_parent = {
+			SOL_universal_bipod_mounts
+		}
+		mutually_exclusive = { SOL_armor_piercing_enchantments }
+		mutually_exclusive = { SOL_inferno_ammunition_compounds }
+
+		limit_to_equipment_type = { infantry_equipment }
+		equipment_bonus = {
+			soft_attack = 0.05
+			defense = 0.02
+		}
+
+		production_bonus = {
+			production_cost_factor = 0.03
+		}
+	}
 }
 
 CRY_gleaming_shield_arsenals_organization = {
 	name = CRY_gleaming_shield_arsenals
-	equipment_bonus = { infantry_equipment magical_equipment }
+	equipment_type = { infantry_equipment magical_equipment }
 	research_categories = { infantry_weapons magical_tech }
 
 	allowed = {
@@ -837,20 +1169,358 @@ CRY_gleaming_shield_arsenals_organization = {
 			production_cost_factor = 0.02
 		}
 	}
+
+	trait = {
+		token = CRY_purified_crystal_matrtices
+		name = CRY_purified_crystal_matrtices
+
+		position = {
+			x = 7
+			y = 0
+		}
+
+		limit_to_equipment_type = { magical_equipment }
+		equipment_bonus = {
+			reliability = 0.05
+			soft_attack = 0.01
+		}
+
+		production_bonus = {
+			production_resource_need_factor = 0.03
+		}
+	}
+
+	trait = {
+		token = CRY_composite_material_usage
+		name = CRY_composite_material_usage
+
+		position = {
+			x = 1
+			y = 1
+		}
+
+		limit_to_equipment_type = { infantry_equipment }
+		equipment_bonus = {
+			reliability = 0.05
+		}
+
+		production_bonus = {
+			production_cost_factor = -0.02
+		}
+	}
+
+	trait = {
+		token = CRY_emergency_safety_toggle
+		name = CRY_emergency_safety_toggle
+
+		position = {
+			x = -2
+			y = 1
+		}
+		relative_position_id = CRY_purified_crystal_matrtices
+
+		any_parent = {
+			CRY_purified_crystal_matrtices
+		}
+
+		limit_to_equipment_type = { magical_equipment }
+		equipment_bonus = {
+			breakthrough = 0.1
+		}
+
+		production_bonus = {
+			production_cost_factor = 0.03
+		}
+	}
+
+	trait = {
+		token = CRY_projection_spell_sights
+		name = CRY_projection_spell_sights
+
+		position = {
+			x = 0
+			y = 1
+		}
+		relative_position_id = CRY_purified_crystal_matrtices
+
+		any_parent = {
+			CRY_purified_crystal_matrtices
+		}
+
+		limit_to_equipment_type = { magical_equipment }
+		equipment_bonus = {
+			soft_attack = 0.01
+			breakthrough = 0.03
+		}
+	}
+
+	trait = {
+		token = CRY_disposable_flak_pods
+		name = CRY_disposable_flak_pods
+
+		position = {
+			x = -1
+			y = 1
+		}
+		relative_position_id = CRY_composite_material_usage
+
+		any_parent = {
+			CRY_composite_material_usage
+		}
+		mutually_exclusive = { CRY_tungsten_armor_piercing_rounds }
+
+		limit_to_equipment_type = { infantry_equipment }
+		equipment_bonus = {
+			anti_air_attack = 100
+		}
+	}
+
+	trait = {
+		token = CRY_tungsten_armor_piercing_rounds
+		name = CRY_tungsten_armor_piercing_rounds
+
+		position = {
+			x = 1
+			y = 1
+		}
+		relative_position_id = CRY_composite_material_usage
+
+		any_parent = {
+			CRY_composite_material_usage
+		}
+
+		limit_to_equipment_type = { infantry_equipment }
+		equipment_bonus = {
+			ap_attack = 0.15
+			hard_attack = 0.05
+		}
+	}
+
+	trait = {
+		token = CRY_single_use_shield_spells
+		name = CRY_single_use_shield_spells
+
+		position = {
+			x = -2
+			y = 1
+		}
+		relative_position_id = CRY_projection_spell_sights
+
+		any_parent = {
+			CRY_composite_material_usage
+			CRY_projection_spell_sights
+		}
+
+		equipment_bonus = {
+			defense = 0.05
+		}
+	}
+
+	trait = {
+		token = CRY_explosive_caliber_rounds
+		name = CRY_explosive_caliber_rounds
+
+		position = {
+			x = 1
+			y = 1
+		}
+		relative_position_id = CRY_disposable_flak_pods
+
+		any_parent = {
+			CRY_disposable_flak_pods
+			CRY_tungsten_armor_piercing_rounds
+		}
+		mutually_exclusive = { CRY_enchanted_bullets }
+		mutually_exclusive = { CRY_high_powered_matrices }
+
+		limit_to_equipment_type = { infantry_equipment }
+		equipment_bonus = {
+			hard_attack = 0.05
+			defense = 0.05
+			breakthrough = 0.02
+		}
+	}
+
+	trait = {
+		token = CRY_enchanted_bullets
+		name = CRY_enchanted_bullets
+
+		position = {
+			x = 1
+			y = 1
+		}
+		relative_position_id = CRY_tungsten_armor_piercing_rounds
+
+		any_parent = {
+			CRY_disposable_flak_pods
+			CRY_tungsten_armor_piercing_rounds
+			CRY_single_use_shield_spells
+		}
+		mutually_exclusive = { CRY_explosive_caliber_rounds }
+		mutually_exclusive = { CRY_high_powered_matrices }
+
+		equipment_bonus = {
+			soft_attack = 0.03
+			defense = 0.03
+		}
+	}
+
+	trait = {
+		token = CRY_high_powered_matrices
+		name = CRY_high_powered_matrices
+
+		position = {
+			x = 0
+			y = 1
+		}
+		relative_position_id = CRY_single_use_shield_spells
+
+		any_parent = {
+			CRY_single_use_shield_spells
+		}
+		mutually_exclusive = { CRY_explosive_caliber_rounds }
+		mutually_exclusive = { CRY_enchanted_bullets }
+
+		limit_to_equipment_type = { magical_equipment }
+		equipment_bonus = {
+			soft_attack = 0.075
+			hard_attack = 0.05
+			ap_attack = 0.1
+			reliability = -0.05
+		}
+
+		production_bonus = {
+			production_cost_factor = 0.02
+		}
+	}
+
+	trait = {
+		token = CRY_spent_crystal_ejectors
+		name = CRY_spent_crystal_ejectors
+
+		position = {
+			x = 0
+			y = 2
+		}
+		relative_position_id = CRY_projection_spell_sights
+
+		any_parent = {
+			CRY_projection_spell_sights
+		}
+
+		limit_to_equipment_type = { magical_equipment }
+		equipment_bonus = {
+			reliability = 0.02
+			breakthrough = 0.03
+		}
+	}
+
+	trait = {
+		token = CRY_recoil_absorbing_enchantments
+		name = CRY_recoil_absorbing_enchantments
+
+		position = {
+			x = 1
+			y = 2
+		}
+		relative_position_id = CRY_projection_spell_sights
+
+		any_parent = {
+			CRY_projection_spell_sights
+		}
+
+		limit_to_equipment_type = { magical_equipment }
+		equipment_bonus = {
+			defense = 0.05
+		}
+
+		production_bonus = {
+			production_cost_factor = 0.01
+		}
+	}
+
+	trait = {
+		token = CRY_armor_disintegrating_compounds
+		name = CRY_armor_disintegrating_compounds
+
+		position = {
+			x = 0
+			y = 1
+		}
+		relative_position_id = CRY_enchanted_bullets
+
+		any_parent = {
+			CRY_enchanted_bullets
+		}
+
+		equipment_bonus = {
+			ap_attack = 0.05
+			hard_attack = 0.1
+		}
+	}
+
+	trait = {
+		token = CRY_capacitor_overcharging
+		name = CRY_capacitor_overcharging
+
+		position = {
+			x = 0
+			y = 1
+		}
+		relative_position_id = CRY_high_powered_matrices
+
+		any_parent = {
+			CRY_high_powered_matrices
+		}
+
+		limit_to_equipment_type = { magical_equipment }
+		equipment_bonus = {
+			hard_attack = 0.1
+			ap_attack = 0.15
+			reliability = -0.03
+		}
+	}
+
+	trait = {
+		token = CRY_limited_mind_link_triggers
+		name = CRY_limited_mind_link_triggers
+
+		position = {
+			x = 0
+			y = 1
+		}
+		relative_position_id = CRY_recoil_absorbing_enchantments
+
+		any_parent = {
+			CRY_recoil_absorbing_enchantments
+		}
+
+		limit_to_equipment_type = { magical_equipment }
+		equipment_bonus = {
+			soft_attack = 0.075
+			breakthrough = 0.05
+		}
+
+		production_bonus = {
+			production_cost_factor = 0.03
+			production_resource_need_factor = 0.05
+		}
+	}
 }
 
 EQC_prelate_corps_organization = {
 	name = EQC_prelate_corps
-	include = generic_infantry_tank_organization
+	equipment_type = { armor }
+	research_categories = { mio_cat_tech_all_armor_and_modules}
 	allowed = {
 		has_dlc = "Arms Against Tyranny"
 		original_tag = EQC
 	}
-	visible = {
-		FROM = {
-			has_country_flag = SOL_prelate_unlocked
-		}
-	}
+	#visible = {
+	#	FROM = {
+	#		has_country_flag = SOL_prelate_unlocked
+	#	}
+	#}
 	initial_trait = {
 		name = EQC_prelate_corps_trait
 		organization_modifier = {
@@ -858,8 +1528,315 @@ EQC_prelate_corps_organization = {
 		}
 
 		equipment_bonus = {
-			soft_attack = 0.05
+			hard_attack = 0.03
+			armor_value = 0.05
+			maximum_speed = -0.05
+		}
+	}
+
+	trait = {
+		token = EQC_stabilizing_enchantments
+		name = EQC_stabilizing_enchantments
+
+		position = {
+			x = 1
+			y = 0
+		}
+
+		equipment_bonus = {
+			breakthrough = 0.03
+		}
+	}
+
+	trait = {
+		token = EQC_enchantment_sealed_weld_points
+		name = EQC_enchantment_sealed_weld_points
+
+		position = {
+			x = 3
+			y = 0
+		}
+
+		equipment_bonus = {
 			armor_value = 0.03
+		}
+	}
+
+	trait = {
+		token = EQC_low_cost_worker_replacements
+		name = EQC_low_cost_worker_replacements
+
+		position = {
+			x = 8
+			y = 0
+		}
+
+		production_bonus = {
+			production_efficiency_gain_factor = -0.15
+			production_efficiency_cap_factor = 0.03
+			production_capacity_factor = 0.05
+		}
+	}
+
+	trait = {
+		token = EQC_deployable_flamethrowers
+		name = EQC_deployable_flamethrowers
+
+		position = {
+			x = -1
+			y = 1
+		}
+		relative_position_id = EQC_stabilizing_enchantments
+
+		any_parent = {
+			EQC_stabilizing_enchantments
+		}
+
+		equipment_bonus = {
+			soft_attack = 0.05
+			breakthrough = 0.01
+		}
+	}
+
+	trait = {
+		token = EQC_biofuel_additives
+		name = EQC_biofuel_additives
+
+		position = {
+			x = 1
+			y = 1
+		}
+		relative_position_id = EQC_stabilizing_enchantments
+
+		any_parent = {
+			EQC_stabilizing_enchantments
+			EQC_enchantment_sealed_weld_points
+		}
+
+		equipment_bonus = {
+			fuel_consumption = -0.03
+			maximum_speed = -0.01
+		}
+	}
+
+	trait = {
+		token = EQC_secondary_fuel_armor
+		name = EQC_secondary_fuel_armor
+
+		position = {
+			x = -2
+			y = 1
+		}
+		relative_position_id = EQC_low_cost_worker_replacements
+
+		any_parent = {
+			EQC_enchantment_sealed_weld_points
+			EQC_low_cost_worker_replacements
+		}
+
+		equipment_bonus = {
+			armor_value = 0.01
+			reliability = 0.03
+		}
+	}
+
+	trait = {
+		token = EQC_tungsten_tipped_shells
+		name = EQC_tungsten_tipped_shells
+
+		position = {
+			x = 0
+			y = 2
+		}
+		relative_position_id = EQC_stabilizing_enchantments
+
+		any_parent = {
+			EQC_stabilizing_enchantments
+		}
+		mutually_exclusive = { EQC_common_hit_titanium_plates }
+
+		equipment_bonus = {
+			hard_attack = 0.05
+		}
+
+		production_bonus = {
+			production_cost_factor = 0.01
+		}
+	}
+
+	trait = {
+		token = EQC_common_hit_titanium_plates
+		name = EQC_common_hit_titanium_plates
+
+		position = {
+			x = 0
+			y = 2
+		}
+		relative_position_id = EQC_enchantment_sealed_weld_points
+
+		any_parent = {
+			EQC_enchantment_sealed_weld_points
+		}
+		mutually_exclusive = { EQC_tungsten_tipped_shells }
+
+		equipment_bonus = {
+			armor_value = 0.03
+		}
+
+		production_bonus = {
+			production_cost_factor = 0.01
+		}
+	}
+
+	trait = {
+		token = EQC_standardized_frame_mounts
+		name = EQC_standardized_frame_mounts
+
+		position = {
+			x = 0
+			y = 2
+		}
+		relative_position_id = EQC_low_cost_worker_replacements
+
+		any_parent = {
+			EQC_low_cost_worker_replacements
+		}
+
+		equipment_bonus = {
+			reliability = 0.03
+		}
+
+		production_bonus = {
+			production_cost_factor = -0.02
+		}
+	}
+
+	trait = {
+		token = EQC_hyper_propellant_shells
+		name = EQC_hyper_propellant_shells
+
+		position = {
+			x = 1
+			y = 1
+		}
+		relative_position_id = EQC_tungsten_tipped_shells
+
+		any_parent = {
+			EQC_tungsten_tipped_shells
+		}
+
+		equipment_bonus = {
+			ap_attack = 0.1
+		}
+	}
+
+	trait = {
+		token = EQC_electroplated_armor_slopes
+		name = EQC_electroplated_armor_slopes
+
+		position = {
+			x = 2
+			y = 1
+		}
+		relative_position_id = EQC_common_hit_titanium_plates
+
+		any_parent = {
+			EQC_common_hit_titanium_plates
+		}
+		mutually_exclusive = { EQC_polymer_padding }
+
+		equipment_bonus = {
+			armor_value = 0.07
+		}
+
+		production_bonus = {
+			production_resource_need_factor = 0.03
+		}
+	}
+
+	trait = {
+		token = EQC_polymer_padding
+		name = EQC_polymer_padding
+
+		position = {
+			x = 1
+			y = 2
+		}
+		relative_position_id = EQC_secondary_fuel_armor
+
+		any_parent = {
+			EQC_secondary_fuel_armor
+		}
+
+		equipment_bonus = {
+			armor_value = 0.02
+		}
+
+		production_bonus = {
+			production_resource_need_factor = -0.05
+		}
+	}
+
+	trait = {
+		token = EQC_kinetic_impact_triggers
+		name = EQC_kinetic_impact_triggers
+
+		position = {
+			x = 0
+			y = 1
+		}
+		relative_position_id = EQC_hyper_propellant_shells
+
+		any_parent = {
+			EQC_hyper_propellant_shells
+		}
+
+		equipment_bonus = {
+			hard_attack = 0.05
+			ap_attack = 0.05
+		}
+	}
+
+	trait = {
+		token = EQC_all_or_nothing_applications
+		name = EQC_all_or_nothing_applications
+
+		position = {
+			x = 0
+			y = 2
+		}
+		relative_position_id = EQC_common_hit_titanium_plates
+
+		any_parent = {
+			EQC_common_hit_titanium_plates
+		}
+		mutually_exclusive = { EQC_high_efficiency_injectors }
+
+		equipment_bonus = {
+			armor_value = 0.07
+			defense = -0.03
+		}
+	}
+
+	trait = {
+		token = EQC_high_efficiency_injectors
+		name = EQC_high_efficiency_injectors
+
+		position = {
+			x = 1
+			y = 1
+		}
+		relative_position_id = EQC_electroplated_armor_slopes
+
+		any_parent = {
+			EQC_electroplated_armor_slopes
+			EQC_polymer_padding
+		}
+		mutually_exclusive = { EQC_all_or_nothing_applications }
+
+		equipment_bonus = {
+			fuel_consumption = -0.05
+			reliability = 0.02
 		}
 	}
 }
