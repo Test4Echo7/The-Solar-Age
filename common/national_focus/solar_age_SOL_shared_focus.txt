@@ -1968,7 +1968,7 @@ shared_focus = {
 	available = {
 		is_subject = no
 		has_DB_ruler = yes
-		any_owned_state = {
+		any_controlled_state = {
 			NOT = { is_core_of = ROOT }
 		}
 	}
@@ -2076,7 +2076,7 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = SOL_sacricices_from_birth
+	id = SOL_sacrifices_from_birth
 	x = 0
 	y = 2
 	relative_position_id = SOL_inquisitionis_secondary_role
@@ -2090,7 +2090,7 @@ shared_focus = {
 	}
 
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_sacricices_from_birth"
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_sacrifices_from_birth"
 		country_event = solarreworked.310
 		###Event of a parent trying to keep their foal when an inquisitor and a couple of soldiers come to them to take their foal to become another inquisitor from a very young age, and they are basically forced to give them up, since they were identified as probably a decently strong unicorn to serve Daybreaker, and they are threatened with being declared heretics if they don't give up the foal
 	}
@@ -2186,10 +2186,10 @@ shared_focus = {
 	id = SOL_fodder_troops
 	x = -1
 	y = 1
-	relative_position_id = SOL_sacricices_from_birth
+	relative_position_id = SOL_sacrifices_from_birth
 
 	cost = 5
-	prerequisite = { focus = SOL_sacricices_from_birth }
+	prerequisite = { focus = SOL_sacrifices_from_birth }
 	available = {
 		is_subject = no
 		has_DB_ruler = yes
@@ -9884,7 +9884,7 @@ shared_focus = {
 shared_focus = {
 	id = SOL_mysterious_magic
 	icon = GFX_goal_continuous_research
-	cost = 5
+	cost = 6
 	ai_will_do = {
 		factor = 50
 	}
@@ -9901,6 +9901,12 @@ shared_focus = {
 			bonus = 1.25
 			uses = 2
 			category = magical_tech
+		}
+		add_tech_bonus = {
+			name = unicorn_bonus
+			bonus = 1.25
+			uses = 1
+			category = unicorn_tech
 		}
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH }
