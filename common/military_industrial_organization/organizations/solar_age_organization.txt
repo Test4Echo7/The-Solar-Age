@@ -1288,6 +1288,7 @@ CRY_gleaming_shield_arsenals_organization = {
 		any_parent = {
 			CRY_composite_material_usage
 		}
+		mutually_exclusive = { CRY_disposable_flak_pods }
 
 		limit_to_equipment_type = { infantry_equipment }
 		equipment_bonus = {
@@ -1767,6 +1768,7 @@ EQC_prelate_corps_organization = {
 		any_parent = {
 			EQC_secondary_fuel_armor
 		}
+		mutually_exclusive = { EQC_electroplated_armor_slopes }
 
 		equipment_bonus = {
 			armor_value = 0.02

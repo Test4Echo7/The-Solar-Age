@@ -582,6 +582,7 @@ EQS_BOP_SOL_power_category = {
         allowed = {
             tag = EQS
         }
+        available = { NOT = { has_completed_focus = SOL_solar_games } }
         cost = 75
         fire_only_once = yes
         complete_effect = {

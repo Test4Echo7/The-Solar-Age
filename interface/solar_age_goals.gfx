@@ -8,5 +8,9 @@ SpriteTypes = {
         name = GFX_goal_encourage_troops
         texturefile = "gfx/interface/goals/EQS/encourage_troops.png"
     }
+    SpriteType = {
+        name = GFX_goal_inspect_officers
+        texturefile = "gfx/interface/goals/EQS/inspect_officers.png"
+    }
 
 }

@@ -275,6 +275,11 @@ country_event = { #Daybreaker rests on her throne while a pony or two is dragged
         else = {
             remove_ideas = SOL_military_mutiny_3
         }
+        add_popularity = {
+            ideology = fascism
+            popularity = 0.03
+        }
+        add_political_power = 50
     }
 }
 

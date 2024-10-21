@@ -2106,7 +2106,7 @@ ideas = {
 			traits = { medium_tank_manufacturer }
 		}
 	}
-	materiel_designer = {
+	materiel_manufacturer = {
 		SOL_bitterbury_ballistics = {
 			allowed = {
 				original_tag = EQS

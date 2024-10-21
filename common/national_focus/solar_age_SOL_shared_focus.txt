@@ -548,7 +548,7 @@ shared_focus = {
 		is_subject = no
 		has_DB_ruler = yes
 	}
-	cost = 2
+	cost = 1
 	ai_will_do = {
 		factor = 200
 		modifier = {
@@ -576,7 +576,7 @@ shared_focus = {
     y = 1
     relative_position_id = SOL_waking_dawn_star
 
-    cost = 2
+    cost = 1
     prerequisite = { focus = SOL_waking_dawn_star }
     available = {
         is_subject = no
@@ -597,7 +597,7 @@ shared_focus = {
     y = 1
     relative_position_id = SOL_waking_dawn_star
 
-    cost = 2
+    cost = 1
     prerequisite = { focus = SOL_waking_dawn_star }
     available = {
         is_subject = no
@@ -618,7 +618,7 @@ shared_focus = {
     y = 1
     relative_position_id = SOL_fire_ministers
 
-    cost = 4
+    cost = 3
     prerequisite = { focus = SOL_fire_ministers }
     available = {
         is_subject = no
@@ -638,11 +638,25 @@ shared_focus = {
     y = 1
     relative_position_id = SOL_fire_ministers
 
-    cost = 4
+    cost = 3
     prerequisite = { focus = SOL_fire_ministers }
     available = {
         is_subject = no
         has_DB_ruler = yes
+    }
+    available = {
+        is_subject = no
+        has_DB_ruler = yes
+        OR = {
+			has_idea = SOL_societal_stubbornness
+			has_idea = SOL_societal_stubbornness_2
+			has_idea = SOL_societal_stubbornness_3
+        }
+    }
+    bypass = {
+		NOT = { has_idea = SOL_societal_stubbornness }
+		NOT = { has_idea = SOL_societal_stubbornness_2 }
+		NOT = { has_idea = SOL_societal_stubbornness_3 }
     }
 
     completion_reward = {
@@ -659,7 +673,7 @@ shared_focus = {
     y = 1
     relative_position_id = SOL_bluebloods_fealty
 
-    cost = 4
+    cost = 3
     prerequisite = { focus = SOL_bluebloods_fealty }
     available = {
         is_subject = no
@@ -669,6 +683,11 @@ shared_focus = {
 			has_idea = SOL_military_mutiny_2
 			has_idea = SOL_military_mutiny_3
         }
+    }
+    bypass = {
+		NOT = { has_idea = SOL_military_mutiny }
+		NOT = { has_idea = SOL_military_mutiny_2 }
+		NOT = { has_idea = SOL_military_mutiny_3 }
     }
 
     completion_reward = {
@@ -716,6 +735,11 @@ shared_focus = {
 			has_idea = SOL_societal_stubbornness_3
         }
     }
+    bypass = {
+		NOT = { has_idea = SOL_societal_stubbornness }
+		NOT = { has_idea = SOL_societal_stubbornness_2 }
+		NOT = { has_idea = SOL_societal_stubbornness_3 }
+    }
 
     completion_reward = {
         log = "[GetDateText]: [Root.GetName]: Focus SOL_break_dissent"
@@ -736,6 +760,11 @@ shared_focus = {
     available = {
         is_subject = no
         has_DB_ruler = yes
+    }
+    bypass = {
+		NOT = { has_idea = SOL_military_mutiny }
+		NOT = { has_idea = SOL_military_mutiny_2 }
+		NOT = { has_idea = SOL_military_mutiny_3 }
     }
 
     completion_reward = {
@@ -2309,6 +2338,8 @@ shared_focus = {
 	prerequisite = {
 		focus = SOL_sacrifices_on_assembly_line
 		focus = SOL_fodder_troops
+		focus = SOL_combine_church_and_state
+		focus = SOL_tradition_of_worship
 	}
 	available = {
 		is_subject = no
@@ -9206,6 +9237,7 @@ shared_focus = {
 	id = SOL_inspect_officers
 	x = -2
 	y = 1
+	icon = GFX_goal_inspect_officers
 	relative_position_id = SOL_establish_solaris_militarium
 
 	cost = 3
