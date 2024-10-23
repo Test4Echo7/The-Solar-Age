@@ -1219,9 +1219,8 @@ country_event = { #Daybreaker marches and enters into the chambers of Grover, wh
         if = {
 			limit = {
 				GRD = { NOT = { tag = GRI } }
-
             }
-            random_country = {
+            every_possible_country = {
                 limit = {
                     has_character = GRI_daybreaker
                 }
@@ -1304,7 +1303,7 @@ country_event = { #Daybreaker smugly walks through Griffonstone, in a parade wit
 			limit = {
 				GRD = { NOT = { tag = GRI } }
             }
-            random_country = {
+            every_possible_country = {
                 limit = {
                     has_character = GRI_daybreaker
                 }
@@ -1536,7 +1535,7 @@ country_event = { #Luna arrives in CRY to speak with Cadance about at least gett
 
     option = { #We can only offer you a home.
         name = solarreworked.155.a
-        random_country = {
+        every_possible_country = {
             limit = { has_character = EQS_princess_luna }
             EQS_princess_luna = {
                 set_nationality = ROOT
@@ -1763,34 +1762,34 @@ country_event = { #An event informing the leader of the country that Twilight, S
     option = { #We could use all the help we can get.
         name = solarreworked.162.a
         set_country_flag = SOL_hosting_M6
-        random_country = {
+        every_possible_country = {
             limit = { has_character = EQS_rainbowdash }
             EQS_rainbowdash = { set_nationality = ROOT }
         }
-        random_country = {
+        every_possible_country = {
             limit = { has_character = EQS_fluttershy }
             EQS_fluttershy = { set_nationality = ROOT }
         }
-        random_country = {
+        every_possible_country = {
             limit = { has_character = EQS_rarity }
             EQS_rarity = { set_nationality = ROOT }
         }
-        random_country = {
+        every_possible_country = {
             limit = { has_character = EQS_applejack }
             EQS_applejack = { set_nationality = ROOT }
         }
-        random_country = {
+        every_possible_country = {
             limit = { has_character = EQS_pinkie_pie }
             EQS_pinkie_pie = { set_nationality = ROOT }
         }
-        random_country = {
+        every_possible_country = {
             limit = { has_character = EQS_twilight_sparkle }
             if = {
                 limit = { NOT = { has_country_flag = SOL_has_twilight } }
                 EQS_twilight_sparkle = { set_nationality = ROOT }
             }
         }
-        random_country = {
+        every_possible_country = {
             limit = { has_character = EQS_sunset_shimmer }
             if = {
                 limit = { NOT = { has_country_flag = SOL_has_captured_sunset } }
@@ -1909,7 +1908,7 @@ country_event = { #Luna arrives in Hippogriffia and is greeted by Novo, as one o
 
     option = { #Our flight is at an end.
         name = solarreworked.165.a
-        random_country = {
+        every_possible_country = {
             limit = { has_character = EQS_princess_luna }
             EQS_princess_luna = {
                 set_nationality = ROOT
@@ -1930,34 +1929,34 @@ country_event = { #The Mane Six arrive in Hippogriffia and meet up with both Nov
     option = { #Maybe we can finally stop running
         name = solarreworked.166.a
         set_country_flag = SOL_hosting_M6
-        random_country = {
+        every_possible_country = {
             limit = { has_character = EQS_rainbowdash }
             EQS_rainbowdash = { set_nationality = ROOT }
         }
-        random_country = {
+        every_possible_country = {
             limit = { has_character = EQS_fluttershy }
             EQS_fluttershy = { set_nationality = ROOT }
         }
-        random_country = {
+        every_possible_country = {
             limit = { has_character = EQS_rarity }
             EQS_rarity = { set_nationality = ROOT }
         }
-        random_country = {
+        every_possible_country = {
             limit = { has_character = EQS_applejack }
             EQS_applejack = { set_nationality = ROOT }
         }
-        random_country = {
+        every_possible_country = {
             limit = { has_character = EQS_pinkie_pie }
             EQS_pinkie_pie = { set_nationality = ROOT }
         }
-        random_country = {
+        every_possible_country = {
             limit = { has_character = EQS_twilight_sparkle }
             if = {
                 limit = { NOT = { has_country_flag = SOL_has_twilight } }
                 EQS_twilight_sparkle = { set_nationality = ROOT }
             }
         }
-        random_country = {
+        every_possible_country = {
             limit = { has_character = EQS_sunset_shimmer }
             if = {
                 limit = { NOT = { has_country_flag = SOL_has_captured_sunset } }
@@ -2899,7 +2898,7 @@ country_event = { #Ponse Cocktail is surprised in his home by his aide stating h
 
     option = { #Don't you think this is unnecessary?
         name = solarreworked.403.a
-        random_country = {
+        every_possible_country = {
             limit = { has_character = PCB_ponse_cocktail }
             set_politics = {
                 ruling_party = fascism
@@ -2937,7 +2936,7 @@ country_event = { #Red Tide steps off her plane from the mainland and is instant
 
     option = { #I'm going to just love it here...
         name = solarreworked.404.a
-        random_country = {
+        every_possible_country = {
             limit = { has_character = EQS_red_tide }
             set_party_name = { ideology = fascism long_name = EQS_solaris_cultus name = EQS_solaris_cultus }
             set_politics = {
