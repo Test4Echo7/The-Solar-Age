@@ -2132,7 +2132,7 @@ ideas = {
 			traits = { infantry_equipment_manufacturer }
 		}
 
-		CRY_gleaming_shield_arsenals = {
+		CRY_polished_armor_arsenals = {
 			allowed = {
 				original_tag = CRY
 			}
@@ -2142,7 +2142,7 @@ ideas = {
 			}
 
 			visible = {
-				has_country_flag = SOL_gleaming_shield_unlocked
+				has_country_flag = SOL_polished_armor_unlocked
 			}
 
 			research_bonus = {

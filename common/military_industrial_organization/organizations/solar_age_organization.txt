@@ -7,16 +7,16 @@ SOL_sanctum_infernal_corps_organization = {
 		original_tag = EQS
 		has_dlc = "Arms Against Tyranny"
 	}
-	#visible = {
-	#	IF = {
-	#		limit = {
-	#			FROM = {
-	#				is_EQS_SOL = yes
-	#				has_country_flag = SOL_sanctum_arms_unlocked
-	#			}
-	#		}
-	#	}
-	#}
+	visible = {
+		IF = {
+			limit = {
+				FROM = {
+					is_EQS_SOL = yes
+					has_country_flag = SOL_sanctum_arms_unlocked
+				}
+			}
+		}
+	}
 
 	tree_header_text = {
 		text = mio_header_heavy_tanks
@@ -25,12 +25,12 @@ SOL_sanctum_infernal_corps_organization = {
 
 	tree_header_text = {
 		text = mio_header_design
-		x = 5
+		x = 4
 	}
 
 	tree_header_text = {
 		text = mio_header_flame_tanks
-		x = 8
+		x = 7
 	}
 
 	initial_trait = {
@@ -403,16 +403,16 @@ SOL_holy_flame_arms_organization = {
 		original_tag = EQS
 		has_dlc = "Arms Against Tyranny"
 	}
-	#visible = {
-	#	IF = {
-	#		limit = {
-	#			FROM = {
-	#				is_EQS_SOL = yes
-	#				has_country_flag = SOL_holy_flame_unlocked
-	#			}
-	#		}
-	#	}
-	#}
+	visible = {
+		IF = {
+			limit = {
+				FROM = {
+					is_EQS_SOL = yes
+					has_country_flag = SOL_holy_flame_unlocked
+				}
+			}
+		}
+	}
 
 	tree_header_text = {
 		text = mio_header_armor_and_armaments
@@ -781,16 +781,31 @@ SOL_bitterbury_ballistics_organization = {
 		original_tag = EQS
 		has_dlc = "Arms Against Tyranny"
 	}
-	#visible = {
-	#	IF = {
-	#		limit = {
-	#			FROM = {
-	#				is_EQS_SOL = yes
-	#				has_country_flag = SOL_bitterbury_unlocked
-	#			}
-	#		}
-	#	}
-	#}
+	visible = {
+		IF = {
+			limit = {
+				FROM = {
+					is_EQS_SOL = yes
+					has_country_flag = SOL_bitterbury_unlocked
+				}
+			}
+		}
+	}
+
+	tree_header_text = {
+		text = mio_header_production
+		x = 0
+	}
+
+	tree_header_text = {
+		text = mio_header_magic_augmentation
+		x = 2
+	}
+
+	tree_header_text = {
+		text = mio_header_ballistic_improvement
+		x = 7
+	}
 
 	initial_trait = {
 		name = SOL_bitterbury_ballistics_trait
@@ -1136,8 +1151,8 @@ SOL_bitterbury_ballistics_organization = {
 	}
 }
 
-CRY_gleaming_shield_arsenals_organization = {
-	name = CRY_gleaming_shield_arsenals
+CRY_polished_armor_arsenals_organization = {
+	name = CRY_polished_armor_arsenals
 	equipment_type = { infantry_equipment magical_equipment }
 	research_categories = { infantry_weapons magical_tech }
 
@@ -1145,19 +1160,29 @@ CRY_gleaming_shield_arsenals_organization = {
 		original_tag = CRY
 		has_dlc = "Arms Against Tyranny"
 	}
-	#visible = {
-	#	IF = {
-	#		limit = {
-	#			FROM = {
-	#				is_EQS_SOL = yes
-	#				has_country_flag = SOL_gleaming_shield_unlocked
-	#			}
-	#		}
-	#	}
-	#}
+	visible = {
+		IF = {
+			limit = {
+				FROM = {
+					is_EQS_SOL = yes
+					has_country_flag = SOL_polished_armor_unlocked
+				}
+			}
+		}
+	}
+
+	tree_header_text = {
+		text = mio_header_ballistic_improvement
+		x = 1
+	}
+
+	tree_header_text = {
+		text = mio_header_magic_augmentation
+		x = 7
+	}
 
 	initial_trait = {
-		name = CRY_gleaming_shield_arsenals_trait
+		name = CRY_polished_armor_arsenals_trait
 		organization_modifier = { military_industrial_organization_research_bonus = 0.05 }
 
 		equipment_bonus = {
@@ -1517,11 +1542,27 @@ EQC_prelate_corps_organization = {
 		has_dlc = "Arms Against Tyranny"
 		original_tag = EQC
 	}
-	#visible = {
-	#	FROM = {
-	#		has_country_flag = SOL_prelate_unlocked
-	#	}
-	#}
+	visible = {
+		FROM = {
+			has_country_flag = SOL_prelate_unlocked
+		}
+	}
+
+	tree_header_text = {
+		text = mio_header_guns_and_turret
+		x = 1
+	}
+
+	tree_header_text = {
+		text = mio_header_armor
+		x = 3
+	}
+
+	tree_header_text = {
+		text = mio_header_production
+		x = 7
+	}
+
 	initial_trait = {
 		name = EQC_prelate_corps_trait
 		organization_modifier = {

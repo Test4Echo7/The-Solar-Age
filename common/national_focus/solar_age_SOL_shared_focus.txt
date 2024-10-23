@@ -1213,6 +1213,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_ponys_project"
 		#Inform player about decisions here
 		#Spirit should be +2% global building slots, +5% con speed, -2% CS
+		unlock_decision_category_tooltip = EQS_great_projects_category
 		set_country_flag = SOL_unlock_special_projects
 		###Maybe event of Daybreaker proudly standing before an idea she had of something meant to honor her, or to show her glory, despite how it is draining the Empire's resources, but because she needs it, then she gets it, no matter what other ponies need
 	}
@@ -1282,7 +1283,16 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_innovative_corpo_grant"
-		#Unlock MIO/concern here
+		set_country_flag = SOL_holy_flame_unlocked
+		if = {
+			limit = {
+				has_dlc = "Arms Against Tyranny"
+			}
+			show_mio_tooltip = SOL_holy_flame_arms_organization
+		}
+		else = {
+			show_ideas_tooltip = SOL_holy_flame_arms
+		}
 	}
 	ai_will_do = { factor = 70 }
 }
@@ -2570,7 +2580,16 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_imperial_bureaucracy"
-		#Unlock MIO/concern
+		set_country_flag = SOL_bitterbury_unlocked
+		if = {
+			limit = {
+				has_dlc = "Arms Against Tyranny"
+			}
+			show_mio_tooltip = SOL_bitterbury_ballistics_organization
+		}
+		else = {
+			show_ideas_tooltip = SOL_bitterbury_ballistics
+		}
 	}
 	ai_will_do = { factor = 80 }
 }
@@ -3563,9 +3582,6 @@ shared_focus = {
 		CHN = {
 			all_cores_owned_by_ROOT_or_subject = yes
 		}
-		CCN = {
-			all_cores_owned_by_ROOT_or_subject = yes
-		}
 	}
 
 	completion_reward = {
@@ -3598,9 +3614,6 @@ shared_focus = {
 	available = {
 		is_subject = no
 		CHN = {
-			all_cores_owned_by_ROOT_or_subject = yes
-		}
-		CCN = {
 			all_cores_owned_by_ROOT_or_subject = yes
 		}
 		#246 = { is_owned_by = ROOT }
@@ -6510,7 +6523,7 @@ shared_focus = {
 		###Event of Sunrise and Daybreaker speaking on how to best handle the Crystal Empire, since it has remained a thorn in its side, and that Sunrise will be the one to deal with it, if Sunrise is there, otherwise it will be a dispatch of either Raven or Nova Glow (depending on path taken) to deal with Cadance
 		if = {
 			limit = { NOT = { has_global_flag = SOL_twilight_converted } }
-			custom_effect_tooltip = SOL_corrupt_your_student_boi_tt
+			custom_effect_tooltip = SOL_send_twiggles_tt
 		}
 		if = {
 			limit = { has_global_flag = SOL_twilight_converted }
@@ -7033,7 +7046,7 @@ shared_focus = {
 
 	cost = 7
 	prerequisite = { focus = SOL_family_visits }
-	mutually_exclusive = { focus = SOL_gleaming_armor_arsenals }
+	mutually_exclusive = { focus = SOL_polished_armor_arsenals }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_cadance_university"
@@ -7049,7 +7062,7 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = SOL_gleaming_armor_arsenals
+	id = SOL_polished_armor_arsenals
 	x = 0
 	y = 2
 	relative_position_id = SOL_establish_crystal_legion
@@ -7059,8 +7072,19 @@ shared_focus = {
 	mutually_exclusive = { focus = SOL_cadance_university }
 
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_gleaming_armor_arsenals"
-		#Concern or MiO here
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_polished_armor_arsenals"
+		CRY = {
+			set_country_flag = SOL_polished_armor_unlocked
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				show_mio_tooltip = CRY_polished_armor_arsenals_organization
+			}
+			else = {
+				show_ideas_tooltip = CRY_polished_armor_arsenals
+			}
+		}
 	}
 	ai_will_do = { factor = 80 }
 }
@@ -7095,12 +7119,15 @@ shared_focus = {
 
 	cost = 8
 	prerequisite = { focus = SOL_retire_old_guard }
-	prerequisite = { focus = SOL_gleaming_armor_arsenals }
+	prerequisite = { focus = SOL_polished_armor_arsenals }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_imperial_guardian"
 		CRY = {
-			add_ideas = SOL_aegis_guard
+			swap_ideas = {
+				remove_idea = SOL_dictated_directions
+				add_idea = SOL_aegis_guard
+			}
 		}
 	}
 	ai_will_do = { factor = 80 }
@@ -7944,6 +7971,8 @@ shared_focus = {
 			exists = yes
 			has_war = no
 			is_subject_of = ROOT
+			has_country_leader = { character = EQC_jet_set ruling_only = yes }
+			has_country_flag = EQC_SOL_leader_chosen
 		}
 	}
 
@@ -7953,11 +7982,7 @@ shared_focus = {
 		###Maybe event of Jet Set being called back to Canterlot so that he can have a meeting with Daybreaker, who has been informed that so far he has remained loyal, and that he can continue to remain the governor general, but if he thinks about betraying her trust, she will ensure that the entire colony is wiped out as a response to his insult
 	}
 	ai_will_do = {
-		factor = 30
-		modifier = {
-			has_completed_focus = SOL_empress_protector
-			factor = 3
-		}
+		factor = 100
 	}
 }
 
@@ -7976,6 +8001,8 @@ shared_focus = {
 			exists = yes
 			has_war = no
 			is_subject_of = ROOT
+			has_country_leader = { character = EQS_SOL_arcane_nova ruling_only = yes }
+			has_country_flag = EQC_SOL_leader_chosen
 		}
 	}
 
@@ -7985,11 +8012,7 @@ shared_focus = {
 		###Maybe event of Arcane Nova coming in to arrest Jet Set, as he is too much of a risk to the Empress's plans, and that he will be placed under house arrest until he is determined to be loyal or not; either way, he will be forever relieved of his post as governor general, and she appreciates the attractive accommodations he has, and otherwise it a bit playful in her arrest
 	}
 	ai_will_do = {
-		factor = 50
-		modifier = {
-			has_completed_focus = SOL_god_empress
-			factor = 2
-		}
+		factor = 100
 	}
 }
 
@@ -8001,12 +8024,6 @@ shared_focus = {
 
 	cost = 3
 	prerequisite = { focus = SOL_smooth_transitions }
-	available = {
-		EQC = {
-			is_subject_of = ROOT
-			has_country_leader = { character = EQC_jet_set ruling_only = yes }
-		}
-	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_empresss_eyes"
@@ -8019,32 +8036,32 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = SOL_lost_colony
+	id = SOL_colonial_investments
 	x = 2
 	y = 1
 	relative_position_id = SOL_smooth_transitions
 
-	cost = 7
+	cost = 6
 	prerequisite = {
 		focus = SOL_smooth_transitions
 		focus = SOL_faiths_reward
 	}
-	available = {
-		is_subject = no
-	}
-	bypass = {
-		EQC = {
-			exists = no
-			is_subject_of = ROOT
-			has_war_with = ROOT
-		}
-	}
 
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_lost_colony"
-		create_wargoal = {
-			target = EQC
-			type = puppet_wargoal_focus
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_colonial_investments"
+		356 = {
+			increase_state_category = yes
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = dockyard
+				level = 1
+				instant_build = yes
+			}
 		}
 	}
 	ai_will_do = { factor = 70 }
@@ -8058,10 +8075,7 @@ shared_focus = {
 
 	cost = 7
 	prerequisite = { focus = SOL_faiths_reward }
-	prerequisite = { focus = SOL_lost_colony }
-	available = {
-		EQC = { is_subject_of = ROOT }
-	}
+	prerequisite = { focus = SOL_colonial_investments }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_personnel_support"
@@ -8108,10 +8122,10 @@ shared_focus = {
 	id = SOL_debt_council
 	x = -1
 	y = 1
-	relative_position_id = SOL_lost_colony
+	relative_position_id = SOL_colonial_investments
 
 	cost = 6
-	prerequisite = { focus = SOL_lost_colony }
+	prerequisite = { focus = SOL_colonial_investments }
 	mutually_exclusive = { focus = SOL_homegrown_plan }
 	available = {
 		EQC = { all_cores_owned_by_ROOT_or_subject = yes }
@@ -8129,10 +8143,10 @@ shared_focus = {
 #	id = SOL_flush_dregs
 #	x = 1
 #	y = 1
-#	relative_position_id = SOL_lost_colony
+#	relative_position_id = SOL_colonial_investments
 #
 #	cost = 5
-#	prerequisite = { focus = SOL_lost_colony }
+#	prerequisite = { focus = SOL_colonial_investments }
 #	available = {
 #		EQC = {
 #			has_country_flag = SOL_mane_six_fled
@@ -8151,10 +8165,10 @@ shared_focus = {
 	id = SOL_fund_sunset_plays
 	x = 1
 	y = 1
-	relative_position_id = SOL_lost_colony
+	relative_position_id = SOL_colonial_investments
 
 	cost = 5
-	prerequisite = { focus = SOL_lost_colony }
+	prerequisite = { focus = SOL_colonial_investments }
 	available = {
 		EQC = {
 			is_subject_of = ROOT
@@ -8217,10 +8231,10 @@ shared_focus = {
 	id = SOL_strip_mine_bauxite
 	x = 2
 	y =2
-	relative_position_id = SOL_lost_colony
+	relative_position_id = SOL_colonial_investments
 
 	cost = 6
-	prerequisite = { focus = SOL_lost_colony }
+	prerequisite = { focus = SOL_colonial_investments }
 	available = {
 		EQC = {
 			is_subject_of = ROOT
@@ -8405,7 +8419,16 @@ shared_focus = {
 					instant_build = yes
 				}
 			}
-			#MIO/concern here
+			set_country_flag = SOL_prelate_unlocked
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				show_mio_tooltip = EQC_prelate_corps_organization
+			}
+			else = {
+				show_ideas_tooltip = EQC_prelate_corps
+			}
 		}
 	}
 	ai_will_do = { factor = 30 }
