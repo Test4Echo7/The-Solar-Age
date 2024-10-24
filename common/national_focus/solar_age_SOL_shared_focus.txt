@@ -9299,6 +9299,7 @@ shared_focus = {
 	id = SOL_break_out_blueprints
 	x = -2
 	y = 1
+	icon = GFX_goal_break_out_blueprints
 	relative_position_id = SOL_inspect_officers
 
 	cost = 3
@@ -9320,6 +9321,7 @@ shared_focus = {
 	id = SOL_rearrange_command
 	x = 1
 	y = 1
+	icon = GFX_goal_rearrange_command
 	relative_position_id = SOL_inspect_officers
 
 	cost = 3
@@ -9336,6 +9338,7 @@ shared_focus = {
 	id = SOL_imperial_factory_tour
 	x = 0
 	y = 1
+	icon = GFX_goal_imperial_factory_tour
 	relative_position_id = SOL_encourage_troops
 
 	cost = 3
@@ -9357,6 +9360,7 @@ shared_focus = {
 	id = SOL_motivate_engineers
 	x = 2
 	y = 1
+	icon = GFX_goal_motivate_engineers
 	relative_position_id = SOL_encourage_troops
 
 	cost = 3
@@ -9378,6 +9382,7 @@ shared_focus = {
 	id = SOL_prevent_embarrassments
 	x = 0
 	y = 1
+	icon = GFX_goal_prevent_embarrassments
 	relative_position_id = SOL_break_out_blueprints
 
 	cost = 4
@@ -9396,6 +9401,7 @@ shared_focus = {
 	id = SOL_traitors_reward
 	x = 0
 	y = 1
+	icon = GFX_goal_traitors_reward
 	relative_position_id = SOL_rearrange_command
 
 	cost = 4
@@ -9421,9 +9427,9 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_sun_shines
-	icon = GFX_goal_solar_phoenix
 	x = 0
 	y = 1
+	icon = GFX_goal_sun_shines
 	relative_position_id = SOL_imperial_factory_tour
 
 	cost = 4
@@ -9446,7 +9452,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_new_officers
-	icon = GFX_goal_eqs_military_cooperation
+	icon = GFX_goal_new_officers
 	cost = 7
 	ai_will_do = {
 		factor = 150

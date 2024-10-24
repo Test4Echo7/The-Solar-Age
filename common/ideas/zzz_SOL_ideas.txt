@@ -959,7 +959,8 @@ ideas = {
 		SOL_wholistic_survival_training = {
 			modifier = {
 				terrain_trait_xp_gain_factor = 0.15
-				terrain_penalty_reduction = -0.05
+				heat_attrition_factor = -0.1
+				winter_attrition_factor = -0.1
 			}
 		}
 		SOL_coordinated_arms = {
@@ -1816,10 +1817,10 @@ ideas = {
 			}
 		}
 		SOL_expansive_carriers = {
-			equipment_bonus = { carrier = { armor_value = 0.1 carrier_size = 5 instant = yes } }
+			equipment_bonus = { carrier = { armor_value = 0.1 carrier_size = 6 instant = yes } }
 		}
 		SOL_unreachable_lengths = {
-			equipment_bonus = { carrier = { naval_range = 0.15 maximum_speed = 0.05 carrier_size = -10 instant = yes } }
+			equipment_bonus = { carrier = { naval_range = 0.15 maximum_speed = 0.05 carrier_size = -8 instant = yes } }
 		}
 		SOL_sacrificial_light_ships = {
 			equipment_bonus = { destroyer = { maximum_speed = 0.1 torpedo_attack = 0.05 max_strength = -0.15 instant = yes } }

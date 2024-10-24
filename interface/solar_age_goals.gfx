@@ -2,15 +2,47 @@ SpriteTypes = {
 
     SpriteType = {
         name = GFX_goal_solaris_militarium
-        texturefile = "gfx/interface/goals/EQS/solaris_militarium.png"
+        texturefile = "gfx/interface/goals/EQS/solaris_militarium.tga"
     }
     SpriteType = {
         name = GFX_goal_encourage_troops
-        texturefile = "gfx/interface/goals/EQS/encourage_troops.png"
+        texturefile = "gfx/interface/goals/EQS/encourage_troops.tga"
     }
     SpriteType = {
         name = GFX_goal_inspect_officers
-        texturefile = "gfx/interface/goals/EQS/inspect_officers.png"
+        texturefile = "gfx/interface/goals/EQS/inspect_officers.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_break_out_blueprints
+        texturefile = "gfx/interface/goals/EQS/break_out_blueprints.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_rearrange_command
+        texturefile = "gfx/interface/goals/EQS/rearrange_command.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_imperial_factory_tour
+        texturefile = "gfx/interface/goals/EQS/imperial_factory_tour.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_motivate_engineers
+        texturefile = "gfx/interface/goals/EQS/motivate_engineers.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_prevent_embarrassments
+        texturefile = "gfx/interface/goals/EQS/prevent_embarrassments.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_traitors_reward
+        texturefile = "gfx/interface/goals/EQS/traitors_reward.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_sun_shines
+        texturefile = "gfx/interface/goals/EQS/sun_shines.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_new_officers
+        texturefile = "gfx/interface/goals/EQS/new_officers.tga"
     }
 
 }
