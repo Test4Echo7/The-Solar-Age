@@ -6315,6 +6315,10 @@ shared_focus = {
 	available = {
 		is_subject = no
 		has_DB_ruler = yes
+		DRG = {
+			exists = yes
+			is_subject = no
+		}
 		custom_trigger_tooltip = {
 			tooltip = SOL_all_diplomats_busy_please_call_again_later_tt
 			OR = {
@@ -6348,6 +6352,10 @@ shared_focus = {
 	available = {
 		is_subject = no
 		has_DB_ruler = yes
+		YAK = {
+			exists = yes
+			is_subject = no
+		}
 		custom_trigger_tooltip = {
 			tooltip = SOL_all_diplomats_busy_please_call_again_later_tt
 			OR = {
@@ -6381,6 +6389,16 @@ shared_focus = {
 	available = {
 		is_subject = no
 		has_DB_ruler = yes
+		OR = {
+			PNG = {
+				exists = yes
+				is_subject = no
+			}
+			PLB = {
+				exists = yes
+				is_subject = no
+			}
+		}
 		custom_trigger_tooltip = {
 			tooltip = SOL_all_diplomats_busy_please_call_again_later_tt
 			OR = {
@@ -6414,6 +6432,16 @@ shared_focus = {
 	available = {
 		is_subject = no
 		has_DB_ruler = yes
+		OR = {
+			GFF = {
+				exists = yes
+				is_subject = no
+			}
+			GRF = {
+				exists = yes
+				is_subject = no
+			}
+		}
 		custom_trigger_tooltip = {
 			tooltip = SOL_all_diplomats_busy_please_call_again_later_tt
 			OR = {
@@ -6447,6 +6475,10 @@ shared_focus = {
 	available = {
 		is_subject = no
 		has_DB_ruler = yes
+		GRD = {
+			exists = yes
+			is_subject = no
+		}
 		custom_trigger_tooltip = {
 			tooltip = SOL_all_hands_on_deck_tt
 			NOT = { has_country_flag = SOL_twilight_away }

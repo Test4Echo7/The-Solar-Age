@@ -408,16 +408,23 @@
 
   ###Civil War###
   SOL_civil_war_measures:0 "The Civil War Emergencies Act"
-  SOL_civil_war_measures_desc:0 "Despite our previous reforms to the Equestrian society, it is still not enough, and drastic measures need to be taken in order secure our victory against the traitors and rebels. The Empress will have unity, whether they like it or not."
+  SOL_civil_war_measures_desc:0 "There is a time and a place for debate and discussion on the benefits of a new law, and that time has long passed. We are surrounded by traitors and rebels, who spread lies as they pillage every inch of land that rightfully belongs to Daybreaker. The Empress has forced through multiple measures and reforms meant to combat these foes. Everypony will follow her, whether they want to or not."
   SOL_promise_swift_end:0 "Promise Swift Ends"
+  SOL_promise_swift_end_desc:0 "Our enemies are not external from the villainous changelings or the traitorous communists, but from our own brethren, who pledged to always uphold Harmony. Their fates are already sealed. Informing [ROOT.GetNameDef] of such a reality will remind them of where their true loyalty must lie, and how they must be united to stand against the wiles of our foes."
   SOL_crisis_industrial_management:0 "Crisis Industrial Management"
+  SOL_crisis_industrial_management_desc:0 "In normal times, the captains of industry that have brought wealth and prosperity to all those who follow the Empress would be left to their own devices. But we are not in that state. Where many believe they can supply trinkets, they must instead construct guns. Appointing an emergency council to oversee these transitions will be unpopular but necessary."
   SOL_draw_upon_militia:0 "Draw upon Regional Militia"
+  SOL_draw_upon_militia_desc:0 "Across [ROOT.GetNameDef], there are pockets of loyal ponies who, while they have little formal training, have taken up arms to fight for Harmony. Inviting these militia groups to join us and fight in unity will further bolster our forces when we so desperately need more bodies for the front. They may be unruly, but at least they are on our side."
   SOL_counter_terrorists:0 "Counter Terrorism"
+  SOL_counter_terrorists_desc:0 "Throughout the nation, there are groups of ponies who have remained faithful to Harmony and have done what they can to make life difficult for our enemies. If we provide funding, supplies, or any other kind of materiel support for them, we can ensure that any territory we lose will be forever a thorn in the side of our foes!"
   SOL_spending_money:0 "Mitigating Bit Injections"
+  SOL_spending_money_desc:0 "When half the country secedes, there is an understandable loss of production, but demand has not slowed to the same degree. While this is temporary, and could cause issues in the long term, minting additional bits for ponies to buy suddenly more expensive goods will stimulate the economy enough that we can overpower our enemies and ideally pay off our debts afterward."
   SOL_herald_doom:0 "Herald Coming Doom"
+  SOL_herald_doom_desc:0 "The lives of our enemies are already forfeit. When they determined in vain to fight against the Sun and Harmony itself, they gave up their right to existence. Everypony who obeys the Empress must be made aware of this. Sympathy is a weakness. Order demands that unity be paramount, and those who do not unite will be destroyed!"
   SOL_take_everypony:0 "Press Any Into Service"
+  SOL_take_everypony_desc:0 "We cannot afford to be picky when it comes to conscription. The very fate of Harmony itself is in the balance. No matter the pony - young, old, mare, stallion - they must be brought in to fight against our enemies. Some may falter. Some may struggle. All will fight on the field, so that we may bury our enemies in bodies!"
   SOL_reconquer_equestria:0 "Bring Back the Foalish"
-  SOL_reconquer_equestria_desc:0 "The separatist states across Equestria are deluded if they think they can survive on their own in this cruel world. There can be only one Equestria - for only together we are strong. Unity is a natural law, and we shall uphold it."
+  SOL_reconquer_equestria_desc:0 "In the civil war, many "nations" believed that they could claim their "right" to independence. In their delusion, they think they can survive this world without the light and protection of the Sun. They are wrong. The Empress will bring them back into [ROOT.GetNameDef], for there can be only one. Unity is the natural state of ponies, and she will deliver it."
 
   ###Prelude###
   SOL_waking_dawn_star:0 "The Dawn Star Wakes"
@@ -540,6 +547,7 @@
   ###Military###
   SOL_modernize_relic:0 "Modernize the Relic"
   SOL_modernize_relic_desc:0 "The Imperial Military is still a holdover from the time before the Empress ascended. Although it has served us well, the cruft is obvious, and there are many within who still cling to the mistakes of the past. Like the rest of society, there must be a complete and utter reorganization for there to be an effective defense force for the Empire."
+
   ###Army###
   SOL_establish_solaris_militarium:0 "Establish the Solaris Militarium"
   SOL_establish_solaris_militarium_desc:0 "Despite the reforms and forced progress that the Equestrian Army went through, it was kicking and screaming the entire way. It has accomplished what it needed to be, but it must be taken to pasture and a new, streamlined entity must take its place. Likewise, it must reflect the strength and beauty of the Empress, and each soldier in it will embody her will until their last breath."
@@ -658,25 +666,41 @@
   SOL_first_rates:0 "First-Rate Ships"
   SOL_first_rates_desc:0 "Among all the surface vessels, the battleship is the purest form of art. Massive, floating tools of destruction, these bear the heritage of the wooden warships of old. Nothing can challenge their guns and survive, but they can still be outpummeled or outmanuevered. Iterating on their designs to shore up these weaknesses will ensure we continue to terrorize any who wish to fight us at sea."
   SOL_birds_of_water:0 "Birds of the Water"
+  SOL_birds_of_water_desc:0 "We may have all the carriers that we wish, but if we do not have the planes to fill them, our fleets will be useless. Although prototypes and early conversions of terrestrial aircraft have been utilized by our navies for some time, we must create true carrier-designed aircraft, and it will require extensive tweaking of our planes to do so."
   SOL_modern_sea:0 "The Modern Sea"
+  SOL_modern_sea_desc:0 "We stand on the cusp of innovation in naval warfare. While other nations may still focus on the weapons of the past, we innovate toward a future where the battleship and battlecruiser are utterly pointless in one's arsenal. New breakthroughs in launching and storing our naval aircraft will lead to efficient utilization of our carriers, so that even our rivals will struggle to match us."
   SOL_grand_expeditions:0 "Grand Expeditions"
+  SOL_grand_expeditions_desc:0 "To further the Empress's reach and ambitions, our forces will ultimately have to spread Harmony and Order to lands beyond Equus. Thus far, our military transports have mostly kept our coasts, thereby reducing the need for extensive redesigns. However, with a global spread of Order, we will need ships that can take us to the furthest reaches of the globe to enforce her will."
   SOL_floating_cities:0 "Floating Cities"
+  SOL_floating_cities_desc:0 "As our experience increases in carrier warfare, our hulls have steadily increased in size to provide more room for crew and redundancy in systems, but our capacity has remained the same. There is little reason we cannot utilize these larger hulls for their true purpose: swarming the skies with fighters with which to deliver the Empress's justice."
   SOL_long_range_strikers:0 "Long Range Strikers"
+  SOL_long_range_strikers_desc:0 "Our planet is much larger than Equus, and we will require our carriers to patrol and protect whatever territory the Empress claims as her own. Prototypes for carriers with retooled interiors and subsystems have shown promise for their improved engine power and fuel capacity. This does limit the number of planes they can hold, but that is a small price in extending the Empress's reach."
   SOL_roach_guards:0 "Roach Guards"
+  SOL_roach_guards_desc:0 "The Admiralty has been approached by a rather odd proposition by one of our destroyer captains. As our navy expands, we will require numerous smaller vessesl to protect our capital ships. This concept, a "roach" light ship is novel, and while it may mean we lose many more, we will always have more to replace them. It may be unpopular among crews, but guarding our Empress comes above their comfort."
   SOL_magisteel_plating:0 "Magisteel Plating"
+  SOL_magisteel_plating_desc:0 "For centuries, skilled smiths have bonded magic with various metals as they forged them to further increase the strenth of the armor. Normally this is too taxing to do on large ships, but some students in Fillydelphia have devised a way to use matrix crystals to store the magic and discharge them into the steel forging process. Implementing this will make our capital ships even more deadly against the enemy."
   SOL_imperial_dreadnoughts:0 "Imperial Dreadnoughts"
-  SOL_swarms_upon_Sea:0 "Swarms upon the Sea"
+  SOL_imperial_dreadnoughts_desc:0 "Continued advancements in design permit the mounting of heavier armor and guns on our battleships than ever before. Crews protected by the thick plating and powerful cannons have nothing to fear from the enemy, as anything that comes up against one of our battleships will be destroyed! These beasts of the sea truly deserve the term of dreadnought, for dread is an anathema to their captains!"
+  SOL_swarms_upon_sea:0 "Swarms upon the Sea"
+  SOL_swarms_upon_sea_desc:0 "To truly rule the waves, we must control the skies above. When an enemy fleet is foalish enough to engage our navy, they will be drowned out in bombs and bullets, for our carriers will unleash entire wings of planes before they can react and leave them as nothing but scrap upon the bottom of the ocean!"
   SOL_old_guns:0 "The Old Guns"
+  SOL_old_guns_desc:0 "While it may be seen as quaint or antiquated by some countries, there is little that can truly challenge the firepower of a battleship. We may now be challenged by carrier-based fleets or submarine wolfpacks, but we can simply burn them out with the firepower that a single battleship brings. They cannot hope to defeat us when we can pummel them into sunken wrecks!"
   SOL_adapt_tide:0 "Adapt with the Tide"
+  SOL_adapt_tide_desc:0 "The landscape of naval combat has changed drastically from the turn of the millennium. No more are task forces designed around a single or pair of heavy battleships, but instead it is a mobile, long-range strike force that is comprised of a number of nimble screening ships and a few carriers. Although these seem weak, they can handle anything thrown at them with their versatility. The age of the battleship is over."
   SOL_steady_going:0 "Steady as She Goes"
+  SOL_steady_going_desc:0 "Although naval warfare is continuing to evolve, the battleships are far from becoming obsolete. New advancements in armor and weapons continue to allow our mighty dreadnoughts to keep pace with nimbler, carrier-based strike forces. Wherever our battleships reside, they are unstoppable forces of nature that cannot be matched. The age of the battleship will not go down without a fight!"
   SOL_practical_reductions:0 "Practical Reductions"
+  SOL_practical_reductions_desc:0 "A battleship is a fearsome creation that takes significant amounts of effort to bring to fruition. Many of the delays in building the weapons that the Empress requires are based around safety standards and redundant subsystems in case of failure. Recorded rates of said failures are negligible among our captains, so there is little reason to keep them. Cutting a few corners will benefit us all in the long run."
   SOL_sea_fortress:0 "A Fortress upon the Seas"
   SOL_sea_fortress_desc:0 "Although our battleships are grand, they are not worthy of one being given the honor of being the Empress's personal flagship. If it is to be worthy of her, it must be far larger, far more powerful, and far more imposing, than any ship we have yet conceived. It must be unsinkable and undefeatable. Plans have already been drawn up to create something magnificent, well into the future."
   SOL_sun_never_sets:0 "The Sun will Never Set"
+  SOL_sun_never_sets_desc:0 "Our navy is a sight to behold, unmatched in its power and capable of reaching the very ends of the world to exact the Empress's retribution. As we spread Harmony to the world, furthered by our ships' unstoppable might, we will be able to truly say that the Sun will never cease its blessing and protection of the Empire!"
 
   ###Air Force###
   SOL_sky_domain:0 "Domain of the Sky"
+  SOL_sky_domain_desc:0 "The need for an Imperial Airforce is becoming more apparent by the day. Equestria was content to have a few volunteer wings and to conscript the Wonderbolts where necessary, but to fend off our enemies, we require something far more professional. As one of the Empire's races can literally fly, it is only natural that we come to dominate the skies."
   SOL_abolish_wonderbolts:0 "Abolish the Wonderbolts"
+  SOL_abolish_wonderbolts_desc:0 "The Wonderbolts are outspoken supporters of the old regime and have made it known that they are against everything for which Daybreaker stands. Therefore, if they wish to poke the hornets' nest, they shall face the consequences. From this moment forth, they are no more, and a loyal, Solarist group shall take their place. The Solarbeams sounds appropriate."
   SOL_striking_battlefield:0 "Striking the Battlefield"
   SOL_punishing_world:0 "Punishing the World"
   SOL_durable_frames:0 "High Durability Frames"
@@ -875,7 +899,7 @@
   SOL_imperial_diplomatic_corps:0 "Imperial Diplomatic Corps"
   SOL_imperial_diplomatic_corps_desc:0 "We are not alone on this planet. While every knee should bow to the Empress and acknowledge her right to rule, it will take time for the minds of mortals and non-ponies to accept their inevitable fate. In the meantime, we should at least make over gestures of working with the international community, and we shall establish a department in [3.GetCapitalVictoryPointName] to handle all future communication with other nations."
   SOL_sustenance_workers:0 "Workers for Sustenance"
-  SOL_sustenance_workers_desc:0 "[DRG.GetNameDef] can barely be considered a country, and even less of one that has any clout upon the international stage. Our Empress could wipe them from the face of the planet without a second thought, but she is generous. If they can agree to provide for us, we shall do all that we can to ensure that they can continue living. For now."
+  SOL_sustenance_workers_desc:0 "[DRG.GetNameDefCap] can barely be considered a country, and even less of one that has any clout upon the international stage. Our Empress could wipe them from the face of the planet without a second thought, but she is generous. If they can agree to provide for us, we shall do all that we can to ensure that they can continue living. For now."
   SOL_insurance_policies:0 "Insurance Policies"
   SOL_insurance_policies_desc:0 "Although it is a backwater country [YAK.GetNameDef] nevertheless holds significant sway in the northern reaches of Equus. They have recently had spats between each other, with a splinter group forming [JAK.GetNameDef] and leading to more internal strife. We could easily swoop in and save the day, and promising to do so would keep the yaks under our hoof, so we can pressure them in just the right way."
   SOL_oil_existence:0 "Oil for Existence"
@@ -884,6 +908,8 @@
   SOL_griffon_fealty_desc:0 "Just over two hundred years ago, Grover I officially established the small griffon towns along the north-eastern coast as Nova Griffonia, forever marring the otherwise pristine continent of Equus with a griffon claw. Now, this poor little colony has been left adrift, without the mighty [GRD.GetNameDef] to protect them. It would be simple to demand tribute of them. We just need to speak their language."
   SOL_reich_relations:0 "The Empire Across the Sea"
   SOL_reich_relations_desc:0 "There is not a single equal to our Empress, but there are a small number of nations who claim the title of Empire. Yet only [GRD.GetNameDef] is worthy of the Empress's attention, as they could realistically be the only one to prove to be a challenge.\n\nLet's put our best hoof forward, shall we?"
+
+  ###Spies###
 
   ###Events###
   ###Opening Tree Events###

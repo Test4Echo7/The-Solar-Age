@@ -1823,10 +1823,10 @@ ideas = {
 			equipment_bonus = { carrier = { naval_range = 0.15 maximum_speed = 0.05 carrier_size = -8 instant = yes } }
 		}
 		SOL_sacrificial_light_ships = {
-			equipment_bonus = { destroyer = { maximum_speed = 0.1 torpedo_attack = 0.05 max_strength = -0.15 instant = yes } }
+			equipment_bonus = { destroyer = { maximum_speed = 0.1 torpedo_attack = 0.05 max_strength = -0.2 build_cost_ic = -0.1 instant = yes } }
 		}
 		SOL_magic_bonded_plating = {
-			equipment_bonus = { capital_ship = { armor_value = 0.05 max_strength = 0.1 surface_visibility = 0.1 maximum_speed = -0.05 instant = yes } }
+			equipment_bonus = { capital_ship = { armor_value = 0.1 max_strength = 0.1 surface_visibility = 0.1 maximum_speed = -0.05 instant = yes } }
 		}
 		SOL_cut_ship_hull_heavy_corners = {
 			equipment_bonus = { ship_hull_heavy = { build_cost_ic = -0.1 reliability = -0.1 instant = yes } }
@@ -1834,7 +1834,7 @@ ideas = {
 		SOL_combined_naval_arms = {
 			equipment_bonus = {
 				carrier = { naval_range = 0.1 instant = yes }
-				screen_ship = { lg_attack = 0.15 lg_armor_piercing = 0.05 instant = yes }
+				screen_ship = { lg_attack = 0.1 lg_armor_piercing = 0.05 naval_range = 0.15 instant = yes }
 			}
 		}
 		SOL_status_quo_superiority = {
