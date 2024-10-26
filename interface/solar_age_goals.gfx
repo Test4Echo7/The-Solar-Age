@@ -44,5 +44,9 @@ SpriteTypes = {
         name = GFX_goal_new_officers
         texturefile = "gfx/interface/goals/EQS/new_officers.tga"
     }
+    SpriteType = {
+        name = GFX_goal_only_statistics
+        texturefile = "gfx/interface/goals/EQS/only_statistics.tga"
+    }
 
 }

@@ -1,0 +1,18 @@
+SpriteTypes = {
+    SpriteType = {
+        name = GFX_bop_EQS_order_side
+        textureFile = "gfx/interface/bop/bop_EQS_celestia_order.tga"
+    }
+    SpriteType = {
+        name = GFX_bop_EQS_harmony_side
+        textureFile = "gfx/interface/bop/bop_EQS_celestia_harmony.tga"
+    }
+    SpriteType = {
+        name = GFX_bop_EQS_powa_side
+        textureFile = "gfx/interface/bop/bop_EQS_solar_empire_united.tga"
+    }
+    SpriteType = {
+        name = GFX_bop_EQS_democracy_side
+        textureFile = "gfx/interface/bop/bop_EQS_solar_empire_disunited.tga"
+    }
+}

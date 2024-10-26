@@ -34,6 +34,7 @@ EQS_sanity_bop = {
     side = {
         id = EQS_npc
         #icon = GFX_bop_celestia_bust #Should be a bust like Benito's in ITA
+        icon = GFX_bop_EQS_harmony_side
         range = {
             id = EQS_nervous_sanity
             min = 0.15
@@ -98,6 +99,7 @@ EQS_sanity_bop = {
     side = {
         id = EQS_woke
         #icon = GFX_bop_sun_side #Should be the same colour, but it's just the sun; alternately can be a shatterd bust of Celestia, or a bust of Daybreaker
+        icon = GFX_bop_EQS_order_side
         range = {
             id = EQS_discomforting_insanity
             min = -0.45
@@ -109,10 +111,17 @@ EQS_sanity_bop = {
             }
             on_activate = {
                 log = "EQS_discomforting_insanity"
-                EQS_princess_celestia = {
-                    set_portraits = {
-                        civilian = {
-                            large = "gfx/leaders/EQS/Celestia_feels_bad.tga"
+                if = {
+                    limit = {
+                        EQS_princess_celestia = {
+                            NOT = { has_character_flag = EQS_celestia_is_db }
+                        }
+                    }
+                    EQS_princess_celestia = {
+                        set_portraits = {
+                            civilian = {
+                                large = "gfx/leaders/EQS/Celestia_feels_bad.tga"
+                            }
                         }
                     }
                 }
@@ -134,10 +143,17 @@ EQS_sanity_bop = {
             }
             on_activate = {
                 log = "EQS_paranoid_insanity"
-                EQS_princess_celestia = {
-                    set_portraits = {
-                        civilian = {
-                            large = "gfx/leaders/EQS/Celestia_danger.tga"
+                if = {
+                    limit = {
+                        EQS_princess_celestia = {
+                            NOT = { has_character_flag = EQS_celestia_is_db }
+                        }
+                    }
+                    EQS_princess_celestia = {
+                        set_portraits = {
+                            civilian = {
+                                large = "gfx/leaders/EQS/Celestia_danger.tga"
+                            }
                         }
                     }
                 }
@@ -184,6 +200,7 @@ EQS_vestments_of_power_bop = {
     side = {
         id = EQS_democracy
         #icon = GFX_bop_parliament
+        icon = GFX_bop_EQS_democracy_side
         range = {
             id = EQS_little_republic
             min = 0.1
@@ -239,6 +256,7 @@ EQS_vestments_of_power_bop = {
     side = {
         id = EQS_powa
         #icon = GFX_bop_celestial_throne
+        icon = GFX_bop_EQS_powa_side
         range = {
             id = EQS_little_dictator
             min = -0.35
