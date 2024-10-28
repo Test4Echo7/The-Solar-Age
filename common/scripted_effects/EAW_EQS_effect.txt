@@ -329,7 +329,9 @@ EQS_SOL_wartime_change = {
 	country_event = { id = solarempire.1018 }
 	if = {
 		limit = { country_exists = CES }
-		CES = { load_focus_tree = Celestial_State_Focus_db }
+		CES = {
+			country_event = daring.20
+		}
 	}
 	if = {
 		limit = {
@@ -602,7 +604,9 @@ EQS_SOL_civil_war = {
 	#EQS_SOL_remove_ideas = yes
 	if = {
 		limit = { country_exists = CES }
-		CES = { load_focus_tree = Celestial_State_Focus_db }
+		CES = {
+			country_event = daring.20
+		}
 	}
 	#EQS_SOL_show_advisors = yes
 }

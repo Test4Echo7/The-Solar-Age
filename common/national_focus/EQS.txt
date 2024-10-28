@@ -5087,7 +5087,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [ROOT.GetName]: focus EQS_strike_moon"
 		custom_effect_tooltip = EQS_unlock_operation_mondwaffen_tt
-		set_country_flag = EQS_greifen_sie_den_mond_an
+		set_country_flag = EQS_greife_den_mond_an
 		#Maybe short event of Celestia being presented the operation, which she is against but is convinced to do
 	}
 	ai_will_do = {

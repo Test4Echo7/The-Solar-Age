@@ -47,27 +47,239 @@ SOL_exfiltrate_luna = {
 }
 
 ###Assassinate Chrysalis###
-#EQS_train_infiltrate_across_border = {
-#
-#}
-#
-#EQS_meet_thoraxian_contacts_in_vesalipolis = { #If event tied to it, the contacts are changelings that replaced the true contacts; easy to do when you don't know what they should look like
-#
-#}
-#
-#EQS_infiltrate_queens_castle = {
-#
-#}
-#
+EQS_train_infiltratition_across_border = {
+    name = EQS_train_infiltration_across_border_name
+    desc = EQS_train_infiltration_across_border_desc
+
+    outcome = EQS_train_infiltration_across_border_outcome
+
+    requirements = {
+        has_country_flag = EQS_swat_buggo
+    }
+}
+
+EQS_meet_thoraxian_contacts_in_vesalipolis = { #If event tied to it, the contacts are changelings that replaced the true contacts; easy to do when you don't know what they should look like
+    name = EQS_meet_thoraxian_contacts_in_vesalipolis_name
+    desc = EQS_meet_thoraxian_contacts_in_vesalipolis_desc
+
+    outcome = EQS_meet_thoraxian_contacts_in_vesalipolis_outcome
+
+    outcome_extra = EQS_meet_thoraxian_contacts_in_vesalipolis_outcome_extra #Contacts from Thorax were intercepted and replaced, which led to one agent getting captured
+
+    requirements = {
+        has_country_flag = EQS_swat_buggo
+    }
+}
+
+EQS_infiltrate_queens_castle = { #Will never succeed, but may more seriously injure Chrysalis
+    name = EQS_infiltrate_queens_castle_name
+    desc = EQS_infiltrate_queens_castle_desc
+
+    outcome = EQS_infiltrate_queens_castle_outcome
+
+    outcome_extra = EQS_infiltrate_queens_castle_outcome_extra #Agents were able to get closer to Chrysalis and more seriously harm her, but she survived and the agent was killed
+
+    requirements = {
+        has_country_flag = EQS_swat_buggo
+    }
+}
+
+###Weaken NLR###
+EQS_infiltrate_thestral_groups = {
+    name = EQS_infiltrate_thestral_groups_name
+    desc = EQS_infiltrate_thestral_groups_desc
+
+    outcome = EQS_infiltrate_thestral_groups_outcome
+
+    outcome_extra = EQS_infiltrate_thestral_groups_outcome_extra #Agent was discovered and forced to flee
+
+    requirements = {
+        has_country_flag = EQS_greife_den_mond_an
+    }
+}
+
+EQS_plant_false_intelligence = { #Agents will plant false intel regarding an Equestrian attack, but instead is meant to capture a general or destroy an army
+    name = EQS_plant_false_intelligence_name
+    desc = EQS_plant_false_intelligence_desc
+
+    outcome = EQS_plant_false_intelligence_outcome
+
+    outcome_extra = EQS_plant_false_intelligence_outcome_extra #They were detected with the false intel and forced to flee
+
+    requirements = {
+        has_country_flag = EQS_greife_den_mond_an
+    }
+}
+
+EQS_spring_ambush = { #Ambush to capture officers
+    name = EQS_spring_ambush_name
+    desc = EQS_spring_ambush_desc
+
+    outcome = EQS_spring_ambush_outcome
+
+    outcome_extra = EQS_spring_ambush_outcome_extra #The officers didn't arrive and we were forced to abandon the operation
+
+    requirements = {
+        has_country_flag = EQS_greife_den_mond_an
+    }
+}
+
 ####Capture M6###
+SOL_manufacture_fake_conflict = { #Basically get a small team of ponies in to make it look like there's unrest that can be solved through diplomacy from the M6
+    name = SOL_manufacture_fake_conflict_name
+    desc = SOL_manufacture_fake_conflict_desc
+
+    outcome = SOL_manufacture_fake_conflict_outcome
+
+    requirements = {
+        has_country_flag = SOL_hunt_for_mane_six_lar
+    }
+}
+
 #SOL_fabricate_friendship_problem = { #The M6 still have their Harmonist duties, after all
 #
 #}
-#
-#SOL_ambush_elements = {
-#
-#}
-#
-#SOL_exfiltrate_elements = {
-#
-#}
+
+SOL_ambush_elements = {
+    name = SOL_ambush_elements_name
+    desc = SOL_ambush_elements_desc
+
+    outcome = SOL_ambush_elements_outcome
+
+    outcome_extra = SOL_ambush_elements_outcome_extra #M6 were not sent and instead some other negotiators or just the military, forcing the agents to try again
+
+    requirements = {
+        has_country_flag = SOL_hunt_for_mane_six_lar
+    }
+}
+
+SOL_exfiltrate_elements = {
+    name = SOL_exfiltrate_elements_name
+    desc = SOL_exfiltrate_elements_desc
+
+    outcome = SOL_exfiltrate_elements_outcome
+
+    outcome_extra = SOL_exfiltrate_elements_outcome_extra #Agents were detected taking the captured M6 across the border and forced to split up; one didn't report back
+
+    requirements = {
+        has_country_flag = SOL_hunt_for_mane_six_lar
+    }
+}
+
+###Steal Staff of Sacanas###
+SOL_bribe_storm_guard = { #Bribe a few guards to get into the place where the staff is
+    name = SOL_bribe_storm_guard_name
+    desc = SOL_bribe_storm_guard_desc
+
+    outcome = SOL_bribe_storm_guard_outcome
+
+    outcome_extra = SOL_bribe_storm_guard_outcome_extra #Agents were captured by guard instead, as it was a sting
+
+    requirements = {
+        has_country_flag = SOL_rated_e_for_empress
+    }
+}
+
+SOL_destroy_staff_wards = { #Magic wards need to be disabled
+    name = SOL_destroy_staff_wards_name
+    desc = SOL_destroy_staff_wards_desc
+
+    outcome = SOL_destroy_staff_wards_outcome
+
+    outcome_extra = SOL_destroy_staff_wards_outcome_extra #Agents were discovered in the middle of disabling the wards and forced to flee
+
+    requirements = {
+        has_country_flag = SOL_rated_e_for_empress
+    }
+}
+
+SOL_retreat_by_magic = { #There are a couple of mages who can use the magic in the staff to teleport them a safe distance
+    name = SOL_retreat_by_magic_name
+    desc = SOL_retreat_by_magic_desc
+
+    outcome = SOL_retreat_by_magic_outcome
+
+    outcome_extra = SOL_retreat_by_magic_outcome_extra #Mages were shot and agents had to flee on hoof
+
+    requirements = {
+        has_country_flag = SOL_rated_e_for_empress
+    }
+}
+
+###Steal Necromancy Magic###
+SOL_enlighten_necromancers = { #Capture and torture a few necromancers to help
+    name = SOL_enlighten_necromancers_name
+    desc = SOL_enlighten_necromancers_desc
+
+    outcome = SOL_enlighten_necromancers_outcome
+
+    requirements = {
+        has_country_flag = SOL_edgy_black_metal
+    }
+}
+
+SOL_infiltrate_magehold_sanctuary = {
+    name = SOL_infiltrate_magehold_sanctuary_name
+    desc = SOL_infiltrate_magehold_sanctuary_desc
+
+    outcome = SOL_infiltrate_magehold_sanctuary_outcome
+
+    outcome_extra = SOL_infiltrate_magehold_sanctuary_outcome_extra #Necromancers betrayed the agents
+
+    requirements = {
+        has_country_flag = SOL_edgy_black_metal
+    }
+}
+
+SOL_escape_with_corpses = { #Use spells to appear like dead bodies, which will be carted to closer to the front, and escape through HLR
+    name = SOL_escape_with_corpses_name
+    desc = SOL_escape_with_corpses_desc
+
+    outcome = SOL_escape_with_corpses_outcome
+
+    outcome_extra = SOL_escape_with_corpses_outcome_ext #Necromancers try to raise the agents and discover them, capturing them
+
+    requirements = {
+        has_country_flag = SOL_edgy_black_metal
+    }
+}
+
+###Capturing Nirik Subjects###
+SOL_use_trade_transport = {
+    name = SOL_use_trade_transport_name
+    desc = SOL_use_trade_transport_desc
+
+    outcome = SOL_use_trade_transport_outcome
+
+    outcome_extra = SOL_use_trade_transport_outcome_extra #Agents are caught on inspection
+
+    requirements = {
+        has_country_flag = SOL_extinguish_firelovers
+    }
+}
+
+SOL_incite_nirik_unrest = { #Use very emotive tactics to get them riled up
+    name = SOL_incite_nirik_unrest_name
+    desc = SOL_incite_nirik_unrest_desc
+
+    outcome = SOL_incite_nirik_unrest_outcome
+
+    #outcome_extra = SOL_incite_nirik_unrest_outcome_extra #Too large a riot and agents are hurt
+
+    requirements = {
+        has_country_flag = SOL_extinguish_firelovers
+    }
+}
+
+SOL_exfiltrate_captured_nirik = {
+    name = SOL_exfiltrate_captured_nirik_name
+    desc = SOL_exfiltrate_captured_nirik_desc
+
+    outcome = SOL_exfiltrate_captured_nirik_outcome
+
+    #outcome_extra = SOL_exfiltrate_captured_nirik_outcome_extra #Agents wake up the nirik or are captured at border
+
+    requirements = {
+        has_country_flag = SOL_extinguish_firelovers
+    }
+}

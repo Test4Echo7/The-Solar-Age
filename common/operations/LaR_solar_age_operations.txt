@@ -8,17 +8,20 @@ SOL_capture_luna_operation = {
     allowed = {
         original_tag = EQS
     }
-    available = {
-        has_country_flag = SOL_luna_hunt_lar
-    }
     visible = {
-        #has_country_flag = SOL_luna_hunt_lar
-        always = no #Until there's a solution
+        has_country_flag = SOL_luna_hunt_lar
+        FROM = {
+            has_character = EQS_princess_luna
+        }
+        network_strength = {
+            target = FROM
+            value > 0
+        }
     }
 
     operatives = 3
 
-    network_strength = 0
+    network_strength = 70
 
     equipment = {
         infantry_equipment = 1500
@@ -37,10 +40,11 @@ SOL_capture_luna_operation = {
     experience = 10
     outcome_execute = {
         FROM = {
-            random_country = {
+            every_possible_country = {
                 limit = { has_character = EQS_princess_luna }
                 EQS_princess_luna = {
                     remove_unit_leader_role = yes
+                    set_nationality = EQS
                 }
             }
         }
@@ -59,7 +63,112 @@ SOL_capture_luna_operation = {
 
     operation_target = {
         targets = {
-            CRY
+            HIP
+            RCT
+            MGY
+        }
+    }
+
+    #outcome_extra_chance = 25
+
+    #outcome_extra_execute = { #Cancel operation?
+    #
+    #}
+
+}
+
+SOL_exfiltrate_M6_operation = {
+    icon = GFX_operation_test_icon
+    map_icon = GFX_historical_heavy_water_small
+    name = SOL_exfiltrate_M6_operation_name
+    desc = SOL_exfiltrate_M6_operation_desc
+    days = 120
+
+    allowed = {
+        original_tag = EQS
+    }
+    visible = {
+        has_country_flag = SOL_hunt_for_mane_six_lar
+        FROM = {
+            has_country_flag = SOL_hosting_M6
+        }
+        network_strength = {
+            target = FROM
+            value > 0
+        }
+    }
+
+    operatives = 3
+
+    network_strength = 70
+
+    equipment = {
+        infantry_equipment = 1500
+        support_equipment = 75
+    }
+
+    outcome_modifiers = { operation_outcome }
+    cost_modifiers = { operation_cost }
+    risk_modifiers = { operation_risk }
+
+    outcome_potential = {
+        custom_effect_tooltip = SOL_M6_exfiltrated_tt
+        #country_event = solarreworked.601 #Will be an event of the M6 finally getting ganked by Astrum and taken back to the Empire; she's pretty pleased with herself
+    }
+    risk_chance = 0.3
+    experience = 10
+    outcome_execute = {
+        FROM = {
+            every_possible_country = {
+                limit = { has_country_flag = SOL_hosting_M6 }
+                if = {
+                    limit = { has_character = EQS_rainbowdash }
+                    EQS_rainbowdash = { set_nationality = EQS }
+                }
+                if = {
+                    limit = { has_character = EQS_rarity }
+                    EQS_rarity = { set_nationality = EQS }
+                }
+                if = {
+                    limit = { has_character = EQS_fluttershy }
+                    EQS_fluttershy = { set_nationality = EQS }
+                }
+                if = {
+                    limit = { has_character = EQS_applejack }
+                    EQS_applejack = { set_nationality = EQS }
+                }
+                if = {
+                    limit = { has_character = EQS_pinkie_pie }
+                    EQS_pinkie_pie = { set_nationality = EQS }
+                }
+                if = {
+                    limit = { has_character = EQS_twilight_sparkle }
+                    EQS_twilight_sparkle = { set_nationality = EQS }
+                }
+                if = {
+                    limit = { has_character = EQS_sunset_shimmer }
+                    EQS_sunset_shimmer = { set_nationality = EQS }
+                }
+            }
+        }
+        #country_event = solarreworked.601
+    }
+
+    phases = {
+        SOL_manufacture_fake_conflict = { base = 100 }
+    }
+    phases = {
+        SOL_ambush_elements = { base = 100 }
+    }
+    phases = {
+        SOL_exfiltrate_elements = { base = 100 }
+    }
+
+    operation_target = {
+        targets = {
+            HIP
+            RCT
+            MGY
         }
     }
 

@@ -262,6 +262,7 @@
   SOL_constructing_temple:0 "The §OCathedral of the Sun§! is not being constructed."
   SOL_Faith_Sacrifice_Worship_tp:0 "Enable Tactic: §YBerserker Charge§W\n"
   EQS_temp_content_is_temp_tt:0 "This is only a temporary event. Eventually content will replace it in [FROM.GetNameDef] proper."
+  SOL_M6_exfiltrated_tt:0 "The wielders of the §YElements of Harmony§! will be returned to their rightful home under the §OEmpress§!."
 
   ###Dynamic Loc###
   SOL_hidden_bonuses_empty:0 ""
@@ -392,6 +393,18 @@
   mio_header_ballistic_improvement:0 "Ballistic Weapon Improvements"
   mio_header_heavy_tanks:0 "Heavy Tanks"
   mio_header_flame_tanks:0 "Flame Tanks"
+
+  ###Operations###
+  SOL_exfiltrate_M6_operation_name:0 "Exfiltrate the Element Bearers"
+  SOL_manufacture_fake_conflict_name:0 "Manufacture Fake Conflict"
+  SOL_manufacture_fake_conflict_desc:0 "Our agents will emigrate as refugees from [ROOT.GetNameDef] with cover identities as former Ponyville workers. From there, they will form some social connections and cause a stir to attract the interest of the Element Bearers."
+  SOL_manufacture_fake_conflict_outcome:0 "Through standard immigration, our agents plannted themselves themselves in [FROM.GetAdjective] society and soon created a tense situation. The fueding "friends" quickly attracted the attention of local authorities, who dispatched the Element Bearers to resolve the issue."
+  SOL_ambush_elements_name:0 "Ambush Element Bearers"
+  SOL_ambush_elements_desc:0 "When the Element Bearers come to fix the "friendship problem" that our agents instigate, the agents will find an appropriate ambush site to meet to obstensibly put aside differences and apprehend the Bearers."
+  SOL_ambush_elements_outcome:0 "When the Element Bearers spoke with the supposedly fighting friends, our agents surprised them with tear gas after agreeing to meet to "resolve" their issues and rendered the ponies unconscious."
+  SOL_exfiltrate_elements_name:0 "Exfiltrate to Beachhead"
+  SOL_exfiltrate_elements_desc:0 "Afterward, the agents will bind the Element Bearers and contact a nearby submarine for pickup and transporation back to [ROOT.GetNameDef]."
+  SOL_exfiltrate_elements_outcome:0 "After the Bearers had been secured, our agents contacted the submarine, HMS Holy Light, and rendezvoused with it off the [FROM.GetAdjective] coast, where they were taken safely back to [ROOT.GetNameDef]."
 
   ###Ideas###
   ###Hidden/Enemy###
