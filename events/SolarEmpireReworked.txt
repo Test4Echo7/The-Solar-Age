@@ -1443,6 +1443,20 @@ country_event = {
     }
 }
 
+country_event = { #Aurora Shinespark does one last interrogation of Sweet Bliss, who has been captured after the general destruction of the Friendship Lodge, as she tries to garner information on where the rest of the ponies may have fled from it, as they scattered after being defeated; Sweet Bliss doesn't break, and Aurora finally grows tired of it and burns her
+    id = solarreworked.135
+    title = solarreworked.135.t
+    desc = solarreworked.135.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.135"}
+
+    is_triggered_only = yes
+
+    option = { #Insane, every last one of them.
+        name = solarreworked.135.a
+    }
+}
+
 ###Luna and M6 stuff###
 country_event = { #Luna arrives in Ponyville, after leaving the front when she hears about how Canterlot going dark, despite the war being actively controlled, and that there have been more and more concerning commands from Canterlot before that about what to do with the changelings; she speaks briefly with Twilight about her fears that something has gone wrong with Celestia, and she states that she has no clue what to expect, but that Twilight must be ready to flee with her friends
     id = solarreworked.150

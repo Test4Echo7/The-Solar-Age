@@ -10575,8 +10575,10 @@ shared_focus = {
 	relative_position_id = SOL_streamline_expenses
 
 	cost = 4
-	prerequisite = { focus = SOL_sky_flexibility }
-	prerequisite = { focus = SOL_streamline_expenses }
+	prerequisite = {
+		focus = SOL_sky_flexibility
+		focus = SOL_streamline_expenses
+	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_invisible_eyes"
