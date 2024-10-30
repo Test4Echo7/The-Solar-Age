@@ -7,7 +7,7 @@ SOL_replace_servants = {
 
     #map_icon = GFX_SOL_replace_servants_map
 
-    outcome_extra = SOL_replace_servants_outcome_extra #Our plants missed the window to replace the servants headed to Luna's residence/the servants never arrived, or some such
+    risk_extra = SOL_replace_servants_risk_extra #Our plants missed the window to replace the servants headed to Luna's residence/the servants never arrived, or some such
 
     requirements = {
         has_country_flag = SOL_luna_hunt_lar
@@ -23,7 +23,7 @@ SOL_bring_in_commandos = {
 
     #map_icon = GFX_SOL_bring_in_commandos_map
 
-    outcome_extra = SOL_bring_in_commandos_outcome_extra #The commando team was intercepted on the way to the residence and our plants had to flee before their deception was uncovered, or some such
+    risk_extra = SOL_bring_in_commandos_risk_extra #The commando team was intercepted on the way to the residence and our plants had to flee before their deception was uncovered, or some such
 
     requirements = {
         has_country_flag = SOL_luna_hunt_lar
@@ -39,7 +39,7 @@ SOL_exfiltrate_luna = {
 
     #map_icon = GFX_SOL_exfiltrate_luna_map
 
-    outcome_extra = SOL_exfiltrate_luna_outcome_extra #The exfiltration team was detected or Luna awoke too soon from her drugged state and fought them off, or something to that effect
+    risk_extra = SOL_exfiltrate_luna_risk_extra #The exfiltration team was detected or Luna awoke too soon from her drugged state and fought them off, or something to that effect
 
     requirements = {
         has_country_flag = SOL_luna_hunt_lar
@@ -47,7 +47,7 @@ SOL_exfiltrate_luna = {
 }
 
 ###Assassinate Chrysalis###
-EQS_train_infiltratition_across_border = {
+EQS_train_infiltration_across_border = {
     name = EQS_train_infiltration_across_border_name
     desc = EQS_train_infiltration_across_border_desc
 
@@ -64,7 +64,7 @@ EQS_meet_thoraxian_contacts_in_vesalipolis = { #If event tied to it, the contact
 
     outcome = EQS_meet_thoraxian_contacts_in_vesalipolis_outcome
 
-    outcome_extra = EQS_meet_thoraxian_contacts_in_vesalipolis_outcome_extra #Contacts from Thorax were intercepted and replaced, which led to one agent getting captured
+    risk_extra = EQS_meet_thoraxian_contacts_in_vesalipolis_risk_extra #Contacts from Thorax were intercepted and replaced, which led to one agent getting captured
 
     requirements = {
         has_country_flag = EQS_swat_buggo
@@ -77,7 +77,7 @@ EQS_infiltrate_queens_castle = { #Will never succeed, but may more seriously inj
 
     outcome = EQS_infiltrate_queens_castle_outcome
 
-    outcome_extra = EQS_infiltrate_queens_castle_outcome_extra #Agents were able to get closer to Chrysalis and more seriously harm her, but she survived and the agent was killed
+    risk_extra = EQS_infiltrate_queens_castle_risk_extra #Agents were able to get closer to Chrysalis and more seriously harm her, but she survived and the agent was killed
 
     requirements = {
         has_country_flag = EQS_swat_buggo
@@ -91,7 +91,7 @@ EQS_infiltrate_thestral_groups = {
 
     outcome = EQS_infiltrate_thestral_groups_outcome
 
-    outcome_extra = EQS_infiltrate_thestral_groups_outcome_extra #Agent was discovered and forced to flee
+    risk_extra = EQS_infiltrate_thestral_groups_risk_extra #Agent was discovered and forced to flee
 
     requirements = {
         has_country_flag = EQS_greife_den_mond_an
@@ -104,7 +104,7 @@ EQS_plant_false_intelligence = { #Agents will plant false intel regarding an Equ
 
     outcome = EQS_plant_false_intelligence_outcome
 
-    outcome_extra = EQS_plant_false_intelligence_outcome_extra #They were detected with the false intel and forced to flee
+    risk_extra = EQS_plant_false_intelligence_risk_extra #They were detected with the false intel and forced to flee
 
     requirements = {
         has_country_flag = EQS_greife_den_mond_an
@@ -117,7 +117,7 @@ EQS_spring_ambush = { #Ambush to capture officers
 
     outcome = EQS_spring_ambush_outcome
 
-    outcome_extra = EQS_spring_ambush_outcome_extra #The officers didn't arrive and we were forced to abandon the operation
+    risk_extra = EQS_spring_ambush_risk_extra #The officers didn't arrive and we were forced to abandon the operation
 
     requirements = {
         has_country_flag = EQS_greife_den_mond_an
@@ -146,7 +146,7 @@ SOL_ambush_elements = {
 
     outcome = SOL_ambush_elements_outcome
 
-    outcome_extra = SOL_ambush_elements_outcome_extra #M6 were not sent and instead some other negotiators or just the military, forcing the agents to try again
+    risk_extra = SOL_ambush_elements_risk_extra #M6 were not sent and instead some other negotiators or just the military, forcing the agents to try again
 
     requirements = {
         has_country_flag = SOL_hunt_for_mane_six_lar
@@ -159,7 +159,7 @@ SOL_exfiltrate_elements = {
 
     outcome = SOL_exfiltrate_elements_outcome
 
-    outcome_extra = SOL_exfiltrate_elements_outcome_extra #Agents were detected taking the captured M6 across the border and forced to split up; one didn't report back
+    risk_extra = SOL_exfiltrate_elements_risk_extra #Agents were detected taking the captured M6 across the border and forced to split up; one didn't report back
 
     requirements = {
         has_country_flag = SOL_hunt_for_mane_six_lar
@@ -173,7 +173,7 @@ SOL_bribe_storm_guard = { #Bribe a few guards to get into the place where the st
 
     outcome = SOL_bribe_storm_guard_outcome
 
-    outcome_extra = SOL_bribe_storm_guard_outcome_extra #Agents were captured by guard instead, as it was a sting
+    risk_extra = SOL_bribe_storm_guard_risk_extra #Agents were captured by guard instead, as it was a sting
 
     requirements = {
         has_country_flag = SOL_rated_e_for_empress
@@ -186,7 +186,7 @@ SOL_destroy_staff_wards = { #Magic wards need to be disabled
 
     outcome = SOL_destroy_staff_wards_outcome
 
-    outcome_extra = SOL_destroy_staff_wards_outcome_extra #Agents were discovered in the middle of disabling the wards and forced to flee
+    risk_extra = SOL_destroy_staff_wards_risk_extra #Agents were discovered in the middle of disabling the wards and forced to flee
 
     requirements = {
         has_country_flag = SOL_rated_e_for_empress
@@ -199,7 +199,7 @@ SOL_retreat_by_magic = { #There are a couple of mages who can use the magic in t
 
     outcome = SOL_retreat_by_magic_outcome
 
-    outcome_extra = SOL_retreat_by_magic_outcome_extra #Mages were shot and agents had to flee on hoof
+    risk_extra = SOL_retreat_by_magic_risk_extra #Mages were shot and agents had to flee on hoof
 
     requirements = {
         has_country_flag = SOL_rated_e_for_empress
@@ -224,7 +224,7 @@ SOL_infiltrate_magehold_sanctuary = {
 
     outcome = SOL_infiltrate_magehold_sanctuary_outcome
 
-    outcome_extra = SOL_infiltrate_magehold_sanctuary_outcome_extra #Necromancers betrayed the agents
+    risk_extra = SOL_infiltrate_magehold_sanctuary_risk_extra #Necromancers betrayed the agents
 
     requirements = {
         has_country_flag = SOL_edgy_black_metal
@@ -237,7 +237,7 @@ SOL_escape_with_corpses = { #Use spells to appear like dead bodies, which will b
 
     outcome = SOL_escape_with_corpses_outcome
 
-    outcome_extra = SOL_escape_with_corpses_outcome_ext #Necromancers try to raise the agents and discover them, capturing them
+    risk_extra = SOL_escape_with_corpses_outcome_ext #Necromancers try to raise the agents and discover them, capturing them
 
     requirements = {
         has_country_flag = SOL_edgy_black_metal
@@ -251,7 +251,7 @@ SOL_use_trade_transport = {
 
     outcome = SOL_use_trade_transport_outcome
 
-    outcome_extra = SOL_use_trade_transport_outcome_extra #Agents are caught on inspection
+    risk_extra = SOL_use_trade_transport_risk_extra #Agents are caught on inspection
 
     requirements = {
         has_country_flag = SOL_extinguish_firelovers
@@ -264,7 +264,7 @@ SOL_incite_nirik_unrest = { #Use very emotive tactics to get them riled up
 
     outcome = SOL_incite_nirik_unrest_outcome
 
-    #outcome_extra = SOL_incite_nirik_unrest_outcome_extra #Too large a riot and agents are hurt
+    #risk_extra = SOL_incite_nirik_unrest_risk_extra #Too large a riot and agents are hurt
 
     requirements = {
         has_country_flag = SOL_extinguish_firelovers
@@ -277,7 +277,7 @@ SOL_exfiltrate_captured_nirik = {
 
     outcome = SOL_exfiltrate_captured_nirik_outcome
 
-    #outcome_extra = SOL_exfiltrate_captured_nirik_outcome_extra #Agents wake up the nirik or are captured at border
+    #risk_extra = SOL_exfiltrate_captured_nirik_risk_extra #Agents wake up the nirik or are captured at border
 
     requirements = {
         has_country_flag = SOL_extinguish_firelovers

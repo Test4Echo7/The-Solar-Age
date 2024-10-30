@@ -7,16 +7,16 @@ SOL_sanctum_infernal_corps_organization = {
 		original_tag = EQS
 		has_dlc = "Arms Against Tyranny"
 	}
-	visible = {
-		IF = {
-			limit = {
-				FROM = {
-					is_EQS_SOL = yes
-					has_country_flag = SOL_sanctum_arms_unlocked
-				}
-			}
-		}
-	}
+	#visible = {
+	#	IF = {
+	#		limit = {
+	#			FROM = {
+	#				is_EQS_SOL = yes
+	#				has_country_flag = SOL_sanctum_arms_unlocked
+	#			}
+	#		}
+	#	}
+	#}
 
 	tree_header_text = {
 		text = mio_header_heavy_tanks
@@ -403,16 +403,16 @@ SOL_holy_flame_arms_organization = {
 		original_tag = EQS
 		has_dlc = "Arms Against Tyranny"
 	}
-	visible = {
-		IF = {
-			limit = {
-				FROM = {
-					is_EQS_SOL = yes
-					has_country_flag = SOL_holy_flame_unlocked
-				}
-			}
-		}
-	}
+	#visible = {
+	#	IF = {
+	#		limit = {
+	#			FROM = {
+	#				is_EQS_SOL = yes
+	#				has_country_flag = SOL_holy_flame_unlocked
+	#			}
+	#		}
+	#	}
+	#}
 
 	tree_header_text = {
 		text = mio_header_armor_and_armaments
@@ -781,16 +781,16 @@ SOL_bitterbury_ballistics_organization = {
 		original_tag = EQS
 		has_dlc = "Arms Against Tyranny"
 	}
-	visible = {
-		IF = {
-			limit = {
-				FROM = {
-					is_EQS_SOL = yes
-					has_country_flag = SOL_bitterbury_unlocked
-				}
-			}
-		}
-	}
+	#visible = {
+	#	IF = {
+	#		limit = {
+	#			FROM = {
+	#				is_EQS_SOL = yes
+	#				has_country_flag = SOL_bitterbury_unlocked
+	#			}
+	#		}
+	#	}
+	#}
 
 	tree_header_text = {
 		text = mio_header_production
@@ -1160,16 +1160,16 @@ CRY_polished_armor_arsenals_organization = {
 		original_tag = CRY
 		has_dlc = "Arms Against Tyranny"
 	}
-	visible = {
-		IF = {
-			limit = {
-				FROM = {
-					is_EQS_SOL = yes
-					has_country_flag = SOL_polished_armor_unlocked
-				}
-			}
-		}
-	}
+	#visible = {
+	#	IF = {
+	#		limit = {
+	#			FROM = {
+	#				is_EQS_SOL = yes
+	#				has_country_flag = SOL_polished_armor_unlocked
+	#			}
+	#		}
+	#	}
+	#}
 
 	tree_header_text = {
 		text = mio_header_ballistic_improvement
@@ -1542,11 +1542,12 @@ EQC_prelate_corps_organization = {
 		has_dlc = "Arms Against Tyranny"
 		original_tag = EQC
 	}
-	visible = {
-		FROM = {
-			has_country_flag = SOL_prelate_unlocked
-		}
-	}
+	#visible = {
+	#	FROM = {
+	#		is_EQS_SOL = yes
+	#		has_country_flag = SOL_prelate_unlocked
+	#	}
+	#}
 
 	tree_header_text = {
 		text = mio_header_guns_and_turret

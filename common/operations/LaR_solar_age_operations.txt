@@ -1,3 +1,139 @@
+###Equestrian Ops###
+EQS_operation_flyswatter = {
+    icon = GFX_operation_test_icon
+    map_icon = GFX_historical_heavy_water_small
+    name = EQS_operation_flyswatter_name
+    desc = EQS_operation_flyswatter_desc
+    days = 90
+
+    allowed = {
+        original_tag = EQS
+    }
+    visible = {
+        has_country_flag = EQS_swat_buggo
+        FROM = {
+            has_country_leader = { character = CHN_queen_chrysalis ruling_only = yes }
+        }
+        network_strength = {
+            target = FROM
+            value > 0
+        }
+    }
+
+    operatives = 1
+
+    network_strength = 75
+
+    equipment = {
+        infantry_equipment = 500
+        support_equipment = 100
+    }
+
+    outcome_modifiers = { operation_outcome }
+    cost_modifiers = { operation_cost }
+    risk_modifiers = { operation_risk }
+
+    outcome_potential = {
+        custom_effect_tooltip = EQS_bug_smacked_tt
+        #country_event = solarreworked.602 #The last part of the mission will be followed, with the agent getting close to Chrysalis but being unable to actually assassinate her, as the agent is stopped by an officer who was meeting with Chrysalis about a special operation; the changeling dies, but the agent is apprehended and killed
+    }
+    risk_chance = 0.3
+    experience = 15
+    outcome_execute = {
+        FROM = {
+            CHN_queen_chrysalis = {
+                #Give her a temp wounded trait
+            }
+            #add_ideas = CHN_vindicated_aggression #You done bucked up
+            #Remove character
+        }
+        #country_event = solarreworked.602
+    }
+
+    phases = {
+        EQS_train_infiltration_across_border = { base = 100 }
+    }
+    phases = {
+        EQS_meet_thoraxian_contacts_in_vesalipolis = { base = 100 }
+    }
+    phases = {
+        EQS_infiltrate_queens_castle = { base = 100 }
+    }
+
+    operation_target = {
+        targets = {
+            CHN
+        }
+    }
+
+}
+
+EQS_operation_mondkrieg = {
+    icon = GFX_operation_test_icon
+    map_icon = GFX_historical_heavy_water_small
+    name = EQS_operation_mondkrieg_name
+    desc = EQS_operation_mondkrieg_desc
+    days = 90
+
+    allowed = {
+        original_tag = EQS
+    }
+    visible = {
+        has_country_flag = EQS_greife_den_mond_an
+        FROM = {
+            has_country_leader = { character = NLR_nightmare_moon ruling_only = yes }
+        }
+        network_strength = {
+            target = FROM
+            value > 0
+        }
+    }
+
+    operatives = 2
+
+    network_strength = 60
+
+    equipment = {
+        infantry_equipment = 2000
+    }
+
+    outcome_modifiers = { operation_outcome }
+    cost_modifiers = { operation_cost }
+    risk_modifiers = { operation_risk }
+
+    outcome_potential = {
+        custom_effect_tooltip = EQS_thestrals_defanged_tt
+        #country_event = solarreworked.603 #Event detailing the ambush, which is a long fight between some agents (possibly even Astrum) and the small company that they ambush; ultimately the officer is killed and the remaining soldiers scatter
+    }
+    risk_chance = 0.2
+    experience = 8
+    outcome_execute = {
+        FROM = {
+            #add_ideas = NLR_disrupted_officers #Temporary problems leading with losing some senior officers
+            #Remove two characters
+        }
+        #country_event = solarreworked.603
+    }
+
+    phases = {
+        EQS_infiltrate_thestral_groups = { base = 100 }
+    }
+    phases = {
+        EQS_plant_false_intelligence = { base = 100 }
+    }
+    phases = {
+        EQS_spring_ambush = { base = 100 }
+    }
+
+    operation_target = {
+        targets = {
+            NLR
+        }
+    }
+
+}
+
+###Imperial Ops###
 SOL_capture_luna_operation = {
     icon = GFX_operation_test_icon
     map_icon = GFX_historical_heavy_water_small
@@ -37,7 +173,7 @@ SOL_capture_luna_operation = {
         #country_event = solarreworked.600 #Will be an event of Daybreaker having fun at the expense of Luna's imprisonment
     }
     risk_chance = 0.3
-    experience = 10
+    experience = 12
     outcome_execute = {
         FROM = {
             every_possible_country = {
@@ -68,12 +204,6 @@ SOL_capture_luna_operation = {
             MGY
         }
     }
-
-    #outcome_extra_chance = 25
-
-    #outcome_extra_execute = { #Cancel operation?
-    #
-    #}
 
 }
 
@@ -116,7 +246,7 @@ SOL_exfiltrate_M6_operation = {
         #country_event = solarreworked.601 #Will be an event of the M6 finally getting ganked by Astrum and taken back to the Empire; she's pretty pleased with herself
     }
     risk_chance = 0.3
-    experience = 10
+    experience = 12
     outcome_execute = {
         FROM = {
             every_possible_country = {
@@ -172,10 +302,194 @@ SOL_exfiltrate_M6_operation = {
         }
     }
 
-    #outcome_extra_chance = 25
+}
 
-    #outcome_extra_execute = { #Cancel operation?
-    #
-    #}
+SOL_yoink_nirik = {
+    icon = GFX_operation_test_icon
+    map_icon = GFX_historical_heavy_water_small
+    name = SOL_yoink_nirik_name
+    desc = SOL_yoink_nirik_desc
+    days = 135
+
+    allowed = {
+        original_tag = EQS
+    }
+    visible = {
+        has_country_flag = SOL_extinguish_firelovers
+        network_strength = {
+            target = FROM
+            value > 0
+        }
+    }
+
+    operatives = 2
+
+    network_strength = 70
+
+    equipment = {
+        infantry_equipment = 1500
+        support_equipment = 100
+    }
+
+    outcome_modifiers = { operation_outcome }
+    cost_modifiers = { operation_cost }
+    risk_modifiers = { operation_risk }
+
+    outcome_potential = {
+        custom_effect_tooltip = SOL_niriks_yoinked_tt
+        #country_event = solarreworked.604 #Event following one of the agents on the mission after the taking the kirin (who had been a nirik before being knocked out), and trying to anger them to become nirik, so that they can already begin to be studied, which is a bit dangerous as the kirin gets more angry and annoyed
+    }
+    risk_chance = 0.25
+    experience = 15
+    outcome_execute = {
+        #Techs here
+        #country_event = solarreworked.604
+    }
+
+    phases = {
+        SOL_use_trade_transport = { base = 100 }
+    }
+    phases = {
+        SOL_incite_nirik_unrest = { base = 100 }
+    }
+    phases = {
+        SOL_exfiltrate_captured_nirik = { base = 100 }
+    }
+
+    operation_target = {
+        targets = {
+            KIR
+        }
+    }
+
+}
+
+SOL_its_not_a_phase = {
+    icon = GFX_operation_test_icon
+    map_icon = GFX_historical_heavy_water_small
+    name = SOL_its_not_a_phase_name
+    desc = SOL_its_not_a_phase_desc
+    days = 135
+
+    allowed = {
+        original_tag = EQS
+    }
+    visible = {
+        has_country_flag = SOL_edgy_black_metal
+        network_strength = {
+            target = FROM
+            value > 0
+        }
+    }
+
+    operatives = 2
+
+    network_strength = 70
+
+    equipment = {
+        infantry_equipment = 1500
+        support_equipment = 100
+    }
+
+    outcome_modifiers = { operation_outcome }
+    cost_modifiers = { operation_cost }
+    risk_modifiers = { operation_risk }
+
+    outcome_potential = {
+        custom_effect_tooltip = SOL_goth_to_boss_tt
+        #country_event = solarreworked.605 #Event of the agents returning to the Solar Empire with the necromancy and other dark magic items that they were able to take from Magehold, and showing first to Daybreaker some of the things they learned, which leads to them being apprehended to make sure they are not a threat
+    }
+    risk_chance = 0.25
+    experience = 15
+    outcome_execute = {
+        #Techs here
+        #country_event = solarreworked.605
+    }
+
+    phases = {
+        SOL_enlighten_necromancers = { base = 100 }
+    }
+    phases = {
+        SOL_infiltrate_magehold_sanctuary = { base = 100 }
+    }
+    phases = {
+        SOL_escape_with_corpses = { base = 100 }
+    }
+
+    operation_target = {
+        targets = {
+            DED
+            HLR
+        }
+    }
+
+}
+
+SOL_storm_king_discount = {
+    icon = GFX_operation_test_icon
+    map_icon = GFX_historical_heavy_water_small
+    name = SOL_storm_king_discount_name
+    desc = SOL_storm_king_discount_desc
+    days = 135
+
+    allowed = {
+        original_tag = EQS
+    }
+    visible = {
+        has_country_flag = SOL_rated_e_for_empress
+        FROM = {
+            NOT = { has_war_with = THU }
+            NOT = { has_war_with = STM }
+            NOT = { has_war_with = GYZ }
+            NOT = { has_war_with = SLC }
+        }
+        network_strength = {
+            target = FROM
+            value > 0
+        }
+    }
+
+    operatives = 2
+
+    network_strength = 70
+
+    equipment = {
+        infantry_equipment = 1500
+        support_equipment = 100
+    }
+
+    outcome_modifiers = { operation_outcome }
+    cost_modifiers = { operation_cost }
+    risk_modifiers = { operation_risk }
+
+    outcome_potential = {
+        custom_effect_tooltip = SOL_goth_to_boss_tt
+        #country_event = solarreworked.606 #Event of barely escaping the Storm King's stronghold as the agents make their way back to a safe location to escape via magic; they use the staff a couple of times to blast their way through, until they can concentrate enough to use magic to escape
+    }
+    risk_chance = 0.25
+    experience = 15
+    outcome_execute = {
+        #Techs here
+        #country_event = solarreworked.606
+    }
+
+    phases = {
+        SOL_bribe_storm_guard = { base = 100 }
+    }
+    phases = {
+        SOL_destroy_staff_wards = { base = 100 }
+    }
+    phases = {
+        SOL_retreat_by_magic = { base = 100 }
+    }
+
+    operation_target = {
+        targets = {
+            STM
+            THU
+            GYZ
+            SLC
+        }
+    }
 
 }
