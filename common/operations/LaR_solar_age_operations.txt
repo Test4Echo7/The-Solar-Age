@@ -111,6 +111,8 @@ EQS_operation_mondkrieg = {
         FROM = {
             #add_ideas = NLR_disrupted_officers #Temporary problems leading with losing some senior officers
             #Remove two characters
+            EQS_NLR_bipen = { retire_character = yes }
+            NLR_tzyca = { retire_character = yes }
         }
         #country_event = solarreworked.603
     }

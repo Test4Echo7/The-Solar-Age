@@ -77,7 +77,7 @@ EQS_infiltrate_queens_castle = { #Will never succeed, but may more seriously inj
 
     outcome = EQS_infiltrate_queens_castle_outcome
 
-    risk_extra = EQS_infiltrate_queens_castle_risk_extra #Agents were able to get closer to Chrysalis and more seriously harm her, but she survived and the agent was killed
+    #risk_extra = EQS_infiltrate_queens_castle_risk_extra #Agents were able to get closer to Chrysalis and more seriously harm her, but she survived and the agent was killed
 
     requirements = {
         has_country_flag = EQS_swat_buggo
@@ -251,7 +251,7 @@ SOL_use_trade_transport = {
 
     outcome = SOL_use_trade_transport_outcome
 
-    risk_extra = SOL_use_trade_transport_risk_extra #Agents are caught on inspection
+    #risk_extra = SOL_use_trade_transport_risk_extra #Agents are caught on inspection
 
     requirements = {
         has_country_flag = SOL_extinguish_firelovers

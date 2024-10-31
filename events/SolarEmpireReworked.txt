@@ -3296,3 +3296,69 @@ country_event = { #Event that Stalliongrad will get if the player takes too many
         custom_effect_tooltip = EQS_temp_content_is_temp_tt
     }
 }
+
+###Operation Events###
+country_event = { #Event of an agent being led before Chrysalis as a captured general, which leads to him trying to assassinate Chrysalis, but being stopped by an officer there who was able to react in time, and the agent is barely able to escape after wounding her
+    id = solarreworked.602
+    title = solarreworked.602.t
+    desc = solarreworked.602.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.602"}
+
+    is_triggered_only = yes
+
+    option = { #Buck!
+        name = solarreworked.602.a
+        effect_tooltip = {
+            CHN = {
+                add_timed_idea = {
+                    idea = CHN_furious_populace
+                    days = 730
+                }
+                CHN_queen_chrysalis = { add_trait = { trait = wounded_monarch } }
+                CHN_narcys_murx = { retire_character = yes }
+            }
+        }
+        hidden_effect = {
+            CHN = { country_event = solarreworked.610 }
+        }
+    }
+}
+
+country_event = { #Event recapping for CHN that an assassination attempt has been made on Chrysalis and how she has been wounded but will survive; it's made her hate Equestria even more, as well as the populace
+    id = solarreworked.610
+    title = solarreworked.610.t
+    desc = solarreworked.610.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.610"}
+
+    is_triggered_only = yes
+
+    option = { #Our resolve has never been stronger!
+        name = solarreworked.610.a
+        add_timed_idea = {
+            idea = CHN_furious_populace
+            days = 730
+        }
+        CHN_queen_chrysalis = { add_trait = { ideology = nazism trait = wounded_monarch } }
+        CHN_narcys_murx = { retire_character = yes }
+        hidden_effect = {
+            country_event = {
+                id = solarreworked.611
+                days = 300
+                random_days = 100
+            }
+        }
+    }
+}
+
+country_event = { #Hidden event for removing Chrysalis's wounded trait
+    id = solarreworked.611
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.611"}
+
+    hidden = yes
+
+    is_triggered_only = yes
+
+    option = { #I got better.
+        CHN_queen_chrysalis = { remove_trait = { ideology = nazism trait = wounded_monarch } }
+    }
+}

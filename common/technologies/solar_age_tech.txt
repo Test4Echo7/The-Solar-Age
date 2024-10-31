@@ -35,6 +35,14 @@ technologies = {
 		}
 	}
 
+	###Operation Techs###
+	SOL_solarist_necromancy = {
+		infantry = {
+			casualty_trickleback = 0.25
+			max_organisation = -0.1
+		}
+	}
+
 	###Special Projects###
 	EQS_sun_laser = {
 		research_cost = 1
