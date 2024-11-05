@@ -434,6 +434,32 @@ characters = {
 			traits = { aggressive_diplomat }
 		}
 	}
+	EQS_countess_coloratura = {
+		name = EQS_countess_coloratura
+		gender = female
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/advisors/EQS/EQS_countess_coloratura.tga"
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = countess_coloratura
+			allowed = { original_tag = EQS }
+			available = {
+				if = {
+					limit = { is_EQS_SOL = no }
+					has_government = democratic
+				}
+				if = {
+					limit = { is_EQS_SOL = yes }
+					has_completed_focus = SOL_empress_protector
+				}
+			}
+			traits = { equestrian_sweetheart }
+		}
+	}
 
 	###Foreign nation characters###
 	GRI_daybreaker = {

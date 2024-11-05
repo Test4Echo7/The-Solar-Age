@@ -229,6 +229,12 @@ leader_traits = {
         ai_will_do = { factor = 1 }
     }
 
+    equestrian_sweetheart = {
+        random = no
+        stability_factor = 0.15
+        army_morale_factor = 0.05
+    }
+
     ###New character advisor traits###
     ruthless_industrialist = {
         random = no

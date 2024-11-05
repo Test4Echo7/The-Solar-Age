@@ -631,6 +631,7 @@ recruit_character = EQS_thundering_hoofbeat
 recruit_character = EQS_bunsen_beaker
 recruit_character = EQS_nightshift
 recruit_character = EQS_hard_sell
+recruit_character = EQS_countess_coloratura
 #Foreign characters
 recruit_character = CRY_nightshade
 recruit_character = CRY_morning_mist
