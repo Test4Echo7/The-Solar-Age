@@ -111,8 +111,8 @@ EQS_operation_mondkrieg = {
         FROM = {
             #add_ideas = NLR_disrupted_officers #Temporary problems leading with losing some senior officers
             #Remove two characters
-            EQS_NLR_bipen = { retire_character = yes }
-            NLR_tzyca = { retire_character = yes }
+            retire_character = EQS_NLR_bipen
+            retire_character = NLR_tzyca
         }
         #country_event = solarreworked.603
     }
@@ -344,6 +344,10 @@ SOL_yoink_nirik = {
     risk_chance = 0.25
     experience = 15
     outcome_execute = {
+        #Temp
+        ROOT = {
+            add_political_power = 1
+        }
         #Techs here
         #country_event = solarreworked.604
     }
@@ -404,6 +408,10 @@ SOL_its_not_a_phase = {
     risk_chance = 0.25
     experience = 15
     outcome_execute = {
+        #Temp
+        ROOT = {
+            add_political_power = 1
+        }
         #Techs here
         #country_event = solarreworked.605
     }
@@ -471,6 +479,10 @@ SOL_storm_king_discount = {
     risk_chance = 0.25
     experience = 15
     outcome_execute = {
+        #Temp
+        ROOT = {
+            add_political_power = 1
+        }
         #Techs here
         #country_event = solarreworked.606
     }

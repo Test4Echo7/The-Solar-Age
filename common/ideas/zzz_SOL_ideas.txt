@@ -1418,6 +1418,13 @@ ideas = {
 				compliance_gain = 0.01
 			}
 		}
+		SOL_the_true_elements = {
+			modifier = {
+				political_power_gain = -0.35
+				army_morale_factor = 0.15
+				army_org_factor = 0.05
+			}
+		}
 		SOL_overpowering_government = {
 			modifier = {
 				political_power_gain = 0.15
