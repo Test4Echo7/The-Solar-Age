@@ -3317,25 +3317,25 @@ country_event = {
 		}
 	}
 	#Demand
-	option = {
-		name = solarempiresparkles.1.c
-		custom_effect_tooltip = solarempiresparkles.1.c.tp
-		hidden_effect = {
-			country_event = { id = solarempiresparkles.34 days = 1 }
-
-		}
-		ai_chance = {
-			factor = 1
-			modifier = {
-				factor = 2
-				has_completed_focus = SOL_god_empress
-			}
-			modifier = {
-				factor = 0
-				NOT = { has_completed_focus = SOL_god_empress }
-			}
-		}
-	}
+	#option = {
+	#	name = solarempiresparkles.1.c
+	#	custom_effect_tooltip = solarempiresparkles.1.c.tp
+	#	hidden_effect = {
+	#		country_event = { id = solarempiresparkles.34 days = 1 }
+	#
+	#	}
+	#	ai_chance = {
+	#		factor = 1
+	#		modifier = {
+	#			factor = 2
+	#			has_completed_focus = SOL_god_empress
+	#		}
+	#		modifier = {
+	#			factor = 0
+	#			NOT = { has_completed_focus = SOL_god_empress }
+	#		}
+	#	}
+	#}
 }
 
 country_event = {

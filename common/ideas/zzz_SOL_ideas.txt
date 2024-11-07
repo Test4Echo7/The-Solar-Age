@@ -1005,7 +1005,7 @@ ideas = {
 				terrain_trait_xp_gain_factor = 0.05
 			}
 		}
-		###Imperial Diplomatic Corps
+		###Imperial Diplomatic Corps###
 		SOL_dragon_laborers_twiggles = {
 			modifier = {
 				production_speed_buildings_factor = 0.05

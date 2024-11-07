@@ -6321,6 +6321,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_sustenance_workers"
 		###Event of choosing who to send, which then gives DRG an event of said diplomat arriving and trying to get them to kneel
+		country_event = solarreworked.480
 	}
 	ai_will_do = {
 		factor = 20
@@ -6358,6 +6359,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_insurance_policies"
 		###Event of choosing who to send, and also an event for YAK on the promise of support against any threats to them, so long as they give all resource rights for their resources, or provide materiel support in Daybreaker's own wars, as mercs
+		country_event = solarreworked.483
 	}
 	ai_will_do = {
 		factor = 20
@@ -6401,6 +6403,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_oil_existence"
 		###Event of choosing who to send and later an event for PNG and PLB, demanding they provide either access to their resources, including all their oil, or provide experts for resource extraction, or naval expertise for continued existence
+		country_event = solarreworked.486
 	}
 	ai_will_do = {
 		factor = 20
@@ -6444,6 +6447,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_griffon_fealty"
 		###Event of choosing who to send and then an event for GRF demanding that they contribute toward the war efforts on Equus by providing their troops or by providing military leadership
+		country_event = solarreworked.489
 	}
 	ai_will_do = {
 		factor = 20
@@ -6481,6 +6485,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_imperial_relations"
 		#Show off idea here, if they accept it
+		country_event = solarreworked.492
 		custom_effect_tooltip = SOL_griffons_like_tt
 	}
 	ai_will_do = {
@@ -6550,6 +6555,7 @@ shared_focus = {
 		if = {
 			limit = { has_global_flag = SOL_twilight_converted }
 			#Country event 1
+			country_event = solarreworked.230
 		}
 		else_if = {
 			limit = {
@@ -6557,9 +6563,11 @@ shared_focus = {
 				has_completed_focus = SOL_god_empress
 			}
 			#Country event 2 - CRY
+			country_event = solarreworked.231
 		}
 		else = {
 			#Country event 3 - CRY
+			country_event = solarreworked.231
 		}
 		add_ideas = SOL_winter_preparations
 		###Three events from old focus are solarempire.27, solarempiresparkles.1, solarempiresparkles.131
@@ -6598,6 +6606,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_follow_sunrise_plan"
 		#Have her do vanilla infiltration mission
+		country_event = solarempiresparkles.1 #This will have to be rewritten to more closely match the length of the new event that gives the grand display event trigger. Will only reference two options, as Sunrise has thoroughly dismissed anything other than guile
 	}
 	ai_will_do = { factor = 40 }
 }
@@ -6633,6 +6642,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_gesture_of_strength"
 		###Event of Daybreaker speaking with Twilight about how she must use the strength of the Empire to intimidate Cadance, not just use her guile, and Twilight takes that to heart before the vanilla grand display event
+		country_event = solarreworked.237
 	}
 	ai_will_do = {
 		factor = 30
@@ -6676,6 +6686,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_royal_province"
 		###Event of Daybreaker arriving in the Solar Empire and speaking with either Cadance or Sunrise on how quaint the Crystal Empire is, and her plans for it, with Sunrise at least being eager to help spread the plan of Daybreaker
+		country_event = solarreworked.238
 	}
 	ai_will_do = { factor = 40 }
 }
@@ -6730,6 +6741,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_destroy_night_guard"
 		###Event of a number of Solarist elite units going in on where the Night Guard still has some level of influence and doing what they can to assassinate leaders
+		country_event = solarreworked.239
 	}
 	ai_will_do = { factor = 50 }
 }
@@ -6836,6 +6848,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_family_visits"
 		###Event of Daybreaker going to visit Cadance and family, and they are under house arrest, with magic inhibitors put on them, and Daybreaker basically makes fun of it, and also makes a few intimidating remarks around Flurry and her health, as she acts like Cadance is hurting her by being so cold to her (as in Daybreaker)
+		country_event = solarreworked.240
 	}
 	ai_will_do = { factor = 50 }
 }
@@ -6975,17 +6988,8 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_appoint_economic_advisors"
-		hidden_effect = {
-			CRY_triplicate = { set_nationality = CRY }
-			CRY_morning_mist = { set_nationality = CRY }
-			CRY_evening_shower = { set_nationality = CRY }
-		}
-		CRY = {
-			#Advisors and idea here
-			add_ideas = SOL_micromanaging_middle_management
-			set_country_flag = CRY_solar_advisors
-			###Maybe event of a number of ponies from the Solar Empire coming to replace their Crystal counterparts, after they are taken away for anti-Order propaganda or the like
-		}
+		###Maybe event of a number of ponies from the Solar Empire coming to replace their Crystal counterparts, after they are taken away for anti-Order propaganda or the like
+		country_event = solarreworked.241
 	}
 	ai_will_do = { factor = 70 }
 }
@@ -7002,20 +7006,8 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_retire_old_guard"
-		hidden_effect = {
-			CRY_nightshade = { set_nationality = CRY }
-			CRY_mercy = { set_nationality = CRY }
-			CRY_beryl_scabbard = { set_nationality = CRY }
-		}
-		CRY = {
-			#Generals and idea here
-			add_ideas = SOL_dictated_directions
-			CRY_shining_armour = {
-				remove_unit_leader_role = yes
-			}
-			set_country_flag = CRY_solar_generals
-			###Event of Shining Armor being brought before a tribunal, and him making a defense of himself, and although they can't kill him for fear of angering the entire Crystal Empire, they do sack him of his position
-		}
+		###Event of Shining Armor being brought before a tribunal, and him making a defense of himself, and although they can't kill him for fear of angering the entire Crystal Empire, they do sack him of his position
+		country_event = solarreworked.242
 	}
 	ai_will_do = { factor = 80 }
 }
@@ -7184,7 +7176,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_bat_problems"
 		###Event of the military going in to put down a riot by the bats, and otherwise having to deal with their issues, and Daybreaker resolving to deal with it in the most appropriate punishment possible; should be a bit of war support and command power
-		country_event = solarreworked.42
+		country_event = solarreworked.40
 		#if = {
 		#	limit = {
 		#		has_completed_focus = SOL_empress_protector
@@ -7246,7 +7238,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_what_homes"
 		###Event of soldiers going in to seize land that the thestrals currently occupy, which leads to conflict and a number of dead thestrals; should give also 1 building slot in a couple of places or compliance
-		country_event = solarreworked.43
+		country_event = solarreworked.41
 	}
 	ai_will_do = { factor = 70 }
 }
@@ -7265,7 +7257,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_what_jobs"
 		###Event of some thestrals being kicked out or locked out of their old place of work, including ones that they actually owned, and them fighting with some of the guard to try and in, and failing; should be alos a couple of factories provided as well as the pp
-		country_event = solarreworked.44
+		country_event = solarreworked.42
 	}
 	ai_will_do = { factor = 70 }
 }
@@ -7285,7 +7277,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_burn_bats"
 		###Event like the vanilla God-Empress burning event, except follow the vigilantes stirred up by faithful ponies to Daybreaker to wipe out the filth of darkness; have the same effect as vanilla, but also +10% ST
-		country_event = solarreworked.45
+		country_event = solarreworked.43
 	}
 	ai_will_do = { factor = 150 }
 }
@@ -7330,7 +7322,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_second_class_employers"
-		country_event = solarreworked.46
+		country_event = solarreworked.44
 	}
 	ai_will_do = { factor = 70 }
 }
@@ -7348,7 +7340,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_mandatory_education"
-		country_event = solarreworked.47
+		country_event = solarreworked.45
 	}
 }
 
@@ -7367,7 +7359,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_useful_servants"
 		###Event a thestral being forcibly taken into service for the armed forces, since they can be used as both fodder and night scouts (with appropriate detonation enchantments if they try to flee), and she tries to fight it off, but is ultimately taken anyway, after basically being treated like a raging animal
-		country_event = solarreworked.48
+		country_event = solarreworked.46
 	}
 	ai_will_do = { factor = 150 }
 }
@@ -7623,6 +7615,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_moonspeaker_tax"
 		###Event of a soldier going around getting more taxes from the Moonspeakers, and his general distaste of the city of the thestrals, especially since the Moonspeakers are incredibly strange to him, and also because they like to hex whoever taxes them, which they try to do again, but he does get the taxes for basically allowing them to exist and not be fully allied with Daybreaker
+		country_event = solarreworked.47
 	}
 	ai_will_do = { factor = 120 }
 }
@@ -11771,10 +11764,44 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_trains_across_empire"
 		#Effect here
 		build_railway = {
-			level = 2
-			start_province = 9887
-			target_province = 11754
+			level = 1
+			start_province = 179
+			target_province = 758
 			build_only_on_allied = yes
+		}
+		build_railway = {
+			level = 1
+			start_province = 950
+			target_province = 586
+			build_only_on_allied = yes
+		}
+		build_railway = {
+			level = 1
+			start_province = 13011
+			target_province = 11427
+			build_only_on_allied = yes
+		}
+		build_railway = {
+			level = 1
+			start_province = 69
+			target_province = 585
+			build_only_on_allied = yes
+		}
+		36 = {
+			add_building_construction = {
+				type = supply_node
+				level = 1
+				province = 12042
+				instant_build = yes
+			}
+		}
+		173 = {
+			add_building_construction = {
+				type = supply_node
+				level = 1
+				province = 6292
+				instant_build = yes
+			}
 		}
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -11919,33 +11946,9 @@ shared_focus = {
 		#Effect here
 		add_ideas = SOL_mto
 		build_railway = {
-			level = 2
-			start_province = 950
-			target_province = 758
-			build_only_on_allied = yes
-		}
-		build_railway = {
-			level = 2
+			level = 3
 			start_province = 758
-			target_province = 874
-			build_only_on_allied = yes
-		}
-		build_railway = {
-			level = 2
-			start_province = 874
-			target_province = 11052
-			build_only_on_allied = yes
-		}
-		build_railway = {
-			level = 2
-			start_province = 11052
-			target_province = 9208
-			build_only_on_allied = yes
-		}
-		build_railway = {
-			level = 2
-			start_province = 9208
-			target_province = 3162
+			target_province = 69
 			build_only_on_allied = yes
 		}
 		75 = {
@@ -12442,6 +12445,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_imperial_hoofbooks"
 		###Event of the handbook for the new imperial rules for keeping the economy functioning, with much of it being incredibly micromanaging, so that it every bit of minutiae are accounted for and there are a list of punishments for what happens if they are violated, which are extreme, even for minor infractions
+		country_event = solarreworked.260
 	}
 	ai_will_do = { factor = 40 }
 }
@@ -12459,6 +12463,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_motivation_teams"
 		###Event of somepony being chosen as the newest representative of one of the best factories to be part of a propaganda film, which he does with a bit of hesitation, since it's just in his factory, and he has to do what they want while still keeping production the same
+		country_event = solarreworked.261
 	}
 	ai_will_do = { factor = 50 }
 }
@@ -12645,6 +12650,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_crystal_creator_machines"
 		###Event of somepony working alongside one of the first-generation robots, which are extremely buggy and usually develop a mind of their own, which makes them go rogue multiple times, which it does in this scenario, and he has to quickly find a way to unplug it before it destroys part of the factory
+		country_event = solarreworked.262
 	}
 	ai_will_do = { factor = 60 }
 }
@@ -12667,14 +12673,8 @@ shared_focus = {
 	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_bunsen_beaker_research"
-		add_tech_bonus = {
-			name = race_tech_bonus
-			bonus = 1.0
-			uses = 1
-			category = race_tech
-		}
 		###Perhaps an event showing how Bunsen conducts his research, which is, it's very involved and also invasive, and he carries little worry or care about what happens to his subjects
-		#Unlock Bunsen
+		country_event = solarreworked.263
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH }
 
@@ -12931,15 +12931,8 @@ shared_focus = {
 	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_sanctum_solar_directorate"
-		if = {
-			limit = { amount_research_slots < 5 }
-			add_research_slot = 1
-		}
 		###Event of a number of scientists meeting in Sanctum Solar, to discuss how to best serve the Empress, which devolves into bickering, since they can't figure out exactly what would be best to serve her; alternately, they're all going on about their rather cruel experiments
-		custom_effect_tooltip = SOL_imperial_science_6_tt
-		add_to_variable = { research_speed_var = 0.05 }
-		add_to_variable = { stability_factor_var = 0.05 }
-		add_to_variable = { fascism_drift_var = 0.03 }
+		country_event = solarreworked.264
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH }
 }
@@ -12965,13 +12958,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus luna_nova_academy"
 		###Event of the administrator of Sol Invicta getting a visit from Daybreaker directly, and him being nervous, but showing her around, before finally being promised more funding, to ensure the Empire stays up to date, which floors him
 		#country_event = equestria.5
-		add_to_variable = { research_speed_var = 0.03 }
-		add_to_variable = { doctrine_cost_factor_var = -0.05 }
-		if = {
-			limit = { amount_research_slots < 5 }
-			add_research_slot = 1
-		}
-		custom_effect_tooltip = SOL_imperial_science_7_tt
+		country_event = solarreworked.265
 		#effect_tooltip = {
 		#	swap_ideas = { remove_idea = unicorn_academy add_idea = unicorn_academy1 }
 		#}
@@ -12994,6 +12981,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_military_industrial_complex"
+		country_event = solarreworked.266
 		###Event of Flim and Flam meeting with Daybreaker again with another pitch for one of their new weapons, since they've gotten multiple grants before, and as they show it off to her, she's far from the most impressed, and promises they'll get money for it, if they don't mess up like the last one where it had multiple, strange problems maybe over a dinner or something
 	}
 	ai_will_do = { factor = 80 }
@@ -13044,16 +13032,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_strengthen_EEA_authority"
-		custom_effect_tooltip = SOL_imperial_science_8_tt
-		add_to_variable = { research_speed_var = 0.02 }
-		add_to_variable = { magical_tech_factor_var = 5 }
-		add_to_variable = { political_power_gain_var = -0.1 }
-		hidden_effect = {
-			swap_ideas = {
-				remove_idea = SOL_streng_geheim_magic_2
-				add_idea = SOL_streng_geheim_magic_3
-			}
-		}
+		country_event = solarreworked.267
 		#swap_ideas = {
 		#	add_idea = unicorn_academy3
 		#	remove_idea = unicorn_academy2
@@ -13083,22 +13062,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_ease_the_rules_of_EEA"
 		###Daybreaker meets with Neighsay after he protests about all the new rules she's implemented, and how they will ruin standards, and she threatens him with jail or the like if he does not implement them, and uses a different pony as leverage, perhaps his wife, or somepony who will replace him and make it worse, which gets him to break
-		add_to_variable = { research_speed_var = 0.05 }
-		add_to_variable = { race_tech_factor_var = 7.5 }
-		add_to_variable = { political_power_gain_var = -0.15 }
-		custom_effect_tooltip = SOL_imperial_science_9_tt
-		hidden_effect = {
-			if = {
-				limit = { has_idea = SOL_streng_geheim_race }
-				swap_ideas = {
-					remove_idea = SOL_streng_geheim_race
-					add_idea = SOL_streng_geheim_race_2
-				}
-			}
-			else = {
-				add_ideas = SOL_streng_geheim_race_3
-			}
-		}
+		country_event = solarreworked.268
 		#swap_ideas = {
 		#	add_idea = unicorn_academy4
 		#	remove_idea = unicorn_academy2
