@@ -3548,6 +3548,7 @@ country_event = { #Daybreaker takes the corrupted M6 into the cave for the Tree 
     option = { #Damn tree!
         name = solarreworked.345.a
         #Get M6
+        add_ideas = SOL_showcased_element_bearers
     }
 }
 
@@ -3830,6 +3831,634 @@ country_event = { #Red Tide steps off her plane from the mainland and is instant
 }
 
 ###EQC###
+country_event = { #An event sumarrazing how the current leader (probably Jet Set) has made the colony go wayward, and that the Empire needs its crown in Griffonia returned, and that they will be given one chance to submit
+    id = solarreworked.430
+    title = solarreworked.430.t
+    desc = solarreworked.430.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.430"}
+
+    is_triggered_only = yes
+
+    option = { #Jet Set will submit or perish!
+        name = solarreworked.430.a
+        EQC = {
+            country_event = {
+                id = solarreworked.431
+                days = 3
+            }
+        }
+    }
+}
+
+country_event = { #EQC receives a demand to submit to the Solar Empire, as they are the rightful colony of the Empire, and they are given an option to accept or refuse, as ponies and griffons alike are not the happiest with the idea of being under them
+    id = solarreworked.431
+    title = solarreworked.431.t
+    desc = solarreworked.431.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.431"}
+
+    is_triggered_only = yes
+
+    option = { #If that is what they wish...
+        name = solarreworked.431.a
+        ai_chance = {
+
+        }
+        set_country_flag = SOL_EQC_submitted
+        FROM = {
+            country_event = {
+                id = solarreworked.432
+                days = 3
+            }
+        }
+    }
+    option = { #We will not miss our chance at freedom!
+        name = solarreworked.431.b
+        set_country_flag = SOL_EQC_rejected
+        FROM = {
+            country_event = {
+                id = solarreworked.432
+                days = 3
+            }
+        }
+    }
+}
+
+country_event = { #EQS receives the response from EQC, and is either happy with them submitting again or furious that they have snubbed them
+    id = solarreworked.432
+    title = solarreworked.432.t
+    desc = {
+        trigger = { EQC = { has_country_flag = SOL_EQC_submitted } }
+        text = solarreworked.432.da
+    }
+    desc = {
+        trigger = { EQC = { has_country_flag = SOL_EQC_rejected } }
+        text = solarreworked.432.db
+    }
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.432"}
+
+    is_triggered_only = yes
+
+    option = { #They have chosen wisely.
+        trigger = { EQC = { has_country_flag = SOL_EQC_submitted } }
+        name = solarreworked.432.a
+        get_current_government_type = yes
+        set_autonomy = {
+            autonomous_state = autonomy_reichsprotectorate
+            target = FROM
+        }
+        restore_previous_government_type = yes
+        if = {
+            limit = { NOT = { has_government = democratic } }
+            set_politics = {
+                ruling_party = democratic
+                elections_allowed = no
+            }
+            if = {
+                limit = { NOT = { has_country_leader = { character = EQC_jet_set ruling_only = yes } } }
+                promote_character = EQC_jet_set
+            }
+        }
+        FROM = { set_cosmetic_tag = EQC_SOL }
+    }
+    option = { #A sea separating us means nothing!
+        trigger = { EQC = { has_country_flag = SOL_EQC_rejected } }
+        name = solarreworked.432.b
+        create_wargoal = {
+            target = FROM
+            type = puppet_wargoal_focus
+        }
+    }
+}
+
+country_event = { #Jet Set (who is put back in charge if he's not there) is suddenly brought to the docks of Sunset as he receives word that somepony from the Solar Empire is arriving, and there is no indication as to why, and he nervously meets with Arcane Nova, who makes very obvious threats that he'll be replaced if she finds fault with his loyalty
+    id = solarreworked.433
+    title = solarreworked.433.t
+    desc = solarreworked.433.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.433"}
+
+    is_triggered_only = yes
+
+    option = { #From the mouths of babes...
+        name = solarreworked.433.a
+        hidden_effect = {
+            country_event = {
+                id = solarreworked.434
+                days = 10
+                random_days = 4
+            }
+        }
+    }
+}
+
+country_event = { #Arcane Nova spends some time investigating one of the MPs in the EQC parliament, as they are closer to Jet Set, and she is discovered by said MP, whom she intimidates with threats of harm if they so much as speak a word of what she was doing, especially since she is able to find some pieces of evidence to point that Jet Set isn't entirely loyal
+    id = solarreworked.434
+    title = solarreworked.434.t
+    desc = solarreworked.434.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.434"}
+
+    is_triggered_only = yes
+
+    option = { #Talk about climbing the ranks...
+        name = solarreworked.434.a
+        hidden_effect = {
+            country_event = {
+                id = solarreworked.435
+                days = 7
+                random_days = 7
+            }
+        }
+    }
+}
+
+country_event = { #Midnight Poppy is interrupted in one of her meetings by her aide, stating that Daybreaker's representative is waiting for her in her office, and Arcane Nova has a bit of a sparring match verablly with Midnight as she pries for details on what is being done in the military to ensure compliance, and also to find more dirt on Jet Set; Midnight does some psychoanalysis that Arcane is driven and has a small superiority or inferiority complex, which is what moves her, and Arcane gets what she wants, while also being disturbed by Midnight's accuracy
+    id = solarreworked.435
+    title = solarreworked.435.t
+    desc = solarreworked.435.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.435"}
+
+    is_triggered_only = yes
+
+    option = { #I don't need any "help" from her.
+        name = solarreworked.435.a
+        hidden_effect = {
+            country_event = {
+                id = solarreworked.436
+                days = 5
+                random_days = 9
+            }
+        }
+    }
+}
+
+country_event = { #Jet Set walks in on Upper Crust having a lovely conversation with Arcane, who is doing her best to hide her boredom, as she has pried and prodded to get details on Jet Set to find guilt with him; Arcane leaves shortly after she is seen there, just to intimidate him more
+    id = solarreworked.436
+    title = solarreworked.436.t
+    desc = solarreworked.436.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.436"}
+
+    is_triggered_only = yes
+
+    option = { #She's digging for something.
+        name = solarreworked.436.a
+        hidden_effect = {
+            country_event = {
+                id = solarreworked.437
+                days = 7
+                random_days = 7
+            }
+        }
+    }
+}
+
+country_event = { #Arcane Nova slips into the office of Jet Set at parliament, as she stole the keys to his office when she was with Upper Crust, and she uses it to sneak in at night to dig around for the best evidence she can find there, and she does end up finding a few laws or the like that clearly paint him as not entirely loyal, since he is doing some anti-Order things, even after submitting, and she knows she can take it to Daybreaker to deal with
+    id = solarreworked.437
+    title = solarreworked.437.t
+    desc = solarreworked.437.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.437"}
+
+    is_triggered_only = yes
+
+    option = { #Caught red hooved!
+        name = solarreworked.437.a
+        hidden_effect = {
+            country_event = {
+                id = solarreworked.438
+                days = 14
+                random_days = 7
+            }
+        }
+    }
+}
+
+country_event = { #Arcane arrives directly in Canterlot, where she gets an audience with Daybreaker so she can discuss her findings and conclusions, and after presenting her case, and determining that she would be best to replace Jet Set, Daybreaker can either decide to agree, or she can state that Arcane shall watch him closely, but he shall stay because of his experience, and that what he has done is far from good, but not worth the effort to kill him
+    id = solarreworked.438
+    title = solarreworked.438.t
+    desc = solarreworked.438.d
+    immediate = {
+        log = "[GetDateText]: [ROOT.GetName]: event solarreworked.438"
+        set_global_flag = SOL_chose_EQC_leader
+    }
+
+    is_triggered_only = yes
+
+    option = { #You shall watch him, but he shall still lead.
+        name = solarreworked.438.a
+        ai_chance = {
+            base = 1
+            modifier = {
+                has_completed_focus = SOL_god_empress
+                factor = 0
+            }
+            modifier = {
+                has_completed_focus = SOL_empress_protector
+                factor = 3
+            }
+        }
+        EQC = {
+            country_event = {
+                id = solarreworked.439
+                days = 7
+            }
+        }
+    }
+    option = { #You have earned the right to lead, youthful as you are.
+        name = solarreworked.438.b
+        ai_chance = {
+            base = 1
+            modifier = {
+                has_completed_focus = SOL_empress_protector
+                factor = 0
+            }
+            modifier = {
+                has_completed_focus = SOL_god_empress
+                factor = 4
+            }
+        }
+        set_country_flag = SOL_chose_arcane
+        EQC = {
+            country_event = {
+                id = solarreworked.439
+                days = 7
+            }
+        }
+    }
+}
+
+country_event = { #EQC receives a notification that Daybreaker has personally sent a letter to Jet Set, whom she has informed she has made a decision regarding the leadership of the colony, with either him as leader or Arcane
+    id = solarreworked.439
+    title = solarreworked.439.t
+    desc = {
+        trigger = { EQS = { has_country_flag = SOL_chose_arcane } }
+        text = solarreworked.439.da
+    }
+    desc = {
+        trigger = { EQS = { NOT = { has_country_flag = SOL_chose_arcane } } }
+        text = solarreworked.439.db
+    }
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.439"}
+
+    is_triggered_only = yes
+
+    option = { #Agree to be loyal
+        trigger = { EQS = { NOT = { has_country_flag = SOL_chose_arcane } } }
+		name = solarempire.36.a
+		if = {
+			limit = {
+				NOT = { has_focus_tree = eqc_sol_focus }
+			}
+			load_focus_tree = eqc_sol_focus
+		}
+	}
+	option = { #Get lost
+        trigger = { EQS = { NOT = { has_country_flag = SOL_chose_arcane } } }
+		name = solarempire.36.b
+		if = {
+			limit = {
+				NOT = { has_focus_tree = eqc_sol_focus }
+			}
+			OVERLORD = { end_puppet = ROOT }
+			set_country_flag = SOL_EQC_rejected
+			clr_country_flag = SOL_EQC_submitted
+			FROM = {
+                country_event = {
+                    id = solarreworked.432
+                    days = 5
+                }
+			}
+		}
+	}
+	option = { #Agree to be replaced
+        trigger = { EQS = { has_country_flag = SOL_chose_arcane } }
+		name = solarempire.37.a
+		add_autonomy_ratio = { value = -0.30 }
+		every_possible_country = {
+			limit = {
+				has_character = EQS_SOL_arcane_nova
+			}
+			EQS_SOL_arcane_nova = {
+				set_nationality = ROOT
+			}
+		}
+		add_country_leader_role = {
+			character = EQS_SOL_arcane_nova
+			promote_leader = yes
+
+			country_leader = {
+				desc = "fancy_albino_sunhorse_desc"
+				expire = "1965.1.1"
+				ideology = falangism
+				traits = { empresss_representative }
+			}
+		}
+		set_party_name = { ideology = fascism long_name = EQC_SOL_fascism_party_long name = EQC_SOL_fascism_party }
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.2
+		}
+		if = {
+			limit = {
+				NOT = { has_focus_tree = eqc_sol_focus }
+			}
+			load_focus_tree = eqc_sol_focus
+			set_cosmetic_tag = EQC_SOL
+		}
+		hidden_effect = { set_global_flag = SOL_chose_EQC_leader }
+	}
+	option = { #No!
+        trigger = {
+            EQS = { has_country_flag = SOL_chose_arcane }
+            NOT = { has_country_flag = EQC_solar_coup }
+        }
+		name = solarempire.37.b
+		FROM = { country_event = { id = solarreworked.432 days = 5 } }
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_country_flag = EQC_dont_break_free_from_SOL
+			}
+			modifier = {
+				factor = 0
+				NOT = { overlord = { focus_progress = { focus = SOL_god_empress progress > 0 } } }
+				strength_ratio = { tag = FROM ratio < 0.5 }
+			}
+			modifier = {
+				factor = 5
+				strength_ratio = { tag = FROM ratio > 0.9 }
+			}
+		}
+	}
+}
+
+country_event = { #Jet Set arrives in Canterlot and the palace to be ushered into a private room with Daybreaker, who is currently examining a map of Griffonia, and she makes some veiled threats against him, by pointing out some of the different things on the map around New Mareland, and promises that it will be kept safe, so long as he remains loyal to her
+    id = solarreworked.440
+    title = solarreworked.440.t
+    desc = solarreworked.440.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.440"}
+
+    is_triggered_only = yes
+
+    option = { #I'm sure there won't be any problems, will there?
+        name = solarreworked.440.a
+        EQC = {
+            add_stability = 0.1
+            add_popularity = {
+                ideology = fascism
+                popularity = 0.05
+            }
+        }
+    }
+}
+
+country_event = { #As Jet Set begins to prepare his things for moving back to Canterlot, since he has been relieved of his governorship, Arcane Nova enters with a group of soldiers, which catch both him and Upper Crust by surprise, and Arcane is a tad snarky as she states that he didn't honestly think he could hide his involvement with harmonist rebels from her, and playfully makes comments about him preparing her new quarters as she arrests him
+    id = solarreworked.441
+    title = solarreworked.441.t
+    desc = solarreworked.441.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.441"}
+
+    is_triggered_only = yes
+
+    option = { #How do you think it'll look in orange?
+        name = solarreworked.441.a
+        EQC = {
+            add_war_support = 0.05
+            add_popularity = {
+                ideology = fascism
+                popularity = 0.1
+            }
+        }
+    }
+}
+
+country_event = { #Arcane Nova enters into Midnight Poppy's office again, bringing with her a couple of other Solarist generals, whom she states will now be working directly with Midnight, because she is no longer the commander of EQC's armed forces, as Arcane has taken over; this leads to one more exchange about having an inferiority complex, which irritates Arcane further
+    id = solarreworked.442
+    title = solarreworked.442.t
+    desc = solarreworked.442.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.442"}
+
+    is_triggered_only = yes
+
+    option = { #I'd suggest not insulting your commander.
+        name = solarreworked.442.a
+        hidden_effect = {
+			EQC_full_band = { set_nationality = EQC }
+			EQC_triple_strike = { set_nationality = EQC }
+		}
+		EQC = {
+			add_war_support = 0.05
+			custom_effect_tooltip = full_band_stats_tp
+			custom_effect_tooltip = triple_strike_stats_tp
+			set_country_flag = EQC_the_backup_arrived
+			#This will be moved to EQC's reworked tree if that gets developed
+			if = {
+				limit = { has_character = EQS_SOL_arcane_nova }
+				EQS_SOL_arcane_nova = {
+					promote_leader = yes
+					remove_trait = { trait = recently_promoted }
+				}
+			}
+		}
+    }
+}
+
+country_event = { #Follow a worker as he goes about some of the forced tasks that he has been assigned, and as he is laboring, he finds a break in the patrols or the fence or the like, and tries to make a break for it, before he is recaptured and punished severely for his transgression
+    id = solarreworked.443
+    title = solarreworked.443.t
+    desc = solarreworked.443.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.443"}
+
+    is_triggered_only = yes
+
+    option = { #But we're all ponies!
+        name = solarreworked.443.a
+        random_state = {
+            limit = {
+                is_core_of = EQC
+                is_owned_by = EQC
+            }
+            add_extra_state_shared_building_slots = 1
+        }
+        random_state = {
+            limit = {
+                is_core_of = EQC
+                is_owned_by = EQC
+            }
+            add_extra_state_shared_building_slots = 1
+        }
+        random_state = {
+            limit = {
+                is_core_of = EQC
+                is_owned_by = EQC
+            }
+            add_extra_state_shared_building_slots = 1
+        }
+        #Modify great depression
+    }
+}
+
+country_event = { #Follow some settlers from EQS arriving finally in EQC, as it has been promised as a new land of opportunity, and they soon quickly get into conflict with some local griffons, as they have been given, by the government, the land the the griffons had, and the ensuing fight leaves both parties injured, and the colonists significantly less enamored by EQC
+    id = solarreworked.444
+    title = solarreworked.444.t
+    desc = solarreworked.444.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.444"}
+
+    is_triggered_only = yes
+
+    option = { #We were promised this?!
+        name = solarreworked.444.a
+        356 = {
+			add_manpower = 100382
+		}
+		362 = {
+			add_manpower = 72930
+		}
+		359 = {
+			add_manpower = 28347
+		}
+		354 = {
+			add_manpower = 22895
+		}
+		EQC = { add_ideas = SOL_griffonian_refuge }
+    }
+}
+
+country_event = { #A businesspony from EQS arrives in Sunset to listen to a business proposition, which interests them, since they know that they can get further profits for their shareholders if they move corporate headquarters, since EQC has recently lowered the taxes on companies, and they ask multiple questions regarding the griffon workers, and if it's true how they are basically savages that are useful for cheap labor and the like, which the pony she's meeting perpetuates
+    id = solarreworked.445
+    title = solarreworked.445.t
+    desc = solarreworked.445.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.445"}
+
+    is_triggered_only = yes
+
+    option = { #How much could that save us?
+        name = solarreworked.445.a
+        random_state = {
+            limit = {
+                is_core_of = EQC
+                is_owned_by = EQC
+            }
+            add_extra_state_shared_building_slots = 1
+            add_building_construction = {
+                type = arms_factory
+                level = 1
+                instant_build = yes
+            }
+        }
+        random_state = {
+            limit = {
+                is_core_of = EQC
+                is_owned_by = EQC
+            }
+            add_extra_state_shared_building_slots = 1
+            add_building_construction = {
+                type = arms_factory
+                level = 1
+                instant_build = yes
+            }
+        }
+        random_state = {
+            limit = {
+                is_core_of = EQC
+                is_owned_by = EQC
+            }
+            add_extra_state_shared_building_slots = 1
+            add_building_construction = {
+                type = arms_factory
+                level = 1
+                instant_build = yes
+            }
+        }
+        random_state = {
+            limit = {
+                is_core_of = EQC
+                is_owned_by = EQC
+            }
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                type = industrial_complex
+                level = 2
+                instant_build = yes
+            }
+        }
+        random_state = {
+            limit = {
+                is_core_of = EQC
+                is_owned_by = EQC
+            }
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                type = industrial_complex
+                level = 2
+                instant_build = yes
+            }
+        }
+    }
+}
+
+country_event = { #A captain of a ship making port in Sunset's harbor, which has recently been expanded, reluctantly goes to one of the jails in the city, which is filled with various ponies and griffons, as well as a few sailors, whom he ignores, since he's going to a different group, and argues for their release, since their ship needs to head back out to patrol around WNG, and after some finagling, he gets them free, and is far from impressed how they basically went on a bender and caused damage in the city, since it'll be coming out of their pay
+    id = solarreworked.446
+    title = solarreworked.446.t
+    desc = solarreworked.446.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.446"}
+
+    is_triggered_only = yes
+
+    option = { #Are you ponies or animals?!
+        name = solarreworked.446.a
+        #Dockyards here
+    }
+}
+
+country_event = { #Follow an EQS officer as he gets into a bit of a competition with his EQC counterpart, a mare, who claims that her unit can be more effective in the training exercise they have, which is pitting them both against each other to test different, novel tactics for Griffonia, and give the Militarium some valuable experience there, and it ends up also wrapping up a nearby griffon community, which makes them do up a truce of their competition, to put down the unrest that they caused in the griffons
+    id = solarreworked.447
+    title = solarreworked.447.t
+    desc = solarreworked.447.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.447"}
+
+    is_triggered_only = yes
+
+    option = { #This time again next year?
+        name = solarreworked.447.a
+        army_experience = 30
+        EQC = {
+            army_experience = 30
+            random_state = {
+                limit = {
+                    is_core_of = EQC
+                    is_owned_by = EQC
+                }
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_state = {
+                limit = {
+                    is_core_of = EQC
+                    is_owned_by = EQC
+                }
+                add_extra_state_shared_building_slots = 3
+                add_building_construction = {
+                    type = arms_factory
+                    level = 3
+                    instant_build = yes
+                }
+            }
+            add_doctrince_cost_reduction = {
+                name = land_doctrine_bonus
+                uses = 2
+                cost_reduction = 0.5
+                category = land_doctrine
+            }
+        }
+    }
+}
 
 ###Diplomatic Corps Events###
 country_event = { #Event speaking about what DRG can even offer the Empress, and asking who should be sent
@@ -3910,10 +4539,11 @@ country_event = { #Country event speaking of either the dragon's acceptance or r
     option = { #Most excellent.
         trigger = { DRG = { has_country_flag = SOL_DRG_accepted } }
         name = solarreworked.482.a
+        set_autonomy = {
+            autonomous_state = autonomy_reichsprotectorate
+            target = FROM
+        }
         FROM = {
-            set_autonomy = {
-                autonomous_state = autonomy_reichsprotectorate
-            }
             set_cosmetic_tag = DRG_SOL
         }
         if = {
@@ -4015,10 +4645,11 @@ country_event = { #Country event speaking of either the yak's acceptance or reje
     option = { #So long as they don't stink up the place.
         trigger = { YAK = { has_country_flag = SOL_YAK_accepted } }
         name = solarreworked.485.a
+        set_autonomy = {
+            autonomous_state = autonomy_reichsprotectorate
+            target = FROM
+        }
         FROM = {
-            set_autonomy = {
-                autonomous_state = autonomy_reichsprotectorate
-            }
             set_cosmetic_tag = YAK_SOL
         }
         if = {
@@ -4102,8 +4733,14 @@ country_event = { #The diplomat first arrives in PLB to speak with the leader th
 
     option = { #The deal is not acceptable. Freedom is hard-fought for.
         name = solarreworked.487.a
-        #Check for which tag
-        set_country_flag = SOL_PLB_rejected
+        if = {
+            limit = { tag = PLB }
+            set_country_flag = SOL_PLB_rejected
+        }
+        if = {
+            limit = { tag = PNG }
+            set_country_flag = SOL_PNG_rejected
+        }
         FROM = {
             country_event = {
                 id = solarreworked.488
@@ -4114,7 +4751,14 @@ country_event = { #The diplomat first arrives in PLB to speak with the leader th
     option = { #It is the wisest course of action.
         name = solarreworked.487.b
         #Check for which tag
-        set_country_flag = SOL_PLB_accepted
+        if = {
+            limit = { tag = PLB }
+            set_country_flag = SOL_PLB_accepted
+        }
+        if = {
+            limit = { tag = PNG }
+            set_country_flag = SOL_PNG_accepted
+        }
         FROM = {
             country_event = {
                 id = solarreworked.488
@@ -4134,13 +4778,28 @@ country_event = { #Country event speaking of either PLB and PNG's acceptance or 
 
     #Probably have a total of four options, for each nation
     option = { #They made a wise choice.
-        trigger = { PLB = { has_country_flag = SOL_PLB_accepted } }
-        name = solarreworked.488.a
-        FROM = {
-            set_autonomy = {
-                autonomous_state = autonomy_reichsprotectorate
+        trigger = {
+            OR = {
+                FROM = { has_country_flag = SOL_PLB_accepted }
+                FROM = { has_country_flag = SOL_PNG_accepted }
             }
-            set_cosmetic_tag = PLB_SOL
+        }
+        name = solarreworked.488.a
+        set_autonomy = {
+            autonomous_state = autonomy_reichsprotectorate
+            target = FROM
+        }
+        if = {
+            limit = { FROM = { tag = PLB } }
+            FROM = {
+                set_cosmetic_tag = PLB_SOL
+            }
+        }
+        if = {
+            limit = { FROM = { tag = PNG } }
+            FROM = {
+                set_cosmetic_tag = PNG_SOL
+            }
         }
         if = {
             limit = { has_country_flag = SOL_twilight_away }
@@ -4156,7 +4815,12 @@ country_event = { #Country event speaking of either PLB and PNG's acceptance or 
         }
     }
     option = { #This wasn't a polite request.
-        trigger = { DRG = { has_country_flag = SOL_PLB_rejected } }
+        trigger = {
+            OR = {
+                FROM = { has_country_flag = SOL_PLB_rejected }
+                FROM = { has_country_flag = SOL_PNG_rejected }
+            }
+        }
         name = solarreworked.488.b
         create_wargoal = {
             target = FROM
@@ -4243,10 +4907,11 @@ country_event = { #Country event speaking of either GRF's acceptance or rejectio
     option = { #They are no foals.
         trigger = { GRF = { has_country_flag = SOL_GRF_accepted } }
         name = solarreworked.491.a
+        set_autonomy = {
+            autonomous_state = autonomy_reichsprotectorate
+            target = FROM
+        }
         FROM = {
-            set_autonomy = {
-                autonomous_state = autonomy_reichsprotectorate
-            }
             set_cosmetic_tag = GRF_SOL
         }
         if = {

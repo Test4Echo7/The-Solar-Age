@@ -634,4 +634,17 @@ characters = {
 			visible = { has_country_flag = EQC_the_backup_arrived }
 		}
 	}
+	EQC_long_cast = {
+		name = EQC_long_cast
+
+		advisor = {
+			slot = high_command
+			allowed = { tag = EQC }
+			idea_token = long_cast
+			cost = 200
+			available = { has_country_leader = { character = EQS_SOL_arcane_nova ruling_only = yes } }
+			visible = { has_country_flag = EQC_snack_break_time }
+			traits = { air_air_superiority_3 } #Maybe change it to be AWACS, +10% air superiority, +10% fighter detection, costs the same as genius
+		}
+	}
 }

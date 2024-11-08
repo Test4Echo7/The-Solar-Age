@@ -14,7 +14,9 @@
   EQC_triple_strike:0 "Triple Strike"
   EQC_sharp_treble:0 "Sharp Treble"
   EQC_dot_form:0 "Dot Form"
+  EQC_long_cast:0 "Long Cast"
 
   ###Traits###
   master_propagandist:0 "Master Propagandist"
   efficient_clerk:0 "Efficient Clerk"
+  awacs_officer:0 "AWACS Officer"

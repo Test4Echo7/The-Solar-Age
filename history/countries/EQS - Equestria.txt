@@ -643,6 +643,7 @@ recruit_character = EQC_full_band
 recruit_character = EQC_triple_strike
 recruit_character = EQC_sharp_treble
 recruit_character = EQC_dot_form
+recruit_character = EQC_long_cast
 
 create_faction = "All_ponies_front"
 add_to_faction = CRY

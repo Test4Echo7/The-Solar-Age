@@ -7940,6 +7940,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_force_jet_sets_hoof"
 		###Event of EQC receiving a notice from the Empire that it is now the crown colony of the Imperium of the Sun, and will be expected to follow, which will prompt whether to leave or stay, since they are rather far away
+		country_event = solarreworked.430
 	}
 	ai_will_do = { factor = 80 }
 }
@@ -7967,6 +7968,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_ensuring_loyalty"
 		###Event of Arcane Nova arriving in EQC, on a ship and a small procession of Imperial soldiers, to meet with Jet Set and explain that she is going to be ensuring loyalty and providing the Empress with information of every decision made, to ensure that the colony remains part of the Empire, and that he will have to watch his moves, since he was tied to the old regime
+		country_event = solarreworked.433
 	}
 	ai_will_do = { factor = 70 }
 }
@@ -7993,8 +7995,8 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_smooth_transitions"
-		#Effect here
 		###Maybe event of Jet Set being called back to Canterlot so that he can have a meeting with Daybreaker, who has been informed that so far he has remained loyal, and that he can continue to remain the governor general, but if he thinks about betraying her trust, she will ensure that the entire colony is wiped out as a response to his insult
+		country_event = solarreworked.440
 	}
 	ai_will_do = {
 		factor = 100
@@ -8023,8 +8025,8 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_faiths_reward"
-		#Effect here
 		###Maybe event of Arcane Nova coming in to arrest Jet Set, as he is too much of a risk to the Empress's plans, and that he will be placed under house arrest until he is determined to be loyal or not; either way, he will be forever relieved of his post as governor general, and she appreciates the attractive accommodations he has, and otherwise it a bit playful in her arrest
+		country_event = solarreworked.441
 	}
 	ai_will_do = {
 		factor = 100
@@ -8094,24 +8096,8 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_personnel_support"
-		hidden_effect = {
-			EQC_full_band = { set_nationality = EQC }
-			EQC_triple_strike = { set_nationality = EQC }
-		}
-		EQC = {
-			add_war_support = 0.05
-			#Generals here
-			set_country_flag = EQC_the_backup_arrived
-			#This will be moved to EQC's reworked tree if that gets developed
-			if = {
-				limit = { has_character = EQS_SOL_arcane_nova }
-				EQS_SOL_arcane_nova = {
-					promote_leader = yes
-					remove_trait = { trait = recently_promoted }
-				}
-			}
-		}
 		###Maybe a short event of EQC receiving the new generals with Arcane Nova meeting them with speaking on the state of the country and how they will need to enforce law
+		country_event = solarreworked.442
 	}
 	ai_will_do = { factor = 70 }
 }
@@ -8193,8 +8179,9 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_fund_sunset_plays"
 		EQC = { add_ideas = SOL_patriotic_plays }
-		###Maybe event for one ofthe patriotic plays, and how they are being used to get ponies to agree to Daybreaker's rule
+		###Maybe event for one ofthe patriotic plays, and how they are being used to get ponies to agree to Daybreaker's rule by using overly cringy propaganda and the like, which upsets the thespians who perform in them
 	}
+	ai_will_do = { factor = 60 }
 }
 
 shared_focus = {
@@ -8345,7 +8332,10 @@ shared_focus = {
 			EQC_sharp_treble = { set_nationality = ROOT }
 		}
 		EQC = {
-			#Advisors here
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = dot_form
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = sharp_treble
 			set_country_flag = EQC_daybreakers_friends
 			add_stability = 0.05
 		}
@@ -8396,6 +8386,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_prisoner_restructuring"
 		###Event of a political prisoner who is currently laboring in a work gang as pennance for his transgressions finds an opening to escape and tries to do so, leading to a small chase before he is trapped and forced to surrender, and his workload becomes even worse because of it
+		country_event = solarreworked.443
 	}
 	ai_will_do = { factor = 70 }
 }
@@ -8460,7 +8451,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_station_legions"
-		#Effect here
+		#Soldiers here
 		EQC = {
 			add_war_support = 0.1
 		}
@@ -8479,8 +8470,13 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_cadet_militarium"
-		add_ideas = SOL_correct_warfare
-		###High command here
+		hidden_effect = { EQC_long_cast = { set_nationality = EQC } }
+		EQC = {
+			add_ideas = SOL_correct_warfare
+			set_country_flag = EQC_snack_break_time
+			custom_effect_tooltip = available_high_command
+			show_ideas_tooltip = long_cast
+		}
 	}
 }
 
@@ -8497,20 +8493,8 @@ shared_focus = {
 	mutually_exclusive = { focus = SOL_joint_military_expeditions }
 
 	completion_reward = {
-		356 = {
-			add_manpower = 100382
-		}
-		362 = {
-			add_manpower = 72930
-		}
-		359 = {
-			add_manpower = 28347
-		}
-		354 = {
-			add_manpower = 22895
-		}
-		add_ideas = SOL_griffonian_refuge
 		###Maybe event of some colonists from SOL arriving to then force some of the griffon minorities so they can use their land instead, forcing them to be destitute
+		country_event = solarreworked.444
 	}
 	ai_will_do = { factor = 40 }
 }
@@ -8530,6 +8514,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_economic_opportunity"
 		###Event of number of megacorps moving their headquarters to the lands of EQC, since they have found multiple ways to abuse the tax code to make more money, so that they do not have to give back as much to Daybreaker, since they still chafe under her
+		country_event = solarreworked.445
 	}
 	ai_will_do = { factor = 40 }
 }
@@ -8549,6 +8534,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_world_station"
 		###Event of some sailors finally getting shore leave and causing a bit of havoc on the mainland of EQC, probably as some kind of report, or of the CO of the sailors coming in to get them out of lockup
+		country_event = solarreworked.446
 	}
 	ai_will_do = { factor =  50 }
 }
@@ -8569,6 +8555,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_joint_military_expeditions"
 		###Maybe event of some imperial and EQC soldiers getting into a bit of a competition on a training exercise, which ends up getting into a proper skirmish with some of the griffons nearby, and they both end up promising to keep it even in score
+		country_event = solarreworked.447
 	}
 	ai_will_do = { factor = 80 }
 }

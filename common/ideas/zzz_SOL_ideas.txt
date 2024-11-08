@@ -1418,6 +1418,17 @@ ideas = {
 				compliance_gain = 0.01
 			}
 		}
+		SOL_showcased_element_bearers = {
+			modifier = {
+				political_power_gain = -0.5
+				army_morale_factor = 0.1
+				air_agility_factor = 0.05
+				heat_attrition_factor = -0.075
+				winter_attrition_factor = -0.075
+				experience_loss_factor = -0.1
+				army_defence_factor = 0.1
+			}
+		}
 		SOL_the_true_elements = {
 			modifier = {
 				political_power_gain = -0.35

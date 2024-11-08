@@ -51,22 +51,19 @@ characters={
 				if = {
 					limit = { event_target:solar_empire = { exists = yes } }
 					OR = {
-						tag = event_target:solar_empire
+						AND = {
+							tag = event_target:solar_empire
+							has_country_flag = SOL_blueblood_kneeled
+						}
 						AND = {
 							tag = event_target:equestria
 							NOT = { country_exists = event_target:solar_empire }
 						}
 					}
 				}
-				OR = {
-					AND = {
-						is_EQS_SOL = yes
-						has_country_flag = SOL_blueblood_kneeled
-					}
-					if = {
-						limit = { is_original_EQS = yes }
-						has_country_flag = EQS_blueblood_allowed
-					}
+				if = {
+					limit = { is_original_EQS = yes }
+					has_country_flag = EQS_blueblood_allowed
 				}
 			}
 			traits = { prince_of_terror }
