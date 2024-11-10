@@ -1,4 +1,5 @@
 add_namespace = solarreworked
+add_namespace = equestriaexpanded
 
 ###Opening Events###
 country_event = { #A soldier is on a patrol outside the palace and thinks about how his job is rather boring, and that he could be better serving elsewhere, but is surprised when Daybreaker breaks out of the castle to proclaim her ascension, and ponies' salvation is at hoof
@@ -12,8 +13,8 @@ country_event = { #A soldier is on a patrol outside the palace and thinks about 
     option = { #That was a mistake.
         name = solarreworked.20.a
         add_political_power = 200
-        add_stability = -0.25
-        add_stability = -0.25
+        add_stability = -0.15
+        add_stability = -0.15
         if = {
 			limit = {
 				is_faction_leader = no
@@ -5373,5 +5374,405 @@ country_event = { #Hidden event for removing Chrysalis's wounded trait
 
     option = { #I got better.
         CHN_queen_chrysalis = { remove_trait = { ideology = nazism trait = wounded_monarch } }
+    }
+}
+
+###Agency Events###
+country_event = { #The player is presented the options of what to exactly do with the state of affairs after SMILE was disbanded, and they are given three choices of either to keep Bon Bon as the new director, institute Absconditus as the director as he has been ambitious and loyal and successful in his missions, or Astrum Solus as she seems to have foreknowledge of a lot of things and has offered complete submission to protecting Order
+    id = solarreworked.650
+    title = solarreworked.650.t
+    desc = solarreworked.650.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.650"}
+
+    is_triggered_only = yes
+
+    option = { #Sweetie Drops has proven competent. We shall ensure she stays loyal.
+        name = solarreworked.650.a
+        trigger = { has_character = EQS_sweetie_drops }
+        ai_chance = {
+            base = 0
+            modifier = {
+                has_completed_focus = SOL_empress_protector
+                add = 3
+            }
+        }
+        if = {
+            limit = {
+                has_intelligence_agency = yes
+                has_completed_focus = SOL_Imperial_Investigative_Service
+            }
+            create_intelligence_agency = {
+                name = "Imperial Investigative Service"
+                icon = GFX_intelligence_agency_logo_eqs_sol
+            }
+        }
+        else_if = {
+            limit = {
+                has_intelligence_agency = yes
+                has_completed_focus = SOL_solaris_speculatores
+            }
+            create_intelligence_agency = {
+                name = "Solaris Speculatores"
+                icon = GFX_intelligence_agency_logo_eqs_sol
+            }
+        }
+        EQS_sweetie_drops = {
+            if = {
+                limit = { has_dlc = "La Resistance" }
+                add_trait = { trait = director_of_smile_defunct_lar slot = political_advisor }
+                hidden_effect = { remove_trait = { trait = director_of_smile_lar slot = political_advisor } }
+            }
+            else = {
+                add_trait = { trait = director_of_smile_defunct slot = political_advisor }
+                hidden_effect = { remove_trait = { trait = director_of_smile slot = political_advisor } }
+            }
+        }
+        hidden_effect = {
+            random_list = {
+                65 = {
+
+                }
+                35 = {
+                    country_event = {
+                        id = equestriaexpanded.6
+                        days = 90
+                        random_days = 90
+                    }
+                }
+            }
+        }
+    }
+    option = { #Astrum Solus is strange but she knows things. She'll lead.
+        name = solarreworked.650.b
+        ai_chance = {
+            base = 1
+            modifier = {
+                has_completed_focus = SOL_god_empress
+                add = 2
+            }
+        }
+        if = {
+            limit = {
+                has_intelligence_agency = yes
+                has_completed_focus = SOL_Imperial_Investigative_Service
+            }
+            create_intelligence_agency = {
+                name = "Imperial Investigative Service"
+                icon = GFX_intelligence_agency_logo_eqs_sol
+            }
+        }
+        else_if = {
+            limit = {
+                has_intelligence_agency = yes
+                has_completed_focus = SOL_solaris_speculatores
+            }
+            create_intelligence_agency = {
+                name = "Solaris Speculatores"
+                icon = GFX_intelligence_agency_logo_eqs_sol
+            }
+        }
+        EQS_astrum_solus = {
+            if = {
+                limit = { has_dlc = "La Resistance" }
+                add_trait = { trait = director_of_imperial_intelligence_astrum_lar slot = political_advisor }
+                hidden_effect = { remove_trait = { trait = master_of_disguise_lar slot = political_advisor } }
+            }
+            else = {
+                add_trait = { trait = director_of_imperial_intelligence_astrum slot = political_advisor }
+                hidden_effect = { remove_trait = { trait = master_of_disguise slot = political_advisor } }
+            }
+        }
+    }
+    option = { #Absconditus is loyal, capable, and driven. He is the perfect pony to lead.
+        name = solarreworked.650.c
+        if = {
+            limit = {
+                has_intelligence_agency = yes
+                has_completed_focus = SOL_Imperial_Investigative_Service
+            }
+            create_intelligence_agency = {
+                name = "Imperial Investigative Service"
+                icon = GFX_intelligence_agency_logo_eqs_sol
+            }
+        }
+        else_if = {
+            limit = {
+                has_intelligence_agency = yes
+                has_completed_focus = SOL_solaris_speculatores
+            }
+            create_intelligence_agency = {
+                name = "Solaris Speculatores"
+                icon = GFX_intelligence_agency_logo_eqs_sol
+            }
+        }
+        EQS_absconditus_lumen = {
+            if = {
+                limit = { has_dlc = "La Resistance" }
+                add_trait = { trait = director_of_imperial_intelligence_lar slot = political_advisor }
+                hidden_effect = { remove_trait = { trait = ambitious_planner_lar slot = political_advisor } }
+            }
+            else = {
+                add_trait = { trait = director_of_imperial_intelligence slot = political_advisor }
+                hidden_effect = { remove_trait = { trait = ambitious_planner slot = political_advisor } }
+            }
+        }
+    }
+}
+
+country_event = { #A shorter event of a radio broadcast which butts in on foreign waves, speaking about how those who fight against Daybreaker have no hope of winning, as they are nothing but dirt compared to her power and her being Order itself, and it also paints her as the greatest creature to live, to make other creatures as demoralized as possible
+    id = solarreworked.651
+    title = solarreworked.651.t
+    desc = solarreworked.651.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.651"}
+
+    is_triggered_only = yes
+
+    option = { #What hope do we have?
+        name = solarreworked.651.a
+        custom_effect_tooltip = SOL_enemies_get_zonked_tt
+        show_ideas_tooltip = SOL_offensive_propaganda
+        set_country_flag = SOL_demoralizing_propaganda
+    }
+}
+
+country_event = { #An event of the propaganda used in the Solar Empire, which speaks about how everypony within it is the last true light of Harmony, and that they must band together and support each other, lest they all fall; there may be some unique messaging, such as serving in Daybreaker's light for the God-Empres, for each path
+    id = solarreworked.652
+    title = solarreworked.652.t
+    desc = solarreworked.652.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.652"}
+
+    is_triggered_only = yes
+
+    option = { #We must stand strong!
+        name = solarreworked.652.a
+        add_ideas = SOL_defensive_propaganda
+    }
+}
+
+country_event = { #Follow some agents, perhaps with Astrum, going in on a group of ponies who have been rather vocally anti-Daybreaker, but have not been violent, but Astrum would have "found" evidence that they were planning something and possibly even assassinate Daybreaker, and it is enough for them to be wiped out in the op
+    id = solarreworked.653
+    title = solarreworked.653.t
+    desc = solarreworked.653.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.653"}
+
+    is_triggered_only = yes
+
+    option = { #They thought they could hide!
+        name = solarreworked.653.a
+        #Effect here
+    }
+}
+
+country_event = { #A newer agent for the SOL agency is running through an obstacle course to train them on quick thinking while either escaping or finding a way to a target, and all the while, Astrum is the one training them, and doing what she can to hobble them further, including shooting at them or changing up the course with different magic effects, and they barely get through, which means they pass
+    id = solarreworked.654
+    title = solarreworked.654.t
+    desc = solarreworked.654.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.654"}
+
+    is_triggered_only = yes
+
+    option = { #Now do it again!
+        name = solarreworked.654.a
+        #Effect here
+    }
+}
+
+country_event = { #A citizen in their home is awoken suddenly as it's barged into by a number of soldiers and a couple of agents, and they place the pony under arrest, and the pony protests, since they believe they've done nothing wrong, and are quite loyal to Daybreaker, and the agent is confident that that is not the case, as they point out various indicators that the pony would turn, which the pony thinks insane and nopony will prove it, but teh agent thinks otherwise, since they must prove they're innocent
+    id = solarreworked.655
+    title = solarreworked.655.t
+    desc = solarreworked.655.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.655"}
+
+    is_triggered_only = yes
+
+    option = { #Guilty until proven innocent, don't forget.
+        name = solarreworked.655.a
+        #Effect here
+    }
+}
+
+country_event = { #Astrum Solus eagerly hops off the boat that she took to get to wherever the M6 currently are, and meets with a few of her fellow agents who integrated ahead of time, and they prepare to go over some of the plans to get the M6 and bring them back to Daybreaker, and Astrum is overly eager, since she has been spending far too long trying to get them, and that after the operation is done, she can finally please Daybreaker again with her results
+    id = solarreworked.656
+    title = solarreworked.656.t
+    desc = solarreworked.656.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.656"}
+
+    is_triggered_only = yes
+
+    option = { #Won't Momma Cita be proud!
+        name = solarreworked.656.a
+    }
+}
+
+country_event = { #Daybreaker enters the chambers of the spy agency, and she meets with Absconditus, who is the pony placed in charge of the operation to capture Luna, and they go over how the defenses of her location are, and that Luna will not expect what they are planning, and that that will mean that finally Luna's nuisance will be over, and Daybreaker can have her reunion with her
+    id = solarreworked.657
+    title = solarreworked.657.t
+    desc = solarreworked.657.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.657"}
+
+    is_triggered_only = yes
+
+    option = { #I'll see you again soon, sister!
+        name = solarreworked.657.a
+    }
+}
+
+###Equestria Events###
+country_event = { #Bon Bon is ushered into Celestia's chambers, and Bon Bon sees that Celestia is nervous and uncomfortable with what is probably going to be talked about, and after a few minutes of chatting and pleasantries, which Celestia even fumbles with, she gets to the point of asking Bon Bon to become the new SMILE director, as the previous one was causing problems or not willing to go far enough, and she knows that Bon Bon will fight for harmony no matter what, and Bon Bon reluctantly accepts
+    id = equestriaexpanded.1
+    title = equestriaexpanded.1.t
+    desc = equestriaexpanded.1.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event equestriaexpanded.1"}
+
+    is_triggered_only = yes
+
+    option = { #If that is what is required.
+        name = equestriaexpanded.1.a
+    }
+}
+
+country_event = { #Follow a new SMILE agent as she is being tested on some of her knowledge on her deep cover identity that Bon Bon gave her, and although she is quite good, she slips up somewhere on a detail that would give her away, and Bon Bon fails her, before making her do more physical training instead, as the agents must be the best of the best for Harmony
+    id = equestriaexpanded.2
+    title = equestriaexpanded.2.t
+    desc = equestriaexpanded.2.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event equestriaexpanded.2"}
+
+    is_triggered_only = yes
+
+    option = { #Put your back into it!
+        name = equestriaexpanded.2.a
+    }
+}
+
+country_event = { #Celestia enters the planning room of the Equestrian Military, who are all gathered awkwardly, waiting for an agent of SMILE to make their case for what they want to do to help protect Equestria, and it ends up being an obvious assassination operation, which Celestia almost vetos before thinking about it, and begrudgingly approving
+    id = equestriaexpanded.3
+    title = equestriaexpanded.3.t
+    desc = equestriaexpanded.3.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event equestriaexpanded.3"}
+
+    is_triggered_only = yes
+
+    option = { #I don't want to know the results.
+        name = equestriaexpanded.3.a
+        add_power_balance_value = {
+            id = EQS_sanity_bop
+            value = -0.02
+            tooltip_side = EQS_woke
+        }
+    }
+}
+
+country_event = { #An excerpt of a new training manual from SMILE regarding how to spot changelings and how to act like a changeling in disguise if in the presence of disguised changelings; the details are at times a bit corny and filled with propaganda, but it does have some useful details, such as being unaware of knowledge a pony should have, or their magic appearing weird, or a buzzing sound when flying or being weak when they're an earth pony
+    id = equestriaexpanded.4
+    title = equestriaexpanded.4.t
+    desc = equestriaexpanded.4.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event equestriaexpanded.4"}
+
+    is_triggered_only = yes
+
+    option = { #I never knew!
+        name = equestriaexpanded.4.a
+    }
+}
+
+country_event = { #A report is slid across Celestia's desk, and after she reads it, she's mortified at the fact that it was suggested to kill Chrysalis, but she decides to meet with the pony chosen for the operation, and tries to learn why they would approve of it, and ultimately they convince her it's necessary to do, and she is upset that it would be a death knell, but agrees, and hopes they succeed
+    id = equestriaexpanded.5
+    title = equestriaexpanded.5.t
+    desc = equestriaexpanded.5.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event equestriaexpanded.5"}
+
+    is_triggered_only = yes
+
+    option = { #This better not backfire...
+        name = equestriaexpanded.5.a
+        add_power_balance_value = {
+            id = EQS_sanity_bop
+            value = -0.05
+            tooltip_side = EQS_woke
+        }
+    }
+}
+
+country_event = { #An event recapping that with the ascension of Daybreaker, SMILE is a threat, and that it is questionable if any SMILE agents are loyal to her; they have not done anything yet, but Bon Bon has expressed distaste, and many trust her; it is suggested to eliminate them and shut down SMILE, to create something greater later, but the player can decide otherwise
+    id = equestriaexpanded.6
+    title = equestriaexpanded.6.t
+    desc = equestriaexpanded.6.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event equestriaexpanded.6"}
+
+    is_triggered_only = yes
+
+    option = { #They can be trusted. We need all the agents we can get.
+        name = equestriaexpanded.6.a
+        #Remove dynamic modifier here, but keep Bon Bon
+        set_country_flag = SOL_kept_smile_agents
+        if = {
+            limit = { has_dlc = "La Resistance" }
+            remove_dynamic_modifier = EQS_smile_upgrades_lar
+        }
+        else = {
+            remove_dynamic_modifier = EQS_smile_upgrades
+        }
+    }
+    option = { #No greater a threat than them. Eliminate them.
+        name = equestriaexpanded.6.b
+        #Remove dynamic modifier and Bon Bon here
+        if = {
+            limit = { has_dlc = "La Resistance" }
+            remove_dynamic_modifier = EQS_smile_upgrades_lar
+        }
+        else = {
+            remove_dynamic_modifier = EQS_smile_upgrades
+        }
+        retire_character = EQS_sweetie_drops
+    }
+}
+
+country_event = { #Some SMILE agents, who now work under Daybreaker, infiltrate one of the military installations of the Empire and after only encountering a few bodies awake at night, manage to completely destroy it, which seriously hinders the research there, which was on armor technology, and all manage to escape
+    id = equestriaexpanded.7
+    title = equestriaexpanded.7.t
+    desc = equestriaexpanded.7.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event equestriaexpanded.7"}
+
+    is_triggered_only = yes
+
+    option = { #Damn them!
+        name = equestriaexpanded.7.a
+        #Inflict damage on a state that has 3 arms factories or more, add a spirit for 300 days that reduces armor research by 30%, armor value by 15%, and org by 15%
+        hidden_effect = {
+            country_event = {
+                id = equestriaexpanded.8
+                days = 3
+            }
+        }
+        random_state = {
+            limit = {
+                is_core_of = ROOT
+                is_owned_by = ROOT
+                arms_factory > 2
+            }
+            damage_building = {
+                type = arms_factory
+                damage = 3
+            }
+        }
+        add_timed_idea = {
+            idea = SOL_sabotaged_tanks
+            days = 300
+        }
+    }
+}
+
+country_event = { #Follow Absconditus as he leads a number of loyal agents and also some soldiers in hunting down those who crossed Daybreaker, and it leads to a confrontation outside of a city with some rogue SMILE agents, who claim that they will not suffer a tyrant like she was, and a battle ensues where they are narrowly captured or killed, which leads to the question of who succeeds Bon Bon, since she was captured and implicated, too
+    id = equestriaexpanded.8
+    title = equestriaexpanded.8.t
+    desc = equestriaexpanded.8.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event equestriaexpanded.8"}
+
+    is_triggered_only = yes
+
+    option = { #What now?
+        name = equestriaexpanded.8.a
+        #Trigger same choice event for director
+        country_event = solarreworked.650
     }
 }

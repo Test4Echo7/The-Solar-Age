@@ -940,6 +940,12 @@ ideas = {
 			}
 		}
 		###Spies###
+		SOL_sabotaged_tanks = {
+			research_bonus = { armor = -0.3 }
+			equipment_bonus = {
+				armor = { armor_value = -0.15 organization = -0.15 instant = yes }
+			}
+		}
 		SOL_offensive_propaganda = {
 			modifier = {
 				political_power_gain = -0.1

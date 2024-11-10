@@ -37,6 +37,7 @@ focus_tree = {
 	shared_focus = SOL_modernize_relic
 	shared_focus = SOL_imperial_diplomatic_corps
 	shared_focus = EQS_agents_of_SMILE
+	shared_focus = SOL_new_imperial_chapter
 }
 
 shared_focus = {
@@ -4995,13 +4996,14 @@ shared_focus = {
 		OR = {
 			eqs_has_civil_war = yes
 			has_war_with_major = yes
-			is_EQS_SOL = yes
 		}
 	}
+	allow_branch = { is_EQS_SOL = no }
 
 	completion_reward = {
 		log = "[GetDateText]: [ROOT.GetName]: focus EQS_agents_of_SMILE"
 		###Event of Bon Bon being brought into Celestia's quarters, so it's a private affair, and Celestia is clearly a bit nervous, and after a bit of chatting, finally gets to her point of promoting Bon Bon to the new SMILE director, which surprises Bon Bon, but she takes it
+		country_event = equestriaexpanded.1
 	}
 	ai_will_do = { factor = 125 }
 }
@@ -5021,7 +5023,11 @@ shared_focus = {
 			limit = { has_dlc = "La Resistance" }
 			if = {
 				limit = { NOT = { has_dynamic_modifier = { modifier = EQS_smile_upgrades_lar } } }
-				add_dynamic_modifier = { modifier = EQS_smile_upgrades_lar }
+				hidden_effect = { add_dynamic_modifier = { modifier = EQS_smile_upgrades_lar } }
+				custom_effect_tooltip = EQS_smile_upgrades_lar_1_add_tt
+			}
+			else = {
+				custom_effect_tooltip = EQS_smile_upgrades_lar_1_tt
 			}
 			add_to_variable = { own_operative_detection_var = -0.1 }
 			add_to_variable = { operation_risk_var = -0.05 }
@@ -5030,10 +5036,15 @@ shared_focus = {
 			if = {
 				limit = { NOT = { has_dynamic_modifier = { modifier = EQS_smile_upgrades } } }
 				add_dynamic_modifier = { modifier = EQS_smile_upgrades }
+				custom_effect_tooltip = EQS_smile_upgrades_1_add_tt
+			}
+			else = {
+				custom_effect_tooltip = EQS_smile_upgrades_1_tt
 			}
 			add_to_variable = { subversive_activities_upkeep_var = -0.3 }
 		}
 		###A number of new recruits for SMILE are put through the ringer by Bon Bon herself, since she was good at being deep cover for years, given how she lived in Ponyville, and she pushes the recruits to their limit on what they can do
+		country_event = equestriaexpanded.2
 	}
 	ai_will_do = { factor = 60 }
 }
@@ -5053,7 +5064,11 @@ shared_focus = {
 			limit = { has_dlc = "La Resistance" }
 			if = {
 				limit = { NOT = { has_dynamic_modifier = { modifier = EQS_smile_upgrades_lar } } }
-				add_dynamic_modifier = { modifier = EQS_smile_upgrades_lar }
+				hidden_effect = { add_dynamic_modifier = { modifier = EQS_smile_upgrades_lar } }
+				custom_effect_tooltip = EQS_smile_upgrades_lar_2_add_tt
+			}
+			else = {
+				custom_effect_tooltip = EQS_smile_upgrades_lar_2_tt
 			}
 			add_to_variable = { agency_upgrade_var = -0.1 }
 			add_to_variable = { intelligence_agency_defense_var = 0.1 }
@@ -5089,6 +5104,7 @@ shared_focus = {
 		custom_effect_tooltip = EQS_unlock_operation_mondwaffen_tt
 		set_country_flag = EQS_greife_den_mond_an
 		#Maybe short event of Celestia being presented the operation, which she is against but is convinced to do
+		country_event = equestriaexpanded.3
 	}
 	ai_will_do = {
 		factor = 30
@@ -5115,14 +5131,12 @@ shared_focus = {
 			limit = { has_dlc = "La Resistance" }
 			add_to_variable = { operation_cost_var = -0.15 }
 			add_to_variable = { operation_risk_var = -0.05 }
+			custom_effect_tooltip = EQS_smile_upgrades_lar_3_tt
 		}
 		else = {
-			if = {
-				limit = { NOT = { has_dynamic_modifier = { modifier = EQS_smile_upgrades } } }
-				add_dynamic_modifier = { modifier = EQS_smile_upgrades }
-			}
 			add_to_variable = { subversive_activities_upkeep_var = -0.25 }
 			add_to_variable = { political_power_gain_smile_var = 0.1 }
+			custom_effect_tooltip = EQS_smile_upgrades_3_tt
 		}
 	}
 	ai_will_do = { factor = 120 }
@@ -5143,14 +5157,12 @@ shared_focus = {
 		if = {
 			limit = { has_dlc = "La Resistance" }
 			add_to_variable = { enemy_operative_detection_var = 0.1 }
+			custom_effect_tooltip = EQS_smile_upgrades_lar_4_tt
 		}
 		else = {
-			if = {
-				limit = { NOT = { has_dynamic_modifier = { modifier = EQS_smile_upgrades } } }
-				add_dynamic_modifier = { modifier = EQS_smile_upgrades }
-			}
 			add_to_variable = { decryption_var = 0.25 }
-			add_to_variable = { foreign_subversive_activities_var = 0.2 }
+			add_to_variable = { foreign_subversive_activities_var = -0.2 }
+			custom_effect_tooltip = EQS_smile_upgrades_4_tt
 		}
 	}
 	ai_will_do = { factor = 75 }
@@ -5176,18 +5188,27 @@ shared_focus = {
 			limit = { has_dlc = "La Resistance" }
 			if = {
 				limit = { NOT = { has_dynamic_modifier = { modifier = EQS_smile_upgrades_lar } } }
-				add_dynamic_modifier = { modifier = EQS_smile_upgrades_lar }
+				hidden_effect = { add_dynamic_modifier = { modifier = EQS_smile_upgrades_lar } }
+				custom_effect_tooltip = EQS_smile_upgrades_lar_5_add_tt
+			}
+			else = {
+				custom_effect_tooltip = EQS_smile_upgrades_lar_5_tt
 			}
 			add_to_variable = { commando_trait_var = 0.25 }
 		}
 		else = {
 			if = {
 				limit = { NOT = { has_dynamic_modifier = { modifier = EQS_smile_upgrades } } }
-				add_dynamic_modifier = { modifier = EQS_smile_upgrades }
+				hidden_effect = { add_dynamic_modifier = { modifier = EQS_smile_upgrades } }
+				custom_effect_tooltip = EQS_smile_upgrades_5_add_tt
 			}
-			add_to_variable = { subversive_activities_upkeep_var = -0.05 }
+			else = {
+				custom_effect_tooltip = EQS_smile_upgrades_5_tt
+			}
+			add_to_variable = { subversive_activities_upkeep_var = -0.1 }
 		}
 		###Maybe an event of Bon Bon and others going through training for different ways to spot a changeling or how to flush one out, or even act like one when around other changelings who believe that they're in disguise as a pony
+		country_event = equestriaexpanded.4
 	}
 	ai_will_do = { factor = 170 }
 }
@@ -5210,6 +5231,7 @@ shared_focus = {
 		custom_effect_tooltip = EQS_unlock_operation_flyswatter_tt
 		set_country_flag = EQS_swat_buggo
 		###Event possibly of Celestia being given the report for the plan for the operation, and she fights with herself on if she should approve it or not, and does meet with the pony who will be undertaking the mission, to gather more insight onto what is going on, and she relucantly will agree
+		country_event = equestriaexpanded.5
 	}
 	ai_will_do = { factor = 200 }
 }
