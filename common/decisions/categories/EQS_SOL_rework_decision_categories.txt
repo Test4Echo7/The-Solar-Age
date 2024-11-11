@@ -47,6 +47,13 @@ EQS_covert_ops_category = {
     }
     icon = celestia_cat
 }
+EQS_expand_imperial_territory_category = {
+    allowed = { tag = EQS }
+    priority = {
+        base = 136
+    }
+    icon = celestia_cat
+}
 EQS_BOP_sanity_category = {
     allowed = {
         tag = EQS

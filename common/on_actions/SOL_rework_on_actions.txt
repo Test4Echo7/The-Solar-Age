@@ -363,7 +363,7 @@ on_actions = {
                     days = 21
                     random_days = 21
                 }
-                set_country_flag = SOL_puppets_lef
+                set_country_flag = SOL_puppets_left
             }
             if = {
                 limit = {

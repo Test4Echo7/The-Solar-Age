@@ -1761,3 +1761,150 @@ EQS_covert_ops_category = {
         ai_will_do = { factor = 7 }
     }
 }
+
+EQS_expand_imperial_territory_category = {
+    SOL_integrate_vaverfront_region = {
+        allowed = { tag = EQS }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = SOL_all_states_over_40_compliance_tt
+                296 = { compliance > 40 }
+                218 = { compliance > 40 }
+                217 = { compliance > 40 }
+                69 = { compliance > 40 }
+            }
+        }
+        visible = { has_country_flag = SOL_can_core_OLE_states }
+        highlight_states = {
+            highlight_state_targets = {
+                state = 69
+                state = 218
+                state = 217
+                state = 296
+            }
+        }
+        fire_only_once = yes
+        days_remove = 30
+        remove_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision remove SOL_integrate_vaverfront_region"
+            296 = { add_core_of = ROOT }
+            218 = { add_core_of = ROOT }
+            217 = { add_core_of = ROOT }
+            69 = { add_core_of = ROOT }
+        }
+    }
+    SOL_integrate_changeling_borderlands = {
+        allowed = { tag = EQS }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = SOL_all_states_over_40_compliance_tt
+                291 = { compliance > 40 }
+                246 = { compliance > 40 }
+                247 = { compliance > 40 }
+                319 = { compliance > 40 }
+                316 = { compliance > 40 }
+            }
+        }
+        visible = { has_country_flag = SOL_can_core_CHN_states }
+        highlight_states = {
+            highlight_state_targets = {
+                state = 291
+                state = 246
+                state = 247
+                state = 319
+                state = 316
+            }
+        }
+        fire_only_once = yes
+        days_remove = 30
+        remove_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision remove SOL_integrate_changeling_borderlands"
+            291 = { add_core_of = ROOT }
+            246 = { add_core_of = ROOT }
+            247 = { add_core_of = ROOT }
+            319 = { add_core_of = ROOT }
+            316 = { add_core_of = ROOT }
+        }
+    }
+    SOL_integrate_nouvelle_aquila_region = {
+        allowed = { tag = EQS }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = SOL_all_states_over_40_compliance_tt
+                58 = { compliance > 40 }
+                338 = { compliance > 40 }
+                222 = { compliance > 40 }
+                239 = { compliance > 40 }
+                242 = { compliance > 40 }
+                329 = { compliance > 40 }
+            }
+        }
+        visible = { has_country_flag = SOL_can_core_GRF_states }
+        highlight_states = {
+            highlight_state_targets = {
+                state = 58
+                state = 338
+                state = 222
+                state = 239
+                state = 242
+                state = 329
+            }
+        }
+        fire_only_once = yes
+        days_remove = 30
+        remove_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision remove SOL_integrate_nouvelle_aquila_region"
+            58 = { add_core_of = ROOT }
+            338 = { add_core_of = ROOT }
+            222 = { add_core_of = ROOT }
+            239 = { add_core_of = ROOT }
+            242 = { add_core_of = ROOT }
+            329 = { add_core_of = ROOT }
+        }
+    }
+    SOL_integrate_maregyptian_ports = {
+        allowed = { tag = EQS }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = SOL_all_states_over_40_compliance_tt
+                734 = { compliance > 40 }
+                737 = { compliance > 40 }
+            }
+        }
+        visible = { has_country_flag = SOL_can_core_MGY_port_states }
+        highlight_states = {
+            highlight_state_targets = {
+                state = 734
+                state = 737
+            }
+        }
+        fire_only_once = yes
+        days_remove = 30
+        remove_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision remove SOL_integrate_maregyptian_ports"
+            734 = { add_core_of = ROOT }
+            737 = { add_core_of = ROOT }
+        }
+    }
+    SOL_integrate_manerba = {
+        allowed = { tag = EQS }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = SOL_all_states_over_40_compliance_tt
+                692 = { compliance > 40 }
+            }
+        }
+        visible = { has_completed_focus = SOL_breach_zebrica }
+        highlight_states = {
+            highlight_state_targets = {
+                state = 692
+            }
+        }
+        fire_only_once = yes
+        days_remove = 30
+        remove_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision remove SOL_integrate_manerba"
+            692 = { add_core_of = ROOT }
+        }
+    }
+}

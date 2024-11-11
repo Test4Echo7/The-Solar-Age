@@ -574,7 +574,7 @@ country_event = { #Short event of some thestrals being locked out of their forme
     is_triggered_only = yes
 
     option = { #Because that's fair!
-        name = solarreworked.44.a
+        name = solarreworked.42.a
         add_political_power = 50
         random_state = {
             limit = {
@@ -1050,22 +1050,234 @@ country_event = {
 }
 
 ###Internal affairs###
-country_event = { #Jet Set is completley surprised when a formation of Imperial ships comes to New Mareland, and hastily gets to the piers so that he can meet whoever the delegate is, who is Arcane Nova, and she and him have a tense confrontation before she states that she will be the one looking over him, to make sure that he is truly loyal.
+#country_event = { #Jet Set is completley surprised when a formation of Imperial ships comes to New Mareland, and hastily gets to the piers so that he can meet whoever the delegate is, who is Arcane Nova, and she and him have a tense confrontation before she states that she will be the one looking over him, to make sure that he is truly loyal.
+#    id = solarreworked.70
+#    title = solarreworked.70.t
+#    desc = solarreworked.70.d
+#    picture = GFX_event_solarempire
+#    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.70"}
+#
+#    is_triggered_only = yes
+#
+#    option = { #I would never!
+#        name = solarreworked.70.a
+#        EQS = {
+#            EQS_SOL_arcane_nova = { set_nationality = EQC }
+#        }
+#    }
+#}
+
+country_event = { #An officer of the Militarium is surprised when he sees that a number of ponies are rifling through his quarters, and when he demands to know what is going on, is told that he is under arrest for anti-Daybreaker sympathies, and when he tries to protest, he is ganged up on by the remaining soldiers, as there was one thing in his quarters that was slightly suspicious, and they take him away without trial
     id = solarreworked.70
     title = solarreworked.70.t
     desc = solarreworked.70.d
-    picture = GFX_event_solarempire
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.70"}
 
     is_triggered_only = yes
 
-    option = { #I would never!
+    option = { #Can't I get a lawyer?!
         name = solarreworked.70.a
-        EQS = {
-            EQS_SOL_arcane_nova = { set_nationality = EQC }
+        army_experience = 10
+		add_political_power = 25
+		add_manpower = -10000
+    }
+}
+
+country_event = { #Daybreaker inspects a number of troops that have been aligned for her to see, since she is doing her own determinations of loyalty or guilt, and she starts to grill a couple of soldiers she's suspcious about, and when they do not give her the answers she is looking for, she uses them as examples of what happens to those who betray her
+    id = solarreworked.71
+    title = solarreworked.71.t
+    desc = solarreworked.71.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.71"}
+
+    is_triggered_only = yes
+
+    option = { #Anypony else?
+        name = solarreworked.71.a
+        add_command_power = 50
+		add_manpower = -25000
+    }
+}
+
+country_event = { #Follow one of the generals, probably Fast Clip, as he is led into an office where he is going to be stationed, which is basically some sort of field analaysis from a high, tactical level, which is his new role, even though he's still on paper as a general; he is fairly demoralized from it, but is told in no unclear terms he can neither resign, nor can he hope to cause more issues
+    id = solarreworked.72
+    title = solarreworked.72.t
+    desc = solarreworked.72.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.72"}
+
+    is_triggered_only = yes
+
+    option = { #Just another three decades of my life until retirement!
+        name = solarreworked.72.a
+        add_ideas = SOL_relegated_embarrassments
+        retire_character = EQS_whiplash
+        retire_character = EQS_fast_clip
+        retire_character = EQS_allen_spark
+        add_political_power = -100
+        add_war_support = -0.05
+    }
+}
+#Potentially rewrite this event to be a bit more informational than narrative
+
+country_event = { #One of the generals who is thought to be disloyal is presented before Daybreaker, who begins to list a long series of supposed crimes they have committed, and then declares them guilty, without chance of repeal, and he is executed by fire, which she finds fitting
+    id = solarreworked.73
+    title = solarreworked.73.t
+    desc = solarreworked.73.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.73"}
+
+    is_triggered_only = yes
+
+    option = { #He got too close to the flames, and suffered for it.
+        name = solarreworked.73.a
+        #Effect here
+    }
+}
+
+country_event = { #One of the generals who is suspected of being a traitor is brought before Daybreaker, who lists off a number of the supposed crimes he committed, and as she makes it sound like he will be executed, she instead states that she could have him killed, but is willing to forgive him, if he never betrays her again, because she will kill him herself if she finds out, which he agrees to
+    id = solarreworked.74
+    title = solarreworked.74.t
+    desc = solarreworked.74.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.74"}
+
+    is_triggered_only = yes
+
+    option = { #Better for everypony's health, I think.
+        name = solarreworked.74.a
+        add_political_power = -200
+		add_war_support = -0.05
+		add_stability = -0.05
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.1
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_character = EQS_soarin
+					has_character = EQS_fast_clip
+					has_character = EQS_whiplash
+					has_character = EQS_sergeant_reckless
+					has_character = EQS_madoor_stronghammer
+					has_character = EQS_evening_squall
+					has_character = EQS_fizzlepop
+					has_character = EQS_bernard_hoofgonery
+					has_character = EQS_allen_spark
+					has_character = EQS_swift_wing
+					has_character = EQS_sun_marble
+					has_character = EQS_sentinel
+					has_character = EQS_Fireflight
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { has_character = EQS_soarin }
+					}
+					add_to_variable = {
+						sol_redemption_cost = 50
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_character = EQS_fast_clip }
+					}
+					add_to_variable = {
+						sol_redemption_cost = 50
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_character = EQS_whiplash }
+					}
+					add_to_variable = {
+						sol_redemption_cost = 50
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_character = EQS_sergeant_reckless }
+					}
+					add_to_variable = {
+						sol_redemption_cost = 50
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_character = EQS_madoor_stronghammer }
+					}
+					add_to_variable = {
+						sol_redemption_cost = 50
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_character = EQS_evening_squall }
+					}
+					add_to_variable = {
+						sol_redemption_cost = 50
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_character = EQS_fizzlepop }
+					}
+					add_to_variable = {
+						sol_redemption_cost = 50
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_character = EQS_bernard_hoofgonery }
+					}
+					add_to_variable = {
+						sol_redemption_cost = 50
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_character = EQS_allen_spark }
+					}
+					add_to_variable = {
+						sol_redemption_cost = 50
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_character = EQS_swift_wing }
+					}
+					add_to_variable = {
+						sol_redemption_cost = 50
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_character = EQS_sun_marble }
+					}
+					add_to_variable = {
+						sol_redemption_cost = 50
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_character = EQS_sentinel }
+					}
+					add_to_variable = {
+						sol_redemption_cost = 50
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_character = EQS_Fireflight }
+					}
+					add_to_variable = {
+						sol_redemption_cost = 50
+					}
+				}
+			}
+			unlock_decision_tooltip = SOL_rehabilitate_generals
         }
     }
 }
+#Same as solarreworked.72
 
 ###Flavour###
 country_event = { #Daybreaker visit's Fluttershy's family, as Zephyr Breeze has been drafted into the military, but he has been dodging it wherever he could, and after a bit of a tense meeting in the library, she basically forces him into the military, as he is an example because he's Fluttershy's brother, and she will not have herself be defied again

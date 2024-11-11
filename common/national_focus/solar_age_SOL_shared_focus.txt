@@ -3376,6 +3376,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_evict_hoarders"
 		###Event of some Solar troops going into the dragon islands, where Ember has managed to hole up in one area with some dragons, and them fighting through the dragons to get them out of the isles, or kill them in the process, and there is one combat with Ember, which eventually overpowers her, since she's only one dragon
+		DRG = { add_to_ROOT_potential_cores = yes }
 	}
 	ai_will_do = { factor = 50 }
 }
@@ -3619,6 +3620,8 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_lebensraum"
 		###Event of some pony settlers and some Militarium troops marching into one of the larger changeling hives in the southern reaches and beginning to go on a purge and expelling of changelings, since it is their land that they are taking, according to them
+		custom_effect_tooltip = SOL_how_edgy_of_you_tt
+		set_country_flag = SOL_can_core_CHN_states
 	}
 	ai_will_do = { factor = 65 }
 }
@@ -3734,6 +3737,8 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_yoink_more_land"
 		###Event of some ponies dealing with a domestic deer issue, since they are now in direct control of the laws there, and they put it down rather harshly, since they are told they need to become like ponies to keep their right to the land, which irritates the deer
+		custom_effect_tooltip = SOL_viking_no_more_tt
+		set_country_flag = SOL_can_core_OLE_states
 	}
 	ai_will_do = { factor = 40 }
 }
@@ -3795,6 +3800,36 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_figurehead_monarch"
 		###Event of Daybreaker of meeting with a bound Velvet to let her know that her lucky day has arrived, and that she will be set free, so long as she does exactly what Daybreaker wants, as she will be the figurehead of the Empire to the deer, so they can stay in line; and she will make sure that it happens, since she will have a garrison stationed in Hjortland at all times, and Velvet sees no way she can resist
+		custom_effect_tooltip = SOL_floofy_dear_puppet_tt
+		if = {
+			limit = {
+				69 = { is_core_of = ROOT }
+				218 = { is_core_of = ROOT }
+				296 = { is_core_of = ROOT }
+				217 = { is_core_of = ROOT }
+			}
+			set_temp_variable = { SOL_colonized_OLE_states = 1 }
+		}
+		release_autonomy = {
+			target = OLE
+			autonomy_state = autonomy_reichsprotectorate
+		}
+		transfer_state = 76
+		transfer_state = 189
+		hidden_effect = {
+			transfer_state = 224
+			transfer_state = 69
+			transfer_state = 218
+			transfer_state = 296
+			transfer_state = 217
+			if = {
+				limit = { check_variable = { SOL_colonized_OLE_states = 1 } }
+				69 = { add_core_of = ROOT }
+				218 = { add_core_of = ROOT }
+				296 = { add_core_of = ROOT }
+				217 = { add_core_of = ROOT }
+			}
+		}
 	}
 	ai_will_do = { factor = 60 }
 }
@@ -3903,6 +3938,8 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_expand_reach"
 		#Effect here
+		custom_effect_tooltip = SOL_catbirbs_integrated_tt
+		set_country_flag = SOL_can_core_GRF_states
 	}
 	ai_will_do = { factor = 70 }
 }
@@ -4809,17 +4846,7 @@ shared_focus = {
 			#Add these two states to coreable states
 			transfer_state = 737
 			transfer_state = 734
-			737 = {
-				custom_effect_tooltip = add_to_ROOT_potential_original_cores_TT #Currently doesn't work. There must be a way, though
-				hidden_effect = {
-					add_to_array = {
-						ROOT.potential_original_cores = THIS.id
-					}
-					ROOT = {
-						force_potential_core_resistance_on_all_states = yes
-					}
-				}
-			}
+			set_country_flag = SOL_can_core_MGY_port_states
 			MGY = {
 				transfer_state = 763
 				transfer_state = 770
@@ -6090,6 +6117,40 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_raid_archives"
 		###Event of Daybreaker leading an army to attack The Cave, where the artifacts of Maretonia are kept, and she gets into combat with the MTA leader, who is their most powerful mage, and she gets into a proper challenge with him, and almost loses out, aside from her playing dirty to get in, and she ultimately wins, and mocks him as he perishes
+	}
+	ai_will_do = { factor = 100 }
+}
+
+shared_focus = {
+	id = SOL_breach_zebrica
+	x = 7
+	y = 1
+	relative_position_id = SOL_conquer_GRI
+
+	cost = 5
+	available = { is_subject = no }
+	prerequisite = { focus = SOL_conquer_GRI }
+	bypass = {
+		TBK = {
+			OR = {
+				exists = no
+				is_subject_of = ROOT
+				has_war_with = ROOT
+			}
+		}
+	}
+	will_lead_to_war_with = TBK
+
+	completion_reward = {
+		if = {
+			limit = {
+				country_exists = TBK
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = TBK
+			}
+		}
 	}
 	ai_will_do = { factor = 100 }
 }
@@ -9313,9 +9374,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_inspect_officers"
-		army_experience = 10
-		add_political_power = 25
-		add_manpower = -10000
+		country_event = solarreworked.70
 		###Event maybe of a military police officer inspecting or raiding an officer's quarters and finding supposedly damning evidence for anti-Daybreaker activities or working with the harmonic resistance
 	}
 	ai_will_do = { factor = 100 }
@@ -9333,8 +9392,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_modernize_relic"
-		add_command_power = 50
-		add_manpower = -25000
+		country_event = solarreworked.71
 		###Event maybe of Daybreaker personally visiting some of the suspected disloyal troops, and using a couple as an example of what happens to traitors, since there is one that she knows is working with harmonists, who she uses as an example, which she first shows by an item or two from his barracks, and how it also affects the rest of his fellow soldiers, too
 	}
 	ai_will_do = { factor = 100 }
@@ -9438,6 +9496,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_prevent_embarrassments"
 		###Event of one of the generals who would be affected by the purge route being shown to his new office or the like, with some rather demeaning and simple work that will keep him busy, and out of the eye of the public, while still be somewhat useful
+		country_event = solarreworked.72
 	}
 	ai_will_do = { factor = 150 }
 }
@@ -9458,12 +9517,15 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_traitors_reward"
 		###Event of Daybreaker executing one of the generals who get purged, listing of a long list of crimes, both real and fabricated, and accusing them as a harmonist conspirator, before applied a death by flame
+		#country_event = solarreworked.73
+		country_event = solarreworked.503
 		if = {
 			limit = {
 				NOT = { has_completed_focus = SOL_god_empress }
 				NOT = { has_completed_focus = SOL_empress_mother }
 				NOT = { has_completed_focus = SOL_empress_protector }
 			}
+			custom_effect_tooltip = SOL_purge_2_electric_boogaloo_tt
 			set_country_flag = SOL_incomplete_purge
 		}
 	}
@@ -9491,6 +9553,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_sun_shines"
 		###Event of a general being brought forth in front of Daybreaker, who lists off a list of supposed crimes committed by them, and how she could easily have them executed and be done with it, but she is merciful, and she will overlook them for complete loyalty, and if they ever betray that mercy, she will see them suffer before their death, which gets them to agree
+		country_event = solarreworked.74
 	}
 	ai_will_do = { factor = 150 }
 }
