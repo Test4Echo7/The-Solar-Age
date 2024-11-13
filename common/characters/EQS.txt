@@ -2476,7 +2476,7 @@ characters={
 			}
 			available = {
 				is_EQS_SOL = yes
-				has_completed_focus = SOL_air_force
+				has_completed_focus = SOL_abolish_wonderbolts
 			}
 			visible = {
 				is_EQS_SOL = yes
@@ -2577,7 +2577,7 @@ characters={
 			}
 			available = {
 				is_EQS_SOL = yes
-				has_completed_focus = SOL_air_force
+				has_completed_focus = SOL_abolish_wonderbolts
 			}
 			visible = {
 				is_EQS_SOL = yes
@@ -2613,7 +2613,7 @@ characters={
 			}
 			available = {
 				is_EQS_SOL = yes
-				has_completed_focus = SOL_air_force
+				has_completed_focus = SOL_abolish_wonderbolts
 			}
 			visible = {
 				is_EQS_SOL = yes

@@ -632,6 +632,10 @@ recruit_character = EQS_bunsen_beaker
 recruit_character = EQS_nightshift
 recruit_character = EQS_hard_sell
 recruit_character = EQS_countess_coloratura
+recruit_character = EQS_riptide
+recruit_character = EQS_sky_high
+recruit_character = EQS_treadwell
+recruit_character = EQS_butter_knife
 #Foreign characters
 recruit_character = CRY_nightshade
 recruit_character = CRY_morning_mist
@@ -644,6 +648,11 @@ recruit_character = EQC_triple_strike
 recruit_character = EQC_sharp_treble
 recruit_character = EQC_dot_form
 recruit_character = EQC_long_cast
+recruit_character = GRI_Daybreaker
+recruit_character = GRI_sturmvogel
+recruit_character = GRI_lieblingsruebe
+recruit_character = GRI_trinary_scribble
+recruit_character = GRI_gratuity
 
 create_faction = "All_ponies_front"
 add_to_faction = CRY

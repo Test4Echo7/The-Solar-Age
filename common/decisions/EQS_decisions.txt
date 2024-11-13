@@ -1360,6 +1360,24 @@ political_actions = {
 			}
 		}
 	}
+	SOL_fate_of_MDL = {
+		allowed = {
+			original_tag = EQS
+		}
+		available = {
+			is_EQS_SOL = yes
+			MDL = { all_cores_owned_by_ROOT_or_subject = yes }
+		}
+		visible = {
+			MDL = { all_cores_owned_by_ROOT_or_subject = yes }
+		}
+		cost = 25
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SOL_fate_of_MDL"
+			country_event = solarreworked.507
+		}
+	}
 	SOL_remove_temporary_laws = {
 		allowed = {
 			original_tag = EQS

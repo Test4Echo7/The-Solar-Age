@@ -1545,6 +1545,23 @@ ideas = {
 				non_core_manpower = 0.05
 			}
 		}
+		SOL_united_queens = {
+			research_bonus = { magical_tech = 0.05 }
+			modifier = {
+				research_speed_factor = 0.02
+				industry_repair_factor = 0.05
+				production_speed_infrastructure_factor = 0.05
+				production_speed_industrial_complex_factor = 0.025
+				production_speed_rail_way_factor = 0.05
+				production_speed_arms_factory_factor = 0.025
+				line_change_production_efficiency_factor = 0.05
+				conversion_cost_civ_to_mil_factor = -0.05
+				amphibious_invasion = 0.1
+				industrial_capacity_dockyard = 0.15
+				economy_cost_factor = -0.1
+				experience_gain_navy = 0.02
+			}
+		}
 		SOL_solar_vikings = {
 			modifier = {
 				industrial_capacity_dockyard = 0.05
@@ -1606,7 +1623,14 @@ ideas = {
 				army_leader_start_planning_level = 1
 			}
 		}
-		SOL_shared_specialities = {
+		SOL_eastern_sun_goddess = {
+			modifier = {
+				heat_attrition_factor = -0.15
+				political_power_gain = 0.05
+				compliance_gain = 0.005
+			}
+		}
+		SOL_shared_specialties = {
 			modifier = {
 				army_morale_factor = 0.05
 				special_forces_cap = 0.03
@@ -1616,6 +1640,12 @@ ideas = {
 			modifier = {
 				party_popularity_stability_factor = 0.05
 				consumer_goods_factor = -0.02
+			}
+		}
+		SOL_calipha_of_sun = {
+			modifier = {
+				heat_attrition_factor = -0.1
+				supply_consumption_factor = -0.03
 			}
 		}
 		SOL_kirin_artists = {
@@ -2048,6 +2078,21 @@ ideas = {
 				army_attack_factor = -0.05
 				coordination_bonus = -0.05
 				army_leader_cost_factor = 0.15
+			}
+		}
+		SOL_shackled_moon = {
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.1
+				fascism_drift = 0.01
+			}
+		}
+		SOL_royal_example = {
+			modifier = {
+				army_morale_factor = 0.05
+				army_core_attack_factor = 0.05
+				land_night_attack = -0.075
+				fascism_drift = 0.01
 			}
 		}
 		SOL_stolen_fire = {

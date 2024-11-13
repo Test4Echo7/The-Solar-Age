@@ -1279,6 +1279,342 @@ country_event = { #One of the generals who is suspected of being a traitor is br
 }
 #Same as solarreworked.72
 
+country_event = { #Follow a soldier as he heads into a quartermaster or otherwise requisitions new equipment, since he was approved, and being given even further things to sign and to fill out, to ensure that the right thing is delivered to him, which is instant, through magic, once he's done, but it's a pain since he has to fill it in triplicate and get CO approval
+    id = solarreworked.75
+    title = solarreworked.75.t
+    desc = solarreworked.75.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.75"}
+
+    is_triggered_only = yes
+
+    option = { #Just get me my bullets!
+        name = solarreworked.75.a
+        add_ideas = SOL_optimized_bureaucracy
+    }
+}
+
+country_event = { #A soldier dives into a trench after being ordered to, and he is overly panicky, as he holds onto his flamthrower, as he hopes he doesn't actually encounter anypony, but ultimately does, and he almost freaks out enough that he doesn't use it, but he ends up doing so, and regretting it as he sees all the carnage it wreaks
+    id = solarreworked.76
+    title = solarreworked.76.t
+    desc = solarreworked.76.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.76"}
+
+    is_triggered_only = yes
+
+    option = { #Empress forgive me.
+        name = solarreworked.76.a
+        add_ides = SOL_flammenwerfers
+    }
+}
+
+country_event = { # Follow an artillery operator as he gets his first and possibly only shipment of napalm shells that have been developed, and as the enemies are getting closer to their position, they unload the napalm shells, and he sees the results, which horrifies him as he sees how ponies are burned alive and entire environments destroyed
+    id = solarreworked.77
+    title = solarreworked.77.t
+    desc = solarreworked.77.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.77"}
+
+    is_triggered_only = yes
+
+    option = { #What have we done?
+        name = solarreworked.77.a
+        add_ideas = SOL_napalm_shells
+    }
+}
+
+country_event = { #A report of some of the latest casualties in the war are presented, and speak of them like nothing more than tools or the like, as they are all willing to give their lives in sacrifice to Daybreaker, as their God-Empress, and it proposes ways to get more ponies to be conscripted, including presser gangs and the like
+    id = solarreworked.78
+    title = solarreworked.78.t
+    desc = solarreworked.78.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.78"}
+
+    is_triggered_only = yes
+
+    option = { #A million deaths is a statistic...
+        name = solarreworked.78.a
+        add_ideas = SOL_numbers_on_page
+    }
+}
+
+country_event = { #As a small company is working through a town along the border with whomever the Empire is currently at war, they are ambushed by insurgents, but they have a couple of modernized flame tanks, which they use to great effectiveness, and it leads to a complete rout
+    id = solarreworked.79
+    title = solarreworked.79.t
+    desc = solarreworked.79.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.79"}
+
+    is_triggered_only = yes
+
+    option = { #Praise the Flame!
+        name = solarreworked.79.a
+        add_ideas = SOL_mobile_flame_deliverers
+    }
+}
+
+country_event = { #A trainee evoker is put to the test on one of the main combat spells of the Solar Empire and are given instructions on how to do it properly beforehand, and the instructor searches for things they could improve upon, but the student takes to it naturally, and utterly destroys the targets, which leads to a bit of concern, given the pony loves the thrill of it
+    id = solarreworked.80
+    title = solarreworked.80.t
+    desc = solarreworked.80.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.80"}
+
+    is_triggered_only = yes
+
+    option = { #Perhaps a bit too eager.
+        name = solarreworked.80.a
+        set_technology = {
+			SOL_evoker_legions_tech = 1
+			popup = no
+		}
+		add_ideas = SOL_evoker_legions
+    }
+}
+
+country_event = { #One scientist late into the day is penning their notes about the new magical energy weapons that they will be implementing through the new spell matrix crystals they have developed, and constantly looks back and forth between a pony off screen and writing down the rather gruesome effects, until it reveals when they state that it is also explosive to the operator that the effects were all on the now dead test subject who was using it, but the effects are also on other victims, too
+    id = solarreworked.81
+    title = solarreworked.81.t
+    desc = solarreworked.81.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.81"}
+
+    is_triggered_only = yes
+
+    option = { #We'll have to figure out the explosive nature later.
+        name = solarreworked.81.a
+        add_ideas = SOL_second_gen_crystals
+    }
+}
+
+country_event = { #In a panic, a soldier manages to get to their radio to start begging for reinforcements, as the position the soldier is at has been overrun by one of the foes fighting SOL from a breakthrough, and as they are pushed further in, they believe that they will be captured or killed, until a number of mobile infantry divisions show up and relieve them, although they are called out for being close to the wire
+    id = solarreworked.82
+    title = solarreworked.82.t
+    desc = solarreworked.82.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.82"}
+
+    is_triggered_only = yes
+
+    option = { #A few minutes earlier would have been nice!
+        name = solarreworked.82.a
+        add_ideas = SOL_motorized_spearheads
+    }
+}
+
+country_event = { #Daybreaker leads dozens if not a hundred or more troops into the Wonderbolt Academy in Cloudsdale, which still has a number of the Wonderbolts; Spitfire is already captured, since she was in Canterlot, and Soarin' and the other Wonderbolts have already been dealt with in the military purges, and the entire meeting is her shutting it down, and declaring that something better will follow in its place
+    id = solarreworked.83
+    title = solarreworked.83.t
+    desc = solarreworked.83.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.83"}
+
+    is_triggered_only = yes
+
+    option = { #The Solarbeams seem like an adequate rebrand.
+        name = solarreworked.83.a
+        custom_effect_tooltip = available_chief_of_airforce
+		show_ideas_tooltip = blaze
+		custom_effect_tooltip = available_chief_of_airforce
+		show_ideas_tooltip = thunderlane
+		custom_effect_tooltip = available_theorist
+		show_ideas_tooltip = wind_rider
+		if = {
+            limit = {
+                has_dlc = "By Blood Alone"
+            }
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 0.75
+				uses = 1
+				category = light_air
+			}
+			add_tech_bonus = {
+				name = cat_air_guns
+				bonus = 0.75
+				uses = 1
+				category = cat_air_guns
+			}
+		}
+		else = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 0.75
+				uses = 1
+				category = light_fighter
+				category = cat_heavy_fighter
+			}
+		}
+    }
+}
+
+country_event = { #Follow a normal citizen as they go about their day in a village, and they soon notice something in the air, which also makes a few other ponies flee in fear, as they believe themselves safe from normal air attacks, but soon it's clear that it's multiple fighters coming toward them, that soon graze many of the buildings, and they are noticeable by their horns that they have, which instill fear into the populace
+    id = solarreworked.84
+    title = solarreworked.84.t
+    desc = solarreworked.84.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.84"}
+
+    is_triggered_only = yes
+
+    option = { #What in the buck was that?!
+        name = solarreworked.84.a
+        add_ideas = SOL_sirens_of_fear
+    }
+}
+
+country_event = { #Spitfire, after being forced into some new suit, is placed in a prototype airplane to test it and the suit, and she struggles at first to escape, like every time, but she is restrained regardless, as this is her punishment, and she blacks out during the test, but wakes up on the ground, safe, only because of it, before she's sent up again
+    id = solarreworked.85
+    title = solarreworked.85.t
+    desc = solarreworked.85.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.85"}
+
+    is_triggered_only = yes
+
+    option = { #Until death, either age or meeting the ground.
+        name = solarreworked.85.a
+        add_ideas = SOL_involuntary_testing_procedures
+    }
+}
+
+country_event = { #A pilot eagerly hops into his new plane that he has been assigned, given that he's in an experimental plane squadron, and he is given the task of wiping out some resistance with it, and he mostly has fun in the skies as he moves toward the target, before taking an incredibly steep dive which it is rated for, and blacks out, only to be saved by the new dive brakes that react without input
+    id = solarreworked.86
+    title = solarreworked.86.t
+    desc = solarreworked.86.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.86"}
+
+    is_triggered_only = yes
+
+    option = { #Maybe tone down the adrenaline junky aspect.
+        name = solarreworked.86.a
+    }
+}
+
+country_event = { #A short event of a propaganda piece that is done up to tempt ponies to join the Imperial air force, using some of the totally big names of the Solarbeams, who are mostly knock-offs of the Wonderbolt ponies, but it at least promises excitement and the ability to let out aggression on enemies, and downplays the survival rate of pilots
+    id = solarreworked.87
+    title = solarreworked.87.t
+    desc = solarreworked.87.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.87"}
+
+    is_triggered_only = yes
+
+    option = { #You might be next!
+        name = solarreworked.87.a
+        add_ideas = SOL_everypony_ace
+    }
+}
+
+country_event = { #A dive bomber pilot leads a sortie of other dive bombers into a battle that is unfolding beneath them, as she hears radio chatter claiming that a unit is pinned down, and the location is determined, before she dives down to try and rescue them, and she only hopes she can make it, and unleash her payload, which she does, and it obliterates most of the enemy forces, and earning her a few medals in the process
+    id = solarreworked.88
+    title = solarreworked.88.t
+    desc = solarreworked.88.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.88"}
+
+    is_triggered_only = yes
+
+    option = { #Next round's on me!
+        name = solarreworked.88.a
+        add_ideas = SOL_dive_bombers_justice
+    }
+}
+
+country_event = { #Follow one fighter pilot as he starts getting into chatter with another pilot leading a different sortie, and the two sorties get into a bit of a competition on who can be better at combat, which leads to them trying rather reckless things while dogfighting, but they both come out alive, and better friends because of it
+    id = solarreworked.89
+    title = solarreworked.89.t
+    desc = solarreworked.89.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.89"}
+
+    is_triggered_only = yes
+
+    option = { #Who knew killing was bond forming?
+        name = solarreworked.89.a
+        add_ideas = SOL_balanced_air_powers
+    }
+}
+
+country_event = { #A sole bomber pilot is flying his plane toward a target destination hours away, and the rest of the crew are nodding off because it is nighttime and will still be night, and he merely thinks to himself about how beautiful the world and the night sky is, which makes him instantly consider crashing his plane because he should be loyal to the day, but he talks himself out of his wonder and into a proper anger about the enemies he will bombard
+    id = solarreworked.90
+    title = solarreworked.90.t
+    desc = solarreworked.90.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.90"}
+
+    is_triggered_only = yes
+
+    option = { #Just a moment of weakness!
+        name = solarreworked.90.a
+        add_ideas = SOL_limitless_bombing
+    }
+}
+
+country_event = { #Daybreaker arrives on the docks of Manehattan to speak with some of the admiralty regarding the state of the navy, which has been neglected for a bit of time, and they are all nervous when speaking to her, since she can see that the ships they were so excited about are, in fact, mothballs that have been repaired, and that's about it, and she is far from amused, although agrees that some ships are better than none
+    id = solarreworked.91
+    title = solarreworked.91.t
+    desc = solarreworked.91.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.91"}
+
+    is_triggered_only = yes
+
+    option = { #This better not be all of them.
+        name = solarreworked.91.a
+        #Ships here
+    }
+}
+
+country_event = { #Follow a newer captain as he brings his ship of which he has been given command draw nearer to Fillydelphia's port, where Daybreaker is visible and watching expectantly, which makes the captain nervous, since he's doing his first live fire drill, and of a new ship, too, and he almost has them accidently fire on the city, before realizing his mistake and firing out to sea, which he hopes impresses Daybreaker
+    id = solarreworked.92
+    title = solarreworked.92.t
+    desc = solarreworked.92.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.92"}
+
+    is_triggered_only = yes
+
+    option = { #Let's keep that on the down low, okay?
+        name = solarreworked.92.a
+        set_country_flag = SOL_new_admirals
+        custom_effect_tooltip = riptide_stats_tp
+        custom_effect_tooltip = sky_high_stats_tp
+    }
+}
+
+country_event = { #A captain of a new battleship which has been recently launched eagerly starts patrolling through the South-East with the rest of his accompanying fleet, as he is on the hunt for pirates, which he eventually finds, and gives one brief message to offer them amnesty, which isn't accepted, and he can see them start to flee, which is when he opens fire, and enjoys the death and destruction that he rains
+    id = solarreworked.93
+    title = solarreworked.93.t
+    desc = solarreworked.93.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.93"}
+
+    is_triggered_only = yes
+
+    option = { #What hope did they have?
+        name = solarreworked.93.a
+        add_ideas = SOL_imperial_ironclads
+    }
+}
+
+country_event = { #In curiosity, Daybreaker meets with a ship designer from Manehattan, who is currently under investigation for anti-Order activities, who claims they have the perfect ship for her, which can be the weapons bed for more powerful ships into the future, and she is unsure if he's trying to bribe her to let him go or the like, but she is amused, and promises him as much, for now, anyway
+    id = solarreworked.94
+    title = solarreworked.94.t
+    desc = solarreworked.94.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.94"}
+
+    is_triggered_only = yes
+
+    option = { #Perhaps this has some merit after all.
+        name = solarreworked.94.a
+        add_tech_bonus = {
+			name = shbb_bonus
+			uses = 1
+			bonus = 2
+			category = shbb_tech
+		}
+		custom_effect_tooltip = SOL_biggest_guns_tt #Mention that player will get a design once researched (or already researched), and one production line of Daybreak-Class at 50% completion
+    }
+}
+
+country_event = { #After finally getting onto her new flagship (not necessarily the Daybreak), Daybreaker finds that she still enjoys the waves, and is more than pleased with the amount of firepower her flagship has, and since she knows that ponies are watching her, she makes a short speech about how they will reach the ends of the world with her fleet, and then uses the ship to fire over the city, although the explosions past it do cause a tiny bit of collateral damage, which she is fine with
+    id = solarreworked.95
+    title = solarreworked.95.t
+    desc = solarreworked.95.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.95"}
+
+    is_triggered_only = yes
+
+    option = { #A show's a show.
+        name = solarreworked.95.a
+        add_ideas = SOL_high_seas_empire
+    }
+}
+
 ###Flavour###
 country_event = { #Daybreaker visit's Fluttershy's family, as Zephyr Breeze has been drafted into the military, but he has been dodging it wherever he could, and after a bit of a tense meeting in the library, she basically forces him into the military, as he is an example because he's Fluttershy's brother, and she will not have herself be defied again
     id = solarreworked.100
@@ -1456,10 +1792,7 @@ country_event = { #Daybreaker marches and enters into the chambers of Grover, wh
 
     option = { #I shall watch the Empire in your stead.
         name = solarreworked.120.a
-        if = {
-			limit = {
-				GRD = { NOT = { tag = GRI } }
-            }
+        hidden_effect = {
             every_possible_country = {
                 limit = {
                     has_character = GRI_daybreaker
@@ -1468,9 +1801,10 @@ country_event = { #Daybreaker marches and enters into the chambers of Grover, wh
                     set_nationality = GRD
                 }
             }
-		}
+        }
 		GRD = {
             set_country_flag = is_solar_puppet
+            set_country_flag = SOL_established_personal_union
             get_current_government_type = yes
             set_cosmetic_tag = GRI_SOL
 			if = {
@@ -1539,10 +1873,7 @@ country_event = { #Daybreaker smugly walks through Griffonstone, in a parade wit
 
     option = { #Kneel for your new Empress!
         name = solarreworked.121.a
-        if = {
-			limit = {
-				GRD = { NOT = { tag = GRI } }
-            }
+        hidden_effect = {
             every_possible_country = {
                 limit = {
                     has_character = GRI_daybreaker
@@ -1554,6 +1885,7 @@ country_event = { #Daybreaker smugly walks through Griffonstone, in a parade wit
 		}
 		GRD = {
             set_country_flag = is_solar_puppet
+            set_country_flag = SOL_established_personal_union
             get_current_government_type = yes
             set_cosmetic_tag = GRI_SOL
 			if = {
@@ -1652,6 +1984,22 @@ country_event = {
     option = { #They will be nothing but ash!
         name = solarreworked.130.a
         set_country_flag = SOL_supernova_seen
+    }
+}
+
+country_event = { #Grover is given a personal set of armor as a gift by Daybreaker after achieving wholesomeness
+    id = solarreworked.132
+    title = solarreworked.132.t
+    desc = solarreworked.132.d
+    picture = GFX_event_solarempire
+    immediate = {lgo = "[GetDateText]: [ROOT.GetName]: event solarreworked.135"}
+
+    is_triggered_only = yes
+
+    option = { #May the sun shine upon the Griffonian Empire.
+        name = solarreworked.132.a
+        add_ideas = SOL_shared_specialties
+        GRD = { add_ideas = SOL_shared_specialties }
     }
 }
 
@@ -3468,6 +3816,7 @@ country_event = { #A shorter event of Daybreaker's thoughts as she surveys her p
     }
 }
 
+###Canon Daybreaker###
 country_event = { #A speech from Daybreaker hosted to the entire country through either radio or physical attendance, going on about what she has done for them already, and how she is clearly their better and benefactor, and that ponies must follow her every word, that they may protect her and Harmony
     id = solarreworked.320
     title = solarreworked.320.t
@@ -3525,7 +3874,11 @@ country_event = { #Event of Daybreaker merely looking over some of her itenerary
     option = { #They may hate me, but they will obey me.
         name = solarreworked.323.a
         add_ideas = SOL_peace_is_war
-        ###New advisors
+        set_country_flag = SOL_mothers_best
+        custom_effect_tooltip = available_high_command
+        show_ideas_tooltip = treadwell
+        custom_effect_tooltip = available_high_command
+        show_ideas_tooltip = butter_knife
     }
 }
 
@@ -3670,6 +4023,7 @@ country_event = { #Follow a citizen as they are brought before Daybreaker to ask
     }
 }
 
+###Fallen Hero###
 country_event = { #A series of laws are read allowed, and end with an official signature of Daybreaker, which speak about how pony society will be changing and adapting to the new order, and that she will ensure that ponies will do various things, such as community service, free labor for others, mandatory donations to charities, etc., which will ultimately better society to her vision and Harmony's vision
     id = solarreworked.340
     title = solarreworked.340.t
@@ -3878,6 +4232,697 @@ country_event = { #Follow Daybreaker as she personally breaks into the home of s
         add_political_power = 70
         add_stability = 0.1
         add_ideas = SOL_Freedom_from_Fear_idea
+    }
+}
+
+###World Conquest Events###
+country_event = { #Follow some soldiers as they storm into Ember's last stronghold on the Dragon Isles, and some of them are taken out quickly, but they simply have overwhelming numbers, and manage to capture Ember, despite how much she fights back
+    id = solarreworked.370
+    title = solarreworked.370.t
+    desc = solarreworked.370.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.370"}
+
+    is_triggered_only = yes
+
+    option = { #Now it's our island.
+        name = solarreworked.370.a
+        DRG = { add_to_ROOT_potential_cores = yes }
+    }
+}
+
+country_event = { #A dragon, who is being used for forced labor, manages to find a way to slip past some of her guards, and she does grab a couple of gems which are being mined to eat as she hopes she can escape and fly to the ice dragon realm, but she accidentally trips over something, and she alerts the guards, and is ultimately recaptured after a chase
+    id = solarreworked.371
+    title = solarreworked.371.t
+    desc = solarreworked.371.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.371"}
+
+    is_triggered_only = yes
+
+    option = { #Can't we at least sample our work?!
+        name = solarreworked.371.a
+        add_dynamic_modifier = { modifier = SOL_dragon_miners }
+    }
+}
+
+country_event = { #A short event of Daybreaker relaxing on the beaches of PCB, and thinking about how it was a great idea to take a few days off, since the war effort has been going well, and it slowly zooms out narratively to show that other ponies are now suffering greatly because she is using the sun as personal sunbathing device, which massively increases the heat on the beach, to the point of making most ponies suffer heat stroke
+    id = solarreworked.372
+    title = solarreworked.372.t
+    desc = solarreworked.372.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.372"}
+
+    is_triggered_only = yes
+
+    option = { #They need a bit more sun.
+        name = solarreworked.372.a
+        add_ideas = SOL_imperial_resort
+    }
+}
+
+country_event = { #A changeling prisoner is brought out to be counted among some of the other prisoners, as the Empire is still calculating every changeling that they have gotten, and he has so far been deprived of any emotions whatsoever, and been forced to live off normal food, which is making him partly feral, and he is made to work in forced labor, probably mines or reconstruction, without any further promise of sustinence
+    id = solarreworked.373
+    title = solarreworked.373.t
+    desc = solarreworked.373.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.373"}
+
+    is_triggered_only = yes
+
+    option = { #Just a little love. I needs it!
+        name = solarreworked.373.a
+        save_current_manpower = yes
+        every_state = {
+            limit = {
+                is_core_of = CHN
+                is_owned_by = ROOT
+            }
+            add_manpower = -25000
+            add_resistance = -10
+            add_compliance = 5
+        }
+        restore_previous_manpower = yes
+    }
+}
+
+country_event = { #As Daybreaker enters one of the hives, probably Vraks, she leads, in chains, the other queens who supported Chrysalis in her attack on the Empire that she is impressed by the hives, and how they have expanded and flourished, and how it would be a shame if something would happen to them, possibly as punishment for slights against her, and soon has the hive damaged by her soldiers, while stating every hive is suffering a similar fate, for daring to threaten Harmony
+    id = solarreworked.374
+    title = solarreworked.374.t
+    desc = solarreworked.374.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.374"}
+
+    is_triggered_only = yes
+
+    option = { #Now, have I made myself clear?
+        name = solarreworked.374.a
+        add_political_power = 75
+        save_current_manpower = yes
+        259 = {
+            add_manpower = -250000
+            add_compliance = 5
+        }
+		309 = {
+            add_manpower = -250000
+            add_compliance = 5
+        }
+		262 = {
+            add_manpower = -250000
+            add_compliance = 5
+		}
+		252 = {
+            add_manpower = -250000
+            add_compliance = 5
+		}
+		restore_previous_manpower = yes
+    }
+}
+
+country_event = { #In a prison, Chrysalis is languishing and Daybreaker soon visits her to have one last talk with her, as she will be soon either locked away or executed, and she hasn't decided quite yet, and states that Chrysalis was stupid for ever daring to attack her ponies; her ego blinded her; Chrysalis manages to clap back with a retort about how Daybreaker is the true monster, and Daybreaker merely finds it amusing, since she's doing what's best for her citizens, and what's best is ensuring that Chrysalis is never a threat again
+    id = solarreworked.375
+    title = solarreworked.375.t
+    desc = solarreworked.375.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.375"}
+
+    is_triggered_only = yes
+
+    option = { #Indefinite solitary should suffice.
+        name = solarreworked.375.a
+        add_war_support = 0.1
+    }
+    option = { #There's only one fate for an animal like you.
+        name = solarreworked.375.b
+        add_stability = 0.1
+    }
+}
+
+country_event = { #The queens that supported Chrysalis are brought before Daybreaker, who soon speaks with them about how they will suffer a similar fate to what will happen to Chrysalis, but she's feeling merciful, and despite how she is at least insulted by a couple of the queens there, she offers them one chance to assist her with maintaining order in the hives, and that she will reward them with life
+    id = solarreworked.376
+    title = solarreworked.376.t
+    desc = solarreworked.376.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.376"}
+
+    is_triggered_only = yes
+
+    option = { #Would you be foalish enough to refuse?
+        name = solarreworked.376.a
+        add_ideas = SOL_united_queens
+    }
+}
+
+country_event = { #Queen Velvet is brought forward to Daybreaker, who is rather coy and playful, as she promises Velvet that she is going to be treated kindly, as rather than having to deal with all of the deer herself, and their rather independent ways, she is going to let Velvet rule, but she will only be a figurehead, and do whatever Daybreaker wishes; Velvet is made quite clear she has this as her only option if she wants to survive
+    id = solarreworked.377
+    title = solarreworked.377.t
+    desc = solarreworked.377.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.377"}
+
+    is_triggered_only = yes
+
+    option = { #Now, there is work to be done.
+        name = solarreworked.377.a
+        custom_effect_tooltip = SOL_floofy_dear_puppet_tt
+		if = {
+			limit = {
+				69 = { is_core_of = ROOT }
+				218 = { is_core_of = ROOT }
+				296 = { is_core_of = ROOT }
+				217 = { is_core_of = ROOT }
+			}
+			set_temp_variable = { SOL_colonized_OLE_states = 1 }
+		}
+		hidden_effect = {
+			release_autonomy = {
+				target = OLE
+				autonomy_state = autonomy_reichsprotectorate
+			}
+			every_possible_country = {
+                limit = { has_character = OLE_queen_velvet }
+                if = {
+                    limit = { ROOT = { has_completed_focus = SOL_god_empress } }
+                    OLE_queen_velvet = {
+                        add_country_leader_role = {
+                            promote_leader = yes
+                            country_leader = {
+                                ideology = falangism
+                                expire = "1965.1.1"
+                            }
+                        }
+                    }
+                }
+                else = {
+                    OLE_queen_velvet = {
+                        add_country_leader_role = {
+                            promote_leader = yes
+                            country_leader = {
+                                ideology = nazism
+                                expire = "1965.1.1"
+                            }
+                        }
+                    }
+                }
+			}
+			transfer_state = 76
+			transfer_state = 189
+			transfer_state = 224
+			transfer_state = 69
+			transfer_state = 218
+			transfer_state = 296
+			transfer_state = 217
+			if = {
+				limit = { check_variable = { SOL_colonized_OLE_states = 1 } }
+				69 = { add_core_of = ROOT }
+				218 = { add_core_of = ROOT }
+				296 = { add_core_of = ROOT }
+				217 = { add_core_of = ROOT }
+			}
+			every_state = {
+                limit = {
+                    is_core_of = OLE
+                    is_owned_by = ROOT
+                    NOT = { is_core_of = ROOT }
+                }
+                add_dynamic_modifier = { modifier = SOL_figurehead_compliance }
+			}
+		}
+    }
+}
+
+country_event = { #Follow Velvet as she enters a meeting within the pony administration in Hjortland, as she is part of the integration team for OLE's territory, but she is no longer seen as monarch, or even royalty, and she silently laments how she was not able to save her people from either the threats of the changelings or the Empire, and does what she can to lessen the blow of an Imperial administration
+    id = solarreworked.378
+    title = solarreworked.378.t
+    desc = solarreworked.378.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.378"}
+
+    is_triggered_only = yes
+
+    option = { #Please forgive me, my deer.
+        name = solarreworked.378.a
+        every_state = {
+            limit = {
+                is_core_of = OLE
+                is_owned_by = ROOT
+                NOT = { is_core_of = ROOT }
+            }
+            add_dynamic_modifier = { modifier = SOL_crushed_deer_dreams }
+        }
+    }
+}
+
+country_event = { #Rutherford is in the middle of doing some menial labor in a factory when his overseer starts to berate him for missing something or otherwise "being stupid" and he snaps and attempts to beat down his overseer, but is caught in time by guards, who proceed to punish him harshly with the butts of their guns instead
+    id = solarreworked.379
+    title = solarreworked.379.t
+    desc = solarreworked.379.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.379"}
+
+    is_triggered_only = yes
+
+    option = { #Yak. Will. SMASH!
+        name = solarreworked.379.a
+        add_ideas = SOL_yaks_smashed
+    }
+}
+
+country_event = { #Pumpkin Swirl nervously waits for Daybreaker to arrive within River City, and when she does arrive, Pumpkin stumbles through much of her greeting, since she really isn't that much of a speaker, and Daybreaker merely demands that she show what has happened in the city, and makes a few insinuations that she can be repleaced if she can't handle RIV, but she is at least placated by how monuments are being raised to her conquests
+    id = solarreworked.380
+    title = solarreworked.380.t
+    desc = solarreworked.380.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.380"}
+
+    is_triggered_only = yes
+
+    option = { #You're not ENTIRELY incapable.
+        name = solarreworked.380.a
+        619 = {
+            add_compliance = 5
+            add_extra_state_shared_building_slots = 2
+            add_dynamic_modifier = { modifier = SOL_improved_river_architecture }
+        }
+    }
+}
+
+country_event = { #Follow River Swirl as she and a small number of leaders and soldiers from RIV attempt to flee through a port in BAK to NCH to continue the government of RIV, and as they almost get to the ship out, they are found out by soldiers or spies, and apprehended after a short fight, and she laments that it is how harmony dies
+    id = solarreworked.381
+    title = solarreworked.381.t
+    desc = solarreworked.381.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.381"}
+
+    is_triggered_only = yes
+
+    option = { #So this is how Harmony dies. With nary a whimper.
+        name = solarreworked.381.a
+        every_state = {
+            limit = {
+                is_core_of = RIV
+                is_owned_by = ROOT
+            }
+            add_compliance = 10
+            add_resistance = -5
+        }
+    }
+}
+
+country_event = { #Daybreaker enters an interrogation or torture chamber, where the father of Molly is currently held, and who has so far resisted all attempts at breaking him, and while he insults her, Daybreaker decides to take out a bit of her annoyance on him, before stating taht she will probably just use Molly instead, as she is certain Molly can break, which finally gets at him, and he states he will do what she wants, so long as Molly is safe
+    id = solarreworked.382
+    title = solarreworked.382.t
+    desc = solarreworked.382.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.382"}
+
+    is_triggered_only = yes
+
+    option = { #Then beg.
+        name = solarreworked.382.a
+        release_autonomy = {
+            target = DMT
+            autonomous_state = autonomy_reichskommissariat
+        }
+    }
+}
+
+country_event = { #An Imperial overseer sees how hard some of the diamond dogs are working, but spots others that he believes to be rather on the slacking side, and decides to take a couple to show as examples to the rest, probably by having them executed harshly, such as lava, fire, or firing squad, or the like, to ensure they remain compliant
+    id = solarreworked.383
+    title = solarreworked.383.t
+    desc = solarreworked.383.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.383"}
+
+    is_triggered_only = yes
+
+    option = { #Now, is another demonstration in order?
+        name = solarreworked.383.a
+        #Effect here
+    }
+}
+
+country_event = { #Daybreaker arrives within the ancient town of Sommnambula, where Somnambula the pony is originally from, and she stands in front of one of the pyramids, which is considered the oldest is all of Maregypt, and she speaks about how ponies of the ancient days knew about a sun goddess, and spoke of her power and how she saved them before the days of Somnambula, and clearly lays out how she is that pony, and she has come again to guide and save them, so long as ponies follow her
+    id = solarreworked.384
+    title = solarreworked.384.t
+    desc = solarreworked.384.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.384"}
+
+    is_triggered_only = yes
+
+    option = { #A useful tradition, if nothing else.
+        name = solarreworked.384.a
+        add_ideas = SOL_eastern_sun_goddess
+    }
+}
+
+country_event = { #Autumn Blaze leads a group of kirin, who are in charge of a few Imperial soldiers who are on a mission to put down a kirin insurrection in one of the states of Kiria, and when they find the location, Autumn reluctantly starts getting more upset, especially after she sees one of her soldiers be shot, and she goes nirik, leading others against the kirin, who go nirik themselves, and the display of fire magic leaves the regular ponies in awe
+    id = solarreworked.385
+    title = solarreworked.385.t
+    desc = solarreworked.385.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.385"}
+
+    is_triggered_only = yes
+
+    option = { #They are unbelieveable!
+        name = solarreworked.385.a
+        add_ideas = SOL_nirik_commandos
+    }
+}
+
+country_event = { #Daybreaker receives a new series of letters or a book from a number of kirin generals and other theorists of war, as she requested, on what she could do to improve her military further, and it is a rather confusing series of statements, much like Sun Tzu, although she sort of understands the concepts behind them, as it's very much in the vein of the Art of War
+    id = solarreworked.386
+    title = solarreworked.386.t
+    desc = solarreworked.386.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.386"}
+
+    is_triggered_only = yes
+
+    option = { #Do they even understand what they're saying?
+        name = solarreworked.386.a
+        add_ideas = SOL_kirin_war_masters
+    }
+}
+
+country_event = { #Daybreaker personally arrives in the Kaiserschloss, as it's her new palace in GRI, and she brings with her multiple pony administrators, who start to replace the nobles who served before, which infuriates the griffons there, but she simply asks if they would like to perish or live, as the ponies will make the Griffonian Empire a stronger nation, and a better one, like her empire, and they reluctantly agree
+    id = solarreworked.387
+    title = solarreworked.387.t
+    desc = solarreworked.387.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.387"}
+
+    is_triggered_only = yes
+
+    option = { #I thought that was a hasty rejection.
+        name = solarreworked.387.a
+        hidden_effect = {
+            GRI_trinary_scribble = { set_nationality = GRD }
+            GRI_gratuity = { set_nationality = GRD }
+        }
+        GRD = {
+            add_ideas = SOL_imperial_corrections
+            set_country_flag = GRI_SOL_imperial_advisors
+            custom_effect_tooltip = available_political_advisor
+            show_ideas_tooltip = trinary_scribble
+            custom_effect_tooltip = available_political_advisor
+            show_ideas_tooltip = gratuity
+        }
+    }
+}
+
+country_event = { #Daybreaker meets with Prince Faisal of Saddle Arabia, who was just released from a prison from whomever won the civil war, and he practically worships her as thanks, which disgusts her, and she states that she is giving him back his peninsula, but he'll have to follow her every command, and also cut the spending, which he reluctantly agrees to in order to live
+    id = solarreworked.388
+    title = solarreworked.388.t
+    desc = solarreworked.388.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.388"}
+
+    is_triggered_only = yes
+
+    option = { #Now stop groveling. It's revolting.
+        name = solarreworked.388.a
+        add_ideas = SOL_prince_faisal
+		SDL = {
+			get_current_government_type = yes
+		}
+		if = {
+			limit = {
+				SDL = {
+					exists = yes
+					all_cores_owned_by_ROOT_or_subject = yes
+					is_subject_of = EQS
+				}
+			}
+			if = {
+				limit = {
+					SDC = {
+						exists = yes
+						is_subject_of = ROOT
+					}
+				}
+				SDL = {
+					annex_country = {
+						target = SDC
+					}
+				}
+			}
+			if = {
+				limit = {
+					SDF = {
+						exists = yes
+						is_subject_of = ROOT
+					}
+				}
+				SDL = {
+					annex_country = {
+						target = SDF
+					}
+				}
+			}
+			if = {
+				limit = {
+					SDS = {
+						exists = yes
+						is_subject_of = ROOT
+					}
+				}
+				SDL = {
+					annex_country = {
+						target = SDS
+					}
+				}
+			}
+			if = {
+				limit = {
+					EMR = {
+						exists = yes
+						is_subject_of = EQS
+					}
+				}
+				SDL = {
+					annex_country = {
+						target = EMR
+					}
+				}
+			}
+		}
+		else = {
+			release_autonomy = {
+				target = SDL
+				autonomy_state = autonomy_reichsprotectorate
+				freedom_level = 0.5
+			}
+			if = {
+				limit = {
+					SDL = {
+						exists = yes
+						is_subject_of = ROOT
+					}
+				}
+				if = {
+					limit = {
+						SDC = {
+							exists = yes
+							is_subject_of = ROOT
+						}
+					}
+					SDL = {
+						annex_country = {
+							target = SDC
+						}
+					}
+				}
+				if = {
+					limit = {
+						SDF = {
+							exists = yes
+							is_subject_of = ROOT
+						}
+					}
+					SDL = {
+						annex_country = {
+							target = SDF
+						}
+					}
+				}
+				if = {
+					limit = {
+						SDS = {
+							exists = yes
+							is_subject_of = ROOT
+						}
+					}
+					SDL = {
+						annex_country = {
+							target = SDS
+						}
+					}
+				}
+				if = {
+					limit = {
+						EMR = {
+							exists = yes
+							is_subject_of = ROOT
+						}
+					}
+					SDL = {
+						annex_country = {
+							target = EMR
+						}
+					}
+				}
+			}
+		}
+		SDL = {
+			set_cosmetic_tag = SDL_SOL
+			restore_previous_government_type = yes
+		}
+    }
+}
+
+country_event = { #A radio broadcast of Daybreaker is sent over the airwaves of the Saddle Arabian peninsual, as she claims the title of calipha of some religion the horses once followed, which was also a corruption of her as Celestia, as she visited there at one point, and she claims that anypony or horse who resists will feel her wrath
+    id = solarreworked.389
+    title = solarreworked.389.t
+    desc = solarreworked.389.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.389"}
+
+    is_triggered_only = yes
+
+    option = { #Another way to control them.
+        name = solarreworked.389.a
+        add_ideas = SOL_calipha_of_sun
+        YMN = {
+			get_current_government_type = yes
+		}
+		if = {
+			limit = { YMN = { exists = no } }
+			release_autonomy = {
+				target = YMN
+				autonomy_state = autonomy_reichsprotectorate
+				freedom_level = 0.33
+			}
+		}
+		YMN = {
+			restore_previous_government_type = yes
+			set_cosmetic_tag = YMN_SOL
+		}
+    }
+}
+
+country_event = { #Follow a horse who is trying to flee from a city in MTA, and he believes that he is free, since he has managed to steal something from the vaults of the keepers there, and is suddenly ambushed by unicorns, who work with the keepers a tad to enforce Daybreaker's will appear in a flash of magic and execute him by fire for stealing from Daybreaker directly
+    id = solarreworked.390
+    title = solarreworked.390.t
+    desc = solarreworked.390.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.390"}
+
+    is_triggered_only = yes
+
+    option = { #Wait!
+        name = solarreworked.390.a
+        set_technology = {
+			SOL_unicorn_hit_squads_tech = 1
+			popup = no
+		}
+		add_ideas = SOL_unicorn_hit_squads
+    }
+}
+
+country_event = { #Daybreaker prepares to break into the vaults of MTA, and after it's breached, she gets into combat with the main caretaker there, but ultimately triumphs
+    id = solarreworked.391
+    title = solarreworked.391.t
+    desc = solarreworked.391.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.391"}
+
+    is_triggered_only = yes
+
+    option = { #Now your knowledge is mine!
+        name = solarreworked.391.a
+        add_ideas = SOL_artifacts_galore
+    }
+}
+
+country_event = { #Follow either inquisitors or regular soldiers or ponies (if not God-Empress) as they march upon a town in BAT, as they have been okayed by the order to further exterminate or drive out any bats that are still there, and it leads to an extensive fight, as the thestrals strive for their very lives to survive, although they are ultimately defeated
+    id = solarreworked.392
+    title = solarreworked.392.t
+    desc = solarreworked.392.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.392"}
+
+    is_triggered_only = yes
+
+    option = { #Burn the bats! Burn the bats!
+        name = solarreworked.392.a
+        every_state = {
+            limit = {
+                is_core_of = BAT
+                is_owned_by = ROOT
+            }
+            add_resistance = -10
+            add_compliance = 5
+        }
+    }
+}
+
+country_event = { #Sunrise Sparkle arrives within BAT's capital, and a number of thestral leaders have already been brought out in chains, and she takes one look at them before she has them prepared to be executed, as she lists out that that day, Daybreaker's justice against the darkness has finally been served, and she watches without hesitation of them being shot dead
+    id = solarreworked.393 #If Sunrise isn't around, then have a rapidly loyal official instead
+    title = solarreworked.393.t
+    desc = solarreworked.393.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.393"}
+
+    is_triggered_only = yes
+
+    option = { #The mistakes of the past have been rectified.
+        name = solarreworked.393.a
+        add_political_power = 100
+        add_stability = 0.1
+        every_state = {
+            limit = {
+                is_core_of = BAT
+                is_owned_by = ROOT
+            }
+            add_compliance = 5
+        }
+    }
+}
+
+country_event = { #A soldier learns that his squad has received final orders from the Militarium on how to finally deal with the bats, and he knows that it means going in, burning things to the ground, and capturing those who flee to execute them, and at first, he is with his squad, but he slowly realizes how they could be better put to use, and also that killing them is a waste, unless they die rebuilding for the Empress, but he can't question his orders, although he feels slightly guilty about what will be done, as a shred of his dignity still exists
+    id = solarreworked.394
+    title = solarreworked.394.t
+    desc = solarreworked.394.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.394"}
+
+    is_triggered_only = yes
+
+    option = { #I will need to go to confessional after this.
+        name = solarreworked.394.a
+        BAT = { add_to_ROOT_potential_cores = yes }
+        #Reduce population massively
+        add_stability = 0.1
+        add_war_support = 0.1
+    }
+}
+
+country_event = { #Follow one of the former BAT non-thestral leaders, who has been supposedly reformed, watching as ponies of all kinds bring books that they have dug out of the archives and labs in BAT to burn, as it contains most of thestral history and scientific research, and how it will be lost forever, and although she wishes they could stop, she can't, and slowly loses hope
+    id = solarreworked.395
+    title = solarreworked.395.t
+    desc = solarreworked.395.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.395"}
+
+    is_triggered_only = yes
+
+    option = { #What more is there to study?
+        name = solarreworked.395.a
+        add_ideas = SOL_what_thestrals
+    }
+}
+
+country_event = { #Culmination event for Daybreaker, where she has her reward (to herself) that she deserves from her actions, either worship, glory, or a safe populace, depending on path
+    id = solarreworked.399
+    title = solarreworked.399.t
+    desc = {
+        trigger = { has_completed_focus = SOL_god_empress }
+        text = solarreworked.399.da
+    }
+    desc = {
+        trigger = { has_completed_focus = SOL_empress_mother }
+        text = solarreworked.399.db
+    }
+    desc = {
+        trigger = { has_completed_focus = SOL_empress_protector }
+        text = solarreworked.399.dc
+    }
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.399"}
+
+    is_triggered_only = yes
+
+    option = { #Order and Harmony have been brought to my empire!
+        name = solarreworked.399.a
+        add_stability = 0.25
+        add_political_power = 250
+        custom_effect_tooltip = SOL_conglaturation_a_winner_is_you_tt
     }
 }
 
@@ -5520,6 +6565,44 @@ country_event = { #Event that Stalliongrad will get if the player takes too many
             }
         }
         custom_effect_tooltip = EQS_temp_content_is_temp_tt
+    }
+}
+
+country_event = { #Event for deciding the fate of MDL, and whether it is held by SOL, transferred to MGY, or set up as their own puppet
+    id = solarreworked.507
+    title = solarreworked.507.t
+    desc = solarreworked.507.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetNameDef]: event solarreworked.507"}
+
+    is_triggered_only = yes
+
+    option = { #We shall continue administering this region.
+        name = solarreworked.507.a
+        trigger = { MDL = { all_cores_owned_by_ROOT = yes } }
+        every_state = {
+            limit = {
+                is_core_of = MDL
+            }
+            add_compliance = 15
+        }
+    }
+    option = { #Maregypt has claim to it. We shall let them administer it.
+        name = solarreworked.507.b
+        every_state = {
+            limit = {
+                is_core_of = MDL
+            }
+            transfer_state_to = MGY
+            add_core_of = MGY
+        }
+    }
+    option = { #They are their own unique culture. Mandalusian ponies shall administer it themselves.
+        name = solarreworked.507.c
+        release_autonomy = {
+            target = MDL
+            autonomous_state = autonomy_reichsprotectorate
+        }
     }
 }
 

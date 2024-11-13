@@ -49,7 +49,7 @@ characters = {
 			available = {
 				is_EQS_SOL = yes
 			}
-			traits = { army_regrouping_2 }
+			traits = { army_infantry_2 }
 
 			ai_will_do = {
 				factor = 1
@@ -111,22 +111,6 @@ characters = {
 				large = "gfx/leaders/EQS/Stellar_Breeze.tga"
 			}
 		}
-		#corps_commander = {
-		#	traits = { solaris_adoratio pony_race_trait overworked_secretary } ###Have a trait called overworked_secretary and say how much pressure it puts on her from Sunset, which gives -10% experience gain, -5% recovery, but +5% organization and +3 division capacity
-		#	skill = 2
-		#	attack_skill = 1
-		#	defense_skill = 1
-		#	planning_skill = 3
-		#	logistics_skill = 2
-		#	visible = {
-		#		if = {
-		#			limit = {
-		#				original_tag = EQS
-		#			}
-		#			has_country_flag = redeemed_solarist_generals
-		#		}
-		#	}
-		#}
 		advisor = {
 			slot = political_advisor
 			idea_token = stellar_breeze
@@ -460,6 +444,58 @@ characters = {
 			traits = { equestrian_sweetheart }
 		}
 	}
+	EQS_riptide = {
+		name = EQS_riptide
+
+		navy_leader = {
+			skill = 2
+			traits = { pony_race_trait ironside bold }
+			attack_skill = 3
+			defense_skill = 1
+			maneuvering_skill = 2
+			coordination_skill = 1
+			visible = { has_country_flag = SOL_new_admirals }
+		}
+	}
+	EQS_sky_high = {
+		name = EQS_sky_high
+		gender = female
+
+		navy_leader = {
+			skill = 2
+			traits = { pony_race_trait air_controller navy_career_officer }
+			attack_skill = 2
+			defense_skill = 1
+			maneuvering_skill = 1
+			coordination_skill = 3
+			visible = { has_country_flag = SOL_new_admirals }
+		}
+	}
+	EQS_treadwell = {
+		name = EQS_treadwell
+
+		advisor = {
+			slot = high_command
+			allowed = { original_tag = EQS }
+			idea_token = treadwell
+			available = { is_EQS_SOL = yes }
+			visible = { has_country_flag = SOL_mothers_best }
+			traits = { army_armored_2 }
+		}
+	}
+	EQS_butter_knife = {
+		name = EQS_butter_knife
+		gender = female
+
+		advisor = {
+			slot = high_command
+			allowed = { original_tag = EQS }
+			idea_token = butter_knife
+			available = { is_EQS_SOL = yes }
+			visible = { has_country_flag = SOL_mothers_best }
+			traits = { army_logistics_2 }
+		}
+	}
 
 	###Foreign nation characters###
 	GRI_daybreaker = {
@@ -494,6 +530,47 @@ characters = {
 			available = { is_EQS_SOL = yes }
 			visible = { has_country_flag = SOL_unlocked_griffon_advisors }
 			traits = { professional_scrounger }
+		}
+	}
+	GRI_trinary_scribble = {
+		name = GRI_trinary_scribble
+		gender = female
+
+		advisor = {
+			slot = political_advisor
+			allowed = { tag = GRD }
+			idea_token = trinary_scribble
+			available = {
+				OR = {
+					has_country_leader = { character = GRI_daybreaker ruling_only = yes }
+					AND = {
+						has_country_flag = SOL_established_personal_union
+						has_country_flag = { character = GRI_emperor_grover_vi ruling_only = yes}
+					}
+				}
+			}
+			visible = { has_country_flag = GRI_SOL_imperial_advisors }
+			traits = { pony_overseer }
+		}
+	}
+	GRI_gratuity = {
+		name = GRI_gratuity
+
+		advisor = {
+			slot = political_advisor
+			allowed = { tag = GRD }
+			idea_token = gratuity
+			available = {
+				OR = {
+					has_country_leader = { character = GRI_daybreaker ruling_only = yes }
+					AND = {
+						has_country_flag = SOL_established_personal_union
+						has_country_flag = { character = GRI_emperor_grover_vi ruling_only = yes}
+					}
+				}
+			}
+			visible = { has_country_flag = GRI_SOL_imperial_advisors }
+			traits = { tightwad }
 		}
 	}
 	CRY_morning_mist = {

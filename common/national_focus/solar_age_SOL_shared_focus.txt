@@ -3376,7 +3376,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_evict_hoarders"
 		###Event of some Solar troops going into the dragon islands, where Ember has managed to hole up in one area with some dragons, and them fighting through the dragons to get them out of the isles, or kill them in the process, and there is one combat with Ember, which eventually overpowers her, since she's only one dragon
-		DRG = { add_to_ROOT_potential_cores = yes }
+		country_event = solarreworked.370
 	}
 	ai_will_do = { factor = 50 }
 }
@@ -3401,6 +3401,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_elite_laborers"
 		###Event of a dragon trying to escape their prison camp, where they are being used to mine crystals for Daybreaker's forces, and ultimately being captured and executed, since they're clearly of no use any longer
+		country_event = solarreworked.371
 	}
 	ai_will_do = { factor = 35 }
 }
@@ -3486,6 +3487,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_conquer_chn"
 		###Event of some changelings being rounded up or the like to be tabulated, then put to work as different chattel slaves, as punishment for their plans for ever toppling the Solar Empire, and they are also deprived of any and all emotions, which means they must subsist off normal food, which is even worse for them
+		country_event = solarreworked.373
 	}
 	ai_will_do = { factor = 50 }
 }
@@ -3512,6 +3514,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_deserved_humiliation"
 		###Daybreaker gathers the various queens of the main hives of the Changeling Lands, to give them a short, mocking speech about how they threw in their lot with the wrong changeling, and that she will see all that they held dear destroyed, as she uses magic to showcase what is happening to each the different hives as punishment, which involves much destruction
+		country_event = solarreworked.374
 	}
 	ai_will_do = { factor = 50 }
 }
@@ -3535,6 +3538,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_final_insult"
 		###Daybreaker meets with Chrysalis, who is imprisoned like an animal, which Daybreaker claims she is, and Daybreaker has a one-sided, and incredibly furious and aggressive conversation about how Chrysalis will be treated, and what her punishment will be for defying her, although she at the same time thanks Chrysalis for helping motivate her ponies to follow her, as an ironic twist
+		country_event = solarreworked.375
 	}
 	ai_will_do = { factor = 70 }
 }
@@ -3583,6 +3587,7 @@ shared_focus = {
 		set_country_flag = SOL_combined_changeling_queens
 		add_stability = -0.15
 		###Perhaps an event of Daybreaker having a conversation with the captured changeling queens, regarding the state of the hive, and offers them a chance of survival, in exchange for complete submission to her
+		country_event = solarreworked.376
 	}
 	ai_will_do = {
 		factor = 40
@@ -3800,36 +3805,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_figurehead_monarch"
 		###Event of Daybreaker of meeting with a bound Velvet to let her know that her lucky day has arrived, and that she will be set free, so long as she does exactly what Daybreaker wants, as she will be the figurehead of the Empire to the deer, so they can stay in line; and she will make sure that it happens, since she will have a garrison stationed in Hjortland at all times, and Velvet sees no way she can resist
-		custom_effect_tooltip = SOL_floofy_dear_puppet_tt
-		if = {
-			limit = {
-				69 = { is_core_of = ROOT }
-				218 = { is_core_of = ROOT }
-				296 = { is_core_of = ROOT }
-				217 = { is_core_of = ROOT }
-			}
-			set_temp_variable = { SOL_colonized_OLE_states = 1 }
-		}
-		release_autonomy = {
-			target = OLE
-			autonomy_state = autonomy_reichsprotectorate
-		}
-		transfer_state = 76
-		transfer_state = 189
-		hidden_effect = {
-			transfer_state = 224
-			transfer_state = 69
-			transfer_state = 218
-			transfer_state = 296
-			transfer_state = 217
-			if = {
-				limit = { check_variable = { SOL_colonized_OLE_states = 1 } }
-				69 = { add_core_of = ROOT }
-				218 = { add_core_of = ROOT }
-				296 = { add_core_of = ROOT }
-				217 = { add_core_of = ROOT }
-			}
-		}
+		country_event = solarreworked.377
 	}
 	ai_will_do = { factor = 60 }
 }
@@ -3850,6 +3826,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_destroy_deer_monarchy"
 		###Event of Velvet living her new normal life, as a simple deer in Hjortland, and she has a rather drab job in the pony administration to help with some of the transitions, and it pains her to no end to see how her great nation has fallen under the iron hoof of Daybreaker
+		country_event = solarreworked.378
 	}
 	ai_will_do = { factor = 80 }
 }
@@ -3937,7 +3914,6 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_expand_reach"
-		#Effect here
 		custom_effect_tooltip = SOL_catbirbs_integrated_tt
 		set_country_flag = SOL_can_core_GRF_states
 	}
@@ -4089,6 +4065,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_resort_of_sun"
 		###Event of Daybreaker on a bit of a vacation from the war, although she is still doing some government stuff or the like, and she finds the entire thing quite relaxing, especially as she uses the sun as her personal sunbathing device, which is making the country overly hot, to the point of harming other ponies
+		country_event = solarreworked.372
 	}
 	ai_will_do = { factor = 50 }
 }
@@ -4174,6 +4151,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_beasts_burden"
 		###Rutherford is forced with the rest of his yak brethren to start serving in the factories for the Solar Empire, as they are seen as little more than backwards and uncouth, and he tries to smash one of his overseers, but it soon gets retribution from the rest in charge
+		country_event = solarreworked.379
 	}
 	ai_will_do = { factor = 70 }
 }
@@ -4434,8 +4412,8 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_imperial_art_project"
-		#Effect here
 		###Perhaps an event of Daybreaker going through River City with River Swirl, to see the new projects that have been put underway by RCT, as an act of submission to her, since it is basically forced upon them; River is defiant, even though she has her hooves tied
+		country_event = solarreworked.380
 	}
 	ai_will_do = { factor = 30 }
 }
@@ -4457,6 +4435,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_harmonys_last_gasp"
 		###Event of a few RIV members and River Swirl attempting to flee the country, to try and find someplace safe in which they can carry on the mission of RIV, but they are soon captured by the military, who hold them for anti-Order activities, and to be used as a display for the rest of RIV
+		country_event = solarreworked.381
 	}
 	ai_will_do = { factor = 40 }
 }
@@ -4503,8 +4482,8 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_doghouse"
-		#Effect here
 		###Maybe event of Daybreaker having a bit of a session with trying to break the DMT leader, either the father or the daughter, and somewhat enjoying it for their inferiority and the trouble diamond dogs have caused elsewhere in the world
+		country_event = solarreworked.382
 	}
 	ai_will_do = { factor = 50 }
 }
@@ -4542,6 +4521,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_mountain_treasure"
 		###Event of an Imperial overseer making sure that the diamond dogs are doing all they can to dig out as many resources as possible to continue to feed the Imperial war machine now and forevermore, and is overly harsh to his subjects
+		country_event = solarreworked.383
 	}
 	ai_will_do = { factor = 60 }
 }
@@ -4561,7 +4541,14 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_eastern_brethren"
-		#Effect here
+		if = {
+			limit = { RIV = { NOT = { tag = RCT } } }
+			RCT = { add_to_ROOT_potential_cores = yes }
+		}
+		else_if = {
+			limit = { RIV = { tag = RCT } }
+			set_country_flag = SOL_can_core_RCT_states
+		}
 		add_ideas = SOL_river_brethren
 	}
 	ai_will_do = { factor = 100 }
@@ -4775,6 +4762,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_second_coming"
 		###Daybreaker visits the ancient town of Somnambula, where the oldest pyramid of them all is, not the Sphynx one, though, and proclaims that everypony should bow to her, as she is the Dawn Star, the second coming of an ancient Maregyptian deity (just a corruption of Celestia), and she uses her power of raising the sun and her magic to intimidate them all as word spreads of this supposed second coming
 		###The tale of the Dawn Star is a corruption of Celestia and Luna helping the ancient Maregyptians with ridding themselves of various Egyptian legendary creatures, which earned them worship, although at the time they both tried to dissuade it
+		country_event = solarreworked.384
 	}
 	ai_will_do = { factor = 80 }
 }
@@ -4800,7 +4788,18 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_misguided_solarists"
 		custom_effect_tooltip = SOL_sand_ponies_tt
-		#Effect here
+		hidden_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = MGY
+						is_claimed_by = MGY
+					}
+					is_owned_by = ROOT
+				}
+				add_dynamic_modifier = { modifier = SOL_direct_solarian_administration }
+			}
+		}
 	}
 	ai_will_do = { factor = 40 }
 }
@@ -4843,7 +4842,6 @@ shared_focus = {
 					autonomy_state = autonomy_reichsprotectorate
 				}
 			}
-			#Add these two states to coreable states
 			transfer_state = 737
 			transfer_state = 734
 			set_country_flag = SOL_can_core_MGY_port_states
@@ -5219,8 +5217,8 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_embodiments_of_flame"
-		add_ideas = SOL_nirik_commandos
-		###Event of some nirik soldiers going in on some rebels or the like, who used to be their friends, and also leading Imperial soldiers, which just leaves them in awe, since they are basically miniature armies in and of themselves, since they can use their fire and magic much more effectively than a normal pony while enraged
+		###Event of some nirik soldiers (maybe led by Autumn) going in on some rebels or the like, who used to be their friends, and also leading Imperial soldiers, which just leaves them in awe, since they are basically miniature armies in and of themselves, since they can use their fire and magic much more effectively than a normal pony while enraged
+		country_event = solarreworked.385
 	}
 	ai_will_do = { factor = 90 }
 }
@@ -5237,8 +5235,8 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_theory_masters"
-		add_ideas = SOL_kirin_war_masters
-		###Event of basically some Sun Tzu like statements and the like from kirin philosophers for the Daybreaker and her military, revolving around flame, fire, and magic
+		###Event of basically some Sun Tzu like statements and the like from kirin philosophers for Daybreaker and her military, revolving around flame, fire, and magic
+		country_event = solarreworked.386
 	}
 }
 
@@ -5253,13 +5251,14 @@ shared_focus = {
 	available = {
 		is_subject = no
 		GRD = {
-			all_cores_owned_by_ROOT_or_subject = yes
+			is_subject_of = ROOT
 		}
 	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_imperial_guidance"
 		###Daybreaker goes through Griffenheim, and she is clearly despised by every single griffon that she sees, but she doesn't care, as she meets the council of nobles in the city, to state that the Griffoniches Reich will forever be a client state of the Solar Empire, as they will ensure that GRI has a proper reverence to her, and that it would be best to comply
+		country_event = solarreworked.387
 	}
 	ai_will_do = { factor = 75 }
 }
@@ -5391,6 +5390,10 @@ shared_focus = {
 		}
 		add_political_power = 100
 		set_country_flag = SOL_unlocked_griffon_advisors
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = strumvogel
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = lieblingsruebe
 		###Possibly an event of Daybreaker watching as a monument to her is put up, and she is accosted by Gruff, but instead just shows him how the Grover statue is staying, and also that it is going to be a testament to how the two empires will accomplish great things together, although he thinks it a bunch of crap
 	}
 	ai_will_do = {
@@ -5451,6 +5454,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_mothers_gift"
 		###Event of Grover, after his coronation, finding a gift from Daybreaker on his bed, which is a suit of armor, made from the most expertly trained pony smiths in the Empire, with a note speaking that she rarely admits to being pleased with creatures, let alone non-ponies, but he has impressed her, and that she has taught him enough to lead, and that he can consider it a gift for any battles he may have to lead
+		country_event = solarreworked.132
 	}
 	ai_will_do = { factor = 50 }
 }
@@ -5488,6 +5492,7 @@ shared_focus = {
 	ai_will_do = { factor = 50 }
 }
 
+###HIP stuff if requested###
 #shared_focus = {
 #	id = SOL_aquatic_paradise
 #	x = 5
@@ -5769,142 +5774,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_decadence_shattered"
 		###Event of Daybreaker meeting with the prince of Saddle Arabia, who is a bit of a nervous wreck after being held for so long by the civil war, and she acts condescending that he can rule again, but he'll have to do what she wants, and will have to cut out most of the spending, since she wants an actually useful puppet, which he barely agrees to, since he would rather live
-		add_ideas = SOL_prince_faisal
-		SDL = {
-			get_current_government_type = yes
-		}
-		if = {
-			limit = {
-				SDL = {
-					exists = yes
-					all_cores_owned_by_ROOT_or_subject = yes
-					is_subject_of = EQS
-				}
-			}
-			if = {
-				limit = {
-					SDC = {
-						exists = yes
-						is_subject_of = ROOT
-					}
-				}
-				SDL = {
-					annex_country = {
-						target = SDC
-					}
-				}
-			}
-			if = {
-				limit = {
-					SDF = {
-						exists = yes
-						is_subject_of = ROOT
-					}
-				}
-				SDL = {
-					annex_country = {
-						target = SDF
-					}
-				}
-			}
-			if = {
-				limit = {
-					SDS = {
-						exists = yes
-						is_subject_of = ROOT
-					}
-				}
-				SDL = {
-					annex_country = {
-						target = SDS
-					}
-				}
-			}
-			if = {
-				limit = {
-					EMR = {
-						exists = yes
-						is_subject_of = EQS
-					}
-				}
-				SDL = {
-					annex_country = {
-						target = EMR
-					}
-				}
-			}
-		}
-		else = {
-			release_autonomy = {
-				target = SDL
-				autonomy_state = autonomy_reichsprotectorate
-				freedom_level = 0.5
-			}
-			if = {
-				limit = {
-					SDL = {
-						exists = yes
-						is_subject_of = ROOT
-					}
-				}
-				if = {
-					limit = {
-						SDC = {
-							exists = yes
-							is_subject_of = ROOT
-						}
-					}
-					SDL = {
-						annex_country = {
-							target = SDC
-						}
-					}
-				}
-				if = {
-					limit = {
-						SDF = {
-							exists = yes
-							is_subject_of = ROOT
-						}
-					}
-					SDL = {
-						annex_country = {
-							target = SDF
-						}
-					}
-				}
-				if = {
-					limit = {
-						SDS = {
-							exists = yes
-							is_subject_of = ROOT
-						}
-					}
-					SDL = {
-						annex_country = {
-							target = SDS
-						}
-					}
-				}
-				if = {
-					limit = {
-						EMR = {
-							exists = yes
-							is_subject_of = ROOT
-						}
-					}
-					SDL = {
-						annex_country = {
-							target = EMR
-						}
-					}
-				}
-			}
-		}
-		SDL = {
-			set_cosmetic_tag = SDL_SOL
-			restore_previous_government_type = yes
-		}
+		country_event = solarreworked.388
 	}
 	ai_will_do = { factor = 50 }
 }
@@ -5975,22 +5845,8 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_eastern_calipha"
-		###Daybreaker takes to the airwaves from Yemane, where she has pronounced herself the new calipha of one of the old religions of the Saddle Arabian area, and that she will inflict hamr upon those who defy her, as she is the sun itself to guide them, and otherwise promises their doom if they do not obey
-		YMN = {
-			get_current_government_type = yes
-		}
-		if = {
-			limit = { YMN = { exists = no } }
-			release_autonomy = {
-				target = YMN
-				autonomy_state = autonomy_reichsprotectorate
-				freedom_level = 0.33
-			}
-		}
-		YMN = {
-			restore_previous_government_type = yes
-			set_cosmetic_tag = YMN_SOL
-		}
+		###Daybreaker takes to the airwaves from Yemane, where she has pronounced herself the new calipha of one of the old religions of the Saddle Arabian area, and that she will inflict harm upon those who defy her, as she is the sun itself to guide them, and otherwise promises their doom if they do not obey
+		country_event = solarreworked.389
 	}
 	ai_will_do = { factor = 40 }
 }
@@ -6089,11 +5945,8 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_magic_hit_squads"
-		###Event of somepony who has wronged Daybreaker, or perhaps one more rebel, is trying to run away after he had been almost killed by the hit squad, until he is stopped hwne some appear in a teleportation spell, and they let him have his last words as they use fire magic to consume him entirely
-		set_technology = {
-			SOL_unicorn_hit_squads_tech = 1
-			popup = no
-		}
+		###Event of somepony who has wronged Daybreaker, or perhaps one more rebel, is trying to run away after he had been almost killed by the hit squad, until he is stopped when some appear in a teleportation spell, and they let him have his last words as they use fire magic to consume him entirely
+		country_event = solarreworked.390
 	}
 	ai_will_do = { factor = 40 }
 }
@@ -6117,6 +5970,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_raid_archives"
 		###Event of Daybreaker leading an army to attack The Cave, where the artifacts of Maretonia are kept, and she gets into combat with the MTA leader, who is their most powerful mage, and she gets into a proper challenge with him, and almost loses out, aside from her playing dirty to get in, and she ultimately wins, and mocks him as he perishes
+		country_event = solarreworked.391
 	}
 	ai_will_do = { factor = 100 }
 }
@@ -6211,6 +6065,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_natural_state"
 		###Event of either inquisitors or just radical followers of Daybreaker going into a town of thestrals, in a night condoned by the governing body of BAT, to scare, drive out, or kill the bats of Zebrica, as lessons for them rebelling for so long against Daybreaker, which leads to extensive loss of life for the thestrals
+		country_event = solarreworked.392
 	}
 	ai_will_do = { factor = 60 }
 }
@@ -6230,6 +6085,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_reborn_in_fire"
 		###Event of a representative of Daybreaker, probably Sunrise Sparkle, leading a mass purge of the bats, starting with some of the BAT leaders, who are all defiant of her, and then by tearing down monuments and the like, which leads to large-scale destruction across BAT
+		country_event = solarreworked.393
 	}
 	ai_will_do = { factor = 100 }
 }
@@ -6250,7 +6106,8 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_no_sinner_alive"
-		###Follow a soldier as he prepares to go in on one of the larger cities in BAT, as orders have come down that they will finally inflict the last of the wounds necessary to inflict total retribution on BAT, and he grows more upset and sickened as it is clearly a thestralcide, and even if he despises them, he thinks that it would be wiser to just use them than executed them all
+		###Follow a soldier as he prepares to go in on one of the larger cities in BAT, as orders have come down that they will finally inflict the last of the wounds necessary to inflict total retribution on BAT, and he grows more upset and sickened as it is clearly a thestralcide, and even if he despises them, he thinks that it would be wiser to just use them than execute them all
+		country_event = solarreworked.394
 	}
 	ai_will_do = { factor = 30 }
 }
@@ -6277,6 +6134,7 @@ shared_focus = {
 		else = {
 			add_ideas = SOL_ordo_australis_archives
 		}
+		#Create puppet here
 		###Maybe event speaking about how the thestrals can still be useful, and that they need to be monitored and can more easily be done so by the IIS/Solaris Speculatores, and that a client state will be erected in it to compensate for no longer having direct control
 	}
 	ai_will_do = { factor = 70 }
@@ -6294,8 +6152,8 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_light_into_darkness"
-		add_ideas = SOL_what_thestrals
 		###Perhaps an event of book burnings and history burnings of all of the thestral race that BAT has, and killing any thestrals that resist
+		country_event = solarreworked.395
 	}
 	ai_will_do = { factor = 50 }
 }
@@ -6347,13 +6205,73 @@ shared_focus = {
 		focus = SOL_continue_research
 	}
 	available = {
-		has_completed_focus = SOL_wayward_foals
-		has_completed_focus = SOL_attack_bat
+		custom_trigger_tooltip = {
+			tooltip = SOL_conquer_all_yo_land_tt
+			MDL = {
+				all_cores_owned_by_ROOT_or_subject = yes
+			}
+			KIR = {
+				all_cores_owned_by_ROOT_or_subject = yes
+			}
+			TBK = {
+				all_cores_owned_by_ROOT_or_subject = yes
+			}
+			BAT = {
+				all_cores_owned_by_ROOT_or_subject = yes
+			}
+			MGY = {
+				all_cores_owned_by_ROOT_or_subject = yes
+			}
+			SDL = {
+				all_cores_owned_by_ROOT_or_subject = yes
+			}
+			RIV = {
+				all_cores_owned_by_ROOT_or_subject = yes
+			}
+			AES = {
+				all_cores_owned_by_ROOT_or_subject = yes
+			}
+			MTO = {
+				all_cores_owned_by_ROOT_or_subject = yes
+			}
+			MTA = {
+				all_cores_owned_by_ROOT_or_subject = yes
+			}
+			REE = {
+				all_cores_owned_by_ROOT_or_subject = yes
+			}
+			YMN = {
+				all_cores_owned_by_ROOT_or_subject = yes
+			}
+			OSQ = {
+				all_cores_owned_by_ROOT_or_subject = yes
+			}
+			NTR = {
+				all_cores_owned_by_ROOT_or_subject = yes
+			}
+			FBK = {
+				all_cores_owned_by_ROOT_or_subject = yes
+			}
+			FIR = {
+				all_cores_owned_by_ROOT_or_subject = yes
+			}
+			WAT = {
+				all_cores_owned_by_ROOT_or_subject = yes
+			}
+			HMR = {
+				all_cores_owned_by_ROOT_or_subject = yes
+			}
+			KXN = {
+				all_cores_owned_by_ROOT_or_subject = yes
+			}
+			#Repeat ad nausuem. Make a scripted trigger
+		}
 	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_pax_solaris"
 		###Daybreaker finally has a day to herself, as the world is at peace at last, and she looks to a map of her empire, and how ponies from all walks of life had been made safe under her, and she believes that she has accomplished her goal, and she will lead all of ponykind into prosperity forever
+		country_event = solarreworked.399
 	}
 	ai_will_do = { factor = 1000 }
 }
@@ -9627,6 +9545,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_byzantine_supply"
 		###An event of a soldier's request for some kind of field supply kit being approved, but with statements on how long it will take, after filling out additional forms a through h, in triplicate, and also ensuring that his CO also signs, in triplicate, and then promises delivery in a matter of moments, through magic
+		country_event = solarreworked.75
 	}
 	ai_will_do = { factor = 50 }
 }
@@ -9696,6 +9615,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_efficient_clearing"
 		###Event of a pony going in with a flamethrower into the trenches of the enemy, and being spotted very quickly, having a panicked moment, and then starting their flamethrower, and watching in horror, since they didn't want to use such a clearly barbaric weapon, as it cleans effectively the entire trench in front of them
+		country_event = solarreworked.76
 	}
 	ai_will_do = { factor = 80 }
 }
@@ -9822,8 +9742,8 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_holy_napalm_applications"
-		add_ideas = SOL_napalm_shells
 		###Maybe event of some of the first napalm shell strike tests, and how they are incredibly effective, and also completely and utterly mentally scarring for the operators as they see their handiwork, which has left swaths of a battlefield completely aflame, and later reports indicate how burnt the soldiers were that were killed, which horrifies them
+		country_event = solarreworked.77
 	}
 	ai_will_do = { factor = 60 }
 }
@@ -9975,8 +9895,8 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_only_statistics"
-		add_ideas = SOL_numbers_on_page
 		###Maybe event of reports of how many have been killed in some of the latest conflicts, but how there are so many more which can be taken from their families to happily serve the God-Empress and die keeping her safe and the hope of Order and Harmony alive; the ponies aren't even acknowledged as sentient beings, merely tools
+		country_event = solarreworked.78
 	}
 	ai_will_do = { factor = 75 }
 }
@@ -9996,8 +9916,8 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_melting_shroud"
-		add_ideas = SOL_mobile_flame_deliverers
 		###Maybe event of some soldiers going along with a flame tank division through an urban area, and being ambushed but soon dispatching of the ambushers with the help of the tanks, after the killed operator is taken out to then be driven by somepony else and melt all those that oppose them
+		country_event = solarreworked.79
 	}
 	ai_will_do = { factor = 75 }
 }
@@ -10094,11 +10014,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_evocation_schools"
 		###Event of a unicorn learning fire magic at one of Daybreaker's new schools, which leads to both awe and fear, as they test some of their skills on some test dummies, which are utterly consumed; they are quite good at fire magic, which worries their teachers, since they almost seem to be enjoying it
-		set_technology = {
-			SOL_evoker_legions_tech = 1
-			popup = no
-		}
-		add_ideas = SOL_evoker_legions
+		country_event = solarreworked.80
 	}
 	ai_will_do = { factor = 75 }
 }
@@ -10163,6 +10079,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_next_gen_spells"
 		###Event of a scientist or two recording their thoughts on the new spell crystals being used in the prototype MEWs, which they record coldly on how it affects flesh, bone, and other aspects of a pony's body, and also how there's only a slight chance of explosion in the operator's face, but can give some nice scars to talk about with the mares (or stallions if a mare)
+		country_event = solarreworked.81
 	}
 	ai_will_do = { factor = 70 }
 }
@@ -10206,6 +10123,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_strike_iron"
 		###An event of some troops desperately trying to fight back against an enemy assault of their lines, and asking where their reinforcements are at, and as the enemy continues to advance, they believe that they'll be overrun, before the cavalry arrives with motorized divisions and start to push back the opposing forces (has to be generic)
+		country_event = solarreworked.82
 	}
 	ai_will_do = { factor = 60 }
 }
@@ -10411,38 +10329,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_abolish_wonderbolts"
 		###Event of the Wonderbolts headquarters in either Canterlot or Cloudsdale getting raided and ponies who serve there being arrested and those that resist executed, as they have been deemed a symbol of anti-Order activities and will be turned into something greater, and it's ensured that Spitfire knows that she will have a special place in the future air force, as a test pilot, or the like; Thunderlane was a mole who helped with the raid
-		custom_effect_tooltip = available_chief_of_airforce
-		show_ideas_tooltip = blaze
-		custom_effect_tooltip = available_chief_of_airforce
-		show_ideas_tooltip = thunderlane
-		custom_effect_tooltip = available_theorist
-		show_ideas_tooltip = wind_rider
-		if = {
-            limit = {
-                has_dlc = "By Blood Alone"
-            }
-			add_tech_bonus = {
-				name = fighter_bonus
-				bonus = 0.75
-				uses = 1
-				category = light_air
-			}
-			add_tech_bonus = {
-				name = cat_air_guns
-				bonus = 0.75
-				uses = 1
-				category = cat_air_guns
-			}
-		}
-		else = {
-			add_tech_bonus = {
-				name = fighter_bonus
-				bonus = 0.75
-				uses = 1
-				category = light_fighter
-				category = cat_heavy_fighter
-			}
-		}
+		country_event = solarreworked.83
 	}
 	search_filters = { FOCUS_FILTER_AIRFORCE_BONUS FOCUS_FILTER_RESEARCH }
 }
@@ -10531,6 +10418,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_fear_tactics"
 		###Event of some test subjects about the effects of attaching air horns to the bottom of planes as they go about a normal day, but then suddenly hear the test dive bombers, and begin to panic, and gives a couple even early signs of PTSD, since the bombers are testing everything, included dud bombs to mimic the dive bomb
+		country_event = solarreworked.84
 	}
 	ai_will_do = { factor = 75 }
 }
@@ -10640,6 +10528,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_field_tests"
 		###Event of Spitfire being strapped into another test for a prototype fighter, as part of her punishment for being tied to the Harmonists, and the experiment goes well at first, with testing early g-suits, but she soon blacks out and almost perishes in a crash, only saved by the suits durability itself
+		country_event = solarreworked.85
 	}
 	ai_will_do = { factor = 55 }
 }
@@ -10746,6 +10635,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_mimic_pegasi"
 		###Event of a new test pilot being thrown into a ground attack bomber, with improved diving brakes and the like, as well as increased maneuverability, which, after a short bit of time having fun, he does his test, and nearly crashes as he both blacks out and the automatic dive brakes fail at first, but he does manage to land after the wings are clipped by being so close to the ground, and it's deemed a success, despite almost dying
+		country_event = solarreworked.86
 	}
 	ai_will_do = { factor = 50 }
 }
@@ -10803,6 +10693,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_hero_program"
 		###Event of a propaganda piece that uses knock-off Wonderbolts, now the Solarbeams, to entice ponies to join the air force, and how they'll totally not be shot down in five seconds in war and that they will be an ace like them, and otherwise feed into the fantasy that Ace Combat taps into
+		country_event = solarreworked.87
 	}
 	ai_will_do = { factor = 50 }
 }
@@ -10841,7 +10732,8 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_holy_deliverance"
-		###Event of peforming napalm strikes on a suspected rebel encampment in the middle of the Empire, and the pilot grows nervous at just how effectively the new payload system has improved the craft's deadliness, which makes him hesitate before almost being shot from a pony on the ground, which motivates him to continue the bombing
+		###Maybe event of peforming napalm strikes on a suspected rebel encampment in the middle of the Empire, and the pilot grows nervous at just how effectively the new payload system has improved the craft's deadliness, which makes him hesitate before almost being shot from a pony on the ground, which motivates him to continue the bombing
+		add_ideas = SOL_napalm_strikes
 	}
 	ai_will_do = { factor = 70 }
 }
@@ -10893,6 +10785,9 @@ shared_focus = {
 	relative_position_id = SOL_hero_program
 
 	cost = 5
+	available = {
+		has_completed_focus = SOL_punishing_world
+	}
 	prerequisite = {
 		focus = SOL_hero_program
 		focus = SOL_flying_castles
@@ -10900,7 +10795,9 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_fire_from_sky"
-		###Event of Daybreaker being shown around the new napalm factory for the bombs to use for her bombers in the case of war, with statistics of what would happen if used in a widespread capacity, and Daybreaker is more than pleased, merely asking that they find a way to make them even faster, and if can burn better than ever
+		###Maybe vent of Daybreaker being shown around the new napalm factory for the bombs to use for her bombers in the case of war, with statistics of what would happen if used in a widespread capacity, and Daybreaker is more than pleased, merely asking that they find a way to make them even faster, and if can burn better than ever
+		###Alternate event would be instead some bombers preparing to hit a target practice facility, and after unleashing the payloads of bombs, seeing how it caused more destruction than implied, and has destroyed an entire village, which was the true target
+		add_ideas = SOL_napalm_carpeting
 	}
 	ai_will_do = { factor = 60 }
 }
@@ -11085,6 +10982,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_judge_ground"
 		###As a battle unfolds beneath her, a fighter pilot, leading a couple of other divebombers, takes charge of a sortie to try and free up a pinned down position near the back, and she effectively ingores all the dangers, including those that damage her plane, as she delivers a large payload of destruction against the enemy beneath her
+		country_event = solarreworked.88
 	}
 	ai_will_do = { factor = 75 }
 }
@@ -11107,6 +11005,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_order_skies"
 		###Event of about half a dozen ponies, two different flight groups, getting into a bit of a scuffle after spending a day at the canteen in the air base, as they both believe they have the better skills, and it causes a bit of havoc as they aim to test munitions for good on some target dummies, not realizing how damaging to the base it would be
+		country_event = solarreworked.89
 	}
 	ai_will_do = { factor = 60 }
 }
@@ -11126,6 +11025,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_heavenly_backdrop"
 		###Event of a sole pilot, as the others are sleeping overnight, as he flies high toward his destination target far into enemy territory to destroy some different targets, and he finds the beauty of the night rather haunting, especially since he's supposed to be loyal to the day, and wishes that he could spend all his time in the high altitude of flight, given how amazing it is, and to an extent regrets the damage he will have to do
+		country_event = solarreworked.90
 	}
 	ai_will_do = { factor = 75 }
 }
@@ -11238,6 +11138,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_scraping_barrels"
 		###Event of Daybreaker meeting with some of the new admiralty to see what the state of the Imperial Navy is, since other nations around them are also building to a larger standard, and she knows that the Navy has been neglected, despite its size, and they are a bit nervous, since they only have some mothballs to help in the meantime, and she isn't impressed, but sadly accepts they need them as protection, and agrees after she sees how inadequate they are
+		country_event = solarreworked.91
 	}
 	ai_will_do = { factor = 40 }
 }
@@ -11254,6 +11155,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_saltless_blood"
 		###Event of an eager new captain being met by Daybreaker, who grills them to see if they are truly ready for any of the dangers of the sea, including going down with the ship, which scares them, but she does agree in the end; alternately a live fire drill with Daybreaker watching some of the new captains handle the situation
+		country_event = solarreworked.92
 	}
 	ai_will_do = { factor = 50 }
 }
@@ -11574,6 +11476,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_imperial_dreadnoughts"
 		###Event of a new battleship captain, who is still a bit eager to prove his worth, finding the base of some pirates, promising them amnesty, just so he could get them out on the field, and then begins to shower them with shells, which he enjoys to a perturbing degree, since he feels invincible in his battleship
+		country_event = solarreworked.93
 	}
 	ai_will_do = { factor = 60 }
 }
@@ -11759,13 +11662,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_sea_fortress"
 		###Perhaps event of Daybreaker being given a blueprint presentation of the Daybreak-class superheavy, as a way to impress her, and also gain her good graces by a designer from Manehattan, who had been accused of anti-Order activities, and she is indeed suitably impressed, although asks if it can come in orange as a joke
-		add_tech_bonus = {
-			name = shbb_bonus
-			uses = 1
-			bonus = 2
-			category = shbb_tech
-		}
-		custom_effect_tooltip = SOL_biggest_guns_tt #Mention that player will get a design once researched (or already researched), and one production line of Daybreak-Class at 50% completion
+		country_event = solarreworked.94
 	}
 	ai_will_do = { factor = 100 }
 }
@@ -11817,6 +11714,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_sun_never_sets"
 		###Event of Daybreaker stepping upon the Daybreak, and going out to see to experience the waves at her hooftips once more, which makes her feel freer. Freer to test her weaponry, since she knows she's gathering a crowd, and she wants to make sure she impresses them, and if there are a few bits of collateral damage, she can live with it if it means that Order is maintained
+		country_event = solarreworked.95
 	}
 	ai_will_do = { factor = 70 }
 }

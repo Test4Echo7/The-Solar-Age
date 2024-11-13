@@ -1862,6 +1862,36 @@ EQS_expand_imperial_territory_category = {
             329 = { add_core_of = ROOT }
         }
     }
+    SOL_integrate_river_heartlands = {
+        allowed = { tag = EQS }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = SOL_all_states_over_40_compliance_tt
+                619 = { compliance > 40 }
+                682 = { compliance > 40 }
+                577 = { compliance > 40 }
+                620 = { compliance > 40 }
+            }
+        }
+        visible = { has_country_flag = SOL_can_core_RCT_states }
+         highlight_states = {
+            highlight_state_targets = {
+                state = 619
+                state = 682
+                state = 577
+                state = 620
+            }
+        }
+        fire_only_once = yes
+        days_remove = 30
+        remove_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision remove SOL_integrate_river_heartlands"
+            619 = { add_core_of = ROOT }
+            682 = { add_core_of = ROOT }
+            577 = { add_core_of = ROOT }
+            620 = { add_core_of = ROOT }
+        }
+    }
     SOL_integrate_maregyptian_ports = {
         allowed = { tag = EQS }
         available = {

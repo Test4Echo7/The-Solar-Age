@@ -55,3 +55,42 @@ SOL_imperial_intelligence_lar = {
     operative_slot = operative_slot_var
     new_operative_slot_bonus = new_operative_slot_bonus_var
 }
+
+SOL_improved_river_architecture = {
+    icon = GFX_idea_EQS_unicorn_academy
+
+    local_non_core_manpower = 0.05
+}
+
+SOL_direct_solarian_administration = {
+    icon = GFX_idea_EQS_unicorn_academy
+
+    local_non_core_manpower = 0.2
+    local_resources = 0.2
+}
+
+SOL_dragon_miners = {
+    icon = GFX_idea_EQS_unicorn_academy
+
+    local_non_core_manpower = -1
+    local_resources = 0.75
+}
+
+#OLE
+SOL_figurehead_compliance = {
+    icon = GFX_idea_EQS_unicorn_academy
+
+    remove_trigger = { is_core_of = EQS }
+
+    compliance_gain = 0.003
+}
+
+SOL_crushed_deer_dreams = {
+    icon = GFX_idea_EQS_unicorn_academy
+
+    remove_trigger = { is_core_of = EQS }
+
+    local_resources = 0.05
+    resistance_target = -0.05
+    compliance_gain = -0.002
+}

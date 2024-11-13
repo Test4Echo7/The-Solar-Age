@@ -41,6 +41,10 @@
   EQS_nightshift:0 "Nightshift"
   EQS_hard_sell:0 "Hard Sell"
   EQS_countess_coloratura:0 "Countess Coloratura"
+  EQS_sky_high:0 "Sky High"
+  EQS_riptide:0 "Riptide"
+  EQS_butter_knife:0 "Butter Knife"
+  EQS_treadwell:0 "Treadwell"
 
   ###BoP###
   EQS_sanity_bop:0 "The Princess's Burden"
@@ -220,6 +224,7 @@
   SOL_integrate_changeling_borderlands:0 "Integrate the Changeling Borderlands"
   SOL_integrate_changeling_borderlands_desc:0 "The border region of [CHN.GetNameDef] has been in flux with our ponies for generations. Although Acornage was an attempt to build a multicultural city that would appeal to peace between our nations, it only provided a way through our borders. Since our occupation in the Great War, we have slowly expelled or eradicated any resisting changelings and these territories are now ripe for our settlers and the pony minorities that resided there before. The changelings never needed this land, anyway."
   SOL_integrate_nouvelle_aquila_region:0 "Integrate the Nouvelle Aquila Region"
+  SOL_integrate_river_heartlands:0 "Integrate River Heartlands"
   SOL_integrate_maregyptian_ports:0 "Integrate the [734.GetName] Ports"
   SOL_integrate_manerba:0 "Integrate [692.GetName]"
   SOL_spawn_CHN_puppet:0 "Release [ROOT.GetAdjectiveCap]-Aligned Hives"
@@ -312,12 +317,18 @@
   EQS_bug_smacked_tt:0 "§Y[FROM.GetLeader]§! will be ideally §Reliminated§! before the §YGreat War§! escalates further."
   SOL_magic_laden_explosives_tt:0 "§YUnicorn Company§!:\n    Soft attack: §G+10%§!"
   SOL_self_improvement_programs_tt:0 "§YUnicorn Company§!:\n    Defense: §G+15%§!"
+  SOL_unicorn_hit_squads_tt:0 "§YUnicorn Company§!:\n    Soft attack: §G+25%§!\n    Breakthrough: §G+20%§!"
   SOL_evoker_legions_tt:0 "§YUnicorn Company§!:\n    Soft attack: §G+40%§!\n    Breakthrough: §G+25%§!"
   SOL_biggest_guns_tt:0 "We can decide how to create a worthy §Yflagship§! for our §OEmpress§!. If we have more advanced technology, we will get better designs for the proposed §YDaybreak Class§!."
   EQS_wholesome_grover_achieved:0 "§ODaybreaker§! and §YGrover VI§! have developed a steadfast respect for each other."
-  SOL_all_states_over_40_compliance_tt:0 "All states highlighted must over have §Y40%§! compliance!"
+  SOL_all_states_over_40_compliance_tt:0 "All states highlighted must have over §Y40%§! compliance!"
   SOL_sand_ponies_tt:0 "We will continue our occupation of the §Y[MGY.GetAdjective]§! and §![MDL.GetAdjective]§! territories and work at integrating their cultures further into ours."
   SOL_when_in_maregypt_do_as_maregyptians_tt:0 "We will fully integrate the port region of §Y[734.GetCapitalVictoryPointName]§! into §Y[ROOT.GetNameDef]§! and leave the remaining §Y[MGY.GetAdjective]§! and §Y[MDL.GetAdjective]§! territory to regional governors."
+  SOL_conquer_all_yo_land_tt:0 "All §Gponies§! and §Ypony-adjacent§! creatures have been brought under §Y[ROOT.GetLeader]'s§! protection."
+  SOL_cannot_release_pony_or_adjacent_freely:0 "§Y[FROM.GetName]§! cannot be released from this menu because it is a pony or pony-adjacent nation. Look to your §YDecisions§! tab in order to release it."
+
+  ###Last one in the chain. Remove comment later###
+  SOL_conglaturation_a_winner_is_you_tt:0 "§GHarmony has been preserved and all of ponykind now bends the knee to Daybreaker. Thank you for playing the Solar Age! - Test4Echo§!"
 
   ###Dynamic Loc###
   SOL_hidden_bonuses_empty:0 ""
@@ -383,6 +394,8 @@
   ruthless_industrialist:0 "Ruthless Industrialist"
   aggressive_diplomat:0 "Aggressive Diplomat"
   equestrian_sweetheart:0 "Equestrian Sweetheart"
+  pony_overseer:0 "Pony Overseer"
+  tightwad:0 "Pony Austerity Advocate"
 
   ###Leader Descriptions###
   fancy_albino_sunhorse_desc:0 "§YBorn:§! 16th of March, 986 ALB in Vanhoover\n\nBorn to a simple working class family in one of the boroughs of Vanhoover, Arcane Nova was always aware from an early age of the dangers that were present not a couple hundred miles north of the metropolis. From her parents and teachers, the radio and newspapers, the changeling menace was always something that was in the back of her, and many of her generation's minds. Although there never was a changeling infiltration like some ponies in Vanhoover feared, the backdrop of the threat shaped many of her early interests in military strategy. When Queen Chrysalis almost toppled the Equestrian government in 1002, it only further pushed the teen Arcane Nova to apply for every military academy that would potentially take her.\n\nAn appreciation for war in pre-dawn Equestria was looked upon as strange or frightening, but after acceptance into the class of 1005 to Fillydelphia Military Academy, her talent for analyzing combat situations and adapting to unexpected developments became apparent. When she set a new record for holding out in a scenario designed to be an impossible defense, she was transferred to Canterlot's academy to further refine her aptitude to war and war-related magic.\n\nIn the ensuing restructuring of the military after Daybreaker's ascension, her unwavering dedication to guarding Equestria and her astute observations earned her a position within the military science wing of the Solar Empire. When she was summoned by Daybreaker to personally oversee and ensure the loyalty of New Mareland, she was more than eager to prove her abilities to her Empress.\n\nIn New Mareland, she has guaranteed that there is nothing that can be used to question the Empress's decrees. Unrest has been met with disproportionate punishment, and any and all mention to Luna, thestrals, or other creatures of the night have been suppressed. In time, the troublesome colony will become a model subject of the Empress, where the Dawn Star is revered at all times, and all dissidence is eliminated with cauterizing efficiency.\n\n§YPortrait by:§! Opal Radiance"
@@ -644,6 +657,7 @@
   ###Hidden/Enemy###
   EQS_high_attrition:0 "Incinerating Heat"
   EQS_high_attrition_desc:0 "The sun beats upon us relentlessly, and not even the cool of the night can bring us any respite. Our soldiers can barely stand and fight when the intensity of its heat and light can make some perish in the shade, as even the plains of our battles catch fire from the scorching temperatures that we must suffer."
+
   ###Harmonic Resistance###
   EQS_agitated_workers:0 "Unwilling Workers"
   EQS_agitated_workers_desc:0 "The claws of the Harmonic Resistance have sliced through our average working pony, corrupting their minds to believe that we mean them harm. Ponies across the country are refusing to work, which has severly cut into our production quotas and worsened the lives of everypony."
@@ -651,6 +665,7 @@
   EQS_unwilling_bureaucrats_desc:0 "The Harmonic Resistance sympathies of many lower government officials have been revealed as they started to actively work against the Empress's goals. While they are dealt with, our processes will run much more inefficiently than before."
   EQS_anti_order_propaganda:0 "Anti-Order Propaganda"
   EQS_anti_order_propaganda_desc:0 "Overnight, posters decrying the Empress and her policies have sprung up along billboards, buildings, and alleys. The boldness of the Resistance has even reached our soldiers, some of whom have deserted and brought their friends with them, while encouraging others to abandon their training and fight for the Resistance, and against us, instead."
+
   ###Opening Tree###
   SOL_sunrise_sparkle_regent:0 "Sunrise Sparkle"
   SOL_sunrise_sparkle_regent_desc:0 "Having served as the Empress's protege for years, Sunrise Sparkle has intricate knowledge of Daybreaker's thoughts and feelings. With her privileges as regent, the Lady Inquisitor has been dedicating herself to furthering the scientific advancements of the Empire."
@@ -660,11 +675,13 @@
   SOL_blueblood_regent_desc:0 "Being a distant relative of the Empress, Blueblood is the only claimant to the throne who has any right to lead in the case of something inexplicable happening to Daybreaker. As he has been given an increased budget and allowance from the royal purse, he continues to push for militarization of the Empire for its defense."
   SOL_raven_regent:0 "Raven Inkwell"
   SOL_raven_regent_desc:0 "Raven Inkwell has faithfully served the Empress for years, and has hooks into every aspect of the Empire, to ensure that it runs properly. Although she may not be a first choice, with her new powers as regent, she has furthered brought stability to the Empire and grown the strength of the bureaucratic machine."
+
   ###CRY-Related Ideas###
   SOL_kabuh:0 "Flurry Heart"
   SOL_kabuh_desc:0 "The Empress's young grandniece has been brought to [ROOT.GetNameDef] to complete her education under the watchful eyes of Daybreaker. Despite being so young, she has already taken to a number of lessons given to her, and she has become popular with the majority of the nation for her charming demeanor and love of the Empress."
   SOL_heartbroken_caddy:0 "Heartbreaker"
   SOL_heartbroken_caddy_desc:0 "Although she was resistant, even the Empress's niece has fallen into line. With [CRY.GetNameDef] mostly out of her hooves, she has all the time in the world to devote herself to ensuring there will be a large and healthy next generation for [EQS.GetNameDef] for centuries to come."
+
   ###Operations Ideas###
   CHN_furious_populace:0 "Outraged Populace"
   CHN_furious_populace_desc:0 "In the aftermath of [EQS.GetNameDef]'s brazen attack against our queen, our populace has rallied around her even more than before. Her injuries only fuel our fury against [EQS.GetLeader] and prove that [EQS.GetNameDef] must be punished for how it has humiliated us time and again."
@@ -1319,6 +1336,15 @@
   solarreworked.267.t:0 "An Offer that Can't be Refused"
   solarreworked.267.d:0 "Daybreaker sipped on her tea.\n\n"I can't believe that I'm being subjected to such an indignity!" her guest protested as he squirmed and fumed across the table from her. She merely smiled. As he glowered at her, she sipped again on her tea and then daintily set it aside, next to a large stack of tomes that had been placed on the right side of the table.\n\n"Chancellor Neighsay," she began, her voice dripping with false understanding, "I can completely see your point of view, but—" she shrugged "—I'm afraid that I will have to be insistent."\n\nNeighsay, his cyan eyes burning with fury, quivered and shook with rage. While his cheeks turned a deep shade of purple, he snarled, "I will NOT see the EEA turned into nothing more than a mouthpiece for whatever propaganda you purport to be scientific fact! We have standards! We have codes! We have—"\n\n"Almost no funding left," Daybreaker interjected, as she wrote something down on a napkin near her tea. She stuck out her tongue thoughtfully. "By my quick and dirty math, I'd say... you're at approximately... oh, five percent funding as when you entered." When she stated that, she sneered when he gagged in shock and his eyes went wide.\n\n"That's preposterous! I was assured—"\n\n"You were assured nothing! We met to discuss the new EEA curriculum, and how to properly educate our ponies, but you, sadly, believed that it was 'propaganda' and 'brainwashing'." She clicked her tongue. "It'd be such a shame that you'll be remembered as the last Chairpony of the EEA, and the one that led to its demise." Pursing her lips in an expression of mock compassion. "So sad," she pouted.\n\n"B-But I shall not—"\n\n"And that's four percent remaining."\n\n"Y-You can't—"\n\n"Three percent."\n\n"T-These are nothing but—"\n\n"Two percent."\n\n"Fine! Fine!" Neighsay screamed, throwing himself against the table, which made it rattle and spill tea onto his impeccably clean, red tunic. "I will implement the new curriculum! I can't have my legacy destroyed!"\n\nStaying silent for a moment, Daybreaker grinned. She sipped on her tea."
   solarreworked.267.a:0 "Good pet."
+
+  ###Political Events###
+
+  ###Conquest Events###
+  solarreworked.399.t:0 "Perfect Order"
+  solarreworked.399.da:0 ""
+  solarreworked.399.db:0 ""
+  solarreworked.399.dc:0 ""
+  solarreworked.399.a:0 "I have brought Order and Harmony to my Empire!"
 
   ###EQC and PCB Events###
   solarreworked.433.t:0 "Visit from the Setting Sun"
