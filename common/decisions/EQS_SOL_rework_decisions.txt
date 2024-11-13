@@ -1871,15 +1871,17 @@ EQS_expand_imperial_territory_category = {
                 682 = { compliance > 40 }
                 577 = { compliance > 40 }
                 620 = { compliance > 40 }
+                646 = { compliance > 40 }
             }
         }
         visible = { has_country_flag = SOL_can_core_RCT_states }
-         highlight_states = {
+        highlight_states = {
             highlight_state_targets = {
                 state = 619
                 state = 682
                 state = 577
                 state = 620
+                state = 646
             }
         }
         fire_only_once = yes
@@ -1890,6 +1892,149 @@ EQS_expand_imperial_territory_category = {
             682 = { add_core_of = ROOT }
             577 = { add_core_of = ROOT }
             620 = { add_core_of = ROOT }
+            646 = { add_core_of = ROOT }
+        }
+    }
+    SOL_integrate_crown_colony = {
+        allowed = { tag = EQS }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = SOL_all_states_over_40_compliance_tt
+                676 = { compliance > 40 }
+                675 = { compliance > 40 }
+                360 = { compliance > 40 }
+                361 = { compliance > 40 }
+                362 = { compliance > 40 }
+                365 = { compliance > 40 }
+                364 = { compliance > 40 }
+                363 = { compliance > 40 }
+                355 = { compliance > 40 }
+                359 = { compliance > 40 }
+                356 = { compliance > 40 }
+                354 = { compliance > 40 }
+                357 = { compliance > 40 }
+                358 = { compliance > 40 }
+            }
+        }
+        visible = {
+            OR = {
+                has_completed_focus = SOL_She_Who_Raises_the_Sun
+                has_completed_focus = SOL_Empress_knows_Best
+                has_completed_focus = SOL_Freedom_from_Fear
+            }
+            EQC = { all_cores_owned_by_ROOT = yes } #Change to not exist if for some reason they get more cores than starting cores
+        }
+        highlight_states = {
+            highlight_state_targets = {
+                state = 676
+                state = 675
+                state = 360
+                state = 361
+                state = 362
+                state = 365
+                state = 364
+                state = 363
+                state = 355
+                state = 359
+                state = 356
+                state = 354
+                state = 357
+                state = 358
+            }
+        }
+        fire_only_once = yes
+        days_remove = 30
+        remove_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision remove SOL_integrate_crown_colony"
+            every_state = {
+                limit = {
+                    is_core_of = EQC
+                    NOT = { is_core_of = JER }
+                    NOT = { is_core_of = JFT }
+                    NOT = { is_core_of = TAL }
+                    NOT = { is_core_of = WNG }
+                }
+                add_core_of = ROOT
+            }
+        }
+    }
+    SOL_solarize_chiropterra = {
+        allowed = { tag = EQS }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = SOL_all_states_over_40_compliance_tt
+                815 = { compliance > 40 }
+                689 = { compliance > 40 }
+                691 = { compliance > 40 }
+                690 = { compliance > 40 }
+                713 = { compliance > 40 }
+                712 = { compliance > 40 }
+            }
+        }
+        visible = { has_country_flag = SOL_can_core_BAT_states }
+        highlight_states = {
+            highlight_state_targets = {
+                state = 815
+                state = 689
+                state = 691
+                state = 690
+                state = 713
+                state = 712
+            }
+        }
+        fire_only_once = yes
+        days_remove = 30
+        remove_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision remove SOL_solarize_chiropterra"
+            815 = {
+                add_core_of = ROOT
+            }
+            if = {
+                limit = { NOT = { has_completed_focus = SOL_fire_and_brimstone } }
+                set_province_name = {
+                    id = 18477
+                    name = SOL_moons_fall
+                }
+            }
+            689 = {
+                add_core_of = ROOT
+            }
+            set_province_name = {
+                id = 18526
+                name = SOL_firebrook
+            }
+            691 = {
+                add_core_of = ROOT
+            }
+            set_province_name = {
+                id = 18517
+                name = SOL_heliograd
+            }
+            set_province_name = {
+                id = 18499
+                name = SOL_bats_end
+            }
+            690 = {
+                add_core_of = ROOT
+            }
+            set_province_name = {
+                id = 18583
+                name = SOL_weeping_peaks
+            }
+            713 = {
+                add_core_of = ROOT
+            }
+            set_province_name = {
+                id = 18601
+                name = EQS_SOL_port
+            }
+            712 = {
+                add_core_of = ROOT
+            }
+            set_province_name = {
+                id = 18570
+                name = SOL_nova_sanctum
+            }
         }
     }
     SOL_integrate_maregyptian_ports = {

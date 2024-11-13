@@ -111,6 +111,12 @@
   ###City Names###
   EQS_sanctum_solar:0 "Sanctum Solar"
   EQS_sol_victoria:0 "Sol Victoria"
+  SOL_nova_sanctum:0 "Nova Sanctum"
+  SOL_heliograd:0 "Heliograd"
+  SOL_bats_end:0 "Bat's End"
+  SOL_firebrook:0 "Firebrook"
+  SOL_weeping_peaks:0 "Weeping Peaks"
+  SOL_moons_fall:0 "Moon's Fall"
 
   ###Decisions###
   EQS_solar_fury_category:0 "An Alicorn's §OFury§!"
@@ -225,8 +231,10 @@
   SOL_integrate_changeling_borderlands_desc:0 "The border region of [CHN.GetNameDef] has been in flux with our ponies for generations. Although Acornage was an attempt to build a multicultural city that would appeal to peace between our nations, it only provided a way through our borders. Since our occupation in the Great War, we have slowly expelled or eradicated any resisting changelings and these territories are now ripe for our settlers and the pony minorities that resided there before. The changelings never needed this land, anyway."
   SOL_integrate_nouvelle_aquila_region:0 "Integrate the Nouvelle Aquila Region"
   SOL_integrate_river_heartlands:0 "Integrate River Heartlands"
+  SOL_integrate_crown_colony:0 "Integrate the Crown Colony"
   SOL_integrate_maregyptian_ports:0 "Integrate the [734.GetName] Ports"
   SOL_integrate_manerba:0 "Integrate [692.GetName]"
+  SOL_solarize_chiropterra:0 "§RBring the Sun to Chiropterra§!"
   SOL_spawn_CHN_puppet:0 "Release [ROOT.GetAdjectiveCap]-Aligned Hives"
 
   ###Flags and Custom Tooltips###
@@ -326,6 +334,13 @@
   SOL_when_in_maregypt_do_as_maregyptians_tt:0 "We will fully integrate the port region of §Y[734.GetCapitalVictoryPointName]§! into §Y[ROOT.GetNameDef]§! and leave the remaining §Y[MGY.GetAdjective]§! and §Y[MDL.GetAdjective]§! territory to regional governors."
   SOL_conquer_all_yo_land_tt:0 "All §Gponies§! and §Ypony-adjacent§! creatures have been brought under §Y[ROOT.GetLeader]'s§! protection."
   SOL_cannot_release_pony_or_adjacent_freely:0 "§Y[FROM.GetName]§! cannot be released from this menu because it is a pony or pony-adjacent nation. Look to your §YDecisions§! tab in order to release it."
+  SOL_time_to_be_gamer_tt:0 "All §Oresistance§! will be §Rcrushed§! so we may §gcolonize§! §C[BAT.GetNameDef]§! for ourselves."
+  SOL_exterminate_tt:0 "§RMetztunalia will weep§!"
+  SOL_annhilate_tt:0 "§RBatsby will bid farewell\nUrsagrad will embrace the Sun§!"
+  SOL_crush_tt:0 "§RIztāctepetl will heat up§!"
+  SOL_kill_tt:0 "§RThe Moonspeaker's will be cleansed§!"
+  SOL_destroy_tt:0 "§RFirstport will be enlightened§!"
+  SOL_swag_tt:0 "§RNew Ayacachtli will be purified§!"
 
   ###Last one in the chain. Remove comment later###
   SOL_conglaturation_a_winner_is_you_tt:0 "§GHarmony has been preserved and all of ponykind now bends the knee to Daybreaker. Thank you for playing the Solar Age! - Test4Echo§!"
@@ -1365,3 +1380,7 @@
   solarreworked.505.d:0 "Our border guards recently captured a pony fleeing from [FROM.GetNameDef] as they were being chased by a small number of [FROM.GetAdjectiveCap] soldiers. After a short skirmish, the [FROM.GetAdjectiveCap] force was fended off and the haggard pony collapsed from exhaustion. If it were not for the union pin that he had on his clothes, he would have been thrown into prison. Instead, he was taken to Altidiya Memorial in Petershoof, where he was given the medical treatment a fellow comrade deserved. When he recovered, he wished to speak to the first soldier he could find, and began to beg for liberation. Apparently he had been sent and aided by some of the unions across the Eastern coast of Equestria with a message: [FROM.GetLeader] is pressing down against the workers of the nation. Efforts to centralize and crush any autonomy in the country have begun, with ponies that resist being arrested for becoming a danger to the state.\n\nTheirs is a simple request. They ask that we put our bits where our mouth is, and fight to free them. Although [FROM.GetNameDef] is currently weakened, but they are by no means weak. Will we stand for what is right, or bide our time for later?"
   solarreworked.505.a:0 "We will liberate the [FROM.GetAdjectiveCap] proletariat!"
   solarreworked.505.b:0 "We can do nothing about their plight right now."
+  solarreworked.508.t:0 "[EQC.GetLeader]'s Statehood Petition"
+  solarreworked.508.d:0 "This morning a letter arrived by unicorn messenger for the Empress's eyes only from [EQC.GetNameDef]. Within the communication from [EQC.GetLeader], the request was made for proper statehood for [EQC.GetNameDef]. Since we have re-established control of the rogue colony, [EQC.GetLeader.GetSheHe] has implemented Order and Harmony exactly as we have desired. The ponies of the colony are loyal and eager to serve the Empress and direct administration would permit some benefits for them as full citizens of the Empire. There is little downside to accepting their request, but having a local administration would allow the Empress to focus elsewhere and permit for more flexible government in the region."
+  solarreworked.508.a:0 "They are a model crown colony and will remain so under [EQC.GetLeader]'s guidance."
+  solarreworked.508.b:0 "Their petition for statehood has been granted."

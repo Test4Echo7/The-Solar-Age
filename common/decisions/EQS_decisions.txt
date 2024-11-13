@@ -1077,19 +1077,20 @@ SOL_trolling_chiropterra = {
         }
 
 		visible = {
-			has_government = fascism
-			is_subject = no
-		    has_DB_ruler = yes
-			all_of_scopes = {
-				array = BAT.core_states
-				owner = {
-					OR = {
-						tag = EQS
-						is_subject_of = EQS
-					}
-					PREV = { is_fully_controlled_by = PREV }
-				}
-			}
+			always = no
+			#has_government = fascism
+			#is_subject = no
+		    #has_DB_ruler = yes
+			#all_of_scopes = {
+			#	array = BAT.core_states
+			#	owner = {
+			#		OR = {
+			#			tag = EQS
+			#			is_subject_of = EQS
+			#		}
+			#		PREV = { is_fully_controlled_by = PREV }
+			#	}
+			#}
 		}
 
 		modifier = {

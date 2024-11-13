@@ -6134,6 +6134,7 @@ shared_focus = {
 		else = {
 			add_ideas = SOL_ordo_australis_archives
 		}
+		EQS_troll_chiropterra = yes
 		#Create puppet here
 		###Maybe event speaking about how the thestrals can still be useful, and that they need to be monitored and can more easily be done so by the IIS/Solaris Speculatores, and that a client state will be erected in it to compensate for no longer having direct control
 	}
@@ -7631,6 +7632,7 @@ shared_focus = {
 			has_completed_focus = SOL_empress_protector
 			has_completed_focus = SOL_empress_mother
 		}
+		NOT = { has_completed_focus = SOL_fire_and_brimstone }
 		has_war = no
 	}
 

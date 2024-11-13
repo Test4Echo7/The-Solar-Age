@@ -435,9 +435,6 @@ country_event = { #Daybreaker holds a speech in Sanctum Solar, which has just be
                     ROOT = { end_puppet = CRY }
                 }
                 leave_faction = yes
-                hidden_effect = {
-                    drop_cosmetic_tag = yes
-                }
             }
         }
         EQC = {
@@ -469,6 +466,7 @@ country_event = { #Daybreaker holds a speech in Sanctum Solar, which has just be
                 leave_faction = yes
             }
         }
+        set_country_flag = SOL_puppets_left
 		set_politics = {
             ruling_party = fascism
             elections_allowed = no
@@ -4878,8 +4876,74 @@ country_event = { #A soldier learns that his squad has received final orders fro
 
     option = { #I will need to go to confessional after this.
         name = solarreworked.394.a
-        BAT = { add_to_ROOT_potential_cores = yes }
-        #Reduce population massively
+        set_country_flag = SOL_can_core_BAT_states
+        save_current_manpower = yes
+        custom_effect_tooltip = SOL_time_to_be_gamer_tt
+        custom_effect_tooltip = BAR_viira_puppet_break
+        custom_effect_tooltip = SOL_exterminate_tt
+        690 = {
+            add_manpower = -123850
+            add_victory_points = {
+                province = 18583
+                value = -2
+            }
+        }
+        custom_effect_tooltip = SOL_annhilate_tt
+        691 = {
+            add_manpower = -238532
+            add_victory_points = {
+                province = 18499
+                value = -2
+            }
+            add_victory_points = {
+                province = 18517
+                value = -7
+            }
+        }
+        custom_effect_tooltip = SOL_crush_tt
+        689 = {
+            add_manpower = -158302
+            add_victory_points = {
+                province = 18526
+                value = -3
+            }
+        }
+        custom_effect_tooltip = SOL_kill_tt
+        815 = {
+            add_manpower = -130478
+            if = {
+                limit = {
+                    EQS = { has_completed_focus = SOL_fire_and_brimstone }
+                }
+                add_victory_points = {
+                    province = 18477
+                    value = -3
+                }
+            }
+            else = {
+                add_victory_points = {
+                    province = 18477
+                    value = -2
+                }
+            }
+        }
+        custom_effect_tooltip = SOL_destroy_tt
+        713 = {
+            add_manpower = -204391
+            add_victory_points = {
+                province = 18601
+                value = -2
+            }
+        }
+        custom_effect_tooltip = SOL_swag_tt
+        712 = {
+            add_manpower = -576294
+            add_victory_points = {
+                province = 18570
+                value = -15
+            }
+        }
+        restore_previous_manpower = yes
         add_stability = 0.1
         add_war_support = 0.1
     }
@@ -6380,7 +6444,10 @@ country_event = { #Event quickly stating that now that the war is over, with EQC
     title = solarreworked.502.t
     desc = solarreworked.502.d
     picture = GFX_event_solarempire
-    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.502"}
+    immediate = {
+        log = "[GetDateText]: [ROOT.GetName]: event solarreworked.502"
+        set_country_flag = SOL_puppets_left
+    }
 
     is_triggered_only = yes
 
@@ -6603,6 +6670,91 @@ country_event = { #Event for deciding the fate of MDL, and whether it is held by
             target = MDL
             autonomous_state = autonomy_reichsprotectorate
         }
+    }
+}
+
+country_event = { #EQC asks for annexation into SOL
+    id = solarreworked.508
+    title = solarreworked.508.t
+    desc = solarreworked.508.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.508"}
+
+    is_triggered_only = yes
+
+    option = { #They are a model crown colony and will remain so under [FROM.GetLeader]'s guidance.
+        name = solarreworked.508.a
+        FROM = {
+            country_event = {
+                id = solarreworked.509
+                days = 1
+            }
+        }
+        ai_chance = {
+            base = 1
+            modifier = {
+                has_completed_focus = SOL_empress_protector
+                factor = 10
+            }
+            modifier = {
+                has_completed_focus = SOL_empress_mother
+                factor = 5
+            }
+        }
+    }
+    option = { #They shall naturally become the next state of the Empire.
+        name = solarreworked.508.b
+        annex_country = {
+            target = EQC
+            transfer_troops = yes
+        }
+        every_possible_country = {
+            limit = { has_character = EQS_SOL_arcane_nova }
+            EQS_SOL_arcane_nova = { set_nationality = ROOT }
+            hidden_effect = {
+                EQS_SOL_arcane_nova = {
+                    remove_country_leader_role = {
+                        ideology = falangism
+                    }
+                }
+            }
+        }
+        every_state = {
+            limit = {
+                is_core_of = EQC
+                NOT = { is_core_of = JER }
+                NOT = { is_core_of = JFT }
+                NOT = { is_core_of = TAL }
+                NOT = { is_core_of = WNG }
+            }
+            add_core_of = ROOT
+        }
+        ai_chance = {
+            base = 1
+            modifier = {
+                has_completed_focus = SOL_god_empress
+                factor = 5
+            }
+            modifier = {
+                is_historical_focus_on = yes
+                factor = 0
+            }
+        }
+    }
+}
+
+country_event = { #EQC gets told that they are still going to be a colony, and that they will be put as the pedestal of what can be achieved; either Jet Set is a bit worried since he'll still be watched closely, or Arcane is excited to still flex her governmental muscles
+    id = solarreworked.509
+    title = solarreworked.509.t
+    desc = solarreworked.509.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.509"}
+
+    is_triggered_only = yes
+
+    option = { #A surprise to be sure, but a welcome one.
+        name = solarreworked.509.a
+        add_ideas = SOL_model_imperial_colony
     }
 }
 
