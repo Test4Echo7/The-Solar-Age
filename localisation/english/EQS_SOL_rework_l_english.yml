@@ -337,10 +337,10 @@
   SOL_time_to_be_gamer_tt:0 "All §Oresistance§! will be §Rcrushed§! so we may §gcolonize§! §C[BAT.GetNameDef]§! for ourselves."
   SOL_exterminate_tt:0 "§RMetztunalia will weep§!"
   SOL_annhilate_tt:0 "§RBatsby will bid farewell\nUrsagrad will embrace the Sun§!"
-  SOL_crush_tt:0 "§RIztāctepetl will heat up§!"
-  SOL_kill_tt:0 "§RThe Moonspeaker's will be cleansed§!"
-  SOL_destroy_tt:0 "§RFirstport will be enlightened§!"
-  SOL_swag_tt:0 "§RNew Ayacachtli will be purified§!"
+  SOL_crush:0 "§RIztāctepetl will heat up§!"
+  SOL_kill:0 "§RThe Moonspeaker's will be cleansed§!"
+  SOL_destroy:0 "§RFirstport will be enlightened§!"
+  SOL_swag:0 "§RNew Ayacachtli will be purified§!"
 
   ###Last one in the chain. Remove comment later###
   SOL_conglaturation_a_winner_is_you_tt:0 "§GHarmony has been preserved and all of ponykind now bends the knee to Daybreaker. Thank you for playing the Solar Age! - Test4Echo§!"

@@ -4900,7 +4900,7 @@ country_event = { #A soldier learns that his squad has received final orders fro
                 value = -7
             }
         }
-        custom_effect_tooltip = SOL_crush_tt
+        custom_effect_tooltip = SOL_crush
         689 = {
             add_manpower = -158302
             add_victory_points = {
@@ -4908,7 +4908,7 @@ country_event = { #A soldier learns that his squad has received final orders fro
                 value = -3
             }
         }
-        custom_effect_tooltip = SOL_kill_tt
+        custom_effect_tooltip = SOL_kill
         815 = {
             add_manpower = -130478
             if = {
@@ -4927,7 +4927,7 @@ country_event = { #A soldier learns that his squad has received final orders fro
                 }
             }
         }
-        custom_effect_tooltip = SOL_destroy_tt
+        custom_effect_tooltip = SOL_destroy
         713 = {
             add_manpower = -204391
             add_victory_points = {
@@ -4935,7 +4935,7 @@ country_event = { #A soldier learns that his squad has received final orders fro
                 value = -2
             }
         }
-        custom_effect_tooltip = SOL_swag_tt
+        custom_effect_tooltip = SOL_swag
         712 = {
             add_manpower = -576294
             add_victory_points = {
