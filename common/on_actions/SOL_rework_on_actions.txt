@@ -235,6 +235,53 @@ on_actions = {
             }
         }
     }
+    #ROOT = nation being puppeted, FROM = overlord
+    on_puppet = {
+        effect = {
+            log = "[GetDateText]: [ROOT.GetName]: on_puppet solar_age"
+            if = {
+                limit = {
+                    is_subject_of = event_target:solar_empire
+                    NOT = {
+                        original_tag = GRD
+                        has_country_flag = is_solar_puppet
+                    }
+                    OR = {
+                        original_tag = SDL
+                        original_tag = YMN
+                        original_tag = MGY
+                        original_tag = KAR
+                        original_tag = HMR
+                        original_tag = REE
+                        original_tag = MTA
+                        original_tag = OSQ
+                        original_tag = RIV
+                        original_tag = KIR
+                        original_tag = NVA
+                        original_tag = KHM
+                        original_tag = KXN
+                        original_tag = WAT
+                        original_tag = FIR
+                        original_tag = FBK
+                        original_tag = NTR
+                        original_tag = AES
+                        original_tag = MTO
+                        original_tag = MDL
+                        original_tag = DMT
+                    }
+                }
+                apply_SOL_cosmetic_tags_on_puppet = yes
+            }
+            #Will apply once EaW fixes releasing EQC
+            #if = {
+            #    limit = {
+            #        is_subject_of = event_target:solar_empire
+            #        original_tag = EQC
+            #    }
+            #    SOL_fix_albino_sunhorse = yes
+            #}
+        }
+    }
     #ROOT = nation being released, FROM = overlord
     on_release_as_puppet = {
         effect = {
@@ -282,25 +329,25 @@ on_actions = {
             #}
         }
     }
-    on_monthly = {
-        effect = {
-            log = "[GetDateText]: [ROOT.GetName]: on_monthly solar_age"
-            if = {
-                limit = {
-                    ROOT = {
-                        is_ai = no
-                    }
-                    EQS = {
-                        has_country_flag = EQS_player_started_as_EQS
-                    }
-                    NOT = {
-                        any_other_country = { is_ai = no }
-                    }
-                }
-                #country_event = solarreworked.420 #You nasty, John Paradox, you
-            }
-        }
-    }
+    #on_monthly = {
+    #    effect = {
+    #        log = "[GetDateText]: [ROOT.GetName]: on_monthly solar_age"
+    #        if = {
+    #            limit = {
+    #                ROOT = {
+    #                    is_ai = no
+    #                }
+    #                EQS = {
+    #                    has_country_flag = EQS_player_started_as_EQS
+    #                }
+    #                NOT = {
+    #                    any_other_country = { is_ai = no }
+    #                }
+    #            }
+    #            #country_event = solarreworked.420 #You nasty, John Paradox, you
+    #        }
+    #    }
+    #}
     on_monthly_EQS = {
         effect = {
             log = "[GetDateText]: [ROOT.GetName] on_monthly_EQS solar_age"

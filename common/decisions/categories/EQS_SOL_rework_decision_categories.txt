@@ -54,6 +54,13 @@ EQS_expand_imperial_territory_category = {
     }
     icon = celestia_cat
 }
+EQS_pan_pony_empire_category = {
+    allowed = { tag = EQS }
+    priority = {
+        base = 135
+    }
+    icon = celestia_cat
+}
 EQS_BOP_sanity_category = {
     allowed = {
         tag = EQS

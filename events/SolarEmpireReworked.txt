@@ -4525,6 +4525,7 @@ country_event = { #Daybreaker enters an interrogation or torture chamber, where 
 
     option = { #Then beg.
         name = solarreworked.382.a
+        set_country_flag = SOL_doghouse_set_up
         release_autonomy = {
             target = DMT
             autonomous_state = autonomy_reichskommissariat
@@ -6670,6 +6671,7 @@ country_event = { #Event for deciding the fate of MDL, and whether it is held by
             target = MDL
             autonomous_state = autonomy_reichsprotectorate
         }
+        MDL = { set_cosmetic_tag = MDL_SOL }
     }
 }
 

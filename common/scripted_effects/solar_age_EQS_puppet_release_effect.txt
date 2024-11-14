@@ -1,0 +1,192 @@
+SOL_release_CHN = {
+    if = {
+        limit = {
+            291 = { is_core_of = ROOT }
+            246 = { is_core_of = ROOT }
+            247 = { is_core_of = ROOT }
+            319 = { is_core_of = ROOT }
+            316 = { is_core_of = ROOT }
+        }
+        set_temp_variable = { SOL_colonized_CHN_states = 1 }
+    }
+    CHN = { get_current_government_type = yes }
+    release_autonomy = {
+        target = CHN
+        autonomous_state = autonomy_reichsprotectorate
+    }
+    CHN = {
+        restore_previous_government_type = yes
+        set_cosmetic_tag = CHN_SOL
+    }
+    hidden_effect = {
+        transfer_state = 291
+        transfer_state = 246
+        transfer_state = 247
+        transfer_state = 319
+        transfer_state = 316
+        if = {
+            limit = { check_variable = { SOL_colonized_CHN_states = 1 } }
+            291 = { add_core_of = ROOT }
+            246 = { add_core_of = ROOT }
+            247 = { add_core_of = ROOT }
+            319 = { add_core_of = ROOT }
+            316 = { add_core_of = ROOT }
+        }
+    }
+}
+SOL_release_GRF = {
+    release_autonomy = {
+        target = GRF
+        autonomous_state = autonomy_reichsprotectorate
+    }
+    GRF = { set_cosmetic_tag = GRF_SOL }
+}
+SOL_release_YAK = {
+    hidden_effect = {
+        every_state = {
+            limit = {
+                is_core_of = JAK
+            }
+            add_core_of = YAK
+        }
+    }
+    release_autonomy = {
+        target = YAK
+        autonomous_state = autonomy_reichsprotectorate
+    }
+    YAK = { set_cosmetic_tag = YAK_SOL }
+}
+SOL_release_PLB = {
+    hidden_effect = {
+        every_state = {
+            limit = {
+                is_core_of = PNG
+            }
+            add_core_of = PLB
+        }
+    }
+    release_autonomy = {
+        target = PLB
+        autonomous_state = autonomy_reichsprotectorate
+    }
+    PLB = { set_cosmetic_tag = ARC_SOL }
+}
+SOL_release_RIV = {
+    hidden_effect = {
+        every_state = {
+            limit = {
+                OR = {
+                    is_core_of = BAK
+                    is_core_of = LCT
+                    is_core_of = FRE
+                    is_core_of = WIT
+                    is_core_of = NIM
+                    is_core_of = DEP
+                    is_core_of = BAR
+                }
+            }
+            add_core_of = RCT
+        }
+        if = {
+            limit = { NOT = { has_country_flag = SOL_doghouse_set_up } }
+            every_state = {
+                limit = {
+                    is_core_of = DMT
+                }
+                add_core_of = RCT
+            }
+        }
+    }
+    release_autonomy = {
+        target = RCT
+        autonomous_state = autonomy_reichsprotectorate
+    }
+    RCT = { set_cosmetic_tag = RIV_SOL }
+}
+SOL_release_FBK = {
+    hidden_effect = {
+        every_state = {
+            limit = {
+                OR = {
+                    is_core_of = WAT
+                    is_core_of = FIR
+                }
+            }
+            add_core_of = FBK
+        }
+    }
+    release_autonomy = {
+        target = FBK
+        autonomous_state = autonomy_reichsprotectorate
+    }
+    FBK = { set_cosmetic_tag = FBK_SOL }
+}
+SOL_release_MTA = {
+    hidden_effect = {
+        every_state = {
+            limit = {
+                OR = {
+                    is_core_of = REE
+                    is_core_of = OSQ
+                    is_core_of = HMR
+                }
+            }
+            add_core_of = MTA
+        }
+    }
+    release_autonomy = {
+        target = MTA
+        autonomous_state = autonomy_reichsprotectorate
+    }
+    MTA = { set_cosmetic_tag = MTA_SOL }
+}
+SOL_release_KXN = {
+    hidden_effect = {
+        every_state = {
+            limit = {
+                OR = {
+                    is_core_of = KHM
+                    is_core_of = NVA
+                }
+            }
+            add_core_of = KXN
+        }
+    }
+    release_autonomy = {
+        target = KXN
+        autonomous_state = autonomy_reichsprotectorate
+    }
+    KXN = { set_cosmetic_tag = KXN_SOL }
+}
+SOL_release_MTO = {
+    hidden_effect = {
+        every_state = {
+            limit = {
+                OR = {
+                    is_core_of = KAR
+                    is_core_of = AES
+                }
+            }
+            add_core_of = MTO
+        }
+    }
+    release_autonomy = {
+        target = MTO
+        autonomous_state = autonomy_reichsprotectorate
+    }
+    MTO = { set_cosmetic_tag = MTO_SOL }
+}
+SOL_release_KIR = {
+    release_autonomy = {
+        target = KIR
+        autonomous_state = autonomy_reichsprotectorate
+    }
+    KIR = { set_cosmetic_tag = KIR_SOL }
+}
+SOL_release_TBK = {
+    release_autonomy = {
+        target = TBK
+        autonomous_state = autonomy_reichsprotectorate
+    }
+    TBK = { set_cosmetic_tag = TBK_SOL }
+}
