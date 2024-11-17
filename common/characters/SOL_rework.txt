@@ -545,7 +545,7 @@ characters = {
 					has_country_leader = { character = GRI_daybreaker ruling_only = yes }
 					AND = {
 						has_country_flag = SOL_established_personal_union
-						has_country_flag = { character = GRI_emperor_grover_vi ruling_only = yes}
+						has_country_leader = { character = GRI_emperor_grover_vi ruling_only = yes}
 					}
 				}
 			}

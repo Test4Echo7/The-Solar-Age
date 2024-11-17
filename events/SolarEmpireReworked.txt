@@ -1301,7 +1301,7 @@ country_event = { #A soldier dives into a trench after being ordered to, and he 
 
     option = { #Empress forgive me.
         name = solarreworked.76.a
-        add_ides = SOL_flammenwerfers
+        add_ideas = SOL_flammenwerfers
     }
 }
 
@@ -1990,7 +1990,7 @@ country_event = { #Grover is given a personal set of armor as a gift by Daybreak
     title = solarreworked.132.t
     desc = solarreworked.132.d
     picture = GFX_event_solarempire
-    immediate = {lgo = "[GetDateText]: [ROOT.GetName]: event solarreworked.135"}
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.135"}
 
     is_triggered_only = yes
 
@@ -3191,8 +3191,8 @@ country_event = { #After the submission or conquest of CRY, Daybreaker has a tou
     desc = {
         trigger = {
             CRY = { has_country_leader = { character = EQS_twilight_sparkle ruling_only = yes } }
-            text = solarreworked.238.db
         }
+        text = solarreworked.238.db
     }
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.238"}
 
@@ -5773,7 +5773,7 @@ country_event = { #Follow an EQS officer as he gets into a bit of a competition 
                     instant_build = yes
                 }
             }
-            add_doctrince_cost_reduction = {
+            add_doctrine_cost_reduction = {
                 name = land_doctrine_bonus
                 uses = 2
                 cost_reduction = 0.5
@@ -7159,7 +7159,7 @@ country_event = { #An event recapping that with the ascension of Daybreaker, SMI
             remove_dynamic_modifier = EQS_smile_upgrades_lar
         }
         else = {
-            remove_dynamic_modifier = EQS_smile_upgrades
+            remove_dynamic_modifier = { modifier = EQS_smile_upgrades }
         }
     }
     option = { #No greater a threat than them. Eliminate them.
@@ -7170,7 +7170,7 @@ country_event = { #An event recapping that with the ascension of Daybreaker, SMI
             remove_dynamic_modifier = EQS_smile_upgrades_lar
         }
         else = {
-            remove_dynamic_modifier = EQS_smile_upgrades
+            remove_dynamic_modifier = { modifier = EQS_smile_upgrades }
         }
         retire_character = EQS_sweetie_drops
     }

@@ -457,6 +457,54 @@ characters={
 				research_speed_factor = 0.05
 			}
 		}
+		scientist = {
+			traits = { scientist_trait_bright scientist_trait_genius scientist_trait_brilliant_theorist scientist_trait_fast_learner }
+			skills = {
+				specialization_magical = 2
+			}
+			visible = {
+				owner = {
+					hidden_trigger = { is_EQS_SOL = no }
+					has_government = democratic
+					if = {
+						limit = { event_target:solar_empire = { exists = yes } }
+						NOT = {
+							event_target:solar_empire = {
+								has_country_flag = SOL_has_twilight
+							}
+						}
+					}
+					NOT = {
+						any_country_with_original_tag = {
+							original_tag_to_check = CRY
+							exists = yes
+							has_character = EQS_twilight_sparkle
+							has_country_leader = { character = EQS_twilight_sparkle ruling_only = yes }
+						}
+					}
+					NOT = {
+						has_country_flag = EQS_HIP_elements_sent
+						has_country_leader = {
+							character = EQS_twilight_sparkle
+							ruling_only = yes
+						}
+					}
+					if = {
+						limit = {
+							OR = {
+								original_tag = EQC
+								original_tag = CRY
+								original_tag = HIP
+								original_tag = RCT
+								original_tag = MGY
+							}
+							has_country_flag = SOL_hosting_M6
+						}
+					}
+				}
+			}
+			desc = twilight_sparkle_desc
+		}
 		field_marshal = {
 			traits = { sunrise_sparkle_t_alt harsh_leader organizer thorough_planner logistics_wizard pony_race_trait }
 			skill = 4
@@ -510,6 +558,20 @@ characters={
 			ai_will_do = {
 				factor = 100
 			}
+		}
+		scientist = {
+			traits = { scientist_trait_bright scientist_traight_genius scientist_trait_brilliant_theorist scientist_trait_fast_learner }
+			skills = {
+				specialization_magical = 2
+			}
+			visible = {
+				owner = {
+					is_EQS_SOL = yes
+					has_DB_ruler = yes
+					has_global_flag = SOL_twilight_converted
+				}
+			}
+			desc = evil_twilight_sparkle_desc
 		}
 		gender = female
 	}
@@ -1650,6 +1712,7 @@ characters={
 		name = EQS_fluttershy
 		portraits = {
 			army = {
+				large = GFX_portrait_EQS_fluttershy
 				small = "GFX_idea_EQS_fluttershy"
 			}
 		}
@@ -1715,12 +1778,66 @@ characters={
 
 			traits = { nuclear_scientist }
 		}
+
+		scientist = {
+			traits = { scientist_trait_nuclear_specialist scientist_trait_bright }
+			skills = {
+				specialization_nuclear = 3
+			}
+			desc = fluttershy_desc
+			visible = {
+				owner = {
+					if = {
+						limit = { is_original_EQS = yes }
+						has_completed_focus = EQS_WMD
+					}
+					if = {
+						limit = { is_EQS_SOL = yes }
+						has_global_flag = EQS_completed_EQS_WMD
+					}
+					if = {
+						limit = { NOT = { tag = event_target:solar_empire } }
+						has_government = democratic
+					}
+					if = {
+						limit = { event_target:solar_empire = { exists = yes } }
+						OR = {
+							AND = {
+								tag = event_target:solar_empire
+								NOT = { country_exists = event_target:equestria }
+								NOT = {
+									has_country_flag = SOL_harmonic_commanders_leave
+									has_country_flag = SOL_purge_finished
+								}
+							}
+							tag = event_target:equestria
+							if = {
+								limit = {
+									OR = {
+										original_tag = EQC
+										original_tag = CRY
+										original_tag = HIP
+										original_tag = RCT
+										original_tag = MGY
+									}
+									has_country_flag = SOL_hosting_M6
+								}
+							}
+						}
+					}
+					NOT = {
+						has_country_flag = EQS_HIP_elements_sent
+					}
+				}
+			}
+		}
 		gender = female
 	}
 	EQS_flakesnow = {
 		name = EQS_flakesnow
 		portraits = {
 			army = {
+				large = "gfx/leaders/scientists/EQS/Flake.tga"
 				small = "GFX_idea_EQS_flakesnow"
 			}
 		}
@@ -1762,6 +1879,34 @@ characters={
 			}
 
 			traits = { rocket_scientist }
+		}
+
+		scientist = {
+			traits = { scientist_trait_rocketry_specialist scientist_trait_brilliant_theorist }
+			skills = {
+				specialization_air = 3
+			}
+			visible = {
+				owner = {
+					if = {
+						limit = { is_original_EQS = yes }
+						OR = {
+							has_global_flag = EQS_completed_EQS_WMD
+							has_completed_focus = SOL_WMD
+						}
+					}
+					if = {
+						limit = { event_target:solar_empire = { exists = yes } }
+						OR = {
+							AND = {
+								tag = event_target:equestria
+								NOT = { country_exists = event_target:solar_empire }
+							}
+							tag = event_target:solar_empire
+						}
+					}
+				}
+			}
 		}
 	}
 	EQS_braeburn = {
@@ -2556,6 +2701,30 @@ characters={
 					}
 				}
 			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_bright }
+			skills = {
+				specialization_magical = 1
+			}
+			visible = {
+				owner = {
+					OR = {
+						AND = {
+							is_EQS_SOL = yes
+							has_completed_focus = SOL_modernize_relic
+						}
+						AND = {
+							tag = EQC
+							OVERLORD = {
+								is_EQS_SOL = yes
+							}
+						}
+					}
+				}
+			}
+			desc = arcane_nova_desc
 		}
 		gender = female
 	}

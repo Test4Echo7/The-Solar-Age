@@ -1009,6 +1009,18 @@ shared_focus = {
 		is_subject = no
 		has_DB_ruler = yes
 	}
+	allow_branch = {
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+			NOT = { has_completed_focus = SOL_god_empress }
+			NOT = { has_completed_focus = SOL_empress_protector }
+		}
+	}
 	select_effect = {
 		#just a dummy thing to make it uncancellable
 		set_temp_variable = {
@@ -1026,6 +1038,20 @@ shared_focus = {
 	relative_position_id = SOL_Imperium_Solis
 	x = -13
 	y = 1
+	offset = {
+		trigger = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				has_completed_focus = SOL_empress_mother
+			}
+		}
+		x = 13
+	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_empress_mother"
 		add_country_leader_trait = daybreaker_mother
@@ -1041,6 +1067,7 @@ shared_focus = {
 					}
 				}
 			}
+			mark_focus_tree_layout_dirty = yes
 		}
 		country_event = {
 			id = solarempire.45
@@ -1611,6 +1638,18 @@ shared_focus = {
 		is_subject = no
 		has_DB_ruler = yes
 	}
+	allow_branch = {
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+			NOT = { has_completed_focus = SOL_empress_mother }
+			NOT = { has_completed_focus = SOL_empress_protector }
+		}
+	}
 	select_effect = {
 		#just a dummy thing to make it uncancellable
 		set_temp_variable = {
@@ -1630,28 +1669,11 @@ shared_focus = {
 		custom_effect_tooltip = super_combat_abilities_tt
 		hidden_effect = {
 			set_country_leader_ideology = falangism
-			if = {
-				limit = {
-					EQC = {
-						is_subject_of = ROOT
-						has_government = democratic
-						NOT = {
-							has_country_flag = EQC_dont_break_free_from_SOL
-						}
-					}
-				}
-				random_list = {
-					60 = {
-					}
-					40 = {
-						set_country_flag = EQC_dont_break_free_from_SOL
-					}
-				}
-			}
 			country_event = {
 				id = solarempire.45
 				days = 7
 			}
+			mark_focus_tree_layout_dirty = yes
 		}
 		set_faction_name = SOL_romanophile_faction
 	}
@@ -1832,6 +1854,20 @@ shared_focus = {
 	x = 2
 	y = 1
 	relative_position_id = SOL_solaris_inquisitionis
+	offset = {
+		trigger = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				has_completed_focus = SOL_empress_protector
+			}
+		}
+		x = -13
+	}
 
 	cost = 5
 	prerequisite = {
@@ -2371,6 +2407,18 @@ shared_focus = {
 		is_subject = no
 		has_DB_ruler = yes
 	}
+	allow_branch = {
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+			NOT = { has_completed_focus = SOL_empress_mother }
+			NOT = { has_completed_focus = SOL_god_empress }
+		}
+	}
 	select_effect = {
 		#just a dummy thing to make it uncancellable
 		set_temp_variable = {
@@ -2388,6 +2436,20 @@ shared_focus = {
 	relative_position_id = SOL_Imperium_Solis
 	x = 13
 	y = 1
+	offset = {
+		trigger = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				has_completed_focus = SOL_empress_protector
+			}
+		}
+		x = -13
+	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_empress_protector"
 		add_country_leader_trait = daybreaker_protector
@@ -2403,22 +2465,7 @@ shared_focus = {
 					}
 				}
 			}
-			if = {
-				limit = {
-					EQC = {
-						is_subject_of = ROOT
-						has_government = democratic
-						has_country_flag = EQC_dont_break_free_from_SOL
-					}
-				}
-				random_list = {
-					70 = {
-					}
-					30 = {
-						clr_country_flag = EQC_dont_break_free_from_SOL
-					}
-				}
-			}
+			mark_focus_tree_layout_dirty = yes
 			country_event = {
 				id = solarempire.45
 				days = 7
@@ -7227,16 +7274,43 @@ shared_focus = {
 	x = -2
 	y = 1
 	relative_position_id = SOL_bat_problems
+	offset = {
+		trigger = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				has_completed_focus = SOL_fire_and_brimstone
+			}
+		}
+		x = 2
+	}
 
 	cost = 3
 	prerequisite = { focus = SOL_bat_problems }
 	mutually_exclusive = { focus = SOL_enlighten_darkness }
 	available = { has_war = no }
+	allow_branch = {
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+			NOT = { has_completed_focus = SOL_enlighten_darkness }
+		}
+	}
+
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_bat_problems"
 		add_war_support = 0.03
 		add_political_power = 75
+		mark_focus_tree_layout_dirty = yes
 	}
 	ai_will_do = {
 		factor = 30
@@ -7311,11 +7385,36 @@ shared_focus = {
 	x = 2
 	y = 1
 	relative_position_id = SOL_bat_problems
+	offset = {
+		trigger = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				has_completed_focus = SOL_enlighten_darkness
+			}
+		}
+		x = -2
+	}
 
 	cost = 3
 	prerequisite = { focus = SOL_bat_problems }
 	mutually_exclusive = { focus = SOL_fire_and_brimstone }
 	available = { has_war = no }
+	allow_branch = {
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+			NOT = { has_completed_focus = SOL_fire_and_brimstone }
+		}
+	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_enlighten_darkness"
@@ -7328,6 +7427,7 @@ shared_focus = {
 			add_compliance = 2
 			add_resistance = -5
 		}
+		mark_focus_tree_layout_dirty = yes
 	}
 	ai_will_do = { factor = 120 }
 }
@@ -7393,6 +7493,20 @@ shared_focus = {
 	x = 2
 	y = 1
 	relative_position_id = SOL_burn_bats
+	offset = {
+		trigger = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				has_completed_focus = SOL_fire_and_brimstone
+			}
+		}
+		x = -2
+	}
 
 	cost = 5
 	prerequisite = {
@@ -8002,6 +8116,20 @@ shared_focus = {
 	x = -2
 	y = 1
 	relative_position_id = SOL_ensuring_loyalty
+	offset = {
+		trigger = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				has_completed_focus = SOL_smooth_transitions
+			}
+		}
+		x = 2
+	}
 
 	cost = 4
 	prerequisite = { focus = SOL_ensuring_loyalty }
@@ -8016,11 +8144,23 @@ shared_focus = {
 			has_country_flag = EQC_SOL_leader_chosen
 		}
 	}
+	allow_branch = {
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+			NOT = { has_completed_focus = SOL_faiths_reward  }
+		}
+	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_smooth_transitions"
 		###Maybe event of Jet Set being called back to Canterlot so that he can have a meeting with Daybreaker, who has been informed that so far he has remained loyal, and that he can continue to remain the governor general, but if he thinks about betraying her trust, she will ensure that the entire colony is wiped out as a response to his insult
 		country_event = solarreworked.440
+		mark_focus_tree_layout_dirty = yes
 	}
 	ai_will_do = {
 		factor = 100
@@ -8032,6 +8172,20 @@ shared_focus = {
 	x = 2
 	y = 1
 	relative_position_id = SOL_ensuring_loyalty
+	offset = {
+		trigger = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				has_completed_focus = SOL_faiths_reward
+			}
+		}
+		x = -2
+	}
 
 	cost = 4
 	prerequisite = { focus = SOL_ensuring_loyalty }
@@ -8046,11 +8200,23 @@ shared_focus = {
 			has_country_flag = EQC_SOL_leader_chosen
 		}
 	}
+	allow_branch = {
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+			NOT = { has_completed_focus = SOL_smooth_transitions  }
+		}
+	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_faiths_reward"
 		###Maybe event of Arcane Nova coming in to arrest Jet Set, as he is too much of a risk to the Empress's plans, and that he will be placed under house arrest until he is determined to be loyal or not; either way, he will be forever relieved of his post as governor general, and she appreciates the attractive accommodations he has, and otherwise it a bit playful in her arrest
 		country_event = solarreworked.441
+		mark_focus_tree_layout_dirty = yes
 	}
 	ai_will_do = {
 		factor = 100
@@ -8081,6 +8247,20 @@ shared_focus = {
 	x = 2
 	y = 1
 	relative_position_id = SOL_smooth_transitions
+	offset = {
+		trigger = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				has_completed_focus = SOL_faiths_reward
+			}
+		}
+		x = -2
+	}
 
 	cost = 6
 	prerequisite = {
