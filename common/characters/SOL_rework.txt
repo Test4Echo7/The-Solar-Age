@@ -380,6 +380,7 @@ characters = {
 		name = EQS_bunsen_beaker
 		portraits = {
 			civilian = {
+				large = "gfx/leaders/scientists/EQS/Bunsen_Beaker.tga"
 				small = "gfx/interface/ideas/advisors/EQS/EQS_bunsen_beaker.tga"
 			}
 		}
@@ -388,9 +389,23 @@ characters = {
 			idea_token = bunsen_beaker
 			allowed = { original_tag = EQS }
 			available = { is_EQS_SOL = yes }
-			visible = { has_completed_focus = SOL_bunsen_beaker_research }
+			visible = { has_country_flag = SOL_bunsen_unlocked }
 			traits = { erratic_scientist }
 			research_bonus = { race_tech = 0.05 }
+		}
+		scientist = {
+			traits = { scientist_trait_bright scientist_trait_race_expert }
+			skills = { specialization_magical = 3 }
+			visible = {
+				OWNER = {
+					if = {
+						limit = {
+							is_EQS_SOL = yes
+						}
+						has_country_flag = SOL_bunsen_unlocked
+					}
+				}
+			}
 		}
 	}
 	EQS_nightshift = {
@@ -565,7 +580,7 @@ characters = {
 					has_country_leader = { character = GRI_daybreaker ruling_only = yes }
 					AND = {
 						has_country_flag = SOL_established_personal_union
-						has_country_flag = { character = GRI_emperor_grover_vi ruling_only = yes}
+						has_country_leader = { character = GRI_emperor_grover_vi ruling_only = yes}
 					}
 				}
 			}

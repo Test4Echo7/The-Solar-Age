@@ -560,7 +560,7 @@ characters={
 			}
 		}
 		scientist = {
-			traits = { scientist_trait_bright scientist_traight_genius scientist_trait_brilliant_theorist scientist_trait_fast_learner }
+			traits = { scientist_trait_bright scientist_trait_genius scientist_trait_brilliant_theorist scientist_trait_fast_learner }
 			skills = {
 				specialization_magical = 2
 			}

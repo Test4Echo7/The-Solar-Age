@@ -943,7 +943,7 @@ ideas = {
 		SOL_sabotaged_tanks = {
 			research_bonus = { armor = -0.3 }
 			equipment_bonus = {
-				armor = { armor_value = -0.15 organization = -0.15 instant = yes }
+				armor = { armor_value = -0.15 max_organisation = -0.15 instant = yes }
 			}
 		}
 		SOL_offensive_propaganda = {

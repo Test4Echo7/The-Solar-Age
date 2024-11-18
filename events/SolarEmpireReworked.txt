@@ -3415,6 +3415,11 @@ country_event = { #Daybreaker attends a demonstration of research by Bunsen Beak
 		}
 		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = bunsen_beaker
+		set_country_flag = SOL_bunsen_unlocked
+		custom_effect_tooltip = {
+			localization_key = available_scientist_one_line_tt
+			CHARACTER = EQS_bunsen_beaker
+		}
     }
 }
 
@@ -7156,7 +7161,7 @@ country_event = { #An event recapping that with the ascension of Daybreaker, SMI
         set_country_flag = SOL_kept_smile_agents
         if = {
             limit = { has_dlc = "La Resistance" }
-            remove_dynamic_modifier = EQS_smile_upgrades_lar
+            remove_dynamic_modifier = { modifier = EQS_smile_upgrades_lar }
         }
         else = {
             remove_dynamic_modifier = { modifier = EQS_smile_upgrades }
@@ -7167,7 +7172,7 @@ country_event = { #An event recapping that with the ascension of Daybreaker, SMI
         #Remove dynamic modifier and Bon Bon here
         if = {
             limit = { has_dlc = "La Resistance" }
-            remove_dynamic_modifier = EQS_smile_upgrades_lar
+            remove_dynamic_modifier = { modifier = EQS_smile_upgrades_lar }
         }
         else = {
             remove_dynamic_modifier = { modifier = EQS_smile_upgrades }

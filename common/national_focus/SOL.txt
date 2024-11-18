@@ -3030,7 +3030,7 @@ shared_focus = {
 			}
 			add_breakthrough_progress = {
 				specialization = specialization_nuclear
-				vlue = 0.5
+				value = 0.5
 			}
 		}
 		else = {

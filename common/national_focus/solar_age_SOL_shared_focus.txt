@@ -1017,6 +1017,7 @@ shared_focus = {
 					option = HIDE
 				}
 			}
+			is_EQS_SOL = yes
 			NOT = { has_completed_focus = SOL_god_empress }
 			NOT = { has_completed_focus = SOL_empress_protector }
 		}
@@ -1646,6 +1647,7 @@ shared_focus = {
 					option = HIDE
 				}
 			}
+			is_EQS_SOL = yes
 			NOT = { has_completed_focus = SOL_empress_mother }
 			NOT = { has_completed_focus = SOL_empress_protector }
 		}
@@ -2415,6 +2417,7 @@ shared_focus = {
 					option = HIDE
 				}
 			}
+			is_EQS_SOL = yes
 			NOT = { has_completed_focus = SOL_empress_mother }
 			NOT = { has_completed_focus = SOL_god_empress }
 		}
@@ -7301,6 +7304,7 @@ shared_focus = {
 					option = HIDE
 				}
 			}
+			is_EQS_SOL = yes
 			NOT = { has_completed_focus = SOL_enlighten_darkness }
 		}
 	}
@@ -7412,6 +7416,7 @@ shared_focus = {
 					option = HIDE
 				}
 			}
+			is_EQS_SOL = yes
 			NOT = { has_completed_focus = SOL_fire_and_brimstone }
 		}
 	}
@@ -8152,6 +8157,7 @@ shared_focus = {
 					option = HIDE
 				}
 			}
+			is_EQS_SOL = yes
 			NOT = { has_completed_focus = SOL_faiths_reward  }
 		}
 	}
@@ -8208,6 +8214,7 @@ shared_focus = {
 					option = HIDE
 				}
 			}
+			is_EQS_SOL = yes
 			NOT = { has_completed_focus = SOL_smooth_transitions  }
 		}
 	}

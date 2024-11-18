@@ -203,7 +203,7 @@ EQS_get_flagship_bb = {
                 limit = {
                     has_tech = antiair_c
                     has_tech = advanced_heavy_battery
-                    has_tech = advanced_centimetric_radar
+                    has_tech = monopulse_radar
                     has_tech = semi_modern_fire_control_system
                     has_tech = improved_airplane_launcher
                 }
@@ -216,7 +216,7 @@ EQS_get_flagship_bb = {
                         fixed_ship_battery_slot = ship_super_heavy_battery_2
                         fixed_ship_anti_air_slot = ship_anti_air_5
                         fixed_ship_fire_control_system_slot = ship_fire_control_system_4
-                        fixed_ship_radar_slot = ship_radar_3
+                        fixed_ship_radar_slot = ship_radar_4
                         fixed_ship_engine_slot = heavy_ship_engine_5
                         fixed_ship_secondaries_slot = ship_secondaries_2
                         fixed_ship_armor_slot = ship_armor_shbb_2
@@ -233,7 +233,7 @@ EQS_get_flagship_bb = {
             else_if = {
                 limit = {
                     has_tech = antiair4
-                    has_tech = centimetric_radar
+                    has_tech = phased_array
                     has_tech = advanced_fire_control_system
                     has_tech = improved_airplane_launcher
                 }
@@ -246,7 +246,7 @@ EQS_get_flagship_bb = {
                         fixed_ship_battery_slot = ship_super_heavy_battery_1
                         fixed_ship_anti_air_slot = ship_anti_air_4
                         fixed_ship_fire_control_system_slot = ship_fire_control_system_3
-                        fixed_ship_radar_slot = ship_radar_2
+                        fixed_ship_radar_slot = ship_radar_3
                         fixed_ship_engine_slot = heavy_ship_engine_3
                         fixed_ship_secondaries_slot = ship_secondaries_2
                         fixed_ship_armor_slot = ship_armor_shbb
@@ -263,10 +263,10 @@ EQS_get_flagship_bb = {
             else = {
                 if = {
                     limit = {
-                        NOT = { has_tech = decimetric_radar }
+                        NOT = { has_tech = cavity_magnatron }
                     }
                     set_technology = {
-                        decimetric_radar = 1
+                        cavity_magnatron = 1
                         popup = no
                     }
                 }
@@ -279,7 +279,7 @@ EQS_get_flagship_bb = {
                         fixed_ship_battery_slot = ship_super_heavy_battery_1
                         fixed_ship_anti_air_slot = ship_anti_air_2
                         fixed_ship_fire_control_system_slot = ship_fire_control_system_1
-                        fixed_ship_radar_slot = ship_radar_1
+                        fixed_ship_radar_slot = ship_radar_3
                         fixed_ship_engine_slot = heavy_ship_engine_3
                         fixed_ship_secondaries_slot = ship_secondaries_2
                         fixed_ship_armor_slot = ship_armor_shbb_2
@@ -309,7 +309,7 @@ EQS_get_flagship_bb = {
             if = {
                 limit = {
                     has_tech = antiair4
-                    has_tech = centimetric_radar
+                    has_tech = phased_array
                     has_tech = advanced_fire_control_system
                     has_tech = improved_airplane_launcher
                 }
@@ -322,7 +322,7 @@ EQS_get_flagship_bb = {
                         fixed_ship_battery_slot = ship_super_heavy_battery_1
                         fixed_ship_anti_air_slot = ship_anti_air_4
                         fixed_ship_fire_control_system_slot = ship_fire_control_system_3
-                        fixed_ship_radar_slot = ship_radar_2
+                        fixed_ship_radar_slot = ship_radar_3
                         fixed_ship_engine_slot = heavy_ship_engine_3
                         fixed_ship_secondaries_slot = ship_secondaries_2
                         fixed_ship_armor_slot = ship_armor_shbb
@@ -339,7 +339,7 @@ EQS_get_flagship_bb = {
             else_if = {
                 limit = {
                     has_tech = antiair2
-                    has_tech = decimetric_radar
+                    has_tech = cavity_magnatron
                     has_tech = improved_fire_control_system
                     has_tech = improved_airplane_launcher
                 }
@@ -352,7 +352,7 @@ EQS_get_flagship_bb = {
                         fixed_ship_battery_slot = ship_super_heavy_battery_1
                         fixed_ship_anti_air_slot = ship_anti_air_3
                         fixed_ship_fire_control_system_slot = ship_fire_control_system_2
-                        fixed_ship_radar_slot = ship_radar_1
+                        fixed_ship_radar_slot = ship_radar_2
                         fixed_ship_engine_slot = heavy_ship_engine_3
                         fixed_ship_secondaries_slot = ship_secondaries_2
                         fixed_ship_armor_slot = ship_armor_shbb
@@ -368,9 +368,9 @@ EQS_get_flagship_bb = {
             }
             else = {
                 if = {
-                    limit = { NOT = { has_tech = decimetric_radar } }
+                    limit = { NOT = { has_tech = cavity_magnatron } }
                     set_technology = {
-                        decimetric_radar = 1
+                        cavity_magnatron = 1
                         popup = no
                     }
                 }
@@ -383,7 +383,7 @@ EQS_get_flagship_bb = {
                         fixed_ship_battery_slot = ship_super_heavy_battery_1
                         fixed_ship_anti_air_slot = ship_anti_air_2
                         fixed_ship_fire_control_system_slot = ship_fire_control_system_1
-                        fixed_ship_radar_slot = ship_radar_1
+                        fixed_ship_radar_slot = ship_radar_2
                         fixed_ship_engine_slot = heavy_ship_engine_3
                         fixed_ship_secondaries_slot = ship_secondaries_2
                         fixed_ship_armor_slot = ship_armor_shbb
@@ -501,7 +501,7 @@ EQS_get_flagship_bc = {
                 limit = {
                     has_tech = antiair_c
                     has_tech = advanced_heavy_battery
-                    has_tech = advanced_centimetric_radar
+                    has_tech = monopulse_radar
                     has_tech = semi_modern_fire_control_system
                     has_tech = improved_airplane_launcher
                 }
@@ -514,7 +514,7 @@ EQS_get_flagship_bc = {
                         fixed_ship_battery_slot = ship_heavy_battery_4
                         fixed_ship_anti_air_slot = ship_anti_air_5
                         fixed_ship_fire_control_system_slot = ship_fire_control_system_4
-                        fixed_ship_radar_slot = ship_radar_3
+                        fixed_ship_radar_slot = ship_radar_4
                         fixed_ship_engine_slot = heavy_ship_engine_5
                         fixed_ship_secondaries_slot = ship_secondaries_2
                         fixed_ship_armor_slot = ship_armor_bc_1
@@ -529,7 +529,7 @@ EQS_get_flagship_bc = {
             else_if = {
                 limit = {
                     has_tech = antiair4
-                    has_tech = centimetric_radar
+                    has_tech = phased_array
                     has_tech = advanced_fire_control_system
                     has_tech = improved_airplane_launcher
                     has_tech = improved_heavy_battery
@@ -543,7 +543,7 @@ EQS_get_flagship_bc = {
                         fixed_ship_battery_slot = ship_heavy_battery_3
                         fixed_ship_anti_air_slot = ship_anti_air_4
                         fixed_ship_fire_control_system_slot = ship_fire_control_system_3
-                        fixed_ship_radar_slot = ship_radar_2
+                        fixed_ship_radar_slot = ship_radar_3
                         fixed_ship_engine_slot = heavy_ship_engine_5
                         fixed_ship_secondaries_slot = ship_secondaries_2
                         fixed_ship_armor_slot = ship_armor_bc_1
@@ -557,9 +557,9 @@ EQS_get_flagship_bc = {
             }
             else = {
                 if = {
-                    limit = { NOT = { has_tech = decimetric_radar } }
+                    limit = { NOT = { has_tech = cavity_magnatron } }
                     set_technology = {
-                        decimetric_radar = 1
+                        cavity_magnatron = 1
                         popup = no
                     }
                 }
@@ -572,7 +572,7 @@ EQS_get_flagship_bc = {
                         fixed_ship_battery_slot = ship_heavy_battery_2
                         fixed_ship_anti_air_slot = ship_anti_air_2
                         fixed_ship_fire_control_system_slot = ship_fire_control_system_1
-                        fixed_ship_radar_slot = ship_radar_1
+                        fixed_ship_radar_slot = ship_radar_2
                         fixed_ship_engine_slot = heavy_ship_engine_5
                         fixed_ship_secondaries_slot = ship_secondaries_2
                         fixed_ship_armor_slot = ship_armor_bc_1
@@ -604,7 +604,7 @@ EQS_get_flagship_bc = {
                 limit = {
                     has_tech = antiair_c
                     has_tech = advanced_heavy_battery
-                    has_tech = advanced_centimetric_radar
+                    has_tech = monopulse_radar
                     has_tech = semi_modern_fire_control_system
                     has_tech = improved_airplane_launcher
                 }
@@ -617,7 +617,7 @@ EQS_get_flagship_bc = {
                         fixed_ship_battery_slot = ship_heavy_battery_4
                         fixed_ship_anti_air_slot = ship_anti_air_5
                         fixed_ship_fire_control_system_slot = ship_fire_control_system_4
-                        fixed_ship_radar_slot = ship_radar_3
+                        fixed_ship_radar_slot = ship_radar_4
                         fixed_ship_engine_slot = heavy_ship_engine_5
                         fixed_ship_secondaries_slot = ship_secondaries_2
                         fixed_ship_armor_slot = ship_armor_bc_1
@@ -632,7 +632,7 @@ EQS_get_flagship_bc = {
             else_if = {
                 limit = {
                     has_tech = antiair4
-                    has_tech = centimetric_radar
+                    has_tech = phased_array
                     has_tech = advanced_fire_control_system
                     has_tech = improved_airplane_launcher
                     has_tech = improved_heavy_battery
@@ -646,7 +646,7 @@ EQS_get_flagship_bc = {
                         fixed_ship_battery_slot = ship_heavy_battery_3
                         fixed_ship_anti_air_slot = ship_anti_air_4
                         fixed_ship_fire_control_system_slot = ship_fire_control_system_3
-                        fixed_ship_radar_slot = ship_radar_2
+                        fixed_ship_radar_slot = ship_radar_3
                         fixed_ship_engine_slot = heavy_ship_engine_5
                         fixed_ship_secondaries_slot = ship_secondaries_2
                         fixed_ship_armor_slot = ship_armor_bc_1
@@ -660,9 +660,9 @@ EQS_get_flagship_bc = {
             }
             else = {
                 if = {
-                    limit = { NOT = { has_tech = decimetric_radar } }
+                    limit = { NOT = { has_tech = cavity_magnatron } }
                     set_technology = {
-                        decimetric_radar = 1
+                        cavity_magnatron = 1
                         popup = no
                     }
                 }
@@ -675,7 +675,7 @@ EQS_get_flagship_bc = {
                         fixed_ship_battery_slot = ship_heavy_battery_2
                         fixed_ship_anti_air_slot = ship_anti_air_2
                         fixed_ship_fire_control_system_slot = ship_fire_control_system_1
-                        fixed_ship_radar_slot = ship_radar_1
+                        fixed_ship_radar_slot = ship_radar_2
                         fixed_ship_engine_slot = heavy_ship_engine_5
                         fixed_ship_secondaries_slot = ship_secondaries_2
                         fixed_ship_armor_slot = ship_armor_bc_1
@@ -703,7 +703,7 @@ EQS_get_flagship_bc = {
             if = {
                 limit = {
                     has_tech = antiair4
-                    has_tech = centimetric_radar
+                    has_tech = phased_array
                     has_tech = advanced_fire_control_system
                     has_tech = improved_airplane_launcher
                     has_tech = improved_heavy_battery
@@ -717,7 +717,7 @@ EQS_get_flagship_bc = {
                         fixed_ship_battery_slot = ship_heavy_battery_3
                         fixed_ship_anti_air_slot = ship_anti_air_4
                         fixed_ship_fire_control_system_slot = ship_fire_control_system_3
-                        fixed_ship_radar_slot = ship_radar_2
+                        fixed_ship_radar_slot = ship_radar_3
                         fixed_ship_engine_slot = heavy_ship_engine_5
                         fixed_ship_secondaries_slot = ship_secondaries_2
                         fixed_ship_armor_slot = ship_armor_bc_1
@@ -731,9 +731,9 @@ EQS_get_flagship_bc = {
             }
             else = {
                 if = {
-                    limit = { NOT = { has_tech = decimetric_radar } }
+                    limit = { NOT = { has_tech = cavity_magnatron } }
                     set_technology = {
-                        decimetric_radar = 1
+                        cavity_magnatron = 1
                         popup = no
                     }
                 }
@@ -746,7 +746,7 @@ EQS_get_flagship_bc = {
                         fixed_ship_battery_slot = ship_heavy_battery_2
                         fixed_ship_anti_air_slot = ship_anti_air_2
                         fixed_ship_fire_control_system_slot = ship_fire_control_system_1
-                        fixed_ship_radar_slot = ship_radar_1
+                        fixed_ship_radar_slot = ship_radar_2
                         fixed_ship_engine_slot = heavy_ship_engine_5
                         fixed_ship_secondaries_slot = ship_secondaries_2
                         fixed_ship_armor_slot = ship_armor_bc_1
@@ -836,7 +836,7 @@ EQS_get_flagship_cv = {
             if = {
                 limit = {
                     has_tech = antiair_c
-                    has_tech = advanced_centimetric_radar
+                    has_tech = monopulse_radar
                 }
                 create_equipment_variant = {
                     name = "Daybreak Class"
@@ -847,7 +847,7 @@ EQS_get_flagship_cv = {
                         fixed_ship_deck_slot_1 = ship_deck_space
                         fixed_ship_deck_slot_2 = ship_deck_space
                         fixed_ship_anti_air_slot = ship_anti_air_5
-                        fixed_ship_radar_slot = ship_radar_3
+                        fixed_ship_radar_slot = ship_radar_4
                         fixed_ship_engine_slot = carrier_ship_engine_5
                         fixed_ship_secondaries_slot = ship_secondaries_2
                         fixed_ship_armor_slot = empty
@@ -863,7 +863,7 @@ EQS_get_flagship_cv = {
             else_if = {
                 limit = {
                     has_tech = antiair4
-                    has_tech = centimetric_radar
+                    has_tech = phased_array
                 }
                 create_equipment_variant = {
                     name = "Daybreak Class"
@@ -874,7 +874,7 @@ EQS_get_flagship_cv = {
                         fixed_ship_deck_slot_1 = ship_deck_space
                         fixed_ship_deck_slot_2 = ship_deck_space
                         fixed_ship_anti_air_slot = ship_anti_air_4
-                        fixed_ship_radar_slot = ship_radar_2
+                        fixed_ship_radar_slot = ship_radar_3
                         fixed_ship_engine_slot = carrier_ship_engine_5
                         fixed_ship_secondaries_slot = ship_secondaries_2
                         fixed_ship_armor_slot = empty
@@ -889,9 +889,9 @@ EQS_get_flagship_cv = {
             }
             else = {
                 if = {
-                    limit = { NOT = { has_tech = decimetric_radar } }
+                    limit = { NOT = { has_tech = cavity_magnatron } }
                     set_technology = {
-                        decimetric_radar = 1
+                        cavity_magnatron = 1
                         popup = no
                     }
                 }
@@ -904,7 +904,7 @@ EQS_get_flagship_cv = {
                         fixed_ship_deck_slot_1 = ship_deck_space
                         fixed_ship_deck_slot_2 = ship_deck_space
                         fixed_ship_anti_air_slot = ship_anti_air_2
-                        fixed_ship_radar_slot = ship_radar_1
+                        fixed_ship_radar_slot = ship_radar_2
                         fixed_ship_engine_slot = carrier_ship_engine_5
                         fixed_ship_secondaries_slot = ship_secondaries_2
                         fixed_ship_armor_slot = empty
@@ -936,7 +936,7 @@ EQS_get_flagship_cv = {
             if = {
                 limit = {
                     has_tech = antiair_c
-                    has_tech = advanced_centimetric_radar
+                    has_tech = monopulse_radar
                 }
                 create_equipment_variant = {
                     name = "Daybreak Class"
@@ -947,7 +947,7 @@ EQS_get_flagship_cv = {
                         fixed_ship_deck_slot_1 = ship_deck_space
                         fixed_ship_deck_slot_2 = ship_deck_space
                         fixed_ship_anti_air_slot = ship_anti_air_5
-                        fixed_ship_radar_slot = ship_radar_3
+                        fixed_ship_radar_slot = ship_radar_4
                         fixed_ship_engine_slot = carrier_ship_engine_4
                         fixed_ship_secondaries_slot = ship_secondaries_2
                         fixed_ship_armor_slot = empty
@@ -962,7 +962,7 @@ EQS_get_flagship_cv = {
             else_if = {
                 limit = {
                     has_tech = antiair4
-                    has_tech = centimetric_radar
+                    has_tech = phased_array
                 }
                 create_equipment_variant = {
                     name = "Daybreak Class"
@@ -973,7 +973,7 @@ EQS_get_flagship_cv = {
                         fixed_ship_deck_slot_1 = ship_deck_space
                         fixed_ship_deck_slot_2 = ship_deck_space
                         fixed_ship_anti_air_slot = ship_anti_air_4
-                        fixed_ship_radar_slot = ship_radar_2
+                        fixed_ship_radar_slot = ship_radar_3
                         fixed_ship_engine_slot = carrier_ship_engine_4
                         fixed_ship_secondaries_slot = ship_secondaries_2
                         fixed_ship_armor_slot = empty
@@ -987,9 +987,9 @@ EQS_get_flagship_cv = {
             }
             else = {
                 if = {
-                    limit = { NOT = { has_tech = decimetric_radar } }
+                    limit = { NOT = { has_tech = cavity_magnatron } }
                     set_technology = {
-                        decimetric_radar = 1
+                        cavity_magnatron = 1
                         popup = no
                     }
                 }
@@ -1002,7 +1002,7 @@ EQS_get_flagship_cv = {
                         fixed_ship_deck_slot_1 = ship_deck_space
                         fixed_ship_deck_slot_2 = ship_deck_space
                         fixed_ship_anti_air_slot = ship_anti_air_5
-                        fixed_ship_radar_slot = ship_radar_3
+                        fixed_ship_radar_slot = ship_radar_4
                         fixed_ship_engine_slot = carrier_ship_engine_4
                         fixed_ship_secondaries_slot = ship_secondaries_2
                         fixed_ship_armor_slot = empty
@@ -1030,7 +1030,7 @@ EQS_get_flagship_cv = {
             if = {
                 limit = {
                     has_tech = antiair4
-                    has_tech = centimetric_radar
+                    has_tech = phased_array
                 }
                 create_equipment_variant = {
                     name = "Daybreak Class"
@@ -1041,7 +1041,7 @@ EQS_get_flagship_cv = {
                         fixed_ship_deck_slot_1 = ship_deck_space
                         fixed_ship_deck_slot_2 = ship_deck_space
                         fixed_ship_anti_air_slot = ship_anti_air_4
-                        fixed_ship_radar_slot = ship_radar_2
+                        fixed_ship_radar_slot = ship_radar_3
                         fixed_ship_engine_slot = carrier_ship_engine_3
                         fixed_ship_secondaries_slot = ship_secondaries_2
                         fixed_ship_armor_slot = empty
@@ -1054,9 +1054,9 @@ EQS_get_flagship_cv = {
             }
             else = {
                 if = {
-                    limit = { NOT = { has_tech = decimetric_radar } }
+                    limit = { NOT = { has_tech = cavity_magnatron } }
                     set_technology = {
-                        decimetric_radar = 1
+                        cavity_magnatron = 1
                         popup = no
                     }
                 }
@@ -1069,7 +1069,7 @@ EQS_get_flagship_cv = {
                         fixed_ship_deck_slot_1 = ship_deck_space
                         fixed_ship_deck_slot_2 = ship_deck_space
                         fixed_ship_anti_air_slot = ship_anti_air_2
-                        fixed_ship_radar_slot = ship_radar_1
+                        fixed_ship_radar_slot = ship_radar_2
                         fixed_ship_engine_slot = carrier_ship_engine_3
                         fixed_ship_secondaries_slot = ship_secondaries_2
                         fixed_ship_armor_slot = empty

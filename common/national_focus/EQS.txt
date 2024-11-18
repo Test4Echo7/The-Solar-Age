@@ -2143,7 +2143,7 @@ shared_focus = {
 		custom_effect_tooltip = {
 			localization_key = nuclear_facility_construction_tt
 			temp_facility_state_loc = "[75.GetName]"
-			temp_factility_province_loc = "[75.GetCapitalVictoryPointName]"
+			temp_facility_province_loc = "[75.GetCapitalVictoryPointName]"
 		}
 		hidden_effect = {
 			if = {
