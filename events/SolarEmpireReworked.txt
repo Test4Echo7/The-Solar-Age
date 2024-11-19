@@ -388,10 +388,30 @@ country_event = { #A short event speaking of, since there are no other ponies qu
     option = { #Blueblood is distant kin. He has a right to lead.
         name = solarreworked.32.c
         add_ideas = SOL_blueblood_regent
+        if = {
+            limit = {
+                has_idea = EQS_harmonist_pushback
+            }
+            add_power_balance_value = {
+                id = EQS_vestments_of_power_bop
+                value = -0.05
+                tooltip_side = EQS_powa
+            }
+        }
     }
     option = { #Raven Inkwell knows the Empire inside and out. She would suit the role best.
         name = solarreworked.32.e
         add_ideas = SOL_raven_regent
+        if = {
+            limit = {
+                has_idea = EQS_harmonist_pushback
+            }
+            add_power_balance_value = {
+                id = EQS_vestments_of_power_bop
+                value = -0.05
+                tooltip_side = EQS_powa
+            }
+        }
     }
 }
 
@@ -408,15 +428,19 @@ country_event = { #Daybreaker holds a speech in Sanctum Solar, which has just be
         add_political_power = 100
         add_stability = 0.1
         add_war_support = 0.1
+        set_country_flag = SOL_unlock_political_focuses
 		effect_tooltip = {
 			every_enemy_country = {
 				add_ideas = SOL_enemy_debuff_idea
 			}
 		}
+		custom_effect_tooltip = SOL_new_political_focuses_tt
 		hidden_effect = {
 			every_enemy_country = {
 				add_ideas = SOL_enemy_debuff_idea
 			}
+			mark_focus_tree_layout_dirty = yes
+			remove_ideas = EQS_harmonist_pushback
 		}
 		if = {
 			limit = {
@@ -525,9 +549,13 @@ country_event = { #Short event detailing that how with Daybreaker's ascension an
                 days = 120
             }
         }
-        set_power_balance = {
-            id = EQS_vestments_of_power_bop
-            set_default = yes
+        custom_effect_tooltip = SOL_rebel_scum_tt
+        hidden_effect = {
+            set_power_balance = {
+                id = EQS_vestments_of_power_bop
+                set_default = yes
+            }
+            add_ideas = EQS_harmonist_pushback
         }
     }
 }
@@ -2741,7 +2769,7 @@ country_event = {
             }
         }
         custom_effect_tooltip = sunset_shimmer_stats_tp
-        set_country_flag = SOL_sunset_ascended
+        mark_focus_tree_layout_dirty = yes
     }
 }
 
@@ -3816,6 +3844,9 @@ country_event = { #A shorter event of Daybreaker's thoughts as she surveys her p
 			add = daybreaker_god2
 			remove = daybreaker_god
 		}
+		set_country_flag = SOL_solaris_bellum_time
+		custom_effect_tooltip = SOL_solaris_bellum_tt
+		mark_focus_tree_layout_dirty = yes
     }
 }
 
@@ -3904,6 +3935,7 @@ country_event = { #An investigator of the IIS appears at a pony's business, sinc
 		else = {
 			add_ideas = SOL_Imperial_Investigative_Service_idea
 		}
+		set_country_flag = SOL_spy_mares
     }
 }
 
@@ -4023,6 +4055,9 @@ country_event = { #Follow a citizen as they are brought before Daybreaker to ask
     option = { #N-No! It's excellent advice! I shall chew on it.
         name = solarreworked.332.a
         add_ideas = SOL_mother_knows_best
+        set_country_flag = SOL_solaris_bellum_time
+        custom_effect_tooltip = SOL_solaris_bellum_tt
+        mark_focus_tree_layout_dirty = yes
     }
 }
 
@@ -4235,6 +4270,9 @@ country_event = { #Follow Daybreaker as she personally breaks into the home of s
         add_political_power = 70
         add_stability = 0.1
         add_ideas = SOL_Freedom_from_Fear_idea
+        set_country_flag = SOL_solaris_bellum_time
+        custom_effect_tooltip = SOL_solaris_bellum_tt
+        mark_focus_tree_layout_dirty = yes
     }
 }
 

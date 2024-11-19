@@ -277,6 +277,10 @@ EQS_debug_category = {
             }
             set_country_flag = SOL_has_twilight
             set_country_flag = SOL_has_captured_sunset
+            set_country_flag = SOL_unlock_political_focuses
+            set_country_flag = SOL_bat_problems_flag
+            set_country_flag = SOL_solaris_bellum_time
+            set_global_flag = SOL_twilight_converted
             country_event = equestria.154
             complete_national_focus = SOL_Imperium_Solis
             complete_national_focus = SOL_god_empress

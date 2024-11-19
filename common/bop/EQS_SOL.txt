@@ -182,7 +182,7 @@ EQS_sanity_bop = {
 }
 
 EQS_vestments_of_power_bop = {
-    initial_value = 0.75
+    initial_value = 0.85
     left_side = EQS_powa
     right_side = EQS_democracy
     decision_category = EQS_BOP_SOL_power_category

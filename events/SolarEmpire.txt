@@ -1109,6 +1109,7 @@ country_event = {
 		#	}
 		#	country_event = solarempire.131
 		#}
+		mark_focus_tree_layout_dirty = yes
 	}
 }
 

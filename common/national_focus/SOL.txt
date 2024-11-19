@@ -1771,6 +1771,7 @@ shared_focus = {
 	y = -1
 	allow_branch = {
 		is_EQS_SOL = yes
+		has_country_flag = SOL_unlock_political_focuses
 	}
 	available = {
 		has_country_flag = SOL_has_twilight

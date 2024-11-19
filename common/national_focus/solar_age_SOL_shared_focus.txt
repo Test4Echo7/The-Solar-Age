@@ -10,7 +10,10 @@ shared_focus = {
     y = -1
 
     cost = 10
-    allow_branch = { is_EQS_SOL = yes }
+    allow_branch = {
+		is_EQS_SOL = yes
+		has_country_flag = SOL_unlock_political_focuses
+	}
     available = {
         has_country_flag = SOL_has_captured_sunset
         OR = {
@@ -611,6 +614,15 @@ shared_focus = {
     available = {
         is_subject = no
         has_DB_ruler = yes
+        if = {
+			limit = {
+				has_power_balance = { id = EQS_vestments_of_power_bop }
+			}
+			power_balance_value = {
+				id = EQS_vestments_of_power_bop
+				value < 0.7
+			}
+        }
     }
 
     completion_reward = {
@@ -639,6 +651,15 @@ shared_focus = {
 			has_idea = SOL_societal_stubbornness
 			has_idea = SOL_societal_stubbornness_2
 			has_idea = SOL_societal_stubbornness_3
+        }
+        if = {
+			limit = {
+				has_power_balance = { id = EQS_vestments_of_power_bop }
+			}
+			power_balance_value = {
+				id = EQS_vestments_of_power_bop
+				value < 0.7
+			}
         }
     }
     bypass = {
@@ -671,6 +692,15 @@ shared_focus = {
 			has_idea = SOL_military_mutiny_2
 			has_idea = SOL_military_mutiny_3
         }
+        if = {
+			limit = {
+				has_power_balance = { id = EQS_vestments_of_power_bop }
+			}
+			power_balance_value = {
+				id = EQS_vestments_of_power_bop
+				value < 0.7
+			}
+        }
     }
     bypass = {
 		NOT = { has_idea = SOL_military_mutiny }
@@ -697,6 +727,15 @@ shared_focus = {
     available = {
         is_subject = no
         has_DB_ruler = yes
+        if = {
+			limit = {
+				has_power_balance = { id = EQS_vestments_of_power_bop }
+			}
+			power_balance_value = {
+				id = EQS_vestments_of_power_bop
+				value < 0.45
+			}
+        }
     }
 
     completion_reward = {
@@ -721,6 +760,15 @@ shared_focus = {
 			has_idea = SOL_societal_stubbornness
 			has_idea = SOL_societal_stubbornness_2
 			has_idea = SOL_societal_stubbornness_3
+        }
+        if = {
+			limit = {
+				has_power_balance = { id = EQS_vestments_of_power_bop }
+			}
+			power_balance_value = {
+				id = EQS_vestments_of_power_bop
+				value < 0.5
+			}
         }
     }
     bypass = {
@@ -748,6 +796,15 @@ shared_focus = {
     available = {
         is_subject = no
         has_DB_ruler = yes
+        if = {
+			limit = {
+				has_power_balance = { id = EQS_vestments_of_power_bop }
+			}
+			power_balance_value = {
+				id = EQS_vestments_of_power_bop
+				value < 0.4
+			}
+        }
     }
     bypass = {
 		NOT = { has_idea = SOL_military_mutiny }
@@ -813,6 +870,15 @@ shared_focus = {
     available = {
         is_subject = no
         has_DB_ruler = yes
+        if = {
+			limit = {
+				has_power_balance = { id = EQS_vestments_of_power_bop }
+			}
+			power_balance_value = {
+				id = EQS_vestments_of_power_bop
+				value < 0.3
+			}
+        }
     }
 
     completion_reward = {
@@ -835,6 +901,15 @@ shared_focus = {
     available = {
         is_subject = no
         has_DB_ruler = yes
+        if = {
+			limit = {
+				has_power_balance = { id = EQS_vestments_of_power_bop }
+			}
+			power_balance_value = {
+				id = EQS_vestments_of_power_bop
+				value < 0.15
+			}
+        }
     }
 
     completion_reward = {
@@ -858,6 +933,15 @@ shared_focus = {
     available = {
         is_subject = no
         has_DB_ruler = yes
+        if = {
+			limit = {
+				has_power_balance = { id = EQS_vestments_of_power_bop }
+			}
+			power_balance_value = {
+				id = EQS_vestments_of_power_bop
+				value < 0.15
+			}
+        }
     }
 
     completion_reward = {
@@ -918,6 +1002,11 @@ shared_focus = {
     completion_reward = {
         log = "[GetDateText]: [Root.GetName]: Focus SOL_judge_jury_executioner"
         add_ideas = SOL_sole_judge
+        add_power_balance_value = {
+			id = EQS_vestments_of_power_bop
+			value = -0.05
+			tooltip_side = EQS_powa
+        }
     }
     ai_will_do = { factor = 150 }
 }
@@ -936,6 +1025,15 @@ shared_focus = {
     available = {
         is_subject = no
         has_DB_ruler = yes
+        if = {
+			limit = {
+				has_power_balance = { id = EQS_vestments_of_power_bop }
+			}
+			power_balance_value = {
+				id = EQS_vestments_of_power_bop
+				value < 0.05
+			}
+        }
     }
 
     completion_reward = {
@@ -974,6 +1072,15 @@ shared_focus = {
 	available = {
 		is_subject = no
 		has_DB_ruler = yes
+		if = {
+			limit = {
+				has_power_balance = { id = EQS_vestments_of_power_bop }
+			}
+			power_balance_value = {
+				id = EQS_vestments_of_power_bop
+				value < -0.1
+			}
+        }
 	}
 	#bypass = {}
 	cost = 7
@@ -1010,6 +1117,7 @@ shared_focus = {
 		has_DB_ruler = yes
 	}
 	allow_branch = {
+		has_country_flag = SOL_unlock_political_focuses
 		if = {
 			limit = {
 				has_game_rule = {
@@ -1020,6 +1128,9 @@ shared_focus = {
 			is_EQS_SOL = yes
 			NOT = { has_completed_focus = SOL_god_empress }
 			NOT = { has_completed_focus = SOL_empress_protector }
+		}
+		else = {
+			is_EQS_SOL = yes
 		}
 	}
 	select_effect = {
@@ -1049,6 +1160,9 @@ shared_focus = {
 					}
 				}
 				has_completed_focus = SOL_empress_mother
+			}
+			else = {
+				always = no
 			}
 		}
 		x = 13
@@ -1363,19 +1477,11 @@ shared_focus = {
 		unlock_decision_category_tooltip = SOL_dealing_with_resistance
 		if = {
 			limit = {
-				has_dlc = "La Resistance"
-			}
-			add_ideas = SOL_Imperial_Investigative_Service_idea_lar
-		}
-		else = {
-			add_ideas = SOL_Imperial_Investigative_Service_idea
-		}
-		if = {
-			limit = {
 				has_idea = changeling_spies
 			}
 			country_event = equestriachn.2 #Maybe rework into a more detailed event of a changeling being detected by the IIS and trying to escape, using different disguises, but ultimately being captured or killed
 		}
+		set_country_flag = SOL_spy_mares
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESISTANCE FOCUS_FILTER_STABILITY }
 }
@@ -1640,6 +1746,7 @@ shared_focus = {
 		has_DB_ruler = yes
 	}
 	allow_branch = {
+		has_country_flag = SOL_unlock_political_focuses
 		if = {
 			limit = {
 				has_game_rule = {
@@ -1650,6 +1757,9 @@ shared_focus = {
 			is_EQS_SOL = yes
 			NOT = { has_completed_focus = SOL_empress_mother }
 			NOT = { has_completed_focus = SOL_empress_protector }
+		}
+		else = {
+			is_EQS_SOL = yes
 		}
 	}
 	select_effect = {
@@ -1867,6 +1977,9 @@ shared_focus = {
 				}
 				has_completed_focus = SOL_empress_protector
 			}
+			else = {
+				always = no
+			}
 		}
 		x = -13
 	}
@@ -1890,6 +2003,7 @@ shared_focus = {
 		else = {
 			add_ideas = SOL_imperial_eyes
 		}
+		set_country_flag = SOL_spy_mares
 	}
 	ai_will_do = { factor = 75 }
 }
@@ -2410,6 +2524,7 @@ shared_focus = {
 		has_DB_ruler = yes
 	}
 	allow_branch = {
+		has_country_flag = SOL_unlock_political_focuses
 		if = {
 			limit = {
 				has_game_rule = {
@@ -2420,6 +2535,9 @@ shared_focus = {
 			is_EQS_SOL = yes
 			NOT = { has_completed_focus = SOL_empress_mother }
 			NOT = { has_completed_focus = SOL_god_empress }
+		}
+		else = {
+			is_EQS_SOL = yes
 		}
 	}
 	select_effect = {
@@ -2449,6 +2567,9 @@ shared_focus = {
 					}
 				}
 				has_completed_focus = SOL_empress_protector
+			}
+			else = {
+				always = no
 			}
 		}
 		x = -13
@@ -3066,6 +3187,10 @@ shared_focus = {
 			}
 		}
 	}
+	allow_branch = {
+		is_EQS_SOL = yes
+		has_country_flag = SOL_solaris_bellum_time
+	}
 	will_lead_to_war_with = CRY
 	cost = 5
 	ai_will_do = {
@@ -3104,6 +3229,10 @@ shared_focus = {
 		is_subject = no
 		has_DB_ruler = yes
 	}
+	allow_branch = {
+		is_EQS_SOL = yes
+		has_country_flag = SOL_solaris_bellum_time
+	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_pan_pony_empire"
@@ -3127,6 +3256,10 @@ shared_focus = {
 	available = {
 		is_subject = no
 		has_DB_ruler = yes
+	}
+	allow_branch = {
+		is_EQS_SOL = yes
+		has_country_flag = SOL_solaris_bellum_time
 	}
 
 	completion_reward = {
@@ -3171,6 +3304,10 @@ shared_focus = {
 				has_war_with = ROOT
 			}
 		}
+	}
+	allow_branch = {
+		is_EQS_SOL = yes
+		has_country_flag = SOL_solaris_bellum_time
 	}
 	will_lead_to_war_with = STG
 	will_lead_to_war_with = STL
@@ -6342,7 +6479,13 @@ shared_focus = {
 			has_global_flag = SOL_sunset_converted
 		}
 	}
-	allow_branch = { is_EQS_SOL = yes }
+	allow_branch = {
+		is_EQS_SOL = yes
+		OR = {
+			has_global_flag = SOL_twilight_converted
+			has_global_flag = SOL_sunset_converted
+		}
+	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_imperial_diplomatic_corps"
@@ -6590,6 +6733,10 @@ shared_focus = {
 	y = 1
 	icon = GFX_goal_crystal_empire_sub
 	relative_position_id = examine_the_situation
+	offset = {
+		x = 5
+		trigger = { NOT = { has_country_flag = SOL_bat_problems_flag } }
+	}
 
 	cost = 4
 	prerequisite = { focus = examine_the_situation }
@@ -7236,6 +7383,7 @@ shared_focus = {
 	}
 	allow_branch = {
 		is_EQS_SOL = yes
+		has_country_flag = SOL_bat_problems_flag
 	}
 	available = {
 		has_country_flag = SOL_bat_problems_flag
@@ -7288,6 +7436,9 @@ shared_focus = {
 				}
 				has_completed_focus = SOL_fire_and_brimstone
 			}
+			else = {
+				always = no
+			}
 		}
 		x = 2
 	}
@@ -7307,6 +7458,10 @@ shared_focus = {
 			is_EQS_SOL = yes
 			NOT = { has_completed_focus = SOL_enlighten_darkness }
 		}
+		else = {
+			is_EQS_SOL = yes
+		}
+		has_country_flag = SOL_bat_problems_flag
 	}
 
 
@@ -7400,6 +7555,9 @@ shared_focus = {
 				}
 				has_completed_focus = SOL_enlighten_darkness
 			}
+			else = {
+				always = no
+			}
 		}
 		x = -2
 	}
@@ -7419,6 +7577,10 @@ shared_focus = {
 			is_EQS_SOL = yes
 			NOT = { has_completed_focus = SOL_fire_and_brimstone }
 		}
+		else = {
+			is_EQS_SOL = yes
+		}
+		has_country_flag = SOL_bat_problems_flag
 	}
 
 	completion_reward = {
@@ -8132,6 +8294,9 @@ shared_focus = {
 				}
 				has_completed_focus = SOL_smooth_transitions
 			}
+			else = {
+				always = no
+			}
 		}
 		x = 2
 	}
@@ -8159,6 +8324,9 @@ shared_focus = {
 			}
 			is_EQS_SOL = yes
 			NOT = { has_completed_focus = SOL_faiths_reward  }
+		}
+		else = {
+			is_EQS_SOL = yes
 		}
 	}
 
@@ -8189,6 +8357,9 @@ shared_focus = {
 				}
 				has_completed_focus = SOL_faiths_reward
 			}
+			else = {
+				always = no
+			}
 		}
 		x = -2
 	}
@@ -8216,6 +8387,9 @@ shared_focus = {
 			}
 			is_EQS_SOL = yes
 			NOT = { has_completed_focus = SOL_smooth_transitions  }
+		}
+		else = {
+			is_EQS_SOL = yes
 		}
 	}
 
@@ -8264,6 +8438,9 @@ shared_focus = {
 					}
 				}
 				has_completed_focus = SOL_faiths_reward
+			}
+			else = {
+				always = no
 			}
 		}
 		x = -2
@@ -9440,6 +9617,7 @@ shared_focus = {
 	available = { has_completed_focus = SOL_Imperium_Solis }
 	allow_branch = {
 		is_EQS_SOL = yes
+		has_country_flag = SOL_unlock_political_focuses
 	}
 
 	completion_reward = {
@@ -13321,7 +13499,10 @@ shared_focus = {
 			has_completed_focus = SOL_solaris_speculatores
 		}
 	}
-	allow_branch = { is_EQS_SOL = yes }
+	allow_branch = {
+		is_EQS_SOL = yes
+		has_country_flag = SOL_spy_mares
+	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_new_imperial_chapter"

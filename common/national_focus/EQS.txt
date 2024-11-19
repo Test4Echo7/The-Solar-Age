@@ -51,6 +51,12 @@ shared_focus = {
 		x = -46
 		trigger = { is_EQS_SOL = yes }
 	}
+	offset = {
+		x = 6
+		trigger = {
+			NOT = { has_country_flag = SOL_unlock_political_focuses }
+		}
+	}
 	ai_will_do = { factor = 100 }
 	bypass = {
 		hidden_trigger = { is_EQS_SOL = yes }
@@ -1088,6 +1094,13 @@ shared_focus = {
 		x = -31
 		y = -1
 		trigger = { is_EQS_SOL = yes }
+	}
+	offset = {
+		x = 6
+		trigger = {
+			NOT = { has_global_flag = SOL_twilight_converted }
+			NOT = { has_global_flag = SOL_sunset_converted }
+		}
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus Ministry_of_defense"
