@@ -422,7 +422,7 @@ EQS_BOP_SOL_power_category = {
             log = "[GetDateText]: [Root.GetName]: Decision EQS_eliminate_redundant_positions"
             add_power_balance_value = {
                 id = EQS_vestments_of_power_bop
-                value = -0.05
+                value = -0.025
                 tooltip_side = EQS_powa
             }
         }
@@ -444,7 +444,7 @@ EQS_BOP_SOL_power_category = {
             log = "[GetDateText]: [Root.GetName]: Decision EQS_take_over_department"
             add_power_balance_value = {
                 id = EQS_vestments_of_power_bop
-                value = -0.075
+                value = -0.05
                 tooltip_side = EQS_powa
             }
         }
@@ -466,7 +466,7 @@ EQS_BOP_SOL_power_category = {
             log = "[GetDateText]: [Root.GetName]: Decision EQS_encourage_direct_military_reports"
             add_power_balance_value = {
                 id = EQS_vestments_of_power_bop
-                value = -0.1
+                value = -0.05
                 tooltip_side = EQS_powa
             }
         }
@@ -480,65 +480,218 @@ EQS_BOP_SOL_power_category = {
         allowed = {
             tag = EQS
         }
-        cost = 35
+        cost = 75
         fire_only_once = yes
+        days_remove = 60
+        modifier = { political_power_gain = -0.1 }
         complete_effect = {
             log = "[GetDateText]: [Root.GetName]: Decision EQS_clear_fancys_clique"
+            custom_effect_tooltip = SOL_dont_be_too_edgy_tt
+            add_power_balance_value = {
+                id = EQS_vestments_of_power_bop
+                value = -0.1
+                tooltip_side = EQS_powa
+            }
+            add_to_variable = { SOL_so_edgy = 1 }
+            hidden_effect = {
+                if = {
+                    limit = {
+                        check_variable = { SOL_so_edgy > 2 }
+                    }
+                    STG = {
+                        country_event = {
+                            id = solarreworked.505
+                            days = 10
+                            random_days = 25
+                        }
+                    }
+                }
+            }
             #Event of Daybreaker meeting with a few remaining somewhat harmonists and hoisting them by their own petard, or just arresting them on suspicions, since she can
+        }
+        remove_effect = {
+            subtract_from_variable = { SOL_so_edgy = 1 }
         }
     }
     EQS_close_public_spaces = {
         allowed = {
             tag = EQS
         }
-        cost = 30
+        cost = 75
         fire_only_once = yes
+        days_remove = 60
+        modifier = { political_power_gain = -0.1 }
         complete_effect = {
             log = "[GetDateText]: [Root.GetName]: Decision EQS_close_public_places"
+            custom_effect_tooltip = SOL_dont_be_too_edgy_tt
+            add_power_balance_value = {
+                id = EQS_vestments_of_power_bop
+                value = -0.1
+                tooltip_side = EQS_powa
+            }
+            add_to_variable = { SOL_so_edgy = 1 }
+            hidden_effect = {
+                if = {
+                    limit = {
+                        check_variable = { SOL_so_edgy > 2 }
+                    }
+                    STG = {
+                        country_event = {
+                            id = solarreworked.505
+                            days = 10
+                            random_days = 25
+                        }
+                    }
+                }
+            }
             #Perhaps event of ponies being arrested for trying to gather publicly in a market simply to catch up or the like
+        }
+        remove_effect = {
+            subtract_from_variable = { SOL_so_edgy = 1 }
         }
     }
     EQS_implement_loyalty_tests = {
         allowed = {
             tag = EQS
         }
-        cost = 25
+        cost = 75
         fire_only_once = yes
+        days_remove = 60
+        modifier = { political_power_gain = -0.1 }
         complete_effect = {
             log = "[GetDateText]: [Root.GetName]: Decision EQS_implement_loyalty_tests"
+            custom_effect_tooltip = SOL_dont_be_too_edgy_tt
+            add_power_balance_value = {
+                id = EQS_vestments_of_power_bop
+                value = -0.1
+                tooltip_side = EQS_powa
+            }
+            add_to_variable = { SOL_so_edgy = 1 }
+            hidden_effect = {
+                if = {
+                    limit = {
+                        check_variable = { SOL_so_edgy > 2 }
+                    }
+                    STG = {
+                        country_event = {
+                            id = solarreworked.505
+                            days = 10
+                            random_days = 25
+                        }
+                    }
+                }
+            }
             #Perhaps event of a pony being grilled on tiny details of Daybreaker's past to prove they know her well and are loyal to her
+        }
+        remove_effect = {
+            subtract_from_variable = { SOL_so_edgy = 1 }
         }
     }
     EQS_ban_harmonic_phrases = {
         allowed = {
             tag = EQS
         }
-        cost = 25
+        cost = 75
         fire_only_once = yes
+        days_remove = 60
+        modifier = { political_power_gain = -0.1 }
         complete_effect = {
             log = "[GetDateText]: [Root.GetName]: Decision EQS_ban_harmonic_parties"
+            custom_effect_tooltip = SOL_dont_be_too_edgy_tt
+            add_power_balance_value = {
+                id = EQS_vestments_of_power_bop
+                value = -0.1
+                tooltip_side = EQS_powa
+            }
+            add_to_variable = { SOL_so_edgy = 1 }
+            hidden_effect = {
+                if = {
+                    limit = {
+                        check_variable = { SOL_so_edgy > 2 }
+                    }
+                    STG = {
+                        country_event = {
+                            id = solarreworked.505
+                            days = 10
+                            random_days = 25
+                        }
+                    }
+                }
+            }
             #Possibly event of somepony being arrested for making some "Oh my Celestia" comment or the like, because it defiles the concept of harmony since that's what Daybreaker stands for
+        }
+        remove_effect = {
+            subtract_from_variable = { SOL_so_edgy = 1 }
         }
     }
     EQS_shut_down_newspapers = {
         allowed = {
             tag = EQS
         }
-        cost = 25
+        cost = 75
         fire_only_once = yes
+        days_remove = 60
+        modifier = { political_power_gain = -0.1 }
         complete_effect = {
             log = "[GetDateText]: [Root.GetName]: Decision EQS_shut_down_newspapers"
+            custom_effect_tooltip = SOL_dont_be_too_edgy_tt
+            add_power_balance_value = {
+                id = EQS_vestments_of_power_bop
+                value = -0.1
+                tooltip_side = EQS_powa
+            }
+            add_to_variable = { SOL_so_edgy = 1 }
+            hidden_effect = {
+                if = {
+                    limit = {
+                        check_variable = { SOL_so_edgy > 2 }
+                    }
+                    STG = {
+                        country_event = {
+                            id = solarreworked.505
+                            days = 10
+                            random_days = 25
+                        }
+                    }
+                }
+            }
             #Perhaps an event of soldiers marching into a newspaper publisher, possibly an expy of the Daily Bugle, and shutting it down for anti-Order propaganda
+        }
+        remove_effect = {
+            subtract_from_variable = { SOL_so_edgy = 1 }
         }
     }
     EQS_disband_parliament = {
         allowed = {
             tag = EQS
         }
-        cost = 25
+        cost = 75
         fire_only_once = yes
+        days_remove = 60
+        modifier = { political_power_gain = -0.1 }
         complete_effect = {
             log = "[GetDateText]: [Root.GetName]: Decision EQS_disband_parliament"
+            custom_effect_tooltip = SOL_dont_be_too_edgy_tt
+            add_power_balance_value = {
+                id = EQS_vestments_of_power_bop
+                value = -0.1
+                tooltip_side = EQS_powa
+            }
+            add_to_variable = { SOL_so_edgy = 1 }
+            hidden_effect = {
+                if = {
+                    limit = {
+                        check_variable = { SOL_so_edgy > 2 }
+                    }
+                    STG = {
+                        country_event = {
+                            id = solarreworked.505
+                            days = 10
+                            random_days = 25
+                        }
+                    }
+                }
+            }
             #Perhaps an event of MPs or nobles being locked out or arrested for coming to Parliament to try and debate Daybreaker, since they obviously want to destabilize her efforts at implementing Order in the nation
         }
     }
@@ -546,21 +699,70 @@ EQS_BOP_SOL_power_category = {
         allowed = {
             tag = EQS
         }
-        cost = 25
+        cost = 75
         fire_only_once = yes
+        days_remove = 60
+        modifier = { political_power_gain = -0.1 }
         complete_effect = {
             log = "[GetDateText]: [Root.GetName]: Decision EQS_implement_night_curfews"
+            custom_effect_tooltip = SOL_dont_be_too_edgy_tt
+            add_power_balance_value = {
+                id = EQS_vestments_of_power_bop
+                value = -0.1
+                tooltip_side = EQS_powa
+            }
+            add_to_variable = { SOL_so_edgy = 1 }
+            hidden_effect = {
+                if = {
+                    limit = {
+                        check_variable = { SOL_so_edgy > 2 }
+                    }
+                    STG = {
+                        country_event = {
+                            id = solarreworked.505
+                            days = 10
+                            random_days = 25
+                        }
+                    }
+                }
+            }
             #Perhaps an event of a younger pony trying to sneak out at night to go somewhere and getting caught, and harshly punished since only those who are against Order would work together at night like thestrals
+        }
+        remove_effect = {
+            subtract_from_variable = { SOL_so_edgy = 1 }
         }
     }
     EQS_round_up_suspected_changelings = {
         allowed = {
             tag = EQS
         }
-        cost = 25
+        cost = 75
         fire_only_once = yes
+        days_remove = 60
+        modifier = { political_power_gain = -0.1 }
         complete_effect = {
             log = "[GetDateText]: [Root.GetName]: Decision EQS_round_up_suspected_changelings"
+            custom_effect_tooltip = SOL_dont_be_too_edgy_tt
+            add_power_balance_value = {
+                id = EQS_vestments_of_power_bop
+                value = -0.1
+                tooltip_side = EQS_powa
+            }
+            add_to_variable = { SOL_so_edgy = 1 }
+            hidden_effect = {
+                if = {
+                    limit = {
+                        check_variable = { SOL_so_edgy > 2 }
+                    }
+                    STG = {
+                        country_event = {
+                            id = solarreworked.505
+                            days = 10
+                            random_days = 25
+                        }
+                    }
+                }
+            }
             #Perhaps an event of some ponies trying to flee from a city, as they have been accused of being changelings, and they are being chased by soldiers to arrest them and prosecute them as spies, and they are eventually captured and plead for mercy
         }
     }
@@ -568,11 +770,37 @@ EQS_BOP_SOL_power_category = {
         allowed = {
             tag = EQS
         }
-        cost = 25
+        cost = 75
         fire_only_once = yes
+        days_remove = 60
+        modifier = { political_power_gain = -0.1 }
         complete_effect = {
             log = "[GetDateText]: [Root.GetName]: Decision EQS_arrest_open_communists"
+            custom_effect_tooltip = SOL_dont_be_too_edgy_tt
+            add_power_balance_value = {
+                id = EQS_vestments_of_power_bop
+                value = -0.1
+                tooltip_side = EQS_powa
+            }
+            add_to_variable = { SOL_so_edgy = 1 }
+            hidden_effect = {
+                if = {
+                    limit = {
+                        check_variable = { SOL_so_edgy > 2 }
+                    }
+                    STG = {
+                        country_event = {
+                            id = solarreworked.505
+                            days = 10
+                            random_days = 25
+                        }
+                    }
+                }
+            }
             #Perhaps an event of some communist union or the like being raided for being anti-Order
+        }
+        remove_effect = {
+            subtract_from_variable = { SOL_so_edgy = 1 }
         }
     }
     #Decentralization

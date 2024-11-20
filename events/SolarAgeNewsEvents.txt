@@ -1,0 +1,89 @@
+add_namespace = news.solarage
+
+news_event = {
+	id = news.solarage.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.1"}
+	title = news.solarage.1.t
+	desc = {
+		trigger = { event_target:equestria = { NOT = { has_country_flag = EQS_force_republic } } }
+		text = news.solarage.1.d_a
+	}
+	desc = {
+		trigger = { event_target:equestria = { has_country_flag = EQS_force_republic } }
+		text = news.solarage.1.d_b
+	}
+	picture = GFX_news_daybreaker
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = news.solarage.1.a
+		trigger = {
+			tag = event_target:equestria
+		}
+	}
+	option = {
+		name = news.solarage.1.b
+		trigger = {
+			tag = event_target:solar_empire
+		}
+		custom_effect_tooltip = daybreaker_chosen #funny, eh?
+	}
+	option = {
+		name = news.solarage.1.a
+		trigger = {
+			is_ai = no
+			tag = event_target:solar_empire
+		}
+		custom_effect_tooltip = celestia_chosen #funny, eh?
+		hidden_effect = { event_target:equestria = { change_tag_from = event_target:solar_empire } }
+	}
+	option = {
+		name = news.solarage.1.c
+		trigger = {
+			NOT = {
+				original_tag = EQS
+			}
+		}
+	}
+
+}
+
+news_event = { #Declaring the new Solar Empire
+	id = news.solarage.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.2"}
+	title = news.solarage.2.t
+	desc = news.solarage.2.d
+	picture = GFX_news_daybreaker
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = news.solarage.2.a
+		trigger = {
+			tag = event_target:solar_empire
+		}
+	}
+	option = {
+		name = news.solarage.2.b
+		trigger = {
+			NOT = {
+				tag = event_target:solar_empire
+				has_war_with = event_target:solar_empire
+			}
+		}
+	}
+	option = {
+		name = news.solarage.2.c
+		trigger = {
+			NOT = {
+				tag = event_target:solar_empire
+			}
+			has_war_with = event_target:solar_empire
+		}
+	}
+}

@@ -227,14 +227,17 @@ EQS_SOL_wartime_change = {
 	#}
 	hidden_effect = {
 		EQS_princess_celestia = {
-			#set_character_name = EQS_SOL_daybreaker
-			set_portraits = {
-				civilian = {
-					large = GFX_DaybreakerPortraitNew
-				}
-				army = {
-					large = GFX_DaybreakerPortraitNew
-					small = GFX_idea_EQS_SOL_daybreaker
+			if = {
+				limit = { ROOT = { is_ai = no } }
+				#set_character_name = EQS_SOL_daybreaker
+				set_portraits = {
+					civilian = {
+						large = GFX_DaybreakerPortraitNew
+					}
+					army = {
+						large = GFX_DaybreakerPortraitNew
+						small = GFX_idea_EQS_SOL_daybreaker
+					}
 				}
 			}
 
@@ -252,7 +255,6 @@ EQS_SOL_wartime_change = {
 			set_character_flag = EQS_celestia_is_db
 		}
 	}
-
 	SOL = {
 		set_politics = { ruling_party = democratic }
 		save_global_event_target_as = equestria
@@ -346,7 +348,7 @@ EQS_SOL_wartime_change = {
 	}
 	#EQS_SOL_show_advisors = yes
 	#country_event = { id = solarempire.2 days = 2 }
-	news_event = { id = news.sol.4 hours = 6 }
+	#news_event = { id = news.sol.4 hours = 6 }
 }
 
 #Just make it easier
@@ -369,33 +371,38 @@ EQS_pre_SOL_civil_war_setup = {
 		limit = { NOT = { has_completed_focus = worrisome_changelings } }
 		complete_national_focus = worrisome_changelings
 	}
-	hidden_effect = {
-		EQS_princess_celestia = {
-			#set_character_name = EQS_SOL_daybreaker
-			promote_character = yes
-			set_portraits = {
-				civilian = {
-					large = GFX_DaybreakerPortraitNew
+	if = {
+		limit = { is_ai = no }
+		hidden_effect = {
+			EQS_princess_celestia = {
+				if = {
+					limit = { ROOT = { is_ai = no } }
+					#set_character_name = EQS_SOL_daybreaker
+					set_portraits = {
+						civilian = {
+							large = GFX_DaybreakerPortraitNew
+						}
+						army = {
+							large = GFX_DaybreakerPortraitNew
+							small = GFX_idea_EQS_SOL_daybreaker
+						}
+					}
 				}
-				army = {
-					large = GFX_DaybreakerPortraitNew
-                    small = GFX_idea_EQS_SOL_daybreaker
-				}
+
+				#add_country_leader_role = {
+				#	promote_leader = yes
+				#
+				#	country_leader = {
+				#		expire = "1965.1.1"
+				#		desc = "POLITICS_DAYBREAKER_DESC"
+				#		ideology = nazism
+				#		traits = { }
+				#		id = -1
+				#	}
+				#}
+
+				set_character_flag = EQS_celestia_is_db
 			}
-
-			#add_country_leader_role = {
-			#	promote_leader = yes
-			#
-			#	country_leader = {
-			#		expire = "1965.1.1"
-			#		desc = "POLITICS_DAYBREAKER_DESC"
-			#		ideology = nazism
-			#		traits = { }
-			#		id = -1
-			#	}
-			#}
-
-			set_character_flag = EQS_celestia_is_db
 		}
 	}
 	if = {
@@ -493,7 +500,7 @@ EQS_SOL_civil_war = {
 	add_stability = -0.1
 	country_event = { id = solarempire.1018 }
 	country_event = { id = solarempire.17 days = 4 }
-	news_event = { id = news.sol.1 hours = 6 }
+	#news_event = { id = news.sol.1 hours = 6 }
 	random_other_country = {
 		limit = {
 			original_tag = EQS

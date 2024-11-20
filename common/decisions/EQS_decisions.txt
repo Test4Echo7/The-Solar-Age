@@ -481,6 +481,7 @@ SOL_dealing_with_resistance = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_investigate_ponyville"
 			###Event of spies raiding Twilight's castle in Ponyville, as they know that Starlight and Trixie are at least part of the resistance, in the search for the first indications of where they could have fled; the castle has been left in the care of Mayor Mare, who is there when they arrive and is arrested for trying to stop them
+			country_event = solarreworked.283
 		}
 		ai_will_do = {
 			factor = 50
@@ -501,6 +502,7 @@ SOL_dealing_with_resistance = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_follow_fillydelphia_lead"
 			###Event of the results of investigating in Fillydelphia, mostly around one of Trixie's old haunts
+			country_event = solarreworked.284
 		}
 		ai_will_do = { factor = 60 }
 	}
@@ -515,6 +517,7 @@ SOL_dealing_with_resistance = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_raid_ponyville_cottage"
 			###Event of results of raiding the cottage, which is Fluttershy's old cottage before she and the others fled the country; involved fighting a few ferocious animals to get through, and also one resistance trap, which claimed a few ponies
 			###40% chance to fail
+			country_event = solarreworked.285
 			add_manpower = -3
 		}
 		ai_will_do = { factor = 80 }
@@ -532,6 +535,7 @@ SOL_dealing_with_resistance = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_raid_freeside_restaurant"
 			###Event of results of the raid, and how one searcher was overzealous in questioning one of the proprietors, and ended up killing them; find indications of resistance contacts in both New Horseleans and Manehattan at a dead-drop point
+			country_event = solarreworked.286
 			add_manpower = -1
 			add_stability = -0.02
 		}
@@ -550,6 +554,7 @@ SOL_dealing_with_resistance = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_investigate_new_horseleans_docks"
 			###Event of raid on the docks, where there was a largescale search; a few ponies saw some clearly suspicious ponies leaving for a location in the jungle, which they believe they know the general location of; also killed in a shoot-out a single harmonist fighter, who was probably a contact for other members, which further indicated there was a camp nearby
+			country_event = solarreworked.287
 			add_manpower = -1
 			add_popularity = {
 				ideology = democratic
@@ -576,6 +581,7 @@ SOL_dealing_with_resistance = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_investigate_dead_drop"
 			###Event of the result of finding the dead-drop, which was abandoned for some time; however, a pony was found who claimed to have seen Trixie or a pony who looked like her there a couple of weeks prior and then go to the opera house, which was weird because there was no performance scheduled that night and no performers in town, either
+			country_event = solarreworked.288
 		}
 		ai_will_do = { factor = 70 }
 	}
@@ -593,6 +599,7 @@ SOL_dealing_with_resistance = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_search_jungle_camp"
 			###Event of the result of searching the jungle camp; there isn't much there, but there are some scraps of paper that have the seal of Dodge City's post office on them, and also a small mention of a name of somepony who lives in Mareway
+			country_event = solarreworked.289
 		}
 		ai_will_do = { factor = 50 }
 	}
@@ -609,6 +616,7 @@ SOL_dealing_with_resistance = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_search_manehattan_opera_house"
 			###Event of results of the opera house search, which is conclusive that Trixie and Starlight were there, and used it as a meeting place for the resistance, but they are now gone; find evidence that the school of friendship was another meeting place, and that Trixie went to Rarity's boutique in Manehattan after the meeting, given some slips for it there
+			country_event = solarreworked.290
 		}
 		ai_will_do = { factor = 90 }
 	}
@@ -627,6 +635,7 @@ SOL_dealing_with_resistance = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_raid_dodge_city_post_office"
 			###Event of the results of raiding the Dodge City post office, which finds that there were a couple of letters in code to Starlight, although unless they are lucky to decipher the code, they don't know it's from Sassy Saddles; if they do, they know she currently is in Las Pegasus, because she is on a trip to court more businessponies to the resistance
 			###60% chance to fail
+			country_event = solarreworked.291
 		}
 		ai_will_do = { factor = 75 }
 	}
@@ -644,6 +653,7 @@ SOL_dealing_with_resistance = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_hunt_for_mareway_informant"
 			###Event of results of scouring all of Mareway to find the informant, who they know the name of, but not where their location is; they do eventually find the informant working a simple custodial job in the government offices, and take them in for questioning
+			country_event = solarreworked.292
 		}
 		ai_will_do = { factor = 65 }
 	}
@@ -660,6 +670,7 @@ SOL_dealing_with_resistance = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_raid_friendship_school"
 			###Event summarizing what happened in the raid on the Friendship School, as it was abandoned, but still seen as a symbol by most of Ponyville; the investigators find strong evidence that it has been used by the resistance, which is a frustration since they were in Ponyville at the start, and clues that point to a meeting in the Everfree; they also confiscate some harmonist propaganda there, and then permanently cordon off the school and have a guard stationed to break morale
+			country_event = solarreworked.293
 			add_popularity = {
 				ideology = democratic
 				popularity = -0.02
@@ -680,6 +691,7 @@ SOL_dealing_with_resistance = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_investigate_raritys_manehattan_boutique"
 			###Event of results of the raid on Rarity's boutique, and that they have temporarily restrained Coco Pommel until the investigation is over; she is still free to serve the Empire, but she is under watch and can't return to the boutique until she's properly cleared; there is evidence that somepony in Rarity's employ is assisting the resistance, and that means heading to Sanctum Solar to continue searching
+			country_event = solarreworked.294
 		}
 		ai_will_do = { factor = 100 }
 	}
@@ -698,6 +710,7 @@ SOL_dealing_with_resistance = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_search_castle_for_clues"
 			###Event of the results of searching the castle grounds; if successful, there was another resistance meeting in that area, and there are some clues that one dead-drop point in Sanctum Solar is within the head library there, where there is supposedly going to be another drop soon
 			###35% chance of failing
+			country_event = solarreworked.295
 		}
 		ai_will_do = { factor = 90 }
 	}
@@ -714,6 +727,7 @@ SOL_dealing_with_resistance = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_"
 			###Event of the results of searching the Canterlot library; the investigators found a small, unused office in the library which was turned into a communications post; there was one operator there, who is brought in for interrogation, and also there was a recently letter that was in the middle of being encoded from Sassy to Starlight, stating that she will be in Las Pegasus trying to get some more business support and cannot attend the next meeting
+			country_event = solarreworked.296
 		}
 		ai_will_do = { factor = 120 }
 	}
@@ -730,6 +744,7 @@ SOL_dealing_with_resistance = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_investigate_raritys_canterlot_boutique"
 			###Event of the results of investigating the Canterlot boutique of Rarity, and pressing the workers there long enough that they broke about Sassy being away, and stating that she is in Las Pegasus on the business trip; there is also a few, slightly incriminating pieces of evidence in her office, although not concrete on their own
+			country_event = solarreworked.297
 		}
 		ai_will_do = { factor = 120 }
 	}
@@ -747,6 +762,7 @@ SOL_dealing_with_resistance = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_capture_sassy"
 			###Event of Sassy being held in an interrogation room in Las Pegasus, after she has been captured by either the Speculatores or the IIS; she will be reistant at first, but broken rather quickly by the techniques of no matter which path; Protector has Daybreaker directly do some of the interrogating and presuasion, the IIS uses underhanded tactics such as business loss, family threats, etc.; the God-Empress uses inquisitors to torture her regardless, with fire and other techniques
+			country_event = solarreworked.298
 		}
 		ai_will_do = { factor = 200 }
 	}
@@ -764,13 +780,7 @@ SOL_dealing_with_resistance = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_destroy_resistance"
 			###Event starting from the perspective of Starlight or Trixie, as a meeting begins to start between the resistance members, and before long, they are raided by a large force of Imperial soldiers, leading to a shoot-out, but ultimately their capture; Daybreaker comes in to see the results herself, and is quite amused with Starlight's game that she played, which she says so herself, and promises that she will make a fine example for what it means to resist her (imprisonment or execution)
-			add_popularity = {
-				ideology = democratic
-				popularity = -0.1
-			}
-			add_political_power = 100
-			add_stability = 0.1
-			remove_ideas = SOL_harmonic_resistance_idea
+			country_event = solarreworked.299
 		}
 		ai_will_do = { factor = 500 }
 	}

@@ -132,7 +132,7 @@
   EQS_endless_service:0 "Death is not the End"
   EQS_invincible_soldiers:0 "Undying Service"
   SOL_societal_unrest:0 "Solidify Control"
-  SOL_societal_unrest_desc:0 "Our new regime is a tenuous one. Few ponies currently would follow Daybreaker's lead, and it is clear to all that Celestia is gone. If actions are not implemented swiftly to crack down on dissent and silence the harshest critics, any chance of saving them from themselves will be lost and there could very well be a new war on our hooves."
+  SOL_societal_unrest_desc:0 "Our new regime is a tenuous one. Proportionally few ponies currently follow Daybreaker's lead and it is clear to all that Celestia is gone. If actions are not implemented swiftly to crack down on dissent and silence the harshest critics, any chance of saving them from themselves will be lost and there could very well be a new war on our hooves."
   SOL_investigate_ponyville:0 "Investigate Ponyville's Castle"
   SOL_investigate_ponyville_desc:0 "Although Daybreaker's regime is now absolute, not everypony follows her completely. In alleyways and backrooms, many still believe that they must "free" Equestria from her reign. After a series of arrests in Manehattan from a series of organized strikes and one damaged factory, [ROOT.GetAgency] has learned that Starlight Glimmer, former friendship student of Twilight Sparkle, is involved with the Resistance. Although she has gone to ground, we must start somewhere, and that somewhere is Twilight Sparkle's former home: the Castle of Friendship."
   SOL_follow_fillydelphia_lead:0 "Follow Leads to Fillydelphia"
@@ -337,6 +337,9 @@
   SOL_new_political_focuses_tt:0 "New §Yfocuses§! for §ODaybreaker's§! path of establishing §Ythe Solar Empire§! will be unlocked."
   SOL_solaris_bellum_tt:0 "New §Yfocuses§! for §Rexpanding the Solar Empire§! will be unlocked."
   SOL_time_to_be_gamer_tt:0 "All §Oresistance§! will be §Rcrushed§! so we may §gcolonize§! §C[BAT.GetNameDef]§! for ourselves."
+  SOL_dont_be_too_edgy_tt:0 "If crackdowns are instituted too rapidly, there could be §Rconsequences§!."
+  SOL_rebel_scum_tt:0 "Unlocks a balance of power for the §Ycentralization of the Solar Empire§!. If we do not §Ystabilize§! the state quickly enough, the Harmonists will be able to organize and §Rmobilize against us§!."
+  SOL_dont_map_game_now_tt:0 "If the last remnants of §PHarmonic resistance§! are not dealt with we are dragged into further wars, there will be §Rdevastating consequences§!."
   SOL_exterminate_tt:0 "§RMetztunalia will weep§!"
   SOL_annhilate_tt:0 "§RBatsby will bid farewell\nUrsagrad will embrace the Sun§!"
   SOL_crush:0 "§RIztāctepetl will heat up§!"
@@ -671,6 +674,11 @@
   SOL_retreat_by_magic_risk_extra:0 "When our agents fled, they were chased by guards. The mage who was holding the staff was shot, and they were unable to loop back to retrieve it. They had to flee on hoof, and managed to escape without any further losses."
 
   ###Ideas###
+  ###Timed###
+  SOL_lingering_fury:0 "Lingering Fury"
+  SOL_lingering_fury_desc:0 "[ROOT.GetLeader] may see things clearer than ever but only the passage of time will make the rage and anger ebb away. The red lenses that tint her view must only be removed by the retribution of our enemies."
+  SOL_lingering_fury_2:0 "Lingering Fury"
+  SOL_lingering_fury_2_desc:0 "[ROOT.GetLeader] may see things clearer than ever but only the passage of time will make the rage and anger ebb away. The red lenses that tint her view must only be removed by the retribution of our enemies."
   ###Hidden/Enemy###
   EQS_high_attrition:0 "Incinerating Heat"
   EQS_high_attrition_desc:0 "The sun beats upon us relentlessly, and not even the cool of the night can bring us any respite. Our soldiers can barely stand and fight when the intensity of its heat and light can make some perish in the shade, as even the plains of our battles catch fire from the scorching temperatures that we must suffer."

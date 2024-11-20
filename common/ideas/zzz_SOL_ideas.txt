@@ -90,10 +90,11 @@ ideas = {
 			removal_cost = -1
 			#picture = FRA_national_mobilization_focus
 			modifier = {
-				army_morale_factor = -0.03
+				army_morale_factor = -0.05
 				democratic_drift = 0.02
 				stability_factor = -0.1
-				political_power_cost = 0.1
+				political_power_gain = -0.1
+				industry_repair_factor = -0.075
 			}
 		}
 		SOL_harmonic_resistance_idea2 = {
