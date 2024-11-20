@@ -54,6 +54,7 @@ shared_focus = {
 	offset = {
 		x = 6
 		trigger = {
+			is_EQS_SOL = yes
 			NOT = { has_country_flag = SOL_unlock_political_focuses }
 		}
 	}
@@ -1098,6 +1099,7 @@ shared_focus = {
 	offset = {
 		x = 6
 		trigger = {
+			is_EQS_SOL = yes
 			NOT = { has_global_flag = SOL_twilight_converted }
 			NOT = { has_global_flag = SOL_sunset_converted }
 		}
