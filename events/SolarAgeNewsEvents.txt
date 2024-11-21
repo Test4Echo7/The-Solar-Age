@@ -87,3 +87,83 @@ news_event = { #Declaring the new Solar Empire
 		}
 	}
 }
+
+news_event = { #Conflict between NLR and SOL between Daybreaker and NMM, with stheir battle leaving destruction everywhere
+	id = news.solarage.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.3"}
+	title = news.solarage.3.t
+	desc = news.solarage.3.d
+	picture = GFX_news_daybreaker_fighting
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = { #The Sun will prevail!
+		name = news.solarage.3.a
+		trigger = {
+			tag = event_target:solar_empire
+		}
+	}
+	option = { #It's merely a flesh wound.
+		name = news.solarage.3.b
+		trigger = {
+			tag = NLR
+		}
+		add_manpower = -5582
+	}
+	option = { #Impossible!
+		name = news.solarage.3.c
+		trigger = {
+			tag = BAT
+		}
+	}
+	option = { #This is more than a spat.
+		name = news.solarage.3.e
+		trigger = {
+			NOT = {
+				tag = event_target:solar_empire
+				tag = NLR
+				tag = BAT
+			}
+		}
+	}
+}
+
+news_event = { #BAT liberates NMM from her captivity
+	id = news.solarage.30
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event news.solarage.30"
+		event_target:solar_empire = { clr_country_flag = SOL_holding_nmm }
+	}
+	title = news.solarage.30.t
+	desc = news.solarage.30.d
+	picture = GFX_news_event_galloping_gala
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = { #We should have banished her to the moon!
+		name = news.solarage.30.a
+		trigger = {
+			tag = event_target:solar_empire
+			remove_ideas = SOL_nmm_prisoner
+		}
+	}
+	option = { #Our Empress is free!
+		name = news.solarage.30.b
+		trigger = {
+			tag = BAT
+		}
+	}
+	option = { #One crazy alicorn for another...
+		name = news.solarage.30.c
+		trigger = {
+			NOT = {
+				tag = event_target:solar_empire
+				tag = BAT
+			}
+		}
+	}
+}

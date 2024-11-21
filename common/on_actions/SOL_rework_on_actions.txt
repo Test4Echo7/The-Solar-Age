@@ -233,6 +233,23 @@ on_actions = {
                     }
                 }
             }
+            if = {
+                limit = {
+                    FROM.FROM = {
+                        state = 3
+                    }
+                    FROM = {
+                        tag = EQS
+                        has_country_flag = SOL_holding_nmm
+                    }
+                    ROOT = {
+                        tag = BAT
+                    }
+                }
+                ROOT = {
+                    country_event = solarreworked.511
+                }
+            }
         }
     }
     #ROOT = nation being puppeted, FROM = overlord
@@ -348,6 +365,28 @@ on_actions = {
     #        }
     #    }
     #}
+    ROOT is the winner, FROM is the loser
+    on_peaceconference_ended = {
+        effect = {
+            log = "[GetDateText]: [ROOT.GetName]: on_peaceconference_ended solar_age"
+            if = {
+                limit = {
+                    ROOT = {
+                        tag = EQS
+                    }
+                    FROM = {
+                        tag = NLR
+                    }
+                }
+                ROOT = {
+                    country_event = {
+                        id = solarreworked.258
+                        days = 1
+                    }
+                }
+            }
+        }
+    }
     on_monthly_EQS = {
         effect = {
             log = "[GetDateText]: [ROOT.GetName] on_monthly_EQS solar_age"
@@ -383,6 +422,18 @@ on_actions = {
                     }
                 }
                 set_global_flag = SOL_attempted_enemy_assassinations
+            }
+            if = {
+                limit = {
+                    has_completed_focus = SOL_Imperium_Solis
+                    has_war_with = NLR
+                    NOT = { has_country_flag = SOL_empress_fight }
+                    NLR = {
+                        exists = yes
+                        surrender_progress > 0.3
+                    }
+                }
+                country_event = solarreworked.259
             }
         }
     }

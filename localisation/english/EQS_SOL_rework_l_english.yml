@@ -346,6 +346,7 @@
   SOL_kill:0 "§RThe Moonspeaker's will be cleansed§!"
   SOL_destroy:0 "§RFirstport will be enlightened§!"
   SOL_swag:0 "§RNew Ayacachtli will be purified§!"
+  SOL_assuming_direct_control_tt:0 "§BEmpress Nightmare Moon§! shall take charge of our nation!"
 
   ###Last one in the chain. Remove comment later###
   SOL_conglaturation_a_winner_is_you_tt:0 "§GHarmony has been preserved and all of ponykind now bends the knee to Daybreaker. Thank you for playing the Solar Age! - Test4Echo§!"
@@ -383,6 +384,8 @@
   faithful_assistant_desc:0 "§LHaving lived with Sunrise for his entire life, Spike is aware of her quirks, blind spots, and weaknesses, and he can usually point out an oversight readily enough. Despite his hesitancies regarding her enlightenment, he still evens out her rough edges, and the pair work better together than apart.§!"
   sunrise_sparkle_t_alt:0 "Lady Inquisitor"
   sunrise_sparkle_t_alt_desc:0 "§L"This is most fascinating! Please, could you fill out this questionnaire grading your pain on a scale of one to ten, where one is a constant, niggling itch; and ten is torture so excruciating, you feel as if every atom was being ripped asunder in different directions? I need to see if this new information extraction technique is effective!"§!"
+  empress_of_the_night:0 "Empress of the Night"
+  empress_of_the_night_desc:0 "§LAs the very embodiment of the night and darkness, Nightmare Moon can bestows uncanny perception within the blackest of new moons for her soldiers. Where Luna was a stern but understanding pony, Nightmare Moon is harsh and forceful. Troops under are driven to extremes, but will follow her ultimately to the ends of Equus."
 
   ###Country Leader Traits###
   aussenseiter_regentin:0 "Foreign Regent"
@@ -706,6 +709,10 @@
   SOL_kabuh_desc:0 "The Empress's young grandniece has been brought to [ROOT.GetNameDef] to complete her education under the watchful eyes of Daybreaker. Despite being so young, she has already taken to a number of lessons given to her, and she has become popular with the majority of the nation for her charming demeanor and love of the Empress."
   SOL_heartbroken_caddy:0 "Heartbreaker"
   SOL_heartbroken_caddy_desc:0 "Although she was resistant, even the Empress's niece has fallen into line. With [CRY.GetNameDef] mostly out of her hooves, she has all the time in the world to devote herself to ensuring there will be a large and healthy next generation for [EQS.GetNameDef] for centuries to come."
+
+  ###NLR Ideas, Wow!###
+  SOL_nmm_prisoner:0 "Nightmare Moon"
+  SOL_nmm_prisoner_desc:0 "With the end of the civil war, the Empress has apprehended her rebellious sister for all to see. Not even blood will prevent her from administering justice, but death is too good for her, lest she become a martyr. Displaying the fate of all those who defy the work of Order and Harmony is more than sufficient."
 
   ###Operations Ideas###
   CHN_furious_populace:0 "Outraged Populace"

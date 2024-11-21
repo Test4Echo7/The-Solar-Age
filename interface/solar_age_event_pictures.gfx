@@ -15,4 +15,9 @@ spriteTypes = {
         name = "GFX_event_tempest_fighting"
         texturefile = "gfx/event_pictures/event_tempest_fighting.png"
     }
+    ###News Events###
+    spriteType = {
+        name = "GFX_news_daybreaker_fighting"
+        texturefile = "gfx/event_pictures/news_daybreaker_nmm_fight.tga"
+    }
 }

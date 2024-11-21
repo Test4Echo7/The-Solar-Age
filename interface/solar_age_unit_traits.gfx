@@ -11,4 +11,8 @@ spriteTypes = {
 		name = "GFX_trait_faithful_assistant"
 		texturefile = "gfx/interface/traits/personal/trait_faithful_assistant.tga"
 	}
+	spriteType = {
+		name = "GFX_trait_empress_of_the_night"
+		texturefile = "gfx/interface/traits/personal/trait_empress_of_the_night.tga"
+	}
 }

@@ -141,6 +141,22 @@ leader_traits = {
         }
         ai_will_do = { factor = 1 }
     }
+    ###NLR NMM Field Marshal Trait###
+    empress_of_the_night = {
+        type = all
+        trait_type = personality_trait
+        allowed = { always = no }
+        modifier = {
+            army_morale_factor = -0.07
+            army_org_factor = 0.05
+            breakthrough_factor = 0.075
+            combat_width_factor = -0.1
+            night = {
+                attack = 0.2
+                defence = 0.05
+            }
+        }
+    }
 
     ###Special###
     magic_piercing = {

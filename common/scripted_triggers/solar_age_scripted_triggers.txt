@@ -41,7 +41,7 @@ EQS_has_high_naval_tech = {
 EQS_not_most_advanced_ships = {
 	NOT = { has_tech = antiair_c }
 	NOT = { has_tech = advanced_heavy_battery }
-	NOT = { has_tech = advanced_centimetric_radar }
+	NOT = { has_tech = monopulse_radar }
 	NOT = { has_tech = semi_modern_fire_control_system }
 	NOT = { has_tech = improved_airplane_launcher }
 }

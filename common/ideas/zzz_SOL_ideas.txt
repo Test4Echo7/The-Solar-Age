@@ -1138,6 +1138,15 @@ ideas = {
 				army_morale_factor = 0.05
 			}
 		}
+		###NLR Spirits###
+		SOL_nmm_prisoner = {
+			modifier = {
+				political_power_gain = -0.15
+				stability_factor = 0.075
+				war_support_factor = 0.035
+				fascism_drift = 0.01
+			}
+		}
 		###EQC Spirits###
 		SOL_marelandian_deal = {
 			modifier = {
