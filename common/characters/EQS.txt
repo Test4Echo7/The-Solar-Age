@@ -534,6 +534,7 @@ characters={
 		name = EQS_SOL_evil_twilight_sparkle
 		portraits = {
 			civilian = {
+				large = "gfx/leaders/CRY/TwilightSunrise.tga"
 				small = "GFX_idea_evil_twilight_sparkle"
 			}
 		}
@@ -1485,7 +1486,7 @@ characters={
 					limit = { is_EQS_SOL = yes }
 					OR = {
 						has_global_flag = EQS_completed_advisors
-						has_completed_focus = SOL_air_force
+						has_completed_focus = SOL_abolish_wonderbolts
 					}
 				}
 				if = {

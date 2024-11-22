@@ -1324,6 +1324,10 @@ country_event = { #A trainee evoker is put to the test on one of the main combat
 
     option = { #Perhaps a bit too eager.
         name = solarreworked.80.a
+        add_breakthrough_progress = {
+			specialization = specialization_magical
+			value = 0.25
+		}
         set_technology = {
 			SOL_evoker_legions_tech = 1
 			popup = no
@@ -1342,6 +1346,10 @@ country_event = { #One scientist late into the day is penning their notes about 
 
     option = { #We'll have to figure out the explosive nature later.
         name = solarreworked.81.a
+        add_breakthrough_progress = {
+			specialization = specialization_magical
+			value = 0.5
+		}
         add_ideas = SOL_second_gen_crystals
     }
 }
@@ -1357,6 +1365,10 @@ country_event = { #In a panic, a soldier manages to get to their radio to start 
     option = { #A few minutes earlier would have been nice!
         name = solarreworked.82.a
         add_ideas = SOL_motorized_spearheads
+        add_breakthrough_progress = {
+			specialization = specialization_land
+			value = 0.6
+		}
     }
 }
 
@@ -1376,6 +1388,9 @@ country_event = { #Daybreaker leads dozens if not a hundred or more troops into 
 		show_ideas_tooltip = thunderlane
 		custom_effect_tooltip = available_theorist
 		show_ideas_tooltip = wind_rider
+		EQS_wonderbolts = {
+            set_character_name = { name = EQS_solarbeams }
+        }
 		if = {
             limit = {
                 has_dlc = "By Blood Alone"
@@ -1429,6 +1444,10 @@ country_event = { #Spitfire, after being forced into some new suit, is placed in
 
     option = { #Until death, either age or meeting the ground.
         name = solarreworked.85.a
+        add_breakthrough_progress = {
+			specialization = specialization_air
+			value = 0.33
+		}
         add_ideas = SOL_involuntary_testing_procedures
     }
 }
@@ -1512,6 +1531,10 @@ country_event = { #Daybreaker arrives on the docks of Manehattan to speak with s
 
     option = { #This better not be all of them.
         name = solarreworked.91.a
+        add_breakthrough_progress = {
+			specialization = specialization_naval
+			value = 0.25
+		}
         #Ships here
     }
 }
@@ -3409,6 +3432,10 @@ country_event = { #Daybreaker attends a demonstration of research by Bunsen Beak
 
     option = { #Can you make it hurt more?
         name = solarreworked.263.a
+        add_breakthrough_progress = {
+            specialization = specialization_magical
+            value = 0.25
+        }
         add_tech_bonus = {
 			name = race_tech_bonus
 			bonus = 1.0
@@ -3439,6 +3466,10 @@ country_event = { #Follow a group of scientists as they meet in Canterlot for a 
 			limit = { amount_research_slots < 5 }
 			add_research_slot = 1
 		}
+		add_breakthrough_progress = {
+            specialization = specialization_magical
+            value = 0.2
+        }
         custom_effect_tooltip = SOL_imperial_science_6_tt
 		add_to_variable = { research_speed_var = 0.05 }
 		add_to_variable = { stability_factor_var = 0.05 }
@@ -6913,6 +6944,45 @@ country_event = { #Event that Stalliongrad will get if the player takes too many
             }
         }
         custom_effect_tooltip = EQS_temp_content_is_temp_tt
+    }
+}
+
+country_event = { #Hidden event for Adeptus Astartes special project to actually unlock the template and create a unit, since PDX can't handle doing that in the project output itself
+    id = solarreworked.506
+    hidden = yes
+    immediate = {log = "[GetDateText]: [ROOT.GetNameDef]: event solarreworked.506"}
+
+    is_triggered_only = yes
+
+    option = {
+        division_template = {
+            name = "Adeptus Praetorian"
+            is_locked = yes
+            division_cap = 4
+            division_names_group = EQS_SPC_01
+            priority = 2
+            template_counter = 2
+            force_allow_recruiting = yes
+            regiments = {
+                adeptus_astartes = { x = 0 y = 0 }
+                adeptus_astartes = { x = 0 y = 1 }
+                adeptus_astartes = { x = 0 y = 2 }
+                adeptus_astartes = { x = 1 y = 0 }
+                adeptus_astartes = { x = 1 y = 1 }
+            }
+        }
+        if = {
+            limit = {
+                3 = { is_owned_by = ROOT }
+            }
+            3 = {
+                create_unit = {
+                    division = "division_template = \"Adeptus Praetorian\" start_experience_factor = 1"
+                    owner = EQS
+                    prioritize_location = 179
+                }
+            }
+        }
     }
 }
 

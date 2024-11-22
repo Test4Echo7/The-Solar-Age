@@ -148,8 +148,8 @@ news_event = { #BAT liberates NMM from her captivity
 		name = news.solarage.30.a
 		trigger = {
 			tag = event_target:solar_empire
-			remove_ideas = SOL_nmm_prisoner
 		}
+		remove_ideas = SOL_nmm_prisoner
 	}
 	option = { #Our Empress is free!
 		name = news.solarage.30.b

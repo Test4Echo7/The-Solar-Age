@@ -6,7 +6,7 @@ EQS_SPC_01 = {
 	can_use = {
         tag = EQS
         is_EQS_SOL = yes
-        has_tech = EQS_adeptus_astartes
+        is_special_project_completed = sp:sp_EQS_adeptus_astartes
     }
 
 	division_types = { "infantry" }
@@ -23,21 +23,21 @@ EQS_SPC_01 = {
 		2 = { "Legio II Dawn Angels" "EQS_SOL_history_legio_II" }
 		3 = { "Legio III Blood Ravens" "EQS_SOL_history_legio_III" }
 		4 = { "Legio IV Sun Sworn" "EQS_SOL_history_legio_IV" }
-		5 = { "Legio V Daughters of the Sun" }
-		6 = { "Legio VI Day Swords" }
-		7 = { "Legio VII Crimson Suns" }
-		8 = { "Legio VIII Morning Lords" }
-		9 = { "Legio IX Iron Hoofs" }
-		10 = { "Legio X Stellar Flares" }
-		11 = { "Legio XI Daybreaker's Own" }
-		12 = { "Legio XII Noon Heralds" }
-		13 = { "Legio XIII Ultrapraetorians" }
-		14 = { "Legio XIV Molten Wolves" }
+		5 = { "Legio V Daughters of the Sun" "EQS_SOL_history_legio_V" }
+		6 = { "Legio VI Day Swords" "EQS_SOL_history_legio_VI" }
+		7 = { "Legio VII Crimson Suns" "EQS_SOL_history_legio_VII" }
+		8 = { "Legio VIII Morning Lords" "EQS_SOL_history_legio_VII" }
+		9 = { "Legio IX Iron Hoofs" "EQS_SOL_history_legio_IX" }
+		10 = { "Legio X Stellar Flares" "EQS_SOL_history_legio_X" }
+		11 = { "Legio XI Daybreaker's Own" "EQS_SOL_history_legio_XI" }
+		12 = { "Legio XII Noon Heralds" "EQS_SOL_history_legio_XII" }
+		13 = { "Legio XIII Ultrapraetorians" "EQS_SOL_history_legio_XIII" }
+		14 = { "Legio XIV Molten Wolves" "EQS_SOL_history_legio_XIV" }
 		15 = { "Legio XV Nightfellers" "EQS_SOL_history_legio_XV" }
-		16 = { "Legio XVI Night Terror" }
-		17 = { "Legio XVII Magic-Born " }
-		18 = { "Legio XVIII Angels of Light" }
-		19 = { "Legio XIX Dusk's Shield" }
-		20 = { "Legio XX Omega Legion" }
+		16 = { "Legio XVI Night Terror" "EQS_SOL_history_legio_XVI" }
+		17 = { "Legio XVII Magic-Born " "EQS_SOL_history_legio_XVII" }
+		18 = { "Legio XVIII Angels of Light" "EQS_SOL_history_legio_XVIII" }
+		19 = { "Legio XIX Dusk's Shield" "EQS_SOL_history_legio_XIX" }
+		20 = { "Legio XX Omega Legion" "EQS_SOL_history_legio_XX" }
 	}
 }

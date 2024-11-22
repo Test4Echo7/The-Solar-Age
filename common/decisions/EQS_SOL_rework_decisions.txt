@@ -1157,245 +1157,245 @@ EQS_solar_fury_category = {
         }
     }
 }
-EQS_wunderwaffen_category = {
-    EQS_project_helios = {
-        allowed = { tag = EQS }
-        available = { NOT = { has_country_flag = EQS_researching_wunderwaffen } }
-        visible = {
-            is_EQS_SOL = yes
-            has_completed_focus = SOL_god_empress
-        }
-        icon = celestia
-        cost = 150
-        days_remove = 365
-        modifier = {
-            political_power_gain = -0.15
-            consumer_goods_factor = 0.25
-            production_speed_buildings_factor = -0.1
-        }
-        fire_only_once = yes
-        complete_effect = {
-            set_country_flag = EQS_researching_wunderwaffen
-        }
-        remove_effect = {
-            log = "[GetDateText]: [Root.GetName]: Decision remove EQS_project_helios"
-            ###Event of the final reports of utilizing concentrated portions of the sun's light to devastating effect on any army that comes across it; either it will be a spirit that can be activated for a short while to give 50% breakthrough and 50% attack, or it can be a nuke, that completely wipes out any armies that are on a tile; the nuke charges at a rate of once every one hundred and eighty days
-            clr_country_flag = EQS_researching_wunderwaffen
-        }
-        ai_will_do = { factor = 100 }
-    }
-    EQS_project_nightvale = {
-        allowed = { tag = EQS }
-        available = { NOT = { has_country_flag = EQS_researching_wunderwaffen } }
-        visible = {
-            is_EQS_SOL = yes
-            has_completed_focus = SOL_empress_mother
-        }
-        icon = celestia
-        cost = 150
-        days_remove = 365
-        modifier = {
-            political_power_gain = -0.15
-            consumer_goods_factor = 0.25
-            production_speed_buildings_factor = -0.1
-        }
-        fire_only_once = yes
-        complete_effect = {
-            set_country_flag = EQS_researching_wunderwaffen
-        }
-        remove_effect = {
-            log = "[GetDateText]: [Root.GetName]: Decision remove EQS_project_nightvale"
-            ###Event of the results of utilizing matrices, magic, and different drugs to effectively break any prisoner that they have, so that the IIS can protect the Empire and guard Daybreaker with their lives; spirit that gives +30% intel across the board, or +3 decryption
-            clr_country_flag = EQS_researching_wunderwaffen
-        }
-        ai_will_do = { factor = 100 }
-    }
-    EQS_project_astartes = {
-        allowed = { tag = EQS }
-        available = { NOT = { has_country_flag = EQS_researching_wunderwaffen } }
-        visible = {
-            is_EQS_SOL = yes
-            has_completed_focus = SOL_empress_protector
-        }
-        icon = celestia
-        cost = 150
-        days_remove = 365
-        modifier = {
-            political_power_gain = -0.25
-            conscription_factor = -0.1
-            weekly_manpower = -1000
-        }
-        fire_only_once = yes
-        complete_effect = {
-            set_country_flag = EQS_researching_wunderwaffen
-        }
-        remove_effect = {
-            log = "[GetDateText]: [Root.GetName]: Decision remove EQS_project_astartes"
-            ###Event detailing the intricate nature of using magic and genetics to build a new breed of warrior to protect the Empire and other ponies of it, as well as the Empress herself; some of the genetics take samples from Daybreaker herself, so that they can be the ultimate fighting machines, and forged to only defend the Empire, and not feel any other emotion
-            ###This should be a new unit, which can only have a total of three divisions at any one time
-            ###Stats should be almost like a tank, ideally with medium tank armor, at least
-            clr_country_flag = EQS_researching_wunderwaffen
-            #Temp
-            set_technology = {
-                EQS_adeptus_astartes = 1
-            }
-            division_template = {
-                name = "Adeptus Praetorian"
-                is_locked = yes
-                division_cap = 4
-                division_names_group = EQS_SPC_01
-                priority = 2
-                template_counter = 2
-                regiments = {
-                    adeptus_astartes = { x = 0 y = 0 }
-                    adeptus_astartes = { x = 0 y = 1 }
-                    adeptus_astartes = { x = 0 y = 2 }
-                    adeptus_astartes = { x = 1 y = 0 }
-                    adeptus_astartes = { x = 1 y = 1 }
-                }
-            }
-            3 = {
-                create_unit = {
-                    division = "division_template = \"Adeptus Praetorian\" start_experience_factor = 1"
-                    owner = EQS
-                    prioritize_location = 179
-                }
-            }
-        }
-        ai_will_do = { factor = 100 }
-    }
-    EQS_project_mage = {
-        allowed = { tag = EQS }
-        available = { NOT = { has_country_flag = EQS_researching_wunderwaffen } }
-        visible = { is_EQS_SOL = yes }
-        icon = celestia
-        cost = 100
-        days_remove = 365
-        fire_only_once = yes
-        modifier = {
-            political_power_gain = -0.1
-            consumer_goods_factor = 0.15
-        }
-        complete_effect = {
-            set_country_flag = EQS_researching_wunderwaffen
-        }
-        remove_effect = {
-            log = "[GetDateText]: [Root.GetName]: Decision remove EQS_project_mage"
-            ###Event detailing the research of improving matrices for magical weapons, and how they also managed to improve assistant matrices for unicorn companies; provides +15% soft attack for magical equipment and +40% soft attack and hard attack for unicorn companies
-            clr_country_flag = EQS_researching_wunderwaffen
-        }
-        ai_will_do = { factor = 80 }
-    }
-    EQS_project_solaris = {
-        allowed = { tag = EQS }
-        available = { NOT = { has_country_flag = EQS_researching_wunderwaffen } }
-        visible = { is_EQS_SOL = yes }
-        icon = celestia
-        cost = 100
-        days_remove = 365
-        fire_only_once = yes
-        modifier = {
-            political_power_gain = -0.1
-            consumer_goods_factor = 0.15
-        }
-        complete_effect = {
-            set_country_flag = EQS_researching_wunderwaffen
-        }
-        remove_effect = {
-            log = "[GetDateText]: [Root.GetName]: Decision remove EQS_project_solaris"
-            ###Event detailing the research into portable solar power technology, using basically miniature suns to power extensive solar panel-like systems; this provides +10% logistics range, +15% naval and air range
-            clr_country_flag = EQS_researching_wunderwaffen
-        }
-        ai_will_do = { factor = 80 }
-    }
-    EQS_project_inferno = {
-        allowed = { tag = EQS }
-        available = { NOT = { has_country_flag = EQS_researching_wunderwaffen } }
-        visible = { is_EQS_SOL = yes }
-        icon = celestia
-        cost = 100
-        days_remove = 365
-        fire_only_once = yes
-        modifier = {
-            political_power_gain = -0.1
-            consumer_goods_factor = 0.15
-        }
-        complete_effect = {
-            set_country_flag = EQS_researching_wunderwaffen
-        }
-        remove_effect = {
-            log = "[GetDateText]: [Root.GetName]: Decision remove EQS_project_inferno"
-            ###Event detailing the results of researching how to utilize fusion (suns) technology to power factories and construction projects, ignoring some of the damage caused by radiation; provides +15% build speed, +10% production output
-            clr_country_flag = EQS_researching_wunderwaffen
-        }
-        ai_will_do = { factor = 80 }
-    }
-    EQS_project_conflagration = {
-        allowed = { tag = EQS }
-        available = { NOT = { has_country_flag = EQS_researching_wunderwaffen } }
-        visible = { is_EQS_SOL = yes }
-        icon = celestia
-        cost = 100
-        days_remove = 365
-        fire_only_once = yes
-        modifier = {
-            political_power_gain = -0.1
-            consumer_goods_factor = 0.15
-        }
-        complete_effect = {
-            set_country_flag = EQS_researching_wunderwaffen
-        }
-        remove_effect = {
-            log = "[GetDateText]: [Root.GetName]: Decision remove EQS_project_conflagration"
-            ###Event detailing results of using solar power and the sun to supercharge flame tanks that the Empire uses for clearing cities, bunkers, etc., and how it greatly increases the flame's internal temperature, and sticky properties, and cleanses basically anything; +75% soft attack for flame tanks, +40% defense
-            clr_country_flag = EQS_researching_wunderwaffen
-        }
-        ai_will_do = { factor = 80 }
-    }
-    EQS_project_evaporation = {
-        allowed = { tag = EQS }
-        available = { NOT = { has_country_flag = EQS_researching_wunderwaffen } }
-        visible = { is_EQS_SOL = yes }
-        icon = celestia
-        cost = 100
-        days_remove = 365
-        fire_only_once = yes
-        modifier = {
-            political_power_gain = -0.1
-            consumer_goods_factor = 0.15
-        }
-        complete_effect = {
-            set_country_flag = EQS_researching_wunderwaffen
-        }
-        remove_effect = {
-            log = "[GetDateText]: [Root.GetName]: Decision remove EQS_project_evaporation"
-            ###Event detailing the result of testing plasma weaponry on ships, and specifically on battleships, which basically allow any of them to evicerate anything in combat they can get close enough to, although there is the drawback that they are bulky and can't go nearly as far; +25% hard attack and piercing for battleships, -15% range
-            clr_country_flag = EQS_researching_wunderwaffen
-        }
-        ai_will_do = { factor = 80 }
-    }
-    EQS_project_firestorm = {
-        allowed = { tag = EQS }
-        available = { NOT = { has_country_flag = EQS_researching_wunderwaffen } }
-        visible = { is_EQS_SOL = yes }
-        icon = celestia
-        cost = 100
-        days_remove = 365
-        fire_only_once = yes
-        modifier = {
-            political_power_gain = -0.1
-            consumer_goods_factor = 0.15
-        }
-        complete_effect = {
-            set_country_flag = EQS_researching_wunderwaffen
-        }
-        remove_effect = {
-            log = "[GetDateText]: [Root.GetName]: Decision remove EQS_project_firestorm"
-            ###Event detailing the results of the complete destruction wrought by the pilots that were under the enhancement program that was being developed, using a mix of magically enhanced foods and different stimulants, which make them elite in the sky, if a bit jumpy and accident prone; +10% ace generation, +10% agility, +5% attack, +25% accident chance
-        }
-        ai_will_do = { factor = 80 }
-    }
-}
+#EQS_wunderwaffen_category = {
+#    EQS_project_helios = {
+#        allowed = { tag = EQS }
+#        available = { NOT = { has_country_flag = EQS_researching_wunderwaffen } }
+#        visible = {
+#            is_EQS_SOL = yes
+#            has_completed_focus = SOL_god_empress
+#        }
+#        icon = celestia
+#        cost = 150
+#        days_remove = 365
+#        modifier = {
+#            political_power_gain = -0.15
+#            consumer_goods_factor = 0.25
+#            production_speed_buildings_factor = -0.1
+#        }
+#        fire_only_once = yes
+#        complete_effect = {
+#            set_country_flag = EQS_researching_wunderwaffen
+#        }
+#        remove_effect = {
+#            log = "[GetDateText]: [Root.GetName]: Decision remove EQS_project_helios"
+#            ###Event of the final reports of utilizing concentrated portions of the sun's light to devastating effect on any army that comes across it; either it will be a spirit that can be activated for a short while to give 50% breakthrough and 50% attack, or it can be a nuke, that completely wipes out any armies that are on a tile; the nuke charges at a rate of once every one hundred and eighty days
+#            clr_country_flag = EQS_researching_wunderwaffen
+#        }
+#        ai_will_do = { factor = 100 }
+#    }
+#    EQS_project_nightvale = {
+#        allowed = { tag = EQS }
+#        available = { NOT = { has_country_flag = EQS_researching_wunderwaffen } }
+#        visible = {
+#            is_EQS_SOL = yes
+#            has_completed_focus = SOL_empress_mother
+#        }
+#        icon = celestia
+#        cost = 150
+#        days_remove = 365
+#        modifier = {
+#            political_power_gain = -0.15
+#            consumer_goods_factor = 0.25
+#            production_speed_buildings_factor = -0.1
+#        }
+#        fire_only_once = yes
+#        complete_effect = {
+#            set_country_flag = EQS_researching_wunderwaffen
+#        }
+#        remove_effect = {
+#            log = "[GetDateText]: [Root.GetName]: Decision remove EQS_project_nightvale"
+#            ###Event of the results of utilizing matrices, magic, and different drugs to effectively break any prisoner that they have, so that the IIS can protect the Empire and guard Daybreaker with their lives; spirit that gives +30% intel across the board, or +3 decryption
+#            clr_country_flag = EQS_researching_wunderwaffen
+#        }
+#        ai_will_do = { factor = 100 }
+#    }
+#    EQS_project_astartes = {
+#        allowed = { tag = EQS }
+#        available = { NOT = { has_country_flag = EQS_researching_wunderwaffen } }
+#        visible = {
+#            is_EQS_SOL = yes
+#            has_completed_focus = SOL_empress_protector
+#        }
+#        icon = celestia
+#        cost = 150
+#        days_remove = 365
+#        modifier = {
+#            political_power_gain = -0.25
+#            conscription_factor = -0.1
+#            weekly_manpower = -1000
+#        }
+#        fire_only_once = yes
+#        complete_effect = {
+#            set_country_flag = EQS_researching_wunderwaffen
+#        }
+#        remove_effect = {
+#            log = "[GetDateText]: [Root.GetName]: Decision remove EQS_project_astartes"
+#            ###Event detailing the intricate nature of using magic and genetics to build a new breed of warrior to protect the Empire and other ponies of it, as well as the Empress herself; some of the genetics take samples from Daybreaker herself, so that they can be the ultimate fighting machines, and forged to only defend the Empire, and not feel any other emotion
+#            ###This should be a new unit, which can only have a total of three divisions at any one time
+#            ###Stats should be almost like a tank, ideally with medium tank armor, at least
+#            clr_country_flag = EQS_researching_wunderwaffen
+#            #Temp
+#            set_technology = {
+#                EQS_adeptus_astartes = 1
+#            }
+#            division_template = {
+#                name = "Adeptus Praetorian"
+#                is_locked = yes
+#                division_cap = 4
+#                division_names_group = EQS_SPC_01
+#                priority = 2
+#                template_counter = 2
+#                regiments = {
+#                    adeptus_astartes = { x = 0 y = 0 }
+#                    adeptus_astartes = { x = 0 y = 1 }
+#                    adeptus_astartes = { x = 0 y = 2 }
+#                    adeptus_astartes = { x = 1 y = 0 }
+#                    adeptus_astartes = { x = 1 y = 1 }
+#                }
+#            }
+#            3 = {
+#                create_unit = {
+#                    division = "division_template = \"Adeptus Praetorian\" start_experience_factor = 1"
+#                    owner = EQS
+#                    prioritize_location = 179
+#                }
+#            }
+#        }
+#        ai_will_do = { factor = 100 }
+#    }
+#    EQS_project_mage = {
+#        allowed = { tag = EQS }
+#        available = { NOT = { has_country_flag = EQS_researching_wunderwaffen } }
+#        visible = { is_EQS_SOL = yes }
+#        icon = celestia
+#        cost = 100
+#        days_remove = 365
+#        fire_only_once = yes
+#        modifier = {
+#            political_power_gain = -0.1
+#            consumer_goods_factor = 0.15
+#        }
+#        complete_effect = {
+#            set_country_flag = EQS_researching_wunderwaffen
+#        }
+#        remove_effect = {
+#            log = "[GetDateText]: [Root.GetName]: Decision remove EQS_project_mage"
+#            ###Event detailing the research of improving matrices for magical weapons, and how they also managed to improve assistant matrices for unicorn companies; provides +15% soft attack for magical equipment and +40% soft attack and hard attack for unicorn companies
+#            clr_country_flag = EQS_researching_wunderwaffen
+#        }
+#        ai_will_do = { factor = 80 }
+#    }
+#    EQS_project_solaris = {
+#        allowed = { tag = EQS }
+#        available = { NOT = { has_country_flag = EQS_researching_wunderwaffen } }
+#        visible = { is_EQS_SOL = yes }
+#        icon = celestia
+#        cost = 100
+#        days_remove = 365
+#        fire_only_once = yes
+#        modifier = {
+#            political_power_gain = -0.1
+#            consumer_goods_factor = 0.15
+#        }
+#        complete_effect = {
+#            set_country_flag = EQS_researching_wunderwaffen
+#        }
+#        remove_effect = {
+#            log = "[GetDateText]: [Root.GetName]: Decision remove EQS_project_solaris"
+#            ###Event detailing the research into portable solar power technology, using basically miniature suns to power extensive solar panel-like systems; this provides +10% logistics range, +15% naval and air range
+#            clr_country_flag = EQS_researching_wunderwaffen
+#        }
+#        ai_will_do = { factor = 80 }
+#    }
+#    EQS_project_inferno = {
+#        allowed = { tag = EQS }
+#        available = { NOT = { has_country_flag = EQS_researching_wunderwaffen } }
+#        visible = { is_EQS_SOL = yes }
+#        icon = celestia
+#        cost = 100
+#        days_remove = 365
+#        fire_only_once = yes
+#        modifier = {
+#            political_power_gain = -0.1
+#            consumer_goods_factor = 0.15
+#        }
+#        complete_effect = {
+#            set_country_flag = EQS_researching_wunderwaffen
+#        }
+#        remove_effect = {
+#            log = "[GetDateText]: [Root.GetName]: Decision remove EQS_project_inferno"
+#            ###Event detailing the results of researching how to utilize fusion (suns) technology to power factories and construction projects, ignoring some of the damage caused by radiation; provides +15% build speed, +10% production output
+#            clr_country_flag = EQS_researching_wunderwaffen
+#        }
+#        ai_will_do = { factor = 80 }
+#    }
+#    EQS_project_conflagration = {
+#        allowed = { tag = EQS }
+#        available = { NOT = { has_country_flag = EQS_researching_wunderwaffen } }
+#        visible = { is_EQS_SOL = yes }
+#        icon = celestia
+#        cost = 100
+#        days_remove = 365
+#        fire_only_once = yes
+#        modifier = {
+#            political_power_gain = -0.1
+#            consumer_goods_factor = 0.15
+#        }
+#        complete_effect = {
+#            set_country_flag = EQS_researching_wunderwaffen
+#        }
+#        remove_effect = {
+#            log = "[GetDateText]: [Root.GetName]: Decision remove EQS_project_conflagration"
+#            ###Event detailing results of using solar power and the sun to supercharge flame tanks that the Empire uses for clearing cities, bunkers, etc., and how it greatly increases the flame's internal temperature, and sticky properties, and cleanses basically anything; +75% soft attack for flame tanks, +40% defense
+#            clr_country_flag = EQS_researching_wunderwaffen
+#        }
+#        ai_will_do = { factor = 80 }
+#    }
+#    EQS_project_evaporation = {
+#        allowed = { tag = EQS }
+#        available = { NOT = { has_country_flag = EQS_researching_wunderwaffen } }
+#        visible = { is_EQS_SOL = yes }
+#        icon = celestia
+#        cost = 100
+#        days_remove = 365
+#        fire_only_once = yes
+#        modifier = {
+#            political_power_gain = -0.1
+#            consumer_goods_factor = 0.15
+#        }
+#        complete_effect = {
+#            set_country_flag = EQS_researching_wunderwaffen
+#        }
+#        remove_effect = {
+#            log = "[GetDateText]: [Root.GetName]: Decision remove EQS_project_evaporation"
+#            ###Event detailing the result of testing plasma weaponry on ships, and specifically on battleships, which basically allow any of them to evicerate anything in combat they can get close enough to, although there is the drawback that they are bulky and can't go nearly as far; +25% hard attack and piercing for battleships, -15% range
+#            clr_country_flag = EQS_researching_wunderwaffen
+#        }
+#        ai_will_do = { factor = 80 }
+#    }
+#    EQS_project_firestorm = {
+#        allowed = { tag = EQS }
+#        available = { NOT = { has_country_flag = EQS_researching_wunderwaffen } }
+#        visible = { is_EQS_SOL = yes }
+#        icon = celestia
+#        cost = 100
+#        days_remove = 365
+#        fire_only_once = yes
+#        modifier = {
+#            political_power_gain = -0.1
+#            consumer_goods_factor = 0.15
+#        }
+#        complete_effect = {
+#            set_country_flag = EQS_researching_wunderwaffen
+#        }
+#        remove_effect = {
+#            log = "[GetDateText]: [Root.GetName]: Decision remove EQS_project_firestorm"
+#            ###Event detailing the results of the complete destruction wrought by the pilots that were under the enhancement program that was being developed, using a mix of magically enhanced foods and different stimulants, which make them elite in the sky, if a bit jumpy and accident prone; +10% ace generation, +10% agility, +5% attack, +25% accident chance
+#        }
+#        ai_will_do = { factor = 80 }
+#    }
+#}
 EQS_great_projects_category = {
     ###Decisions should be improvements to Manehattan, expanding the industrial parks of Fillydelphia, something related to the casinos in Las Pegasus, turning Cloudsdale into a fortress city, constructing a new school to Daybreaker in Ponyville, and a further expansion of the Imperial Palace in Canterlot, with possibly creating a second grand palace in Manehattan; one more possible one is establishing a proper trading pathway or resource extraction in Whinnyapolis, or perhaps some grand market for Daybreaker
     SOL_construct_cathedral_of_sun = {

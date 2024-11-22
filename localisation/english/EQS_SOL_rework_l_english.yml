@@ -45,6 +45,7 @@
   EQS_riptide:0 "Riptide"
   EQS_butter_knife:0 "Butter Knife"
   EQS_treadwell:0 "Treadwell"
+  EQS_solarbeams:0 "Solarbeams"
 
   ###BoP###
   EQS_sanity_bop:0 "The Princess's Burden"
@@ -385,7 +386,7 @@
   sunrise_sparkle_t_alt:0 "Lady Inquisitor"
   sunrise_sparkle_t_alt_desc:0 "§L"This is most fascinating! Please, could you fill out this questionnaire grading your pain on a scale of one to ten, where one is a constant, niggling itch; and ten is torture so excruciating, you feel as if every atom was being ripped asunder in different directions? I need to see if this new information extraction technique is effective!"§!"
   empress_of_the_night:0 "Empress of the Night"
-  empress_of_the_night_desc:0 "§LAs the very embodiment of the night and darkness, Nightmare Moon bestows uncanny perception within the blackest of new moons for her soldiers. Where Luna was a stern but understanding pony, Nightmare Moon is harsh and forceful. Troops under are driven to extremes, but will follow her ultimately to the ends of Equus."
+  empress_of_the_night_desc:0 "§LAs the very embodiment of the night and darkness, Nightmare Moon bestows uncanny perception within the blackest of new moons for her soldiers. Where Luna was a stern but understanding pony, Nightmare Moon is harsh and forceful. Troops under her are driven to extremes, but will follow her ultimately to the ends of Equus."
 
   ###Country Leader Traits###
   aussenseiter_regentin:0 "Foreign Regent"
@@ -1051,8 +1052,11 @@
   SOL_flying_castles:0 "Flying Castles"
   SOL_flying_castles_desc:0 "Although they may have escort, our bombers must still be able to fend for themselves. Dodging hits is ideal, but given their size, it is an almost impossible ask. Instead, we should lean into their unwieldiness and further reinforce the fuselage and wings, so that they can survive far more hits than they would otherwise, while they and their escorts retaliate against any who challenge them in the sky."
   SOL_holy_deliverance:0 "Holy Flame Deliverance Systems"
+  SOL_holy_deliverance_desc:0 "Napalm has become a common ordinance within our ground strike missions, as it has the useful property of being both deadly and a reflection of the Empress's justice in mundane form. However, keeping it within bombs on the wings or in a small bomb bay runs risk of fiery conflagration if struck by arms fire. A radical new system has been prototyped. By keeping an internal tank and a small tube to eject the liquid, we can more effectively cover large areas, while keep our pilots safe."
   SOL_additional_prototypes:0 "Additional Prototoypes"
+  SOL_additional_prototypes_desc:0 "Since we have convinced so many to trial various theoretical aircraft or design changes to models already in the field, we have begun to run out of vehicles for them to utilize! If we are to keep our quota of test subject churn up, we must allow even more radical changes or barely lab-tested alterations through. After all, that's what the guinea pigs are for, anyway."
   SOL_fire_from_sky:0 "Fire from the Skies"
+  SOL_fire_from_sky_desc:0 "Although the humble explosive can devastate large tracts of land, there is nothing quite like the sight of flames borne on the wind administering justice against whatever it touches. We have already utilized firebomb campaigns in the past, but they were not as effective as they could be. By crafting more durable bombs carrying napalm or other flammable substances, we can ensure that they reach their targets and spread the Empress's judgement far and wide."
   SOL_targeted_destruction:0 "Targeted Destruction"
   SOL_modern_bombers:0 "Moderate Bomber Sizes"
   SOL_area_bombardment:0 "Area Bombardment"

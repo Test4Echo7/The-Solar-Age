@@ -1,0 +1,622 @@
+###Daybreaker Special Projects###
+sp_EQS_sun_laser = {
+    specialization = specialization_magical
+
+    project_tags = {
+        sp_tag_magical
+    }
+
+    resource_cost = {
+        resources = {
+            crystals = 12
+            chromium = 10
+        }
+    }
+
+    allowed = {
+        tag = EQS
+    }
+
+    visible = {
+        FROM = {
+            has_country_flag = SOL_wunderwaffen_unlocked
+            has_completed_focus = SOL_god_empress
+        }
+    }
+
+    available = {
+
+    }
+
+    ai_will_do = {
+        base = 1
+    }
+
+    complexity = sp_complexity.insane
+    prototype_time = sp_time.prototype.long
+    breakthrough_cost = {
+        specialization_magical = 4
+    }
+
+    project_output = {
+        country_effects = {
+            custom_effect_tooltip = SOL_firing_her_lazaahh_tt
+            set_country_flag = SOL_orbital_order_laser_online
+        }
+    }
+
+    generic_prototype_rewards = {
+		sp_magical_generic_reward_scientist_xp_1
+		sp_magical_generic_reward_scientist_xp_2
+		sp_magical_generic_reward_scientist_xp_3
+		sp_magical_generic_reward_major_progress_1
+		sp_magical_generic_reward_major_progress_2
+		sp_magical_generic_reward_major_progress_3
+		sp_magical_generic_reward_test_failure_1
+		sp_magical_generic_reward_test_failure_2
+		sp_magical_generic_reward_test_failure_3
+		sp_magical_generic_reward_magical_tech_1
+		sp_magical_generic_reward_magical_tech_2
+		sp_magical_generic_reward_magical_tech_3
+		sp_magical_generic_reward_race_tech_1
+		sp_magical_generic_reward_race_tech_2
+		sp_magical_generic_reward_race_tech_3
+		sp_magical_generic_reward_resource_scarcity
+		sp_magical_generic_reward_critical_failure
+	}
+}
+
+sp_EQS_esoteric_extractions = {
+    specialization = specialization_magical
+
+    project_tags = {
+        sp_tag_magical
+    }
+
+    resource_cost = {
+        resources = {
+            crystals = 8
+        }
+    }
+
+    allowed = {
+        tag = EQS
+    }
+
+    visible = {
+        FROM = {
+            has_country_flag = SOL_wunderwaffen_unlocked
+            has_completed_focus = SOL_empress_mother
+        }
+    }
+
+    available = {
+
+    }
+
+    ai_will_do = {
+        base = 1
+    }
+
+    complexity = sp_complexity.large
+    prototype_time = sp_time.prototype.long
+    breakthrough_cost = {
+        specialization_magical = 3
+    }
+
+    project_output = {
+        #country_effects = {
+        #    if = {
+        #        limit = { has_dlc = "La Resistance" }
+        #        airforce_intel_factor = 0.25
+        #        navy_intel_factor = 0.25
+        #        army_intel_factor = 0.25
+        #        civilian_intel_factor = 0.25
+        #
+        #        civilian_intel_to_others = -5
+        #        army_intel_to_others = -5
+        #        navy_intel_to_others = -5
+        #        airforce_intel_to_others = -5
+        #    }
+        #    else = {
+        #        decryption = 2.5
+        #        encryption = 0.25
+        #    }
+        #}
+    }
+
+    generic_prototype_rewards = {
+		sp_magical_generic_reward_scientist_xp_1
+		sp_magical_generic_reward_scientist_xp_2
+		sp_magical_generic_reward_scientist_xp_3
+		sp_magical_generic_reward_major_progress_1
+		sp_magical_generic_reward_major_progress_2
+		sp_magical_generic_reward_major_progress_3
+		sp_magical_generic_reward_test_failure_1
+		sp_magical_generic_reward_test_failure_2
+		sp_magical_generic_reward_test_failure_3
+		sp_magical_generic_reward_magical_tech_1
+		sp_magical_generic_reward_magical_tech_2
+		sp_magical_generic_reward_magical_tech_3
+		sp_magical_generic_reward_race_tech_1
+		sp_magical_generic_reward_race_tech_2
+		sp_magical_generic_reward_race_tech_3
+		sp_magical_generic_reward_resource_scarcity
+		sp_magical_generic_reward_critical_failure
+	}
+}
+
+sp_EQS_adeptus_astartes = {
+    specialization = specialization_magical
+
+    project_tags = {
+        sp_tag_magical
+    }
+
+    resource_cost = {
+        resources = {
+            crystals = 10
+            steel = 2
+            chromium = 6
+            tungsten = 4
+        }
+    }
+
+    allowed = {
+        tag = EQS
+    }
+
+    visible = {
+        FROM = {
+            has_country_flag = SOL_wunderwaffen_unlocked
+            has_completed_focus = SOL_empress_protector
+        }
+    }
+
+    available = {
+
+    }
+
+    ai_will_do = {
+        base = 1
+    }
+
+    complexity = sp_complexity.insane
+    prototype_time = sp_time.prototype.medium
+    breakthrough_cost = {
+        specialization_magical = 4
+    }
+
+    project_output = {
+        enable_equipments = {
+            space_marine_bolt_gun_1
+            space_marine_armor_1
+        }
+        enable_subunits = {
+            adeptus_astartes
+        }
+
+        country_effects = {
+            country_event = solarreworked.506 #Create Astartes unit
+        }
+    }
+
+    generic_prototype_rewards = {
+		sp_magical_generic_reward_scientist_xp_1
+		sp_magical_generic_reward_scientist_xp_2
+		sp_magical_generic_reward_scientist_xp_3
+		sp_magical_generic_reward_major_progress_1
+		sp_magical_generic_reward_major_progress_2
+		sp_magical_generic_reward_major_progress_3
+		sp_magical_generic_reward_test_failure_1
+		sp_magical_generic_reward_test_failure_2
+		sp_magical_generic_reward_test_failure_3
+		sp_magical_generic_reward_magical_tech_1
+		sp_magical_generic_reward_magical_tech_2
+		sp_magical_generic_reward_magical_tech_3
+		sp_magical_generic_reward_race_tech_1
+		sp_magical_generic_reward_race_tech_2
+		sp_magical_generic_reward_race_tech_3
+		sp_magical_generic_reward_resource_scarcity
+		sp_magical_generic_reward_critical_failure
+	}
+}
+
+sp_EQS_enhanced_matrices = {
+    specialization = specialization_magical
+
+    project_tags = {
+        sp_tag_magical
+    }
+
+    resource_cost = {
+        resources = {
+            crystals = 5
+            steel = 3
+        }
+    }
+
+    allowed = {
+        tag = EQS
+    }
+
+    visible = {
+        FROM = {
+            has_country_flag = SOL_wunderwaffen_unlocked
+        }
+    }
+
+    available = {
+        FROM = {
+            has_tech = magical_weapons2
+            OR = {
+                has_tech = tech_unicorn_th3
+                has_tech = tech_unicorn_ms3
+            }
+        }
+    }
+
+    ai_will_do = {
+        base = 1
+    }
+
+    complexity = sp_complexity.large
+    prototype_time = sp_time.prototype.medium
+    breakthrough_cost = {
+        specialization_magical = 2
+    }
+
+    project_output = {
+        sub_unit_bonus = {
+            magical_infantry = {
+                soft_attack = 0.15
+                hard_attack = 0.05
+                ap_attack = 0.1
+            }
+            unicorn_company = {
+                soft_attack = 0.5
+                hard_attack = 0.5
+                breakthrough = 0.25
+            }
+        }
+    }
+
+    generic_prototype_rewards = {
+		sp_magical_generic_reward_scientist_xp_1
+		sp_magical_generic_reward_scientist_xp_2
+		sp_magical_generic_reward_scientist_xp_3
+		sp_magical_generic_reward_major_progress_1
+		sp_magical_generic_reward_major_progress_2
+		sp_magical_generic_reward_major_progress_3
+		sp_magical_generic_reward_test_failure_1
+		sp_magical_generic_reward_test_failure_2
+		sp_magical_generic_reward_test_failure_3
+		sp_magical_generic_reward_magical_tech_1
+		sp_magical_generic_reward_magical_tech_2
+		sp_magical_generic_reward_magical_tech_3
+		sp_magical_generic_reward_race_tech_1
+		sp_magical_generic_reward_race_tech_2
+		sp_magical_generic_reward_race_tech_3
+		sp_magical_generic_reward_resource_scarcity
+		sp_magical_generic_reward_critical_failure
+	}
+}
+
+sp_EQS_portable_solar_panels = {
+    specialization = specialization_air
+
+    project_tags = {
+        sp_tag_aircraft
+    }
+
+    resource_cost = {
+        resources = {
+            tungsten = 7
+            steel = 5
+        }
+    }
+
+    allowed = {
+        tag = EQS
+    }
+
+    visible = {
+        FROM = {
+            has_country_flag = SOL_wunderwaffen_unlocked
+        }
+    }
+
+    available = {
+
+    }
+
+    ai_will_do = {
+        base = 1
+    }
+
+    complexity = sp_complexity.medium
+    prototype_time = sp_time.prototype.short
+    breakthrough_cost = {
+        specialization_air = 1
+    }
+
+    project_output = {
+        #country_effects  = {
+        #    navy_max_range_factor = 0.15
+        #    air_range_factor = 0.15
+        #    supply_node_range = 0.1
+        #}
+    }
+
+    generic_prototype_rewards = {
+		sp_air_generic_reward_scientist_xp_1
+		sp_air_generic_reward_scientist_xp_2
+		sp_air_generic_reward_scientist_xp_3
+		sp_air_generic_reward_major_progress_1
+		sp_air_generic_reward_major_progress_2
+		sp_air_generic_reward_major_progress_3
+		sp_air_generic_reward_test_failure_1
+		sp_air_generic_reward_test_failure_2
+		sp_air_generic_reward_test_failure_3
+		sp_air_generic_aerodynamics_advancements_reward
+		sp_air_generic_reward_air_xp_1
+		sp_air_generic_reward_air_xp_2
+		sp_air_generic_reward_air_xp_3
+	}
+}
+
+sp_EQS_hot_fusion = {
+    specialization = specialization_nuclear
+
+    project_tags = {
+        sp_tag_nuclear_power
+    }
+
+    resource_cost = {
+        resources = {
+            crystals = 10
+            steel = 8
+            tungsten = 8
+            chromium = 10
+        }
+    }
+
+    allowed = {
+        tag = EQS
+    }
+
+    visible = {
+        FROM = {
+            has_country_flag = SOL_wunderwaffen_unlocked
+        }
+    }
+
+    available = {
+        FROM = {
+            is_special_project_completed = sp:sp_commercial_nuclear_reactor
+        }
+    }
+
+    ai_will_do = {
+        base = 1
+    }
+
+    complexity = sp_complexity.insane
+    prototype_time = sp_time.prototype.long
+    breakthrough_cost = {
+        specialization_nuclear = 3
+    }
+
+    project_output = {
+        #country_effects = {
+        #    production_speed_buildings_factor = 0.15
+        #    industrial_capacity_factory = 0.1
+        #    industrial_capacity_dockyard = 0.1
+        #}
+    }
+
+    generic_prototype_rewards = {
+		sp_nuclear_scientist_xp_generic_reward
+		sp_nuclear_minor_progress_generic_reward
+		sp_nuclear_generic_industry_tech_reward
+		sp_nuclear_generic_electronics_tech_reward
+		sp_nuclear_reactor_radioactive_leak_stabilized_reward
+		sp_nuclear_reactor_minor_explosion_reward
+	}
+}
+
+sp_EQS_super_flamers = {
+    specialization = specialization_land
+
+    project_tags = {
+        sp_tag_tank
+    }
+
+    resource_cost = {
+        resources = {
+            steel = 5
+        }
+    }
+
+    allowed = {
+        tag = EQS
+    }
+
+    visible = {
+        FROM = {
+            has_country_flag = SOL_wunderwaffen_unlocked
+        }
+    }
+
+    available = {
+        FROM = {
+            is_special_project_completed = sp:sp_land_flamethrower_tank
+        }
+    }
+
+    ai_will_do = {
+        base = 1
+    }
+
+    complexity = sp_complexity.medium
+    prototype_time = sp_time.prototype.medium
+    breakthrough_cost = {
+        specialization_land = 2
+    }
+
+    project_output = {
+        sub_unit_bonus = {
+            light_flame_tank = { soft_attack = 1 defense = 0.5 }
+            medium_flame_tank = { soft_attack = 1 defense = 0.5 }
+            heavy_flame_tank = { soft_attack = 1 defense = 0.5 }
+            modern_flame_tank = { soft_attack = 1 defense = 0.5 }
+            super_heavy_flame_tank = { soft_attack = 1 defense = 0.5 }
+        }
+    }
+
+    generic_prototype_rewards = {
+		sp_land_generic_reward_scientist_xp_1
+		sp_land_generic_reward_scientist_xp_2
+		sp_land_generic_reward_scientist_xp_3
+		sp_land_generic_reward_army_xp_1
+		sp_land_generic_reward_army_xp_2
+		sp_land_generic_reward_army_xp_3
+		sp_land_generic_reward_major_progress_1
+		sp_land_generic_reward_major_progress_2
+		sp_land_generic_reward_major_progress_3
+		sp_land_generic_reward_test_failure_1
+		sp_land_generic_reward_test_failure_2
+		sp_land_generic_reward_test_failure_3
+		sp_land_generic_reward_resource_scarcity
+	}
+}
+
+sp_EQS_plasma_cannons = {
+    specialization = specialization_naval
+
+    project_tags = {
+        sp_tag_surface_ship
+    }
+
+    resource_cost = {
+        resources = {
+            steel = 10
+            crystals = 6
+        }
+    }
+
+    allowed = {
+        tag = EQS
+    }
+
+    visible = {
+        FROM = {
+            has_country_flag = SOL_wunderwaffen_unlocked
+        }
+    }
+
+    available = {
+        FROM = {
+            has_tech = magical_weapons2
+        }
+    }
+
+    ai_will_do = {
+        base = 1
+    }
+
+    complexity = sp_complexity.medium
+    prototype_time = sp_time.prototype.long
+    breakthrough_cost = {
+        specialization_naval = 2
+    }
+
+    project_output = {
+        sub_unit_bonus = {
+            battleship = {
+                hg_attack = 0.25
+                hg_armor_piercing = 0.25
+                naval_range = -0.1
+            }
+            battle_cruiser = {
+                hg_attack = 0.25
+                hg_armor_piercing = 0.25
+                naval_range = -0.1
+            }
+        }
+    }
+
+    generic_prototype_rewards = {
+		sp_naval_generic_reward_scientist_xp_1
+		sp_naval_generic_reward_scientist_xp_2
+		sp_naval_generic_reward_scientist_xp_3
+		sp_naval_generic_reward_navy_xp_1
+		sp_naval_generic_reward_navy_xp_2
+		sp_naval_generic_reward_navy_xp_3
+		sp_naval_generic_reward_major_progress_1
+		sp_naval_generic_reward_major_progress_2
+		sp_naval_generic_reward_major_progress_3
+		sp_naval_generic_reward_test_failure_1
+		sp_naval_generic_reward_test_failure_2
+		sp_naval_generic_reward_test_failure_3
+	}
+}
+
+sp_EQS_pilot_drug_programs = {
+    specialization = specialization_air
+
+    project_tags = {
+        sp_tag_aircraft
+    }
+
+    resource_cost = {
+        resources = {
+            crystals = 3
+        }
+    }
+
+    allowed = {
+        tag = EQS
+    }
+
+    visible = {
+        FROM = {
+            has_country_flag = SOL_wunderwaffen_unlocked
+        }
+    }
+
+    available = {
+
+    }
+
+    ai_will_do = {
+        base = 1
+    }
+
+    complexity = sp_complexity.small
+    prototype_time = sp_time.prototype.medium
+    breakthrough_cost = {
+        specialization_air = 1
+    }
+
+    project_output = {
+        #country_effects = {
+        #    air_ace_generation_chance_factor = 0.1
+        #    air_agility_factor = 0.1
+        #    air_attack_factor = 0.05
+        #    air_accidents_factor = 0.25
+        #}
+    }
+
+    generic_prototype_rewards = {
+		sp_air_generic_reward_scientist_xp_1
+		sp_air_generic_reward_scientist_xp_2
+		sp_air_generic_reward_scientist_xp_3
+		sp_air_generic_reward_major_progress_1
+		sp_air_generic_reward_major_progress_2
+		sp_air_generic_reward_test_failure_1
+		sp_air_generic_reward_test_failure_2
+		sp_air_generic_reward_air_xp_1
+		sp_air_generic_reward_air_xp_2
+	}
+}
