@@ -250,14 +250,6 @@ EQS_debug_category = {
             }
         }
     }
-    EQS_CHN_OOB = {
-        allowed = {
-            tag = EQS
-        }
-        complete_effect = {
-            CHN = { load_oob = "CHN_Furfore_Chrysalis"}
-        }
-    }
     EQS_start_SOL = {
         allowed = {
             tag = EQS

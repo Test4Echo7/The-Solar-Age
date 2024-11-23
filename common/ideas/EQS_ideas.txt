@@ -2335,6 +2335,155 @@ ideas = {
 			}
 		}
 	}
+	###War Ideas###
+	country = {
+		EQS_pow_laborers = {
+			available = {
+				has_war_with = CHN
+			}
+			modifier = {
+				non_core_manpower = -0.05
+				industrial_capacity_factory = 0.03
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		#Don't be edgy, mmmkay?
+		EQS_magical_bioweapons = {
+			available = {
+				has_war_with = CHN
+			}
+			targeted_modifier = {
+				tag = CHN
+				attack_bonus_against = 0.1
+			}
+			modifier = {
+				political_power_factor = -0.1
+			}
+		}
+		EQS_CHN_retaliatory_bioweapons = {
+			available = {
+				has_war_with = EQS
+			}
+			targeted_modifier = {
+				tag = CHN
+				attack_bonus_against = 0.075
+				defense_bonus_against = 0.075
+			}
+		}
+		EQS_stealthy_bioweapons_lar = {
+			available = {
+				has_war_with = CHN
+			}
+			modifier = {
+				airforce_intel_factor = 0.05
+				army_intel_factor = 0.05
+				civilian_intel_factor = 0.05
+				navy_intel_factor = 0.05
+			}
+		}
+		EQS_stealthy_bioweapons = {
+			available = {
+				has_war_with = CHN
+			}
+			modifier = {
+				decryption = 0.2
+			}
+		}
+		EQS_unrestricted_bombing = {
+			available = {
+				has_war_with = CHN
+			}
+			modifier = {
+				air_strategic_bomber_bombing_factor = 0.1
+				war_support_factor = -0.05
+				political_power_gain = -0.05
+			}
+		}
+		EQS_limited_unrestricted_bombing = {
+			available = {
+				has_war_with = CHN
+			}
+			modifier = {
+				air_strategic_bomber_bombing_factor = 0.03
+				political_power_gain = -0.03
+			}
+		}
+		EQS_extreme_propaganda = {
+			available = {
+				has_war_with = CHN
+			}
+			modifier = {
+				conscription_factor = 0.02
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+			}
+		}
+		EQS_everwatching_princess_lar = {
+			available = {
+				has_war_with = CHN
+			}
+			modifier = {
+				airforce_intel_to_others = -0.1
+				army_intel_to_others = -0.1
+				navy_intel_to_others = -0.1
+				civilian_intel_to_others = -0.1
+				stability_factor = -0.1
+				political_power_gain = -0.05
+			}
+		}
+		EQS_everwatching_princess = {
+			available = {
+				has_war_with = CHN
+			}
+			modifier = {
+				encryption = 0.5
+				stability_factor = -0.1
+				political_power_gain = -0.05
+			}
+		}
+		EQS_nothing_to_hide_lar = {
+			available = {
+				has_war_with = CHN
+			}
+			modifier = {
+				airforce_intel_to_others = -0.05
+				army_intel_to_others = -0.05
+				navy_intel_to_others = -0.05
+				civilian_intel_to_others = -0.05
+				stability_factor = -0.05
+			}
+		}
+		EQS_nothing_to_hide = {
+			available = {
+				has_war_with = CHN
+			}
+			modifier = {
+				encryption = 0.2
+				stability_factor = -0.05
+			}
+		}
+		EQS_harmonic_autarky = {
+			available = {
+				has_war_with = CHN
+			}
+			modifier = {
+				local_resources_factor = 0.1
+				production_lack_of_resource_penalty_factor = -0.1
+				stability_factor = -0.1
+				war_support_factor = -0.05
+				political_power_gain = -0.05
+			}
+		}
+		EQS_light_autarky = {
+			available = {
+				has_war_with = CHN
+			}
+			modifier = {
+				production_lack_of_resource_penalty_factor = -0.05
+				stability_factor = -0.05
+			}
+		}
+	}
 	hidden_ideas = {
 		EQS_mental_decline = {
 			allowed = {

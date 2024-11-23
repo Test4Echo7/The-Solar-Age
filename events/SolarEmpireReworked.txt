@@ -1,6 +1,212 @@
 add_namespace = solarreworked
 add_namespace = equestriaexpanded
 
+###War Events###
+country_event = {
+    id = solarreworked.1
+    title = solarreworked.1.t
+    desc = solarreworked.1.d
+    picture = GFX_event_celestia_poster
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.1"}
+
+    trigger = {
+        tag = EQS
+        has_war_with = CHN
+        CHN = {
+            casualties_k > 30
+        }
+        EQS = {
+            casualties_k > 30
+        }
+    }
+
+    option = { #We cannot return their own oppression for a brand of our own.
+        name = solarreworked.1.a
+        add_political_power = 50
+        add_power_balance_value = {
+            id = EQS_sanity_bop
+            value = 0.05
+            tooltip_side = EQS_npc
+        }
+    }
+    option = { #We should place them under constant guard and constant work.
+        name = solarreworked.1.b
+        add_political_power = -25
+        add_power_balance_value = {
+            id = EQS_sanity_bop
+            value = -0.05
+            tooltip_side = EQS_woke
+        }
+        add_ideas = EQS_pow_laborers
+    }
+    option = { #We must use them to send a message to Chrysalis.
+        name = solarreworked.1.c
+        add_political_power = -75
+        add_popularity = {
+            ideology = fascism
+            popularity = 0.03
+        }
+        add_power_balance_value = {
+            id = EQS_sanity_bop
+            value = -0.1
+            tooltip_side = EQS_woke
+        }
+        hidden_effect = {
+            division_template = {
+                name = "Penal Company"
+                is_locked = yes
+                division_names_group = EQS_GAR_01
+                priority = 0
+                force_allow_recruiting = no
+                regiments = {
+                    infantry = { x = 0 y = 0 }
+                    infantry = { x = 0 y = 1 }
+                    infantry = { x = 0 y = 2 }
+                    infantry = { x = 0 y = 3 }
+                    infantry = { x = 1 y = 0 }
+                    infantry = { x = 1 y = 1 }
+                    infantry = { x = 1 y = 2 }
+                    infantry = { x = 1 y = 3 }
+                    infantry = { x = 2 y = 0 }
+                    infantry = { x = 2 y = 1 }
+                }
+            }
+            if = {
+                limit = { controls_state = 132 }
+                132 = {
+                    create_unit = {
+                        division = "division_template = \"Penal Company\" start_experience_factor = 0.1 start_equipment_factor = 0.75"
+                        owner = EQS
+                        prioritize_location = 9806
+                    }
+                }
+            }
+            if = {
+                limit = { controls_state = 59 }
+                59 = {
+                    create_unit = {
+                        division = "division_template = \"Penal Company\" start_experience_factor = 0.1 start_equipment_factor = 0.75"
+                        owner = EQS
+                        prioritize_location = 13145
+                    }
+                }
+            }
+            if = {
+                limit = { controls_state = 169 }
+                169 = {
+                    create_unit = {
+                        division = "division_template = \"Penal Company\" start_experience_factor = 0.1 start_equipment_factor = 0.75"
+                        owner = EQS
+                        prioritize_location = 6280
+                    }
+                }
+            }
+        }
+        custom_effect_tooltip = SOL_harmonist_penal_gangs_tt
+    }
+}
+
+country_event = {
+    id = solarreworked.2
+    title = solarreworked.2.t
+    desc = solarreworked.2.d
+    picture = GFX_event_celestia_poster
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.2"}
+
+    is_triggered_only = yes
+
+    option = { #Blueblood is right. We must use every tactic to our advantage.
+        name = solarreworked.2.a
+        #Also add in an opinion modifier for CHN that they used bioweapons; trigger later event for CHN doing the same
+    }
+    option = { #Use it for covert circumstance only.
+        name = solarreworked.2.b
+    }
+    option = { We cannot justify such a horrible weapon in our hooves.
+        name = solarreworked.2.c
+    }
+}
+
+country_event = {
+    id = solarreworked.3
+    title = solarreworked.3.t
+    desc = solarreworked.3.d
+    picture = GFX_event_celestia_poster
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.3"}
+
+    is_triggered_only = yes
+
+    option = { #We must put aside our qualms to hamper the changeling war machine however we can.
+        name = solarreworked.3.a
+    }
+    option = { #We should only do so if it's a last resort.
+        name = solarreworked.3.b
+    }
+    option = { #We mustn't stoop to their level.
+        name = solarreworked.3.c
+    }
+}
+
+country_event = {
+    id = solarreworked.4
+    title = solarreworked.4.t
+    desc = solarreworked.4.d
+    picture = GFX_event_celestia_poster
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.4"}
+
+    is_triggered_only = yes
+
+    option = { #Everypony must feel like they can save Equestria.
+        name = solarreworked.4.a
+    }
+    option = { #We must only keep them happy and carefree
+        name = solarreworked.4.b
+    }
+    option = { #Ponies have a right to not be cushioned from the war.
+        name = solarreworked.4.c
+    }
+}
+
+country_event = {
+    id = solarreworked.5
+    title = solarreworked.5.t
+    desc = solarreworked.5.d
+    picture = GFX_event_celestia_poster
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.5"}
+
+    is_triggered_only = yes
+
+    option = { #There cannot be another mistake!
+        name = solarreworked.5.a
+    }
+    option = { #Only observe those who seem like to fall prey to the changelings.
+        name = solarreworked.5.b
+    }
+    option = { #Everypony has a fundamental right to privacy.
+        name = solarreworked.5.c
+    }
+}
+
+country_event = {
+    id = solarreworked.6
+    title = solarreworked.6.t
+    desc = solarreworked.6.d
+    picture = GFX_event_celestia_poster
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.6"}
+
+    is_triggered_only = yes
+
+    option = { #Total independence is required during these trying times!
+        name = solarreworked.6.a
+    }
+    option = { #We should do what we can to not be as dependent on others right now.
+        name = solarreworked.6.b
+    }
+    option = { #Trade makes everypony prosper.
+        name = solarreworked.6.c
+    }
+}
+
 ###Opening Events###
 country_event = { #A soldier is on a patrol outside the palace and thinks about how his job is rather boring, and that he could be better serving elsewhere, but is surprised when Daybreaker breaks out of the castle to proclaim her ascension, and ponies' salvation is at hoof
     id = solarreworked.20

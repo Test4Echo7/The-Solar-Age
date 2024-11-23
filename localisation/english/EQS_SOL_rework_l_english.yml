@@ -348,6 +348,7 @@
   SOL_destroy:0 "§RFirstport will be enlightened§!"
   SOL_swag:0 "§RNew Ayacachtli will be purified§!"
   SOL_assuming_direct_control_tt:0 "§BEmpress Nightmare Moon§! shall take charge of our nation!"
+  SOL_harmonist_penal_gangs_tt:0 "Up to three §YPenal Company§! divisions will spawn in §Y[59.GetCapitalVictoryPointName]§!, §Y[132.GetCapitalVictoryPointName]§!, and §Y[169.GetCapitalVictoryPointName]§! if we control the states."
 
   ###Last one in the chain. Remove comment later###
   SOL_conglaturation_a_winner_is_you_tt:0 "§GHarmony has been preserved and all of ponykind now bends the knee to Daybreaker. Thank you for playing the Solar Age! - Test4Echo§!"
@@ -678,6 +679,9 @@
   SOL_retreat_by_magic_risk_extra:0 "When our agents fled, they were chased by guards. The mage who was holding the staff was shot, and they were unable to loop back to retrieve it. They had to flee on hoof, and managed to escape without any further losses."
 
   ###Ideas###
+  ###Wartime###
+  EQS_pow_laborers:0 "Changeling POW Laborers"
+  EQS_pow_laborers_desc:0 "Rather than let them languish in POW camps, we have organized worker gangs of changelings, who are being put to work bettering [ROOT.GetNameDef]. While work may be tough, it beats a firing squad, and they're beging given one square meal a day of a smidgen of love."
   ###Timed###
   SOL_lingering_fury:0 "Lingering Fury"
   SOL_lingering_fury_desc:0 "[ROOT.GetLeader] may see things clearer than ever but only the passage of time will make the rage and anger ebb away. The red lenses that tint her view must only be removed by the retribution of our enemies."
@@ -1250,6 +1254,12 @@
   ###Spies###
 
   ###Events###
+  ###Wartime Events###
+  solarreworked.1.t:0 "Question of Rights"
+  solarreworked.1.d:0 "Since the war began, there has been heavy loss of life in our forces as well as within [CHN.GetNamedef]'s. However, every battle leaves behind wounded, and the victor has free rein to do as they wish with them.\n\nAs of this moment, little word has reached us of our own prisoners of war and what the changelings have done with them. So far, it doesn't appear that they have been used for disguises of infiltrators, but it is simply too hard to tell with S.M.I.L.E. completely overwhelmed with the sudden influx of intelligence from being in a hot engagement. Given the state of how Olenia was handled, though, it does not give us hope that our soldiers are being treated well.\n\nCurrently, we have tens of thousands of changeling POWs who are left doing menial labor as a way to at least supplement our still struggling industry. However, this has come at a cost. Escapes among the changelings is common, given that we have yet to determine an effective way to counter their shape-shifting abilities, and they can simply slip out with supply deliveries or when there is a changing of the guard. Additionally, the ponypower dedicated to protecting these camps could be used elsewhere if we decide to show the changelings the probable treatment that they are giving our own POWs.\n\nPrince Blueblood has left several proposals regarding how to more effectively handle this situation, although most of the military and government do not support his most... extreme ideas.\n\nHow we treat our aggressors may well shape the perception of the populace of others and the world of us once we are out of this war, but utilizing them more directly could prove more beneficial in the short term. The choice is yours, Princess."
+  solarreworked.1.a:0 "We cannot repay their own oppression with a brand of our own."
+  solarreworked.1.b:0 "We should place them under constant guard, and constant work."
+  solarreworked.1.c:0 "We must use them to send a message to Chrysalis."
   ###Opening Tree Events###
   solarreworked.32.t:0 "The Unthinkable Decision"
   solarreworked.32.d:0 "Although [ROOT.GetLeader] has barely ascended to the throne, there comes a question that has plagued the minds of many nobles and layponies alike in the old regime. When Princess Luna returned, there was a clear line of succession if something were to ever happen, but she is not suited to lead our land now, nor would she wish to. In the past, ideas of a regency council have been floated, but every time they were shot down, and [ROOT.GetLeader] has emphatically refused to agree to one for the one thousand years she has led [ROOT.GetNameDef] by her lonesome.\n\nWhile we do not expect her to perish, at the same time, it would be unwise to not have a formalized path in the unlikely event that she is wounded and unable to effectively lead until she heals. Given that Princess Luna's flight has left [ROOT.GetNameDef] in uncertain territory again, the matter should be pressed. It is not as if [ROOT.GetLeader] lacks ponies who know her well and would faithfully serve her, and who could use the power of being the official, designated regent to great effect."
