@@ -105,24 +105,27 @@ sp_EQS_esoteric_extractions = {
     }
 
     project_output = {
-        #country_effects = {
-        #    if = {
-        #        limit = { has_dlc = "La Resistance" }
-        #        airforce_intel_factor = 0.25
-        #        navy_intel_factor = 0.25
-        #        army_intel_factor = 0.25
-        #        civilian_intel_factor = 0.25
-        #
-        #        civilian_intel_to_others = -5
-        #        army_intel_to_others = -5
-        #        navy_intel_to_others = -5
-        #        airforce_intel_to_others = -5
-        #    }
-        #    else = {
-        #        decryption = 2.5
-        #        encryption = 0.25
-        #    }
-        #}
+        country_effects = {
+            if = {
+                limit = { has_dlc = "La Resistance" }
+                custom_effect_tooltip = SOL_esoteric_extractions_lar_tt
+                hidden_effect = {
+                    set_technology = {
+                        EQS_esoteric_extractions_lar = 1
+                        popup = no
+                    }
+                }
+            }
+            else = {
+                custom_effect_tooltip = SOL_esoteric_extractions_tt
+                hidden_effect = {
+                    set_technology = {
+                        EQS_esoteric_extractions = 1
+                        popup = no
+                    }
+                }
+            }
+        }
     }
 
     generic_prototype_rewards = {
@@ -197,7 +200,10 @@ sp_EQS_adeptus_astartes = {
         }
 
         country_effects = {
-            country_event = solarreworked.506 #Create Astartes unit
+            custom_effect_tooltip = SOL_create_astartes_division_tt
+            hidden_effect = {
+                country_event = solarreworked.506 #Create Astartes unit
+            }
         }
     }
 
@@ -341,11 +347,15 @@ sp_EQS_portable_solar_panels = {
     }
 
     project_output = {
-        #country_effects  = {
-        #    navy_max_range_factor = 0.15
-        #    air_range_factor = 0.15
-        #    supply_node_range = 0.1
-        #}
+        country_effects  = {
+           custom_effect_tooltip = SOL_portable_solar_panels_tt
+           hidden_effect = {
+                set_technology = {
+                    EQS_portable_solar_panels = 1
+                    popup = no
+                }
+            }
+        }
     }
 
     generic_prototype_rewards = {
@@ -408,11 +418,15 @@ sp_EQS_hot_fusion = {
     }
 
     project_output = {
-        #country_effects = {
-        #    production_speed_buildings_factor = 0.15
-        #    industrial_capacity_factory = 0.1
-        #    industrial_capacity_dockyard = 0.1
-        #}
+        country_effects = {
+            custom_effect_tooltip = SOL_hot_fusion_tt
+            hidden_effect = {
+                set_technology = {
+                    EQS_hot_fusion = 1
+                    popup = no
+                }
+            }
+        }
     }
 
     generic_prototype_rewards = {
@@ -600,12 +614,15 @@ sp_EQS_pilot_drug_programs = {
     }
 
     project_output = {
-        #country_effects = {
-        #    air_ace_generation_chance_factor = 0.1
-        #    air_agility_factor = 0.1
-        #    air_attack_factor = 0.05
-        #    air_accidents_factor = 0.25
-        #}
+        country_effects = {
+            custom_effect_tooltip = SOL_pilot_drug_programs_tt
+            hidden_effect = {
+                set_technology = {
+                    EQS_pilot_drug_programs = 1
+                    popup = no
+                }
+            }
+        }
     }
 
     generic_prototype_rewards = {

@@ -10,4 +10,5 @@ name="SOL Rework"
 dependencies = {
 	"Equestria at War"
 }
-supported_version="1.14.7"
+supported_version="1.15.*"
+path="/mod/SOL-Rework"
