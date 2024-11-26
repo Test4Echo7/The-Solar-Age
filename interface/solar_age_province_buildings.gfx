@@ -1,0 +1,6 @@
+SpriteTypes = {
+    spriteType = {
+        name = "GFX_canterlot_province"
+        textureFile = "gfx/interface/buildings/solar_age_buildings/canterlot_province.tga"
+    }
+}
