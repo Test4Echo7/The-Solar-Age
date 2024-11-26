@@ -1,0 +1,4 @@
+opinion_modifiers = {
+    EQS_used_bioweapons = { value = -50 }
+    EQS_CHN_used_bioweapons = { value = -50 }
+}

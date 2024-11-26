@@ -89,8 +89,11 @@ leader_traits = {
 
     imperial_hammer = {
         random = no
+        non_core_manpower = 0.02
+        resistance_damage_to_garrison = -0.25
+        foreign_subversive_activites = -0.3
         war_support_factor = 0.1
-        compliance_gain = -0.015
+        compliance_growth = -0.05
         resistance_growth = -0.25
 
         ai_will_do = { factor = 1 }
@@ -102,7 +105,7 @@ leader_traits = {
         drift_defence_factor = 0.3
         subversive_activites_upkeep = -0.1
 
-        ai_will_do = { factor = 1}
+        ai_will_do = { factor = 1 }
     }
 
     master_of_disguise_lar = {
@@ -233,6 +236,17 @@ leader_traits = {
         random = no
         stability_factor = 0.15
         army_morale_factor = 0.05
+    }
+
+    goddess_of_nightmares = {
+        random = no
+        war_support_factor = 0.1
+        conscription = 0.01
+        land_night_attack = 0.1
+        justify_war_goal_time = -0.15
+        political_power_gain = -0.25
+
+        ai_focus_aggressive_factor = 0.5
     }
 
     ###New character advisor traits###

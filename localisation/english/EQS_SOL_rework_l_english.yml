@@ -123,15 +123,20 @@
   EQS_solar_fury_category:0 "An Alicorn's §OFury§!"
   EQS_solar_fury_category_desc:0 "It is a dreadful thing to corner an alicorn.\n\nOur enemies know not what they §Rsow§!."
   EQS_fury_of_sun:0 "§RUnleash the Power of the Sun!§!"
-  EQS_fury_of_sun_desc:0 "The enemy is at our gates, but we are not without support. Our Empress guides our armies in the heat of battle, and she is capable of destroying entire armies without our aid. If she were to unleash that power, all those that threaten us would fall like dead grass in her wake!"
+  EQS_fury_of_sun_desc:0 "The enemy is at our gates, but we are not without support. Our Empress guides our armies in the heat of battle and she is capable of destroying entire armies without our aid. If she were to unleash that power, all those that threaten us would fall like dead grass in her wake!"
   EQS_become_daybreaker_bop:0 "§RAscend§!"
   EQS_become_daybreaker_bop_desc:0 "The enemy is at our gates. Ponies perish. [EQS.GetNameDef] is collapsing. Salvation is near, but my ponies must be §Rready§!.\n\nThey [GetCelestiasBopPopularSupport]."
   EQS_CelestiasPopularSupport_max_evil_bop:0 "§Rwill follow me into the gates of Tartarus§!"
   EQS_militias_desc:0 "War has not touched §Y[ROOT.GetNameDef]§! for centuries. Although the government has the power to institute hard drafts of the populace in times of crisis, this power has never been utilized since it was signed into law, and mmost ponies would be hard-pressed to comply with letters of drafting. However, our ponies deeply love our country, and if we continue to suffer losses on the front, it may be enough to motivate them to join if the desperate hour arises."
+  EQS_militias_penal_recruitment:0 "Press Penal Battalions"
   EQS_melt_our_foes:0 "Melt our Foes"
+  EQS_melt_our_foes_desc:0 "Our enemies believe themselves safe and mock the very sun that our Empress commands. Do they not know that their mocking is like that of an fly against the wind? Nocreature is safe from the might of the Empress. Even the sun itself will turn itself against our foes. Let them bake in their homes and factories! Let them swelter and perish while we bask in her warmth!"
   EQS_pierce_the_heart:0 "Pierce the Enemy's Hearts"
+  EQS_pierce_the_heart_desc:0 "While hidden behind their armored machines, our foes think themselves secure and invincible. Our Empress laughs at their foalish beliefs. Nothing is too secure from the power of magic. Their war machines shall be their tombs."
   EQS_endless_service:0 "Death is not the End"
+  EQS_endless_service_desc:0 "Each of our soldiers has pledged, consciously or not, to serve the Empress and Order for eternity. Their deaths were only a small stumbling block in that oath. The Empress will not allow them to escape their promises so easily, for even death shall not separate her loyal ponies from herself."
   EQS_invincible_soldiers:0 "Undying Service"
+  EQS_invincible_soldiers_desc:0 "Every soldier has a duty to defend [ROOT.GetNameDef] to their dying breath and even beyond, and we will not permit our foes the liberty of doing so. Let their tanks come. Allow their troops to march. Accept their shells and bullets. Through it all, our Empress will ensure that not one step back is taken and not one life will be lost."
   SOL_societal_unrest:0 "Solidify Control"
   SOL_societal_unrest_desc:0 "Our new regime is a tenuous one. Proportionally few ponies currently follow Daybreaker's lead and it is clear to all that Celestia is gone. If actions are not implemented swiftly to crack down on dissent and silence the harshest critics, any chance of saving them from themselves will be lost and there could very well be a new war on our hooves."
   SOL_investigate_ponyville:0 "Investigate Ponyville's Castle"
@@ -237,8 +242,20 @@
   SOL_integrate_manerba:0 "Integrate [692.GetName]"
   SOL_solarize_chiropterra:0 "§RBring the Sun to Chiropterra§!"
   SOL_spawn_CHN_puppet:0 "Release [ROOT.GetAdjectiveCap]-Aligned Hives"
+  EQS_GRD_assistance:0 "Imperial Assistance"
+  EQS_GRD_assistance_desc:0 "The once grand §YGriffonian Empire§! has become a shadow of its former self after the §RRepublican Revolution of 978§!. While the former regent of the Empire had grand ambitions for retaking the lands lost to corruption and sedition, the small change in governance that [ROOT.GetNameDef] implemented stalled these plans. However, there is no reason that, now that we have secured our sister-empire's throne, that we cannot continue them. [GRD.GetNameDefCap] could be a most useful and powerful tool if its true borders were reclaimed."
+  EQS_return_GRD_territory:0 "Return de Jure Griffonian Territory"
+  EQS_return_GRD_territory_desc:0 "Our former colony had ambitions of its own and laid claim to a large swath of territory for room to expand, much of it griffon-dominant. As the overwhelming majority of the population in these states is still griffon, we have little need to continue administering it from [3.GetCapitalVictoryPointName]. Not only will releasing it to the Griffonian administration ease the Empress's headache, it will ingratiate us with our griffon subjects, too."
+  EQS_GRD_end_southern_autonomy:0 "End Southern Herzland Autonomy"
+  EQS_GRD_reclaim_northern_herzland:0 "Reclaim the Northern Herzland"
+  EQS_GRD_shatter_northern_duchies:0 "Shatter the Northern Duchies"
+  EQS_GRD_take_back_central_griffonia:0 "Reconquer Central Griffonia"
+  EQS_GRD_burn_JER:0 "Burn Aquileia"
+  EQS_GRD_humble_the_south:0 "Humble the South"
+  EQS_GRD_civilize_the_frontier:0 "Civilize the Frontier"
 
   ###Flags and Custom Tooltips###
+  owns_all_cores_subject_tt_NOT:0 "Not all core states are owned by §Y[ROOT.GetNameDef]§! or its subjects."
   SOL_has_captured_sunset:0 "Sunset Shimmer has been captured."
   SOL_daybreaker_promotion_tt:0 "§YDaybreaker§! becomes a Field Marshal."
   SOL_sunset_converted:0 "Sunset Shimmer has ascended."
@@ -349,6 +366,10 @@
   SOL_swag:0 "§RNew Ayacachtli will be purified§!"
   SOL_assuming_direct_control_tt:0 "§BEmpress Nightmare Moon§! shall take charge of our nation!"
   SOL_harmonist_penal_gangs_tt:0 "Up to three §YPenal Company§! divisions will spawn in §Y[59.GetCapitalVictoryPointName]§!, §Y[132.GetCapitalVictoryPointName]§!, and §Y[169.GetCapitalVictoryPointName]§! if we control the states."
+  SOL_do_you_want_to_be_that_edgy_tt:0 "§Y[CHN.GetLeader]§! could respond §Rin kind§! if [CHN.GetLeader.GetSheHe] determines we are using these weapons."
+  SOL_all_equus_nations_pwned_tt:0 "Every nation on §YEquus§! has either been §Rconquered§! or made a §Opuppet§! of §Y[ROOT.GetNameDef]§!."
+  SOL_all_griffonian_nations_pwned_tt:0 "Every nation on §YGriffonia§! has either been §Rconquered§! or made a §Opuppet§! of §Y[ROOT.GetNameDef]§!."
+  SOL_all_zebrican_nations_pwned_tt:0 "Every nation on §YZebrica§! has either been §Rconquered§! or made a §Opuppet§! of §Y[ROOT.GetNameDef]§!."
 
   ###Last one in the chain. Remove comment later###
   SOL_conglaturation_a_winner_is_you_tt:0 "§GHarmony has been preserved and all of ponykind now bends the knee to Daybreaker. Thank you for playing the Solar Age! - Test4Echo§!"
@@ -378,6 +399,10 @@
   supernova_desc:0 "§LThe Dawn comes. The Sun pierces the veil of darkness. The Fire leaves no sinner alive.§!"
   magic_drained:0 "Magic Drained"
   magic_drained_desc:0 "§LNopony is without their limits, and the Empress has pushed herself beyond hers for too long. She must take time to rest and recover to effectively lead us in battle.§!"
+  magic_piercing:0 "Super-Charged Armor Piercing"
+  magic_piercing_desc:0 "§LThe Empress bolsters the very weapons of our soldiers, permitting them to punch through even the strongest armor. No tank is safe while she empowers our troops!§!"
+  magic_defense:0 "Lifeforce Protection"
+  magic_defense_desc:0 "§LUnder the watchful and faithful eye of the Empress not a single soldier shall fall to the enemy. Let them come and weep as our troops shrug off barrages that would leave mortals as nothing but paste!§!"
   alicorn_of_fury:0 "Alicorn of Fury"
   alicorn_of_fury_desc:0 "§LThe Morning Wind wails. The Frigid Air of the North pierces through the hearts of all who threaten the Light of Day. Nopony shall escape her wrath. No foe shall go unpunished. For the Herald of the Goddess does not suffer fools and traitors lightly.§!"
   alicorn_of_desire:0 "Alicorn of Desire"
@@ -396,6 +421,7 @@
   cowled_governor:0 "Cowed by Daybreaker"
   miffed_inquisitor:0 "Irritated Governess"
   wounded_monarch:0 "Wounded"
+  goddess_of_nightmares:0 "Goddess of Nightmares"
 
   ###Advisor Traits###
   eea_chancellor:0 "Head of the EEA"
@@ -434,6 +460,10 @@
 
   ###World Tension###
   threat_SOL_ascended:0 "Daybreaker's Ascension"
+
+  ###Opinion Modifiers###
+  EQS_used_bioweapons:0 "Used Magical Bioweapons"
+  EQS_CHN_used_bioweapons:0 "Retaliated in Kind"
 
   ###Occupation Laws###
   EQS_inquisitionis_occupation:0 "Inquisition Administration"
@@ -682,6 +712,10 @@
   ###Wartime###
   EQS_pow_laborers:0 "Changeling POW Laborers"
   EQS_pow_laborers_desc:0 "Rather than let them languish in POW camps, we have organized worker gangs of changelings, who are being put to work bettering [ROOT.GetNameDef]. While work may be tough, it beats a firing squad, and they're beging given one square meal a day of a smidgen of love."
+  EQS_harmonic_autarky:0 "Harmonic Autarky"
+  EQS_harmonic_autarky_desc:0 "So long as we fight, we must look to our own ponies before we consider the benefit of others. Every scrap must be put to our defense, no matter how it may strain our economy in the short term. Reliance on help from those who don't believe in Harmony will only lead to our downfall."
+  EQS_light_autarky:0 "Economic Independence Act"
+  EQS_light_autarky_desc:0 "We must look to ourselves during these troubled times. If we rely too much upon the kindness of other nations, we could face shortages when that good will dries up. Through altering how our core industries supply their needs, we will ensure safety for this war, even if there are teething issues in the short term."
   ###Timed###
   SOL_lingering_fury:0 "Lingering Fury"
   SOL_lingering_fury_desc:0 "[ROOT.GetLeader] may see things clearer than ever but only the passage of time will make the rage and anger ebb away. The red lenses that tint her view must only be removed by the retribution of our enemies."

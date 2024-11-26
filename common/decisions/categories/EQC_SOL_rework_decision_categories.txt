@@ -3,6 +3,21 @@ EQC_form_greater_new_mareland = {
         tag = EQC
     }
     visible_when_empty = no
+    highlight_states = {
+        highlight_state_targets = {
+            state = 376
+            state = 406
+            state = 473
+            state = 375
+            state = 369
+            state = 370
+            state = 372
+            state = 367
+            state = 366
+            state = 388
+            state = 368
+        }
+    }
     priority = {
         base = 130
     }

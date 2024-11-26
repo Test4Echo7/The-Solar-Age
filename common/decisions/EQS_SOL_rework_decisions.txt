@@ -1157,6 +1157,1021 @@ EQS_solar_fury_category = {
         }
     }
 }
+EQS_GRD_assistance = {
+    EQS_return_GRD_territory = {
+        allowed = { tag = EQS }
+        visible = {
+            376 = { is_owned_and_controlled_by = ROOT }
+            406 = { is_owned_and_controlled_by = ROOT }
+            473 = { is_owned_and_controlled_by = ROOT }
+            375 = { is_owned_and_controlled_by = ROOT }
+            369 = { is_owned_and_controlled_by = ROOT }
+            370 = { is_owned_and_controlled_by = ROOT }
+            372 = { is_owned_and_controlled_by = ROOT }
+            367 = { is_owned_and_controlled_by = ROOT }
+            366 = { is_owned_and_controlled_by = ROOT }
+            388 = { is_owned_and_controlled_by = ROOT }
+            368 = { is_owned_and_controlled_by = ROOT }
+        }
+
+        highlight_states = {
+            highlight_state_targets = {
+                state = 376
+                state = 406
+                state = 473
+                state = 375
+                state = 369
+                state = 370
+                state = 372
+                state = 367
+                state = 366
+                state = 388
+                state = 368
+            }
+        }
+
+        fire_only_once = yes
+
+        complete_effect = {
+            log = "[GetDateText]: [ROOT.GetName] Decision EQS_return_GRD_territory"
+            GRD = { add_stability = 0.05 }
+            376 = { transfer_state_to = GRD }
+            406 = { transfer_state_to = GRD }
+            473 = { transfer_state_to = GRD }
+            375 = { transfer_state_to = GRD }
+            369 = { transfer_state_to = GRD }
+            370 = { transfer_state_to = GRD }
+            372 = { transfer_state_to = GRD }
+            367 = { transfer_state_to = GRD }
+            366 = { transfer_state_to = GRD }
+            388 = { transfer_state_to = GRD }
+            368 = { transfer_state_to = GRD }
+        }
+        ai_will_do = { factor = 100 }
+    }
+    EQS_GRD_end_southern_autonomy = {
+        allowed = { tag = EQS }
+        available = {
+            OR = {
+                NOT = { ANG = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { KAT = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { YAL = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { ROU = { all_cores_owned_by_ROOT_or_subject = yes } }
+            }
+        }
+        visible = {
+            OR = {
+                NOT = { ANG = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { KAT = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { YAL = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { ROU = { all_cores_owned_by_ROOT_or_subject = yes } }
+            }
+        }
+        highlight_states = {
+            highlight_states_trigger = {
+                OR = {
+                    is_owned_and_controlled_by = ANG
+                    is_owned_and_controlled_by = KAT
+                    is_owned_and_controlled_by = ROU
+                    is_owned_and_controlled_by = YAL
+                }
+            }
+        }
+        war_with_on_remove = YAL
+        war_with_on_remove = KAT
+        war_with_on_remove = ANG
+        war_with_on_remove = ROU
+        days_remove = 30
+        fire_only_once = yes
+        cost = 100
+        remove_effect = {
+            log = "[GetDateText]: [ROOT.GetName] Decision remove EQS_GRD_end_southern_autonomy"
+            if = {
+                limit = {
+                    ANG = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                declare_war_on = {
+                    target = ANG
+                    type = annex_everything
+                }
+            }
+            if = {
+                limit = {
+                    KAT = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                declare_war_on = {
+                    target = KAT
+                    type = annex_everything
+                }
+            }
+            if = {
+                limit = {
+                    ROU = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                declare_war_on = {
+                    target = ROU
+                    type = annex_everything
+                }
+            }
+            if = {
+                limit = {
+                    YAL = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                declare_war_on = {
+                    target = YAL
+                    type = annex_everything
+                }
+            }
+        }
+        ai_will_do = {
+            base = 10
+            modifier = {
+                has_war = yes
+                factor = 0.3
+            }
+        }
+    }
+    EQS_GRD_reclaim_northern_herzland = {
+        allowed = { tag = EQS }
+        available = {
+            OR = {
+                NOT = { FEA = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { STW = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { BRZ = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { PYT = { all_cores_owned_by_ROOT_or_subject = yes } }
+            }
+        }
+        visible = {
+            OR = {
+                NOT = { FEA = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { STW = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { BRZ = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { PYT = { all_cores_owned_by_ROOT_or_subject = yes } }
+            }
+        }
+        highlight_states = {
+            highlight_states_trigger = {
+                OR = {
+                    is_owned_and_controlled_by = FEA
+                    is_owned_and_controlled_by = STW
+                    is_owned_and_controlled_by = BRZ
+                    is_owned_and_controlled_by = PYT
+                }
+            }
+        }
+        war_with_on_remove = FEA
+        war_with_on_remove = STW
+        war_with_on_remove = BRZ
+        war_with_on_remove = PYT
+        fire_only_once = yes
+        days_remove = 30
+        cost = 100
+        remove_effect = {
+            log = "[GetDateText]: [ROOT.GetName] Decision remove EQS_GRD_reclaim_northern_herzland"
+            if = {
+                limit = {
+                    FEA = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                declare_war_on = {
+                    target = FEA
+                    type = annex_everything
+                }
+            }
+            if = {
+                limit = {
+                    STW = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                declare_war_on = {
+                    target = STW
+                    type = annex_everything
+                }
+            }
+            if = {
+                limit = {
+                    BRZ = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                declare_war_on = {
+                    target = BRZ
+                    type = annex_everything
+                }
+            }
+            if = {
+                limit = {
+                    PYT = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                declare_war_on = {
+                    target = PYT
+                    type = annex_everything
+                }
+            }
+        }
+        ai_will_do = {
+            base = 10
+            modifier = {
+                has_war = yes
+                factor = 0.3
+            }
+        }
+    }
+    EQS_GRD_shatter_northern_duchies = {
+        allowed = { tag = EQS }
+        available = {
+            OR = {
+                NOT = { FAT = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { MNC = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { HAU = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { SRS = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { VED = { all_cores_owned_by_ROOT_or_subject = yes } }
+            }
+        }
+        visible = {
+            OR = {
+                NOT = { FAT = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { MNC = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { HAU = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { SRS = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { VED = { all_cores_owned_by_ROOT_or_subject = yes } }
+            }
+        }
+        highlight_states = {
+            highlight_states_trigger = {
+                OR = {
+                    is_owned_and_controlled_by = FAT
+                    is_owned_and_controlled_by = MNC
+                    is_owned_and_controlled_by = HAU
+                    is_owned_and_controlled_by = SRS
+                    is_owned_and_controlled_by = VED
+                }
+            }
+        }
+        war_with_on_remove = FAT
+        war_with_on_remove = MNC
+        war_with_on_remove = HAU
+        war_with_on_remove = SRS
+        war_with_on_remove = VED
+        fire_only_once = yes
+        days_remove = 50
+        cost = 50
+        remove_effect = {
+            log = "[GetDateText]: [ROOT.GetName] Decision remove EQS_GRD_shatter_northern_duchies"
+            if = {
+                limit = {
+                    FAT = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                create_wargoal = {
+                    target = FAT
+                    type = annex_everything
+                }
+            }
+            if = {
+                limit = {
+                    MNC = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                create_wargoal = {
+                    target = MNC
+                    type = annex_everything
+                }
+            }
+            if = {
+                limit = {
+                    HAU = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                create_wargoal = {
+                    target = HAU
+                    type = annex_everything
+                }
+            }
+            if = {
+                limit = {
+                    SRS = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                create_wargoal = {
+                    target = SRS
+                    type = annex_everything
+                }
+            }
+            if = {
+                limit = {
+                    VED = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                create_wargoal = {
+                    target = VED
+                    type = annex_everything
+                }
+            }
+        }
+        ai_will_do = {
+            base = 10
+            modifier = {
+                has_war = yes
+                factor = 0.3
+            }
+        }
+    }
+    EQS_GRD_take_back_central_griffonia = {
+        allowed = { tag = EQS }
+        available = {
+            OR = {
+                NOT = { LAK = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { ERI = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { EYR = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { AVI = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { BAN = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { BOI = { all_cores_owned_by_ROOT_or_subject = yes } }
+            }
+        }
+        visible = {
+            OR = {
+                NOT = { LAK = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { ERI = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { EYR = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { AVI = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { BAN = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { BOI = { all_cores_owned_by_ROOT_or_subject = yes } }
+            }
+        }
+        highlight_states = {
+            highlight_states_trigger = {
+                OR = {
+                    is_owned_and_controlled_by = LAK
+                    is_owned_and_controlled_by = ERI
+                    is_owned_and_controlled_by = EYR
+                    is_owned_and_controlled_by = BAN
+                    is_owned_and_controlled_by = BOI
+                    is_owned_and_controlled_by = AVI
+                }
+            }
+        }
+        war_with_on_remove = LAK
+        war_with_on_remove = ERI
+        war_with_on_remove = EYR
+        war_with_on_remove = AVI
+        war_with_on_remove = BAN
+        war_with_on_remove = BOI
+        fire_only_once = yes
+        days_remove = 50
+        cost = 50
+        remove_effect = {
+            log = "[GetDateText]: [ROOT.GetName] Decision remove EQS_GRD_take_back_central_griffonia"
+            if = {
+                limit = {
+                    LAK = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                create_wargoal = {
+                    target = LAK
+                    type = annex_everything
+                }
+            }
+            if = {
+                limit = {
+                    ERI = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                create_wargoal = {
+                    target = ERI
+                    type = annex_everything
+                }
+            }
+            if = {
+                limit = {
+                    EYR = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                create_wargoal = {
+                    target = EYR
+                    type = annex_everything
+                }
+            }
+            if = {
+                limit = {
+                    BAN = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                create_wargoal = {
+                    target = BAN
+                    type = annex_everything
+                }
+            }
+            if = {
+                limit = {
+                    AVI = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                create_wargoal = {
+                    target = AVI
+                    type = annex_everything
+                }
+            }
+            if = {
+                limit = {
+                    BOI = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                create_wargoal = {
+                    target = BOI
+                    type = annex_everything
+                }
+            }
+        }
+        ai_will_do = {
+            base = 10
+            modifier = {
+                has_war = yes
+                factor = 0.3
+            }
+        }
+    }
+    EQS_GRD_burn_JER = {
+        allowed = { tag = EQS }
+        available = {
+            OR = {
+                NOT = { FLO = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { HEL = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { AET = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { TRD = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { FEZ = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { POM = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { JRR = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { VIN = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { JER = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { JEB = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { JFT = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { JES = { all_cores_owned_by_ROOT_or_subject = yes } }
+            }
+        }
+        visible = {
+            OR = {
+                NOT = { FLO = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { HEL = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { AET = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { TRD = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { FEZ = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { POM = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { JRR = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { VIN = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { JER = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { JEB = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { JFT = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { JES = { all_cores_owned_by_ROOT_or_subject = yes } }
+            }
+        }
+        highlight_states = {
+            highlight_states_trigger = {
+                OR = {
+                    is_owned_and_controlled_by = FLO
+                    is_owned_and_controlled_by = HEL
+                    is_owned_and_controlled_by = AET
+                    is_owned_and_controlled_by = TRD
+                    is_owned_and_controlled_by = FEZ
+                    is_owned_and_controlled_by = POM
+                    is_owned_and_controlled_by = JRR
+                    is_owned_and_controlled_by = VIN
+                    is_owned_and_controlled_by = JER
+                    is_owned_and_controlled_by = JFT
+                    is_owned_and_controlled_by = JEB
+                    is_owned_and_controlled_by = JES
+                }
+            }
+        }
+        war_with_on_remove = FLO
+        war_with_on_remove = HEL
+        war_with_on_remove = AET
+        war_with_on_remove = TRD
+        war_with_on_remove = FEZ
+        war_with_on_remove = POM
+        war_with_on_remove = JRR
+        war_with_on_remove = VIN
+        war_with_on_remove = JER
+        war_with_on_remove = JEB
+        war_with_on_remove = JFT
+        war_with_on_remove = JES
+        fire_only_once = yes
+        days_remove = 50
+        cost = 50
+        remove_effect = {
+            log = "[GetDateText]: [ROOT.GetName] Decision remove EQS_GRD_burn_JER"
+            if = {
+                limit = {
+                    FLO = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                create_wargoal = {
+                    target = FLO
+                    type = annex_everything
+                }
+            }
+            if = {
+                limit = {
+                    HEL = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                create_wargoal = {
+                    target = HEL
+                    type = annex_everything
+                }
+            }
+            if = {
+                limit = {
+                    AET = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                create_wargoal = {
+                    target = AET
+                    type = annex_everything
+                }
+            }
+            if = {
+                limit = {
+                    JRR = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                create_wargoal = {
+                    target = JRR
+                    type = annex_everything
+                }
+            }
+            if = {
+                limit = {
+                    VIN = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                create_wargoal = {
+                    target = VIN
+                    type = annex_everything
+                }
+            }
+            if = {
+                limit = {
+                    JER = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                create_wargoal = {
+                    target = JER
+                    type = annex_everything
+                }
+            }
+            if = {
+                limit = {
+                    JEB = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                create_wargoal = {
+                    target = JEB
+                    type = annex_everything
+                }
+            }
+            if = {
+                limit = {
+                    JFT = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                create_wargoal = {
+                    target = JFT
+                    type = annex_everything
+                }
+            }
+            if = {
+                limit = {
+                    TRD = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                create_wargoal = {
+                    target = TRD
+                    type = annex_everything
+                }
+            }
+            if = {
+                limit = {
+                    POM = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                create_wargoal = {
+                    target = POM
+                    type = annex_everything
+                }
+            }
+            if = {
+                limit = {
+                    FEZ = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                create_wargoal = {
+                    target = FEZ
+                    type = annex_everything
+                }
+            }
+            if = {
+                limit = {
+                    JES = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                create_wargoal = {
+                    target = JES
+                    type = annex_everything
+                }
+            }
+        }
+        ai_will_do = {
+            base = 10
+            modifier = {
+                has_war = yes
+                factor = 0.3
+            }
+        }
+    }
+    EQS_GRD_humble_the_south = {
+        allowed = { tag = EQS }
+        available = {
+            OR = {
+                NOT = { ARA = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { FRN = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { TAL = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { WNG = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { FAL = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { SIC = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { CYA = { all_cores_owned_by_ROOT_or_subject = yes } }
+            }
+        }
+        visible = {
+            OR = {
+                NOT = { ARA = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { FRN = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { TAL = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { WNG = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { FAL = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { SIC = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { CYA = { all_cores_owned_by_ROOT_or_subject = yes } }
+            }
+        }
+        highlight_states = {
+            highlight_states_trigger = {
+                OR = {
+                    is_owned_and_controlled_by = ARA
+                    is_owned_and_controlled_by = FRN
+                    is_owned_and_controlled_by = TAL
+                    is_owned_and_controlled_by = WNG
+                    is_owned_and_controlled_by = FAL
+                    is_owned_and_controlled_by = SIC
+                    is_owned_and_controlled_by = CYA
+                }
+            }
+        }
+        war_with_on_remove = ARA
+        war_with_on_remove = FRN
+        war_with_on_remove = TAL
+        war_with_on_remove = WNG
+        war_with_on_remove = FAL
+        war_with_on_remove = SIC
+        war_with_on_remove = CYA
+        fire_only_once = yes
+        days_remove = 50
+        cost = 50
+        remove_effect = {
+            log = "[GetDateText]: [ROOT.GetName] Decision remove EQS_GRD_humble_the_south"
+            if = {
+                limit = {
+                    ARA = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                create_wargoal = {
+                    target = ARA
+                    type = annex_everything
+                }
+            }
+            if = {
+                limit = {
+                    FRN = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                create_wargoal = {
+                    target = FRN
+                    type = annex_everything
+                }
+            }
+            if = {
+                limit = {
+                    TAL = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                create_wargoal = {
+                    target = TAL
+                    type = annex_everything
+                }
+            }
+            if = {
+                limit = {
+                    WNG = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                create_wargoal = {
+                    target = WNG
+                    type = annex_everything
+                }
+            }
+            if = {
+                limit = {
+                    FAL = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                create_wargoal = {
+                    target = FAL
+                    type = annex_everything
+                }
+            }
+            if = {
+                limit = {
+                    SIC = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                create_wargoal = {
+                    target = SIC
+                    type = annex_everything
+                }
+            }
+            if = {
+                limit = {
+                    CYA = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                create_wargoal = {
+                    target = CYA
+                    type = annex_everything
+                }
+            }
+        }
+        ai_will_do = {
+            base = 10
+            modifier = {
+                has_war = yes
+                factor = 0.3
+            }
+        }
+    }
+    EQS_GRD_civilize_the_frontier = {
+        allowed = { tag = EQS }
+        available = {
+            OR = {
+                NOT = { HLQ = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { LNS = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { LUS = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { GRW = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { BRF = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { GRY = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { GRU = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { LSC = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { LSM = { all_cores_owned_by_ROOT_or_subject = yes } }
+            }
+        }
+        visible = {
+            OR = {
+                NOT = { HLQ = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { LNS = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { LUS = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { GRW = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { BRF = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { GRY = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { GRU = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { LSC = { all_cores_owned_by_ROOT_or_subject = yes } }
+                NOT = { LSM = { all_cores_owned_by_ROOT_or_subject = yes } }
+            }
+        }
+        highlight_states = {
+            highlight_states_trigger = {
+                OR = {
+                    is_owned_and_controlled_by = HLQ
+                    is_owned_and_controlled_by = LNS
+                    is_owned_and_controlled_by = LUS
+                    is_owned_and_controlled_by = GRW
+                    is_owned_and_controlled_by = BRF
+                    is_owned_and_controlled_by = GRY
+                    is_owned_and_controlled_by = GRU
+                    is_owned_and_controlled_by = LSC
+                    is_owned_and_controlled_by = LSM
+                }
+            }
+        }
+        war_with_on_remove = HLQ
+        war_with_on_remove = LNS
+        war_with_on_remove = LUS
+        war_with_on_remove = GRW
+        war_with_on_remove = BRF
+        war_with_on_remove = GRY
+        war_with_on_remove = GRU
+        war_with_on_remove = LSC
+        war_with_on_remove = LSM
+        fire_only_once = yes
+        days_remove = 50
+        cost = 50
+        remove_effect = {
+            log = "[GetDateText]: [ROOT.GetName] Decision remove EQS_GRD_civilize_the_frontier"
+            if = {
+                limit = {
+                    HLQ = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                create_wargoal = {
+                    target = HLQ
+                    type = annex_everything
+                }
+            }
+            if = {
+                limit = {
+                    LNS = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                create_wargoal = {
+                    target = LNS
+                    type = annex_everything
+                }
+            }
+            if = {
+                limit = {
+                    LUS = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                create_wargoal = {
+                    target = LUS
+                    type = annex_everything
+                }
+            }
+            if = {
+                limit = {
+                    GRW = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                create_wargoal = {
+                    target = GRW
+                    type = annex_everything
+                }
+            }
+            if = {
+                limit = {
+                    BRF = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                create_wargoal = {
+                    target = BRF
+                    type = annex_everything
+                }
+            }
+            if = {
+                limit = {
+                    GRY = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                create_wargoal = {
+                    target = GRY
+                    type = annex_everything
+                }
+            }
+            if = {
+                limit = {
+                    GRU = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                create_wargoal = {
+                    target = GRU
+                    type = annex_everything
+                }
+            }
+            if = {
+                limit = {
+                    LSM = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                create_wargoal = {
+                    target = LSM
+                    type = annex_everything
+                }
+            }
+            if = {
+                limit = {
+                    LSC = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                create_wargoal = {
+                    target = LSC
+                    type = annex_everything
+                }
+            }
+        }
+        ai_will_do = {
+            base = 10
+            modifier = {
+                has_war = yes
+                factor = 0.3
+            }
+        }
+    }
+}
 #EQS_wunderwaffen_category = {
 #    EQS_project_helios = {
 #        allowed = { tag = EQS }
@@ -2324,6 +3339,7 @@ EQS_pan_pony_empire_category = {
 		}
 		visible = {
 			has_country_flag = SOL_can_core_CHN_states
+			NOT = { has_country_flag = SOL_formed_super_equus }
 		}
 		fire_only_once = yes
 		complete_effect = {
@@ -2345,6 +3361,7 @@ EQS_pan_pony_empire_category = {
             FBK = { all_cores_owned_by_ROOT = yes }
             FIR = { all_cores_owned_by_ROOT = yes }
             WAT = { all_cores_owned_by_ROOT = yes }
+            NOT = { has_country_flag = SOL_formed_super_griffonia }
         }
         fire_only_once = yes
         complete_effect = {
@@ -2362,6 +3379,7 @@ EQS_pan_pony_empire_category = {
         }
         visible = {
             NTR = { all_cores_owned_by_ROOT = yes }
+            NOT = { has_country_flag = SOL_formed_super_griffonia }
         }
         fire_only_once = yes
         complete_effect = {
@@ -2383,6 +3401,7 @@ EQS_pan_pony_empire_category = {
         }
         visible = {
             GRF = { all_cores_owned_by_ROOT = yes }
+            NOT = { has_country_flag = SOL_formed_super_equus }
         }
         fire_only_once = yes
         complete_effect = {
@@ -2402,6 +3421,7 @@ EQS_pan_pony_empire_category = {
         visible = {
             YAK = { all_cores_owned_by_ROOT = yes }
             JAK = { all_cores_owned_by_ROOT = yes }
+            NOT = { has_country_flag = SOL_formed_super_equus }
         }
         fire_only_once = yes
         complete_effect = {
@@ -2435,6 +3455,7 @@ EQS_pan_pony_empire_category = {
             NIM = { all_cores_owned_by_ROOT = yes }
             DEP = { all_cores_owned_by_ROOT = yes }
             BAR = { all_cores_owned_by_ROOT = yes }
+            NOT = { has_country_flag = SOL_formed_super_griffonia }
         }
         fire_only_once = yes
         complete_effect = {
@@ -2454,6 +3475,7 @@ EQS_pan_pony_empire_category = {
         visible = {
             PLB = { all_cores_owned_by_ROOT = yes }
             PNG = { all_cores_owned_by_ROOT = yes }
+            NOT = { has_country_flag = SOL_formed_super_equus }
         }
         fire_only_once = yes
         complete_effect = {
@@ -2477,6 +3499,7 @@ EQS_pan_pony_empire_category = {
             REE = { all_cores_owned_by_ROOT = yes }
             OSQ = { all_cores_owned_by_ROOT = yes }
             HMR = { all_cores_owned_by_ROOT = yes }
+            NOT = { has_country_flag = SOL_formed_super_zebrica }
         }
         fire_only_once = yes
         complete_effect = {
@@ -2494,6 +3517,7 @@ EQS_pan_pony_empire_category = {
     #    }
     #    visible = {
     #        TBK = { all_cores_owned_by_ROOT = yes }
+    #        NOT = { has_country_flag = SOL_formed_super_zebrica }
     #    }
     #    fire_only_once = yes
     #    complete_effect = {
@@ -2511,6 +3535,7 @@ EQS_pan_pony_empire_category = {
 		}
 		visible = {
 			MDL = { all_cores_owned_by_ROOT_or_subject = yes }
+			NOT = { has_country_flag = SOL_formed_super_zebrica }
 		}
 		fire_only_once = yes
 		complete_effect = {
@@ -2532,6 +3557,7 @@ EQS_pan_pony_empire_category = {
             NVA = { all_cores_owned_by_ROOT = yes }
             KHM = { all_cores_owned_by_ROOT = yes }
             KXN = { all_cores_owned_by_ROOT = yes }
+            NOT = { has_country_flag = SOL_formed_super_zebrica }
         }
         fire_only_once = yes
         complete_effect = {
@@ -2553,6 +3579,7 @@ EQS_pan_pony_empire_category = {
             MTO = { all_cores_owned_by_ROOT = yes }
             AES = { all_cores_owned_by_ROOT = yes }
             KAR = { all_cores_owned_by_ROOT = yes }
+            NOT = { has_country_flag = SOL_formed_super_zebrica }
         }
         fire_only_once = yes
         complete_effect = {
@@ -2570,11 +3597,161 @@ EQS_pan_pony_empire_category = {
         }
         visible = {
             KIR = { all_cores_owned_by_ROOT = yes }
+            NOT = { has_country_flag = SOL_formed_super_zebrica }
         }
         fire_only_once = yes
         complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision SOL_release_KIR"
 			SOL_release_KIR = yes
 		}
+	}
+	SOL_establish_imperium_equus = {
+        allowed = {
+            original_tag = EQS
+        }
+        available = {
+            EQS_no_equus_nation_other_than_EQS = yes
+        }
+        visible = {
+            is_EQS_SOL = yes
+            has_completed_focus = SOL_god_empress
+            has_completed_focus = SOL_She_Who_Raises_the_Sun
+            EQS_no_equus_nation_other_than_EQS = yes
+        }
+        fire_only_once = yes
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision SOL_establish_imperium_equus"
+            set_cosmetic_tag = SOL_imperium_equus
+            set_country_flag = SOL_formed_super_equus
+            every_state = {
+                limit = {
+                    is_on_continent = europe
+                    NOT = { is_owned_and_controlled_by = ROOT }
+                }
+                transfer_state_to = ROOT
+                add_compliance = 20
+            }
+            every_state = {
+                limit = {
+                    NOT = { is_core_of = ROOT }
+                    is_owned_and_controlled_by = ROOT
+                    is_on_continent = europe
+                }
+                add_compliance = 20
+            }
+            set_country_flag = SOL_formed_super_equus
+        }
+        ai_will_do = { factor = 1000 }
+	}
+	SOL_establish_imperium_griffonia = {
+        allowed = {
+            original_tag = EQS
+        }
+        available = {
+            EQS_no_equus_nation_other_than_EQS_griffonia = yes
+        }
+        visible = {
+            is_EQS_SOL = yes
+            has_completed_focus = SOL_god_empress
+            has_completed_focus = SOL_She_Who_Raises_the_Sun
+            EQS_no_equus_nation_other_than_EQS_griffonia = yes
+        }
+        fire_only_once = yes
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision SOL_establish_imperium_griffonia"
+            if = {
+                limit = {
+                    GRD = {
+                        OR = {
+                            AND = {
+                                is_subject_of = ROOT
+                                has_country_leader = { character = GRI_daybreaker ruling_only = yes }
+                            }
+                            AND = {
+                                is_in_faction_with = ROOT
+                                has_country_leader = { character = GRI_emperor_grover_vi = ruling_only = yes }
+                                has_cosmetic_tag = GRI_SOL
+                            }
+                        }
+                    }
+                }
+                every_state = {
+                    limit = {
+                        NOT = { is_owned_and_controlled_by = GRD }
+                        is_on_continent = asia
+                    }
+                    transfer_state_to = GRD
+                    add_core_of = GRD
+                }
+            }
+            else = {
+                release_autonomy = {
+                    target = GRD
+                    autonomy_state = autonomy_personal_union_eaw
+                }
+                every_state = {
+                    limit = {
+                        NOT = { is_owned_and_controlled_by = GRD }
+                        is_on_continent = asia
+                    }
+                    transfer_state_to = GRD
+                    add_core_of = GRD
+                }
+            }
+            GRD = { set_cosmetic_tag = SOL_imperium_griffonia }
+            set_country_flag = SOL_formed_super_griffonia
+        }
+        ai_will_do = { factor = 1000 }
+	}
+	SOL_establish_imperium_zebrica = {
+        allowed = {
+            original_tag = EQS
+        }
+        available = {
+            EQS_no_equus_nation_other_than_EQS_zebrica = yes
+        }
+        visible = {
+            is_EQS_SOL = yes
+            has_completed_focus = SOL_god_empress
+            has_completed_focus = SOL_She_Who_Raises_the_Sun
+            EQS_no_equus_nation_other_than_EQS_zebrica = yes
+        }
+        fire_only_once = yes
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision SOL_establish_imperium_zebrica"
+            if = {
+                limit = {
+                    KIR = {
+                        is_subject_of = ROOT
+                        has_cosmetic_tag = KIR_SOL
+                    }
+                }
+                every_state = {
+                    limit = {
+                        NOT = { is_owned_and_controlled_by = KIR }
+                        is_on_continent = africa
+                    }
+                    transfer_state_to = KIR
+                    add_core_of = KIR
+                }
+            }
+            else = {
+                release_autonomy = {
+                    target = KIR
+                    autonomy_state = autonomy_personal_union_eaw
+                }
+                every_state = {
+                    limit = {
+                        NOT = { is_owned_and_controlled_by = KIR }
+                        is_on_continent = africa
+                    }
+                    transfer_state_to = KIR
+                    add_core_of = KIR
+                }
+            }
+            KIR = { set_cosmetic_tag = SOL_imperium_zebrica }
+            set_country_flag = SOL_formed_super_zebrica
+        }
+        ai_will_do = { factor = 1000 }
 	}
 }

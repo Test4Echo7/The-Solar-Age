@@ -2298,6 +2298,66 @@ military_training_category = {
 	
 }
 EQS_militias = {
+	EQS_militias_penal_recruitment = {
+		icon = rifles_canterlot
+		allowed = {
+			tag = EQS
+		}
+		available = {
+			if = {
+				limit = {
+					3 = { is_owned_and_controlled_by = ROOT }
+				}
+				3 = { is_owned_and_controlled_by = ROOT }
+			}
+			else_if = {
+				limit = {
+					75 = { is_owned_and_controlled_by = ROOT }
+				}
+				75 = { is_owned_and_controlled_by = ROOT }
+			}
+			else = {
+				13 = { is_owned_and_controlled_by = ROOT }
+			}
+			is_EQS_losing_war_20 = yes
+			if = {
+				limit = {
+					has_power_balance = { id = EQS_sanity_bop }
+				}
+				power_balance_value = {
+					id = EQS_sanity_bop
+					value < 0.65
+				}
+			}
+		}
+		visible = {
+			has_defensive_war = yes
+			has_tech = penal_infantry
+			any_enemy_country = {
+				is_major = yes
+			}
+			eqs_not_has_civil_war = yes
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		days_re_enable = 365
+		days_remove = 30
+		modifier = {
+			political_power_gain = -1.5
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete EQS_militias_penal_recruitment"
+			3 = {
+				create_unit = {
+					division = "division_template = \"Penal Company\" start_experience_factor = 0.1 start_equipment_factor = 0.75"
+					owner = EQS
+					count = 3
+					prioritize_location = 179
+				}
+			}
+		}
+	}
 	EQS_militias_north_central_region = {			#8 divisions
 		icon = rifles_whinnyapolis
 		available = {
