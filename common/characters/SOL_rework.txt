@@ -513,6 +513,15 @@ characters = {
 	}
 
 	###Foreign nation characters###
+	KIR_daybreaker = {
+		name = EQS_SOL_daybreaker
+		gender = female
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EQS/Daybreaker_new.tga"
+			}
+		}
+	}
 	GRI_daybreaker = {
 		name = EQS_SOL_daybreaker
 		gender = female

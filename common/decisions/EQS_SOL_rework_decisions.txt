@@ -3341,6 +3341,18 @@ EQS_pan_pony_empire_category = {
 			has_country_flag = SOL_can_core_CHN_states
 			NOT = { has_country_flag = SOL_formed_super_equus }
 		}
+		highlight_states = {
+            highlight_states_trigger = {
+                is_core_of = CHN
+                NOT = {
+                    state = 291
+                    state = 246
+                    state = 247
+                    state = 319
+                    state = 316
+                }
+            }
+		}
 		fire_only_once = yes
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision SOL_spawn_CHN_puppet"
@@ -3363,6 +3375,15 @@ EQS_pan_pony_empire_category = {
             WAT = { all_cores_owned_by_ROOT = yes }
             NOT = { has_country_flag = SOL_formed_super_griffonia }
         }
+        highlight_states = {
+            highlight_states_trigger = {
+                OR = {
+                    is_core_of = FBK
+                    is_core_of = WAT
+                    is_core_of = FIR
+                }
+            }
+        }
         fire_only_once = yes
         complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision SOL_release_FBK_super_puppet"
@@ -3380,6 +3401,11 @@ EQS_pan_pony_empire_category = {
         visible = {
             NTR = { all_cores_owned_by_ROOT = yes }
             NOT = { has_country_flag = SOL_formed_super_griffonia }
+        }
+        highlight_states = {
+            highlight_states_trigger = {
+                is_core_of = NTR
+            }
         }
         fire_only_once = yes
         complete_effect = {
@@ -3403,6 +3429,27 @@ EQS_pan_pony_empire_category = {
             GRF = { all_cores_owned_by_ROOT = yes }
             NOT = { has_country_flag = SOL_formed_super_equus }
         }
+        highlight_states = {
+            highlight_states_trigger = {
+                if = {
+                    limit = {
+                        OWNER = { NOT = { has_country_flag = SOL_can_core_GRF_states } }
+                    }
+                    is_core_of = GRF
+                }
+                else = {
+                    is_core_of = GRF
+                    NOT = {
+                        state = 58
+                        state = 338
+                        state = 222
+                        state = 239
+                        state = 242
+                        state = 329
+                    }
+                }
+            }
+        }
         fire_only_once = yes
         complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision SOL_release_GRF"
@@ -3422,6 +3469,14 @@ EQS_pan_pony_empire_category = {
             YAK = { all_cores_owned_by_ROOT = yes }
             JAK = { all_cores_owned_by_ROOT = yes }
             NOT = { has_country_flag = SOL_formed_super_equus }
+        }
+        highlight_states = {
+            highlight_states_trigger = {
+                OR = {
+                    is_core_of = YAK
+                    is_core_of = JAK
+                }
+            }
         }
         fire_only_once = yes
         complete_effect = {
@@ -3457,6 +3512,21 @@ EQS_pan_pony_empire_category = {
             BAR = { all_cores_owned_by_ROOT = yes }
             NOT = { has_country_flag = SOL_formed_super_griffonia }
         }
+        highlight_states = {
+            highlight_states_trigger = {
+                OR = {
+                    is_core_of = RCT
+                    is_core_of = LCT
+                    is_core_of = BAK
+                    is_core_of = WIT
+                    is_core_of = DMT
+                    is_core_of = FRE
+                    is_core_of = NIM
+                    is_core_of = DEP
+                    is_core_of = BAR
+                }
+            }
+        }
         fire_only_once = yes
         complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision SOL_release_RIV"
@@ -3476,6 +3546,14 @@ EQS_pan_pony_empire_category = {
             PLB = { all_cores_owned_by_ROOT = yes }
             PNG = { all_cores_owned_by_ROOT = yes }
             NOT = { has_country_flag = SOL_formed_super_equus }
+        }
+        highlight_states = {
+            highlight_states_trigger = {
+                OR = {
+                    is_core_of = PNG
+                    is_core_of = PLB
+                }
+            }
         }
         fire_only_once = yes
         complete_effect = {
@@ -3501,6 +3579,16 @@ EQS_pan_pony_empire_category = {
             HMR = { all_cores_owned_by_ROOT = yes }
             NOT = { has_country_flag = SOL_formed_super_zebrica }
         }
+        highlight_states = {
+            highlight_states_trigger = {
+                OR = {
+                    is_core_of = HMR
+                    is_core_of = OSQ
+                    is_core_of = REE
+                    is_core_of = MTA
+                }
+            }
+        }
         fire_only_once = yes
         complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision SOL_release_MTA_super_puppet"
@@ -3518,6 +3606,9 @@ EQS_pan_pony_empire_category = {
     #    visible = {
     #        TBK = { all_cores_owned_by_ROOT = yes }
     #        NOT = { has_country_flag = SOL_formed_super_zebrica }
+    #    }
+    #    highlight_state_targets = {
+    #        highlight_states_trigger = { is_core_of = TBK }
     #    }
     #    fire_only_once = yes
     #    complete_effect = {
@@ -3537,6 +3628,11 @@ EQS_pan_pony_empire_category = {
 			MDL = { all_cores_owned_by_ROOT_or_subject = yes }
 			NOT = { has_country_flag = SOL_formed_super_zebrica }
 		}
+		highlight_states = {
+            highlight_states_trigger = {
+                is_core_of = MDL
+            }
+        }
 		fire_only_once = yes
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision SOL_fate_of_MDL"
@@ -3558,6 +3654,15 @@ EQS_pan_pony_empire_category = {
             KHM = { all_cores_owned_by_ROOT = yes }
             KXN = { all_cores_owned_by_ROOT = yes }
             NOT = { has_country_flag = SOL_formed_super_zebrica }
+        }
+        highlight_states = {
+            highlight_states_trigger = {
+                OR = {
+                    is_core_of = NVA
+                    is_core_of = KXN
+                    is_core_of = KHM
+                }
+            }
         }
         fire_only_once = yes
         complete_effect = {
@@ -3581,6 +3686,15 @@ EQS_pan_pony_empire_category = {
             KAR = { all_cores_owned_by_ROOT = yes }
             NOT = { has_country_flag = SOL_formed_super_zebrica }
         }
+        highlight_states = {
+            highlight_states_trigger = {
+                OR = {
+                    is_core_of = MTO
+                    is_core_of = AES
+                    is_core_of = KAR
+                }
+            }
+        }
         fire_only_once = yes
         complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision SOL_release_MTO_super_puppet"
@@ -3598,6 +3712,11 @@ EQS_pan_pony_empire_category = {
         visible = {
             KIR = { all_cores_owned_by_ROOT = yes }
             NOT = { has_country_flag = SOL_formed_super_zebrica }
+        }
+        highlight_states = {
+            highlight_states_trigger = {
+                is_core_of = KIR
+            }
         }
         fire_only_once = yes
         complete_effect = {
@@ -3617,6 +3736,11 @@ EQS_pan_pony_empire_category = {
             has_completed_focus = SOL_god_empress
             has_completed_focus = SOL_She_Who_Raises_the_Sun
             EQS_no_equus_nation_other_than_EQS = yes
+        }
+        highlight_states = {
+            highlight_states_trigger = {
+                is_on_continent = europe
+            }
         }
         fire_only_once = yes
         complete_effect = {
@@ -3656,6 +3780,11 @@ EQS_pan_pony_empire_category = {
             has_completed_focus = SOL_She_Who_Raises_the_Sun
             EQS_no_equus_nation_other_than_EQS_griffonia = yes
         }
+        highlight_states = {
+            highlight_states_trigger = {
+                is_on_continent = asia
+            }
+        }
         fire_only_once = yes
         complete_effect = {
             log = "[GetDateText]: [Root.GetName]: Decision SOL_establish_imperium_griffonia"
@@ -3675,6 +3804,16 @@ EQS_pan_pony_empire_category = {
                         }
                     }
                 }
+                if = {
+                    limit = {
+                        NOT = { has_country_leader = { character = GRI_daybreaker ruling_only = yes } }
+                    }
+                    GRD = { promote_character = GRI_daybreaker }
+                    set_autonomy = {
+                        target = GRD
+                        autonomous_state = autonomy_personal_union_eaw
+                    }
+                }
                 every_state = {
                     limit = {
                         NOT = { is_owned_and_controlled_by = GRD }
@@ -3685,9 +3824,43 @@ EQS_pan_pony_empire_category = {
                 }
             }
             else = {
+                hidden_effect = { every_possible_country = { limit = { has_character = GRI_daybreaker } } GRI_daybreaker = { set_nationality = GRD } }
                 release_autonomy = {
                     target = GRD
                     autonomy_state = autonomy_personal_union_eaw
+                }
+                if = {
+                    limit = {
+                        GRD = { NOT = { can_be_country_leader = GRI_daybreaker } }
+                    }
+                    GRD = {
+                        GRI_daybreaker = {
+                            add_country_leader_role = {
+                                promote_leader = yes
+                                country_leader = {
+                                    expire = "1965.1.1"
+                                    ideology = falangism
+                                    traits = { daybreaker_god2 }
+                                }
+                            }
+                        }
+                        set_party_name = {
+                            ideology = fascism
+                            name = EQS_solaris_cultus
+                            long_name = EQS_solaris_cultus
+                        }
+                    }
+                }
+                else = {
+                    GRD = {
+                        promote_character = GRI_daybreaker
+                        hidden_effect = {
+                            GRI_daybreaker = {
+                                remove_trait = { trait = aussenseiter_regentin ideology = falangism }
+                                add_trait = { trait = daybreaker_god2 ideology = falangism }
+                            }
+                        }
+                    }
                 }
                 every_state = {
                     limit = {
@@ -3716,14 +3889,41 @@ EQS_pan_pony_empire_category = {
             has_completed_focus = SOL_She_Who_Raises_the_Sun
             EQS_no_equus_nation_other_than_EQS_zebrica = yes
         }
+        highlight_states = {
+            highlight_states_trigger = {
+                is_on_continent = africa
+            }
+        }
         fire_only_once = yes
         complete_effect = {
             log = "[GetDateText]: [Root.GetName]: Decision SOL_establish_imperium_zebrica"
+            hidden_effect = { every_possible_country = { limit = { has_character = KIR_daybreaker } KIR_daybreaker = { set_nationality = KIR } } }
             if = {
                 limit = {
                     KIR = {
                         is_subject_of = ROOT
                         has_cosmetic_tag = KIR_SOL
+                    }
+                }
+                set_autonomy = {
+                    target = KIR
+                    autonomous_state = autonomy_personal_union_eaw
+                }
+                KIR = {
+                    KIR_daybreaker = {
+                        add_country_leader_role = {
+                            promote_leader = yes
+                            country_leader = {
+                                expire = "1965.1.1"
+                                ideology = falangism
+                                traits = { daybreaker_god2 }
+                            }
+                        }
+                    }
+                    set_party_name = {
+                        ideology = fascism
+                        name = EQS_solaris_cultus
+                        long_name = EQS_solaris_cultus
                     }
                 }
                 every_state = {
@@ -3739,6 +3939,23 @@ EQS_pan_pony_empire_category = {
                 release_autonomy = {
                     target = KIR
                     autonomy_state = autonomy_personal_union_eaw
+                }
+                KIR = {
+                    KIR_daybreaker = {
+                        add_country_leader_role = {
+                            promote_leader = yes
+                            country_leader = {
+                                expire = "1965.1.1"
+                                ideology = falangism
+                                traits = { daybreaker_god2 }
+                            }
+                        }
+                    }
+                    set_party_name = {
+                        ideology = fascism
+                        name = EQS_solaris_cultus
+                        long_name = EQS_solaris_cultus
+                    }
                 }
                 every_state = {
                     limit = {
