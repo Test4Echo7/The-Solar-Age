@@ -651,7 +651,7 @@ recruit_character = EQC_long_cast
 recruit_character = KIR_daybreaker
 recruit_character = GRI_daybreaker
 recruit_character = GRI_sturmvogel
-recruit_character = GRI_liebslingruebe
+recruit_character = GRI_lieblingsruebe
 recruit_character = GRI_trinary_scribble
 recruit_character = GRI_gratuity
 

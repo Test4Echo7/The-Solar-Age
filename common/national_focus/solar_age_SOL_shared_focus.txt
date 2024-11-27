@@ -3922,7 +3922,7 @@ shared_focus = {
 		NOT = { country_exists = OLE }
 		any_state = {
 			is_core_of = OLE
-			is_owned_by = ROOT
+			is_owned_and_controlled_by = ROOT
 			is_coastal = yes
 		}
 	}
@@ -4610,7 +4610,63 @@ shared_focus = {
 		is_subject = no
 	}
 	bypass = {
-		RIV = {
+		BAK = {
+			OR = {
+				exists = no
+				is_subject_of = ROOT
+				has_war_with = ROOT
+			}
+		}
+		RCT = {
+			OR = {
+				exists = no
+				is_subject_of = ROOT
+				has_war_with = ROOT
+			}
+		}
+		LCT = {
+			OR = {
+				exists = no
+				is_subject_of = ROOT
+				has_war_with = ROOT
+			}
+		}
+		DMT = {
+			OR = {
+				exists = no
+				is_subject_of = ROOT
+				has_war_with = ROOT
+			}
+		}
+		DEP = {
+			OR = {
+				exists = no
+				is_subject_of = ROOT
+				has_war_with = ROOT
+			}
+		}
+		FRE = {
+			OR = {
+				exists = no
+				is_subject_of = ROOT
+				has_war_with = ROOT
+			}
+		}
+		WIT = {
+			OR = {
+				exists = no
+				is_subject_of = ROOT
+				has_war_with = ROOT
+			}
+		}
+		NIM = {
+			OR = {
+				exists = no
+				is_subject_of = ROOT
+				has_war_with = ROOT
+			}
+		}
+		BAR = {
 			OR = {
 				exists = no
 				is_subject_of = ROOT
@@ -4618,14 +4674,78 @@ shared_focus = {
 			}
 		}
 	}
-	will_lead_to_war_with = RIV
+	will_lead_to_war_with = BAK
+	will_lead_to_war_with = RCT
+	will_lead_to_war_with = DEP
+	will_lead_to_war_with = DMT
+	will_lead_to_war_with = LCT
+	will_lead_to_war_with = NIM
+	will_lead_to_war_with = WIT
+	will_lead_to_war_with = FRE
+	will_lead_to_war_with = BAR
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_wayward_foals"
 		if = {
-			limit = { country_exists = RIV }
+			limit = { country_exists = BAK }
 			create_wargoal = {
-				target = RIV
+				target = BAK
+				type = annex_everything
+			}
+		}
+		if = {
+			limit = { country_exists = RCT }
+			create_wargoal = {
+				target = RCT
+				type = annex_everything
+			}
+		}
+		if = {
+			limit = { country_exists = DEP }
+			create_wargoal = {
+				target = DEP
+				type = annex_everything
+			}
+		}
+		if = {
+			limit = { country_exists = DMT }
+			create_wargoal = {
+				target = DMT
+				type = annex_everything
+			}
+		}
+		if = {
+			limit = { country_exists = FRE }
+			create_wargoal = {
+				target = FRE
+				type = annex_everything
+			}
+		}
+		if = {
+			limit = { country_exists = NIM }
+			create_wargoal = {
+				target = NIM
+				type = annex_everything
+			}
+		}
+		if = {
+			limit = { country_exists = WIT }
+			create_wargoal = {
+				target = WIT
+				type = annex_everything
+			}
+		}
+		if = {
+			limit = { country_exists = LCT }
+			create_wargoal = {
+				target = LCT
+				type = annex_everything
+			}
+		}
+		if = {
+			limit = { country_exists = BAR }
+			create_wargoal = {
+				target = BAR
 				type = annex_everything
 			}
 		}
@@ -4642,7 +4762,7 @@ shared_focus = {
 	cost = 5
 	prerequisite = { focus = SOL_wayward_foals }
 	available = {
-		RIV = {
+		RCT = {
 			all_cores_owned_by_ROOT_or_subject = yes
 		}
 	}
@@ -4664,7 +4784,7 @@ shared_focus = {
 	cost = 5
 	prerequisite = { focus = SOL_wayward_foals }
 	available = {
-		RIV = {
+		RCT = {
 			all_cores_owned_by_ROOT_or_subject = yes
 		}
 	}
@@ -4686,7 +4806,7 @@ shared_focus = {
 	cost = 5
 	prerequisite = { focus = SOL_wayward_foals }
 	available = {
-		RIV = { all_cores_owned_by_ROOT_or_subject = yes }
+		RCT = { all_cores_owned_by_ROOT_or_subject = yes }
 	}
 
 	completion_reward = {
@@ -4773,11 +4893,12 @@ shared_focus = {
 	prerequisite = { focus = SOL_harmonys_last_gasp }
 	mutually_exclusive = { focus = SOL_continue_research }
 	available = {
-		RIV = { all_cores_owned_by_ROOT_or_subject = yes }
+		RCT = { all_cores_owned_by_ROOT_or_subject = yes }
 	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_eastern_brethren"
+		custom_effect_tooltip = SOL_harmony_dies_with_applause_tt
 		if = {
 			limit = { RIV = { NOT = { tag = RCT } } }
 			RCT = { add_to_ROOT_potential_cores = yes }
@@ -4911,46 +5032,50 @@ shared_focus = {
 	prerequisite = { focus = SOL_misguided_solarists }
 	available = {
 		764 = {
-			OWNER = {
-				NOT = {
-					tag = EQS
-					tag = MGY
-					AND = {
-						tag = MDL
+			NOT = { is_owned_and_controlled_by = ROOT }
+			NOT = { is_owned_and_controlled_by = MGY }
+			if = {
+				limit = {
+					MDL = {
+						exists = yes
 						is_subject_of = ROOT
 					}
 				}
+				NOT = { is_owned_and_controlled_by = MDL }
 			}
 		}
 		741 = {
-			OWNER = {
-				NOT = {
-					tag = EQS
-					tag = MGY
-					AND = {
-						tag = MDL
+			NOT = { is_owned_and_controlled_by = ROOT }
+			NOT = { is_owned_and_controlled_by = MGY }
+			if = {
+				limit = {
+					MDL = {
+						exists = yes
 						is_subject_of = ROOT
 					}
 				}
+				NOT = { is_owned_and_controlled_by = MDL }
 			}
 		}
 	}
 	bypass = {
-		OR = {
+		764 = {
 			OR = {
-				owns_state = 764
-				MGY = { owns_state = 764 }
-				MDL = {
-					owns_state = 764
-					is_subject_of = ROOT
+				is_owned_and_controlled_by = ROOT
+				is_owned_and_controlled_by = MGY
+				AND = {
+					MDL = { is_subject_of = ROOT }
+					is_owned_and_controlled_by = MDL
 				}
 			}
+		}
+		741 = {
 			OR = {
-				owns_state = 741
-				MGY = { owns_state = 741 }
-				MDL = {
-					owns_state = 764
-					is_subject_of = ROOT
+				is_owned_and_controlled_by = ROOT
+				is_owned_and_controlled_by = MGY
+				AND = {
+					MDL = { is_subject_of = ROOT }
+					is_owned_and_controlled_by = MDL
 				}
 			}
 		}
@@ -5568,7 +5693,7 @@ shared_focus = {
 	available = {
 		is_subject = no
 		389 = {
-			is_owned_by = ROOT
+			is_owned_and_controlled_by = ROOT
 		}
 	}
 
@@ -5628,7 +5753,7 @@ shared_focus = {
 		add_political_power = 100
 		set_country_flag = SOL_unlocked_griffon_advisors
 		custom_effect_tooltip = available_political_advisor
-		show_ideas_tooltip = strumvogel
+		show_ideas_tooltip = sturmvogel
 		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = lieblingsruebe
 		###Possibly an event of Daybreaker watching as a monument to her is put up, and she is accosted by Gruff, but instead just shows him how the Grover statue is staying, and also that it is going to be a testament to how the two empires will accomplish great things together, although he thinks it a bunch of crap
@@ -6407,6 +6532,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_re_educate_foals"
+		custom_effect_tooltip = SOL_beatings_continue_until_morale_improves_tt
 		add_stability = -0.1
 		add_political_power = -125
 		#Advisors here
@@ -6753,6 +6879,8 @@ shared_focus = {
 		#Show off idea here, if they accept it
 		country_event = solarreworked.492
 		custom_effect_tooltip = SOL_griffons_like_tt
+		show_ideas_tooltip = SOL_solar_griffon_attache_SOL
+		custom_effect_tooltip = SOL_no_war_mmkay_tt
 	}
 	ai_will_do = {
 		factor = 30
@@ -7028,7 +7156,7 @@ shared_focus = {
 	available = {
 		is_subject = no
 		has_DB_ruler = yes
-		145 = { is_owned_by = CRY }
+		145 = { is_owned_and_controlled_by = CRY }
 	}
 
 	completion_reward = {
@@ -7065,8 +7193,8 @@ shared_focus = {
 	available = {
 		is_subject = no
 		has_DB_ruler = yes
-		142 = { is_owned_by = CRY }
-		146 = { is_owned_by = CRY }
+		142 = { is_owned_and_controlled_by = CRY }
+		146 = { is_owned_and_controlled_by = CRY }
 	}
 
 	completion_reward = {
@@ -7775,7 +7903,7 @@ shared_focus = {
 	prerequisite = { focus = SOL_peninsula_of_damned }
 	available = {
 		has_war = no
-		owns_state = 17
+		17 = { is_owned_and_controlled_by = ROOT }
 	}
 
 	completion_reward = {
@@ -7886,7 +8014,7 @@ shared_focus = {
 		random_state = {
 			limit = {
 				has_state_flag = eqs_bat_state
-				is_owned_by = ROOT
+				is_owned_and_controlled_by = ROOT
 				NOT = { state = 30 }
 			}
 			add_extra_state_shared_building_slots = 2
@@ -7904,7 +8032,7 @@ shared_focus = {
 		random_state = {
 			limit = {
 				has_state_flag = eqs_bat_state
-				is_owned_by = ROOT
+				is_owned_and_controlled_by = ROOT
 				NOT = { state = 30 }
 			}
 			add_extra_state_shared_building_slots = 2
@@ -7931,7 +8059,7 @@ shared_focus = {
 		random_state = {
 			limit = {
 				has_state_flag = eqs_bat_state
-				is_owned_by = ROOT
+				is_owned_and_controlled_by = ROOT
 				NOT = { state = 30 }
 			}
 			add_extra_state_shared_building_slots = 1
@@ -7992,7 +8120,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_replanting_jungle"
 		random_state = {
 			limit = {
-				is_owned_by = ROOT
+				is_owned_and_controlled_by = ROOT
 				has_state_flag = eqs_bat_state
 				NOT = { state = 40 }
 				NOT = { state = 30 }
@@ -8004,7 +8132,7 @@ shared_focus = {
 		}
 		random_state = {
 			limit = {
-				is_owned_by = ROOT
+				is_owned_and_controlled_by = ROOT
 				has_state_flag = eqs_bat_state
 				NOT = { state = 40 }
 				NOT = { state = 30 }
@@ -8912,9 +9040,9 @@ shared_focus = {
 		EQC = {
 			add_ideas = SOL_correct_warfare
 			set_country_flag = EQC_snack_break_time
-			custom_effect_tooltip = available_high_command
-			show_ideas_tooltip = long_cast
 		}
+		custom_effect_tooltip = available_high_command
+		show_ideas_tooltip = long_cast
 	}
 }
 
@@ -11372,12 +11500,27 @@ shared_focus = {
 				technology = jet_fighter2
 			}
 		}
-		add_tech_bonus = {
-			name = jet_engine_bonus
-			bonus = 1
-			uses = 1
-			ahead_reduction = 0.33
-			technology = jet_engines
+		if = {
+			limit = {
+				is_special_project_completed = sp_air_jet_engine
+			}
+			add_tech_bonus = {
+				name = jet_engine_bonus
+				bonus = 1.5
+				uses = 1
+				ahead_reduction = 0.5
+				technology = sp_centrifugal_jet_tech
+			}
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.35
+			}
+		}
+		else = {
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.75
+			}
 		}
 	}
 	ai_will_do = { factor = 50 }
@@ -11416,12 +11559,27 @@ shared_focus = {
 				technology = jet_strategic_bomber_a
 			}
 		}
-		add_tech_bonus = {
-			name = jet_engine_bonus
-			bonus = 1
-			uses = 1
-			ahead_reduction = 0.33
-			technology = jet_engines
+		if = {
+			limit = {
+				is_special_project_completed = sp_air_jet_engine
+			}
+			add_tech_bonus = {
+				name = jet_engine_bonus
+				bonus = 1.5
+				uses = 1
+				ahead_reduction = 0.5
+				technology = sp_centrifugal_jet_tech
+			}
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.35
+			}
+		}
+		else = {
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.75
+			}
 		}
 	}
 	ai_will_do = { factor = 50 }
@@ -12266,6 +12424,16 @@ shared_focus = {
 	}
 	available = {
 		eqs_not_has_civil_war = yes
+		3 = { is_owned_and_controlled_by = ROOT }
+		75 = { is_owned_and_controlled_by = ROOT }
+		12 = { is_owned_and_controlled_by = ROOT }
+		15 = { is_owned_and_controlled_by = ROOT }
+		13 = { is_owned_and_controlled_by = ROOT }
+		22 = { is_owned_and_controlled_by = ROOT }
+		66 = { is_owned_and_controlled_by = ROOT }
+		14 = { is_owned_and_controlled_by = ROOT }
+		173 = { is_owned_and_controlled_by = ROOT }
+		36 = { is_owned_and_controlled_by = ROOT }
 	}
 	allow_branch = { is_EQS_SOL = yes }
 	completion_reward = {
@@ -12448,6 +12616,8 @@ shared_focus = {
 	prerequisite = { focus = SOL_trains_across_empire }
 	available = {
 		eqs_not_has_civil_war = yes
+		75 = { is_owned_and_controlled_by = ROOT }
+		66 = { is_owned_and_controlled_by = ROOT }
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_trains_across_empire"
@@ -13098,6 +13268,11 @@ shared_focus = {
 				uses = 1
 				bonus = 1.5
 				ahead_reduction = 0.5
+				technology = sp_armored_lc_naval_engine_conversion_tech
+				technology = sp_armored_lc_transmission_improvements_tech
+				technology = sp_armored_lc_specialized_field_manuals_tech
+				technology = sp_armored_lc_high_impact_obliterator_cannon_tech
+				technology = sp_armored_lc_weapon_fire_control_tech
 			}
 		}
 	}
@@ -13113,7 +13288,10 @@ shared_focus = {
 	cost = 8
 	prerequisite = { focus = SOL_mundane_and_arcane }
 	mutually_exclusive = { focus = SOL_establish_sol_victoria }
-	available = { eqs_not_has_civil_war = yes }
+	available = {
+		eqs_not_has_civil_war = yes
+		75 = { is_owned_and_controlled_by = ROOT }
+	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_promote_mit"
@@ -13140,7 +13318,10 @@ shared_focus = {
 	cost = 8
 	prerequisite = { focus = SOL_magical_primacy }
 	mutually_exclusive = { focus = SOL_promote_mit }
-	available = { eqs_not_has_civil_war = yes }
+	available = {
+		eqs_not_has_civil_war = yes
+		is_owned_and_controlled_by = ROOT
+	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_establish_sol_victoria"
@@ -13465,7 +13646,7 @@ shared_focus = {
 	}
 	available = {
 		eqs_not_has_civil_war = yes
-		capital_scope = { is_controlled_by = ROOT }
+		3 = { is_owned_and_controlled_by = ROOT }
 	}
 	relative_position_id = SOL_practical_magic_applications
 	x = 2
@@ -14077,9 +14258,10 @@ shared_focus = {
 	available = {
 		OR = {
 			country_exists = DED
-			HLR = {
-				exists = yes
-				owns_state = 415
+			AND = {
+				country_exists = HLR
+				NOT = { country_exists = DED }
+				415 = { is_owned_and_controlled_by = HLR }
 			}
 		}
 	}
@@ -14105,10 +14287,10 @@ shared_focus = {
 			tooltip = SOL_STM_civil_war_ended
 			982 = {
 				OR = {
-					is_owned_by = STM
-					is_owned_by = GYZ
-					is_owned_by = SLC
-					is_owned_by = THU
+					is_owned_and_controlled_by = STM
+					is_owned_and_controlled_by = GYZ
+					is_owned_and_controlled_by = SLC
+					is_owned_and_controlled_by = THU
 				}
 				OWNER = {
 					NOT = { has_war_with = STM }

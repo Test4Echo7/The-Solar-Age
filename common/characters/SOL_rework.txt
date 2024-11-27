@@ -544,13 +544,13 @@ characters = {
 			traits = { aerial_expert }
 		}
 	}
-	GRI_liebslingruebe = {
-		name = GRI_liebslingruebe
+	GRI_lieblingsruebe = {
+		name = GRI_lieblingsruebe
 
 		advisor = {
 			slot = political_advisor
 			allowed = { tag = EQS }
-			idea_token = liebslingruebe
+			idea_token = lieblingsruebe
 			available = { is_EQS_SOL = yes }
 			visible = { has_country_flag = SOL_unlocked_griffon_advisors }
 			traits = { professional_scrounger }

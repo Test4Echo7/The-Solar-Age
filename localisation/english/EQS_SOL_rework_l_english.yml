@@ -370,6 +370,12 @@
   SOL_all_equus_nations_pwned_tt:0 "Every nation on §YEquus§! has either been §Rconquered§! or made a §Opuppet§! of §Y[ROOT.GetNameDef]§!."
   SOL_all_griffonian_nations_pwned_tt:0 "Every nation on §YGriffonia§! has either been §Rconquered§! or made a §Opuppet§! of §Y[ROOT.GetNameDef]§!."
   SOL_all_zebrican_nations_pwned_tt:0 "Every nation on §YZebrica§! has either been §Rconquered§! or made a §Opuppet§! of §Y[ROOT.GetNameDef]§!."
+  SOL_catbirbs_integrated_tt:0 "We will be able to integrate some of §Y[GRF.GetNameDef]'s§! coastline into §Y[ROOT.GetNameDef]§!."
+  SOL_viking_no_more_tt:0 "We will expand our inflence to ponify the §Y[69.GetCapitalVictoryPointName]§! region into §Y[ROOT.GetNameDef]§!."
+  SOL_no_war_mmkay_tt:0 "This bonus will be §Rlost§! if our two empires go to §Owar§!."
+  SOL_harmony_dies_with_applause_tt:0 "We can forcibly integrate §Y[RCT.GetNameDef]'s§! territory into §Y[ROOT.GetNameDef]§!."
+  SOL_beatings_continue_until_morale_improves_tt:0 "The brightest wayward minds of §Y[BAT.GetNameDef]§! will be §Renlightned§!."
+  EQC_SOL_leader_chosen:0 "A governor has been selected for §Y[EQC.GetNameDef]§!"
 
   ###Last one in the chain. Remove comment later###
   SOL_conglaturation_a_winner_is_you_tt:0 "§GHarmony has been preserved and all of ponykind now bends the knee to Daybreaker. Thank you for playing the Solar Age! - Test4Echo§!"
@@ -1096,16 +1102,27 @@
   SOL_fire_from_sky:0 "Fire from the Skies"
   SOL_fire_from_sky_desc:0 "Although the humble explosive can devastate large tracts of land, there is nothing quite like the sight of flames borne on the wind administering justice against whatever it touches. We have already utilized firebomb campaigns in the past, but they were not as effective as they could be. By crafting more durable bombs carrying napalm or other flammable substances, we can ensure that they reach their targets and spread the Empress's judgement far and wide."
   SOL_targeted_destruction:0 "Targeted Destruction"
+  SOL_targeted_destruction_desc:0 "While our fighter-bombers may lack the range that a dedicated, anti-building plane would have, that does not make them entirely useless in destruction of enemy assets. Their versatility is a strength, since they can quickly focus on both mobile land and sea targets before switching to stationary structures. By refining our tactics around these pinpoint assaults, we can hit the enemy where it hurts the most, while leaving the rest for us to take and use for ourselves."
   SOL_modern_bombers:0 "Moderate Bomber Sizes"
+  SOL_modern_bombers_desc:0 "There is a place for large, quad or even six-engined planes, but they are expensive, slow, and clumsy to fly. On extended range missions they are unrivaled, but medium-ranged or short-ranged bombing missions could be better suited to a middle ground. These tactical bombers have been largely ignored by our air force and the Empress, but that doesn't mean they cannot still have a place and rain her justice upon our foes."
   SOL_area_bombardment:0 "Area Bombardment"
+  SOL_area_bombardment_desc:0 "There are few ways to be certain that something is truly destroyed unless the entire region in which it resides is rendered desolate. Our fighter-bombers may have accuracy on their side, but when something needs to be vaporized, our long-range bombers are the only answer. Further developing our training for discipline when on runs will drastically improve the lethalty of our bombers on their runs and lay waste to our enemies' supply lines."
   SOL_deliver_death:0 "Deliverers of Death"
+  SOL_deliver_death_desc:0 "The first prototypes of what our avionics researchers are calling jet engines have already begun to be developed and refined. Designing entire planes around the speed and agility that they provide will further enhance our air force's ability to decimate a battlefield in support of our troops. Before our enemies can even fire back, our jet fighter-bombers will be nothing but distant dots in the sky."
   SOL_desolation_engines:0 "Engines of Desolation"
+  SOL_desolation_engines_desc:0 "As the first generation of jet engines eventually begin development, creating long-range bombers that can take advantage of these powerful tools will make our current squadrons of judgement deliverance untouchable. Despite our enemies' best efforts, they will be unable to catch or apprehend the Empress's hoofs as they deal justice upon them."
   SOL_judge_ground:0 "Judges of the Ground"
+  SOL_judge_ground_desc:0 "From the sky, the battlefield is nothing but a landscape of chaos and disorder. Only those that are above it have the true clarity needed to determine which enemy strongholds are worthy of punishment at that time. Whatever their decision, our pilots shall be the ultimate arbiter of Daybreaker's fury. In their assault's wake nothing shall be left standing."
   SOL_order_skies:0 "Order of the Skies"
+  SOL_order_skies_desc:0 "Although we have elevated one doctrinal aspect of our air force, that does not mean that the other is without merit. Organized, cooperative branches within it are necessary to defending Harmony and Order from those that would see them fall to Chaos. As one, our fighter and bomber divisions will be an envy to the world, for they shall see how our air force compliments all aspects of aerial warfare. They will forever be an unbreachable shield of the sky."
   SOL_heavenly_backdrop:0 "Backdrop of Heaven"
+  SOL_heavenly_backdrop_desc:0 "As our technology and doctrine improves, our strategic bombers will be able to reach further and further targets upon Equus and ultimately the world. To reach these distances, high-altitude flying is expected. Much like angelic beings, they will deliver their judgement of the Empress with extreme prejudice and loyalty, while remaining unseen from above to all those deemed guilty."
   SOL_breyns_dream:0 "Touching the Sun"
+  SOL_breyns_dream_desc:0 "Since the dawn of pony civilization, before the Empress stabilized the realm, ponies were still fascinated with the heavens and the sun itself. Although this religious fascination has faded from a direct worship of the sun, this interest in the heavens has birthed novel science. Neigher von Breyn, an engineer and physicist, has developed a number of working prototypes for what has been called Project Heilige. Although more ambitious, these could have a current use of cheap, effective, long-ranged payload deliverance, and should be pursued where possible."
   SOL_project_solar_flare:0 "The Solar Flare Project"
+  SOL_project_solar_flare_desc:0 "There is little that is more beautiful than the Empress's sun. Harnessing that power without magic, even if it would be a fraction of the power of it, is the ultimate way in which we can honor her who protects us. Project Solar Flare will ultimately split the atom, and with it, a new era of warfare, where every army has a little piece of the Empress with them."
   SOL_skyborn:0 "Born to the Sky"
+  SOL_skyborn_desc:0 "The changelings may have wings and the griffons may have agility, but neither are solely suited to the clouds like ponies and to a greater extent, pegasi. Since the earliest days of Equestria, we have ruled the sky like no other. There is little that could possibly change that now, as our pilots are but one with their machines."
 
   ###Ministry of Defense###
   SOL_airfields2:0 "Airfields of Southern Equestria"
@@ -1286,6 +1303,18 @@
   SOL_reich_relations_desc:0 "There is not a single equal to our Empress, but there are a small number of nations who claim the title of Empire. Yet only [GRD.GetNameDef] is worthy of the Empress's attention, as they could realistically be the only one to prove to be a challenge.\n\nLet's put our best hoof forward, shall we?"
 
   ###Spies###
+  EQS_agents_of_SMILE:0 "Agents of S.M.I.L.E."
+  EQS_agents_of_SMILE_desc:0 "Since the bugbear incident of 1003 in Ponyville, it was apparent that reducing S.M.I.L.E.'s budget to a minimum and effectively shuttering the agency was a mistake. With war now gripping the country, it is imperative that it adapt to the modern world of subterfuge. However, S.M.I.L.E.'s previous director has proven stubborn and kept it focused primarily on mythical beings, despite other dangers. It is time that there's a regime change."
+  EQS_further_deep_cover_training:0 "Further Deep Cover Training"
+  EQS_further_deep_cover_training_desc:0 "Many of S.M.I.L.E.'s agents went to ground when the agency was shuttered, but they did not stop protecting the nation against mythical threats. There are many new recruits, and even some veterans, though, that have not experienced what is needed to maintain a full identity in enemy territory. For our operatives to succeed in future missions, they will need to know how to LIVE two lives for their very survival."
+  EQS_renovate_old_quarters:0 "Renovate the Old Quarters"
+  EQS_renovate_old_quarters_desc:0 "In the past, S.M.I.L.E.'s director had a personal abode within the agency's walls. When it was defunded, that was used for storage. Clearing out the old room for the new director will ensure that no matter what the emergency, the director will be available to respond immediately. It does not hurt that the room contains many magical devices for monitoring important regions, either."
+  EQS_strike_moon:0 "Strike at the Moon"
+  EQS_strike_moon_desc:0 "With the world in shambles, it is up to S.M.I.L.E. to keep [ROOT.GetNameDef] safe, even if that danger is from Princess Celestia's own sister. Whatever sanity Luna had has now been abandoned. Ponies that follow her are now threats to Harmony, and must be dealt with. A plan to at least temporarily weaken Luna's war effort by our agnets will be the first sign to Luna that we will protect our freedom at any cost."
+  EQS_harmony_abroad:0 "Harmony's Safety Abroad"
+  EQS_keep_down_low:0 "Keep on the Down Low"
+  EQS_anti_changeling_training:0 "Anti-Changeling Training"
+  EQS_moth_to_flame:0 "Moth to the Flame"
 
   ###Events###
   ###Wartime Events###
