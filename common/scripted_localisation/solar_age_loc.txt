@@ -169,3 +169,15 @@ defined_text = {
 		localization_key = SOL_hidden_bonuses_empty
 	}
 }
+defined_text = {
+	name = SOLGetAgencyName
+	text = {
+		trigger = {
+			has_completed_focus = SOL_Imperial_Investigative_Service
+		}
+		localization_key = SOL_Imperial_Investigative_Service
+	}
+	text = {
+		localization_key = SOL_solaris_speculatores
+	}
+}

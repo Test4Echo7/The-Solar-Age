@@ -4087,6 +4087,20 @@ country_event = { #Neighsay is surprised when Daybreaker enters his office, as h
     }
 }
 
+country_event = { #Daybreaker enters Sunrise's laboratory, where she is busy studying some different magical artifacts, and since Dawnbreak is with her, Sunrise acts surprised, and Daybreaker uses Dawnbreak to convince Sunrise to take the fight to those who threaten Harmony, too, and Daybreaker does see the work Sunrise is doing there, and is a bit guilty about forcing her away from it, even though it's for, in her mind, the greater good
+    id = solarreworked.269
+    title = solarreworked.269.t
+    desc = solarreworked.269.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.269"}
+
+    is_triggered_only = yes
+
+    option = { #Wait until we're at peace.
+        name = solarreworked.269.a
+        #Twiggles becomes field marshal here.
+    }
+}
+
 ###Harmonic Resistance Investigation###
 country_event = { #Agents from Daybreaker are sent to investigate Twilight's castle to see if there are clues to the whereabouts to Starlight Glimmer and her insurrection, and they infiltrate the castle before being discovered by Mayor Mare, who they take into custody to interrogate further
     id = solarreworked.283
@@ -4992,7 +5006,7 @@ country_event = { #Follow a pony as he mopes around his day, since he has had li
     }
 }
 
-country_event = { #Daybreaker enters Sunrise's laboratory, where she is busy studying some different magical artifacts, and since Dawnbreak is with her, Sunrise acts surprised, and Daybreaker uses Dawnbreak to convince Sunrise to take the fight to those who threaten Harmony, too, and Daybreaker does see the work Sunrise is doing there, and is a bit guilty about forcing her away from it, even though it's for, in her mind, the greater good
+country_event = { #Sunrise goes about her lab, which is filled with partly used equipment pieces, vials, beakers, and also a couple of rotting specimens of creatures she was using, and she injects a couple of ponies, who are clearly prisoners and criminals, with a strange serum, which she also combines with casting a spell, and she waits, with little explanation, until she sees that their bones have seized up and fused together, and notes how it was not what she wanted in an immune system booster; she is blase about the death and starts making hypotheses about her next experiment
     id = solarreworked.349
     title = solarreworked.349.t
     desc = solarreworked.349.d
@@ -5000,9 +5014,9 @@ country_event = { #Daybreaker enters Sunrise's laboratory, where she is busy stu
 
     is_triggered_only = yes
 
-    option = { #Wait until we're at peace.
+    option = { #Scratch that one off the list.
         name = solarreworked.349.a
-        #Twiggles becomes field marshal here.
+        add_ideas = SOL_magical_mastery
     }
 }
 

@@ -1320,6 +1320,40 @@ demobilization = {
 	}
 }
 political_actions = {
+	SOL_order_sunrise_to_front = {
+		allowed = {
+			original_tag = EQS
+		}
+		available = {
+			is_EQS_SOL = yes
+			EQS_twilight_sparkle = {
+				is_unit_leader = no
+			}
+		}
+		visible = {
+			has_global_flag = SOL_twilight_converted
+			has_global_flag = SOL_sunset_converted
+			OR = {
+				has_completed_focus = SOL_magics_heart
+				has_completed_focus = SOL_She_Who_Raises_the_Sun
+				has_completed_focus = SOL_Empress_Knows_Best
+			}
+			#EQS_twilight_sparkle = {
+			#	is_unit_leader = no
+			#}
+			NOT = {
+				any_other_country = {
+					has_character = EQS_twilight_sparkle
+				}
+			}
+		}
+		cost = 10
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SOL_order_sunrise_to_front"
+			country_event = solarreworked.349
+		}
+	}
 	SOL_remove_temporary_laws = {
 		allowed = {
 			original_tag = EQS

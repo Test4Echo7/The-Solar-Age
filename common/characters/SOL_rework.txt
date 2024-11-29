@@ -45,6 +45,7 @@ characters = {
 			}
 			visible = {
 				is_EQS_SOL = yes
+				has_country_flag = SOL_inquisitor_generals
 			}
 			available = {
 				is_EQS_SOL = yes
@@ -493,6 +494,7 @@ characters = {
 			slot = high_command
 			allowed = { original_tag = EQS }
 			idea_token = treadwell
+			cost = 100
 			available = { is_EQS_SOL = yes }
 			visible = { has_country_flag = SOL_mothers_best }
 			traits = { army_armored_2 }
@@ -506,6 +508,7 @@ characters = {
 			slot = high_command
 			allowed = { original_tag = EQS }
 			idea_token = butter_knife
+			cost = 100
 			available = { is_EQS_SOL = yes }
 			visible = { has_country_flag = SOL_mothers_best }
 			traits = { army_logistics_2 }

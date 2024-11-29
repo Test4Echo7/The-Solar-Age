@@ -250,6 +250,9 @@ SOL_exfiltrate_M6_operation = {
     risk_chance = 0.3
     experience = 12
     outcome_execute = {
+        ROOT = {
+            set_country_flag = SOL_captured_element_bearers
+        }
         FROM = {
             every_possible_country = {
                 limit = { has_country_flag = SOL_hosting_M6 }

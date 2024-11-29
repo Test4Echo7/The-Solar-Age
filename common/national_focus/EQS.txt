@@ -5063,7 +5063,11 @@ shared_focus = {
 		}
 		OR = {
 			eqs_has_civil_war = yes
-			has_war_with_major = yes
+			any_country = {
+				is_major = yes
+				is_on_equestrian_continent = yes
+				has_added_tension_amount > 5
+			}
 		}
 	}
 	allow_branch = { is_EQS_SOL = no }
