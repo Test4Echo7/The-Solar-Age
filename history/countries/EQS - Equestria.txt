@@ -666,15 +666,6 @@ set_rule = {
 	can_generate_female_country_leaders = yes
 }
 
-#3 = {
-#	add_building_construction = {
-#		type = canterlot_castle_province
-#		level = 1
-#		province = 179
-#		instant_build = yes
-#	}
-#}
-
 if = {
 	limit = { has_dlc = "Man the Guns" }
 	### Variants ###
