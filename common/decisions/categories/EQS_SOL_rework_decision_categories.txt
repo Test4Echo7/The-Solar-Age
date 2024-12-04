@@ -47,6 +47,8 @@ EQS_wunderwaffen_category = {
     }
     icon = celestia_cat
 }
+######
+
 EQS_great_projects_category = {
     allowed = { tag = EQS }
     priority = {

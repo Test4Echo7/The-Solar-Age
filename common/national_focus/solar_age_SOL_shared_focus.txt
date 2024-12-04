@@ -6794,6 +6794,7 @@ shared_focus = {
 ###Imperial Diplomacy###
 shared_focus = {
 	id = SOL_imperial_diplomatic_corps
+	icon = GFX_goal_imperial_diplomatic_corps
 	x = 0
 	y = -1
 
@@ -6839,6 +6840,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_sustenance_workers
+	icon = GFX_goal_workers_for_sustenance
 	x = -1
 	y = 1
 	relative_position_id = SOL_imperial_diplomatic_corps
@@ -6877,6 +6879,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_insurance_policies
+	icon = GFX_goal_insurance_policies
 	x = 1
 	y = 1
 	relative_position_id = SOL_imperial_diplomatic_corps
@@ -6915,6 +6918,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_oil_existence
+	icon = GFX_goal_oil_for_existence
 	x = -2
 	y = 2
 	relative_position_id = SOL_imperial_diplomatic_corps
@@ -6959,6 +6963,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_griffon_fealty
+	icon = GFX_goal_fealty_of_the_griffons
 	x = 2
 	y = 2
 	relative_position_id = SOL_imperial_diplomatic_corps
@@ -7003,6 +7008,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_reich_relations
+	icon = GFX_goal_the_empire_across_the_sea
 	x = 0
 	y = 3
 	relative_position_id = SOL_imperial_diplomatic_corps
@@ -12694,6 +12700,12 @@ shared_focus = {
 				type = dockyard
 				level = 2
 				instant_build = yes
+			}
+			add_building_construction = {
+				type = dam
+				instant_build = yes
+				level = 1
+				province = 3798
 			}
 			add_resource = {
 				type = steel

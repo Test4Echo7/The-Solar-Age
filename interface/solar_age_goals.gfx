@@ -48,5 +48,29 @@ SpriteTypes = {
         name = GFX_goal_only_statistics
         texturefile = "gfx/interface/goals/EQS/only_statistics.tga"
     }
+    SpriteType = {
+        name = GFX_goal_fealty_of_the_griffons
+        texturefile = "gfx/interface/goals/EQS/fealty_of_the_griffons.png"
+    }
+    SpriteType = {
+        name = GFX_goal_imperial_diplomatic_corps
+        texturefile = "gfx/interface/goals/EQS/imperial_diplomatic_corps.png"
+    }
+    SpriteType = {
+        name = GFX_goal_insurance_policies
+        texturefile = "gfx/interface/goals/EQS/insurance_policies.png"
+    }
+    SpriteType = {
+        name = GFX_goal_workers_for_sustenance
+        texturefile = "gfx/interface/goals/EQS/workers_for_sustenance.png"
+    }
+    SpriteType = {
+        name = GFX_goal_oil_for_existence
+        texturefile = "gfx/interface/goals/EQS/oil_for_existence.png"
+    }
+    SpriteType = {
+        name = GFX_goal_the_empire_across_the_sea
+        texturefile = "gfx/interface/goals/EQS/the_empire_across_the_sea.png"
+    }
 
 }
