@@ -6680,6 +6680,9 @@ shared_focus = {
 
 	cost = 10
 	prerequisite = { focus = SOL_reborn_in_fire }
+	available = {
+		NOT = { has_completed_focus = SOL_god_empress }
+	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_re_educate_foals"
@@ -6687,6 +6690,78 @@ shared_focus = {
 		add_stability = -0.1
 		add_political_power = -125
 		#Advisors here
+		every_possible_country = {
+			limit = { has_character = BAT_advisor_9 }
+			BAT_advisor_9 = {
+				set_nationality = ROOT
+				remove_advisor_role = { slot = political_advisor }
+				add_advisor_role = {
+					advisor = {
+						slot = political_advisor
+						idea_token = BAT_eternal_advisor_3
+						traits = { field_surgeon }
+					}
+				}
+			}
+		}
+		#Glitches out because SOL has a Shining Star already. Don't ask me why, since they're separate entities
+		#every_possible_country = {
+		#	limit = { has_character = BAT_advisor_4 }
+		#	BAT_advisor_4 = {
+		#		set_nationality = ROOT
+		#		remove_advisor_role = { slot = political_advisor }
+		#		add_advisor_role = {
+		#			advisor = {
+		#				slot = political_advisor
+		#				idea_token = BAT_emerald_advisor_1
+		#				traits = { technocrat }
+		#			}
+		#		}
+		#	}
+		#}
+		every_possible_country = {
+			limit = { has_character = BAT_advisor_15 }
+			BAT_advisor_15 = {
+				set_nationality = ROOT
+				remove_advisor_role = { slot = political_advisor }
+				add_advisor_role = {
+					advisor = {
+						slot = political_advisor
+						idea_token = BAT_lightning_advisor_3
+						traits = { special_forces_commander }
+					}
+				}
+			}
+		}
+		every_possible_country = {
+			limit = { has_character = BAT_advisor_17 }
+			BAT_advisor_17 = {
+				set_nationality = ROOT
+				remove_advisor_role = { slot = political_advisor }
+				add_advisor_role = {
+					advisor = {
+						slot = political_advisor
+						idea_token = BAT_stone_advisor_2
+						traits = { war_hero_grunt }
+					}
+				}
+			}
+		}
+		every_possible_country = {
+			limit = { has_character = BAT_advisor_36 }
+			BAT_advisor_36 = {
+				set_nationality = ROOT
+				remove_advisor_role = { slot = high_command }
+				add_advisor_role = {
+					advisor = {
+						slot = high_command
+						cost = 100
+						idea_token = BAT_high_advisor_8
+						traits = { alt_navy_chief_maneuver_2 }
+					}
+				}
+			}
+		}
 	}
 	ai_will_do = { factor = 60 }
 }
@@ -12749,6 +12824,12 @@ shared_focus = {
 				level = 1
 				instant_build = yes
 			}
+			add_building_construction = {
+				type = dam
+				instant_build = yes
+				level = 1
+				province = 9505
+			}
 		}
 		15 = {
 			add_extra_state_shared_building_slots = 2
@@ -13483,7 +13564,9 @@ shared_focus = {
 	mutually_exclusive = { focus = SOL_promote_mit }
 	available = {
 		eqs_not_has_civil_war = yes
-		is_owned_and_controlled_by = ROOT
+		74 = {
+			is_owned_and_controlled_by = ROOT
+		}
 	}
 
 	completion_reward = {

@@ -7763,6 +7763,26 @@ country_event = { #Event to add all of the different griffon countries' cores to
     }
 }
 
+country_event = { #Event to count down the number of days left in Project Helios' cooldown
+    id = solarreworked.514
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.514"}
+
+    hidden = yes
+
+    option = {
+        subtract_from_variable = { SOL_project_helios_countdown = 1 }
+        if = {
+            limit = {
+                check_variable = { SOL_project_helios_countdown > 0 }
+            }
+            country_event = {
+                id = solarreworked.514
+                days = 1
+            }
+        }
+    }
+}
+
 ###Operation Events###
 country_event = { #Event of an agent being led before Chrysalis as a captured general, which leads to him trying to assassinate Chrysalis, but being stopped by an officer there who was able to react in time, and the agent is barely able to escape after wounding her
     id = solarreworked.602

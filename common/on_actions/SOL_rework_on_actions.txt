@@ -442,6 +442,12 @@ on_actions = {
             log = "[GetDateText]: [ROOT.GetName]: on_weekly_EQS solar_age"
             if = {
                 limit = {
+                    has_war = yes
+                }
+                EQS_update_lost_soldier_corpses = yes
+            }
+            if = {
+                limit = {
                     is_ai = no
                     NOT = { has_country_flag = EQS_player_started_as_EQS }
                     NOT = {

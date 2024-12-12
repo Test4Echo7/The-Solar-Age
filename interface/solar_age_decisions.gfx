@@ -1,0 +1,6 @@
+SpriteTypes = {
+    spriteType = {
+        name = "GFX_decision_daybreaker_sun"
+        textureFile = "gfx/interface/decisions/daybreaker_sun.tga"
+    }
+}

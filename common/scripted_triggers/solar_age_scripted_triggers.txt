@@ -316,3 +316,6 @@ EQS_no_equus_nation_other_than_EQS_zebrica = {
 		TRO = { OR = { is_subject_of = ROOT exists = no } }
 	}
 }
+EQS_state_has_been_laser_beamed = {
+	has_state_flag = SOL_firing_mah_lazaaah
+}

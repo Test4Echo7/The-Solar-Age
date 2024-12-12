@@ -48,7 +48,17 @@ EQS_wunderwaffen_category = {
     icon = celestia_cat
 }
 ######
-
+EQS_orbital_order_cannon_category = {
+    allowed = { tag = EQS }
+    visible = {
+        is_EQS_SOL = yes
+        has_country_flag = SOL_orbital_order_laser_online
+    }
+    priority = {
+        base = 139
+    }
+    icon = celestia_cat
+}
 EQS_great_projects_category = {
     allowed = { tag = EQS }
     priority = {

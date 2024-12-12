@@ -2124,6 +2124,19 @@ ideas = {
 				winter_attrition_factor = -0.1
 			}
 		}
+		###Continental Spirit###
+		SOL_imperium_solaris_aeterna = {
+			modifier = {
+				resistance_target = -0.1
+				compliance_growth = 0.15
+				resistance_damage_to_garrison = -0.25
+				resistance_growth = -0.25
+				non_core_manpower = 0.15
+				weekly_manpower = 1000
+				local_resources_factor = 0.1
+				global_building_slots_factor = 0.1
+			}
+		}
 	}
 	###Research buffs
 	hidden_ideas = {
