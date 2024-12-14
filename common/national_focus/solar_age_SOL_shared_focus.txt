@@ -3465,7 +3465,8 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_alicorn_weapons"
-		unlock_decision_category_tooltip = EQS_wunderwaffen_category
+		#unlock_decision_category_tooltip = EQS_wunderwaffen_category
+		custom_effect_tooltip = SOL_secrets_of_the_pony_tt
 		set_country_flag = SOL_wunderwaffen_unlocked
 	}
 	ai_will_do = { factor = 50 }

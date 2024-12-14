@@ -1229,27 +1229,7 @@ EQS_orbital_order_cannon_category = {
         complete_effect = {
             clr_country_flag = SOL_choosing_firing_location
             set_country_flag = SOL_project_helios_warming_up
-        }
-        remove_effect = {
-            log = "[GetDateText]: [ROOT.GetName] Decision remove EQS_designate_firing_target"
-            custom_effect_tooltip = SOL_glass_them_all_tt
-            custom_effect_tooltip = SOL_this_is_whats_called_a_pro_gamer_move_tt
-            set_variable = { SOL_project_helios_countdown = 180 }
-            clr_country_flag = SOL_project_helios_warming_up
-            FROM = {
-                create_entity = {
-                    entity = nuke_big_entity
-                    id = 999999
-                    var = helios_effect_ent
-                    x = 0
-                    y = 0
-                    z = 0
-                    scale = 1.0
-                    rotation = 1.0
-                    min_zoom = 30000
-                    #visible = EQS_state_has_been_laser_beamed
-                }
-            }
+            set_variable = { SOL_project_helios_countdown = 190 }
             hidden_effect = {
                 country_event = {
                     id = solarreworked.514
@@ -1258,6 +1238,47 @@ EQS_orbital_order_cannon_category = {
                 FROM = {
                     EQS_project_helios_destruction = yes
                 }
+            }
+        }
+        remove_effect = {
+            log = "[GetDateText]: [ROOT.GetName] Decision remove EQS_designate_firing_target"
+            custom_effect_tooltip = SOL_glass_them_all_tt
+            custom_effect_tooltip = SOL_this_is_whats_called_a_pro_gamer_move_tt
+            clr_country_flag = SOL_project_helios_warming_up
+            create_entity = {
+                entity = nuke_entity
+                id = 1337420
+                var = helios_effect_ent_2
+                x = 0
+                y = 0
+                z = 0
+                state = FROM
+                scale = 2
+                rotation = 1.0
+                min_zoom = 3000.0
+            }
+            set_entity_animation = {
+                id = 1337420
+                animation = attack
+            }
+            if = {
+                limit = { NOT = { has_global_flag = SOL_helios_first_used } }
+                set_global_flag = SOL_helios_first_used
+                hidden_effect = {
+                    FROM = {
+                        OWNER = {
+                            #News event for being vaporized
+                        }
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    #FROM = { state = vesalipolis }
+                    NOT = { has_global_flag = SOL_vesalipolis_vaporized }
+                }
+                set_global_flag = SOL_vesalipolis_vaporized
+                #Event for vaporizing Vesalipolis
             }
         }
         ai_will_do = { factor = 50 }
@@ -3418,7 +3439,10 @@ EQS_expand_imperial_territory_category = {
                 692 = { compliance > 40 }
             }
         }
-        visible = { has_completed_focus = SOL_breach_zebrica }
+        visible = {
+            has_completed_focus = SOL_breach_zebrica
+            NOT = { has_country_flag = SOL_formed_super_zebrica }
+        }
         highlight_states = {
             highlight_state_targets = {
                 state = 692

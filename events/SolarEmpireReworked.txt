@@ -3927,7 +3927,7 @@ country_event = { #Follow a worker as he is tapped by a production team for a pr
 
     option = { #You ask the world of me!
         name = solarreworked.261.a
-        add_ideas = SOL_motiviated_workers
+        add_ideas = SOL_motivated_workers
     }
 }
 
@@ -7754,6 +7754,7 @@ country_event = { #CHN is informed about how bioweapons are beginning to be used
 
 country_event = { #Event to add all of the different griffon countries' cores to GRD
     id = solarreworked.513
+    is_triggered_only = yes
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.513"}
 
     hidden = yes
@@ -7765,6 +7766,7 @@ country_event = { #Event to add all of the different griffon countries' cores to
 
 country_event = { #Event to count down the number of days left in Project Helios' cooldown
     id = solarreworked.514
+    is_triggered_only = yes
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.514"}
 
     hidden = yes
