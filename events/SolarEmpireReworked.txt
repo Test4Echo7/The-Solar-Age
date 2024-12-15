@@ -520,6 +520,19 @@ country_event = { #Blueblood is still busily working on the front when Daybreake
         custom_effect_tooltip = SOL_blueblood_pulls_a_smart_tt
         set_country_flag = SOL_blueblood_kneeled
         add_stability = 0.05
+        hidden_effect = {
+            EQS_prince_blueblood = {
+                set_portraits = {
+                    civilian = {
+                        large = "gfx/leaders/EQS/Blueblood_new.tga"
+                        small = "gfx/interface/ideas/advisors/EQS/EQS_blueblood_new.tga"
+                    }
+                    army = {
+                        large = "gfx/leaders/EQS/Blueblood_new.tga"
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -1600,19 +1613,19 @@ country_event = { #Follow one of the generals, probably Fast Clip, as he is led 
 }
 #Potentially rewrite this event to be a bit more informational than narrative
 
-country_event = { #One of the generals who is thought to be disloyal is presented before Daybreaker, who begins to list a long series of supposed crimes they have committed, and then declares them guilty, without chance of repeal, and he is executed by fire, which she finds fitting
-    id = solarreworked.73
-    title = solarreworked.73.t
-    desc = solarreworked.73.d
-    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.73"}
-
-    is_triggered_only = yes
-
-    option = { #He got too close to the flames, and suffered for it.
-        name = solarreworked.73.a
-        #Effect here
-    }
-}
+#country_event = { #One of the generals who is thought to be disloyal is presented before Daybreaker, who begins to list a long series of supposed crimes they have committed, and then declares them guilty, without chance of repeal, and he is executed by fire, which she finds fitting
+#    id = solarreworked.73
+#    title = solarreworked.73.t
+#    desc = solarreworked.73.d
+#    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.73"}
+#
+#    is_triggered_only = yes
+#
+#    option = { #He got too close to the flames, and suffered for it.
+#        name = solarreworked.73.a
+#        #Effect here
+#    }
+#}
 
 country_event = { #One of the generals who is suspected of being a traitor is brought before Daybreaker, who lists off a number of the supposed crimes he committed, and as she makes it sound like he will be executed, she instead states that she could have him killed, but is willing to forgive him, if he never betrays her again, because she will kill him herself if she finds out, which he agrees to
     id = solarreworked.74
@@ -2052,7 +2065,149 @@ country_event = { #Daybreaker arrives on the docks of Manehattan to speak with s
 			specialization = specialization_naval
 			value = 0.25
 		}
-        #Ships here
+        custom_effect_tooltip = SOL_who_called_in_the_fleet_tt
+        hidden_effect = {
+            if = {
+                limit = { has_dlc = "Man the Guns" }
+                create_ship = {
+                    type = ship_hull_light_1
+                    equipment_variant = "Ardent Class"
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = ship_hull_light_1
+                    equipment_variant = "Ardent Class"
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = ship_hull_light_1
+                    equipment_variant = "Ardent Class"
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = ship_hull_light_1
+                    equipment_variant = "Ardent Class"
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = ship_hull_light_1
+                    equipment_variant = "Ardent Class"
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = ship_hull_light_1
+                    equipment_variant = "Ardent Class"
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = ship_hull_light_1
+                    equipment_variant = "Ardent Class"
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = ship_hull_light_1
+                    equipment_variant = "Ardent Class"
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = ship_hull_light_1
+                    equipment_variant = "Ardent Class"
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = ship_hull_light_1
+                    equipment_variant = "Ardent Class"
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = ship_hull_cruiser_1
+                    equipment_variant = "Emerald Class"
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = ship_hull_cruiser_1
+                    equipment_variant = "Emerald Class"
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = ship_hull_cruiser_1
+                    equipment_variant = "Emerald Class"
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = ship_hull_cruiser_1
+                    equipment_variant = "Canterlot Class"
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = ship_hull_cruiser_1
+                    equipment_variant = "Canterlot Class"
+                    creator = ROOT
+                }
+            }
+            else = {
+                create_ship = {
+                    type = destroyer_1
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = destroyer_1
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = destroyer_1
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = destroyer_1
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = destroyer_1
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = destroyer_1
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = destroyer_1
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = destroyer_1
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = destroyer_1
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = destroyer_1
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = light_cruiser_1
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = light_cruiser_1
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = light_cruiser_1
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = heavy_cruiser_1
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = heavy_cruiser_1
+                    creator = ROOT
+                }
+            }
+        }
     }
 }
 
@@ -3555,10 +3710,21 @@ country_event = { #CRY's information event to tell them that they have been dema
 
     option = { #We will not listen to any thugs of Daybreaker!
         name = solarreworked.232.a
-
+        EQS = {
+            country_event = {
+                id = solarreworked.243
+                days = 1
+            }
+        }
     }
     option = { #This fight must end.
         name = solarreworked.232.b
+        EQS = {
+            country_event = {
+                id = solarreworked.244
+                days = 1
+            }
+        }
     }
 }
 
@@ -3647,7 +3813,7 @@ country_event = { #Event stating that CRY has accepted, and potentially a very s
     option = { #Welcome home, Flurry.
         name = solarreworked.235.a
         add_political_power = 30
-        #Idea here
+        add_ideas = SOL_kabuh
     }
 }
 
@@ -3676,7 +3842,7 @@ country_event = { #Short event summarzing that CRY has rejected the demand, and 
     }
 }
 
-country_event = { #From the perspective of Sunrise Sparkle, in first person, have Sunrise meet with Daybreaker one last time, a day or two later from her first talk with her, to be once again emphasized that she should go in with her full might and the weight of the Empress behind her, so that Cadance is simply forced to accept, as it would be a waste of time otherwise
+country_event = { #From the perspective of Sunrise Sparkle, in first person, have Sunrise meet with Daybreaker one last time, a day or two later from her first talk with her, to be once again emphasize that she should go in with her full might and the weight of the Empress behind her, so that Cadance is simply forced to accept, as it would be a waste of time otherwise
     id = solarreworked.237
     title = solarreworked.237.t
     desc = solarreworked.237.d
@@ -3829,6 +3995,60 @@ country_event = { #Shining Armor is taken out of his house arrest, but still bou
 			}
 			set_country_flag = CRY_solar_generals
 		}
+    }
+}
+
+country_event = { #Cadance gives into the threats from either Nova or the insinuations from Raven regarding what will happen to the Crystal Empire, and both respond in their own way, with Nova being smug and Raven being understanding
+    id = solarreworked.243
+    title = solarreworked.243.t
+    desc = {
+        trigger = { has_completed_focus = SOL_god_empress }
+        text = solarreworked.243.da
+    }
+    desc = {
+        trigger = { NOT = { has_completed_focus = SOL_god_empress } }
+        text = solarreworked.243.db
+    }
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.243"}
+
+    is_triggered_only = yes
+
+    option = { #You will be guided soon enough.
+        name = solarreworked.243.a
+        FROM = {
+            get_current_government_type = yes
+        }
+        set_autonomy = {
+            target = FROM
+            autonomous_state = autonomy_reichsprotectorate
+        }
+        FROM = {
+            restore_previous_government_type = yes
+        }
+    }
+}
+
+country_event = { #Cadance refuses to surrender to Daybreaker, despite the threats and insinuations from Nova or Raven, and both are displeased in their own way, with Nova being irate and Raven urging her to reconsider before accepting the choice
+    id = solarreworked.244
+    title = solarreworked.244.t
+    desc = {
+        trigger = { has_completed_focus = SOL_god_empress }
+        text = solarreworked.244.da
+    }
+    desc = {
+        trigger = { NOT = { has_completed_focus = SOL_god_empress } }
+        text = solarreworked.244.db
+    }
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.244"}
+
+    is_triggered_only = yes
+
+    option = { #You've made a grave error.
+        name = solarreworked.244.a
+        create_wargoal = {
+            target = FROM
+            type = puppet_wargoal_focus
+        }
     }
 }
 

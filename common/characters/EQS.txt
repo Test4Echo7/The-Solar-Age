@@ -664,7 +664,7 @@ characters={
 		name = EQS_raven_inkwell
 		portraits = {
 			civilian = {
-				small = "GFX_idea_EQS_raven_inkwell"
+				small = "gfx/interface/ideas/advisors/EQS/EQS_raven_inkwell_new.tga"
 			}
 		}
 		advisor = {
