@@ -7775,6 +7775,27 @@ country_event = { #Sunset arrives to save the day, maybe
 country_event = { #Starlight joins the Equestrian Army
 	id = equestria.189
 	immediate = {log = "[GetDateText]: [Root.GetName]: event equestria.189"}
+	hidden = yes
+
+	option = {
+		if = {
+			limit = {
+				NOT = { is_EQS_SOL = yes }
+			}
+			country_event = equestria.190
+		}
+		else_if = {
+			limit = { is_EQS_SOL = yes }
+			set_country_flag = EQS_starlight_glimmer_arrived
+		}
+		else = {
+		}
+	}
+}
+
+country_event = { #Starlight joins the Equestrian Army
+	id = equestria.190
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestria.190"}
 	title = equestria.189.t
 	desc = {
 		text = equestria.189.d1

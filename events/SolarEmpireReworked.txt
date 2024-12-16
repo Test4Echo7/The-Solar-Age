@@ -3817,7 +3817,7 @@ country_event = { #Event stating that CRY has accepted, and potentially a very s
     }
 }
 
-country_event = { #Short event summarzing that CRY has rejected the demand, and is cutting ties as quickly as it can
+country_event = { #Short event summarizing that CRY has rejected the demand, and is cutting ties as quickly as it can
     id = solarreworked.236
     title = solarreworked.236.t
     desc = solarreworked.236.d
@@ -5428,6 +5428,7 @@ country_event = { #The queens that supported Chrysalis are brought before Daybre
 
     option = { #Would you be foalish enough to refuse?
         name = solarreworked.376.a
+        add_stability = -0.15
         add_ideas = SOL_united_queens
     }
 }
@@ -8006,6 +8007,86 @@ country_event = { #Event to count down the number of days left in Project Helios
 }
 
 ###Operation Events###
+country_event = { #Luna is awoken in her new cell as Daybreaker enters the dungeons of the palace, and Daybreaker sees how pathetic Luna now is and how her defiance will end, and Luna is adamant that she will not beg nor plead for her life, and Daybreaker is pleased, since it'd be boring if she did; she can languish while she sees how her sister has always been the better, and will lead harmony into greatness alone
+    id = solarreworked.600
+    title = solarreworked.600.t
+    desc = solarreworked.600.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.600"}
+
+    is_triggered_only = yes
+
+    option = { #Does that sound good, sister dearest?
+        name = solarreworked.600.a
+        effect_tooltip = {
+            every_possible_country = {
+                limit = { has_character = EQS_princess_luna }
+                EQS_princess_luna = {
+                    remove_unit_leader_role = yes
+                    set_nationality = EQS
+                }
+            }
+        }
+        hidden_effect = {
+            every_possible_country = {
+                limit = { has_character = EQS_princess_luna }
+                country_event = solarreworked.613
+            }
+        }
+    }
+}
+
+country_event = { #Event of the Mane Six being led into a trap by some of the Empire's agents, pretending that it's a friendship problem; there is some conflict and they almost escape before they are overpowered and taken back to the Empire
+    id = solarreworked.601
+    title = solarreworked.601.t
+    desc = solarreworked.601.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.601"}
+
+    is_triggered_only = yes
+
+    option = { #No more plans, you hear?
+        name = solarreworked.601.a
+        effect_tooltip = {
+            every_possible_country = {
+                limit = { has_country_flag = SOL_hosting_M6 }
+                if = {
+                    limit = { has_character = EQS_rainbowdash }
+                    EQS_rainbowdash = { set_nationality = EQS }
+                }
+                if = {
+                    limit = { has_character = EQS_rarity }
+                    EQS_rarity = { set_nationality = EQS }
+                }
+                if = {
+                    limit = { has_character = EQS_fluttershy }
+                    EQS_fluttershy = { set_nationality = EQS }
+                }
+                if = {
+                    limit = { has_character = EQS_applejack }
+                    EQS_applejack = { set_nationality = EQS }
+                }
+                if = {
+                    limit = { has_character = EQS_pinkie_pie }
+                    EQS_pinkie_pie = { set_nationality = EQS }
+                }
+                if = {
+                    limit = { has_character = EQS_twilight_sparkle }
+                    EQS_twilight_sparkle = { set_nationality = EQS }
+                }
+                if = {
+                    limit = { has_character = EQS_sunset_shimmer }
+                    EQS_sunset_shimmer = { set_nationality = EQS }
+                }
+            }
+        }
+        hidden_effect = {
+            every_possible_country = {
+                limit = { has_country_flag = SOL_hosting_M6 }
+                country_event = solarreworked.614
+            }
+        }
+    }
+}
+
 country_event = { #Event of an agent being led before Chrysalis as a captured general, which leads to him trying to assassinate Chrysalis, but being stopped by an officer there who was able to react in time, and the agent is barely able to escape after wounding her
     id = solarreworked.602
     title = solarreworked.602.t
@@ -8029,6 +8110,78 @@ country_event = { #Event of an agent being led before Chrysalis as a captured ge
         hidden_effect = {
             CHN = { country_event = solarreworked.610 }
         }
+    }
+}
+
+country_event = { #Some agents of the Solar Empire lie in wait as they see a number of battalions of NLR troops moving to where the supposed engagement of Equestrian forces would be, and there are a few to cause a distraction, but they manage to infiltrate into the camp of the generals and capture them, before promising them a swift rehabilitation; one of the operatives is Astrum, who is a bit more trigger-happy than the others
+    id = solarreworked.603
+    title = solarreworked.603.t
+    desc = solarreworked.603.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.603"}
+
+    is_triggered_only = yes
+
+    option = { #Mama Cita would be proud, wouldn't she?
+        name = solarreworked.603.a
+        effect_tooltip = {
+            NLR = {
+                add_timed_idea = {
+                    idea = NLR_disrupted_officers
+                    days = 150
+                }
+                retire_character = EQS_NLR_bipen
+                retire_character = NLR_tzyca
+            }
+        }
+        hidden_effect = {
+            NLR = {
+                country_event = solarreworked.612
+            }
+        }
+    }
+}
+
+country_event = { #One of the agents, after successfully fleeing with kirin captives, takes to taunting one or two to try and see how they become nirik, and the kirin at first tries to stay calm, and warns the pony about not provoking her, but keeps getting prodded until snapping, which is a bit of a mistake, and has to be put down before destroying the ship
+    id = solarreworked.604
+    title = solarreworked.604.t
+    desc = solarreworked.604.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.604"}
+
+    is_triggered_only = yes
+
+    option = { #Maybe leave the rest of the field tests to the eggheads back home.
+        name = solarreworked.604.a
+        add_ideas = SOL_stolen_fire
+    }
+}
+
+country_event = { #Daybreaker watches from her throne as the agents sent to the Dread League, plus one or two captured necromancers, are brought before her and she is given the lowdown of what happened, and as time goes on, she grows more interested, and also when they are finished, has them arrested to be killed, as they are too tainted to be allowed to stay within Harmony, and she would rather have the secrets to herself, anyway
+    id = solarreworked.605
+    title = solarreworked.605.t
+    desc = solarreworked.605.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.605"}
+
+    is_triggered_only = yes
+
+    option = { #Rules for thee and not for me.
+        name = solarreworked.605.a
+        set_technology = {
+            SOL_solarist_necromancy = 1
+        }
+    }
+}
+
+country_event = { #The team of agents sent to capture the staff blast their way through a guard patrol, as they are being chased by a second patrol, and they dash through much of the city, to try and escape through magic, and after a short battle, where they are almost cornered, do manage to flee through some magic from the staff; a couple are injured along the way
+    id = solarreworked.606
+    title = solarreworked.606.t
+    desc = solarreworked.606.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.606"}
+
+    is_triggered_only = yes
+
+    option = { #The power of the weather is ours!
+        name = solarreworked.606.a
+        add_ideas = SOL_staff_of_sacanas
     }
 }
 
@@ -8068,6 +8221,84 @@ country_event = { #Hidden event for removing Chrysalis's wounded trait
 
     option = { #I got better.
         CHN_queen_chrysalis = { remove_trait = { ideology = nazism trait = wounded_monarch } }
+    }
+}
+
+country_event = { #Event for recapping for NLR that there have been coordinated attacks on some of their officer corps, leading to losses and a junior corps springing up that needs time to gain experience
+    id = solarreworked.612
+    title = solarreworked.612.t
+    desc = solarreworked.612.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.612"}
+
+    is_triggered_only = yes
+
+    option = { #Celestia shall not stop us!
+        name = solarreworked.612.a
+        add_timed_idea = {
+            idea = NLR_disrupted_officers
+            days = 150
+        }
+        retire_character = EQS_NLR_bipen
+        retire_character = NLR_tzyca
+    }
+}
+
+country_event = { #Event summarizing that Luna has been taken from where she was given refuge and that there is not much of a trail to go off of, and that Daybreaker has most likely taken her
+    id = solarreworked.613
+    title = solarreworked.613.t
+    desc = solarreworked.613.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.613"}
+
+    is_triggered_only = yes
+
+    option = { #We must find a way to take her back!
+        name = solarreworked.613.a
+        EQS_princess_luna = {
+            remove_unit_leader_role = yes
+            set_nationality = EQS
+        }
+    }
+}
+
+country_event = { #Event summarizing how the M6 have not been found after disappearing, and how it is most likely the work of the Empire, as Daybreaker has been adamant about returning them to the fold
+    id = solarreworked.614
+    title = solarreworked.614.t
+    desc = solarreworked.614.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.614"}
+
+    is_triggered_only = yes
+
+    option = { #Is there anything that can be done?
+        name = solarreworked.614.a
+        clr_country_flag = SOL_hosting_M6
+        if = {
+            limit = { has_character = EQS_rainbowdash }
+            EQS_rainbowdash = { set_nationality = EQS }
+        }
+        if = {
+            limit = { has_character = EQS_rarity }
+            EQS_rarity = { set_nationality = EQS }
+        }
+        if = {
+            limit = { has_character = EQS_fluttershy }
+            EQS_fluttershy = { set_nationality = EQS }
+        }
+        if = {
+            limit = { has_character = EQS_applejack }
+            EQS_applejack = { set_nationality = EQS }
+        }
+        if = {
+            limit = { has_character = EQS_pinkie_pie }
+            EQS_pinkie_pie = { set_nationality = EQS }
+        }
+        if = {
+            limit = { has_character = EQS_twilight_sparkle }
+            EQS_twilight_sparkle = { set_nationality = EQS }
+        }
+        if = {
+            limit = { has_character = EQS_sunset_shimmer }
+            EQS_sunset_shimmer = { set_nationality = EQS }
+        }
     }
 }
 

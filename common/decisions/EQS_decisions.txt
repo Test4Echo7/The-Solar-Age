@@ -396,7 +396,7 @@ SOL_dealing_with_resistance = {
 			}
 			clear_variable = civ_war_size
 			hidden_effect = {
-				remove_ideas = SOL_harmonic_resistance_idea3
+				#remove_ideas = SOL_harmonic_resistance_idea3
 				random_other_country = {
 					limit = {
 						original_tag = EQS

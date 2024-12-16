@@ -330,6 +330,14 @@ EQS_SOL_wartime_change = {
 	EQS_SOL_remove_ideas = yes
 	country_event = { id = solarempire.1018 }
 	if = {
+		limit = { has_character = EQS_princess_luna }
+		country_event = {
+			id = solarreworked.150
+			days = 14
+			random_days = 7
+		}
+	}
+	if = {
 		limit = { country_exists = CES }
 		CES = {
 			country_event = daring.20

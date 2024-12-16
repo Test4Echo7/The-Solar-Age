@@ -58,7 +58,7 @@ SOL_sanctum_infernal_corps_organization = {
 
 		equipment_bonus = {
 			breakthrough = 0.03
-			hard_attack = 0.03
+			hard_attack = 0.05
 		}
 
 		production_bonus = {
@@ -119,7 +119,7 @@ SOL_sanctum_infernal_corps_organization = {
 
 		equipment_bonus = {
 			reliability = 0.05
-			breakthrough = 0.01
+			breakthrough = 0.02
 		}
 	}
 
@@ -138,7 +138,7 @@ SOL_sanctum_infernal_corps_organization = {
 		}
 
 		equipment_bonus = {
-			defense = 0.05
+			defense = 0.08
 		}
 	}
 
@@ -159,7 +159,6 @@ SOL_sanctum_infernal_corps_organization = {
 		equipment_bonus = {
 			armor_value = 0.1
 			breakthrough = 0.02
-			reliability = -0.05
 		}
 
 		production_bonus = {
@@ -229,7 +228,6 @@ SOL_sanctum_infernal_corps_organization = {
 
 		equipment_bonus = {
 			armor_value = 0.1
-			reliability = -0.03
 		}
 
 		production_bonus = {
@@ -252,7 +250,7 @@ SOL_sanctum_infernal_corps_organization = {
 		}
 
 		equipment_bonus = {
-			reliability = -0.03
+			reliability = -0.05
 		}
 
 		production_bonus = {
@@ -273,10 +271,6 @@ SOL_sanctum_infernal_corps_organization = {
 
 		any_parent = {
 			SOL_heavy_subsidization
-		}
-
-		equipment_bonus = {
-			reliability = -0.02
 		}
 
 		production_bonus = {
@@ -472,7 +466,7 @@ SOL_holy_flame_arms_organization = {
 		}
 
 		equipment_bonus = {
-			armor_value = 0.01
+			armor_value = 0.03
 			soft_attack = 0.03
 		}
 	}
@@ -512,7 +506,7 @@ SOL_holy_flame_arms_organization = {
 
 		equipment_bonus = {
 			maximum_speed = 0.05
-			fuel_consumption = 0.03
+			fuel_consumption = 0.05
 		}
 	}
 
@@ -601,7 +595,7 @@ SOL_holy_flame_arms_organization = {
 
 		limit_to_equipment_type = { medium_flame_tank_chassis }
 		equipment_bonus = {
-			defense = 0.03
+			defense = 0.05
 			soft_attack = 0.15
 		}
 	}
@@ -621,8 +615,8 @@ SOL_holy_flame_arms_organization = {
 		}
 
 		equipment_bonus = {
-			armor_value = 0.05
-			breakthrough = 0.01
+			armor_value = 0.075
+			breakthrough = 0.02
 		}
 	}
 
@@ -642,8 +636,8 @@ SOL_holy_flame_arms_organization = {
 
 		equipment_bonus = {
 			soft_attack = 0.05
-			breakthrough = 0.02
-			ap_attack = -0.03
+			breakthrough = 0.03
+			ap_attack = -0.04
 		}
 	}
 
@@ -671,7 +665,7 @@ SOL_holy_flame_arms_organization = {
 		}
 
 		production_bonus = {
-			production_cost_factor = 0.075
+			production_cost_factor = 0.035
 		}
 	}
 
@@ -695,7 +689,7 @@ SOL_holy_flame_arms_organization = {
 		limit_to_equipment_type = { medium_flame_tank_chassis }
 		equipment_bonus = {
 			soft_attack = 0.25
-			breakthrough = 0.05
+			breakthrough = 0.1
 			reliability = -0.05
 		}
 	}
@@ -718,8 +712,8 @@ SOL_holy_flame_arms_organization = {
 		}
 
 		equipment_bonus = {
-			breakthrough = 0.05
-			maximum_speed = 0.02
+			breakthrough = 0.1
+			maximum_speed = 0.05
 		}
 	}
 
@@ -742,8 +736,8 @@ SOL_holy_flame_arms_organization = {
 		}
 
 		equipment_bonus = {
-			soft_attack = 0.05
-			hard_attack = 0.05
+			soft_attack = 0.1
+			hard_attack = 0.1
 		}
 	}
 
@@ -765,7 +759,7 @@ SOL_holy_flame_arms_organization = {
 
 		equipment_bonus = {
 			soft_attack = 0.1
-			defense = 0.03
+			defense = 0.05
 			ap_attack = -0.05
 			armor_value = -0.01
 		}
@@ -812,8 +806,8 @@ SOL_bitterbury_ballistics_organization = {
 		organization_modifier = { military_industrial_organization_research_bonus = 0.05 }
 
 		equipment_bonus = {
-			soft_attack = 0.05
-			hard_attack = 0.05
+			soft_attack = 0.1
+			hard_attack = 0.1
 			reliability = -0.05
 		}
 	}
@@ -831,8 +825,12 @@ SOL_bitterbury_ballistics_organization = {
 
 		limit_to_equipment_type = { magical_equipment }
 		equipment_bonus = {
-			breakthrough = 0.05
+			breakthrough = 0.1
 			reliability = -0.02
+		}
+
+		production_bonus = {
+			production_resource_need_factor = 0.02
 		}
 	}
 
@@ -850,7 +848,7 @@ SOL_bitterbury_ballistics_organization = {
 		limit_to_equipment_type = { infantry_equipment }
 		equipment_bonus = {
 			soft_attack = 0.03
-			reliability = 0.02
+			reliability = 0.03
 		}
 	}
 
@@ -885,8 +883,8 @@ SOL_bitterbury_ballistics_organization = {
 
 		limit_to_equipment_type = { magical_equipment }
 		equipment_bonus = {
-			soft_attack = 0.02
-			breakthrough = 0.04
+			soft_attack = 0.03
+			breakthrough = 0.05
 		}
 
 		production_bonus = {
@@ -933,8 +931,8 @@ SOL_bitterbury_ballistics_organization = {
 		}
 
 		production_bonus = {
-			production_efficiency_cap_factor = 0.03
-			production_efficiency_gain_factor = 0.03
+			production_efficiency_cap_factor = 0.05
+			production_efficiency_gain_factor = 0.05
 		}
 	}
 
@@ -955,11 +953,11 @@ SOL_bitterbury_ballistics_organization = {
 		limit_to_equipment_type = { magical_equipment }
 		equipment_bonus = {
 			soft_attack = 0.05
-			hard_attack = 0.02
+			hard_attack = 0.05
 		}
 
 		production_bonus = {
-			production_cost_factor = 0.05
+			production_cost_factor = 0.04
 		}
 	}
 
@@ -979,8 +977,8 @@ SOL_bitterbury_ballistics_organization = {
 		}
 
 		equipment_bonus = {
-			soft_attack = 0.03
-			ap_attack = 0.02
+			soft_attack = 0.05
+			ap_attack = 0.05
 		}
 	}
 
@@ -1000,7 +998,7 @@ SOL_bitterbury_ballistics_organization = {
 
 		production_bonus = {
 			production_cost_factor = -0.05
-			production_capacity_factor = 0.02
+			production_capacity_factor = 0.05
 		}
 	}
 
@@ -1021,7 +1019,7 @@ SOL_bitterbury_ballistics_organization = {
 
 		limit_to_equipment_type = { magical_equipment }
 		equipment_bonus = {
-			soft_attack = 0.05
+			soft_attack = 0.1
 			reliability = -0.05
 		}
 	}
@@ -1044,11 +1042,12 @@ SOL_bitterbury_ballistics_organization = {
 		limit_to_equipment_type = { infantry_equipment }
 		equipment_bonus = {
 			reliability = 0.075
-			breakthrough = 0.02
+			breakthrough = 0.05
+			defense = 0.05
 		}
 
 		production_bonus = {
-			production_cost_factor = 0.02
+			production_cost_factor = 0.05
 		}
 	}
 
@@ -1068,7 +1067,7 @@ SOL_bitterbury_ballistics_organization = {
 
 		limit_to_equipment_type = { infantry_equipment}
 		equipment_bonus = {
-			defense = 0.05
+			defense = 0.1
 		}
 	}
 
@@ -1090,8 +1089,8 @@ SOL_bitterbury_ballistics_organization = {
 
 		limit_to_equipment_type = { magical_equipment }
 		equipment_bonus = {
-			hard_attack = 0.2
-			ap_attack = 0.25
+			hard_attack = 0.35
+			ap_attack = 0.50
 		}
 
 		production_bonus = {
@@ -1117,9 +1116,9 @@ SOL_bitterbury_ballistics_organization = {
 		mutually_exclusive = { SOL_early_bulpup_rifles }
 
 		equipment_bonus = {
-			soft_attack = 0.03
-			breakthrough = 0.03
-			defense = 0.01
+			soft_attack = 0.1
+			breakthrough = 0.05
+			defense = 0.05
 		}
 	}
 
@@ -1142,7 +1141,7 @@ SOL_bitterbury_ballistics_organization = {
 		limit_to_equipment_type = { infantry_equipment }
 		equipment_bonus = {
 			soft_attack = 0.05
-			defense = 0.02
+			defense = 0.1
 		}
 
 		production_bonus = {
@@ -1542,12 +1541,13 @@ EQC_prelate_corps_organization = {
 		has_dlc = "Arms Against Tyranny"
 		original_tag = EQC
 	}
-	visible = {
-		FROM = {
-			is_EQS_SOL = yes
-			has_country_flag = SOL_prelate_unlocked
-		}
-	}
+	#Debug
+	#visible = {
+	#	FROM = {
+	#		is_EQS_SOL = yes
+	#		has_country_flag = SOL_prelate_unlocked
+	#	}
+	#}
 
 	tree_header_text = {
 		text = mio_header_guns_and_turret
