@@ -3974,7 +3974,6 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_keep_pets"
 		set_country_flag = SOL_combined_changeling_queens
-		add_stability = -0.15
 		###Perhaps an event of Daybreaker having a conversation with the captured changeling queens, regarding the state of the hive, and offers them a chance of survival, in exchange for complete submission to her
 		country_event = solarreworked.376
 	}
@@ -5838,6 +5837,7 @@ shared_focus = {
 	x = -1
 	y = 1
 	relative_position_id = SOL_griffon_birthplace
+	dynamic = yes
 
 	cost = 6
 	prerequisite = { focus = SOL_griffon_birthplace }
@@ -5964,6 +5964,7 @@ shared_focus = {
 			has_country_leader = { character = GRI_emperor_grover_vi ruling_only = yes }
 		}
 	}
+	allow_branch = { has_country_flag = EQS_wholesome_grover_achieved }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_mothers_gift"
