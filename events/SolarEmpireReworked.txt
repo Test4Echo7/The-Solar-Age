@@ -820,6 +820,7 @@ country_event = { #Daybreaker holds a speech in Sanctum Solar, which has just be
 				add_ideas = SOL_enemy_debuff_idea
 			}
 		}
+		clr_country_flag = SOL_dont_trigger_target_change
 		custom_effect_tooltip = SOL_new_political_focuses_tt
 		hidden_effect = {
 			every_enemy_country = {
@@ -3686,12 +3687,23 @@ country_event = { #If Sunrise hasn't ascended, then either an inquisitor, if the
         trigger = { NOT = { has_completed_focus = SOL_god_empress } }
         text = solarreworked.231.db
     }
+    picture = GFX_event_solarempire
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.231"}
 
     is_triggered_only = yes
 
-    option = { #She'll burn down CRY and everything you hold dear.
+    option = { #Then your pathetic empire shall be burnt to the ground!
         name = solarreworked.231.a
+        trigger = { has_completed_focus = SOL_god_empress }
+        hidden_effect = {
+            CRY = {
+                country_event = solarreworked.232
+            }
+        }
+    }
+    option = { #She'll burn down CRY and everything you hold dear.
+        name = solarreworked.231.b
+        trigger = { NOT = { has_completed_focus = SOL_god_empress } }
         hidden_effect = {
             CRY = {
                 country_event = solarreworked.232
@@ -3704,6 +3716,7 @@ country_event = { #CRY's information event to tell them that they have been dema
     id = solarreworked.232
     title = solarreworked.232.t
     desc = solarreworked.232.d
+    picture = GFX_event_solarempire
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.232"}
 
     is_triggered_only = yes
@@ -4009,18 +4022,16 @@ country_event = { #Cadance gives into the threats from either Nova or the insinu
         trigger = { NOT = { has_completed_focus = SOL_god_empress } }
         text = solarreworked.243.db
     }
+    picture = GFX_event_solarempire
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.243"}
 
     is_triggered_only = yes
 
     option = { #You will be guided soon enough.
         name = solarreworked.243.a
-        FROM = {
-            get_current_government_type = yes
-        }
         set_autonomy = {
             target = FROM
-            autonomous_state = autonomy_reichsprotectorate
+            autonomous_state = autonomy_reichskommissariat
         }
         FROM = {
             restore_previous_government_type = yes
@@ -4039,12 +4050,17 @@ country_event = { #Cadance refuses to surrender to Daybreaker, despite the threa
         trigger = { NOT = { has_completed_focus = SOL_god_empress } }
         text = solarreworked.244.db
     }
+    picture = GFX_event_solarempire
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.244"}
 
     is_triggered_only = yes
 
     option = { #You've made a grave error.
         name = solarreworked.244.a
+        FROM = {
+            get_current_government_type = yes
+            add_opinion_modifier = { target = FROM modifier = hostility }
+        }
         create_wargoal = {
             target = FROM
             type = puppet_wargoal_focus
@@ -6446,6 +6462,7 @@ country_event = { #Arcane arrives directly in Canterlot, where she gets an audie
                 factor = 3
             }
         }
+        custom_effect_tooltip = SOL_nepotism_away_tt
         EQC = {
             country_event = {
                 id = solarreworked.439
@@ -6466,6 +6483,7 @@ country_event = { #Arcane arrives directly in Canterlot, where she gets an audie
                 factor = 4
             }
         }
+        custom_effect_tooltip = SOL_albino_zealot_time_tt
         set_country_flag = SOL_chose_arcane
         EQC = {
             country_event = {

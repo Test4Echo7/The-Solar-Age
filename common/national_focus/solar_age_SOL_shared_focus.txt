@@ -7165,7 +7165,10 @@ shared_focus = {
 		CRY = {
 			has_war = no
 			OR = {
-				is_subject = no
+				AND = {
+					is_subject = no
+					has_government = democratic
+				}
 				is_subject_of = ROOT
 			}
 		}
@@ -8647,11 +8650,15 @@ shared_focus = {
 				is_subject = no
 				is_subject_of = ROOT
 			}
+			has_country_leader = { character = EQC_jet_set ruling_only = yes }
 		}
 	}
 	allow_branch = { is_EQS_SOL = yes }
 	bypass = {
 		has_war_with = EQC
+		EQC = {
+			is_subject_of = ROOT
+		}
 	}
 
 	completion_reward = {
@@ -8720,7 +8727,6 @@ shared_focus = {
 		eqs_not_has_civil_war = yes
 		EQC = {
 			exists = yes
-			has_war = no
 			is_subject_of = ROOT
 			has_country_leader = { character = EQC_jet_set ruling_only = yes }
 			has_country_flag = EQC_SOL_leader_chosen
@@ -8783,7 +8789,6 @@ shared_focus = {
 		eqs_not_has_civil_war = yes
 		EQC = {
 			exists = yes
-			has_war = no
 			is_subject_of = ROOT
 			has_country_leader = { character = EQS_SOL_arcane_nova ruling_only = yes }
 			has_country_flag = EQC_SOL_leader_chosen

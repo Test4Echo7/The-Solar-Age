@@ -187,6 +187,7 @@ EQS_SOL_remove_ideas = {
 EQS_SOL_wartime_change = {
 	clr_country_flag = manpower_laws_blocked
 	clr_country_flag = economic_laws_blocked
+	set_country_flag = SOL_dont_trigger_target_change
 	if = {
 		limit = { NOT = { has_completed_focus = Friendship_Games } }
 		complete_national_focus = Friendship_Games
@@ -363,6 +364,7 @@ EQS_SOL_wartime_change = {
 EQS_pre_SOL_civil_war_setup = {
 	clr_country_flag = manpower_laws_blocked
 	clr_country_flag = economic_laws_blocked
+	set_country_flag = SOL_dont_trigger_target_change
 	if = {
 		limit = { NOT = { has_completed_focus = Friendship_Games } }
 		complete_national_focus = Friendship_Games

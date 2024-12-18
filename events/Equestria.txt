@@ -6886,10 +6886,6 @@ country_event = { #Change
 			has_war = no
 		}
 		custom_effect_tooltip = equestria.154.a.tp
-		effect_tooltip = {
-			set_politics = { ruling_party = fascism elections_allowed = no }
-			start_civil_war = { ideology = democratic }
-		}
 		hidden_effect = {
 			EQS_pre_SOL_civil_war_setup = yes
 			remove_power_balance = { id = EQS_sanity_bop }
@@ -6950,27 +6946,20 @@ country_event = { #Change
 			has_war = yes
 		}
 		custom_effect_tooltip = equestria.154.a.tp
-		effect_tooltip = {
-			set_politics = { ruling_party = fascism elections_allowed = no }
-			if = {
-				limit = { surrender_progress > 0.39 }
-				country_event = { id = solarempire.2 days = 2 }
-			}
-		}
 		hidden_effect = {
 			set_global_flag = SOL_wartime_change
-			if = {
-				limit = {
-					EQC = {
-						is_subject_of = ROOT
-						has_government = democratic
-					}
-				}
-				random_list = {
-					40 = {}
-					60 = { set_country_flag = EQC_dont_break_free_from_SOL }
-				}
-			}
+			#if = {
+			#	limit = {
+			#		EQC = {
+			#			is_subject_of = ROOT
+			#			has_government = democratic
+			#		}
+			#	}
+			#	random_list = {
+			#		40 = {}
+			#		60 = { set_country_flag = EQC_dont_break_free_from_SOL }
+			#	}
+			#}
 			remove_power_balance = { id = EQS_sanity_bop }
 			EQS_SOL_wartime_change = yes
 			add_named_threat = { threat = 5 name = threat_SOL_ascended }
@@ -7043,10 +7032,6 @@ country_event = { #Ya just got bamboozled
 			has_war = no
 		}
 		custom_effect_tooltip = equestria.154.a.tp
-		effect_tooltip = {
-			set_politics = { ruling_party = fascism elections_allowed = no }
-			start_civil_war = { ideology = democratic size = 0.5 }
-		}
 		hidden_effect = {
 			EQS_pre_SOL_civil_war_setup = yes
 			remove_power_balance = { id = EQS_sanity_bop }
@@ -7069,32 +7054,21 @@ country_event = { #Ya just got bamboozled
 			has_war = yes
 		}
 		custom_effect_tooltip = equestria.154.a.tp
-		effect_tooltip = {
-			set_politics = { ruling_party = fascism elections_allowed = no }
-			if = {
-				limit = { EQS = { surrender_progress > 0.39 } }
-				country_event = { id = solarempire.2 days = 2 }
-			}
-		}
 		hidden_effect = {
-			set_power_balance = {
-				id = EQS_vestments_of_power_bop
-				set_default = yes
-			}
 			remove_power_balance = { id = EQS_sanity_bop }
 			set_global_flag = SOL_wartime_change
-			if = {
-				limit = {
-					EQC = {
-						is_subject_of = ROOT
-						has_government = democratic
-					}
-				}
-				random_list = {
-					40 = {}
-					60 = { set_country_flag = EQC_dont_break_free_from_SOL }
-				}
-			}
+			#if = {
+			#	limit = {
+			#		EQC = {
+			#			is_subject_of = ROOT
+			#			has_government = democratic
+			#		}
+			#	}
+			#	random_list = {
+			#		40 = {}
+			#		60 = { set_country_flag = EQC_dont_break_free_from_SOL }
+			#	}
+			#}
 			EQS_SOL_wartime_change = yes
 			add_named_threat = { threat = 5 name = threat_SOL_ascended }
 			BAT = {
@@ -7776,6 +7750,8 @@ country_event = { #Starlight joins the Equestrian Army
 	id = equestria.189
 	immediate = {log = "[GetDateText]: [Root.GetName]: event equestria.189"}
 	hidden = yes
+
+	is_triggered_only = yes
 
 	option = {
 		if = {

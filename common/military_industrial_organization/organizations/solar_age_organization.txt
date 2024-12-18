@@ -1187,16 +1187,13 @@ CRY_polished_armor_arsenals_organization = {
 		equipment_bonus = {
 			defense = 0.075
 			reliability = 0.03
-		}
-
-		production_bonus = {
-			production_cost_factor = 0.02
+			build_cost_ic = 0.02
 		}
 	}
 
 	trait = {
-		token = CRY_purified_crystal_matrtices
-		name = CRY_purified_crystal_matrtices
+		token = CRY_purified_crystal_matrices
+		name = CRY_purified_crystal_matrices
 
 		position = {
 			x = 7
@@ -1226,10 +1223,7 @@ CRY_polished_armor_arsenals_organization = {
 		limit_to_equipment_type = { infantry_equipment }
 		equipment_bonus = {
 			reliability = 0.05
-		}
-
-		production_bonus = {
-			production_cost_factor = -0.02
+			build_cost_ic = -0.02
 		}
 	}
 
@@ -1241,19 +1235,16 @@ CRY_polished_armor_arsenals_organization = {
 			x = -2
 			y = 1
 		}
-		relative_position_id = CRY_purified_crystal_matrtices
+		relative_position_id = CRY_purified_crystal_matrices
 
 		any_parent = {
-			CRY_purified_crystal_matrtices
+			CRY_purified_crystal_matrices
 		}
 
 		limit_to_equipment_type = { magical_equipment }
 		equipment_bonus = {
 			breakthrough = 0.1
-		}
-
-		production_bonus = {
-			production_cost_factor = 0.03
+			build_cost_ic = 0.03
 		}
 	}
 
@@ -1265,15 +1256,15 @@ CRY_polished_armor_arsenals_organization = {
 			x = 0
 			y = 1
 		}
-		relative_position_id = CRY_purified_crystal_matrtices
+		relative_position_id = CRY_purified_crystal_matrices
 
 		any_parent = {
-			CRY_purified_crystal_matrtices
+			CRY_purified_crystal_matrices
 		}
 
 		limit_to_equipment_type = { magical_equipment }
 		equipment_bonus = {
-			soft_attack = 0.01
+			soft_attack = 0.03
 			breakthrough = 0.03
 		}
 	}
@@ -1337,7 +1328,7 @@ CRY_polished_armor_arsenals_organization = {
 		}
 
 		equipment_bonus = {
-			defense = 0.05
+			defense = 0.08
 		}
 	}
 
@@ -1361,8 +1352,8 @@ CRY_polished_armor_arsenals_organization = {
 		limit_to_equipment_type = { infantry_equipment }
 		equipment_bonus = {
 			hard_attack = 0.05
-			defense = 0.05
-			breakthrough = 0.02
+			defense = 0.1
+			breakthrough = 0.05
 		}
 	}
 
@@ -1385,8 +1376,8 @@ CRY_polished_armor_arsenals_organization = {
 		mutually_exclusive = { CRY_high_powered_matrices }
 
 		equipment_bonus = {
-			soft_attack = 0.03
-			defense = 0.03
+			soft_attack = 0.05
+			defense = 0.05
 		}
 	}
 
@@ -1408,14 +1399,10 @@ CRY_polished_armor_arsenals_organization = {
 
 		limit_to_equipment_type = { magical_equipment }
 		equipment_bonus = {
-			soft_attack = 0.075
+			soft_attack = 0.07
 			hard_attack = 0.05
-			ap_attack = 0.1
 			reliability = -0.05
-		}
-
-		production_bonus = {
-			production_cost_factor = 0.02
+			build_cost_ic = 0.02
 		}
 	}
 
@@ -1435,8 +1422,7 @@ CRY_polished_armor_arsenals_organization = {
 
 		limit_to_equipment_type = { magical_equipment }
 		equipment_bonus = {
-			reliability = 0.02
-			breakthrough = 0.03
+			reliability = 0.05
 		}
 	}
 
@@ -1457,10 +1443,8 @@ CRY_polished_armor_arsenals_organization = {
 		limit_to_equipment_type = { magical_equipment }
 		equipment_bonus = {
 			defense = 0.05
-		}
-
-		production_bonus = {
-			production_cost_factor = 0.01
+			breakthrough = 0.02
+			build_cost_ic = 0.01
 		}
 	}
 
@@ -1479,8 +1463,9 @@ CRY_polished_armor_arsenals_organization = {
 		}
 
 		equipment_bonus = {
-			ap_attack = 0.05
+			ap_attack = 0.1
 			hard_attack = 0.1
+			build_cost_ic = 0.03
 		}
 	}
 
@@ -1500,9 +1485,10 @@ CRY_polished_armor_arsenals_organization = {
 
 		limit_to_equipment_type = { magical_equipment }
 		equipment_bonus = {
-			hard_attack = 0.1
-			ap_attack = 0.15
-			reliability = -0.03
+			hard_attack = 0.25
+			ap_attack = 0.35
+			reliability = -0.05
+			build_cost_ic = 0.02
 		}
 	}
 
@@ -1522,12 +1508,12 @@ CRY_polished_armor_arsenals_organization = {
 
 		limit_to_equipment_type = { magical_equipment }
 		equipment_bonus = {
-			soft_attack = 0.075
+			soft_attack = 0.1
 			breakthrough = 0.05
+			build_cost_ic = 0.03
 		}
 
 		production_bonus = {
-			production_cost_factor = 0.03
 			production_resource_need_factor = 0.05
 		}
 	}
@@ -1637,7 +1623,7 @@ EQC_prelate_corps_organization = {
 
 		equipment_bonus = {
 			soft_attack = 0.05
-			breakthrough = 0.01
+			breakthrough = 0.02
 		}
 	}
 
@@ -1657,8 +1643,8 @@ EQC_prelate_corps_organization = {
 		}
 
 		equipment_bonus = {
-			fuel_consumption = -0.03
-			maximum_speed = -0.01
+			fuel_consumption = -0.05
+			maximum_speed = -0.02
 		}
 	}
 
@@ -1678,8 +1664,8 @@ EQC_prelate_corps_organization = {
 		}
 
 		equipment_bonus = {
-			armor_value = 0.01
-			reliability = 0.03
+			armor_value = 0.02
+			reliability = 0.05
 		}
 	}
 
@@ -1701,10 +1687,6 @@ EQC_prelate_corps_organization = {
 		equipment_bonus = {
 			hard_attack = 0.05
 		}
-
-		production_bonus = {
-			production_cost_factor = 0.01
-		}
 	}
 
 	trait = {
@@ -1725,10 +1707,6 @@ EQC_prelate_corps_organization = {
 		equipment_bonus = {
 			armor_value = 0.03
 		}
-
-		production_bonus = {
-			production_cost_factor = 0.01
-		}
 	}
 
 	trait = {
@@ -1747,10 +1725,7 @@ EQC_prelate_corps_organization = {
 
 		equipment_bonus = {
 			reliability = 0.03
-		}
-
-		production_bonus = {
-			production_cost_factor = -0.02
+			build_cost_ic = -0.02
 		}
 	}
 
