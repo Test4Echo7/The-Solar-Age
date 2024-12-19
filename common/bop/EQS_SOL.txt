@@ -1,7 +1,7 @@
 EQS_sanity_bop = {
     initial_value = 0.9
-    left_side = EQS_woke
-    right_side = EQS_npc
+    left_side = EQS_angy
+    right_side = EQS_kalm
     decision_category = EQS_BOP_sanity_category
 
     range = {
@@ -32,7 +32,7 @@ EQS_sanity_bop = {
     }
 
     side = {
-        id = EQS_npc
+        id = EQS_kalm
         #icon = GFX_bop_celestia_bust #Should be a bust like Benito's in ITA
         icon = GFX_bop_EQS_harmony_side
         range = {
@@ -97,7 +97,7 @@ EQS_sanity_bop = {
     }
 
     side = {
-        id = EQS_woke
+        id = EQS_angy
         #icon = GFX_bop_sun_side #Should be the same colour, but it's just the sun; alternately can be a shatterd bust of Celestia, or a bust of Daybreaker
         icon = GFX_bop_EQS_order_side
         range = {

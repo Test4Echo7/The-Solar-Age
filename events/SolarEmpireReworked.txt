@@ -29,7 +29,7 @@ country_event = {
         add_power_balance_value = {
             id = EQS_sanity_bop
             value = 0.05
-            tooltip_side = EQS_npc
+            tooltip_side = EQS_kalm
         }
     }
     option = { #We should place them under constant guard and constant work.
@@ -38,7 +38,7 @@ country_event = {
         add_power_balance_value = {
             id = EQS_sanity_bop
             value = -0.05
-            tooltip_side = EQS_woke
+            tooltip_side = EQS_angy
         }
         add_ideas = EQS_pow_laborers
     }
@@ -52,7 +52,7 @@ country_event = {
         add_power_balance_value = {
             id = EQS_sanity_bop
             value = -0.1
-            tooltip_side = EQS_woke
+            tooltip_side = EQS_angy
         }
         hidden_effect = {
             set_technology = {
@@ -139,7 +139,7 @@ country_event = {
         add_power_balance_value = {
             id = EQS_sanity_bop
             value = -0.1
-            tooltip_side = EQS_woke
+            tooltip_side = EQS_angy
         }
         add_popularity = {
             ideology = fascism
@@ -165,7 +165,7 @@ country_event = {
         add_power_balance_value = {
             id = EQS_sanity_bop
             value = -0.05
-            tooltip_side = EQS_woke
+            tooltip_side = EQS_angy
         }
         if = {
             limit = { has_dlc = "La Resistance" }
@@ -186,7 +186,7 @@ country_event = {
         add_power_balance_value = {
             id = EQS_sanity_bop
             value = 0.05
-            tooltip_side = EQS_npc
+            tooltip_side = EQS_kalm
         }
     }
 }
@@ -218,7 +218,7 @@ country_event = {
         add_power_balance_value = {
             id = EQS_sanity_bop
             value = -0.05
-            tooltip_side = EQS_woke
+            tooltip_side = EQS_angy
         }
         add_popularity = {
             ideology = fascism
@@ -231,7 +231,7 @@ country_event = {
         add_power_balance_value = {
             id = EQS_sanity_bop
             value = -0.02
-            tooltip_side = EQS_woke
+            tooltip_side = EQS_angy
         }
     }
     option = { #We mustn't stoop to their level.
@@ -240,7 +240,7 @@ country_event = {
         add_power_balance_value = {
             id = EQS_sanity_bop
             value = 0.03
-            tooltip_side = EQS_npc
+            tooltip_side = EQS_kalm
         }
         add_popularity = {
             ideology = democratic
@@ -272,7 +272,7 @@ country_event = {
         add_power_balance_value = {
             id = EQS_sanity_bop
             value = -0.05
-            tooltip_side = EQS_woke
+            tooltip_side = EQS_angy
         }
         add_popularity = {
             ideology = fascism
@@ -286,7 +286,7 @@ country_event = {
         add_power_balance_value = {
             id = EQS_sanity_bop
             value = -0.03
-            tooltip_side = EQS_woke
+            tooltip_side = EQS_angy
         }
     }
     option = { #Ponies have a right to not be cushioned from the war.
@@ -303,7 +303,7 @@ country_event = {
         add_power_balance_value = {
             id = EQS_sanity_bop
             value = 0.05
-            tooltip_side = EQS_npc
+            tooltip_side = EQS_kalm
         }
         add_popularity = {
             ideology = democratic
@@ -341,7 +341,7 @@ country_event = {
         add_power_balance_value = {
             id = EQS_sanity_bop
             value = -0.075
-            tooltip_side = EQS_woke
+            tooltip_side = EQS_angy
         }
         add_popularity = {
             ideology = fascism
@@ -360,7 +360,7 @@ country_event = {
         add_power_balance_value = {
             id = EQS_sanity_bop
             value = -0.04
-            tooltip_side = EQS_woke
+            tooltip_side = EQS_angy
         }
     }
     option = { #Everypony has a fundamental right to privacy.
@@ -369,7 +369,7 @@ country_event = {
         add_power_balance_value = {
             id = EQS_sanity_bop
             value = 0.04
-            tooltip_side = EQS_npc
+            tooltip_side = EQS_kalm
         }
         add_popularity = {
             ideology = democratic
@@ -409,7 +409,7 @@ country_event = {
         add_power_balance_value = {
             id = EQS_sanity_bop
             value = -0.05
-            tooltip_side = EQS_woke
+            tooltip_side = EQS_angy
         }
         add_popularity = {
             ideology = fascism
@@ -432,7 +432,7 @@ country_event = {
         add_power_balance_value = {
             id = EQS_sanity_bop
             value = -0.02
-            tooltip_side = EQS_woke
+            tooltip_side = EQS_angy
         }
     }
     option = { #Trade makes everypony prosper.
@@ -441,7 +441,7 @@ country_event = {
         add_power_balance_value = {
             id = EQS_sanity_bop
             value = 0.05
-            tooltip_side = EQS_npc
+            tooltip_side = EQS_kalm
         }
         add_popularity = {
             ideology = democratic
@@ -1313,7 +1313,7 @@ country_event = {
         add_power_balance_value = {
             id = EQS_sanity_bop
             value = 0.2
-            tooltip_side = EQS_npc
+            tooltip_side = EQS_kalm
         }
     }
 }
@@ -1332,7 +1332,7 @@ country_event = {
         add_power_balance_value = {
             id = EQS_sanity_bop
             value = -0.2
-            tooltip_side = EQS_woke
+            tooltip_side = EQS_angy
         }
     }
 }
@@ -1371,7 +1371,7 @@ country_event = { #Luna barges into Celestia's chambers demanding to know why sh
         add_power_balance_value = {
             id = EQS_sanity_bop
             value = -0.05
-            tooltip_side = EQS_woke
+            tooltip_side = EQS_angy
         }
     }
 }
@@ -1406,7 +1406,7 @@ country_event = {
         add_power_balance_value = {
             id = EQS_sanity_bop
             value = 0.05
-            tooltip_side = EQS_npc
+            tooltip_side = EQS_kalm
         }
         add_political_power = 25
         add_popularity = {
@@ -1422,7 +1422,7 @@ country_event = {
         add_power_balance_value = {
             id = EQS_sanity_bop
             value = -0.05
-            tooltip_side = EQS_woke
+            tooltip_side = EQS_angy
         }
         add_political_power = -50
         add_popularity = {
@@ -1438,7 +1438,7 @@ country_event = {
         add_power_balance_value = {
             id = EQS_sanity_bop
             value = -0.1
-            tooltip_side = EQS_woke
+            tooltip_side = EQS_angy
         }
         add_political_power = 200
         set_country_flag = {
@@ -1483,7 +1483,7 @@ country_event = {
         add_power_balance_value = {
             id = EQS_sanity_bop
             value = -0.03
-            tooltip_side = EQS_woke
+            tooltip_side = EQS_angy
         }
         add_political_power = 50
         add_stability = 0.03
@@ -1493,7 +1493,7 @@ country_event = {
         add_power_balance_value = {
             id = EQS_sanity_bop
             value = 0.03
-            tooltip_side = EQS_npc
+            tooltip_side = EQS_kalm
         }
         add_political_power = -50
         add_war_support = -0.03
@@ -1528,7 +1528,7 @@ country_event = {
         add_power_balance_value = {
             id = EQS_sanity_bop
             value = 0.04
-            tooltip_side = EQS_npc
+            tooltip_side = EQS_kalm
         }
         add_war_support = -0.03
         add_command_power = 25
@@ -1538,7 +1538,7 @@ country_event = {
         add_power_balance_value = {
             id = EQS_sanity_bop
             value = -0.03
-            tooltip_side = EQS_woke
+            tooltip_side = EQS_angy
         }
         add_war_support = 0.01
         add_command_power = 5
@@ -8600,7 +8600,7 @@ country_event = { #Celestia enters the planning room of the Equestrian Military,
         add_power_balance_value = {
             id = EQS_sanity_bop
             value = -0.02
-            tooltip_side = EQS_woke
+            tooltip_side = EQS_angy
         }
     }
 }
@@ -8631,7 +8631,7 @@ country_event = { #A report is slid across Celestia's desk, and after she reads 
         add_power_balance_value = {
             id = EQS_sanity_bop
             value = -0.05
-            tooltip_side = EQS_woke
+            tooltip_side = EQS_angy
         }
     }
 }

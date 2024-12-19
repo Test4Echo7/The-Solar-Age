@@ -375,7 +375,7 @@ SOL_dealing_with_resistance = {
 			NOT = { has_completed_focus = SOL_Imperium_Solis }
 		}
 		available = { has_completed_focus = SOL_Imperium_Solis }
-		#cancel_trigger = { has_war = yes }
+		cancel_trigger = { eqs_has_civil_war = yes }
 		is_good = no
 		days_mission_timeout = 250
 		timeout_effect = {

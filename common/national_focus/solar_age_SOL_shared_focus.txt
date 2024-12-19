@@ -6269,20 +6269,23 @@ shared_focus = {
 	cost = 5
 	prerequisite = { focus = SOL_almost_pony }
 	available = {
-		SDL = {
-			all_cores_owned_by_ROOT_or_subject = yes
-		}
-		SDC = {
-			all_cores_owned_by_ROOT_or_subject = yes
-		}
-		SDF = {
-			all_cores_owned_by_ROOT_or_subject = yes
-		}
-		SDS = {
-			all_cores_owned_by_ROOT_or_subject = yes
-		}
-		EMR = {
-			all_cores_owned_by_ROOT_or_subject = yes
+		custom_trigger_tooltip = {
+			tooltip = SOL_arabian_nights_tt
+			SDL = {
+				all_cores_owned_by_ROOT_or_subject = yes
+			}
+			SDC = {
+				all_cores_owned_by_ROOT_or_subject = yes
+			}
+			SDF = {
+				all_cores_owned_by_ROOT_or_subject = yes
+			}
+			SDS = {
+				all_cores_owned_by_ROOT_or_subject = yes
+			}
+			EMR = {
+				all_cores_owned_by_ROOT_or_subject = yes
+			}
 		}
 	}
 
@@ -6527,6 +6530,7 @@ shared_focus = {
 shared_focus = {
 	id = SOL_attack_bat
 	icon = GFX_goal_SOL_batnation
+	dynamic = yes
 	prerequisite = { focus = SOL_conquer_GRI }
 	available = {
 		is_subject = no
