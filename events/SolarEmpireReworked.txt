@@ -3863,6 +3863,16 @@ country_event = { #From the perspective of Sunrise Sparkle, in first person, hav
 
     is_triggered_only = yes
 
+    immediate = {
+		hidden_effect = {
+			random_country_with_original_tag = {
+				original_tag_to_check = CRY
+				limit = { has_country_leader = { character = CRY_princess_mi_amore_cadenza ruling_only = yes } }
+				save_event_target_as = CRY_cadence
+			}
+		}
+	}
+
     option = { #You have spoken wisdom, my Empress.
         name = solarreworked.237.a
         hidden_effect = {
@@ -6309,24 +6319,26 @@ country_event = { #EQS receives the response from EQC, and is either happy with 
     option = { #They have chosen wisely.
         trigger = { EQC = { has_country_flag = SOL_EQC_submitted } }
         name = solarreworked.432.a
-        get_current_government_type = yes
+        FROM = { get_current_government_type = yes }
         set_autonomy = {
             autonomous_state = autonomy_reichsprotectorate
             target = FROM
         }
-        restore_previous_government_type = yes
-        if = {
-            limit = { NOT = { has_government = democratic } }
-            set_politics = {
-                ruling_party = democratic
-                elections_allowed = no
-            }
+        FROM = {
+            restore_previous_government_type = yes
             if = {
-                limit = { NOT = { has_country_leader = { character = EQC_jet_set ruling_only = yes } } }
-                promote_character = EQC_jet_set
+                limit = { NOT = { has_government = democratic } }
+                set_politics = {
+                    ruling_party = democratic
+                    elections_allowed = no
+                }
+                if = {
+                    limit = { NOT = { has_country_leader = { character = EQC_jet_set ruling_only = yes } } }
+                    promote_character = EQC_jet_set
+                }
             }
+            set_cosmetic_tag = EQC_SOL
         }
-        FROM = { set_cosmetic_tag = EQC_SOL }
     }
     option = { #A sea separating us means nothing!
         trigger = { EQC = { has_country_flag = SOL_EQC_rejected } }
