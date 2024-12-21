@@ -4876,6 +4876,7 @@ country_event = { #A short event speaking about how many who have gone to serve 
 
     option = { #They will happily die for me!
         name = solarreworked.313.a
+        custom_effect_tooltip = SOL_solaris_inquisitionis_would_like_to_know_your_location_tt
         set_country_flag = SOL_inquisitor_generals
     }
 }

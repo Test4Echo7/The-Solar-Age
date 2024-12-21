@@ -1235,11 +1235,21 @@ ideas = {
 		}
 		SOL_faithful_families = {
 			modifier = {
-				monthly_population = 0.1
+				monthly_population = 0.15
 				stability_factor = 0.1
-				army_org_factor = 0.05
-				army_core_defence_factor = 0.05
+				army_org_factor = 0.075
+				army_morale_factor = 0.035
+				army_core_defence_factor = 0.1
 				research_speed_factor = -0.05
+			}
+		}
+		SOL_worshipful_sacrifice = {
+			modifier = {
+				monthly_population = -0.10
+				research_speed_factor = -0.05
+				war_support_factor = 0.075
+				army_attack_factor = 0.05
+				breakthrough_factor = 0.05
 			}
 		}
 		SOL_correctly_taught = {
@@ -1427,7 +1437,7 @@ ideas = {
 				mobilization_laws_cost_factor = -0.1
 			}
 		}
-		SOL_noponies_equal = {
+		SOL_noponys_equal = {
 			modifier = {
 				political_power_factor = 0.1
 				army_core_defence_factor = 0.05

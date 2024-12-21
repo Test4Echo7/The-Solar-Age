@@ -2232,6 +2232,10 @@ shared_focus = {
 	relative_position_id = SOL_suffer_not_heresy
 	x = -2
 	y = 1
+	offset = {
+		x = 14
+		trigger = { has_completed_focus = SOL_empress_mother }
+	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_Lux_et_Tenebris"
 		#if = {
@@ -2320,6 +2324,7 @@ shared_focus = {
 		#	add_idea = SOL_Solar_Cult_idea2
 		#	remove_idea = SOL_Solar_Cult_idea1
 		#}
+		add_ideas = SOL_worshipful_sacrifice
 		custom_effect_tooltip = SOL_Faith_Sacrifice_Worship_tp
 		hidden_effect = {
 			set_technology = {
@@ -2976,7 +2981,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_government_of_one"
-		add_ideas = SOL_noponies_equal
+		add_ideas = SOL_noponys_equal
 		#Loc should speak about how there has been improvement, but government is needlessly slow, and simply getting out of Daybreaker's way will be the best course of action for improving ponies' lives; let her live as a benevolent dictator
 	}
 	ai_will_do = { factor = 150 }

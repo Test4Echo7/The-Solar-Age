@@ -181,3 +181,15 @@ defined_text = {
 		localization_key = SOL_solaris_speculatores
 	}
 }
+defined_text = {
+	name = GetInquisitionisDescription
+	text = {
+		trigger = {
+			has_completed_focus = SOL_unveil_cultus
+		}
+		localization_key = SOL_integrated_inquisitionis
+	}
+	text = {
+		localization_key = SOL_separate_inquisitionis
+	}
+}
