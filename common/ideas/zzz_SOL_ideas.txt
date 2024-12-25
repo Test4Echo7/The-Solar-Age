@@ -902,7 +902,7 @@ ideas = {
 				}
 			}
 		}
-		SOL_motiviational_speakers = {
+		SOL_motivational_speakers = {
 			modifier = {
 				stability_factor = 0.1
 				fascism_drift = 0.02
@@ -1954,10 +1954,11 @@ ideas = {
 		SOL_sirens_of_fear = {
 			modifier = {
 				air_cas_efficiency = 0.05
+				air_defence_factor = 0.03
 			}
 		}
 		SOL_streamlined_bombers = {
-			equipment_bonus = { large_plane_airframe = { build_cost_ic = -0.2 reliability = -0.15 instant = yes } }
+			equipment_bonus = { large_plane_airframe = { build_cost_ic = -0.2 reliability = -0.1 instant = yes } }
 		}
 		SOL_involuntary_testing_procedures = {
 			research_bonus = { air = 0.1 }
@@ -1970,7 +1971,7 @@ ideas = {
 		}
 		SOL_pegasi_planes = {
 			modifier = {
-				air_cas_efficiency = 0.05
+				air_cas_efficiency = 0.1
 				air_defence_factor = 0.05
 			}
 		}
@@ -1985,7 +1986,7 @@ ideas = {
 			equipment_bonus = { large_plane_airframe = { defense = 0.1 air_agility = -0.05 instant = yes } }
 		}
 		SOL_napalm_strikes = {
-			equipment_bonus = { small_plane_cas_airframe = { air_ground_attack = 0.1 build_cost_ic = 0.1 instant = yes } }
+			equipment_bonus = { small_plane_cas_airframe = { air_ground_attack = 0.1 build_cost_ic = 0.05 instant = yes } }
 		}
 		SOL_napalm_carpeting = {
 			modifier = {
@@ -1994,7 +1995,7 @@ ideas = {
 			equipment_bonus = { large_plane_airframe = { air_agility = -0.05 instant = yes } }
 		}
 		SOL_dive_bombers_justice = {
-			equipment_bonus = { small_plane_cas_airframe = { air_ground_attack = 0.15 air_agility = 0.05 air_defence = -0.15 instant = yes } }
+			equipment_bonus = { small_plane_cas_airframe = { air_ground_attack = 0.15 air_agility = 0.05 air_defence = -0.1 instant = yes } }
 		}
 		SOL_balanced_air_powers = {
 			modifier = {

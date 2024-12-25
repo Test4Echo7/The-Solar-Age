@@ -1993,6 +1993,7 @@ country_event = { #A pilot eagerly hops into his new plane that he has been assi
 
     option = { #Maybe tone down the adrenaline junky aspect.
         name = solarreworked.86.a
+        add_ideas = SOL_pegasi_planes
     }
 }
 
@@ -2252,11 +2253,15 @@ country_event = { #In curiosity, Daybreaker meets with a ship designer from Mane
 
     option = { #Perhaps this has some merit after all.
         name = solarreworked.94.a
+        add_breakthrough_progress = {
+            specialization = specialization_naval
+            value = 0.75
+        }
         add_tech_bonus = {
-			name = shbb_bonus
+			name = bb_bonus
 			uses = 1
 			bonus = 2
-			category = shbb_tech
+			category = bb_tech
 		}
 		custom_effect_tooltip = SOL_biggest_guns_tt #Mention that player will get a design once researched (or already researched), and one production line of Daybreak-Class at 50% completion
     }
@@ -5353,7 +5358,10 @@ country_event = { #A dragon, who is being used for forced labor, manages to find
 
     option = { #Can't we at least sample our work?!
         name = solarreworked.371.a
-        add_dynamic_modifier = { modifier = SOL_dragon_miners }
+        every_state = {
+            limit = { is_core_of = DRG }
+            add_dynamic_modifier = { modifier = SOL_dragon_miners }
+        }
     }
 }
 
@@ -5568,7 +5576,7 @@ country_event = { #Rutherford is in the middle of doing some menial labor in a f
 
     option = { #Yak. Will. SMASH!
         name = solarreworked.379.a
-        add_ideas = SOL_yaks_smashed
+        add_ideas = SOL_smashed_yaks
     }
 }
 

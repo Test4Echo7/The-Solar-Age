@@ -355,7 +355,6 @@ shared_focus = {
 
     cost = 4
     prerequisite = { focus = SOL_civil_war_measures }
-    mutually_exclusive = { focus = SOL_counter_terrorists }
     available = {
 		eqs_has_civil_war = yes
 	}
@@ -405,7 +404,8 @@ shared_focus = {
 
     cost = 4
     prerequisite = { focus = SOL_crisis_industrial_management }
-    mutually_exclusive = { focus = SOL_draw_upon_militia }
+    mutually_exclusive = { focus = SOL_herald_doom }
+    mutually_exclusive = { focus = SOL_take_everypony }
     available = {
 		eqs_has_civil_war = yes
 	}
@@ -497,6 +497,7 @@ shared_focus = {
     cost = 5
     prerequisite = { focus = SOL_promise_swift_end }
     mutually_exclusive = { focus = SOL_take_everypony }
+    mutually_exclusive = { focus = SOL_counter_terrorists }
     available = {
 		eqs_has_civil_war = yes
 	}
@@ -544,6 +545,7 @@ shared_focus = {
     cost = 5
     prerequisite = { focus = SOL_draw_upon_militia }
     mutually_exclusive = { focus = SOL_herald_doom }
+    mutually_exclusive = { focus = SOL_counter_terrorists }
     available = {
 		eqs_has_civil_war = yes
 	}
