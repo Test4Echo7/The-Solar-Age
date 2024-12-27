@@ -119,13 +119,13 @@ on_actions = {
             if = {
                 limit = {
                     ROOT = {
+                        tag = NLR
+                    }
+                    FROM = {
                         tag = EQS
                         NOT = { is_EQS_SOL = yes }
                         NOT = { has_power_balance = { id = EQS_vestments_of_power_bop } }
                         NOT = { has_power_balance = { id = EQS_sanity_bop } }
-                    }
-                    FROM = {
-                        tag = NLR
                     }
                 }
                 ROOT = {
