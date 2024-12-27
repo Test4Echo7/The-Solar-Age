@@ -103,8 +103,8 @@ on_actions = {
                         limit = { has_country_flag = EQS_sanity_bop_initialized }
                         set_power_balance = {
                             id = EQS_sanity_bop
-                            left_side = EQS_woke
-                            right_side = EQS_npc
+                            left_side = EQS_angy
+                            right_side = EQS_kalm
                         }
                     }
                     else = {
@@ -133,16 +133,16 @@ on_actions = {
                         limit = { has_country_flag = EQS_sanity_bop_initialized }
                         set_power_balance = {
                             id = EQS_sanity_bop
-                            left_side = EQS_woke
-                            right_side = EQS_npc
+                            left_side = EQS_angy
+                            right_side = EQS_kalm
                         }
                     }
                     else = {
                         set_country_flag = EQS_sanity_bop_initialized
                         set_power_balance = {
                             id = EQS_sanity_bop
-                            left_side = EQS_woke
-                            right_side = EQS_npc
+                            left_side = EQS_angy
+                            right_side = EQS_kalm
                             set_value = 0.65
                         }
                     }
@@ -165,16 +165,16 @@ on_actions = {
                         limit = { has_country_flag = EQS_sanity_bop_initialized }
                         set_power_balance = {
                             id = EQS_sanity_bop
-                            left_side = EQS_woke
-                            right_side = EQS_npc
+                            left_side = EQS_angy
+                            right_side = EQS_kalm
                         }
                     }
                     else = {
                         set_country_flag = EQS_sanity_bop_initialized
                         set_power_balance = {
                             id = EQS_sanity_bop
-                            left_side = EQS_woke
-                            right_side = EQS_npc
+                            left_side = EQS_angy
+                            right_side = EQS_kalm
                             set_value = 0.25
                         }
                     }
