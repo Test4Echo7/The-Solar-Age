@@ -205,6 +205,12 @@ EQS_BOP_sanity_category = {
         allowed = {
             tag = EQS
         }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = EQS_no_spam_for_u_tt
+                NOT = { has_country_flag = EQS_bop_decision_taken }
+            }
+        }
         cost = 25
         days_remove = 14
         days_re_enable = 30
@@ -213,13 +219,24 @@ EQS_BOP_sanity_category = {
             add_power_balance_value = {
                 id = EQS_sanity_bop
                 value = 0.05
-                tooltip_side = EQS_npc
+                tooltip_side = EQS_kalm
+            }
+            set_country_flag = {
+                flag = EQS_bop_decision_taken
+                days = 30
+                value = 1
             }
         }
     }
     EQS_preside_over_baking_competition = {
         allowed = {
             tag = EQS
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = EQS_no_spam_for_u_tt
+                NOT = { has_country_flag = EQS_bop_decision_taken }
+            }
         }
         cost = 15
         days_remove = 7
@@ -229,13 +246,24 @@ EQS_BOP_sanity_category = {
             add_power_balance_value = {
                 id = EQS_sanity_bop
                 value = 0.05
-                tooltip_side = EQS_npc
+                tooltip_side = EQS_kalm
+            }
+            set_country_flag = {
+                flag = EQS_bop_decision_taken
+                days = 30
+                value = 1
             }
         }
     }
     EQS_visit_veterans_hospital = {
         allowed = {
             tag = EQS
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = EQS_no_spam_for_u_tt
+                NOT = { has_country_flag = EQS_bop_decision_taken }
+            }
         }
         cost = 50
         days_remove = 30
@@ -245,13 +273,24 @@ EQS_BOP_sanity_category = {
             add_power_balance_value = {
                 id = EQS_sanity_bop
                 value = 0.1
-                tooltip_side = EQS_npc
+                tooltip_side = EQS_kalm
+            }
+            set_country_flag = {
+                flag = EQS_bop_decision_taken
+                days = 30
+                value = 1
             }
         }
     }
     EQS_provide_new_charity_grant = {
         allowed = {
             tag = EQS
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = EQS_no_spam_for_u_tt
+                NOT = { has_country_flag = EQS_bop_decision_taken }
+            }
         }
         cost = 75
         days_remove = 45
@@ -262,7 +301,7 @@ EQS_BOP_sanity_category = {
             add_power_balance_value = {
                 id = EQS_sanity_bop
                 value = 0.1
-                tooltip_side = EQS_npc
+                tooltip_side = EQS_kalm
             }
         }
     }
@@ -281,6 +320,11 @@ EQS_BOP_sanity_category = {
             log = "[GetDateText]: [Root.GetName]: Decision EQS_discuss_fears_with_luna"
             ###Event of Celestia recalling Luna from the front so that she can tell of some of her fears, which Luna then spends some time to assuage from; Luna is worried at first because she believes that something horrible is going to happen, but Celestia is only worrying, and she says that it shows she truly cares for her ponies, which eases Celestia's worries
             country_event = solarreworked.50
+            set_country_flag = {
+                flag = EQS_bop_decision_taken
+                days = 30
+                value = 1
+            }
         }
     }
     ###Worrying activities
@@ -288,7 +332,13 @@ EQS_BOP_sanity_category = {
         allowed = {
             tag = EQS
         }
-        available = { has_war = yes }
+        available = {
+            has_war = yes
+            custom_trigger_tooltip = {
+                tooltip = EQS_no_spam_for_u_tt
+                NOT = { has_country_flag = EQS_bop_decision_taken }
+            }
+        }
         cost = 20
         days_remove = 30
         days_re_enable = 30
@@ -301,7 +351,12 @@ EQS_BOP_sanity_category = {
             add_power_balance_value = {
                 id = EQS_sanity_bop
                 value = -0.05
-                tooltip_side = EQS_woke
+                tooltip_side = EQS_angy
+            }
+            set_country_flag = {
+                flag = EQS_bop_decision_taken
+                days = 30
+                value = 1
             }
         }
     }
@@ -309,7 +364,13 @@ EQS_BOP_sanity_category = {
         allowed = {
             tag = EQS
         }
-        available = { has_war = yes }
+        available = {
+            has_war = yes
+            custom_trigger_tooltip = {
+                tooltip = EQS_no_spam_for_u_tt
+                NOT = { has_country_flag = EQS_bop_decision_taken }
+            }
+        }
         cost = 35
         days_remove = 14
         days_re_enable = 45
@@ -323,7 +384,12 @@ EQS_BOP_sanity_category = {
             add_power_balance_value = {
                 id = EQS_sanity_bop
                 value = -0.05
-                tooltip_side = EQS_woke
+                tooltip_side = EQS_angy
+            }
+            set_country_flag = {
+                flag = EQS_bop_decision_taken
+                days = 30
+                value = 1
             }
         }
     }
@@ -331,7 +397,13 @@ EQS_BOP_sanity_category = {
         allowed = {
             tag = EQS
         }
-        available = { has_war = yes }
+        available = {
+            has_war = yes
+            custom_trigger_tooltip = {
+                tooltip = EQS_no_spam_for_u_tt
+                NOT = { has_country_flag = EQS_bop_decision_taken }
+            }
+        }
         cost = 35
         days_remove = 14
         days_re_enable = 90
@@ -344,7 +416,12 @@ EQS_BOP_sanity_category = {
             add_power_balance_value = {
                 id = EQS_sanity_bop
                 value = -0.1
-                tooltip_side = EQS_woke
+                tooltip_side = EQS_angy
+            }
+            set_country_flag = {
+                flag = EQS_bop_decision_taken
+                days = 30
+                value = 1
             }
         }
     }
@@ -352,7 +429,13 @@ EQS_BOP_sanity_category = {
         allowed = {
             tag = EQS
         }
-        available = { has_war = yes }
+        available = {
+            has_war = yes
+            custom_trigger_tooltip = {
+                tooltip = EQS_no_spam_for_u_tt
+                NOT = { has_country_flag = EQS_bop_decision_taken }
+            }
+        }
         cost = 50
         days_remove = 30
         days_re_enable = 120
@@ -365,7 +448,12 @@ EQS_BOP_sanity_category = {
             add_power_balance_value = {
                 id = EQS_sanity_bop
                 value = -0.1
-                tooltip_side = EQS_woke
+                tooltip_side = EQS_angy
+            }
+            set_country_flag = {
+                flag = EQS_bop_decision_taken
+                days = 30
+                value = 1
             }
         }
     }
@@ -384,6 +472,11 @@ EQS_BOP_sanity_category = {
             log = "[GetDateText]: [Root.GetName]: Decision EQS_taste_of_the_war"
             ###Celestia visits Luna on the front, who is surprised to see her, and at first they both talk about the state of it, and Celestia's worries, but they are surprised by a changeling attack on them, which gets Celestia a taste of fighting as she takes a couple of lives, which makes her puke before the end of the event
             country_event = solarreworked.51
+            set_country_flag = {
+                flag = EQS_bop_decision_taken
+                days = 30
+                value = 1
+            }
         }
     }
 }

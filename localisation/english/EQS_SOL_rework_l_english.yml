@@ -59,7 +59,7 @@
   EQS_schizophrenic_insanity:0 "§RFurious§!"
   EQS_kalm:0 "Harmony"
   EQS_angy:0 "Order"
-  EQS_take_lakeside_retreat:0 "Go on a Lakeside Retreat"
+  EQS_take_lakeside_retreat:0 "Go to a Lakeside Retreat"
   EQS_preside_over_baking_competition:0 "Preside over Baking Competition"
   EQS_visit_veterans_hospital:0 "Visit Veterans Hospital"
   EQS_provide_new_charity_grant:0 "Provide new Charity Grants"
@@ -427,6 +427,7 @@
   SOL_arabian_nights_tt:0 "All of §Y[SDL.GetNameDef]'s§! cores are owned by us or our subjects."
   SOL_blueblood_kneeled:0 "Prince Blueblood has submitted himself to Daybreaker"
   SOL_kept_smile_agents:0 "Has permitted former S.M.I.L.E. agents to stay in the [SOLGetAgencyName]"
+  EQS_no_spam_for_u_tt:0 "§Y[ROOT.GetLeader]§! has not recently performed a political activity"
 
   ###Last one in the chain. Remove comment later###
   SOL_conglaturation_a_winner_is_you_tt:0 "§GHarmony has been preserved and all of ponykind now bends the knee to Daybreaker. Thank you for playing the Solar Age! - Test4Echo§!"
