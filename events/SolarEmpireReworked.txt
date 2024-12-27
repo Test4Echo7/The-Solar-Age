@@ -7438,6 +7438,8 @@ country_event = { #Country event speaking of either of GRD's acceptance or rejec
     option = { #We tried our best.
         trigger = { GRD = { has_country_flag = SOL_GRI_rejected } }
         name = solarreworked.494.b
+        clr_country_flag = SOL_sunset_away
+        clr_country_flag = SOL_twilight_away
         add_political_power = -200
         add_stability = -0.05
     }
@@ -8041,6 +8043,32 @@ country_event = { #Event to count down the number of days left in Project Helios
                 id = solarreworked.514
                 days = 1
             }
+        }
+    }
+}
+
+country_event = { #Triggered event informing GRD or EQS that the attache has been recalled due to war between the two nations, as tensions built in the teams, for obvious reasons.
+    id = solarreworked.515
+    title = solarreworked.515.t
+    desc = solarreworked.515.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.515"}
+
+    is_triggered_only = yes
+
+    option = { #We shall test their tactics on the battlefield!
+        name = solarreworked.515.a
+        if = {
+            limit = {
+                tag = GRD
+            }
+            remove_ideas = SOL_solar_griffon_attache_GRI
+            clr_country_flag = SOL_GRI_accepted
+        }
+        if = {
+            limit = {
+                tag = EQS
+            }
+            remove_ideas = SOL_solar_griffon_attache_SOL
         }
     }
 }

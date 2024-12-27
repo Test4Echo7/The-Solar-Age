@@ -7109,6 +7109,10 @@ shared_focus = {
 		GRD = {
 			exists = yes
 			is_subject = no
+			has_opinion = {
+				target = ROOT
+				value > 74
+			}
 		}
 		custom_trigger_tooltip = {
 			tooltip = SOL_all_hands_on_deck_tt
