@@ -496,6 +496,7 @@ country_event = { #Daybreaker, who is still cementing her power, is confronted b
 
     option = { #Now, do you think twin lavafalls will fit here?
         name = solarreworked.21.a
+        set_country_flag = SOL_fancy_pants_sacked
         EQS_fancy_pants = {
             remove_advisor_role = { slot = political_advisor }
         }
@@ -4364,7 +4365,7 @@ country_event = { #Agents from Daybreaker are sent to investigate Twilight's cas
 
     option = { #Two for the price of one.
         name = solarreworked.283.a
-        set_country_flag = SOL_unlocked_filly_pony
+        set_country_flag = SOL_unlocked_fillydelphia_ponyville
     }
 }
 
@@ -4394,7 +4395,7 @@ country_event = { #Freeside restaurant
 
     option = {
         name = solarreworked.285.a
-        set_country_flag = SOL_unlocked_horse_mane
+        set_country_flag = SOL_unlocked_horseleans_manehattan
     }
 }
 
@@ -4409,7 +4410,7 @@ country_event = { #Make fail chance later; Ponyville cottage
 
     option = {
         name = solarreworked.286.a
-        set_country_flag = SOL_unlocked_mane_only
+        set_country_flag = SOL_unlocked_manehattan_only
     }
 }
 
@@ -4454,7 +4455,7 @@ country_event = { #Search jungle camp
 
     option = {
         name = solarreworked.289.a
-        set_country_flag = SOL_unlocked_dodge_mare
+        set_country_flag = SOL_unlocked_dodge_mareway
     }
 }
 
@@ -4469,7 +4470,7 @@ country_event = { #Manehattan opera house
 
     option = {
         name = solarreworked.290.a
-        set_country_flag = SOL_unlocked_pony_mane
+        set_country_flag = SOL_unlocked_ponyville_manehattan
     }
 }
 
@@ -6907,7 +6908,16 @@ country_event = { #Event speaking about what DRG can even offer the Empress, and
             NOT = { has_country_flag = SOL_twilight_away }
         }
         name = solarreworked.480.a
+        ai_chance = {
+            factor = 5
+            modifier = {
+                is_historical_focus_on = yes
+                factor = 3
+            }
+        }
+        set_country_flag = SOL_twilight_away
         DRG = {
+            set_country_flag = SOL_twilight_negotiating
             country_event = {
                 id = solarreworked.481
                 days = 3
@@ -6920,7 +6930,12 @@ country_event = { #Event speaking about what DRG can even offer the Empress, and
             NOT = { has_country_flag = SOL_sunset_away }
         }
         name = solarreworked.480.b
+        ai_chance = {
+            factor = 3
+        }
+        set_country_flag = SOL_sunset_away
         DRG = {
+            set_country_flag = SOL_sunset_negotiating
             country_event = {
                 id = solarreworked.481
                 days = 3
@@ -6940,6 +6955,20 @@ country_event = { #The diplomat arrives in DRG; Sunrise would be more warmly gre
     option = { #We are not afraid of a few ponies.
         name = solarreworked.481.a
         set_country_flag = SOL_DRG_rejected
+        ai_chance = {
+            factor = 1
+            modifier = {
+                strength_ratio = {
+                    tag = FROM
+                    ratio > 0.2
+                }
+                factor = 3
+            }
+            modifier = {
+                has_government = fascism
+                factor = 3
+            }
+        }
         FROM = {
             country_event = {
                 id = solarreworked.482
@@ -6949,6 +6978,28 @@ country_event = { #The diplomat arrives in DRG; Sunrise would be more warmly gre
     }
     option = { #Survival above pride.
         name = solarreworked.481.b
+        ai_chance = {
+            factor = 3
+            modifier = {
+                strength_ratio = {
+                    tag = FROM
+                    ratio < 0.2
+                }
+                factor = 2
+            }
+            modifier = {
+                has_country_flag = SOL_twilight_negotiating
+                factor = 5
+            }
+            modifier = {
+                has_country_flag = SOL_sunset_negotiating
+                factor = 2
+            }
+            modifier = {
+                is_historical_focus_on = yes
+                factor = 0.5
+            }
+        }
         set_country_flag = SOL_DRG_accepted
         FROM = {
             country_event = {
@@ -6971,26 +7022,46 @@ country_event = { #Country event speaking of either the dragon's acceptance or r
         trigger = { DRG = { has_country_flag = SOL_DRG_accepted } }
         name = solarreworked.482.a
         set_autonomy = {
-            autonomous_state = autonomy_reichsprotectorate
+            autonomous_state = autonomy_satellite
             target = FROM
         }
         FROM = {
             set_cosmetic_tag = DRG_SOL
         }
         if = {
-            limit = { has_country_flag = SOL_twilight_away }
+            limit = { FROM = { has_country_flag = SOL_twilight_negotiating } }
             add_ideas = SOL_dragon_laborers_twiggles
             clr_country_flag = SOL_twilight_away
+            FROM = { clr_country_flag = SOL_twilight_negotiating }
         }
         else_if = {
-            limit = { has_country_flag = SOL_sunset_away }
+            limit = { FROM = { has_country_flag = SOL_sunset_negotiating } }
             add_ideas = SOL_dragon_laborers_shim_sham
             clr_country_flag = SOL_sunset_away
+            FROM = { clr_country_flag = SOL_sunset_negotiating }
         }
     }
     option = { #Such a pity.
         trigger = { DRG = { has_country_flag = SOL_DRG_rejected } }
         name = solarreworked.482.b
+        if = {
+            limit = { has_country_flag = SOL_twilight_away }
+            clr_country_flag = SOL_twilight_away
+        }
+        else_if = {
+            limit = { has_country_flag = SOL_sunset_away }
+            clr_country_flag = SOL_sunset_away
+        }
+        FROM = {
+            if = {
+                limit = { has_country_flag = SOL_twilight_negotiating }
+                clr_country_flag = SOL_twilight_negotiating
+            }
+            else_if = {
+                limit = { has_country_flag = SOL_sunset_negotiating }
+                clr_country_flag = SOL_sunset_negotiating
+            }
+        }
         create_wargoal = {
             target = FROM
             type = puppet_wargoal_focus
@@ -7013,10 +7084,41 @@ country_event = { #Event speaking about what YAK can even offer the Empress, and
             NOT = { has_country_flag = SOL_twilight_away }
         }
         name = solarreworked.483.a
-        YAK = {
-            country_event = {
-                id = solarreworked.484
-                days = 5
+        ai_chance = {
+            factor = 1
+            modifier = {
+                has_completed_focus = SOL_god_empress
+                factor = 4
+            }
+            modifier = {
+                has_completed_focus = SOL_empress_mother
+                factor = 3
+            }
+        }
+        if = {
+            limit = {
+                country_exists = YAK
+                NOT = { country_exists = JAK }
+            }
+            YAK = {
+                set_country_flag = SOL_twilight_negotiating
+                country_event = {
+                    id = solarreworked.484
+                    days = 5
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                country_exists = JAK
+                NOT = { country_exists = YAK }
+            }
+            JAK = {
+                set_country_flag = SOL_twilight_negotiating
+                country_event = {
+                    id = solarreworked.484
+                    days = 5
+                }
             }
         }
     }
@@ -7026,10 +7128,41 @@ country_event = { #Event speaking about what YAK can even offer the Empress, and
             NOT = { has_country_flag = SOL_sunset_away }
         }
         name = solarreworked.483.b
-        YAK = {
-            country_event = {
-                id = solarreworked.484
-                days = 5
+        ai_chance = {
+            factor = 1
+            modifier = {
+                is_historical_focus_on = yes
+                factor = 10
+            }
+            modifier = {
+                has_completed_focus = SOL_empress_protector
+                factor = 3
+            }
+        }
+        if = {
+            limit = {
+                country_exists = YAK
+                NOT = { country_exists = JAK }
+            }
+            YAK = {
+                set_country_flag = SOL_sunset_negotiating
+                country_event = {
+                    id = solarreworked.484
+                    days = 5
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                country_exists = JAK
+                NOT = { country_exists = YAK }
+            }
+            JAK = {
+                set_country_flag = SOL_sunset_negotiating
+                country_event = {
+                    id = solarreworked.484
+                    days = 5
+                }
             }
         }
     }
@@ -7043,8 +7176,39 @@ country_event = { #The diplomat arrives in YAK; Rutherford would be far more on 
 
     is_triggered_only = yes
 
-    option = { #Yaks strong! Yaks no bullied by ponies!
+    option = { #Yaks strong! Yaks not be bullied by ponies!
         name = solarreworked.484.a
+        ai_chance = {
+            factor = 3
+            modifier = {
+                has_country_flag = SOL_sunset_negotiating
+                factor = 1.5
+            }
+            modifier = {
+                has_country_flag = SOL_sunset_negotiating
+                has_country_leader = { character = YAK_prince_rutherford ruling_only = yes }
+                factor = 0.25
+            }
+            modifier = {
+                has_country_flag = SOL_twilight_negotiating
+                has_country_leader = { character = YAK_prince_rutherford ruling_only = yes }
+                factor = 0.5
+            }
+            modifier = {
+                strength_ratio = {
+                    tag = FROM
+                    ratio > 0.7
+                }
+                factor = 6
+            }
+            modifier = {
+                OR = {
+                    has_government = fascism
+                    has_government = communism
+                }
+                factor = 2
+            }
+        }
         set_country_flag = SOL_YAK_rejected
         FROM = {
             country_event = {
@@ -7055,8 +7219,33 @@ country_event = { #The diplomat arrives in YAK; Rutherford would be far more on 
     }
     option = { #Yaks smart! Yaks work with colorful ponies!
         name = solarreworked.484.b
+        ai_chance = {
+            factor = 1
+            modifier = {
+                strength_ratio = {
+                    tag = FROM
+                    ratio < 0.7
+                }
+                factor = 2
+            }
+            modifier = {
+                strength_ratio = {
+                    tag = FROM
+                    ratio < 0.5
+                }
+                factor = 5
+            }
+            modifier = {
+                has_country_flag = SOL_twilight_negotiating
+                factor = 2
+            }
+            modifier = {
+                has_country_flag = SOL_sunset_negotiating
+                factor = 3
+            }
+        }
         set_country_flag = SOL_YAK_accepted
-        FROM = {
+        EQS = {
             country_event = {
                 id = solarreworked.485
                 days = 5
@@ -7077,26 +7266,142 @@ country_event = { #Country event speaking of either the yak's acceptance or reje
         trigger = { YAK = { has_country_flag = SOL_YAK_accepted } }
         name = solarreworked.485.a
         set_autonomy = {
-            autonomous_state = autonomy_reichsprotectorate
+            autonomous_state = autonomy_satellite
             target = FROM
         }
         FROM = {
             set_cosmetic_tag = YAK_SOL
         }
         if = {
-            limit = { has_country_flag = SOL_twilight_away }
-            #Spawn some yak troops
+            limit = { FROM = { has_country_flag = SOL_twilight_negotiating } }
+            custom_effect_tooltip = SOL_super_smash_pones_tt
+            hidden_effect = {
+                division_template = {
+                    name = "Yak Levies"
+                    is_locked = yes
+                    division_cap = 9
+                    division_names_group = EQS_YAK_INF_01
+                    regiments = {
+                        infantry = { x = 0 y = 0 }
+                        infantry = { x = 0 y = 1 }
+                        infantry = { x = 0 y = 2 }
+                        infantry = { x = 0 y = 3 }
+                        infantry = { x = 1 y = 0 }
+                        infantry = { x = 1 y = 1 }
+                        infantry = { x = 1 y = 2 }
+                        infantry = { x = 1 y = 3 }
+                        artillery_brigade = { x = 2 y = 0 }
+                        artillery_brigade = { x = 2 y = 1 }
+                        artillery_brigade = { x = 2 y = 2 }
+                    }
+                    support = {
+                        winter_logistics_support = { x = 0 y = 0 }
+                        engineer = { x = 0 y = 1 }
+                        logistics_company = { x = 0 y = 2 }
+                    }
+                }
+                11 = {
+                    create_unit = {
+                        division = "name = \"Rutherford's Personal SMASHers\" division_template = \"Yak Levies\" start_experience_factor = 0.75"
+                        owner = EQS
+                    }
+                    create_unit = {
+                        division = "name = \"Bradford's CRUSHers\" division_template = \"Yak Levies\" start_experience_factor = 0.3"
+                        owner = EQS
+                    }
+                    create_unit = {
+                        division = "name = \"The Throat Yodelers\" division_template = \"Yak Levies\" start_experience_factor = 0.3"
+                        owner = EQS
+                    }
+                    create_unit = {
+                        division = "division_template = \"Yak Levies\" start_experience_factor = 0.1"
+                        owner = EQS
+                    }
+                    create_unit = {
+                        division = "division_template = \"Yak Levies\" start_experience_factor = 0.1"
+                        owner = EQS
+                    }
+                }
+            }
             clr_country_flag = SOL_twilight_away
+            FROM = { clr_country_flag = SOL_twilight_negotiating }
         }
         else_if = {
-            limit = { has_country_flag = SOL_sunset_away }
-            #Add permanent resource rights
+            limit = { FROM = { has_country_flag = SOL_sunset_negotiating } }
+            FROM = {
+                custom_effect_tooltip = SOL_slurp_them_resources_tt
+                hidden_effect = {
+                    give_resource_rights = {
+                        receiver = ROOT
+                        state = 11
+                    }
+                    give_resource_rights = {
+                        receiver = ROOT
+                        state = 254
+                    }
+                    give_resource_rights = {
+                        receiver = ROOT
+                        state = 255
+                    }
+                    give_resource_rights = {
+                        receiver = ROOT
+                        state = 317
+                    }
+                    give_resource_rights = {
+                        receiver = ROOT
+                        state = 257
+                    }
+                    give_resource_rights = {
+                        receiver = ROOT
+                        state = 346
+                    }
+                    give_resource_rights = {
+                        receiver = ROOT
+                        state = 268
+                    }
+                    give_resource_rights = {
+                        receiver = ROOT
+                        state = 274
+                    }
+                    give_resource_rights = {
+                        receiver = ROOT
+                        state = 340
+                    }
+                    give_resource_rights = {
+                        receiver = ROOT
+                        state = 342
+                    }
+                    give_resource_rights = {
+                        receiver = ROOT
+                        state = 256
+                    }
+                }
+            }
             clr_country_flag = SOL_sunset_away
+            FROM = { clr_country_flag = SOL_sunset_negotiating }
         }
     }
     option = { #Probably for the best to rid them of their stench.
         trigger = { YAK = { has_country_flag = SOL_YAK_rejected } }
         name = solarreworked.485.b
+        if = {
+            limit = { has_country_flag = SOL_twilight_away }
+            clr_country_flag = SOL_twilight_away
+        }
+        else_if = {
+            limit = { has_country_flag = SOL_sunset_away }
+            clr_country_flag = SOL_sunset_away
+        }
+        FROM = {
+            if = {
+                limit = { has_country_flag = SOL_twilight_negotiating }
+                clr_country_flag = SOL_twilight_negotiating
+            }
+            else_if = {
+                limit = { has_country_flag = SOL_sunset_negotiating }
+                clr_country_flag = SOL_sunset_negotiating
+            }
+        }
         create_wargoal = {
             target = FROM
             type = puppet_wargoal_focus
@@ -7119,17 +7424,47 @@ country_event = { #Event speaking about the instability in the north and how Chr
             NOT = { has_country_flag = SOL_twilight_away }
         }
         name = solarreworked.486.a
-        #Should account for independence and existence before sending
-        PLB = {
-            country_event = {
-                id = solarreworked.487
-                days = 8
+        ai_chance = {
+            factor = 1
+            modifier = {
+                has_completed_focus = SOL_god_empress
+                factor = 10
+            }
+            modifier = {
+                has_completed_focus = SOL_empress_protector
+                factor = 3
             }
         }
-        PNG = {
-            country_event = {
-                id = solarreworked.487
-                days = 15
+        #Should account for independence and existence before sending
+        if = {
+            limit = {
+                PLB = {
+                    exists = yes
+                    is_subject = no
+                }
+            }
+            PLB = {
+                set_country_flag = SOL_twilight_negotiating
+                country_event = {
+                    id = solarreworked.487
+                    days = 8
+                }
+            }
+        }
+        if = {
+            limit = {
+                PNG = {
+                    exists = yes
+                    is_subject = no
+                }
+            }
+            PNG = {
+                set_country_flag = SOL_twilight_negotiating
+                set_global_flag = SOL_block_removing_away_flag
+                country_event = {
+                    id = solarreworked.487
+                    days = 15
+                }
             }
         }
     }
@@ -7139,16 +7474,42 @@ country_event = { #Event speaking about the instability in the north and how Chr
             NOT = { has_country_flag = SOL_sunset_away }
         }
         name = solarreworked.486.b
-        PLB = {
-            country_event = {
-                id = solarreworked.487
-                days = 8
+        ai_chance = {
+            factor = 1
+            modifier = {
+                has_completed_focus = SOL_empress_mother
+                factor = 3
             }
         }
-        PNG = {
-            country_event = {
-                id = solarreworked.487
-                days = 15
+        if = {
+            limit = {
+                PLB = {
+                    exists = yes
+                    is_subject = no
+                }
+            }
+            PLB = {
+                set_country_flag = SOL_sunset_negotiating
+                country_event = {
+                    id = solarreworked.487
+                    days = 8
+                }
+            }
+        }
+        if = {
+            limit = {
+                PNG = {
+                    exists = yes
+                    is_subject = no
+                }
+            }
+            PNG = {
+                set_country_flag = SOL_sunset_negotiating
+                set_global_flag = SOL_block_removing_away_flag
+                country_event = {
+                    id = solarreworked.487
+                    days = 15
+                }
             }
         }
     }
@@ -7158,12 +7519,26 @@ country_event = { #The diplomat first arrives in PLB to speak with the leader th
     id = solarreworked.487 #PNG would be the same offers, with a showcase of what PNG is like by the leader, since it's the first time in generations a pony representative had been to the nation
     title = solarreworked.487.t
     desc = solarreworked.487.d
-    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.481"}
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.487"}
 
     is_triggered_only = yes
 
     option = { #The deal is not acceptable. Freedom is hard-fought for.
         name = solarreworked.487.a
+        ai_chance = {
+            factor = 1
+            modifier = {
+                tag = PLB
+                factor = 4
+            }
+            modifier = {
+                strength_ratio = {
+                    tag = FROM
+                    ratio > 0.65
+                }
+                factor = 3
+            }
+        }
         if = {
             limit = { tag = PLB }
             set_country_flag = SOL_PLB_rejected
@@ -7181,7 +7556,26 @@ country_event = { #The diplomat first arrives in PLB to speak with the leader th
     }
     option = { #It is the wisest course of action.
         name = solarreworked.487.b
-        #Check for which tag
+        ai_chance = {
+            factor = 1
+            modifier = {
+                tag = PLB
+                has_country_flag = SOL_twilight_negotiating
+                factor = 8
+            }
+            modifier = {
+                tag = PNG
+                has_country_flag = SOL_sunset_negotiating
+                factor = 3
+            }
+            modifier = {
+                strength_ratio = {
+                    tag = FROM
+                    ratio < 0.5
+                }
+                factor = 3
+            }
+        }
         if = {
             limit = { tag = PLB }
             set_country_flag = SOL_PLB_accepted
@@ -7189,6 +7583,7 @@ country_event = { #The diplomat first arrives in PLB to speak with the leader th
         if = {
             limit = { tag = PNG }
             set_country_flag = SOL_PNG_accepted
+            clr_global_flag = SOL_block_removing_away_flag
         }
         FROM = {
             country_event = {
@@ -7233,16 +7628,28 @@ country_event = { #Country event speaking of either PLB and PNG's acceptance or 
             }
         }
         if = {
-            limit = { has_country_flag = SOL_twilight_away }
+            limit = { FROM = { has_country_flag = SOL_twilight_negotiating } }
             #Oil rights here
-            clr_country_flag = SOL_twilight_away
+            if = {
+                limit = {
+                    NOT = { has_global_flag = SOL_block_removing_away_flag }
+                }
+                clr_country_flag = SOL_twilight_away
+            }
+            FROM = { clr_country_flag = SOL_twilight_negotiating }
         }
         else_if = {
-            limit = { has_country_flag = SOL_sunset_away }
+            limit = { FROM = { has_country_flag = SOL_sunset_negotiating } }
             FROM = {
                 add_ideas = SOL_native_oil_shim_sham
+                clr_country_flag = SOL_sunset_negotiating
             }
-            clr_country_flag = SOL_sunset_away
+            if = {
+                limit = {
+                    NOT = { has_global_flag = SOL_block_removing_away_flag }
+                }
+                clr_country_flag = SOL_sunset_away
+            }
         }
     }
     option = { #This wasn't a polite request.
@@ -7253,6 +7660,30 @@ country_event = { #Country event speaking of either PLB and PNG's acceptance or 
             }
         }
         name = solarreworked.488.b
+        if = {
+            limit = {
+                has_country_flag = SOL_twilight_away
+                NOT = { has_global_flag = SOL_block_removing_away_flag }
+            }
+            clr_country_flag = SOL_twilight_away
+        }
+        else_if = {
+            limit = {
+                has_country_flag = SOL_sunset_away
+                NOT = { has_global_flag = SOL_block_removing_away_flag }
+            }
+            clr_country_flag = SOL_sunset_away
+        }
+        FROM = {
+            if = {
+                limit = { has_country_flag = SOL_twilight_negotiating }
+                clr_country_flag = SOL_twilight_negotiating
+            }
+            else_if = {
+                limit = { has_country_flag = SOL_sunset_negotiating }
+                clr_country_flag = SOL_sunset_negotiating
+            }
+        }
         create_wargoal = {
             target = FROM
             type = puppet_wargoal_focus
@@ -7275,10 +7706,42 @@ country_event = { #Event speaking about the chaos that GRF has been sent into af
             NOT = { has_country_flag = SOL_twilight_away }
         }
         name = solarreworked.489.a
-        GRF = {
-            country_event = {
-                id = solarreworked.490
-                days = 7
+        ai_chance = {
+            factor = 2
+            modifier = {
+                has_completed_focus = SOL_empress_mother
+                factor = 5
+            }
+        }
+        if = {
+            limit = {
+                country_exists = GRF
+                GFF = {
+                    OR = {
+                        exists = no
+                        is_subject_of = GRF
+                    }
+                }
+            }
+            GRF = {
+                set_country_flag = SOL_twilight_negotiating
+                country_event = {
+                    id = solarreworked.490
+                    days = 7
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                country_exists = GFF
+                NOT = { country_exists = GRF }
+            }
+            GFF = {
+                set_country_flag = SOL_twilight_negotiating
+                country_event = {
+                    id = solarreworked.490
+                    days = 7
+                }
             }
         }
     }
@@ -7288,10 +7751,42 @@ country_event = { #Event speaking about the chaos that GRF has been sent into af
             NOT = { has_country_flag = SOL_sunset_away }
         }
         name = solarreworked.489.b
-        GRF = {
-            country_event = {
-                id = solarreworked.490
-                days = 7
+        ai_chance = {
+            factor = 3
+            modifier = {
+                has_completed_focus = SOL_god_empress
+                factor = 2
+            }
+        }
+        if = {
+            limit = {
+                country_exists = GRF
+                GFF = {
+                    OR = {
+                        exists = no
+                        is_subject_of = GRF
+                    }
+                }
+            }
+            GRF = {
+                set_country_flag = SOL_sunset_negotiating
+                country_event = {
+                    id = solarreworked.490
+                    days = 7
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                country_exists = GFF
+                NOT = { country_exists = GRF }
+            }
+            GFF = {
+                set_country_flag = SOL_sunset_negotiating
+                country_event = {
+                    id = solarreworked.490
+                    days = 7
+                }
             }
         }
     }
@@ -7307,6 +7802,20 @@ country_event = { #The diplomat arrives in GRF; Sunrise would be rather disinter
 
     option = { #We are independent for a reason.
         name = solarreworked.490.a
+        ai_chance = {
+            factor = 5
+            modifier = {
+                strength_ratio = {
+                    tag = FROM
+                    ratio > 0.7
+                }
+                factor = 1.5
+            }
+            modifier = {
+                has_government = democratic
+                factor = 2
+            }
+        }
         set_country_flag = SOL_GRF_rejected
         FROM = {
             country_event = {
@@ -7316,9 +7825,27 @@ country_event = { #The diplomat arrives in GRF; Sunrise would be rather disinter
         }
     }
     option = { #We can't stand against her firepower. We must submit.
-        name = solarreworked.491.b
+        name = solarreworked.490.b
+        ai_chance = {
+            factor = 2
+            modifier = {
+                strength_ratio = {
+                    tag = FROM
+                    ratio < 0.6
+                }
+                factor = 2
+            }
+            modifier = {
+                has_country_flag = SOL_sunset_negotiating
+                factor = 5
+            }
+            modifier = {
+                has_country_flag = SOL_twilight_negotiating
+                factor = 2
+            }
+        }
         set_country_flag = SOL_GRF_accepted
-        FROM = {
+        EQS = {
             country_event = {
                 id = solarreworked.491
                 days = 7
@@ -7338,30 +7865,135 @@ country_event = { #Country event speaking of either GRF's acceptance or rejectio
     option = { #They are no foals.
         trigger = { GRF = { has_country_flag = SOL_GRF_accepted } }
         name = solarreworked.491.a
+        if = {
+            limit = {
+                GFF = {
+                    exists = yes
+                    is_subject_of = FROM
+                }
+            }
+            if = {
+                limit = { GFF = { is_ai = yes } }
+                GRF = {
+                    annex_country = {
+                        target = GFF
+                        transfer_troops = yes
+                    }
+                }
+            }
+            else = {
+                GFF = {
+                    set_cosmetic_tag = GFF_SOL
+                }
+                set_autonomy = {
+                    autonomous_state = autonomy_satellite
+                    target = FROM
+                }
+            }
+        }
         set_autonomy = {
-            autonomous_state = autonomy_reichsprotectorate
+            autonomous_state = autonomy_satellite
             target = FROM
         }
         FROM = {
-            set_cosmetic_tag = GRF_SOL
+            if = {
+                limit = { tag = GRF }
+                set_cosmetic_tag = GRF_SOL
+            }
+            else_if = {
+                limit = { tag = GFF }
+                set_cosmetic_tag = GFF_SOL
+            }
         }
         if = {
-            limit = { has_country_flag = SOL_twilight_away }
-            GRF = {
-                add_manpower = -200000
+            limit = { FROM = { has_country_flag = SOL_twilight_negotiating } }
+            if = {
+                limit = { FROM = { tag = GRF } }
+                FROM = {
+                    add_manpower = -200000
+                    clr_country_flag = SOL_twilight_negotiating
+                }
+                add_manpower = 200000
             }
-            add_manpower = 200000
+            else_if = {
+                limit = {
+                    OR = {
+                        FROM = { tag = GFF }
+                        GFF = { is_subject_of = FROM }
+                    }
+                }
+                GFF = {
+                    add_manpower = -10000
+                }
+                add_manpower = 10000
+            }
             clr_country_flag = SOL_twilight_away
         }
         else_if = {
-            limit = { has_country_flag = SOL_sunset_away }
-            #Weapons here
+            limit = { FROM = { has_country_flag = SOL_sunset_negotiating } }
+            FROM = {
+                clr_country_flag = SOL_sunset_negotiating
+                add_equipment_to_stockpile = {
+                    type = infantry_equipment
+                    amount = -25000
+                    producer = FROM
+                }
+                add_equipment_to_stockpile = {
+                    type = support_equipment
+                    amount = -3000
+                    producer = FROM
+                }
+                add_equipment_to_stockpile = {
+                    type = artillery_equipment
+                    amount = -5000
+                    producer = FROM
+                }
+            }
+            add_equipment_to_stockpile = {
+                type = infantry_equipment
+                amount = 25000
+                producer = FROM
+            }
+            add_equipment_to_stockpile = {
+                type = support_equipment
+                amount = 3000
+                producer = FROM
+            }
+            add_equipment_to_stockpile = {
+                type = artillery_equipment
+                amount = 5000
+                producer = FROM
+            }
             clr_country_flag = SOL_sunset_away
         }
     }
     option = { #The bird has a bite. How quaint.
         trigger = { GRF = { has_country_flag = SOL_GRF_rejected } }
         name = solarreworked.491.b
+        if = {
+            limit = {
+                has_country_flag = SOL_twilight_away
+                NOT = { has_global_flag = SOL_block_removing_away_flag }
+            }
+            clr_country_flag = SOL_twilight_away
+        }
+        else_if = {
+            limit = {
+                has_country_flag = SOL_sunset_away
+                NOT = { has_global_flag = SOL_block_removing_away_flag }
+            }
+            clr_country_flag = SOL_sunset_away
+        }
+        FROM = {
+            if = {
+                limit = { has_country_flag = SOL_twilight_negotiating }
+                clr_country_flag = SOL_twilight_negotiating
+            }
+            else_if = {
+                limit = { has_country_flag = SOL_sunset_negotiating }
+                clr_country_flag = SOL_sunset_negotiating
+            }
+        }
         create_wargoal = {
             target = FROM
             type = puppet_wargoal_focus
@@ -7380,6 +8012,8 @@ country_event = { #Event speaking about how GRI is the most equal nation in sple
 
     option = { #We must put our best hooves forward.
         name = solarreworked.492.a
+        set_country_flag = SOL_twilight_away
+        set_country_flag = SOL_sunset_away
         GRD = {
             country_event = {
                 id = solarreworked.493
@@ -7399,6 +8033,27 @@ country_event = { #Sunrise and Dawnbreak arrive in GRD, and are given an impress
 
     option = { #This shall not work. Griffons and ponies shall remain separate.
         name = solarreworked.493.a
+        ai_chance = {
+            factor = 1
+            modifier = {
+                strength_ratio = {
+                    tag = FROM
+                    ratio > 1.2
+                }
+                factor = 2
+            }
+            modifier = {
+                strength_ratio = {
+                    tag = FROM
+                    ratio > 1.5
+                }
+                factor = 3
+            }
+            modifier = {
+                has_country_leader = { character = GRI_emperor_grover_vi ruling_only = yes }
+                factor = 2
+            }
+        }
         set_country_flag = SOL_GRI_rejected
         FROM = {
             country_event = {
@@ -7409,6 +8064,30 @@ country_event = { #Sunrise and Dawnbreak arrive in GRD, and are given an impress
     }
     option = { #As peers, we shall grow stronger together!
         name = solarreworked.493.b
+        ai_chance = {
+            factor = 1
+            modifier = {
+                strength_ratio = {
+                    tag = FROM
+                    ratio < 1.1
+                }
+                factor = 2
+            }
+            modifier = {
+                strength_ratio = {
+                    tag = FROM
+                    ratio < 0.75
+                }
+                factor = 5
+            }
+            modifier = {
+                has_opinion = {
+                    target = FROM
+                    value > 84
+                }
+                factor = 4
+            }
+        }
         set_country_flag = SOL_GRI_accepted
         FROM = {
             country_event = {
@@ -8193,7 +8872,7 @@ country_event = { #Some agents of the Solar Empire lie in wait as they see a num
         effect_tooltip = {
             NLR = {
                 add_timed_idea = {
-                    idea = NLR_disrupted_officers
+                    idea = NLR_military_disarray
                     days = 150
                 }
                 retire_character = EQS_NLR_bipen
@@ -8697,6 +9376,18 @@ country_event = { #An event recapping that with the ascension of Daybreaker, SMI
         name = equestriaexpanded.6.a
         #Remove dynamic modifier here, but keep Bon Bon
         set_country_flag = SOL_kept_smile_agents
+        custom_effect_tooltip = SOL_keep_bon_bon_but_risk_everything_tt
+        hidden_effect = {
+            random_list = {
+                65 = { }
+                35 = {
+                    country_event = {
+                        id = equestriaexpanded.7
+
+                    }
+                }
+            }
+        }
         if = {
             limit = { has_dlc = "La Resistance" }
             remove_dynamic_modifier = { modifier = EQS_smile_upgrades_lar }
@@ -8731,11 +9422,15 @@ country_event = { #Some SMILE agents, who now work under Daybreaker, infiltrate 
         name = equestriaexpanded.7.a
         #Inflict damage on a state that has 3 arms factories or more, add a spirit for 300 days that reduces armor research by 30%, armor value by 15%, and org by 15%
         hidden_effect = {
-            country_event = {
-                id = equestriaexpanded.8
-                days = 3
+            if = {
+                limit = { has_completed_focus = SOL_new_imperial_chapter }
+                country_event = {
+                    id = equestriaexpanded.8
+                    days = 3
+                }
             }
         }
+        clr_country_flag = SOL_kept_smile_agents
         random_state = {
             limit = {
                 is_core_of = ROOT

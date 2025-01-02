@@ -772,7 +772,7 @@ characters={
 			allowed = {
 				has_dlc = "La Resistance"
 			}
-			name = EQS_sweetie_drops
+			name = EQS_sweetie_drops_solar_age
 
 			portraits = {
 				civilian = {
@@ -796,6 +796,8 @@ characters={
 					if = {
 						limit = { is_EQS_SOL = yes }
 						has_country_flag = SOL_kept_smile_agents
+						NOT = { has_idea = absconditus_lumen }
+						NOT = { has_idea = astrum_solus }
 					}
 					if = {
 						limit = { event_target:solar_empire = { exists = yes } }
@@ -817,7 +819,7 @@ characters={
 					has_dlc = "La Resistance"
 				}
 			}
-			name = EQS_sweetie_drops
+			name = EQS_sweetie_drops_solar_age
 
 			portraits = {
 				civilian = {
@@ -840,6 +842,8 @@ characters={
 					if = {
 						limit = { is_EQS_SOL = yes }
 						has_country_flag = SOL_kept_smile_agents
+						NOT = { has_idea = absconditus_lumen }
+						NOT = { has_idea = astrum_solus }
 					}
 					if = {
 						limit = { event_target:solar_empire = { exists = yes } }

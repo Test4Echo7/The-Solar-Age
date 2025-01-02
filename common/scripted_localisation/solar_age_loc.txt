@@ -193,3 +193,104 @@ defined_text = {
 		localization_key = SOL_separate_inquisitionis
 	}
 }
+
+###Thanks HOI###
+defined_text = { # Country
+	name = GetDecisionCostAXP15
+	text = {
+		trigger = {
+			has_army_experience > 14.99
+		}
+		localization_key = EQS_decision_cost_army_xp_15
+	}
+	text = {
+		localization_key = EQS_decision_cost_army_xp_15_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostST5
+	text = {
+		trigger = {
+			has_stability > 0.049
+		}
+		localization_key = EQS_decision_cost_stability_5
+	}
+	text = {
+		localization_key = EQS_decision_cost_stability_5_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostSupremacy5
+	text = {
+		trigger = {
+			fascism > 0.049
+		}
+		localization_key = EQS_decision_cost_fascism_5
+	}
+	text = {
+		localization_key = EQS_decision_cost_fascism_5_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostCommandPower50
+	text = {
+		trigger = {
+			command_power > 49.99
+		}
+		localization_key = EQS_decision_cost_command_power_50
+	}
+	text = {
+		localization_key = EQS_decision_cost_command_power_50_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostWS10
+	text = {
+		trigger = {
+			has_war_support > 0.099
+		}
+		localization_key = EQS_decision_cost_war_support_10
+	}
+	text = {
+		localization_key = EQS_decision_cost_war_support_10_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostMP50k
+	text = {
+		trigger = {
+			has_manpower > 49999
+		}
+		localization_key = EQS_decision_cost_manpower_50000
+	}
+	text = {
+		localization_key = EQS_decision_cost_manpower_50000_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostDynamic
+	text = {
+		trigger = {
+			check_variable = {
+				variable = pol_power
+				value = ROOT.EQS_political_power_cost_var
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				variable = command_power
+				value = ROOT.EQS_command_power_cost_var
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = EQS_decision_cost_dynamic_political_command_power
+	}
+	text = {
+		localization_key = EQS_decision_cost_dynamic_political_command_power_blocked
+	}
+}

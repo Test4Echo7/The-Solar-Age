@@ -6977,9 +6977,21 @@ shared_focus = {
 	available = {
 		is_subject = no
 		has_DB_ruler = yes
-		YAK = {
-			exists = yes
-			is_subject = no
+		OR = {
+			AND = {
+				YAK = {
+					exists = yes
+					is_subject = no
+				}
+				NOT = { country_exists = JAK }
+			}
+			AND = {
+				JAK = {
+					exists = yes
+					is_subject = no
+				}
+				NOT = { country_exists = YAK }
+			}
 		}
 		custom_trigger_tooltip = {
 			tooltip = SOL_all_diplomats_busy_please_call_again_later_tt
@@ -7062,13 +7074,24 @@ shared_focus = {
 		is_subject = no
 		has_DB_ruler = yes
 		OR = {
-			GFF = {
-				exists = yes
-				is_subject = no
+			AND = {
+				GRF = {
+					exists = yes
+					is_subject = no
+				}
+				GFF = {
+					OR = {
+						exists = no
+						is_subject_of = GRF
+					}
+				}
 			}
-			GRF = {
-				exists = yes
-				is_subject = no
+			AND = {
+				GFF = {
+					exists = yes
+					is_subject = no
+				}
+				NOT = { country_exists = GRF }
 			}
 		}
 		custom_trigger_tooltip = {
@@ -7103,6 +7126,7 @@ shared_focus = {
 
 	cost = 10
 	prerequisite = { focus = SOL_imperial_diplomatic_corps }
+	continue_if_invalid = yes
 	available = {
 		is_subject = no
 		has_DB_ruler = yes
@@ -7111,7 +7135,7 @@ shared_focus = {
 			is_subject = no
 			has_opinion = {
 				target = ROOT
-				value > 74
+				value > 59
 			}
 		}
 		custom_trigger_tooltip = {

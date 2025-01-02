@@ -473,10 +473,22 @@ SOL_dealing_with_resistance = {
 			has_idea = SOL_harmonic_resistance_idea
 		}
 		fire_only_once = yes
-		cost = 40
+		custom_cost_trigger = {
+			set_temp_variable = { EQS_political_power_cost_var = 15 }
+			set_temp_variable = { EQS_command_power_cost_var = 10 }
+			has_political_power > 14.99
+			command_power > 9.99
+		}
+		custom_cost_text = EQS_decision_cost_dynamic_political_command_power
 		days_remove = 14
 		modifier = {
 			political_power_gain = -0.1
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_political_power = -15
+				add_command_power = -10
+			}
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_investigate_ponyville"
@@ -491,13 +503,25 @@ SOL_dealing_with_resistance = {
 		icon = anti_harmony
 		allowed = { tag = EQS }
 		visible = {
-			has_country_flag = SOL_unlocked_filly_pony
+			has_country_flag = SOL_unlocked_fillydelphia_pony
 		}
 		fire_only_once = yes
-		cost = 50
+		custom_cost_trigger = {
+			set_temp_variable = { EQS_political_power_cost_var = 15 }
+			set_temp_variable = { EQS_command_power_cost_var = 25 }
+			has_political_power > 14.99
+			command_power > 24.99
+		}
+		custom_cost_text = EQS_decision_cost_dynamic_political_command_power
 		days_remove = 21
 		modifier = {
 			political_power_gain = -0.15
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_political_power = -15
+				add_command_power = -25
+			}
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_follow_fillydelphia_lead"
@@ -509,10 +533,22 @@ SOL_dealing_with_resistance = {
 	SOL_raid_ponyville_cottage = {
 		icon = anti_harmony
 		allowed = { tag = EQS }
-		visible = { has_country_flag = SOL_unlocked_filly_pony }
+		visible = { has_country_flag = SOL_unlocked_fillydelphia_ponyville }
 		fire_only_once = yes
-		cost = 35
+		custom_cost_trigger = {
+			set_temp_variable = { EQS_political_power_cost_var = 25 }
+			set_temp_variable = { EQS_command_power_cost_var = 5 }
+			has_political_power > 24.99
+			command_power > 4.99
+		}
+		custom_cost_text = EQS_decision_cost_dynamic_political_command_power
 		days_remove = 10
+		complete_effect = {
+			hidden_effect = {
+				add_political_power = -25
+				add_command_power = -5
+			}
+		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_raid_ponyville_cottage"
 			###Event of results of raiding the cottage, which is Fluttershy's old cottage before she and the others fled the country; involved fighting a few ferocious animals to get through, and also one resistance trap, which claimed a few ponies
@@ -527,10 +563,22 @@ SOL_dealing_with_resistance = {
 		allowed = { tag = EQS }
 		visible = { has_country_flag = SOL_unlocked_freeside }
 		fire_only_once = yes
-		cost = 40
+		custom_cost_trigger = {
+			set_temp_variable = { EQS_political_power_cost_var = 20 }
+			set_temp_variable = { EQS_command_power_cost_var = 20 }
+			has_political_power > 19.99
+			command_power > 19.99
+		}
+		custom_cost_text = EQS_decision_cost_dynamic_political_command_power
 		days_remove = 7
 		modifier = {
 			political_power_gain = -0.05
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_political_power = -20
+				add_command_power = -20
+			}
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_raid_freeside_restaurant"
@@ -544,12 +592,24 @@ SOL_dealing_with_resistance = {
 	SOL_investigate_new_horseleans_docks = {
 		icon = anti_harmony
 		allowed = { tag = EQS }
-		visible = { has_country_flag = SOL_unlocked_horse_mane }
+		visible = { has_country_flag = SOL_unlocked_horseleans_manehattan }
 		fire_only_once = yes
-		cost = 55
+		custom_cost_trigger = {
+			set_temp_variable = { EQS_political_power_cost_var = 10 }
+			set_temp_variable = { EQS_command_power_cost_var = 35 }
+			has_political_power > 9.99
+			command_power > 34.99
+		}
+		custom_cost_text = EQS_decision_cost_dynamic_political_command_power
 		days_remove = 25
 		modifier = {
 			political_power_gain = -0.2
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_political_power = -10
+				add_command_power = -35
+			}
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_investigate_new_horseleans_docks"
@@ -568,15 +628,27 @@ SOL_dealing_with_resistance = {
 		allowed = { tag = EQS }
 		visible = {
 			OR = {
-				has_country_flag = SOL_unlocked_horse_mane
-				has_country_flag = SOL_unlocked_mane_only
+				has_country_flag = SOL_unlocked_horseleans_manehattan
+				has_country_flag = SOL_unlocked_manehattan_only
 			}
 		}
-		cost = 25
+		custom_cost_trigger = {
+			set_temp_variable = { EQS_political_power_cost_var = 5 }
+			set_temp_variable = { EQS_command_power_cost_var = 15 }
+			has_political_power > 4.99
+			command_power > 14.99
+		}
+		custom_cost_text = EQS_decision_cost_dynamic_political_command_power
 		fire_only_once = yes
 		days_remove = 20
 		modifier = {
 			political_power_gain = -0.15
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_political_power = -5
+				add_command_power = -15
+			}
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_investigate_dead_drop"
@@ -589,12 +661,24 @@ SOL_dealing_with_resistance = {
 		icon = anti_harmony
 		allowed = { tag = EQS }
 		visible = { has_country_flag = SOL_unlocked_jungle_camp }
-		cost = 45
+		custom_cost_trigger = {
+			set_temp_variable = { EQS_political_power_cost_var = 5 }
+			set_temp_variable = { EQS_command_power_cost_var = 20 }
+			has_political_power > 4.99
+			command_power > 19.99
+		}
+		custom_cost_text = EQS_decision_cost_dynamic_political_command_power
 		fire_only_once = yes
 		days_remove = 30
 		modifier = {
 			political_power_gain = -0.25
 			command_power_gain = -0.03
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_political_power = -5
+				add_command_power = -20
+			}
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_search_jungle_camp"
@@ -607,11 +691,23 @@ SOL_dealing_with_resistance = {
 		icon = anti_harmony
 		allowed = { tag = EQS }
 		visible = { has_country_flag = SOL_unlocked_opera_house }
-		cost = 60
+		custom_cost_trigger = {
+			set_temp_variable = { EQS_political_power_cost_var = 40 }
+			set_temp_variable = { EQS_command_power_cost_var = 15 }
+			has_political_power > 39.99
+			command_power > 14.99
+		}
+		custom_cost_text = EQS_decision_cost_dynamic_political_command_power
 		fire_only_once = yes
 		days_remove = 10
 		modifier = {
 			command_power_gain = -0.05
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_political_power = -40
+				add_command_power = -15
+			}
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_search_manehattan_opera_house"
@@ -623,13 +719,25 @@ SOL_dealing_with_resistance = {
 	SOL_raid_dodge_city_post_office = {
 		icon = anti_harmony
 		allowed = { tag = EQS }
-		visible = { has_country_flag = SOL_unlocked_dodge_mare }
-		cost = 60
+		visible = { has_country_flag = SOL_unlocked_dodge_mareway }
+		custom_cost_trigger = {
+			set_temp_variable = { EQS_political_power_cost_var = 50 }
+			set_temp_variable = { EQS_command_power_cost_var = 5 }
+			has_political_power > 49.99
+			command_power > 4.99
+		}
+		custom_cost_text = EQS_decision_cost_dynamic_political_command_power
 		fire_only_once = yes
 		days_remove = 14
 		modifier = {
 			political_power_gain = -0.25
 			stability_weekly = -0.005
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_political_power = -50
+				add_command_power = -5
+			}
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_raid_dodge_city_post_office"
@@ -642,13 +750,25 @@ SOL_dealing_with_resistance = {
 	SOL_hunt_for_mareway_informant = {
 		icon = anti_harmony
 		allowed = { tag = EQS }
-		visible = { has_country_flag = SOL_unlocked_dodge_mare }
-		cost = 70
+		visible = { has_country_flag = SOL_unlocked_dodge_mareway }
+		custom_cost_trigger = {
+			set_temp_variable = { EQS_political_power_cost_var = 25 }
+			set_temp_variable = { EQS_command_power_cost_var = 40 }
+			has_political_power > 24.99
+			command_power > 39.99
+		}
+		custom_cost_text = EQS_decision_cost_dynamic_political_command_power
 		fire_only_once = yes
 		days_remove = 20
 		modifier = {
 			political_power_gain = -0.35
 			command_power_gain = -0.07
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_political_power = -25
+				add_command_power = -40
+			}
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_hunt_for_mareway_informant"
@@ -660,12 +780,24 @@ SOL_dealing_with_resistance = {
 	SOL_raid_friendship_school = {
 		icon = anti_harmony
 		allowed = { tag = EQS }
-		visible = { has_country_flag = SOL_unlocked_pony_mane }
-		cost = 75
+		visible = { has_country_flag = SOL_unlocked_ponyville_manehattan }
+		custom_cost_trigger = {
+			set_temp_variable = { EQS_political_power_cost_var = 35 }
+			set_temp_variable = { EQS_command_power_cost_var = 25 }
+			has_political_power > 34.99
+			command_power > 24.99
+		}
+		custom_cost_text = EQS_decision_cost_dynamic_political_command_power
 		fire_only_once = yes
 		days_remove = 7
 		modifier = {
 			stability_weekly = -0.01
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_political_power = -35
+				add_command_power = -25
+			}
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_raid_friendship_school"
@@ -681,12 +813,24 @@ SOL_dealing_with_resistance = {
 	SOL_investigate_raritys_manehattan_boutique = {
 		icon = anti_harmony
 		allowed = { tag = EQS }
-		visible = { has_country_flag = SOL_unlocked_pony_mane }
-		cost = 50
+		visible = { has_country_flag = SOL_unlocked_ponyville_manehattan }
+		custom_cost_trigger = {
+			set_temp_variable = { EQS_political_power_cost_var = 20 }
+			set_temp_variable = { EQS_command_power_cost_var = 20 }
+			has_political_power > 19.99
+			command_power > 19.99
+		}
+		custom_cost_text = EQS_decision_cost_dynamic_political_command_power
 		fire_only_once = yes
 		days_remove = 7
 		modifier = {
 			political_power_gain = -0.5
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_political_power = -20
+				add_command_power = -20
+			}
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_investigate_raritys_manehattan_boutique"
@@ -699,12 +843,24 @@ SOL_dealing_with_resistance = {
 		icon = anti_harmony
 		allowed = { tag = EQS }
 		visible = { has_country_flag = SOL_unlocked_everfree }
-		cost = 40
+		custom_cost_trigger = {
+			set_temp_variable = { EQS_political_power_cost_var = 10 }
+			set_temp_variable = { EQS_command_power_cost_var = 20 }
+			has_political_power > 9.99
+			command_power > 19.99
+		}
+		custom_cost_text = EQS_decision_cost_dynamic_political_command_power
 		fire_only_once = yes
 		days_remove = 21
 		modifier = {
 			political_power_gain = -0.4
 			command_power_gain = -0.1
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_political_power = -10
+				add_command_power = -20
+			}
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_search_castle_for_clues"
@@ -718,11 +874,23 @@ SOL_dealing_with_resistance = {
 		icon = anti_harmony
 		allowed = { tag = EQS }
 		visible = { has_country_flag = SOL_unlocked_canterlot_library }
-		cost = 35
+		custom_cost_trigger = {
+			set_temp_variable = { EQS_political_power_cost_var = 5 }
+			set_temp_variable = { EQS_command_power_cost_var = 10 }
+			has_political_power > 4.99
+			command_power > 9.99
+		}
+		custom_cost_text = EQS_decision_cost_dynamic_political_command_power
 		fire_only_once = yes
 		days_remove = 10
 		modifier = {
 			political_power_gain = -0.25
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_political_power = -5
+				add_command_power = -10
+			}
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_"
@@ -735,11 +903,23 @@ SOL_dealing_with_resistance = {
 		icon = anti_harmony
 		allowed = { tag = EQS }
 		visible = { has_country_flag = SOL_unlocked_canterlot_boutique }
-		cost = 60
+		custom_cost_trigger = {
+			set_temp_variable = { EQS_political_power_cost_var = 40 }
+			set_temp_variable = { EQS_command_power_cost_var = 15 }
+			has_political_power > 39.99
+			command_power > 14.99
+		}
+		custom_cost_text = EQS_decision_cost_dynamic_political_command_power
 		fire_only_once = yes
 		days_remove = 7
 		modifier = {
 			political_power_gain = -0.35
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_political_power = -40
+				add_command_power = -15
+			}
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_investigate_raritys_canterlot_boutique"
@@ -752,12 +932,24 @@ SOL_dealing_with_resistance = {
 		icon = anti_harmony
 		allowed = { tag = EQS }
 		visible = { has_country_flag = SOL_unlocked_sassy }
-		cost = 70
+		custom_cost_trigger = {
+			set_temp_variable = { EQS_political_power_cost_var = 20 }
+			set_temp_variable = { EQS_command_power_cost_var = 50 }
+			has_political_power > 19.99
+			command_power > 49.99
+		}
+		custom_cost_text = EQS_decision_cost_dynamic_political_command_power
 		fire_only_once = yes
 		days_remove = 7
 		modifier = {
 			command_power_gain = -0.25
 			political_power_gain = -0.25
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_political_power = -20
+				add_command_power = -50
+			}
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_capture_sassy"
@@ -770,12 +962,24 @@ SOL_dealing_with_resistance = {
 		icon = anti_harmony
 		allowed = { tag = EQS }
 		visible = { has_country_flag = SOL_unlocked_resistance_location }
-		cost = 100
+		custom_cost_trigger = {
+			set_temp_variable = { EQS_political_power_cost_var = 25 }
+			set_temp_variable = { EQS_command_power_cost_var = 75 }
+			has_political_power > 24.99
+			command_power > 74.99
+		}
+		custom_cost_text = EQS_decision_cost_dynamic_political_command_power
 		fire_only_once = yes
 		days_remove = 35
 		modifier = {
 			command_power_gain = -0.5
 			political_power_gain = -0.25
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_political_power = -25
+				add_command_power = -75
+			}
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_destroy_resistance"
@@ -794,13 +998,25 @@ SOL_dealing_with_resistance = {
 			}
 			has_country_flag = SOL_destroyed_resistance
 		}
-		cost = 75
+		custom_cost_trigger = {
+			set_temp_variable = { EQS_political_power_cost_var = 5 }
+			set_temp_variable = { EQS_command_power_cost_var = 35 }
+			has_political_power > 4.99
+			command_power > 34.99
+		}
+		custom_cost_text = EQS_decision_cost_dynamic_political_command_power
 		fire_only_once = yes
 		days_remove = 70
 		modifier = {
 			democratic_drift = -0.03
 			stability_factor = -0.1
 			political_power_gain = -0.15
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_political_power = -5
+				add_command_power = -35
+			}
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_mop_up_stragglers"
@@ -1336,7 +1552,7 @@ political_actions = {
 			OR = {
 				has_completed_focus = SOL_magics_heart
 				has_completed_focus = SOL_She_Who_Raises_the_Sun
-				has_completed_focus = SOL_Empress_Knows_Best
+				has_completed_focus = SOL_Empress_knows_Best
 			}
 			#EQS_twilight_sparkle = {
 			#	is_unit_leader = no

@@ -527,8 +527,10 @@ on_actions = {
                             NOT = { is_corps_commander = yes }
                             is_advisor = yes
                         }
+                        NOT = { has_country_flag = SOL_flurry_field_position }
                     }
                 }
+                set_country_flag = SOL_flurry_field_position
                 country_event = {
                     id = solarreworked.501
                     days = 30
