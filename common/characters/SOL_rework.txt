@@ -649,7 +649,7 @@ characters = {
 		}
 
 		corps_commander = {
-			traits = { harsh_leader pony_race_trait infantry_commander }
+			traits = { harsh_leader pony_race_trait infantry_officer }
 			skill = 2
 			attack_skill = 2
 			defense_skill = 1

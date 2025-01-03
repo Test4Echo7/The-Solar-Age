@@ -303,6 +303,7 @@
   eqs_has_civil_war_tp_NOT:0 "Is not in a civil war"
   SOL_has_captured_sunset:0 "Sunset Shimmer has been captured."
   SOL_daybreaker_promotion_tt:0 "§YDaybreaker§! becomes a Field Marshal."
+  SOL_luna_promotion_tt:0 "§YPrincess Luna§! becomes a Field Marshal."
   SOL_sunset_converted:0 "Sunset Shimmer has ascended."
   SOL_flurry_converted:0 "Flurry Heart has embraced her true potential."
   EQS_SOL_they_bucked_up_tt:0 "§OGo supernova and immolate all those who threaten [EQS.GetNameDef]!§!"
@@ -408,7 +409,7 @@
   SOL_exterminate_tt:0 "§RMetztunalia will weep§!"
   SOL_annhilate_tt:0 "§RBatsby will bid farewell\nUrsagrad will embrace the Sun§!"
   SOL_crush:0 "§RIztāctepetl will heat up§!"
-  SOL_kill:0 "§RThe Moonspeaker's will be cleansed§!"
+  SOL_kill:0 "§RThe Moonspeakers will be cleansed§!"
   SOL_destroy:0 "§RFirstport will be enlightened§!"
   SOL_swag:0 "§RNew Ayacachtli will be purified§!"
   SOL_assuming_direct_control_tt:0 "§BEmpress Nightmare Moon§! shall take charge of our nation!"
@@ -443,6 +444,8 @@
   SOL_slurp_them_resources_tt:0 "As the bargain for our protection, §Y[FROM.GetNameDef]§! shall provide us total mining rights."
   SOL_super_smash_pones_tt:0 "As the agreement for us protecting them, §Y[FROM.GetNameDef]§! shall provide us a number of banner armies to fight for us."
   SOL_keep_bon_bon_but_risk_everything_tt:0 "§RThere is a possibility that Sweetie Drops and her compatriots are bluffing.§!"
+  SOL_nopony_expects_tt:0 "We can use the §YInquisition Administration§! occupation law."
+  EQS_is_solar_empire_tt:0 "Country is §Y[EQS.GetNameWithFlag]§!"
 
   ###Last one in the chain. Remove comment later###
   SOL_conglaturation_a_winner_is_you_tt:0 "§GHarmony has been preserved and all of ponykind now bends the knee to Daybreaker. Thank you for playing the Solar Age! - Test4Echo§!"

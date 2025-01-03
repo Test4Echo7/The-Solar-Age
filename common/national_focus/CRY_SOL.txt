@@ -509,7 +509,7 @@ focus_tree = {
 				set_character_flag = CRY_field_marshal_sunrise
 			}
 			custom_effect_tooltip = EQS_twiggles_field_marshal_tt
-			custom_effect_tooltip = grand_inquisitor_sunrise_sparkle_stats_tp
+			custom_effect_tooltip = grand_inquisitor_sunrise_sparkle_new_stats_tp
 			if = {
 				limit = {
 					has_tech = tech_engineers

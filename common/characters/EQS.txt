@@ -180,6 +180,23 @@ characters={
 				princess_of_ponies
 			}
 		}
+		field_marshal = {
+			character = EQS_princess_luna
+			traits = { goddess_of_the_night warrior_princess inspirational_leader pony_race_trait }
+			legacy_id = 9999
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 1
+			desc = LUNA_DESC
+			visible = {
+				NOT = {
+					has_character_flag = EQS_luna_leader_disabled
+				}
+				has_character_flag = EQS_war_has_been_doubled
+			}
+		}
 		gender = female
 	}
 	EQS_soarin={
@@ -514,7 +531,7 @@ characters={
 			planning_skill = 6
 			logistics_skill = 4
 			visible = {
-				has_global_flag = SOL_twilight_converted
+				has_character_flag = EQS_sunrise_joined_fight
 				OR = {
 					EQS = {
 						is_EQS_SOL = yes

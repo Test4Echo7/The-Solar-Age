@@ -1097,8 +1097,6 @@ country_event = {
 		name = solarreworked.209.a
 		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = evil_twilight_sparkle
-		custom_effect_tooltip = EQS_twiggles_field_marshal_tt
-		custom_effect_tooltip = grand_inquisitor_sunrise_sparkle_stats_tp
 		set_country_flag = SOL_twilight_corrupted
 		#if = {
 		#	limit = {
@@ -1109,6 +1107,13 @@ country_event = {
 		#	}
 		#	country_event = solarempire.131
 		#}
+		hidden_effect = {
+			country_event = {
+				id = solarreworked.214
+				days = 185
+				random_days = 180
+			}
+		}
 		mark_focus_tree_layout_dirty = yes
 	}
 }

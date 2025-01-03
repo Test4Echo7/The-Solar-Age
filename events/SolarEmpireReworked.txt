@@ -324,7 +324,7 @@ country_event = {
         is_subject = no
         has_war_with = CHN
         has_idea = changeling_spies
-        surrender_progress < 0.15
+        surrender_progress > 0.15
     }
 
     fire_only_once = yes
@@ -634,39 +634,6 @@ country_event = { #Raven is summoned into the throne room of Daybreaker, who is 
             remove_trait = { trait = silent_workhorse slot = political_advisor }
             add_trait = { trait = imperial_magister slot = political_advisor }
         }
-        #if = {
-        #    limit = {
-        #        has_idea = raven
-        #    }
-        #    remove_ideas = raven
-        #    EQS_raven_inkwell = {
-        #        remove_advisor_role = { slot = political_advisor }
-        #    }
-        #    EQS_raven_inkwell = {
-        #        add_advisor_role = {
-        #            activate = yes
-        #            advisor = {
-        #                slot = political_advisor
-        #                idea_token = raven
-        #                traits = { imperial_magister }
-        #            }
-        #        }
-        #    }
-        #}
-        #else = {
-        #    EQS_raven_inkwell = {
-        #        remove_advisor_role = { slot = political_advisor }
-        #    }
-        #    EQS_raven_inkwell = {
-        #        add_advisor_role = {
-        #            advisor = {
-        #                slot = political_advisor
-        #                idea_token = raven
-        #                traits = { imperial_magister }
-        #            }
-        #        }
-        #    }
-        #}
     }
 }
 
@@ -2706,6 +2673,9 @@ country_event = { #Luna arrives in Ponyville, after leaving the front when she h
                 id = solarreworked.151
                 days = 3
             }
+            EQS_princess_luna = {
+                set_character_flag = EQS_luna_leader_disabled
+            }
         }
     }
 }
@@ -2795,6 +2765,7 @@ country_event = { #Luna escapes and drums up enough resistance in the rest of th
 
     option = { #She can try...
         name = solarreworked.154.a
+        EQS_princess_luna = { clr_character_flag = EQS_luna_leader_disabled }
         EQS_SOL_civil_war = yes
         add_named_threat = { threat = 10 name = threat_equestrian_civil_war_SOL }
     }
@@ -2814,6 +2785,7 @@ country_event = { #Luna arrives in CRY to speak with Cadance about at least gett
             limit = { has_character = EQS_princess_luna }
             EQS_princess_luna = {
                 set_nationality = ROOT
+                clr_character_flag = EQS_luna_leader_disabled
             }
             set_country_flag = EQS_had_luna
         }
@@ -2889,7 +2861,7 @@ country_event = { #Report to Daybreaker that so far the hunt for the M6 and Suns
     is_triggered_only = yes
 
     option = { #The Crystal Empire is the closest and she has family there. That will be where she went.
-        name = solarreworked.159.a
+        name = solarreworked.159.a ###Affect this by decisions while they're in the fleeing process
         hidden_effect = {
             random_list = {
                 60 = {
@@ -3513,6 +3485,12 @@ country_event = {
 
     option = {
         name = solarreworked.214.a
+        hidden_effect = {
+            country_event = {
+                id = solarreworked.215
+                days = 21
+            }
+        }
     }
 }
 
@@ -3527,6 +3505,13 @@ country_event = {
 
     option = {
         name = solarreworked.215.a
+        hidden_effect = {
+            country_event = {
+                id = solarreworked.216
+                days = 14
+                random_days = 7
+            }
+        }
     }
 }
 
@@ -3541,6 +3526,13 @@ country_event = {
 
     option = {
         name = solarreworked.216.a
+        hidden_effect = {
+            country_event = {
+                id = solarreworked.217
+                days = 14
+                random_days = 7
+            }
+        }
     }
 }
 
@@ -3555,6 +3547,13 @@ country_event = {
 
     option = {
         name = solarreworked.217.a
+        hidden_effect = {
+            country_event = {
+                id = solarreworked.218
+                days = 7
+                random_days = 14
+            }
+        }
     }
 }
 
@@ -4023,6 +4022,9 @@ country_event = { #Shining Armor is taken out of his house arrest, but still bou
 				remove_unit_leader_role = yes
 			}
 			set_country_flag = CRY_solar_generals
+			custom_effect_tooltip = nightshade_stats_tp
+			custom_effect_tooltip = mercy_stats_tp
+			custom_effect_tooltip = beryl_scabbard_stats_tp
 		}
     }
 }
@@ -4349,7 +4351,11 @@ country_event = { #Daybreaker enters Sunrise's laboratory, where she is busy stu
 
     option = { #Wait until we're at peace.
         name = solarreworked.269.a
-        #Twiggles becomes field marshal here.
+        EQS_twilight_sparkle = {
+            set_character_flag = SOL_sunrise_joined_fight
+        }
+        custom_effect_tooltip = EQS_twiggles_field_marshal_tt
+		custom_effect_tooltip = grand_inquisitor_sunrise_sparkle_new_stats_tp
     }
 }
 
@@ -5070,7 +5076,7 @@ country_event = { #Follow one of the new generals as he or she are put through s
 
     option = { #You have earned your place at my side.
         name = solarreworked.329.a
-        #Generals here
+        ###Generals here
     }
 }
 
@@ -5196,7 +5202,7 @@ country_event = { #A radio advertisement plays speaking about how much Celestia 
 
     option = { #It is the least you can do!
         name = solarreworked.344.a
-        #Generals here
+        ###Generals here
     }
 }
 
@@ -5210,7 +5216,7 @@ country_event = { #Daybreaker takes the corrupted M6 into the cave for the Tree 
 
     option = { #Damn tree!
         name = solarreworked.345.a
-        #Get M6
+        ###Get M6 leaders and advisors, maybe? See how it's balanced already
         add_ideas = SOL_showcased_element_bearers
     }
 }
@@ -5649,6 +5655,30 @@ country_event = { #An Imperial overseer sees how hard some of the diamond dogs a
     option = { #Now, is another demonstration in order?
         name = solarreworked.383.a
         #Effect here
+        635 = {
+            add_resource = {
+                type = crystals
+                amount = 25
+            }
+        }
+        637 = {
+            add_resource = {
+                type = chromium
+                amount = 12
+            }
+        }
+        647 = {
+            add_resource = {
+                type = chromium
+                amount = 8
+            }
+        }
+        638 = {
+            add_resource = {
+                type = crystals
+                amount = 15
+            }
+        }
     }
 }
 
@@ -6728,7 +6758,30 @@ country_event = { #Follow a worker as he goes about some of the forced tasks tha
             }
             add_extra_state_shared_building_slots = 1
         }
-        #Modify great depression
+        if = {
+            limit = {
+                has_idea = EQC_great_depression_1
+            }
+            swap_ideas = {
+                remove_idea = EQC_great_depression_1
+                add_idea = EQC_great_depression_2
+            }
+        }
+        else_if = {
+            limit = {
+                has_idea = EQC_great_depression_2
+            }
+            swap_ideas = {
+                remove_idea = EQC_great_depression_2
+                add_idea = EQC_great_depression_3
+            }
+        }
+        else_if = {
+            limit = {
+                has_idea = EQC_great_depression_3
+            }
+            remove_ideas = EQC_great_depression_3
+        }
     }
 }
 
@@ -6842,6 +6895,62 @@ country_event = { #A captain of a ship making port in Sunset's harbor, which has
     option = { #Are you ponies or animals?!
         name = solarreworked.446.a
         #Dockyards here
+        356 = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                type = dockyard
+                level = 2
+                instant_build = yes
+            }
+            add_building_construction = {
+                type = naval_base
+                level = 3
+                instant_build = yes
+                province = 10005
+            }
+        }
+        362 = {
+            add_extra_state_shared_building_slots = 1
+            add_building_construction = {
+                type = dockyard
+                level = 1
+                instant_build = yes
+            }
+            add_building_construction = {
+                type = naval_base
+                level = 2
+                instant_build = yes
+                province = 829
+            }
+        }
+        354 = {
+            add_extra_state_shared_building_slots = 1
+            add_building_construction = {
+                type = dockyard
+                level = 1
+                instant_build = yes
+            }
+            add_building_construction = {
+                type = naval_base
+                level = 1
+                instant_build = yes
+                province = 11071
+            }
+        }
+        361 = {
+            add_extra_state_shared_building_slots = 1
+            add_building_construction = {
+                type = dockyard
+                level = 1
+                instant_build = yes
+            }
+            add_building_construction = {
+                type = naval_base
+                level = 2
+                instant_build = yes
+                province = 11137
+            }
+        }
     }
 }
 
@@ -9099,16 +9208,10 @@ country_event = { #The player is presented the options of what to exactly do wit
             }
         }
         hidden_effect = {
-            random_list = {
-                65 = {
-
-                }
-                35 = {
-                    country_event = {
-                        id = equestriaexpanded.6
-                        days = 90
-                        random_days = 90
-                    }
+                country_event = {
+                    id = equestriaexpanded.6
+                    days = 90
+                    random_days = 90
                 }
             }
         }
@@ -9230,7 +9333,7 @@ country_event = { #Follow some agents, perhaps with Astrum, going in on a group 
 
     option = { #They thought they could hide!
         name = solarreworked.653.a
-        #Effect here
+        ###Effect here
     }
 }
 
@@ -9299,6 +9402,7 @@ country_event = { #Bon Bon is ushered into Celestia's chambers, and Bon Bon sees
 
     option = { #If that is what is required.
         name = equestriaexpanded.1.a
+        ###Effect here
     }
 }
 

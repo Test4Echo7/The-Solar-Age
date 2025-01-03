@@ -1111,22 +1111,10 @@ shared_focus = {
 		add_war_support = 0.1
 		if = {
 			limit = { has_idea = alicorn_sisters }
-			add_field_marshal_role = {
-				character = EQS_princess_luna
-				traits = { goddess_of_the_night warrior_princess inspirational_leader pony_race_trait }
-				legacy_id = 9999
-				skill = 4
-				attack_skill = 4
-				defense_skill = 4
-				planning_skill = 4
-				logistics_skill = 1
-				desc = LUNA_DESC
-				visible = {
-					NOT = {
-						has_character_flag = EQS_luna_leader_disabled
-					}
-				}
-			} 
+			EQS_princess_luna = {
+				set_character_flag = EQS_war_has_been_doubled
+			}
+			custom_effect_tooltip = SOL_luna_promotion_tt
 			custom_effect_tooltip = princess_luna_stats_tp
 		}
 	}
