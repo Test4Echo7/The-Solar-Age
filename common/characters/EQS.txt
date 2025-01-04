@@ -402,7 +402,7 @@ characters={
 				OR = {
 					AND = {
 						#is_EQS_SOL = no
-						NOT = { has_country_flag = SOL_twilight_fleeing }
+						NOT = { has_country_flag = SOL_mane_six_escape }
 						original_tag = EQS
 					}
 					can_host_M6 = yes
@@ -413,7 +413,7 @@ characters={
 					if = {
 						limit = { original_tag = EQS }
 						#is_EQS_SOL = no
-						NOT = { has_country_flag = SOL_twilight_fleeing }
+						NOT = { has_country_flag = SOL_mane_six_escape }
 					}
 				}
 				has_government = democratic
@@ -520,7 +520,7 @@ characters={
 							has_country_flag = SOL_hosting_M6
 						}
 					}
-					NOT = { has_country_flag = SOL_twilight_fleeing }
+					NOT = { has_country_flag = SOL_mane_six_escape }
 				}
 			}
 			desc = twilight_sparkle_desc
@@ -1086,7 +1086,7 @@ characters={
 					can_host_M6 = yes
 				}
 			}
-			visible = { NOT = { has_country_flag = SOL_twilight_fleeing } }
+			visible = { NOT = { has_country_flag = SOL_mane_six_escape } }
 			available = {
 				if = {
 					limit = { is_original_EQS = yes }
@@ -1437,7 +1437,7 @@ characters={
 					can_host_M6 = yes
 				}
 			}
-			visible = { NOT = { has_country_flag = SOL_twilight_fleeing } }
+			visible = { NOT = { has_country_flag = SOL_mane_six_escape } }
 			available = {
 				if = {
 					limit = { NOT = { tag = event_target:solar_empire } }
@@ -1756,7 +1756,7 @@ characters={
 					can_host_M6 = yes
 				}
 			}
-			visible = { NOT = { has_country_flag = SOL_twilight_fleeing } }
+			visible = { NOT = { has_country_flag = SOL_mane_six_escape } }
 			available = {
 				if = {
 					limit = { is_original_EQS = yes }
@@ -1856,7 +1856,7 @@ characters={
 					NOT = {
 						has_country_flag = EQS_HIP_elements_sent
 					}
-					NOT = { has_country_flag = SOL_twilight_fleeing }
+					NOT = { has_country_flag = SOL_mane_six_escape }
 				}
 			}
 		}
@@ -2848,7 +2848,7 @@ characters={
 			logistics_skill = 1
 			desc = "EQS_appulhors_desc"
 			visible = {
-				NOT = { has_country_flag = SOL_twilight_fleeing }
+				NOT = { has_country_flag = SOL_mane_six_escape }
 				OR = {
 					has_country_flag = EQS_create_new_commanders_flag
 					can_host_M6 = yes
@@ -3010,7 +3010,7 @@ characters={
 			logistics_skill = 2
 			desc = "EQS_ponka_desc"
 			visible = {
-				NOT = { has_country_flag = SOL_twilight_fleeing }
+				NOT = { has_country_flag = SOL_mane_six_escape }
 				OR = {
 					has_country_flag = EQS_create_new_commanders_flag
 					can_host_M6 = yes

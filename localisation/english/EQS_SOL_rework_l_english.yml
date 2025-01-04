@@ -461,6 +461,8 @@
   SOL_hosting_M6:0 "Is currently harboring the §PElement Bearers§!"
   SOL_STM_civil_war_ended:0 "One of the following must be true:\n   §Y[STM.GetNameWithFlag]§! has united the §YStorm Kingdom§!\n   §Y[GYZ.GetNameWithFlag]§! has united the §YStorm Kingdom§!\n   §Y[SLC.GetNameWithFlag]§! has united the §YStorm Kingdom§!\n   §Y[THU.GetNameWithFlag]§! has united the §YStorm Kingdom§!"
   SOL_captured_element_bearers:0 "The §PElement Bearers§! have been captured"
+  SOL_mane_six_dip_tt:0 "The §PElement Bearers§! will search for a new, safer home more distant from §ODaybreaker's§! hoof."
+  SOL_luna_peaces_out_tt:0 "§BPrincess Luna§! will seek refuge in one of the other §Pharmonist§! nations on Griffonia or Zebrica."
 
   ###Last one in the chain. Remove comment later###
   SOL_conglaturation_a_winner_is_you_tt:0 "§GHarmony has been preserved and all of ponykind now bends the knee to Daybreaker. Thank you for playing the Solar Age! - Test4Echo§!"

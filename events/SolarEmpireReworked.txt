@@ -2848,6 +2848,7 @@ country_event = { #After Luna speaks with Twilight, Twilight summons her friends
             }
         }
         set_country_flag = SOL_twilight_fleeing
+        set_country_flag = SOL_mane_six_escape
     }
 }
 
@@ -2898,7 +2899,10 @@ country_event = { #Report to Daybreaker that so far the hunt for the M6 and Suns
     id = solarreworked.159
     title = solarreworked.159.t
     desc = solarreworked.159.d
-    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.159"}
+    immediate = {
+        log = "[GetDateText]: [ROOT.GetName]: event solarreworked.159"
+        clr_country_flag = SOL_twilight_fleeing
+    }
 
     is_triggered_only = yes
 
@@ -3114,7 +3118,10 @@ country_event = { #An event informing the leader of the country that Twilight, S
             limit = { has_character = EQS_sunset_shimmer }
             if = {
                 limit = { NOT = { has_country_flag = SOL_has_captured_sunset } }
-                EQS_sunset_shimmer = { set_nationality = ROOT }
+                EQS_sunset_shimmer = {
+                    set_nationality = ROOT
+                    clr_character_flag = SOL_helping_twilight
+                }
             }
         }
     }
