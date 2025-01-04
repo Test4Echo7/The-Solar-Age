@@ -222,6 +222,19 @@ defined_text = { # Country
 }
 
 defined_text = { # Country
+	name = GetDecisionCostST10
+	text = {
+		trigger = {
+			has_stability > 0.099
+		}
+		localization_key = EQS_decision_cost_stability_10
+	}
+	text = {
+		localization_key = EQS_decision_cost_stability_10_blocked
+	}
+}
+
+defined_text = { # Country
 	name = GetDecisionCostSupremacy5
 	text = {
 		trigger = {
@@ -270,6 +283,19 @@ defined_text = { # Country
 	}
 	text = {
 		localization_key = EQS_decision_cost_manpower_50000_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostMP40k
+	text = {
+		trigger = {
+			has_manpower > 39999
+		}
+		localization_key = EQS_decision_cost_manpower_40000
+	}
+	text = {
+		localization_key = EQS_decision_cost_manpower_40000_blocked
 	}
 }
 

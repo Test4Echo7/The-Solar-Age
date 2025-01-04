@@ -105,7 +105,13 @@ leader_traits = {
         drift_defence_factor = 0.3
         subversive_activites_upkeep = -0.1
 
-        ai_will_do = { factor = 1 }
+        ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 2
+				is_spymaster = yes
+			}
+		}
     }
 
     master_of_disguise_lar = {
@@ -115,7 +121,13 @@ leader_traits = {
         own_operative_detection_chance_factor = -0.15
         operative_slot = 1
 
-        ai_will_do = { factor = 1 }
+        ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 2
+				is_spymaster = yes
+			}
+		}
     }
 
     ambitious_planner = {
@@ -124,7 +136,13 @@ leader_traits = {
         subversive_activites_upkeep = -0.35
         foreign_subversive_activites = -0.15
 
-        ai_will_do = { factor = 1 }
+        ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 2
+				is_spymaster = yes
+			}
+		}
     }
 
     ambitious_planner_lar = {
@@ -134,48 +152,85 @@ leader_traits = {
         operation_cost = -0.05
         decryption_factor = 0.15
 
-        ai_will_do = { factor = 1}
+        ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 2
+				is_spymaster = yes
+			}
+		}
     }
 
     director_of_smile = {
         random = no
-        encryption = 1
-        foreign_subversive_activites = 0.15
+        decryption = 0.5
+        encryption = 1.5
+        subversive_activites_upkeep = -0.15
+		foreign_subversive_activites = -0.3
+		drift_defence_factor = 0.20
 
-        ai_will_do = { factor = 1 }
+        ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3
+				is_spymaster = yes
+			}
+		}
     }
 
     director_of_smile_lar = {
         random = no
-        operative_slot = 1
-        agency_upgrade_time = -0.1
-        enemy_operative_detection_chance_factor = 0.05
+        operative_slot = 2
+        agency_upgrade_time = -0.15
+        enemy_operative_detection_chance_factor = 0.15
+        own_operative_detection_chance_factor = -0.10
 
-        ai_will_do = { factor = 1 }
+        ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3
+				is_spymaster = yes
+			}
+		}
     }
 
     director_of_smile_defunct = {
         random = no
-        encryption = 1
-        foreign_subversive_activites = 0.15
-        subversive_activites_upkeep = -0.4
+        decryption = 0.75
+        encryption = 1.5
+        foreign_subversive_activites = -0.3
+        subversive_activites_upkeep = -0.45
+        drift_defence_factor = 0.25
         stability_factor = -0.05
         democratic_drift = 0.03
 
-        ai_will_do = { factor = 1 }
+        ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3
+				is_spymaster = yes
+			}
+		}
     }
 
     director_of_smile_defunct_lar = {
         random = no
-        operative_slot = 1
-        agency_upgrade_time = -0.25
-        enemy_operative_detection_chance_factor = 0.05
+        operative_slot = 2
+        agency_upgrade_time = -0.3
+        enemy_operative_detection_chance_factor = 0.15
+        own_operative_detection_chance_factor = -0.1
         operation_cost = -0.15
         operation_risk = -0.03
         stability_factor = -0.05
         democratic_drift = 0.03
 
-        ai_will_do = { factor = 1}
+        ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3
+				is_spymaster = yes
+			}
+		}
     }
 
     director_of_imperial_intelligence = {
@@ -185,7 +240,13 @@ leader_traits = {
         drift_defence_factor = 0.25
         foreign_subversive_activites = -0.4
 
-        ai_will_do = { factor = 1 }
+        ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3
+				is_spymaster = yes
+			}
+		}
     }
 
     director_of_imperial_intelligence_lar = {
@@ -198,7 +259,13 @@ leader_traits = {
         own_operative_detection_chance_factor = -0.05
         drift_defence_factor = 0.25
 
-        ai_will_do = { factor = 1 }
+        ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3
+				is_spymaster = yes
+			}
+		}
     }
 
     director_of_imperial_intelligence_astrum = {
@@ -208,7 +275,13 @@ leader_traits = {
         drift_defence_factor = 0.75
         resistance_damage_to_garrison = -0.15
 
-        ai_will_do = { factor = 1 }
+        ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3
+				is_spymaster = yes
+			}
+		}
     }
 
     director_of_imperial_intelligence_astrum_lar = {
@@ -220,7 +293,13 @@ leader_traits = {
         intel_network_gain_factor = 0.15
         intelligence_agency_defense = 0.5
 
-        ai_will_do = { factor = 1 }
+        ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3
+				is_spymaster = yes
+			}
+		}
     }
 
     erratic_scientist = {

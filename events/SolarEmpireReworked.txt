@@ -783,11 +783,9 @@ country_event = { #Daybreaker holds a speech in Sanctum Solar, which has just be
         add_political_power = 50
         add_stability = 0.05
         add_war_support = 0.05
-		effect_tooltip = {
-			every_enemy_country = {
-				add_ideas = SOL_enemy_debuff_idea
-			}
-		}
+        custom_effect_tooltip = SOL_become_based_tt
+        custom_effect_tooltip = BAR_viira_puppet_break
+        custom_effect_tooltip = SOL_done_screwed_up_tt
 		clr_country_flag = SOL_dont_trigger_target_change
 		custom_effect_tooltip = SOL_new_political_focuses_tt
 		hidden_effect = {
@@ -799,80 +797,116 @@ country_event = { #Daybreaker holds a speech in Sanctum Solar, which has just be
 			news_event = { id = news.solarage.2 hours = 6 }
 			country_event = { id = solarreworked.35 days = 21 random_days = 14 }
 		}
-		CRY = {
-            if = {
-                limit = {
-                    is_in_faction_with = ROOT
-                    NOT = { has_war_together_with = ROOT }
-                }
-                if = {
-                    limit = { is_subject_of = ROOT  }
-                    ROOT = { end_puppet = CRY }
-                }
-                leave_faction = yes
-            }
-        }
-        EQC = {
-            if = {
-                limit = {
-                    is_in_faction_with = ROOT
-                    NOT = { has_war_together_with = ROOT }
-                }
-                if = {
-                    limit = { is_subject_of = ROOT }
-                    ROOT = { end_puppet = EQC }
-                }
-                leave_faction = yes
-                hidden_effect = {
-                    drop_cosmetic_tag = yes
+		if = {
+            limit = {
+                OR = {
+                    CRY = {
+                        OR = {
+                            is_subject_of = ROOT
+                            is_in_faction_with = ROOT
+                        }
+                        NOT = { has_war_together_with = ROOT }
+                    }
+                    EQC = {
+                        OR = {
+                            is_subject_of = ROOT
+                            is_in_faction_with = ROOT
+                        }
+                        NOT = { has_war_together_with = ROOT }
+                    }
+                    PCB = {
+                        OR = {
+                            is_subject_of = ROOT
+                            is_in_faction_with = ROOT
+                        }
+                        NOT = { has_war_together_with = ROOT }
+                    }
                 }
             }
-        }
-        PCB = {
-            if = {
-                limit = {
-                    is_in_faction_with = ROOT
-                    NOT = { has_war_together_with = ROOT }
-                }
+            custom_effect_tooltip = SOL_stabbed_tt
+		}
+		hidden_effect = {
+            CRY = {
                 if = {
-                    limit = { is_subject_of = ROOT }
-                    ROOT = { end_puppet = PCB }
+                    limit = {
+                        is_in_faction_with = ROOT
+                        NOT = { has_war_together_with = ROOT }
+                    }
+                    if = {
+                        limit = { is_subject_of = ROOT  }
+                        ROOT = { end_puppet = CRY }
+                    }
+                    leave_faction = yes
                 }
+            }
+            EQC = {
+                if = {
+                    limit = {
+                        is_in_faction_with = ROOT
+                        NOT = { has_war_together_with = ROOT }
+                    }
+                    if = {
+                        limit = { is_subject_of = ROOT }
+                        ROOT = { end_puppet = EQC }
+                    }
+                    leave_faction = yes
+                    hidden_effect = {
+                        drop_cosmetic_tag = yes
+                    }
+                }
+            }
+            PCB = {
+                if = {
+                    limit = {
+                        is_in_faction_with = ROOT
+                        NOT = { has_war_together_with = ROOT }
+                    }
+                    if = {
+                        limit = { is_subject_of = ROOT }
+                        ROOT = { end_puppet = PCB }
+                    }
+                    leave_faction = yes
+                }
+            }
+            STG = {
+                if = { limit = is_in_faction_with = ROOT }
                 leave_faction = yes
             }
         }
         set_country_flag = SOL_puppets_left
         set_country_flag = SOL_unlock_political_focuses
-		set_politics = {
-            ruling_party = fascism
-            elections_allowed = no
-		}
-		EQS_princess_celestia = {
-            if = {
-                limit = { ROOT = { is_ai = yes } }
-                set_character_name = EQS_SOL_daybreaker
-				set_portraits = {
-					civilian = {
-						large = GFX_DaybreakerPortraitNew
-					}
-					army = {
-						large = GFX_DaybreakerPortraitNew
-						small = GFX_idea_EQS_SOL_daybreaker
-					}
-				}
+        hidden_effect = {
+            set_politics = {
+                ruling_party = fascism
+                elections_allowed = no
             }
-            add_country_leader_role = {
-				promote_leader = yes
+            EQS_princess_celestia = {
+                if = {
+                    limit = { ROOT = { is_ai = yes } }
+                    set_character_name = EQS_SOL_daybreaker
+                    set_portraits = {
+                        civilian = {
+                            large = GFX_DaybreakerPortraitNew
+                        }
+                        army = {
+                            large = GFX_DaybreakerPortraitNew
+                            small = GFX_idea_EQS_SOL_daybreaker
+                        }
+                    }
+                }
+                add_country_leader_role = {
+                    promote_leader = yes
 
-				country_leader = {
-					expire = "1965.1.1"
-					desc = "POLITICS_DAYBREAKER_SOLAR_AGE_DESC"
-					ideology = nazism
-					traits = { }
-				}
-			}
-		}
-		set_cosmetic_tag = EQS_SOL
+                    country_leader = {
+                        expire = "1965.1.1"
+                        desc = "POLITICS_DAYBREAKER_SOLAR_AGE_DESC"
+                        ideology = nazism
+                        traits = { }
+                    }
+                }
+            }
+            set_cosmetic_tag = EQS_SOL
+        }
     }
 }
 
@@ -2738,6 +2772,10 @@ country_event = { #A short follow-up event to the forces of the Solar Empire att
                         random_days = 5
                     }
                 }
+                country_event = {
+                    id = solarreworked.156
+                    days = 14
+                }
             }
         }
         else = {
@@ -2809,6 +2847,7 @@ country_event = { #After Luna speaks with Twilight, Twilight summons her friends
                 random_days = 7
             }
         }
+        set_country_flag = SOL_twilight_fleeing
     }
 }
 
@@ -2849,6 +2888,9 @@ country_event = { #Sunset hosts her friends in a field tent far from the front, 
                 random_days = 10
             }
         }
+        EQS_sunset_shimmer = {
+            set_character_flag = SOL_helping_twilight
+        }
     }
 }
 
@@ -2861,7 +2903,7 @@ country_event = { #Report to Daybreaker that so far the hunt for the M6 and Suns
     is_triggered_only = yes
 
     option = { #The Crystal Empire is the closest and she has family there. That will be where she went.
-        name = solarreworked.159.a ###Affect this by decisions while they're in the fleeing process
+        name = solarreworked.159.a
         hidden_effect = {
             random_list = {
                 60 = {
@@ -2875,6 +2917,22 @@ country_event = { #Report to Daybreaker that so far the hunt for the M6 and Suns
                     }
                 }
                 40 = {
+                    modifier = {
+                        check_variable = { SOL_lockdown_procedures > 0 }
+                        factor = 0.75
+                    }
+                    modifier = {
+                        check_variable = { SOL_lockdown_procedures > 1 }
+                        factor = 0.66
+                    }
+                    modifier = {
+                        check_variable = { SOL_lockdown_procedures > 2 }
+                        factor = 0.5
+                    }
+                    modifier = {
+                        check_variable = { SOL_lockdown_procedures > 3 }
+                        factor = 0
+                    }
                     set_country_flag = SOL_fled_EQC
                     hidden_effect = {
                         country_event = {
@@ -2891,7 +2949,7 @@ country_event = { #Report to Daybreaker that so far the hunt for the M6 and Suns
         name = solarreworked.159.b
         hidden_effect = {
             random_list = {
-                90 = {
+                70 = {
                     set_country_flag = SOL_fled_EQC
                     hidden_effect = {
                         country_event = {
@@ -2901,7 +2959,23 @@ country_event = { #Report to Daybreaker that so far the hunt for the M6 and Suns
                         }
                     }
                 }
-                10 = {
+                30 = {
+                    modifier = {
+                        check_variable = { SOL_lockdown_procedures > 0 }
+                        factor = 0.8
+                    }
+                    modifier = {
+                        check_variable = { SOL_lockdown_procedures > 1 }
+                        factor = 0.8
+                    }
+                    modifier = {
+                        check_variable = { SOL_lockdown_procedures > 2 }
+                        factor = 0.66
+                    }
+                    modifier = {
+                        check_variable = { SOL_lockdown_procedures > 3 }
+                        factor = 0
+                    }
                     set_country_flag = SOL_fled_CRY
                     hidden_effect = {
                         country_event = {
@@ -5654,7 +5728,6 @@ country_event = { #An Imperial overseer sees how hard some of the diamond dogs a
 
     option = { #Now, is another demonstration in order?
         name = solarreworked.383.a
-        #Effect here
         635 = {
             add_resource = {
                 type = crystals
@@ -9208,11 +9281,10 @@ country_event = { #The player is presented the options of what to exactly do wit
             }
         }
         hidden_effect = {
-                country_event = {
-                    id = equestriaexpanded.6
-                    days = 90
-                    random_days = 90
-                }
+            country_event = {
+                id = equestriaexpanded.6
+                days = 90
+                random_days = 90
             }
         }
     }
@@ -9333,7 +9405,17 @@ country_event = { #Follow some agents, perhaps with Astrum, going in on a group 
 
     option = { #They thought they could hide!
         name = solarreworked.653.a
-        ###Effect here
+        if = {
+			limit = { has_dlc = "La Resistance" }
+			add_to_variable = { operation_cost_sol_var = -0.10 }
+			add_to_variable = { operation_risk_sol_var = -0.03 }
+			custom_effect_tooltip = SOL_imperial_intelligence_lar_4
+		}
+		else = {
+			custom_effect_tooltip = SOL_imperial_intelligence_4
+			add_to_variable = { decryption_sol_var = 0.25 }
+			add_to_variable = { foreign_subversive_activities_sol_var = -0.15 }
+		}
     }
 }
 
@@ -9347,7 +9429,16 @@ country_event = { #A newer agent for the SOL agency is running through an obstac
 
     option = { #Now do it again!
         name = solarreworked.654.a
-        #Effect here
+        if = {
+			limit = { has_dlc = "La Resistance" }
+			add_to_variable = { operative_slot_var = 1}
+			add_to_variable = { new_operative_slot_bonus = 1 }
+			custom_effect_tooltip = SOL_imperial_intelligence_lar_6
+		}
+		else = {
+			add_to_variable = { decryption_sol_var = 0.5 }
+			custom_effect_tooltip = SOL_imperial_intelligence_6
+		}
     }
 }
 
@@ -9361,7 +9452,17 @@ country_event = { #A citizen in their home is awoken suddenly as it's barged int
 
     option = { #Guilty until proven innocent, don't forget.
         name = solarreworked.655.a
-        #Effect here
+        add_to_variable = { resistance_damage_to_garrison_var = -0.15 }
+		add_to_variable = { resistance_activity_var = -0.05 }
+		if = {
+			limit = { has_dlc = "La Resistance" }
+			add_to_variable = { crypto_strength_var = 0.25 }
+			custom_effect_tooltip = SOL_imperial_intelligence_lar_7
+		}
+		else = {
+			add_to_variable = { encryption_sol_var = 0.25 }
+			custom_effect_tooltip = SOL_imperial_intelligence_7
+		}
     }
 }
 
@@ -9402,7 +9503,13 @@ country_event = { #Bon Bon is ushered into Celestia's chambers, and Bon Bon sees
 
     option = { #If that is what is required.
         name = equestriaexpanded.1.a
-        ###Effect here
+        if = {
+            limit = { has_dlc = "La Resistance" }
+            EQS_sweetie_drops = {
+                hidden_effect = { remove_trait = { trait = agent_of_smile_lar slot = political_advisor } }
+                add_trait = { trait = director_of_smile_lar slot = political_advisor }
+            }
+        }
     }
 }
 
@@ -9416,6 +9523,30 @@ country_event = { #Follow a new SMILE agent as she is being tested on some of he
 
     option = { #Put your back into it!
         name = equestriaexpanded.2.a
+        if = {
+			limit = { has_dlc = "La Resistance" }
+			if = {
+				limit = { NOT = { has_dynamic_modifier = { modifier = EQS_smile_upgrades_lar } } }
+				hidden_effect = { add_dynamic_modifier = { modifier = EQS_smile_upgrades_lar } }
+				custom_effect_tooltip = EQS_smile_upgrades_lar_1_add_tt
+			}
+			else = {
+				custom_effect_tooltip = EQS_smile_upgrades_lar_1_tt
+			}
+			add_to_variable = { own_operative_detection_var = -0.1 }
+			add_to_variable = { operation_risk_var = -0.05 }
+		}
+		else = {
+			if = {
+				limit = { NOT = { has_dynamic_modifier = { modifier = EQS_smile_upgrades } } }
+				add_dynamic_modifier = { modifier = EQS_smile_upgrades }
+				custom_effect_tooltip = EQS_smile_upgrades_1_add_tt
+			}
+			else = {
+				custom_effect_tooltip = EQS_smile_upgrades_1_tt
+			}
+			add_to_variable = { subversive_activities_upkeep_var = -0.3 }
+		}
     }
 }
 
@@ -9447,6 +9578,29 @@ country_event = { #An excerpt of a new training manual from SMILE regarding how 
 
     option = { #I never knew!
         name = equestriaexpanded.4.a
+        if = {
+			limit = { has_dlc = "La Resistance" }
+			if = {
+				limit = { NOT = { has_dynamic_modifier = { modifier = EQS_smile_upgrades_lar } } }
+				hidden_effect = { add_dynamic_modifier = { modifier = EQS_smile_upgrades_lar } }
+				custom_effect_tooltip = EQS_smile_upgrades_lar_5_add_tt
+			}
+			else = {
+				custom_effect_tooltip = EQS_smile_upgrades_lar_5_tt
+			}
+			add_to_variable = { commando_trait_var = 0.25 }
+		}
+		else = {
+			if = {
+				limit = { NOT = { has_dynamic_modifier = { modifier = EQS_smile_upgrades } } }
+				hidden_effect = { add_dynamic_modifier = { modifier = EQS_smile_upgrades } }
+				custom_effect_tooltip = EQS_smile_upgrades_5_add_tt
+			}
+			else = {
+				custom_effect_tooltip = EQS_smile_upgrades_5_tt
+			}
+			add_to_variable = { subversive_activities_upkeep_var = -0.1 }
+		}
     }
 }
 

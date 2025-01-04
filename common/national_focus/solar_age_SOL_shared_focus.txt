@@ -8134,7 +8134,6 @@ shared_focus = {
 		focus = SOL_burn_bats
 		focus = SOL_useful_servants
 	}
-	available = { has_war = no }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_peninsula_of_damned"
@@ -8178,7 +8177,6 @@ shared_focus = {
 	cost = 5
 	prerequisite = { focus = SOL_peninsula_of_damned }
 	available = {
-		has_war = no
 		17 = { is_owned_and_controlled_by = ROOT }
 	}
 
@@ -8210,7 +8208,6 @@ shared_focus = {
 
 	cost = 5
 	prerequisite = { focus = SOL_peninsula_of_damned }
-	available = { has_war = no }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_peaks_of_wealth"
@@ -8237,11 +8234,79 @@ shared_focus = {
 
 	cost = 6
 	prerequisite = { focus = SOL_peninsula_of_damned }
-	available = { has_war = no }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_remote_no_more"
 		#Add stuff here
+		build_railway = {
+			level = 2
+			fallback = yes
+			path = { 586 9524 569 8622 11499 13011 }
+			start_state = 15
+			target_state = 13
+		}
+		15 = {
+			if = {
+				limit = { infrastructure < 5 }
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_building_construction = {
+				type = air_base
+				level = 3
+				instant_build = yes
+			}
+		}
+		if = {
+			limit = {
+				30 = { infrastructure < 5 }
+			}
+			30 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				16 = { infrastructure < 5 }
+			}
+			16 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		13 = {
+			if = {
+				limit = { infrastructure < 5 }
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_building_construction = {
+				type = air_base
+				level = 2
+				instant_build = yes
+			}
+		}
+		32 = {
+			add_building_construction = {
+				type = supply_node
+				level = 1
+				instant_build = yes
+				province = 6983
+			}
+		}
 	}
 	ai_will_do = { factor = 70 }
 }
@@ -8258,7 +8323,6 @@ shared_focus = {
 		focus = SOL_prison_of_fire
 		focus = SOL_peaks_of_wealth
 	}
-	available = { has_war = no }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_expand_oil_fields"
@@ -8283,7 +8347,6 @@ shared_focus = {
 	prerequisite = { focus = SOL_remote_no_more }
 	mutually_exclusive = { focus = SOL_moonspeaker_tax }
 	mutually_exclusive = { focus = SOL_replanting_jungle }
-	available = { has_war = no }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_modern_south_east"
@@ -8368,7 +8431,6 @@ shared_focus = {
 			has_completed_focus = SOL_empress_mother
 		}
 		NOT = { has_completed_focus = SOL_fire_and_brimstone }
-		has_war = no
 	}
 
 	completion_reward = {
@@ -8390,7 +8452,6 @@ shared_focus = {
 	prerequisite = { focus = SOL_expand_oil_fields }
 	mutually_exclusive = { focus = SOL_modern_south_east }
 	mutually_exclusive = { focus = SOL_moonspeaker_tax }
-	available = { has_war = no }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_replanting_jungle"
@@ -13818,6 +13879,12 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_annex_star_energy"
 		add_ideas = SOL_star_energy_nationalized
+		#Consider it
+		#mio:EQS_star_energy_organization = {
+		#	add_mio_size = 1
+		#	add_mio_funds_gain_factor = 0.25
+		#	add_mio_research_bonus = 0.05
+		#}
 		106 = {
 			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
@@ -14343,17 +14410,6 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_active_counter_wings"
-		if = {
-			limit = { has_dlc = "La Resistance" }
-			add_to_variable = { operation_cost_sol_var = -0.10 }
-			add_to_variable = { operation_risk_sol_var = -0.03 }
-			custom_effect_tooltip = SOL_imperial_intelligence_lar_4
-		}
-		else = {
-			custom_effect_tooltip = SOL_imperial_intelligence_4
-			add_to_variable = { decryption_sol_var = 0.25 }
-			add_to_variable = { foreign_subversive_activities_sol_var = -0.15 }
-		}
 		###Maybe an event of some agents going in on a known "terror" group that is spreading anti-Solarist/Order propaganda and also "planning" an attack against Daybreaker, and taking them out
 		country_event = solarreworked.653
 	}
@@ -14395,16 +14451,6 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_spy_nation"
-		if = {
-			limit = { has_dlc = "La Resistance" }
-			add_to_variable = { operative_slot_var = 1}
-			add_to_variable = { new_operative_slot_bonus = 1 }
-			custom_effect_tooltip = SOL_imperial_intelligence_lar_6
-		}
-		else = {
-			add_to_variable = { decryption_sol_var = 0.5 }
-			custom_effect_tooltip = SOL_imperial_intelligence_6
-		}
 		###Maybe an event of ponies going through the process of becoming an agent for the Solar Empire, and how it is excrutiating, with Astrum being the one who leads it
 		country_event = solarreworked.654
 	}
@@ -14422,17 +14468,6 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_pre_crime_arrests"
-		add_to_variable = { resistance_damage_to_garrison_var = -0.15 }
-		add_to_variable = { resistance_activity_var = -0.05 }
-		if = {
-			limit = { has_dlc = "La Resistance" }
-			add_to_variable = { crypto_strength_var = 0.25 }
-			custom_effect_tooltip = SOL_imperial_intelligence_lar_7
-		}
-		else = {
-			add_to_variable = { encryption_sol_var = 0.25 }
-			custom_effect_tooltip = SOL_imperial_intelligence_7
-		}
 		###Perhaps an event of some agents coming to arrest a pony who has, on the surface, been nothing but a perfect follower of Daybreaker, but they state that they have calculated through some of their previous activities and life that they could end up a threat to the Empress, and they are going to be held until they can prove their innocence, which is going to be unlikely
 		country_event = solarreworked.655
 	}
@@ -14451,7 +14486,6 @@ shared_focus = {
 		focus = SOL_spy_nation
 	}
 	available = {
-		NOT = { has_country_flag = SOL_captured_element_bearers }
 		any_country = {
 			exists = yes
 			NOT = { is_subject_of = ROOT }
@@ -14461,8 +14495,10 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_return_elements_home"
-		#Decision or op here, with an event of Astrum Solus (who is a spy either way) meeting with the leader of the EQC (possibly just make it Arcane Nova either way) to begin planning the op to take out the M6, who have been her main mission for a year or more, which makes her incredibly passionate to finally get them
-		country_event = solarreworked.656
+		hidden_effect = {
+			#Decision or op here, with an event of Astrum Solus (who is a spy either way) meeting with the leader of the EQC (possibly just make it Arcane Nova either way) to begin planning the op to take out the M6, who have been her main mission for a year or more, which makes her incredibly passionate to finally get them
+			country_event = solarreworked.656
+		}
 		if = {
 			limit = { has_dlc = "La Resistance" }
 			set_country_flag = SOL_hunt_for_mane_six_lar
@@ -14497,8 +14533,10 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_remove_evidence"
-		###Event of Daybreaker preparing a plan with her chief of intelligence to find and capture Luna, who is still running a campaign of resistance against the Solar Empire, and she is incredibly frustrated with how she has not been able to yet, and is adamant they must find her
-		country_event = solarreworked.657
+		hidden_effect = {
+			###Event of Daybreaker preparing a plan with her chief of intelligence to find and capture Luna, who is still running a campaign of resistance against the Solar Empire, and she is incredibly frustrated with how she has not been able to yet, and is adamant they must find her
+			country_event = solarreworked.657
+		}
 		if = {
 			limit = { has_dlc = "La Resistance" }
 			set_country_flag = SOL_luna_hunt_lar

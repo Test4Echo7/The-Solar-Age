@@ -5079,30 +5079,6 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [ROOT.GetName]: focus EQS_further_deep_cover_training"
-		if = {
-			limit = { has_dlc = "La Resistance" }
-			if = {
-				limit = { NOT = { has_dynamic_modifier = { modifier = EQS_smile_upgrades_lar } } }
-				hidden_effect = { add_dynamic_modifier = { modifier = EQS_smile_upgrades_lar } }
-				custom_effect_tooltip = EQS_smile_upgrades_lar_1_add_tt
-			}
-			else = {
-				custom_effect_tooltip = EQS_smile_upgrades_lar_1_tt
-			}
-			add_to_variable = { own_operative_detection_var = -0.1 }
-			add_to_variable = { operation_risk_var = -0.05 }
-		}
-		else = {
-			if = {
-				limit = { NOT = { has_dynamic_modifier = { modifier = EQS_smile_upgrades } } }
-				add_dynamic_modifier = { modifier = EQS_smile_upgrades }
-				custom_effect_tooltip = EQS_smile_upgrades_1_add_tt
-			}
-			else = {
-				custom_effect_tooltip = EQS_smile_upgrades_1_tt
-			}
-			add_to_variable = { subversive_activities_upkeep_var = -0.3 }
-		}
 		###A number of new recruits for SMILE are put through the ringer by Bon Bon herself, since she was good at being deep cover for years, given how she lived in Ponyville, and she pushes the recruits to their limit on what they can do
 		country_event = equestriaexpanded.2
 	}
@@ -5163,12 +5139,15 @@ shared_focus = {
 		log = "[GetDateText]: [ROOT.GetName]: focus EQS_strike_moon"
 		custom_effect_tooltip = EQS_unlock_operation_mondwaffen_tt
 		set_country_flag = EQS_greife_den_mond_an
-		#Maybe short event of Celestia being presented the operation, which she is against but is convinced to do
-		country_event = equestriaexpanded.3
+		hidden_effect = {
+			#Maybe short event of Celestia being presented the operation, which she is against but is convinced to do
+			country_event = equestriaexpanded.3
+		}
 	}
 	ai_will_do = {
 		factor = 30
 		modifier = {
+			has_war_with = NLR
 			surrender_progress > 0.3
 			factor = 3
 		}
@@ -5244,29 +5223,6 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [ROOT.GetName]: focus EQS_anti_changeling_training"
-		if = {
-			limit = { has_dlc = "La Resistance" }
-			if = {
-				limit = { NOT = { has_dynamic_modifier = { modifier = EQS_smile_upgrades_lar } } }
-				hidden_effect = { add_dynamic_modifier = { modifier = EQS_smile_upgrades_lar } }
-				custom_effect_tooltip = EQS_smile_upgrades_lar_5_add_tt
-			}
-			else = {
-				custom_effect_tooltip = EQS_smile_upgrades_lar_5_tt
-			}
-			add_to_variable = { commando_trait_var = 0.25 }
-		}
-		else = {
-			if = {
-				limit = { NOT = { has_dynamic_modifier = { modifier = EQS_smile_upgrades } } }
-				hidden_effect = { add_dynamic_modifier = { modifier = EQS_smile_upgrades } }
-				custom_effect_tooltip = EQS_smile_upgrades_5_add_tt
-			}
-			else = {
-				custom_effect_tooltip = EQS_smile_upgrades_5_tt
-			}
-			add_to_variable = { subversive_activities_upkeep_var = -0.1 }
-		}
 		###Maybe an event of Bon Bon and others going through training for different ways to spot a changeling or how to flush one out, or even act like one when around other changelings who believe that they're in disguise as a pony
 		country_event = equestriaexpanded.4
 	}
@@ -5290,8 +5246,10 @@ shared_focus = {
 		log = "[GetDateText]: [ROOT.GetName]: focus EQS_moth_to_flame"
 		custom_effect_tooltip = EQS_unlock_operation_flyswatter_tt
 		set_country_flag = EQS_swat_buggo
-		###Event possibly of Celestia being given the report for the plan for the operation, and she fights with herself on if she should approve it or not, and does meet with the pony who will be undertaking the mission, to gather more insight onto what is going on, and she relucantly will agree
-		country_event = equestriaexpanded.5
+		hidden_effect = {
+			###Event possibly of Celestia being given the report for the plan for the operation, and she fights with herself on if she should approve it or not, and does meet with the pony who will be undertaking the mission, to gather more insight onto what is going on, and she relucantly will agree
+			country_event = equestriaexpanded.5
+		}
 	}
 	ai_will_do = { factor = 200 }
 }

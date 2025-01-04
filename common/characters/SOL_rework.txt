@@ -399,12 +399,7 @@ characters = {
 			skills = { specialization_magical = 3 }
 			visible = {
 				OWNER = {
-					if = {
-						limit = {
-							is_EQS_SOL = yes
-						}
-						has_country_flag = SOL_bunsen_unlocked
-					}
+					has_country_flag = SOL_bunsen_unlocked
 				}
 			}
 		}

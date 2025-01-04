@@ -459,6 +459,80 @@ SOL_dealing_with_resistance = {
 			}
 		}
 	}
+	SOL_lock_down_border = {
+		allowed = {
+			tag = EQS
+		}
+		visible = { has_country_flag = SOL_twilight_fleeing }
+		fire_only_once = yes
+		custom_cost_trigger = {
+			command_power > 49.99
+		}
+		custom_cost_text = EQS_decision_cost_command_power_50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SOL_lock_down_border"
+			hidden_effect = {
+				add_command_power = -50
+			}
+			custom_effect_tooltip = SOL_no_fleeing_now_tt
+			add_to_variable = { SOL_lockdown_procedures = 1 }
+		}
+		ai_will_do = { factor = 5 }
+	}
+	SOL_monitor_transportation_routes = {
+		allowed = {
+			tag = EQS
+		}
+		visible = { has_country_flag = SOL_twilight_fleeing }
+		fire_only_once = yes
+		cost = 75
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SOL_monitor_transportation_routes"
+			custom_effect_tooltip = SOL_no_fleeing_now_tt
+			add_to_variable = { SOL_lockdown_procedures = 1 }
+		}
+		ai_will_do = { factor = 10 }
+	}
+	SOL_implement_aerial_patrols = {
+		allowed = {
+			tag = EQS
+		}
+		visible = { has_country_flag = SOL_twilight_fleeing }
+		fire_only_once = yes
+		custom_cost_trigger = {
+			has_stability > 0.099
+		}
+		custom_cost_text = EQS_decision_cost_stability_10
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SOL_implement_aerial_patrols"
+			hidden_effect = {
+				add_stability = -0.1
+			}
+			custom_effect_tooltip = SOL_no_fleeing_now_tt
+			add_to_variable = { SOL_lockdown_procedures = 1 }
+		}
+		ai_will_do = { factor = 8 }
+	}
+	SOL_approve_random_checkpoints = {
+		allowed = {
+			tag = EQS
+		}
+		visible = { has_country_flag = SOL_twilight_fleeing }
+		fire_only_once = yes
+		custom_cost_trigger = {
+			has_manpower > 39999
+		}
+		custom_cost_text = EQS_decision_cost_manpower_40000
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SOL_lock_down_border"
+			hidden_effect = {
+				add_manpower = -40000
+			}
+			custom_effect_tooltip = SOL_no_fleeing_now_tt
+			add_to_variable = { SOL_lockdown_procedures = 1 }
+		}
+		ai_will_do = { factor = 12 }
+	}
 	SOL_investigate_ponyville = {
 		icon = anti_harmony
 		allowed = {
