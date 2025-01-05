@@ -869,7 +869,7 @@ country_event = { #Daybreaker holds a speech in Sanctum Solar, which has just be
                 }
             }
             STG = {
-                if = { limit = is_in_faction_with = ROOT }
+                if = { limit = { is_in_faction_with = ROOT } }
                 leave_faction = yes
             }
         }
@@ -7464,6 +7464,7 @@ country_event = { #Country event speaking of either the yak's acceptance or reje
         if = {
             limit = { FROM = { has_country_flag = SOL_twilight_negotiating } }
             custom_effect_tooltip = SOL_super_smash_pones_tt
+            set_country_flag = SOL_can_use_yak_names
             hidden_effect = {
                 division_template = {
                     name = "Yak Levies"
@@ -9170,7 +9171,7 @@ country_event = { #Event for recapping for NLR that there have been coordinated 
     option = { #Celestia shall not stop us!
         name = solarreworked.612.a
         add_timed_idea = {
-            idea = NLR_disrupted_officers
+            idea = NLR_military_disarray
             days = 150
         }
         retire_character = EQS_NLR_bipen

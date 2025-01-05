@@ -640,6 +640,7 @@ recruit_character = EQS_riptide
 recruit_character = EQS_sky_high
 recruit_character = EQS_treadwell
 recruit_character = EQS_butter_knife
+recruit_character = EQS_nurse_redheart
 #Foreign characters
 recruit_character = CRY_nightshade
 recruit_character = CRY_morning_mist

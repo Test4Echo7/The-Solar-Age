@@ -351,6 +351,12 @@ leader_traits = {
         ai_will_do = { factor = 1 }
     }
 
+    warm_hearted_caregiver = {
+        random = no
+        experience_loss_factor = -0.075
+        custom_modifier_tooltip = EQS_redheart_trickleback_tt
+    }
+
     #CRY advisor
     imperial_coordinator = {
         random = no

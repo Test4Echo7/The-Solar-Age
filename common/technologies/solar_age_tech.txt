@@ -34,11 +34,27 @@ technologies = {
 			breakthrough = 0.25
 		}
 	}
+	EQS_nurse_redheart_trickleback = {
+		research_cost = 1
+		allow = { always = no }
+
+		category_front_line = {
+			casualty_trickleback = 0.002
+		}
+	}
+	EQS_nurse_redheart_trickleback_removal = {
+		research_cost = 1
+		allow = { always = no }
+
+		category_front_line = {
+			casualty_trickleback = 0
+		}
+	}
 
 	###Operation Techs###
 	SOL_solarist_necromancy = {
-		infantry = {
-			casualty_trickleback = 0.25
+		category_all_infantry = {
+			casualty_trickleback = 0.025
 			max_organisation = -0.1
 		}
 	}

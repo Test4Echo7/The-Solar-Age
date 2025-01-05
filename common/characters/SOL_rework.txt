@@ -14,6 +14,62 @@ characters = {
             }
         }
     }
+    EQS_nurse_redheart = {
+		name = EQS_nurse_redheart
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/advisors/EQS/EQS_nurse_redheart.tga"
+			}
+		}
+		gender = female
+
+		advisor = {
+			slot = high_command
+			idea_token = nurse_redheart
+			cost = 75
+			ledger = army
+			allowed = {
+				original_tag = EQS
+			}
+			available = {
+				if = {
+					limit = { is_original_EQS = yes }
+					has_completed_focus = Extreme_war_comittee
+				}
+				if = {
+					limit = { is_EQS_SOL = yes }
+					has_global_flag = EQS_completed_Extreme_war_comittee
+				}
+				if = {
+					limit = { NOT = { tag = event_target:solar_empire } }
+					has_government = democratic
+				}
+			}
+			on_add = {
+				ROOT = {
+					set_technology = {
+						EQS_nurse_redheart_trickleback = 1
+						popup = no
+					}
+					set_technology = {
+						EQS_nurse_redheart_trickleback_removal = 0
+					}
+				}
+			}
+			on_remove = {
+				ROOT = {
+					set_technology = {
+						EQS_nurse_redheart_trickleback = 0
+					}
+					set_technology = {
+						EQS_nurse_redheart_trickleback_removal = 1
+						popup = no
+					}
+				}
+			}
+			traits = { warm_hearted_caregiver }
+		}
+    }
     EQS_Novus_Flux = {
 		name = EQS_Novus_Flux
 		gender = female

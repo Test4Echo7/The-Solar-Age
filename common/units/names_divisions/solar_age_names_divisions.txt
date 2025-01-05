@@ -41,3 +41,33 @@ EQS_SPC_01 = {
 		20 = { "Legio XX Omega Legion" "EQS_SOL_history_legio_XX" }
 	}
 }
+EQS_YAK_INF_01 = {
+	name = "Conscripted Yak Banner Armies"
+
+	for_countries = { EQS }
+
+	can_use = {
+		tag = EQS
+		is_EQS_SOL = yes
+		has_country_flag = SOL_can_use_yak_names
+	}
+
+	division_types = { "infantry" }
+
+	fallback_name = "%d Banner Army Division"
+
+	ordered = {
+		1 = { "%dst 'Shield of Yaks' Division" }
+		2 = { "%dnd 'Spear of Yaks' Division" }
+		3 = { "%drd 'Hammer of Yaks' Division" }
+		4 = { "%th 'Sword of Yaks' Division" }
+		5 = { "%th 'Helmet of Yaks' Division" }
+		6 = { "%th 'Chestplate of Yaks' Division" }
+		7 = { "%th 'Pike of Yaks' Division" }
+		8 = { "%th 'Flail of Yaks' Division" }
+		9 = { "%th 'Bludgeon of Yaks' Division" }
+		10 = { "%th 'Arrow of Yaks' Division" }
+		11 = { "%th 'Glave of Yaks' Division" }
+		12 = { "%th 'Mace of Yaks' Division" }
+	}
+}
