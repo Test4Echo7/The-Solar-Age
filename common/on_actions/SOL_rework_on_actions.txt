@@ -66,6 +66,22 @@ on_actions = {
                     }
                 }
             }
+            if = {
+                limit = {
+                    ROOT = {
+                        tag = EQS
+                        is_EQS_SOL = yes
+                        has_opinion_modifier = EQS_GRI_spurned
+                    }
+                    FROM = {
+                        tag = GRD
+                    }
+                }
+                remove_opinion_modifier = {
+                    target = GRD
+                    modifier = EQS_GRI_spurned
+                }
+            }
         }
     }
     on_war_relation_added = { #ROOT is attacker. FROM is defender

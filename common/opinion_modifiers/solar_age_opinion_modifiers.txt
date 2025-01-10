@@ -1,4 +1,6 @@
 opinion_modifiers = {
     EQS_used_bioweapons = { value = -50 }
     EQS_CHN_used_bioweapons = { value = -50 }
+    EQS_GRI_working_together = { value = 35 }
+    EQS_GRI_spurned = { value = -15 }
 }

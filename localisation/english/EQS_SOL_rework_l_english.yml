@@ -613,6 +613,8 @@
   ###Opinion Modifiers###
   EQS_used_bioweapons:0 "Used Magical Bioweapons"
   EQS_CHN_used_bioweapons:0 "Retaliated in Kind"
+  EQS_GRI_working_together:0 "Pony-Griffon Attache"
+  EQS_GRI_spurned:0 "Rejected Military Cooperation"
 
   ###Occupation Laws###
   EQS_inquisitionis_occupation:0 "Inquisition Administration"

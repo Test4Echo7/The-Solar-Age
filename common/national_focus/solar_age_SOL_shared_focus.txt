@@ -6941,6 +6941,7 @@ shared_focus = {
 		DRG = {
 			exists = yes
 			is_subject = no
+			NOT = { has_war_with = ROOT }
 		}
 		custom_trigger_tooltip = {
 			tooltip = SOL_all_diplomats_busy_please_call_again_later_tt
@@ -6982,6 +6983,7 @@ shared_focus = {
 				YAK = {
 					exists = yes
 					is_subject = no
+					NOT = { has_war_with = ROOT }
 				}
 				NOT = { country_exists = JAK }
 			}
@@ -6989,6 +6991,7 @@ shared_focus = {
 				JAK = {
 					exists = yes
 					is_subject = no
+					NOT = { has_war_with = ROOT }
 				}
 				NOT = { country_exists = YAK }
 			}
@@ -7032,10 +7035,12 @@ shared_focus = {
 			PNG = {
 				exists = yes
 				is_subject = no
+				NOT = { has_war_with = ROOT }
 			}
 			PLB = {
 				exists = yes
 				is_subject = no
+				NOT = { has_war_with = ROOT }
 			}
 		}
 		custom_trigger_tooltip = {
@@ -7078,6 +7083,8 @@ shared_focus = {
 				GRF = {
 					exists = yes
 					is_subject = no
+					NOT = { has_war_with = ROOT }
+					NOT = { has_country_leader = { character = GRF_governor_teafeather ruling_only = yes } }
 				}
 				GFF = {
 					OR = {
@@ -7090,6 +7097,7 @@ shared_focus = {
 				GFF = {
 					exists = yes
 					is_subject = no
+					NOT = { has_war_with = ROOT }
 				}
 				NOT = { country_exists = GRF }
 			}
@@ -7133,6 +7141,7 @@ shared_focus = {
 		GRD = {
 			exists = yes
 			is_subject = no
+			NOT = { has_war_with = ROOT }
 			has_opinion = {
 				target = ROOT
 				value > 59

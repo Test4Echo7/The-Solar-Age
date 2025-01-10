@@ -6315,12 +6315,10 @@ country_event = { #Ponse Cocktail is surprised in his home by his aide stating h
                 ruling_party = fascism
                 elections_allowed = no
             }
-            #add_popularity = {
-            #    ideology = fascism
-            #    popularity = 0.03
-            #}
-            #add_stability = 0.03
-            #add_political_power = 50
+            add_popularity = {
+                ideology = fascism
+                popularity = 0.25
+            }
             set_party_name = { ideology = fascism long_name = EQC_SOL_fascism_party_long name = EQC_SOL_fascism_party }
             PCB_ponse_cocktail = {
                 add_country_leader_role = {
@@ -6353,6 +6351,10 @@ country_event = { #Red Tide steps off her plane from the mainland and is instant
             set_politics = {
                 ruling_party = fascism
                 elections_allowed = no
+            }
+            add_popularity = {
+                ideology = fascism
+                popularity = 0.25
             }
             EQS_red_tide = {
                 add_country_leader_role = {
@@ -8221,20 +8223,58 @@ country_event = { #Sunrise and Dawnbreak arrive in GRD, and are given an impress
 
     is_triggered_only = yes
 
+    option = {
+        name = solarreworked.493
+        hidden_effect = {
+            country_event = {
+                id = solarreworked.495
+                days = 3
+            }
+        }
+    }
+}
+
+country_event = {
+    id = solarreworked.494
+    title = solarreworked.494.t
+    desc = solarreworked.494.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.494"}
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.494.a
+        hidden_effect = {
+            country_event = {
+                id = solarreworked.495
+                days = 7
+            }
+        }
+    }
+}
+
+country_event = {
+    id = solarreworked.495
+    title = solarreworked.495.t
+    desc = solarreworked.495.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.495"}
+
+    is_triggered_only = yes
+
     option = { #This shall not work. Griffons and ponies shall remain separate.
-        name = solarreworked.493.a
+        name = solarreworked.495.a
         ai_chance = {
             factor = 1
             modifier = {
                 strength_ratio = {
-                    tag = FROM
+                    tag = EQS
                     ratio > 1.2
                 }
                 factor = 2
             }
             modifier = {
                 strength_ratio = {
-                    tag = FROM
+                    tag = EQS
                     ratio > 1.5
                 }
                 factor = 3
@@ -8245,7 +8285,7 @@ country_event = { #Sunrise and Dawnbreak arrive in GRD, and are given an impress
             }
         }
         set_country_flag = SOL_GRI_rejected
-        FROM = {
+        EQS = {
             country_event = {
                 id = solarreworked.494
                 days = 14
@@ -8253,33 +8293,33 @@ country_event = { #Sunrise and Dawnbreak arrive in GRD, and are given an impress
         }
     }
     option = { #As peers, we shall grow stronger together!
-        name = solarreworked.493.b
+        name = solarreworked.495.b
         ai_chance = {
             factor = 1
             modifier = {
                 strength_ratio = {
-                    tag = FROM
+                    tag = EQS
                     ratio < 1.1
                 }
                 factor = 2
             }
             modifier = {
                 strength_ratio = {
-                    tag = FROM
+                    tag = EQS
                     ratio < 0.75
                 }
                 factor = 5
             }
             modifier = {
                 has_opinion = {
-                    target = FROM
+                    target = EQS
                     value > 84
                 }
                 factor = 4
             }
         }
         set_country_flag = SOL_GRI_accepted
-        FROM = {
+        EQS = {
             country_event = {
                 id = solarreworked.494
                 days = 14
@@ -8289,28 +8329,39 @@ country_event = { #Sunrise and Dawnbreak arrive in GRD, and are given an impress
 }
 
 country_event = { #Country event speaking of either of GRD's acceptance or rejection
-    id = solarreworked.494
-    title = solarreworked.494.t
-    desc = solarreworked.494.d
-    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.494"}
+    id = solarreworked.496
+    title = solarreworked.496.t
+    desc = solarreworked.496.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.496"}
 
     is_triggered_only = yes
 
     option = { #Too good to be true!
         trigger = { GRD = { has_country_flag = SOL_GRI_accepted } }
-        name = solarreworked.494.a
+        name = solarreworked.496.a
         clr_country_flag = SOL_sunset_away
         clr_country_flag = SOL_twilight_away
         add_ideas = SOL_solar_griffon_attache_SOL
-        FROM = { add_ideas = SOL_solar_griffon_attache_GRI }
+        FROM = {
+            add_ideas = SOL_solar_griffon_attache_GRI
+        }
+        add_opinion_modifier = {
+            target = FROM
+            modifier = EQS_GRI_working_together
+        }
+        reverse_add_opinion_modifier = {
+            target = FROM
+            modifier = EQS_GRI_working_together
+        }
     }
     option = { #We tried our best.
         trigger = { GRD = { has_country_flag = SOL_GRI_rejected } }
-        name = solarreworked.494.b
+        name = solarreworked.496.b
         clr_country_flag = SOL_sunset_away
         clr_country_flag = SOL_twilight_away
         add_political_power = -200
         add_stability = -0.05
+        add_opinion_modifier = EQS_GRI_spurned
     }
 }
 
@@ -8932,12 +8983,20 @@ country_event = { #Triggered event informing GRD or EQS that the attache has bee
             }
             remove_ideas = SOL_solar_griffon_attache_GRI
             clr_country_flag = SOL_GRI_accepted
+            remove_opinion_modifier = {
+                target = EQS
+                modifier = EQS_GRI_working_together
+            }
         }
         if = {
             limit = {
                 tag = EQS
             }
             remove_ideas = SOL_solar_griffon_attache_SOL
+            remove_opinion_modifier = {
+                target = EQS
+                modifier = EQS_GRI_working_together
+            }
         }
     }
 }
