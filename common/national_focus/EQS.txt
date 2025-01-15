@@ -5058,6 +5058,7 @@ shared_focus = {
 			}
 		}
 	}
+	continue_if_invalid = yes
 	allow_branch = { is_EQS_SOL = no }
 
 	completion_reward = {
@@ -5220,6 +5221,7 @@ shared_focus = {
 			has_added_tension_amount > 10
 		}
 	}
+	continue_if_invalid = yes
 
 	completion_reward = {
 		log = "[GetDateText]: [ROOT.GetName]: focus EQS_anti_changeling_training"

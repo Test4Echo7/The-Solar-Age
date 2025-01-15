@@ -6223,9 +6223,9 @@ country_event = { #Short event speaking how the island nation of Puerto Caballo 
             EQS_red_tide = {
                 set_nationality = PCB #I don't want to deal with a PCB history file, so she gets recruited in EQS and sent to PCB here, to avoid the console whinging
             }
-        }
-        PCB = {
-            country_event = solarreworked.401
+            PCB = {
+                country_event = { id = solarreworked.401 hours = 12 }
+            }
         }
     }
 }
@@ -6241,24 +6241,37 @@ country_event = { #The leader of PCB is offered a choice of either annhilation o
 
     option = { #What can a tiny island like us do against them?
         name = solarreworked.401.a
-        ai_chance = { factor = 70 }
-        set_cosmetic_tag = PCB_SOL
-        set_country_flag = is_solar_puppet
-        get_current_government_type = yes
-        EQS = {
-            country_event = solarreworked.402
-            set_autonomy = {
-                target = ROOT
-                autonomous_state = autonomy_satellite
+        ai_chance = {
+            factor = 1
+            modifier = {
+                NOT = { has_government = democratic }
+                factor = 2
+            }
+            modifier = {
+                strength_ratio = { tag = FROM ratio < 0.5 }
+                factor = 3
+            }
+            modifier = {
+                is_in_faction = yes
+                factor = 0
             }
         }
-        restore_previous_government_type = yes
+        EQS = {
+            country_event = { id = solarreworked.402 days = 2 }
+        }
+        set_country_flag = SOL_PCB_accepted
     }
     option = { #Don't they have bigger fish to fry? Ignore them.
         name = solarreworked.401.b
-        ai_chance = { factor = 30 }
+        ai_chance = {
+            factor = 1
+            modifier = {
+                has_government = democratic
+                factor = 2
+            }
+        }
         EQS = {
-            country_event = solarreworked.402
+            country_event = { id = solarreworked.402 days = 2 }
         }
     }
 }
@@ -6267,11 +6280,11 @@ country_event = { #Word comes back to Daybreaker about what Puerto Caballo's res
     id = solarreworked.402
     title = solarreworked.402.t
     desc = {
-        trigger = { PCB = { has_country_flag = is_solar_puppet } }
+        trigger = { PCB = { has_country_flag = SOL_PCB_accepted } }
         text = solarreworked.402.d.a
     }
     desc = {
-        trigger = { PCB = { NOT = { has_country_flag = is_solar_puppet } } }
+        trigger = { PCB = { NOT = { has_country_flag = SOL_PCB_accepted } } }
         text = solarreworked.402.d.b
     }
     picture = GFX_event_solarempire
@@ -6280,15 +6293,26 @@ country_event = { #Word comes back to Daybreaker about what Puerto Caballo's res
     is_triggered_only = yes
 
     option = { #Excellent news! We'll deal with them shortly!
-        trigger = { PCB = { has_country_flag = is_solar_puppet } }
+        trigger = { PCB = { has_country_flag = SOL_PCB_accepted } }
         name = solarreworked.402.a
+        FROM = { get_current_government_type = yes }
+        set_autonomy = {
+            target = FROM
+            autonomous_state = autonomy_satellite
+        }
+        FROM = {
+            set_cosmetic_tag = PCB_SOL
+            set_country_flag = is_solar_puppet
+            restore_previous_government_type = yes
+            clr_country_flag = SOL_PCB_accepted
+        }
     }
     option = { #We weren't asking.
-        trigger = { PCB = { NOT = { has_country_flag = is_solar_puppet } } }
+        trigger = { PCB = { NOT = { has_country_flag = SOL_PCB_accepted } } }
         name = solarreworked.402.b
         if = {
             limit = {
-                PCB = { NOT = { has_country_flag = is_solar_puppet } }
+                PCB = { NOT = { has_country_flag = SOL_PCB_accepted } }
             }
             create_wargoal = {
                 type = puppet_wargoal_focus
@@ -6401,7 +6425,7 @@ country_event = { #EQC receives a demand to submit to the Solar Empire, as they 
     option = { #If that is what they wish...
         name = solarreworked.431.a
         ai_chance = {
-
+            ###Fill in here
         }
         set_country_flag = SOL_EQC_submitted
         FROM = {
@@ -6460,6 +6484,7 @@ country_event = { #EQS receives the response from EQC, and is either happy with 
                 }
             }
             set_cosmetic_tag = EQC_SOL
+            set_country_flag = is_solar_puppet
         }
     }
     option = { #A sea separating us means nothing!

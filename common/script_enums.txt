@@ -952,4 +952,7 @@ script_enum_equipment_bonus_type = {
 	space_marine_bolt_gun_1
 	space_marine_armor
 	space_marine_armor_1
+	super_cas_equipment
+	super_cas_equipment_1
+	super_cas_airframe_1
 }

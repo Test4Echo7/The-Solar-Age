@@ -446,7 +446,7 @@
   SOL_who_called_in_the_fleet_tt:0 "A number of §Ymothballed ships§! will re-enter service in reserve."
   SOL_blueblood_pulls_a_smart_tt:0 "§YBlueblood§! has wisely agreed to serve the Empress."
   SOL_nepotism_away_tt:0 "We shall permit §YJet Set§! to remain as governor, but he shall be on a short leash."
-  SOL_albino_zealot_time_tt:0 "We shall dictate that §OArcane Nova§! be installed as governness. §R[EQC.GetNameDefCap] may not appreciate this.§!"
+  SOL_albino_zealot_time_tt:0 "We shall dictate that §OArcane Nova§! be installed as governess. §R[EQC.GetNameDefCap] may not appreciate this.§!"
   SOL_arabian_nights_tt:0 "All of §Y[SDL.GetNameDef]'s§! cores are owned by us or our subjects."
   SOL_blueblood_kneeled:0 "Prince Blueblood has submitted himself to Daybreaker"
   SOL_kept_smile_agents:0 "Has permitted former S.M.I.L.E. agents to stay in the [SOLGetAgencyName]"
@@ -649,6 +649,18 @@
   EQS_plasma_cannons:0 "Plasma Cannons"
   EQS_pilot_drug_programs:0 "Pilot Enhancement Programs"
   EQS_nurse_redheart_trickleback:0 "Nurse Redheart"
+
+  ###Special Projects###
+  sp_EQS_sun_laser:0 "§OProject Helios§!"
+  EQS_project_nightvale:0 "§BProject Nightvale§!"
+  EQS_project_astartes:0 "§YProject Astartes§!"
+  EQS_project_astartes_desc:0 "Threats to our ponies exist around every corner. Whether it is from their brethren who wish to see the Order of [ROOT.GetNameDef]'s Harmony shattered or it is from those who are jealous of our prosperity and security, every day it is a struggle for our survival. While the Empress protects us, she cannot be everywhere at once. Therefore, we must expand who is able to do so. She is the ultimate pony, and nopony else can hope to achieve her levels of perfection. However, that does not mean we cannot try, especially with a few merciful donations."
+  EQS_project_mage:0 "Project Mage"
+  EQS_project_solaris:0 "Project Solaris"
+  EQS_project_inferno:0 "Project Inferno"
+  EQS_project_conflagration:0 "Project Conflagration"
+  EQS_project_evaporation:0 "Project Evaporation"
+  EQS_project_firestorm:0 "Project Firestorm"
 
   ###Dynamic Modifiers###
   SOL_imperial_science:0 "Flame of Science"

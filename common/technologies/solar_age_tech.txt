@@ -64,6 +64,18 @@ technologies = {
 		research_cost = 1
 		allow = { always = no }
 	}
+	EQS_debug_super_cas = {
+		research_cost = 1
+		allow = { always = no }
+
+		enable_equipments = {
+			super_cas_equipment
+			super_cas_airframe_1
+		}
+		enable_equipment_modules = {
+			magical_pyro_bombs
+		}
+	}
 	EQS_esoteric_extractions_lar = {
 		research_cost = 1
 		allow = { always = no }

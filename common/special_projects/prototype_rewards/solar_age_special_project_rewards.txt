@@ -1,0 +1,796 @@
+@reward_weight_factor_theme = 0.25
+
+sp_sun_laser_increased_magic_output = {
+    narrative = {
+        #First efforts to concentrate solar power yields better understanding of ponies' magical abilities; how to proceed
+        name = EQS_solar_focused
+        desc = EQS_solar_focused_desc
+    }
+
+    threshold = {
+        min = 0
+        max = 100
+    }
+
+    fire_only_once = yes
+
+    weight = {
+        factor = 3
+    }
+
+    #Improve magical energy weapons slightly
+    option = {
+        token = sp_EQS_better_magic_guns
+
+        default = yes
+
+        iteration_output = {
+            equipment_bonus = {
+                magical_equipment = {
+                    soft_attack = 0.02
+                    breakthrough = 0.02
+                }
+            }
+        }
+    }
+
+    #Improve mage companies noticeably
+    option = {
+        token = sp_EQS_better_mages
+
+        iteration_output = {
+            unit_bonus = {
+                unicorn_company = {
+                    soft_attack = 0.05
+                    defense = 0.1
+                }
+            }
+        }
+    }
+}
+
+sp_sun_laser_increased_safety = {
+    narrative = {
+        #Concentrating so much power runs risk of harming mages who have to cast it; can ignore, or find ward spells that will protect against intense heat
+        name = EQS_sunburn
+        desc = EQS_sunburn_desc
+    }
+
+    threshold = {
+        min = 15
+        max = 100
+    }
+
+    fire_only_once = yes
+
+    weight = {
+        factor = 4
+    }
+
+    #Ignore dangers and press on
+    option = {
+        token = sp_EQS_burn_em_all
+
+        default = yes
+
+        iteration_output = {
+            country_effects = {
+                set_country_flag = SOL_careless_attacks #Will make the delay between shots longer by 60 days as new mages have to be trained to replace ones lost
+                custom_effect_tooltip = SOL_careless_attacks_tt
+                add_political_power = 50
+                #Maybe a magic research bonus of 25%?
+            }
+        }
+    }
+
+    #Accept the delay and allow wards to be researched
+    option = {
+        token = sp_EQS_sunblock
+
+        iteration_output = {
+            #Give 25% magic breakthrough, reduce progress by 8%, +50% magic research speed buff
+        }
+    }
+}
+
+
+sp_sun_laser_solar_concentration_application = {
+    narrative = {
+        #Concentrating all the sunlight gives new light to ways to improve the use of crystal lenses for different purposes
+        name = EQS_lazah
+        name = EQS_lazah_desc
+    }
+
+    threshold = {
+        min = 40
+        max = 100
+    }
+
+    fire_only_once = yes
+
+    weight = {
+        factor = 4
+    }
+
+    #Use it for punching through armor
+    option = {
+        token = sp_EQS_laser_bores
+
+        iteration_output = {
+            #Tanks gain +5% piercing
+        }
+    }
+
+    #Use it for rending flesh
+    option = {
+        token = sp_EQS_laser_snipes
+
+        default = yes
+
+        iteration_output = {
+            equipment_bonus = {
+                magical_equipment = {
+                    breakthrough = 0.1
+                    build_cost_ic = 0.03
+                }
+            }
+        }
+    }
+
+    #Use it for advanced manufacturing
+    option = {
+        token = sp_EQS_laser_assembly_lines
+
+        iteration_output = {
+            #+0.02% output and +0.02% retention
+        }
+    }
+}
+
+sp_sun_laser_faulty_concentration_spell = {
+    narrative = {
+        #Early tests point to the incantations to be slightly off and it takes more magical energy to focus on forming the laser, which requires rectification
+        name = EQS_performance_anxiety
+        name = EQS_performance_anxiety_desc
+    }
+
+    threshold = {
+        min = 60
+        max = 100
+    }
+
+    fire_only_once = yes
+
+    weight = {
+        factor = 7
+    }
+
+    #Do not delay the final product
+    option = {
+        token = sp_EQS_no_therapy
+
+        iteration_output = {
+            country_effects = {
+                set_country_flag = SOL_expensive_attacks #Add another 45 days between shots
+                custom_effect_tooltip = SOL_expensive_attacks_tt
+            }
+        }
+    }
+
+    #Rectify the issue
+    option = {
+        token = sp_EQS_basic_therapy
+
+        default = yes
+
+        iteration_output = {
+            country_effects = {
+                #Literally no effects
+                custom_effect_tooltip = SOL_ya_got_shrinked_tt
+            }
+            #Reduce output by 5%
+        }
+    }
+
+    #Use chance to improve spell
+    option = {
+        token = sp_EQS_full_therapy
+
+        iteration_output = {
+            country_effects = {
+                set_country_flag = SOL_devastating_attacks #Increase casualties by 25% and reduce war support of owner of state by 5% (from 10% already - to be programmed in)
+                custom_effect_tooltip = SOL_devastating_attacks_tt
+            }
+            #Reduce output by 12%
+        }
+    }
+}
+
+#Maybe
+sp_sun_laser_fusion_catalyst = {
+    narrative = {
+        #While finishing the spell, the scientist has determined how to make small, concentrated spell matrices of the same super-heated bomb, and it can be used for nuclear reactions
+        name = EQS_kaboom
+        desc = EQS_kaboom_desc
+    }
+
+    threshold = {
+        min = 85
+        max = 100
+    }
+
+    fire_only_once = yes
+
+    weight = {
+        factor = 10
+    }
+
+    #Use it for megaspell material replacements
+    option = {
+        token = sp_EQS_fallout_equestria_simulator
+
+        default = yes
+
+        iteration_output = {
+            #Increase nuke casualties by 20%
+        }
+    }
+
+    #Split its use between production and nukes
+    option = {
+        token = sp_EQS_spread_thin
+
+        iteration_output = {
+            #Increase nuke casualties by 10% and nuke production by 5%
+        }
+    }
+
+    #Use it for improved megaspell production
+    option = {
+        token = sp_EQS_crank_out_booms
+
+        iteration_output = {
+            #Increase nuke production by 10%
+        }
+    }
+}
+
+sp_sun_laser_exhaustive_casting = {
+    narrative = {
+        #Further practice shows that the spell is too much for most unicorns and can lead to heart attacks after casting and will have to be reworked
+        name = EQS_cardiac_arrest
+        desc = EQS_cardiac_arrest_desc
+    }
+
+    threshold = {
+        min = 85
+        max = 100
+    }
+
+    fire_only_once = yes
+
+    weight = {
+        factor = 10
+    }
+
+    #A few mages lost is no big deal
+    option = {
+        token = sp_EQS_bad_parent
+
+        default = yes
+
+        iteration_output = {
+            country_effects = {
+                set_country_flag = SOL_bad_momma #Every firing will remove 15000 manpower from SOL
+                custom_effect_tooltip = SOL_tik_tok_parent_tt
+            }
+        }
+    }
+
+    #Give them performance enhancing drugs to push them through, regardless of consequences
+    option = {
+        token = sp_EQS_wanna_try_fantasy_meth
+
+        iteration_output = {
+            country_effects = {
+                set_country_flag = SOL_even_worse_momma #Every firing will remove 10000 manpower from SOL and deal another 15% casualties
+                custom_effect_tooltip = SOL_trailer_park_momma_tt
+            }
+        }
+    }
+
+    #Rewrite the spell to be less straining
+    option = {
+        token = sp_EQS_caring_parent
+
+        iteration_output = {
+            country_effects = {
+                #Literally nothing again
+                custom_effect_tooltip = SOL_empress_cares_tt
+            }
+            #Remove 10% progress
+        }
+    }
+}
+
+sp_enhanced_matrices_crystal_decisions = {
+    narrative = {
+        #Matrices are comprised of a specific kind of crystal, but it is possible to modify them to be made of multiples, or of a rarer, mower powerful crystal
+        name = EQS_tinker_tinker
+        desc = EQS_tinker_tinker_desc
+    }
+
+    threshold = {
+        min = 0
+        max = 100
+    }
+
+    fire_only_once = yes
+
+    weight = {
+        factor = 3
+    }
+
+    #Amalgamate different crystals together
+    option = {
+        token = sp_EQS_cheap_out
+
+        default = yes
+
+        iteration_output = {
+            equipment_bonus = {
+                magical_equipment = {
+                    reliability = -0.02
+                    soft_attck = -0.02
+                    build_cost_ic = -0.03
+                }
+            }
+        }
+    }
+
+    option = {
+        token = sp_EQS_spend_mony
+
+        iteration_output = {
+            equipment_bonus = {
+                magical_equipment = {
+                    reliability = 0.03
+                    build_cost_ic = 0.02
+                }
+            }
+        }
+    }
+}
+
+sp_enhanced_matrices_unstable_matrices = {
+    narrative = {
+        #While working on improving storage of magical energy, the matrix prototype exploded, which damaged parts of the facility, but gave the scientist an idea to use it as grenades or fallbacks for keeping equipment out of enemy hooves
+        name = EQS_explosive_personality
+        desc = EQS_explosive_personality_desc
+    }
+
+    threshold = {
+        min = 25
+        max = 100
+    }
+
+    fire_only_once = yes
+
+    weight = {
+        factor = 3.5
+    }
+
+    #Use as a kind of magical grenade
+    option = {
+        token = sp_EQS_boom_baby
+
+        iteration_output = {
+            equipment_bonus = {
+                magical_equipment = {
+                    soft_attack = 0.02
+                    breakthrough = 0.01
+                }
+            }
+        }
+        #Reduce progress by 5%
+    }
+
+    #Use it to prevent capture
+    option = {
+        token = sp_EQS_self_destructive
+
+        default = yes
+
+        iteration_output = {
+            equipment_bonus = {
+                magical_equipment = {
+                    reliability = -0.02
+                    ap_attack = 0.03
+                }
+            }
+        }
+        #Reduce progress by 5%
+    }
+
+    #Fix the flaw
+    option = {
+        token = sp_EQS_self_reflective
+
+        iteration_output = {
+            equipment_bonus = {
+                magical_equipment = {
+                    reliability = 0.02
+                }
+            }
+        }
+        #Reduce progress by 10%
+    }
+}
+
+sp_super_flamers_flame_compound = {
+    narrative = {
+        #The current proposed flame compound melts the armor of the tank over time, and can be reduced in intensity to preserve some of the protective qualities of the tank
+        name = EQS_getting_hot_in_here
+        desc = EQS_getting_hot_in_here_desc
+    }
+
+    threshold = {
+        min = 30
+        max = 100
+    }
+
+    fire_only_once = yes
+
+    weight = {
+        factor = 4
+    }
+
+    #Continue as planned
+    option = {
+        token = sp_EQS_getting_hot
+
+        default = yes
+
+        iteration_output = {
+            #Increase soft_attack by 25%, reduce armor by 15%
+        }
+    }
+
+    #Reduce the flame's intensity
+    option = {
+        token = sp_EQS_take_chill_pill
+
+        iteration_output = {
+            #Decrease soft attack by 15%, increase armor by 10%
+        }
+    }
+
+    #Redesign the armor scheme entirely
+    option = {
+        token = sp_EQS_door_number_c
+
+        iteration_output = {
+            #increase soft attack by 10%, armor by 5%, and production cost by 5%
+        }
+    }
+}
+
+sp_super_flamers_sticky_or_liquid_compound = {
+    narrative = {
+        #There are two avenues that can be taken with the magical fuel, either be like napalm and stick to anything it can, and better; or be coalesced into an incredibly runny but coherent liquid that will spread rapidly and burn anything it touches
+        name = EQS_fires_of_tartarus
+        name = EQS_fires_of_tartarus_desc
+    }
+
+    threshold = {
+        min = 65
+        max = 100
+    }
+
+    fire_only_once = yes
+
+    weight = {
+        factor = 4
+    }
+
+    #Stick to anything
+    option = {
+        token = sp_EQS_safe_route
+
+        default = yes
+
+        iteration_output = {
+            #Increase attack bonus of flame tanks by 5% in close quarters environments: urban, fort, forest, jungle
+        }
+    }
+
+    #Run like heck
+    option = {
+        token = sp_EQS_unsafe_route
+
+        iteration_output = {
+            #Increase attack bonus of flame tanks by 5% in open areas: plains, hills, desert, marsh
+        }
+    }
+}
+
+sp_plasma_cannons_reducing_load = {
+    narrative = {
+        #The prototype plasma cannons are extremely heavy, to the point of impacting naval performance of the battleships; the designs themselves can't be changed, but the ships can, and there are options for this
+        name = EQS_big_boned
+        desc = EQS_big_boned_desc
+    }
+
+    threshold = {
+        min = 25
+        max = 100
+    }
+
+    fire_only_once = yes
+
+    weight = {
+        factor = 3
+    }
+
+    #Reduce unnecessary armaments
+    option = {
+        token = sp_EQS_light_hit
+
+        iteration_output = {
+            #Increase range of battleships and battlecruisers by 5%, but reduce light attack by 5%
+        }
+    }
+
+    #Reduce armor plating around noncritical areas
+    option = {
+        token = sp_EQS_lightweight
+
+        default = yes
+
+        iteration_output = {
+            #Increase range of battleships by 5%, but reduce armor by 5%
+        }
+    }
+
+    #Redesign the engine system instead
+    option = {
+        token = sp_EQS_heavyweight
+
+        iteration_output = {
+            #Increase range of battleship by 10% but increase production cost by 3% and fuel usage by 5%
+        }
+    }
+}
+
+sp_plasma_cannons_traditional_usage = {
+    narrative = {
+        #The spells used to craft the plasma shots can also be applied to traditional weapons, too, and it's a matter of which aspect it should be dedicated to for development
+        name = EQS_plasma_spazz
+        desc = EQS_plasma_spazz_desc
+    }
+
+    threshold = {
+        min = 60
+        max = 100
+    }
+
+    fire_only_once = yes
+
+    weight = {
+        factor = 4
+    }
+
+    #Apply these to our tank weapons
+    option = {
+        token = sp_EQS_tank_melters
+
+        iteration_output = {
+            #Increase armor piercing by 5%, increase production cost by 2%
+        }
+    }
+
+    #Utilize these on traditional heavy guns
+    option = {
+        token = sp_EQS_stacking_modifiers
+
+        default = yes
+
+        iteration_output = {
+            #Increase heavy piercing by 3%
+        }
+    }
+
+    #Utilize these on light guns
+    option = {
+        token = sp_EQS_supplemental choice
+
+        iteration_output = {
+            #Increase light piercing by 5%
+        }
+    }
+}
+
+sp_portable_solar_panels_material_procurement = {
+    narrative = {
+        #As design is wrapping up on the solar panels, a decision should be made on what the final bill of materials will be, as there are some compounds that are harder to get but better suited for the role, whereas others are easier to get but not as effective
+        name = EQS_hippy_time
+        desc = EQS_hippy_time_desc
+    }
+
+    threshold = {
+        min = 80
+        max = 100
+    }
+
+    fire_only_once = yes
+
+    weight = {
+        factor = 5
+    }
+
+    #Use readily available materials
+    option = {
+        token = sp_EQS_quantity
+
+        iteration_output = {
+            #Reduce range factors by 5% and supply range by 3%, increase supply hub build speed by 5%, and reduce ic cost of planes and ships by 2%
+        }
+    }
+
+    #Use a mix
+    option = {
+        token = sp_EQS_status_quo
+
+        default = yes
+
+        iteration_output = {
+            #Literally nothing changes
+            custom_effect_tooltip = SOL_feeling_bold_today_eh_tt
+        }
+    }
+
+    #Use the rarer and more efficient materials
+    option = {
+        token = sp_EQS_quality
+
+        iteration_output = {
+            #Increase range factors by 3% and supply range by 2%, decrease supply hub build speed by 5% and increase ic cost of planes and ships by 2%
+        }
+    }
+}
+
+sp_pilot_drug_programs_test_subject_groups = {
+    narrative = {
+        #For the first step of the program, it must be decided if the air force will test their own pilots or civilians will be used instead, which may benefit the economy slightly
+        name = EQS_far_out_dude
+        desc = EQS_far_out_dude_desc
+    }
+
+    threshold = {
+        min = 0
+        max = 100
+    }
+
+    fire_only_once = yes
+
+    weight = {
+        factor = 10
+    }
+
+    #Use civilians
+    option = {
+        token = sp_EQS_ethical_smethical
+
+        default = yes
+
+        iteration_output = {
+            #Increase factory output by 2%, decrease monthly population by 2%
+        }
+    }
+
+    #Use the air force
+    option = {
+        token = sp_EQS_smethical_ethical
+
+        iteration_output = {
+            #Increase manpower requirements by 2%, increase agility by 1% and attack by 1%
+        }
+    }
+}
+
+sp_hot_fusion_reactor_venting_problems = {
+    narrative = {
+        #For the first steps at preparing for the heat needed for large-scale fusion, there are problems with the reactors getting to the point of meltdown, and venting problems will have to be figured out
+        name = EQS_spicy_pillow
+        name = EQS_spicy_pillow_desc
+    }
+
+    threshold = {
+        min = 0
+        max = 100
+    }
+
+    fire_only_once = yes
+
+    weight = {
+        factor = 100
+    }
+
+    #Create new vents for the reactors
+    option = {
+        token = sp_EQS_glow_much
+
+        default = yes
+
+        iteration_output = {
+            #Increase reactor build speed by 10%, reduce output of nukes by 5%
+        }
+    }
+
+    #Rebuild the cores with more thermally resistant materials
+    option = {
+        token = sp_EQS_normie_choice
+
+        iteration_output = {
+            #Literally nothing
+            custom_effect_tooltip = SOL_no_meltdown_today_tt
+        }
+    }
+
+    #Develop coolants and proper heat exhausts for use with the reactors
+    option = {
+        token = sp_EQS_based_choice
+
+        iteration_output = {
+            #Decrease reactor build speed by 5%, increase nuke output by 5%
+            #Decrease progress by 8%
+        }
+    }
+}
+
+sp_hot_fusion_reactor_by_products = {
+    narrative = {
+        #The fusion process leaves behind products which can be utilized for various purposes, as it ultimately caps out at iron, which is about as pure as can be, and can be used for different purposes when extracted
+        name = EQS_not_rocket_science
+        desc = EQS_not_rocket_science_desc
+    }
+
+    threshold = {
+        min = 65
+        max = 100
+    }
+
+    fire_only_once = yes
+
+    weight = {
+        factor = 10
+    }
+
+    #Utilize it for tank armor
+    option = {
+        token = sp_EQS_tanks_for_that
+
+        iteration_output = {
+            #Increase tank armor by 3%, breakthrough by 3%
+        }
+    }
+
+    #Utilize it for ship armor
+    option = {
+        token = sp_EQS_ship_to_ship_battle
+
+        iteration_output = {
+            #Increase all ship armor by 5%, hp by 2%
+        }
+    }
+
+    #Utilize it for stronger buildings = {
+        token = sp_EQS_infinite_construction
+
+        default = yes
+
+        iteration_output = {
+            #Decrease factory bomb vulnerability by 10%
+        }
+    }
+}

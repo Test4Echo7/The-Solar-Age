@@ -33,7 +33,7 @@ sp_EQS_sun_laser = {
     }
 
     complexity = sp_complexity.insane
-    prototype_time = sp_time.prototype.long
+    prototype_time = sp_time.prototype.medium
     breakthrough_cost = {
         specialization_magical = 4
     }
@@ -412,7 +412,7 @@ sp_EQS_hot_fusion = {
     }
 
     complexity = sp_complexity.insane
-    prototype_time = sp_time.prototype.long
+    prototype_time = sp_time.prototype.short
     breakthrough_cost = {
         specialization_nuclear = 3
     }
