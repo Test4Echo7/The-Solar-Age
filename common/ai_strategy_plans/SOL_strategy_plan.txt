@@ -1,0 +1,272 @@
+SOL_solar_empire_historical_politics = {
+    name = "FOR THE EMPRESS!"
+    desc = "The God-Empress protects"
+
+    allowed = {
+        original_tag = EQS
+    }
+
+    enable = {
+        OR = {
+            AND = {
+                is_historical_focus_on = yes
+                has_game_rule = {
+                    rule = EQS_ai_behavior
+                    option = SOLAR_EMPIRE
+                }
+            }
+            #In case of making options for other political paths
+        }
+    }
+    abort = {
+        OR = {
+            date > 1019.12.31
+            eqs_has_civil_war = yes
+        }
+    }
+
+    ai_national_focuses = {
+        SOL_waking_dawn_star
+        SOL_changeling_menace
+        SOL_reconquer_equestria
+        SOL_fire_ministers
+        SOL_bluebloods_fealty
+        SOL_answer_crimes
+        SOL_sweeping_chaff
+        SOL_break_dissent
+        SOL_plants_in_chaos
+        SOL_solidify_merger
+        SOL_take_charge
+        SOL_imperium_solis
+        SOL_god_empress
+        SOL_twilight_ascend
+        SOL_sunset_awaken
+        SOL_modernize_relic
+        SOL_establish_solaris_militarium
+        SOL_unveil_cultus
+        SOL_solaris_inquisitionis
+        SOL_solaris_adoratio
+        SOL_Mandatory_Temple_Attendance
+        SOL_inquisitionis_primary_role
+        SOL_Faith_Sacrifice_Worship
+        SOL_State_Personified
+        SOL_suffer_not_heresy
+        SOL_Lux_et_Tenebris
+        SOL_combine_church_and_state
+        SOL_better_than_best
+        SOL_generals_above_rest
+        SOL_She_Who_Raises_the_Sun
+    }
+    focus_factors = {
+        SOL_reconquer_cry = 0
+        SOL_reconquer_stg = 0
+    }
+
+    research = {
+    }
+
+    ideas = {
+        evil_twilight_sparkle = 100
+        firestorm_heart = 90
+        padlock = 80
+        bunsen_beaker = 50
+        EQS_fizzlepop = 50
+    }
+
+    weight = {
+        factor = 1
+        modifier = {
+            factor = 1
+        }
+    }
+}
+
+SOL_solar_empire_historical_conquest_phase_1 = {
+    name = "Praise the name of Daybreaker!"
+    desc = "All ponies will bow to the God-Empress"
+
+    allowed = {
+        original_tag = EQS
+    }
+
+    enable = {
+        OR = {
+            AND = {
+                is_historical_focus_on = yes
+                has_game_rule = {
+                    rule = EQS_ai_behavior
+                    option = SOLAR_EMPIRE
+                }
+                date > 1019.12.31
+            }
+        }
+    }
+    abort = {
+        has_completed_focus = SOL_last_grover
+    }
+
+    ai_national_focuses = {
+        SOL_reconquer_cry
+        SOL_core_cry
+        SOL_reconquer_stg
+        SOL_core_stg
+        SOL_final_insult
+        SOL_deserved_humiliation
+        SOL_put_in_place
+        SOL_reclaim_seaddle
+        SOL_yoink_more_land
+        SOL_figurehead_monarch
+        SOL_establish_worker_hives
+        SOL_lebensraum
+        SOL_imperial_diplomatic_corps
+        SOL_insurance_policies
+        SOL_oil_existence
+        SOL_sustenance_workers
+        SOL_griffon_fealty
+        SOL_industrial_heartland
+        SOL_conquer_GRI
+        SOL_last_grover
+    }
+    focus_factors = {
+        SOL_land_of_fiery_sun = 0
+        SOL_misguided_solarists = 0
+        SOL_last_scatterings = 0
+        SOL_almost_pony = 0
+        SOL_breach_zebrica = 0
+        SOL_wayward_foals = 0
+        SOL_attack_bat = 0
+    }
+
+    research = {
+    }
+
+    ideas = {
+        evil_twilight_sparkle = 100
+        firestorm_heart = 90
+        padlock = 80
+        bunsen_beaker = 50
+        EQS_fizzlepop = 50
+    }
+
+    weight = {
+        factor = 1
+        modifier = {
+            factor = 1
+        }
+    }
+}
+
+SOL_solar_empire_historical_conquest_phase_2 = {
+    name = "Let not the outsider be ignored"
+    desc = "Gotta catch 'em all"
+
+    allowed = {
+        original_tag = EQS
+    }
+
+    enable = {
+            is_historical_focus_on = yes
+            has_game_rule = {
+                rule = EQS_ai_behavior
+                option = SOLAR_EMPIRE
+            }
+            has_completed_focus = SOL_last_grover
+            date > 1024.12.31
+        }
+    }
+    abort = {
+
+    }
+
+    ai_national_focuses = {
+    }
+    focus_factors = {
+    }
+
+    research = {
+    }
+
+    ideas = {
+        evil_twilight_sparkle = 100
+        firestorm_heart = 90
+        padlock = 80
+        bunsen_beaker = 50
+        EQS_fizzlepop = 50
+    }
+
+    weight = {
+        factor = 1
+        modifier = {
+            factor = 1
+        }
+    }
+}
+
+SOL_solar_empire_civil_war = {
+    name = "Time to smack some Lunarists"
+    desc = "Daybreaker has focus work to do in order to not die to Luna"
+
+    allowed = {
+        original_tag = EQS
+    }
+
+    enable = {
+            has_country_flag = EQS_AI_STOP_VANILLA_STRATEGY
+            eqs_has_civil_war = yes
+            has_game_rule = {
+                rule = EQS_ai_behavior
+                option = SOLAR_EMPIRE
+            }
+        }
+    }
+    abort = {
+        eqs_has_civil_war = no
+    }
+
+    ai_national_focuses = {
+        SOL_breach_zebrica
+        SOL_last_scatterings
+        SOL_misguided_solarists
+        SOL_ports_of_zebrica
+        SOL_spaying_the_cat
+        SOL_lost_southern_souls
+        SOL_wayward_foals
+        SOL_harmonys_last_gasp
+        SOL_imperial_breadbasket
+        SOL_land_of_fiery_sun
+        SOL_almost_pony
+        SOL_decadence_shattered
+        SOL_imperial_art_project
+        SOL_doghouse
+        SOL_integrate_OHS
+        SOL_gold_of_sands
+        SOL_mutant_lake
+        SOL_eastern_calipha
+        SOL_attack_bat
+        SOL_no_sinner_alive
+        SOL_natural_state
+        SOL_light_into_darkness
+        SOL_continue_research
+        SOL_pax_solaris
+    }
+    focus_factors = {
+    }
+
+    research = {
+    }
+
+    ideas = {
+        evil_twilight_sparkle = 100
+        firestorm_heart = 90
+        padlock = 80
+        bunsen_beaker = 50
+        EQS_fizzlepop = 50
+    }
+
+    weight = {
+        factor = 1
+        modifier = {
+            factor = 1
+        }
+    }
+}
