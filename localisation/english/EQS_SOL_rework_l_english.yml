@@ -622,10 +622,19 @@
   ###Equipment###
   space_marine_bolt_gun:0 "Masterwork Magical Assault Rifle"
   space_marine_bolt_gun_1:0 ""Lightbolt" MAR"
-  space_marine_bolt_gun_desc:0 "Mastercraft magical energy weapons designed to be utilized by larger-than-life Praetorian Guard. Enhanced magical spells allow for punching through armor and vaporizing any foe who would threaten the Solar Empire."
+  space_marine_bolt_gun_desc:0 "Mastercraft magical energy weapons designed to be utilized by a larger-than-life Praetorian Guard. Enhanced magical spells allow for punching through armor and vaporizing any foe who would threaten the Solar Empire."
   space_marine_armor:0 "Magic-Powered Armor"
   space_marine_armor_1:0 ""Aegis" MPA"
   space_marine_armor_desc:0 "Custom-forged, magically-powered armor built specifically for the enhanced super-soldiers of the Praetorian Guard. Bonding techniques with the spells create a hardened shell that shrugs off anything short of an anti-tank round."
+  super_cas_equipment:0 "Inferno Dive Bomber Airframe"
+  super_cas_airframe_1:0 "Inferno Dive Bomber Airframe"
+  super_cas_airframe_1_desc:0 "Specifically designed airframe for dive bombing missions. Where most frames have mount points for air-to-air weapons and can be applied to any task, this carries tanks for long-range flamethrowers and additional room for bombs."
+  super_cas_equipment_1:0 "Inferno Dive Bomber"
+  super_cas_equipment_1_desc:0 "Specifically designed airframe for dive bombing missions. Where most frames have mount points for air-to-air weapons and can be applied to any task, this carries tanks for long-range flamethrowers and additional room for bombs."
+
+  ###Modules###
+  magical_pyro_bombs:0 "Inferno Spell-bomb"
+  magical_pyro_bombs_desc:0 "Napalm is effective but still does not spread fast enough or burn hot enough to be satisfactory. The spells inside these small, glass containers are mixed with various chemicals to produce a conflagration that will bite through the thickest armor and incinerate anything organic within hundreds of feet of its impact."
 
   ###Units###
   adeptus_astartes:0 "Praetorian Guard"
@@ -651,16 +660,24 @@
   EQS_nurse_redheart_trickleback:0 "Nurse Redheart"
 
   ###Special Projects###
-  sp_EQS_sun_laser:0 "§OProject Helios§!"
-  EQS_project_nightvale:0 "§BProject Nightvale§!"
-  EQS_project_astartes:0 "§YProject Astartes§!"
-  EQS_project_astartes_desc:0 "Threats to our ponies exist around every corner. Whether it is from their brethren who wish to see the Order of [ROOT.GetNameDef]'s Harmony shattered or it is from those who are jealous of our prosperity and security, every day it is a struggle for our survival. While the Empress protects us, she cannot be everywhere at once. Therefore, we must expand who is able to do so. She is the ultimate pony, and nopony else can hope to achieve her levels of perfection. However, that does not mean we cannot try, especially with a few merciful donations."
-  EQS_project_mage:0 "Project Mage"
-  EQS_project_solaris:0 "Project Solaris"
-  EQS_project_inferno:0 "Project Inferno"
-  EQS_project_conflagration:0 "Project Conflagration"
-  EQS_project_evaporation:0 "Project Evaporation"
-  EQS_project_firestorm:0 "Project Firestorm"
+  sp_EQS_sun_laser:0 "Project Helios"
+  sp_EQS_sun_laser_desc:0 "Our God-Empress is the Sun itself. Every day, She gives us its light and protection, but it is too distant to be used to destroy our enemies beyond some extreme heat. But what if there was a way to bypass this? Not unlike foals who fry ants with magnifying glasses, it is theoretically possible to concentrate the power of the Sun into a confined area. The destructive power of magic on this scale is practically unheard of, surpassing the organized feat of the unicorn tribe before the God-Empress brought order to everything. Projections indicate that the final result could be more powerful than a hundred nuclear bombs, and will leave an entire region desolate and cleansed."
+  sp_EQS_inferno_cas:0 "Project Sheol"
+  sp_EQS_inferno_cas_desc:0 "Our dive bombers have been one of the staples of our air force since its reorganization, as they are what win battles more than anything else. However, they still use frames that have a generalist mindset, rather than something purpose-built for eradicating anything on the ground. With our survival hanging in the balance, our scientists have begun drawing up plans for a dedicated dive bomber that will not have any of the flaws or weaknesses of previous designs, including a new bomb that will spread the Empress's fires of judgement across a battlefield with a single strike."
+  sp_EQS_adeptus_astartes:0 "Project Astartes"
+  sp_EQS_adeptus_astartes_desc:0 "Threats to our ponies exist around every corner. Whether it is from their brethren who wish to see the Order of [ROOT.GetNameDef]'s Harmony shattered or it is from those who are jealous of our prosperity and security, every day it is a struggle for our survival. While the Empress protects us, she cannot be everywhere at once. Therefore, we must expand who is able to do so. She is the ultimate pony, and nopony else can hope to achieve her levels of perfection. However, that does not mean we cannot try, especially with a few merciful donations."
+  sp_EQS_enhanced_matrices:0 "Project Mage"
+  sp_EQS_enhanced_matrices_desc:0 "The matrix is the heart of any magical device, and strides have been made to improve the amount of magical energy that can be stored within one. They are still flimsy, and replacing them can be troublesome at least, especially in the heat of battle. A majority of matrices are comprised of only a single type of crystal, which has also led to shortages, and stymied iterative improvements by sticking to one, known, substance. Our thaumaturgists have recently been studying how to more effectively apply spells to a matrix, and some have proposed that these multiple lines of research be combined into a single project so that all can benefit from their discoveries and the probable increased power it will bring."
+  sp_EQS_portable_solar_panels:0 "Project Solaris"
+  sp_EQS_portable_solar_panels_desc:0 "There is tremendous amounts of energy that can be accessed through the Empress's Sun, much of which we feel in the form of warmth. As proven in the previous century by Carol Fritter, it is possible to use this heat to generate energy from materials that can be excited from the heat and create a current that can be stored. However, it is incredibly inefficient and has been deemed pointless to pursue. Yet there is much we don't know, and there are promising elements, like silicon, that could yield tangible results and provide backup power for many of our military applications."
+  sp_EQS_hot_fusion:0 "Project Inferno"
+  sp_EQS_hot_fusion_desc:0 "The Empress's Sun is powered not by fission but by nuclear fusion, which we have caught glimpses of in our reactors. It is a rare sight, and requires excessive energy, pressure, and heat to achieve, but the benefits it will bring to our generators will be unspeakable. This energy requirement must be brought down to reasonable measures, so that we can power entire continents with only a couple of reactors."
+  sp_EQS_super_flamers:0 "Project Conflagration"
+  sp_EQS_super_flamers_desc:0 "Our flame tanks are effective tools, but the standard napalm which they use to project their flame into hard to reach areas is simply too weak. To fully cleanse an area of the battlefield, there must be improvements and implementations of magic so the projection can burn hotter and reach farther than ever before."
+  sp_EQS_plasma_cannons:0 "Project Evaporation"
+  sp_EQS_plasma_cannons_desc:0 "When material is heated to extreme temperatures it melts, and if it reaches a boiling point, turns to gas. However, there is a fourth state, plasma, which has only recently been utilized in more mundane applications like neon lighting. However, as it is highly electrically charged, it can be in theory be manipulated by different fields and formed into appropriate shapes. With enough energy, storage capacity, and a bit of magic, it could be possible to use plasma as a replacement for our heavy munitions in ships. This would provide them with an edge when engaging other forces, as the plasma would melt straight through opposing armor."
+  sp_EQS_pilot_drug_programs:0 "Project Firestorm"
+  sp_EQS_pilot_drug_programs_desc:0 "The weakest link between a plane and the ground is the pony flying it. As our pilots sometimes suffer from poor reflexes compared to their peers, there is an avenue we can take to make everypony perform far better than they would before. Trials of various stimulants and amphetamines can be conducted on some of our trainees. Our scientists believe it'll be a simple solution, just with the right cocktail to keep addiction low and side effects minimal."
 
   ###Dynamic Modifiers###
   SOL_imperial_science:0 "Flame of Science"

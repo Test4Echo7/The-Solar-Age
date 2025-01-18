@@ -4010,7 +4010,7 @@ country_event = { #After the submission or conquest of CRY, Daybreaker has a tou
             CRY = {
                 add_political_power = 150
             }
-            #Blessed by Daybreaker trait, +10% political power, +5% party stability, -15% heat attrition
+            ###Blessed by Daybreaker trait, +10% political power, +5% party stability, -15% heat attrition
         }
     }
 }
@@ -4025,7 +4025,7 @@ country_event = { #Follow a Lunar Guard soldier as he is on patrol in Rainbow Fa
 
     option = { #Not a sound...
         name = solarreworked.239.a
-        #Remove Lunarist generals that flee to CRY?
+        ###Remove Lunarist generals that flee to CRY?
         CRY = {
             add_popularity = {
                 ideology = fascism
@@ -4050,7 +4050,7 @@ country_event = { #Daybreaker arrives to where Cadance and Shining are kept unde
         name = solarreworked.240.a
         CRY = {
             add_stability = 0.075
-            add_political_power = -25
+            add_political_power = -75
             add_popularity = {
                 ideology = fascism
                 popularity = 0.05
@@ -4064,21 +4064,35 @@ country_event = { #A clerk in the Crystal Palace is surprised when a number of S
     id = solarreworked.241
     title = solarreworked.241.t
     desc = solarreworked.241.d
-    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.241"}
+    immediate = {
+        log = "[GetDateText]: [ROOT.GetName]: event solarreworked.241"
+        if = {
+            limit = {
+                tag = EQS
+            }
+            CRY_triplicate = { set_nationality = CRY }
+			CRY_morning_mist = { set_nationality = CRY }
+			CRY_evening_shower = { set_nationality = CRY }
+        }
+    }
 
     is_triggered_only = yes
 
     option = { #I'm innocent!
         name = solarreworked.241.a
-        hidden_effect = {
-			CRY_triplicate = { set_nationality = CRY }
-			CRY_morning_mist = { set_nationality = CRY }
-			CRY_evening_shower = { set_nationality = CRY }
+		if = {
+            limit = { NOT = { tag = CRY } }
+            effect_tooltip = {
+                add_ideas = SOL_micromanaging_middle_management
+                custom_effect_tooltip = SOL_new_advisors
+            }
 		}
-		CRY = {
-			add_ideas = SOL_micromanaging_middle_management
-			set_country_flag = CRY_solar_advisors
-		}
+		else = {
+            CRY = {
+                add_ideas = SOL_micromanaging_middle_management
+                custom_effect_tooltip = SOL_new_advisors
+                set_country_flag = CRY_solar_advisors
+            }
     }
 }
 

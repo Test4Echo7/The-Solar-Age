@@ -63,89 +63,11 @@ sp_EQS_sun_laser = {
 		sp_magical_generic_reward_race_tech_3
 		sp_magical_generic_reward_resource_scarcity
 		sp_magical_generic_reward_critical_failure
-	}
-}
-
-sp_EQS_esoteric_extractions = {
-    specialization = specialization_magical
-
-    project_tags = {
-        sp_tag_magical
-    }
-
-    resource_cost = {
-        resources = {
-            crystals = 8
-        }
-    }
-
-    allowed = {
-        tag = EQS
-    }
-
-    visible = {
-        FROM = {
-            has_country_flag = SOL_wunderwaffen_unlocked
-            has_completed_focus = SOL_empress_mother
-        }
-    }
-
-    available = {
-
-    }
-
-    ai_will_do = {
-        base = 1
-    }
-
-    complexity = sp_complexity.large
-    prototype_time = sp_time.prototype.long
-    breakthrough_cost = {
-        specialization_magical = 3
-    }
-
-    project_output = {
-        country_effects = {
-            if = {
-                limit = { has_dlc = "La Resistance" }
-                custom_effect_tooltip = SOL_esoteric_extractions_lar_tt
-                hidden_effect = {
-                    set_technology = {
-                        EQS_esoteric_extractions_lar = 1
-                        popup = no
-                    }
-                }
-            }
-            else = {
-                custom_effect_tooltip = SOL_esoteric_extractions_tt
-                hidden_effect = {
-                    set_technology = {
-                        EQS_esoteric_extractions = 1
-                        popup = no
-                    }
-                }
-            }
-        }
-    }
-
-    generic_prototype_rewards = {
-		sp_magical_generic_reward_scientist_xp_1
-		sp_magical_generic_reward_scientist_xp_2
-		sp_magical_generic_reward_scientist_xp_3
-		sp_magical_generic_reward_major_progress_1
-		sp_magical_generic_reward_major_progress_2
-		sp_magical_generic_reward_major_progress_3
-		sp_magical_generic_reward_test_failure_1
-		sp_magical_generic_reward_test_failure_2
-		sp_magical_generic_reward_test_failure_3
-		sp_magical_generic_reward_magical_tech_1
-		sp_magical_generic_reward_magical_tech_2
-		sp_magical_generic_reward_magical_tech_3
-		sp_magical_generic_reward_race_tech_1
-		sp_magical_generic_reward_race_tech_2
-		sp_magical_generic_reward_race_tech_3
-		sp_magical_generic_reward_resource_scarcity
-		sp_magical_generic_reward_critical_failure
+		sp_sun_laser_increased_magic_output
+		sp_sun_laser_increased_safety
+		sp_sun_laser_solar_concentration_application
+		sp_sun_laser_faulty_concentration_spell
+		sp_sun_laser_exhaustive_casting
 	}
 }
 
@@ -225,6 +147,11 @@ sp_EQS_adeptus_astartes = {
 		sp_magical_generic_reward_race_tech_3
 		sp_magical_generic_reward_resource_scarcity
 		sp_magical_generic_reward_critical_failure
+		sp_adeptus_astartes_initial_perfection
+		sp_adeptus_astartes_power_overwhelming
+		sp_adeptus_astartes_armor_applications
+		sp_adeptus_astartes_weapon_applications
+		sp_adeptus_astartes_magical_abilities
 	}
 }
 
@@ -305,6 +232,84 @@ sp_EQS_enhanced_matrices = {
 		sp_magical_generic_reward_race_tech_3
 		sp_magical_generic_reward_resource_scarcity
 		sp_magical_generic_reward_critical_failure
+		sp_enhanced_matrices_crystal_decisions
+		sp_enhanced_matrices_unstable_matrices
+	}
+}
+
+sp_EQS_inferno_cas = {
+    specialization = specialization_air
+
+    project_tags = {
+        sp_tag_aircraft
+    }
+
+    resource_cost = {
+        resources = {
+            crystals = 8
+            aluminium = 8
+            rubber = 8
+        }
+    }
+
+    allowed = {
+        tag = EQS
+    }
+
+    visible = {
+        FROM = {
+            has_country_flag = SOL_wunderwaffen_unlocked
+            has_completed_focus = SOL_empress_mother
+        }
+    }
+
+    available = {
+
+    }
+
+    ai_will_do = {
+        base = 1
+    }
+
+    complexity = sp_complexity.large
+    prototype_time = sp_time.prototype.long
+    breakthrough_cost = {
+        specialization_air = 3
+    }
+
+    project_output = {
+        country_effects = {
+            if = {
+                limit = { has_dlc = "By Blood Alone" }
+                custom_effect_tooltip = SOL_inferno_cas_bba_tt
+            }
+            else = {
+                custom_effect_tooltip = SOL_inferno_cas_tt
+            }
+        }
+    }
+
+    generic_prototype_rewards = {
+		sp_air_generic_reward_scientist_xp_1
+		sp_air_generic_reward_scientist_xp_2
+		sp_air_generic_reward_scientist_xp_3
+		sp_air_generic_reward_major_progress_1
+		sp_air_generic_reward_major_progress_2
+		sp_air_generic_reward_major_progress_3
+		sp_air_generic_reward_test_failure_1
+		sp_air_generic_reward_test_failure_2
+		sp_air_generic_reward_test_failure_3
+		sp_air_generic_aerodynamics_advancements_reward
+		sp_air_generic_reward_air_xp_1
+		sp_air_generic_reward_air_xp_2
+		sp_air_generic_reward_air_xp_3
+		sp_air_generic_reward_resource_scarcity
+		sp_air_generic_reward_critical_failure
+		sp_inferno_cas_flight_problem
+		sp_inferno_cas_bobomb
+		sp_inferno_cas_flimsy_wings
+		sp_inferno_cas_taking_flight
+		sp_inferno_cas_unstable_bombs
 	}
 }
 
@@ -372,6 +377,7 @@ sp_EQS_portable_solar_panels = {
 		sp_air_generic_reward_air_xp_1
 		sp_air_generic_reward_air_xp_2
 		sp_air_generic_reward_air_xp_3
+		sp_portable_solar_panels_material_procurement
 	}
 }
 
@@ -436,6 +442,7 @@ sp_EQS_hot_fusion = {
 		sp_nuclear_generic_electronics_tech_reward
 		sp_nuclear_reactor_radioactive_leak_stabilized_reward
 		sp_nuclear_reactor_minor_explosion_reward
+		sp_hot_fusion_reactor_by_products
 	}
 }
 
@@ -502,6 +509,8 @@ sp_EQS_super_flamers = {
 		sp_land_generic_reward_test_failure_2
 		sp_land_generic_reward_test_failure_3
 		sp_land_generic_reward_resource_scarcity
+		sp_super_flamers_flame_compound
+		sp_super_flamers_sticky_or_liquid_compound
 	}
 }
 
@@ -573,6 +582,8 @@ sp_EQS_plasma_cannons = {
 		sp_naval_generic_reward_test_failure_1
 		sp_naval_generic_reward_test_failure_2
 		sp_naval_generic_reward_test_failure_3
+		sp_plasma_cannons_reducing_load
+		sp_plasma_cannons_traditional_usage
 	}
 }
 
@@ -635,5 +646,6 @@ sp_EQS_pilot_drug_programs = {
 		sp_air_generic_reward_test_failure_2
 		sp_air_generic_reward_air_xp_1
 		sp_air_generic_reward_air_xp_2
+		sp_pilot_drug_programs_test_subject_groups
 	}
 }

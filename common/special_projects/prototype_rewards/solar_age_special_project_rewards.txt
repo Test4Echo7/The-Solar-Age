@@ -89,6 +89,18 @@ sp_sun_laser_increased_safety = {
 
         iteration_output = {
             #Give 25% magic breakthrough, reduce progress by 8%, +50% magic research speed buff
+            country_effects = {
+                add_breakthrough_progress = {
+                    specialization = specialization_magical
+                    value = 0.25
+                }
+                add_tech_bonus = {
+                    name = magical_tech_bonus
+                    uses = 1
+                    bonus = 0.5
+                    category = magical_tech
+                }
+            }
         }
     }
 }
@@ -309,6 +321,246 @@ sp_sun_laser_exhaustive_casting = {
                 custom_effect_tooltip = SOL_empress_cares_tt
             }
             #Remove 10% progress
+        }
+    }
+}
+
+sp_adeptus_astartes_initial_perfection = {
+    narrative = {
+        #Daybreaker has agreed to donate a portion of her DNA and genetic structure to be used in enhancing ponies, and it is a taxing process; decide which part must be used to enhance the super soldiers
+        name = EQS_gene_seed
+        desc = EQS_gene_seed_desc
+    }
+
+    threshold = {
+        min = 0
+        max = 100
+    }
+
+    fire_only_once = yes
+
+    weight = {
+        factor = 10
+    }
+
+    #Focus on her grace
+    option = {
+        token = sp_EQS_graceful_death
+
+        iteration_output = {
+            #Increase speed by 5%
+        }
+    }
+
+    #Focus on her strength
+    option = {
+        token = sp_EQS_durable_death
+
+        default = yes
+
+        iteration_output = {
+            #Increase HP by 5%
+        }
+    }
+
+    #Focus on her power
+    option = {
+        token = sp_EQS_dies_of_death
+
+        iteration_output = {
+            #Increase breakthrough by 3%
+        }
+    }
+}
+
+sp_adeptus_astartes_power_overwhelming = {
+    narrative = {
+        #Ponies cannot handle the power and magic coursing through them and the first test subjects went insane and killed most of the scientific staff; a few are held still, and can be used if restrained with more magic, or the sequencing can be redone to fix the flaws
+        name = EQS_more_minerals
+        desc = EQS_more_minerals_desc
+    }
+
+    threshold = {
+        min = 20
+        max = 100
+    }
+
+    fire_only_once = yes
+
+    weight = {
+        factor = 5
+    }
+
+    #Carefully twine with normal pony DNA
+    option = {
+        token = sp_EQS_throwing_science_at_the_wall
+
+        default = yes
+
+        iteration_output = {
+            #-5% progress and +2% HP
+        }
+    }
+
+    #Dominate with magic and use the aggression instead
+    option = {
+        token = sp_EQS_see_what_sticks
+
+        iteration_output = {
+            #+5% progress, -20% org, +5% attack
+        }
+    }
+
+    #Rework sequencing to give ponies enough capacity to handle Daybreaker's power
+    option = {
+        token = sp_EQS_thinking_with_portals
+
+        iteration_output = {
+            #-10% progress, +5% org, +2% breakthrough
+        }
+    }
+}
+
+sp_adeptus_astartes_armor_applications = {
+    narrative = {
+        #The first prototypes for the armor used for praetorians have been shown and there are some novel applications of defensive magic which can be applied to other areas of the military, or further improved for the praetorians
+        name = EQS_walking_tanks
+        desc = EQS_walking_tanks_desc
+    }
+
+    threshold = {
+        min = 45
+        max = 100
+    }
+
+    fire_only_once = yes
+
+    weight = {
+        factor = 6
+    }
+
+    #Apply to infantry armor
+    option = {
+        token = sp_EQS_not_walking_tanks
+
+        iteration_output = {
+            #+2% infantry HP, +1% defense
+        }
+    }
+
+    #Harden tank armor further
+    option = {
+        token = sp_EQS_literal_tanks
+
+        default = yes
+
+        iteration_output = {
+            #+3% armor, +1% defense
+        }
+    }
+
+    #Iterate what's there
+    option = {
+        token = sp_EQS_literal_walking_tanks
+
+        iteration_output = {
+            #+10% armor, +3% prod cost
+        }
+    }
+}
+
+sp_adeptus_astartes_weapon_applications = {
+    narrative = {
+        #The first iterations of the weapons to be used by the praetorians have been delivered and there are still problems with it; multiple designers have offered to finish it, and each have some benefits and drawbacks to decide from
+        name = EQS_shootas
+        desc = EQS_shootas_desc
+    }
+
+    threshold = {
+        min = 65
+        max = 100
+    }
+
+    fire_only_once = yes
+
+    weight = {
+        factor = 7
+    }
+
+    #Use the cheapest option, Flim Flam Arms
+    option = {
+        token = sp_EQS_blown_brains
+
+        iteration_output = {
+            #-10% attack and reliability, -15% prod cost
+        }
+    }
+
+    #Stick with Bitterbury Arms
+    option = {
+        token = sp_EQS_standard_procedure
+
+        default = yes
+
+        iteration_output = {
+            #+5% progress
+        }
+    }
+
+    #Search for the best forges in Canterlot to make it
+    option = {
+        token = sp_EQS_legendary_roll
+
+        iteration_output = {
+            #+10% reliability, +5% attack, +5% defense, +10% prod cost, -15% progress
+        }
+    }
+}
+
+sp_adeptus_astartes_magical_abilities = {
+    narrative = {
+        #Since Daybreaker is an alicorn, her magic contains aspects of all three pony races, and one must be prioritized for soldiers to keep the DNA conflict minimal
+        name = EQS_magic_is_as_magic_does
+        desc = EQS_magic_is_as_magic_does_desc
+    }
+
+    threshold = {
+        min = 85
+        max = 100
+    }
+
+    fire_only_once = yes
+
+    weight = {
+        factor = 15
+    }
+
+    #Focus on unicorn magic
+    option = {
+        token = sp_EQS_cheaty_mages
+
+        default = yes
+
+        iteration_output = {
+            #+5% breakthrough
+        }
+    }
+
+    #Focus on pegasi magic
+    option = {
+        token = sp_EQS_cheaty_rangers
+
+        iteration_output = {
+            #+10% speed
+        }
+    }
+
+    #Focus on earth pony magic
+    option = {
+        token = sp_EQS_cheaty_fighters
+
+        iteration_output = {
+            #+5% armor
         }
     }
 }
@@ -606,6 +858,237 @@ sp_plasma_cannons_traditional_usage = {
 
         iteration_output = {
             #Increase light piercing by 5%
+        }
+    }
+}
+
+sp_inferno_cas_flight_problem = {
+    narrative = {
+        #The initial idea of the CAS bomber was just strapping loads of bombs onto it but that is causing takeoff problems, and there needs to be a solution, even after changing the initial parameters, since it'll still be a heavier load than any previous cas bomber
+        name = EQS_emotional_damage
+        desc = EQS_emotional_damage_desc
+    }
+
+    threshold = {
+        min = 0
+        max = 100
+    }
+
+    fire_only_once = yes
+
+    weight = {
+        factor = 15
+    }
+
+    #Just strap more engines to it
+    option = {
+        token = sp_EQS_nom
+
+        iteration_output = {
+            #+5% prod cost, +5% thrust
+        }
+    }
+
+    #Cut as much unneeded weight as possible without sacrificing payload
+    option = {
+        token = sp_EQS_diet_time
+
+        default = yes
+
+        iteration_output = {
+            #-10% reliability, -5% prod cost
+        }
+    }
+
+    #Redesign the chassis out of lighter materials like full-body aluminium
+    option = {
+        token = sp_EQS_advanced_stuff
+
+        iteration_output = {
+            #-5% progress, +2% prod cost, +3% reliability
+        }
+    }
+}
+
+sp_inferno_cas_bobomb = {
+    narrative = {
+        #The magic that's used for the explosives in the bombs for this cas can be tweaked slightly to either spread more effectively on the ground and burn more of a battlefield, bite through armor on ships, or have general heat improvements to burn better on both, and should be chosen to iterate upon
+        name = EQS_chomp
+        name = EQS_chomp_desc
+    }
+
+    threshold = {
+        min = 15
+        max = 100
+    }
+
+    fire_only_once = yes
+
+    weight = {
+        factor = 10
+    }
+
+    #Burn everything
+    option = {
+        token = sp_EQS_pyro
+
+        iteration_output = {
+            #+5% ground attack, -3% agility
+        }
+    }
+
+    #Burn the ships
+    option = {
+        token = sp_EQS_fire_water
+
+        iteration_output = {
+            #+15% naval targeting, -5% ground attack
+        }
+    }
+
+    #Burn both a bit better
+    option = {
+        token = sp_EQS_fire_good
+
+        default = yes
+
+        iteration_output = {
+            #+2% ground attack, +5% naval targeting
+        }
+    }
+}
+
+sp_inferno_cas_flimsy_wings = {
+    narrative = {
+        #The wings that are on the planes still can't handle the load of the bombs properly, even if the chassis now can, and they frequently rip off while trying to take flight and need to be adjusted with a couple of options to choose from
+        name = EQS_wimpy_planes
+        desc = EQS_wimpy_planes_desc
+    }
+
+    threshold = {
+        min = 40
+        max = 100
+    }
+
+    fire_only_once = yes
+
+    weight = {
+        factor = 12
+    }
+
+    #Lighten the loads
+    option = {
+        token = sp_EQS_so_weak
+
+        default = yes
+
+        iteration_output = {
+            #-5% ground attack, -5% naval target, -3% prod cost, -5% progress
+        }
+    }
+
+    #Reinforce the struts
+    option = {
+        token = sp_EQS_less_weak
+
+        iteration_output = {
+            #-10% progress, +2% prod cost, +5% reliability
+        }
+    }
+}
+
+sp_inferno_cas_taking_flight = {
+    narrative = {
+        #With successful prototypes, the first flights indicate that the bomber lacks much maneuverability compared to normal fighters and needs to have compensation applied in some way, with a few options possible to choose from
+        name = EQS_big_birbs
+        desc = EQS_big_birbs_desc
+    }
+
+    threshold = {
+        min = 65
+        max = 100
+    }
+
+    fire_only_once = yes
+
+    weight = {
+        factor = 15
+    }
+
+    #Apply more armor
+    option = {
+        token = sp_EQS_beefy_bois
+
+        default = yes
+
+        iteration_output = {
+            #+15% defense, +4% prod cost, -5% progress
+        }
+    }
+
+    #Redesign with more effective control surfaces
+    option = {
+        token = sp_EQS_semi_speedy_bois
+
+        iteration_output = {
+            #+5% agility, +1% prod cost, -5% progress
+        }
+    }
+
+    #Enchant the wings with lightening spells to improve handling
+    option = {
+        token = sp_EQS_speedy_bois
+
+        iteration_output = {
+            #+15% agility, +5% prod cost, -10% progress
+        }
+    }
+}
+
+sp_inferno_cas_unstable_bombs = {
+    narrative = {
+        #There have been numerous accidents as the final mixture of components for the bombs have been made, and it's been determined that it is volatile to the point of jostling it too hard can make it explode, which means that it must be dealt with in some way, to improve safety
+        name = EQS_gentle_giant
+        desc = EQS_gentle_giant_desc
+    }
+
+    threshold = {
+        min = 85
+        max = 100
+    }
+
+    fire_only_once = yes
+
+    weight = {
+        factor = 20
+    }
+
+    #Warn the pilots to be careful
+    option = {
+        token = sp_EQS_no_OSHA_compliance
+
+        default = yes
+
+        iteration_output = {
+            #-5% reliability, +5% progress
+        }
+    }
+
+    #Reinforce the bomb shells to hold the spells better
+    option = {
+        token = sp_EQS_some_OSHA_compliance
+
+        iteration_output = {
+            #-2% ground attack, +5% reliability, -5% progress
+        }
+    }
+
+    #Redesign container spell inside the bomb to hold the spell more effectively
+    option = {
+        token = sp_EQS_OSHA_compliance
+
+        iteration_output = {
+            #+3% ground attack, -10% progress
         }
     }
 }
