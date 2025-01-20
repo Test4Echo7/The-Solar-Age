@@ -27,8 +27,9 @@ sp_sun_laser_increased_magic_output = {
         iteration_output = {
             equipment_bonus = {
                 magical_equipment = {
-                    soft_attack = 0.02
-                    breakthrough = 0.02
+                    soft_attack = 0.03
+                    breakthrough = 0.03
+                    instant = yes
                 }
             }
         }
@@ -100,6 +101,9 @@ sp_sun_laser_increased_safety = {
                     bonus = 0.5
                     category = magical_tech
                 }
+                sp:sp_EQS_sun_laser = {
+                    add_project_progress_ratio = -0.08
+                }
             }
         }
     }
@@ -129,7 +133,11 @@ sp_sun_laser_solar_concentration_application = {
         token = sp_EQS_laser_bores
 
         iteration_output = {
-            #Tanks gain +5% piercing
+            equipment_bonus = {
+                armor = {
+                    ap_attack = 0.05
+                }
+            }
         }
     }
 
@@ -154,6 +162,12 @@ sp_sun_laser_solar_concentration_application = {
         token = sp_EQS_laser_assembly_lines
 
         iteration_output = {
+            country_effects = {
+                custom_effect_tooltip = SOL_laser_assembly_lines_tt
+                hidden_effect = {
+                    add_ideas = SOL_laser_assembly_lines
+                }
+            }
             #+0.02% output and +0.02% retention
         }
     }
@@ -199,8 +213,10 @@ sp_sun_laser_faulty_concentration_spell = {
             country_effects = {
                 #Literally no effects
                 custom_effect_tooltip = SOL_ya_got_shrinked_tt
+                sp:sp_EQS_sun_laser = {
+                    add_project_progress_ratio = -0.05
+                }
             }
-            #Reduce output by 5%
         }
     }
 
@@ -212,8 +228,10 @@ sp_sun_laser_faulty_concentration_spell = {
             country_effects = {
                 set_country_flag = SOL_devastating_attacks #Increase casualties by 25% and reduce war support of owner of state by 5% (from 10% already - to be programmed in)
                 custom_effect_tooltip = SOL_devastating_attacks_tt
+                sp:sp_EQS_sun_laser = {
+                    add_project_progress_ratio = -0.12
+                }
             }
-            #Reduce output by 12%
         }
     }
 }
@@ -254,6 +272,13 @@ sp_sun_laser_fusion_catalyst = {
 
         iteration_output = {
             #Increase nuke casualties by 10% and nuke production by 5%
+            country_effects = {
+                custom_effect_tooltip = SOL_equal_nuke_bonus_tt
+                hidden_effect = {
+                    add_ideas = SOL_sun_laser_equal_nuke_bonus
+                }
+                #Modify variables here
+            }
         }
     }
 
@@ -263,6 +288,12 @@ sp_sun_laser_fusion_catalyst = {
 
         iteration_output = {
             #Increase nuke production by 10%
+            country_effects = {
+                custom_effect_tooltip = SOL_only_nuke_bonus_tt
+                hidden_effect = {
+                    add_ideas = SOL_sun_laser_only_nuke_bonus
+                }
+            }
         }
     }
 }
@@ -319,8 +350,10 @@ sp_sun_laser_exhaustive_casting = {
             country_effects = {
                 #Literally nothing again
                 custom_effect_tooltip = SOL_empress_cares_tt
+                sp:sp_EQS_sun_laser = {
+                    add_project_progress_ratio = -0.1
+                }
             }
-            #Remove 10% progress
         }
     }
 }
@@ -349,6 +382,11 @@ sp_adeptus_astartes_initial_perfection = {
 
         iteration_output = {
             #Increase speed by 5%
+            unit_bonus = {
+                adeptus_astartes = {
+                    maximum_speed = 0.05
+                }
+            }
         }
     }
 
@@ -360,6 +398,11 @@ sp_adeptus_astartes_initial_perfection = {
 
         iteration_output = {
             #Increase HP by 5%
+            unit_bonus = {
+                adeptus_astartes = {
+                    max_strength = 0.05
+                }
+            }
         }
     }
 
@@ -369,6 +412,11 @@ sp_adeptus_astartes_initial_perfection = {
 
         iteration_output = {
             #Increase breakthrough by 3%
+            unit_bonus = {
+                adeptus_astartes = {
+                    breakthrough = 0.03
+                }
+            }
         }
     }
 }
@@ -399,6 +447,16 @@ sp_adeptus_astartes_power_overwhelming = {
 
         iteration_output = {
             #-5% progress and +2% HP
+            unit_bonus = {
+                adeptus_astartes = {
+                    max_strength = 0.02
+                }
+            }
+            country_effects = {
+                sp:sp_EQS_adeptus_astartes = {
+                    add_project_progress_ratio = -0.05
+                }
+            }
         }
     }
 
@@ -408,6 +466,17 @@ sp_adeptus_astartes_power_overwhelming = {
 
         iteration_output = {
             #+5% progress, -20% org, +5% attack
+            unit_bonus = {
+                adeptus_astartes = {
+                    attack = 0.05
+                    max_organisation = -0.2
+                }
+            }
+            country_effects = {
+                sp:sp_EQS_adeptus_astartes = {
+                    add_project_progress_ratio = 0.05
+                }
+            }
         }
     }
 
@@ -417,6 +486,17 @@ sp_adeptus_astartes_power_overwhelming = {
 
         iteration_output = {
             #-10% progress, +5% org, +2% breakthrough
+            unit_bonus = {
+                adeptus_astartes = {
+                    max_organisation = 0.05
+                    breakthrough = 0.02
+                }
+            }
+            country_effects = {
+                sp:sp_EQS_adeptus_astartes = {
+                    add_project_progress_ratio = -0.1
+                }
+            }
         }
     }
 }
@@ -445,6 +525,16 @@ sp_adeptus_astartes_armor_applications = {
 
         iteration_output = {
             #+2% infantry HP, +1% defense
+            unit_bonus = {
+                infantry = {
+                    max_strength = 0.02
+                    defense = 0.01
+                }
+                magical_infantry = {
+                    max_strength = 0.02
+                    defense = 0.01
+                }
+            }
         }
     }
 
@@ -456,6 +546,12 @@ sp_adeptus_astartes_armor_applications = {
 
         iteration_output = {
             #+3% armor, +1% defense
+            unit_bonus = {
+                armor = {
+                    armor_value = 0.03
+                    defense = 0.01
+                }
+            }
         }
     }
 
@@ -465,6 +561,11 @@ sp_adeptus_astartes_armor_applications = {
 
         iteration_output = {
             #+10% armor, +3% prod cost
+            equipment_bonus = {
+                space_marine_armor = {
+                    armor_value = 0.1 build_cost_ic = 0.03 instant = yes
+                }
+            }
         }
     }
 }
@@ -493,6 +594,9 @@ sp_adeptus_astartes_weapon_applications = {
 
         iteration_output = {
             #-10% attack and reliability, -15% prod cost
+            equipment_bonus = {
+                space_marine_bolt_gun = { soft_attack = -0.1 hard_attack = -0.1 reliability = -0.1 build_cost_ic = -0.15 instant = yes }
+            }
         }
     }
 
@@ -503,7 +607,11 @@ sp_adeptus_astartes_weapon_applications = {
         default = yes
 
         iteration_output = {
-            #+5% progress
+            country_effects = {
+                sp:sp_EQS_adeptus_astartes = {
+                    add_project_progress_ratio = 0.05
+                }
+            }
         }
     }
 
@@ -513,6 +621,14 @@ sp_adeptus_astartes_weapon_applications = {
 
         iteration_output = {
             #+10% reliability, +5% attack, +5% defense, +10% prod cost, -15% progress
+            equipment_bonus = {
+                space_marine_bolt_gun = { soft_attack = 0.05 hard_attack = 0.05 defence = 0.05 reliability = 0.075 build_cost_ic = 0.125 instant = yes }
+            }
+            country_effects = {
+                sp:sp_EQS_adeptus_astartes = {
+                    add_project_progress_ratio = -0.15
+                }
+            }
         }
     }
 }
@@ -543,6 +659,11 @@ sp_adeptus_astartes_magical_abilities = {
 
         iteration_output = {
             #+5% breakthrough
+            unit_bonus = {
+                adeptus_astartes = {
+                    breakthrough = 0.05
+                }
+            }
         }
     }
 
@@ -552,6 +673,11 @@ sp_adeptus_astartes_magical_abilities = {
 
         iteration_output = {
             #+10% speed
+            unit_bonus = {
+                adeptus_astartes = {
+                    maximum_speed = 0.1
+                }
+            }
         }
     }
 
@@ -561,13 +687,18 @@ sp_adeptus_astartes_magical_abilities = {
 
         iteration_output = {
             #+5% armor
+            unit_bonus = {
+                adeptus_astartes = {
+                    armor_value = 0.05
+                }
+            }
         }
     }
 }
 
 sp_enhanced_matrices_crystal_decisions = {
     narrative = {
-        #Matrices are comprised of a specific kind of crystal, but it is possible to modify them to be made of multiples, or of a rarer, mower powerful crystal
+        #Matrices are comprised of a specific kind of crystal, but it is possible to modify them to be made of multiples, or of a rarer, more powerful crystal
         name = EQS_tinker_tinker
         desc = EQS_tinker_tinker_desc
     }
@@ -600,6 +731,7 @@ sp_enhanced_matrices_crystal_decisions = {
         }
     }
 
+    #Use more durable crystal
     option = {
         token = sp_EQS_spend_mony
 
@@ -643,8 +775,12 @@ sp_enhanced_matrices_unstable_matrices = {
                     breakthrough = 0.01
                 }
             }
+            country_effects = {
+                sp:sp_EQS_enhanced_matrices = {
+                    add_project_progress_ratio = -0.05
+                }
+            }
         }
-        #Reduce progress by 5%
     }
 
     #Use it to prevent capture
@@ -660,8 +796,12 @@ sp_enhanced_matrices_unstable_matrices = {
                     ap_attack = 0.03
                 }
             }
+            country_effects = {
+                sp:sp_EQS_enhanced_matrices = {
+                    add_project_progress_ratio = -0.05
+                }
+            }
         }
-        #Reduce progress by 5%
     }
 
     #Fix the flaw
@@ -671,11 +811,15 @@ sp_enhanced_matrices_unstable_matrices = {
         iteration_output = {
             equipment_bonus = {
                 magical_equipment = {
-                    reliability = 0.02
+                    reliability = 0.04
+                }
+            }
+            country_effects = {
+                sp:sp_EQS_enhanced_matrices = {
+                    add_project_progress_ratio = -0.1
                 }
             }
         }
-        #Reduce progress by 10%
     }
 }
 
@@ -705,6 +849,13 @@ sp_super_flamers_flame_compound = {
 
         iteration_output = {
             #Increase soft_attack by 25%, reduce armor by 15%
+            unit_bonus = {
+                light_flame_tank = { soft_attack = 0.25 armor_value = -0.15 }
+                medium_flame_tank = { soft_attack = 0.25 armor_value = -0.15 }
+                heavy_flame_tank = { soft_attack = 0.25 armor_value = -0.15 }
+                super_heavy_flame_tank = { soft_attack = 0.25 armor_value = -0.15 }
+                modern_flame_tank = { soft_attack = 0.25 armor_value = -0.15 }
+            }
         }
     }
 
@@ -714,6 +865,13 @@ sp_super_flamers_flame_compound = {
 
         iteration_output = {
             #Decrease soft attack by 15%, increase armor by 10%
+            unit_bonus = {
+                light_flame_tank = { soft_attack = -0.15 armor_value = 0.1 }
+                medium_flame_tank = { soft_attack = -0.15 armor_value = 0.1 }
+                heavy_flame_tank = { soft_attack = -0.15 armor_value = 0.1 }
+                super_heavy_flame_tank = { soft_attack = -0.15 armor_value = 0.1 }
+                modern_flame_tank = { soft_attack = -0.15 armor_value = 0.1 }
+            }
         }
     }
 
@@ -723,6 +881,18 @@ sp_super_flamers_flame_compound = {
 
         iteration_output = {
             #increase soft attack by 10%, armor by 5%, and production cost by 5%
+            unit_bonus = {
+                light_flame_tank = { soft_attack = 0.1 armor_value = 0.05 }
+                medium_flame_tank = { soft_attack = 0.1 armor_value = 0.05 }
+                heavy_flame_tank = { soft_attack = 0.1 armor_value = 0.05 }
+                super_heavy_flame_tank = { soft_attack = 0.1 armor_value = 0.05 }
+                modern_flame_tank = { soft_attack = 0.1 armor_value = 0.05 }
+            }
+            country_effects = {
+                sp:sp_EQS_super_flamers = {
+                    add_project_progress_ratio = -0.1
+                }
+            }
         }
     }
 }
@@ -753,6 +923,13 @@ sp_super_flamers_sticky_or_liquid_compound = {
 
         iteration_output = {
             #Increase attack bonus of flame tanks by 5% in close quarters environments: urban, fort, forest, jungle
+            unit_bonus = {
+                light_flame_tank = { urban = { attack = 0.05 } fort = { attack = 0.05 } forest = { attack = 0.05 } jungle = { attack = 0.05 } }
+                medium_flame_tank = { urban = { attack = 0.05 } fort = { attack = 0.05 } forest = { attack = 0.05 } jungle = { attack = 0.05 } }
+                heavy_flame_tank = { urban = { attack = 0.05 } fort = { attack = 0.05 } forest = { attack = 0.05 } jungle = { attack = 0.05 } }
+                super_heavy_flame_tank = { urban = { attack = 0.05 } fort = { attack = 0.05 } forest = { attack = 0.05 } jungle = { attack = 0.05 } }
+                modern_flame_tank = { urban = { attack = 0.05 } fort = { attack = 0.05 } forest = { attack = 0.05 } jungle = { attack = 0.05 } }
+            }
         }
     }
 
@@ -762,6 +939,13 @@ sp_super_flamers_sticky_or_liquid_compound = {
 
         iteration_output = {
             #Increase attack bonus of flame tanks by 5% in open areas: plains, hills, desert, marsh
+            unit_bonus = {
+                light_flame_tank = { desert = { attack = 0.05 } plains = { attack = 0.05 } marsh = { attack = 0.05 } hills = { attack = 0.05 } }
+                medium_flame_tank = { desert = { attack = 0.05 } plains = { attack = 0.05 } marsh = { attack = 0.05 } hills = { attack = 0.05 } }
+                heavy_flame_tank = { desert = { attack = 0.05 } plains = { attack = 0.05 } marsh = { attack = 0.05 } hills = { attack = 0.05 } }
+                super_heavy_flame_tank = { desert = { attack = 0.05 } plains = { attack = 0.05 } marsh = { attack = 0.05 } hills = { attack = 0.05 } }
+                modern_flame_tank = { desert = { attack = 0.05 } plains = { attack = 0.05 } marsh = { attack = 0.05 } hills = { attack = 0.05 } }
+            }
         }
     }
 }
@@ -790,6 +974,9 @@ sp_plasma_cannons_reducing_load = {
 
         iteration_output = {
             #Increase range of battleships and battlecruisers by 5%, but reduce light attack by 5%
+            equipment_bonus = {
+                ship_hull_heavy = { naval_range = 0.05 lg_attack = -0.05 instant = yes }
+            }
         }
     }
 
@@ -801,6 +988,9 @@ sp_plasma_cannons_reducing_load = {
 
         iteration_output = {
             #Increase range of battleships by 5%, but reduce armor by 5%
+            equipment_bonus = {
+                ship_hull_heavy = { naval_range = 0.05 armor_value = -0.05 instant = yes }
+            }
         }
     }
 
@@ -810,6 +1000,9 @@ sp_plasma_cannons_reducing_load = {
 
         iteration_output = {
             #Increase range of battleship by 10% but increase production cost by 3% and fuel usage by 5%
+            equipment_bonus = {
+                ship_hull_heavy = { naval_range = 0.1 fuel_consumption = 0.05 build_cost_ic = 0.03 instant = yes }
+            }
         }
     }
 }
@@ -838,6 +1031,9 @@ sp_plasma_cannons_traditional_usage = {
 
         iteration_output = {
             #Increase armor piercing by 5%, increase production cost by 2%
+            equipment_bonus = {
+                armor = { ap_attack = 0.05 build_cost_ic = 0.02 instant = yes }
+            }
         }
     }
 
@@ -849,6 +1045,9 @@ sp_plasma_cannons_traditional_usage = {
 
         iteration_output = {
             #Increase heavy piercing by 3%
+            equipment_bonus = {
+                ship_hull_heavy = { hg_armor_piercing = 0.03 instant = yes }
+            }
         }
     }
 
@@ -858,6 +1057,9 @@ sp_plasma_cannons_traditional_usage = {
 
         iteration_output = {
             #Increase light piercing by 5%
+            equipment_bonus = {
+                ship_hull_heavy = { lg_armor_piercing = 0.05 instant = yes }
+            }
         }
     }
 }
@@ -886,6 +1088,9 @@ sp_inferno_cas_flight_problem = {
 
         iteration_output = {
             #+5% prod cost, +5% thrust
+            equipment_bonus = {
+                super_cas_equipment = { thrust = 0.05 build_cost_ic = 0.05 instant = yes }
+            }
         }
     }
 
@@ -897,6 +1102,9 @@ sp_inferno_cas_flight_problem = {
 
         iteration_output = {
             #-10% reliability, -5% prod cost
+            equipment_bonus = {
+                super_cas_equipment = { reliability = -0.1 build_cost_ic = -0.05 instant = yes }
+            }
         }
     }
 
@@ -906,6 +1114,14 @@ sp_inferno_cas_flight_problem = {
 
         iteration_output = {
             #-5% progress, +2% prod cost, +3% reliability
+            equipment_bonus = {
+                super_cas_equipment = { reliability = 0.03 build_cost_ic = 0.03 instant = yes }
+            }
+            country_effects = {
+                sp:sp_EQS_inferno_cas = {
+                    add_project_progress_ratio = -0.05
+                }
+            }
         }
     }
 }
@@ -934,6 +1150,9 @@ sp_inferno_cas_bobomb = {
 
         iteration_output = {
             #+5% ground attack, -3% agility
+            equipment_bonus = {
+                super_cas_equipment = { air_ground_attack = 0.05 air_agility = -0.03 instant = yes }
+            }
         }
     }
 
@@ -943,6 +1162,9 @@ sp_inferno_cas_bobomb = {
 
         iteration_output = {
             #+15% naval targeting, -5% ground attack
+            equipment_bonus = {
+                super_cas_equipment = { air_ground_attack = -0.05 naval_strike_targetting = 0.15 instant = yes }
+            }
         }
     }
 
@@ -954,6 +1176,9 @@ sp_inferno_cas_bobomb = {
 
         iteration_output = {
             #+2% ground attack, +5% naval targeting
+            equipment_bonus = {
+                super_cas_equipment = { air_ground_attack = 0.02 naval_strike_targetting = 0.05 instant = yes }
+            }
         }
     }
 }
@@ -984,6 +1209,14 @@ sp_inferno_cas_flimsy_wings = {
 
         iteration_output = {
             #-5% ground attack, -5% naval target, -3% prod cost, -5% progress
+            equipment_bonus = {
+                super_cas_equipment = { air_ground_attack = -0.05 naval_strike_targetting = -0.05 build_cost_ic = -0.03 instant = yes }
+            }
+            country_effects = {
+                sp:sp_EQS_inferno_cas = {
+                    add_project_progress_ratio = -0.05
+                }
+            }
         }
     }
 
@@ -993,6 +1226,14 @@ sp_inferno_cas_flimsy_wings = {
 
         iteration_output = {
             #-10% progress, +2% prod cost, +5% reliability
+            equipment_bonus = {
+                super_cas_equipment = { reliability = 0.05 build_cost_ic = 0.02 instant = yes }
+            }
+            country_effects = {
+                sp:sp_EQS_inferno_cas = {
+                    add_project_progress_ratio = -0.1
+                }
+            }
         }
     }
 }
@@ -1023,6 +1264,14 @@ sp_inferno_cas_taking_flight = {
 
         iteration_output = {
             #+15% defense, +4% prod cost, -5% progress
+            equipment_bonus = {
+                super_cas_equipment = { air_defence = 0.15 build_cost_ic = 0.03 instant = yes }
+            }
+            country_effects = {
+                sp:sp_EQS_inferno_cas = {
+                    add_project_progress_ratio = -0.05
+                }
+            }
         }
     }
 
@@ -1032,6 +1281,14 @@ sp_inferno_cas_taking_flight = {
 
         iteration_output = {
             #+5% agility, +1% prod cost, -5% progress
+            equipment_bonus = {
+                super_cas_equipment = { air_agility = 0.05 build_cost_ic = 0.01 instant = yes }
+            }
+            country_effects = {
+                sp:sp_EQS_inferno_cas = {
+                    add_project_progress_ratio = -0.05
+                }
+            }
         }
     }
 
@@ -1041,6 +1298,14 @@ sp_inferno_cas_taking_flight = {
 
         iteration_output = {
             #+15% agility, +5% prod cost, -10% progress
+            equipment_bonus = {
+                super_cas_equipment = { air_agility = 0.15 build_cost_ic = 0.05 instant = yes }
+            }
+            country_effects = {
+                sp:sp_EQS_inferno_cas = {
+                    add_project_progress_ratio = -0.1
+                }
+            }
         }
     }
 }
@@ -1071,6 +1336,14 @@ sp_inferno_cas_unstable_bombs = {
 
         iteration_output = {
             #-5% reliability, +5% progress
+            equipment_bonus = {
+                super_cas_equipment = { reliability = -0.05 instant = yes }
+            }
+            country_effects = {
+                sp:sp_EQS_inferno_cas = {
+                    add_project_progress_ratio = 0.05
+                }
+            }
         }
     }
 
@@ -1080,6 +1353,14 @@ sp_inferno_cas_unstable_bombs = {
 
         iteration_output = {
             #-2% ground attack, +5% reliability, -5% progress
+            equipment_bonus = {
+                super_cas_equipment = { air_ground_attack = -0.02 reliability = 0.05 instant = yes }
+            }
+            country_effects = {
+                sp:sp_EQS_inferno_cas = {
+                    add_project_progress_ratio = -0.05
+                }
+            }
         }
     }
 
@@ -1089,6 +1370,14 @@ sp_inferno_cas_unstable_bombs = {
 
         iteration_output = {
             #+3% ground attack, -10% progress
+            equipment_bonus = {
+                super_cas_equipment = { air_ground_attack = 0.03 instant = yes }
+            }
+            country_effects = {
+                sp:sp_EQS_inferno_cas = {
+                    add_project_progress_ratio = -0.1
+                }
+            }
         }
     }
 }
@@ -1117,6 +1406,10 @@ sp_portable_solar_panels_material_procurement = {
 
         iteration_output = {
             #Reduce range factors by 5% and supply range by 3%, increase supply hub build speed by 5%, and reduce ic cost of planes and ships by 2%
+            #Should be hidden idea
+            country_effects = {
+                set_country_flag = SOL_weaker_solar_panel_bonus #Will affect the final output
+            }
         }
     }
 
@@ -1138,6 +1431,10 @@ sp_portable_solar_panels_material_procurement = {
 
         iteration_output = {
             #Increase range factors by 3% and supply range by 2%, decrease supply hub build speed by 5% and increase ic cost of planes and ships by 2%
+            #Should be hidden idea
+            country_effects = {
+                set_country_flag = SOL_stronger_solar_panel_bonus #Will affect final output
+            }
         }
     }
 }
@@ -1168,6 +1465,12 @@ sp_pilot_drug_programs_test_subject_groups = {
 
         iteration_output = {
             #Increase factory output by 2%, decrease monthly population by 2%
+            country_effects = {
+                custom_effect_tooltip = SOL_hippie_populace_tt
+                hidden_effect = {
+                    add_ideas = SOL_drugged_populace
+                }
+            }
         }
     }
 
@@ -1177,6 +1480,12 @@ sp_pilot_drug_programs_test_subject_groups = {
 
         iteration_output = {
             #Increase manpower requirements by 2%, increase agility by 1% and attack by 1%
+            country_effects = {
+                custom_effect_tooltip = SOL_hippie_pilots_tt
+                hidden_effect = {
+                    add_ideas = SOL_drugged_pilots
+                }
+            }
         }
     }
 }
@@ -1207,6 +1516,12 @@ sp_hot_fusion_reactor_venting_problems = {
 
         iteration_output = {
             #Increase reactor build speed by 10%, reduce output of nukes by 5%
+            country_effects = {
+                custom_effect_tooltip = SOL_nuclear_nonproliferation_tt
+                hidden_effect = {
+                    add_ideas = SOL_nuke_safety_concerns
+                }
+            }
         }
     }
 
@@ -1226,7 +1541,15 @@ sp_hot_fusion_reactor_venting_problems = {
 
         iteration_output = {
             #Decrease reactor build speed by 5%, increase nuke output by 5%
-            #Decrease progress by 8%
+            country_effects = {
+                custom_effect_tooltip = SOL_buck_the_nuclear_rules_tt
+                hidden_effect = {
+                    add_ideas = SOL_nuke_safety_nonconcerns
+                }
+                sp:sp_EQS_hot_fusion = {
+                    add_project_progress_ratio = -0.08
+                }
+            }
         }
     }
 }
@@ -1255,6 +1578,9 @@ sp_hot_fusion_reactor_by_products = {
 
         iteration_output = {
             #Increase tank armor by 3%, breakthrough by 3%
+            equipment_bonus = {
+                armor = { armor_value = 0.03 breakthrough = 0.03 instant = yes }
+            }
         }
     }
 
@@ -1264,6 +1590,11 @@ sp_hot_fusion_reactor_by_products = {
 
         iteration_output = {
             #Increase all ship armor by 5%, hp by 2%
+            equipment_bonus = {
+                capital_ship = { armor_value = 0.05 max_strength = 0.02 }
+                screen = { armor_value = 0.05 max_strength = 0.02 }
+                submarine = { max_strength = 0.02 }
+            }
         }
     }
 
@@ -1274,6 +1605,12 @@ sp_hot_fusion_reactor_by_products = {
 
         iteration_output = {
             #Decrease factory bomb vulnerability by 10%
+            country_effects = {
+                custom_effect_tooltip = SOL_freaky_factories_tt
+                hidden_effect = {
+                    add_ideas = SOL_protected_factories
+                }
+            }
         }
     }
 }

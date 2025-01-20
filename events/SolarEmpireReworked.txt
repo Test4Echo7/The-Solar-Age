@@ -4093,6 +4093,7 @@ country_event = { #A clerk in the Crystal Palace is surprised when a number of S
                 custom_effect_tooltip = SOL_new_advisors
                 set_country_flag = CRY_solar_advisors
             }
+        }
     }
 }
 

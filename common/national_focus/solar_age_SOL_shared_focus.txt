@@ -13393,6 +13393,7 @@ shared_focus = {
 	relative_position_id = SOL_blessed_unicorn_academy
 
 	cost = 6
+	available = { eqs_has_civil_war = no }
 	prerequisite = { focus = SOL_blessed_unicorn_academy }
 
 	completion_reward = {
@@ -13424,6 +13425,7 @@ shared_focus = {
 	icon = GFX_goal_generic_magic
 	cost = 6
 	ai_will_do = { factor = 80 }
+	available = { eqs_has_civil_war = no }
 	prerequisite = { focus = SOL_blessed_unicorn_academy }
 	relative_position_id = SOL_blessed_unicorn_academy
 	x = 1
@@ -13492,7 +13494,8 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_imperial_hoofbooks"
 		###Event of the handbook for the new imperial rules for keeping the economy functioning, with much of it being incredibly micromanaging, so that it every bit of minutiae are accounted for and there are a list of punishments for what happens if they are violated, which are extreme, even for minor infractions
-		country_event = solarreworked.260
+		#country_event = solarreworked.260
+		add_ideas = SOL_micromanaged_industry
 	}
 	ai_will_do = { factor = 40 }
 }
@@ -13510,7 +13513,8 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_motivation_teams"
 		###Event of somepony being chosen as the newest representative of one of the best factories to be part of a propaganda film, which he does with a bit of hesitation, since it's just in his factory, and he has to do what they want while still keeping production the same
-		country_event = solarreworked.261
+		#country_event = solarreworked.261
+		add_ideas = SOL_motivated_workers
 	}
 	ai_will_do = { factor = 50 }
 }
@@ -13723,7 +13727,8 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_crystal_creator_machines"
 		###Event of somepony working alongside one of the first-generation robots, which are extremely buggy and usually develop a mind of their own, which makes them go rogue multiple times, which it does in this scenario, and he has to quickly find a way to unplug it before it destroys part of the factory
-		country_event = solarreworked.262
+		#country_event = solarreworked.262
+		add_ideas = SOL_crystal_robotics
 	}
 	ai_will_do = { factor = 60 }
 }
