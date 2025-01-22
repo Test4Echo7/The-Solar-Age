@@ -1791,7 +1791,7 @@ country_event = { #Follow a soldier as he heads into a quartermaster or otherwis
     }
 }
 
-country_event = { #A soldier dives into a trench after being ordered to, and he is overly panicky, as he holds onto his flamthrower, as he hopes he doesn't actually encounter anypony, but ultimately does, and he almost freaks out enough that he doesn't use it, but he ends up doing so, and regretting it as he sees all the carnage it wreaks
+country_event = { #A soldier dives into a trench after being ordered to, and he is overly panicky, as he holds onto his flamethrower, as he hopes he doesn't actually encounter anypony, but ultimately does, and he almost freaks out enough that he doesn't use it, but he ends up doing so, and regretting it as he sees all the carnage it wreaks
     id = solarreworked.76
     title = solarreworked.76.t
     desc = solarreworked.76.d
@@ -7512,6 +7512,7 @@ country_event = { #Country event speaking of either the yak's acceptance or reje
                     name = "Yak Levies"
                     is_locked = yes
                     division_cap = 9
+                    force_allow_recruiting = yes
                     division_names_group = EQS_YAK_INF_01
                     regiments = {
                         infantry = { x = 0 y = 0 }
@@ -7861,14 +7862,45 @@ country_event = { #Country event speaking of either PLB and PNG's acceptance or 
         }
         if = {
             limit = { FROM = { has_country_flag = SOL_twilight_negotiating } }
-            #Oil rights here
             if = {
                 limit = {
                     NOT = { has_global_flag = SOL_block_removing_away_flag }
                 }
                 clr_country_flag = SOL_twilight_away
             }
-            FROM = { clr_country_flag = SOL_twilight_negotiating }
+            FROM = {
+                custom_effect_tooltip = SOL_slurp_them_resources_tt
+                hidden_effect = {
+                    if = {
+                        limit = {
+                            tag = PLB
+                        }
+                        give_resource_rights = {
+                            receiver = ROOT
+                            state = 263
+                        }
+                        give_resource_rights = {
+                            receiver = ROOT
+                            state = 272
+                        }
+                    }
+                    if = {
+                        limit = {
+                            tag = PNG
+                        }
+                        give_resource_rights = {
+                            receiver = ROOT
+                            state = 266
+                        }
+                        give_resource_rights = {
+                            receiver = ROOT
+                            state = 325
+                            resources = { oil }
+                        }
+                    }
+                }
+                clr_country_flag = SOL_twilight_negotiating
+            }
         }
         else_if = {
             limit = { FROM = { has_country_flag = SOL_sunset_negotiating } }
@@ -8119,7 +8151,7 @@ country_event = { #Country event speaking of either GRF's acceptance or rejectio
                 }
                 set_autonomy = {
                     autonomous_state = autonomy_satellite
-                    target = FROM
+                    target = GFF
                 }
             }
         }
@@ -9037,6 +9069,92 @@ country_event = { #Triggered event informing GRD or EQS that the attache has bee
                 target = EQS
                 modifier = EQS_GRI_working_together
             }
+        }
+    }
+}
+
+country_event = { #Short event for whoever owns the two MDL states that Daybreaker is demanding that they be given back, as they are pony territory and majority ponies, and will wipe the owners if not returned
+    id = solarreworked.516
+    title = solarreworked.516.t
+    desc = solarreworked.516.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.516"}
+
+    is_triggered_only = yes
+
+    option = { #Better to keep our heads than that land.
+        name = solarreworked.516.a
+        ai_chance = {
+            base = 1
+            modifier = {
+                strength_ratio = {
+                    tag = FROM
+                    ratio < 0.6
+                }
+                factor = 4
+            }
+            modifier = {
+                strength_ratio = {
+                    tag = FROM
+                    ratio < 0.33
+                }
+                factor = 3
+            }
+        }
+        set_country_flag = SOL_surrendered_MDL_cores
+        FROM = { country_event = { id = solarreworked.517 days = 1 } }
+    }
+    option = { #It is ours by right!
+        trigger = {
+            NOT = { is_subject_of = FROM }
+        }
+        name = solarreworked.516.b
+        ai_chance = {
+            base = 1
+            modifier = {
+                OR = {
+                    has_government = fascism
+                    has_government = neutrality
+                }
+                factor = 3
+            }
+            modifier = {
+                tag = WNG
+                factor = 2
+            }
+            modifier = {
+                strength_ratio = {
+                    tag = FROM
+                    ratio > 0.85
+                }
+                factor = 2
+            }
+        }
+        set_country_flag = SOL_kept_MDL_cores
+        FROM = { country_event = { id = solarreworked.517 days = 1 } }
+    }
+}
+
+country_event = { #Response event where the territory is given or not; if not, a wargoal is created
+    id = solarreworked.517
+    title = solarreworked.517.t
+    desc = solarreworked.517.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.517"}
+
+    is_triggered_only = yes
+
+    option = { #They made the right choice.
+        trigger = { FROM = { has_country_flag = SOL_surrendered_MDL_cores } }
+        name = solarreworked.517.a
+        transfer_state = 741
+        transfer_state = 764
+    }
+    option = { #They are obviously mentally deficient.
+        trigger = { FROM = { has_country_flag = SOL_kept_MDL_cores } }
+        name = solarreworked.517.b
+        create_wargoal = {
+            target = FROM
+            type = take_state_focus
+            generator = { 741 764 }
         }
     }
 }

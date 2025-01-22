@@ -898,7 +898,10 @@ shared_focus = {
 
     completion_reward = {
         log = "[GetDateText]: [Root.GetName]: Focus SOL_first_feelers"
-        #Advisors here
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = nightshift
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = hard_sell
     }
     ai_will_do = { factor = 150 }
 }
@@ -5241,21 +5244,22 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_spaying_the_cat"
-		764 = {
-			ROOT = {
-				create_wargoal = {
-					target = PREV
-					type = take_state_focus
-					generator = { 764 }
+		custom_effect_tooltip = SOL_bossy_boots_tt
+		#custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = if_they_accept_tt
+		effect_tooltip = {
+			transfer_state = 764
+			transfer_state = 741
+		}
+		hidden_effect = {
+			764 = {
+				OWNER = {
+					country_event = solarreworked.516
 				}
 			}
-		}
-		741 = {
-			ROOT = {
-				create_wargoal = {
-					target = PREV
-					type = take_state_focus
-					generator = { 741 }
+			741 = {
+				OWNER = {
+					country_event = solarreworked.516
 				}
 			}
 		}
@@ -6956,6 +6960,17 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_sustenance_workers"
 		###Event of choosing who to send, which then gives DRG an event of said diplomat arriving and trying to get them to kneel
 		country_event = solarreworked.480
+		custom_effect_tooltip = SOL_aggressive_negotiations_tt
+		effect_tooltip = {
+			set_autonomy = {
+				target = DRG
+				autonomy_state = autonomy_satellite
+			}
+		}
+		custom_effect_tooltip = SOL_twiggles_sent_tt
+		show_ideas_tooltip = SOL_dragon_laborers_twiggles
+		custom_effect_tooltip = SOL_shim_sham_sent_tt
+		show_ideas_tooltip = SOL_dragon_laborers_shim_sham
 	}
 	ai_will_do = {
 		factor = 20
@@ -7009,6 +7024,27 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_insurance_policies"
 		###Event of choosing who to send, and also an event for YAK on the promise of support against any threats to them, so long as they give all resource rights for their resources, or provide materiel support in Daybreaker's own wars, as mercs
 		country_event = solarreworked.483
+		custom_effect_tooltip = SOL_aggressive_negotiations_tt
+		effect_tooltip = {
+			if = {
+				limit = { country_exists = YAK }
+				set_autonomy = {
+					target = YAK
+					autonomy_state = autonomy_satellite
+				}
+			}
+			else_if = {
+				limit = { country_exists = JAK }
+				set_autonomy = {
+					target = JAK
+					autonomy_state = autonomy_satellite
+				}
+			}
+		}
+		custom_effect_tooltip = SOL_twiggles_sent_tt
+		custom_effect_tooltip = SOL_super_smash_pones_tt
+		custom_effect_tooltip = SOL_shim_sham_sent_tt
+		custom_effect_tooltip = SOL_slurp_them_resources_tt
 	}
 	ai_will_do = {
 		factor = 20
@@ -7056,6 +7092,54 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_oil_existence"
 		###Event of choosing who to send and later an event for PNG and PLB, demanding they provide either access to their resources, including all their oil, or provide experts for resource extraction, or naval expertise for continued existence
 		country_event = solarreworked.486
+		custom_effect_tooltip = SOL_aggressive_negotiations_tt
+		effect_tooltip = {
+			if = {
+				limit = {
+					PNG = {
+						exists = yes
+						is_subject = no
+					}
+				}
+				set_autonomy = {
+					target = PNG
+					autonomy_state = autonomy_satellite
+				}
+			}
+			if = {
+				limit = {
+					PLB = {
+						exists = yes
+						is_subject = no
+					}
+				}
+				set_autonomy = {
+					target = PLB
+					autonomy_state = autonomy_satellite
+				}
+			}
+		}
+		custom_effect_tooltip = SOL_twiggles_sent_tt
+		custom_effect_tooltip = SOL_slurp_them_resources_more_politely_tt
+		custom_effect_tooltip = SOL_shim_sham_sent_tt
+		if = {
+			limit = {
+				PLB = {
+					exists = yes
+					is_subject = no
+				}
+			}
+			PLB = { show_ideas_tooltip = SOL_native_oil_shim_sham }
+		}
+		if = {
+			limit = {
+				PNG = {
+					exists = yes
+					is_subject = no
+				}
+			}
+			PNG = { show_ideas_tooltip = SOL_native_oil_shim_sham }
+		}
 	}
 	ai_will_do = {
 		factor = 20
@@ -7115,6 +7199,180 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_griffon_fealty"
 		###Event of choosing who to send and then an event for GRF demanding that they contribute toward the war efforts on Equus by providing their troops or by providing military leadership
 		country_event = solarreworked.489
+		custom_effect_tooltip = SOL_aggressive_negotiations_tt
+		effect_tooltip = {
+			if = {
+				limit = {
+					NOT = { country_exists = GRF }
+					GFF = {
+						exists = yes
+						NOT = { is_subject = GRF }
+						owns_state = 243
+					}
+				}
+				set_autonomy = {
+					target = GFF
+					autonomy_state = autonomy_satellite
+				}
+			}
+			else_if = {
+				limit = {
+					country_exists = GRF
+					GFF = {
+						is_subject_of = GRF
+						is_ai = yes
+					}
+				}
+				set_autonomy = {
+					target = GRF
+					autonomy_state = autonomy_satellite
+				}
+				GRF = {
+					annex_country = {
+						target = GFF
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					country_exists = GRF
+					GFF = {
+						is_subject_of = GRF
+						is_ai = no
+					}
+				}
+				set_autonomy = {
+					target = GRF
+					autonomy_state = autonomy_satellite
+				}
+				set_autonomy = {
+					target = GFF
+					autonomy_state = autonomy_satellite
+				}
+			}
+			else_if = {
+				limit = {
+					country_exists = GRF
+					NOT = { country_exists = GFF }
+				}
+				set_autonomy = {
+					target = GRF
+					autonomy_state = autonomy_satellite
+				}
+			}
+		}
+		custom_effect_tooltip = SOL_twiggles_sent_tt
+		effect_tooltip = {
+			if = {
+                limit = {
+					country_exists = GRF
+                }
+                GRF = {
+                    add_manpower = -200000
+                }
+                add_manpower = 200000
+            }
+            if = {
+				limit = {
+					GFF = {
+						OR = {
+							AND = {
+								is_subject = no
+								exists = yes
+							}
+							AND = {
+								is_subject_of = GRF
+								is_ai = no
+							}
+						}
+					}
+				}
+				GFF = {
+					add_manpower = -10000
+				}
+				add_manpower = -10000
+			}
+		}
+		custom_effect_tooltip = SOL_shim_sham_sent_tt
+		effect_tooltip = {
+			if = {
+				limit = { country_exists = GRF }
+				GRF = {
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = -25000
+						producer = GRF
+					}
+					add_equipment_to_stockpile = {
+						type = support_equipment
+						amount = -3000
+						producer = GRF
+					}
+					add_equipment_to_stockpile = {
+						type = artillery_equipment
+						amount = -5000
+						producer = GRF
+					}
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 25000
+						producer = GRF
+					}
+					add_equipment_to_stockpile = {
+						type = support_equipment
+						amount = 3000
+						producer = GRF
+					}
+					add_equipment_to_stockpile = {
+						type = artillery_equipment
+						amount = 5000
+						producer = GRF
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					GFF = {
+						exists = yes
+						is_subject = no
+						owns_state = 243
+					}
+					NOT = { country_exists = GRF }
+				}
+				GFF = {
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = -25000
+						producer = GFF
+					}
+					add_equipment_to_stockpile = {
+						type = support_equipment
+						amount = -3000
+						producer = GFF
+					}
+					add_equipment_to_stockpile = {
+						type = artillery_equipment
+						amount = -5000
+						producer = GFF
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 25000
+					producer = GFF
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 3000
+					producer = GFF
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = 5000
+					producer = GFF
+				}
+			}
+		}
 	}
 	ai_will_do = {
 		factor = 20
@@ -9368,6 +9626,44 @@ shared_focus = {
 		#Soldiers here
 		EQC = {
 			add_war_support = 0.1
+			custom_effect_tooltip = SOL_spawn_horde_tt
+			hidden_effect = {
+                division_template = {
+                    name = "Solaris Militarium Garrison"
+                    is_locked = yes
+                    division_cap = 5
+                    force_allow_recruiting = yes
+                    division_names_group = EQS_INF_02
+                    regiments = {
+                        infantry = { x = 0 y = 0 }
+                        infantry = { x = 0 y = 1 }
+                        infantry = { x = 0 y = 2 }
+                        infantry = { x = 0 y = 3 }
+                        infantry = { x = 1 y = 0 }
+                        infantry = { x = 1 y = 1 }
+                        infantry = { x = 1 y = 2 }
+                        infantry = { x = 1 y = 3 }
+                        artillery_brigade = { x = 2 y = 0 }
+                        artillery_brigade = { x = 2 y = 1 }
+                        artillery_brigade = { x = 2 y = 2 }
+                    }
+                    support = {
+                        recon = { x = 0 y = 0 }
+                        engineer = { x = 0 y = 1 }
+                        military_police = { x = 0 y = 2 }
+                    }
+                }
+                356 = {
+                    create_unit = {
+                        division = "name = \"Solar Day Company\" division_template = \"Solaris Militarium Garrison\" start_experience_factor = 0.3"
+                        owner = EQC
+                    }
+                    create_unit = {
+                        division = "name = \"Astral Spear Company\" division_template = \"Solaris Militarium Garrison\" start_experience_factor = 0.3"
+                        owner = EQC
+                    }
+                }
+            }
 		}
 	}
 	ai_will_do = { factor = 60 }

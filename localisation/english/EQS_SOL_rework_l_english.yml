@@ -310,6 +310,7 @@
   ###Flags and Custom Tooltips###
   owns_all_cores_subject_tt_NOT:0 "Not all core states are owned by §Y[ROOT.GetNameDef]§! or its subjects."
   eqs_has_civil_war_tp_NOT:0 "Is not in a civil war"
+  available_high_command:0 "§YAvailable§! as §YMilitary High Command§!:"
   SOL_has_captured_sunset:0 "Sunset Shimmer has been captured."
   SOL_daybreaker_promotion_tt:0 "§YDaybreaker§! becomes a Field Marshal."
   SOL_luna_promotion_tt:0 "§YPrincess Luna§! becomes a Field Marshal."
@@ -320,7 +321,10 @@
   SOL_nova_ops_tt:0 "Has not recently gone §Osupernova§!"
   SOL_all_diplomats_busy_please_call_again_later_tt:0 "§PSunrise Sparkle§! or §ODawnbreak Shimmer§! is available for dispatch."
   SOL_all_hands_on_deck_tt:0 "Both §PSunrise Sparkle§! and §ODawnbreak Shimmer§! are available for dispatch."
-  SOL_griffons_like_tt:0 "If our diplomats are successful, we will gain:"
+  SOL_griffons_like_tt:0 "\nIf our diplomats are successful, we will gain:"
+  SOL_aggressive_negotiations_tt:0 "\nIf our chosen diplomat is successful, then the following will occur:"
+  SOL_twiggles_sent_tt:0 "\nIf §PSunrise Sparkle§! was chosen, then the following will happen:"
+  SOL_shim_sham_sent_tt:0 "\nIf §ODawnbreak Shimmer§! was chosen, then the following will happen:"
   SOL_nice_empress_tt:0 "An international embassy shall be opened in §Y[3.GetCapitalVictoryPointName]§!."
   SOL_you_idiot_tt:0 "§RNo peace. Only war!§!"
   SOL_why_friends_tt:0 "§R[BUF.GetLeader] will not any accept further friendship advances.§!"
@@ -452,6 +456,7 @@
   SOL_kept_smile_agents:0 "Has permitted former S.M.I.L.E. agents to stay in the [SOLGetAgencyName]"
   EQS_no_spam_for_u_tt:0 "§Y[ROOT.GetLeader]§! has not recently performed a political activity"
   SOL_slurp_them_resources_tt:0 "As the bargain for our protection, §Y[FROM.GetNameDef]§! shall provide us total mining rights."
+  SOL_slurp_them_resources_more_politely_tt:0 "In return for protecting them, §Y[FROM.GetNameDef]§! shall provide us access to their oil fields."
   SOL_super_smash_pones_tt:0 "As the agreement for us protecting them, §Y[FROM.GetNameDef]§! shall provide us a number of banner armies to fight for us."
   SOL_keep_bon_bon_but_risk_everything_tt:0 "§RThere is a possibility that Sweetie Drops and her compatriots are bluffing.§!"
   SOL_nopony_expects_tt:0 "We can use the §YInquisition Administration§! occupation law."
@@ -465,6 +470,8 @@
   SOL_captured_element_bearers:0 "The §PElement Bearers§! have been captured"
   SOL_mane_six_dip_tt:0 "The §PElement Bearers§! will search for a new, safer home more distant from §ODaybreaker's§! hoof."
   SOL_luna_peaces_out_tt:0 "§BPrincess Luna§! will seek refuge in one of the other §Pharmonist§! nations on Griffonia or Zebrica."
+  SOL_bossy_boots_tt:0 "We will send the current §Yowner§! of §Y[764.GetName]§! and §Y[741.GetName]§! an §Oultimatum§! regarding their occupation."
+  SOL_spawn_horde_tt:0 "A small contingent of the §YSolaris Militarium§! will be stationed in §Y[EQC.GetNameDef]§!."
 
   ###Last one in the chain. Remove comment later###
   SOL_conglaturation_a_winner_is_you_tt:0 "§GHarmony has been preserved and all of ponykind now bends the knee to Daybreaker. Thank you for playing the Solar Age! - Test4Echo§!"
