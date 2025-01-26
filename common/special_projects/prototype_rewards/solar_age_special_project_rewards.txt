@@ -40,7 +40,7 @@ sp_sun_laser_increased_magic_output = {
         token = sp_EQS_better_mages
 
         iteration_output = {
-            unit_bonus = {
+            sub_unit_bonus = {
                 unicorn_company = {
                     soft_attack = 0.05
                     defense = 0.1
@@ -382,7 +382,7 @@ sp_adeptus_astartes_initial_perfection = {
 
         iteration_output = {
             #Increase speed by 5%
-            unit_bonus = {
+            sub_unit_bonus = {
                 adeptus_astartes = {
                     maximum_speed = 0.05
                 }
@@ -398,7 +398,7 @@ sp_adeptus_astartes_initial_perfection = {
 
         iteration_output = {
             #Increase HP by 5%
-            unit_bonus = {
+            sub_unit_bonus = {
                 adeptus_astartes = {
                     max_strength = 0.05
                 }
@@ -412,7 +412,7 @@ sp_adeptus_astartes_initial_perfection = {
 
         iteration_output = {
             #Increase breakthrough by 3%
-            unit_bonus = {
+            sub_unit_bonus = {
                 adeptus_astartes = {
                     breakthrough = 0.03
                 }
@@ -447,7 +447,7 @@ sp_adeptus_astartes_power_overwhelming = {
 
         iteration_output = {
             #-5% progress and +2% HP
-            unit_bonus = {
+            sub_unit_bonus = {
                 adeptus_astartes = {
                     max_strength = 0.02
                 }
@@ -466,9 +466,10 @@ sp_adeptus_astartes_power_overwhelming = {
 
         iteration_output = {
             #+5% progress, -20% org, +5% attack
-            unit_bonus = {
+            sub_unit_bonus = {
                 adeptus_astartes = {
-                    attack = 0.05
+                    soft_attack = 0.05
+                    hard_attack = 0.05
                     max_organisation = -0.2
                 }
             }
@@ -486,7 +487,7 @@ sp_adeptus_astartes_power_overwhelming = {
 
         iteration_output = {
             #-10% progress, +5% org, +2% breakthrough
-            unit_bonus = {
+            sub_unit_bonus = {
                 adeptus_astartes = {
                     max_organisation = 0.05
                     breakthrough = 0.02
@@ -525,7 +526,7 @@ sp_adeptus_astartes_armor_applications = {
 
         iteration_output = {
             #+2% infantry HP, +1% defense
-            unit_bonus = {
+            sub_unit_bonus = {
                 infantry = {
                     max_strength = 0.02
                     defense = 0.01
@@ -546,8 +547,8 @@ sp_adeptus_astartes_armor_applications = {
 
         iteration_output = {
             #+3% armor, +1% defense
-            unit_bonus = {
-                armor = {
+            sub_unit_bonus = {
+                category_tanks = {
                     armor_value = 0.03
                     defense = 0.01
                 }
@@ -622,7 +623,7 @@ sp_adeptus_astartes_weapon_applications = {
         iteration_output = {
             #+10% reliability, +5% attack, +5% defense, +10% prod cost, -15% progress
             equipment_bonus = {
-                space_marine_bolt_gun = { soft_attack = 0.05 hard_attack = 0.05 defence = 0.05 reliability = 0.075 build_cost_ic = 0.125 instant = yes }
+                space_marine_bolt_gun = { soft_attack = 0.05 hard_attack = 0.05 defense = 0.05 reliability = 0.075 build_cost_ic = 0.125 instant = yes }
             }
             country_effects = {
                 sp:sp_EQS_adeptus_astartes = {
@@ -659,7 +660,7 @@ sp_adeptus_astartes_magical_abilities = {
 
         iteration_output = {
             #+5% breakthrough
-            unit_bonus = {
+            sub_unit_bonus = {
                 adeptus_astartes = {
                     breakthrough = 0.05
                 }
@@ -673,7 +674,7 @@ sp_adeptus_astartes_magical_abilities = {
 
         iteration_output = {
             #+10% speed
-            unit_bonus = {
+            sub_unit_bonus = {
                 adeptus_astartes = {
                     maximum_speed = 0.1
                 }
@@ -687,7 +688,7 @@ sp_adeptus_astartes_magical_abilities = {
 
         iteration_output = {
             #+5% armor
-            unit_bonus = {
+            sub_unit_bonus = {
                 adeptus_astartes = {
                     armor_value = 0.05
                 }
@@ -724,7 +725,7 @@ sp_enhanced_matrices_crystal_decisions = {
             equipment_bonus = {
                 magical_equipment = {
                     reliability = -0.02
-                    soft_attck = -0.02
+                    soft_attack = -0.02
                     build_cost_ic = -0.03
                 }
             }
@@ -849,7 +850,7 @@ sp_super_flamers_flame_compound = {
 
         iteration_output = {
             #Increase soft_attack by 25%, reduce armor by 15%
-            unit_bonus = {
+            sub_unit_bonus = {
                 light_flame_tank = { soft_attack = 0.25 armor_value = -0.15 }
                 medium_flame_tank = { soft_attack = 0.25 armor_value = -0.15 }
                 heavy_flame_tank = { soft_attack = 0.25 armor_value = -0.15 }
@@ -865,7 +866,7 @@ sp_super_flamers_flame_compound = {
 
         iteration_output = {
             #Decrease soft attack by 15%, increase armor by 10%
-            unit_bonus = {
+            sub_unit_bonus = {
                 light_flame_tank = { soft_attack = -0.15 armor_value = 0.1 }
                 medium_flame_tank = { soft_attack = -0.15 armor_value = 0.1 }
                 heavy_flame_tank = { soft_attack = -0.15 armor_value = 0.1 }
@@ -881,7 +882,7 @@ sp_super_flamers_flame_compound = {
 
         iteration_output = {
             #increase soft attack by 10%, armor by 5%, and production cost by 5%
-            unit_bonus = {
+            sub_unit_bonus = {
                 light_flame_tank = { soft_attack = 0.1 armor_value = 0.05 }
                 medium_flame_tank = { soft_attack = 0.1 armor_value = 0.05 }
                 heavy_flame_tank = { soft_attack = 0.1 armor_value = 0.05 }
@@ -923,7 +924,7 @@ sp_super_flamers_sticky_or_liquid_compound = {
 
         iteration_output = {
             #Increase attack bonus of flame tanks by 5% in close quarters environments: urban, fort, forest, jungle
-            unit_bonus = {
+            sub_unit_bonus = {
                 light_flame_tank = { urban = { attack = 0.05 } fort = { attack = 0.05 } forest = { attack = 0.05 } jungle = { attack = 0.05 } }
                 medium_flame_tank = { urban = { attack = 0.05 } fort = { attack = 0.05 } forest = { attack = 0.05 } jungle = { attack = 0.05 } }
                 heavy_flame_tank = { urban = { attack = 0.05 } fort = { attack = 0.05 } forest = { attack = 0.05 } jungle = { attack = 0.05 } }
@@ -939,7 +940,7 @@ sp_super_flamers_sticky_or_liquid_compound = {
 
         iteration_output = {
             #Increase attack bonus of flame tanks by 5% in open areas: plains, hills, desert, marsh
-            unit_bonus = {
+            sub_unit_bonus = {
                 light_flame_tank = { desert = { attack = 0.05 } plains = { attack = 0.05 } marsh = { attack = 0.05 } hills = { attack = 0.05 } }
                 medium_flame_tank = { desert = { attack = 0.05 } plains = { attack = 0.05 } marsh = { attack = 0.05 } hills = { attack = 0.05 } }
                 heavy_flame_tank = { desert = { attack = 0.05 } plains = { attack = 0.05 } marsh = { attack = 0.05 } hills = { attack = 0.05 } }
@@ -1053,7 +1054,7 @@ sp_plasma_cannons_traditional_usage = {
 
     #Utilize these on light guns
     option = {
-        token = sp_EQS_supplemental choice
+        token = sp_EQS_supplemental_choice
 
         iteration_output = {
             #Increase light piercing by 5%
@@ -1421,7 +1422,9 @@ sp_portable_solar_panels_material_procurement = {
 
         iteration_output = {
             #Literally nothing changes
-            custom_effect_tooltip = SOL_feeling_bold_today_eh_tt
+            country_effects = {
+                custom_effect_tooltip = SOL_feeling_bold_today_eh_tt
+            }
         }
     }
 
@@ -1531,7 +1534,9 @@ sp_hot_fusion_reactor_venting_problems = {
 
         iteration_output = {
             #Literally nothing
-            custom_effect_tooltip = SOL_no_meltdown_today_tt
+            country_effects = {
+                custom_effect_tooltip = SOL_no_meltdown_today_tt
+            }
         }
     }
 
@@ -1592,13 +1597,14 @@ sp_hot_fusion_reactor_by_products = {
             #Increase all ship armor by 5%, hp by 2%
             equipment_bonus = {
                 capital_ship = { armor_value = 0.05 max_strength = 0.02 }
-                screen = { armor_value = 0.05 max_strength = 0.02 }
+                screen_ship = { armor_value = 0.05 max_strength = 0.02 }
                 submarine = { max_strength = 0.02 }
             }
         }
     }
 
-    #Utilize it for stronger buildings = {
+    #Utilize it for stronger buildings
+    option= {
         token = sp_EQS_infinite_construction
 
         default = yes

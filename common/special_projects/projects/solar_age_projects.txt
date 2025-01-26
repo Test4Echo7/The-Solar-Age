@@ -45,14 +45,6 @@ sp_EQS_sun_laser = {
         }
     }
 
-    unique_prototype_rewards = {
-        sp_sun_laser_increased_magic_output
-		sp_sun_laser_increased_safety
-		sp_sun_laser_solar_concentration_application
-		sp_sun_laser_faulty_concentration_spell
-		sp_sun_laser_exhaustive_casting
-    }
-
     generic_prototype_rewards = {
 		sp_magical_generic_reward_scientist_xp_1
 		sp_magical_generic_reward_scientist_xp_2
@@ -71,6 +63,11 @@ sp_EQS_sun_laser = {
 		sp_magical_generic_reward_race_tech_3
 		sp_magical_generic_reward_resource_scarcity
 		sp_magical_generic_reward_critical_failure
+		sp_sun_laser_increased_magic_output
+		sp_sun_laser_increased_safety
+		sp_sun_laser_solar_concentration_application
+		sp_sun_laser_faulty_concentration_spell
+		sp_sun_laser_exhaustive_casting
 	}
 }
 
@@ -132,14 +129,6 @@ sp_EQS_adeptus_astartes = {
         }
     }
 
-    unique_prototype_rewards = {
-        sp_adeptus_astartes_initial_perfection
-		sp_adeptus_astartes_power_overwhelming
-		sp_adeptus_astartes_armor_applications
-		sp_adeptus_astartes_weapon_applications
-		sp_adeptus_astartes_magical_abilities
-    }
-
     generic_prototype_rewards = {
 		sp_magical_generic_reward_scientist_xp_1
 		sp_magical_generic_reward_scientist_xp_2
@@ -158,6 +147,11 @@ sp_EQS_adeptus_astartes = {
 		sp_magical_generic_reward_race_tech_3
 		sp_magical_generic_reward_resource_scarcity
 		sp_magical_generic_reward_critical_failure
+		sp_adeptus_astartes_initial_perfection
+		sp_adeptus_astartes_power_overwhelming
+		sp_adeptus_astartes_armor_applications
+		sp_adeptus_astartes_weapon_applications
+		sp_adeptus_astartes_magical_abilities
 	}
 }
 
@@ -220,11 +214,6 @@ sp_EQS_enhanced_matrices = {
         }
     }
 
-    unique_prototype_rewards = {
-        sp_enhanced_matrices_crystal_decisions
-		sp_enhanced_matrices_unstable_matrices
-    }
-
     generic_prototype_rewards = {
 		sp_magical_generic_reward_scientist_xp_1
 		sp_magical_generic_reward_scientist_xp_2
@@ -243,6 +232,8 @@ sp_EQS_enhanced_matrices = {
 		sp_magical_generic_reward_race_tech_3
 		sp_magical_generic_reward_resource_scarcity
 		sp_magical_generic_reward_critical_failure
+		sp_enhanced_matrices_crystal_decisions
+		sp_enhanced_matrices_unstable_matrices
 	}
 }
 
@@ -298,14 +289,6 @@ sp_EQS_inferno_cas = {
         }
     }
 
-    unique_prototype_rewards = {
-        sp_inferno_cas_flight_problem
-		sp_inferno_cas_bobomb
-		sp_inferno_cas_flimsy_wings
-		sp_inferno_cas_taking_flight
-		sp_inferno_cas_unstable_bombs
-    }
-
     generic_prototype_rewards = {
 		sp_air_generic_reward_scientist_xp_1
 		sp_air_generic_reward_scientist_xp_2
@@ -320,8 +303,11 @@ sp_EQS_inferno_cas = {
 		sp_air_generic_reward_air_xp_1
 		sp_air_generic_reward_air_xp_2
 		sp_air_generic_reward_air_xp_3
-		sp_air_generic_reward_resource_scarcity
-		sp_air_generic_reward_critical_failure
+		sp_inferno_cas_flight_problem
+		sp_inferno_cas_bobomb
+		sp_inferno_cas_flimsy_wings
+		sp_inferno_cas_taking_flight
+		sp_inferno_cas_unstable_bombs
 	}
 }
 
@@ -383,10 +369,6 @@ sp_EQS_portable_solar_panels = {
         }
     }
 
-    unique_prototype_rewards = {
-        sp_portable_solar_panels_material_procurement
-    }
-
     generic_prototype_rewards = {
 		sp_air_generic_reward_scientist_xp_1
 		sp_air_generic_reward_scientist_xp_2
@@ -401,6 +383,7 @@ sp_EQS_portable_solar_panels = {
 		sp_air_generic_reward_air_xp_1
 		sp_air_generic_reward_air_xp_2
 		sp_air_generic_reward_air_xp_3
+		sp_portable_solar_panels_material_procurement
 	}
 }
 
@@ -458,10 +441,6 @@ sp_EQS_hot_fusion = {
         }
     }
 
-    unique_prototype_rewards = {
-        sp_hot_fusion_reactor_by_products
-    }
-
     generic_prototype_rewards = {
 		sp_nuclear_scientist_xp_generic_reward
 		sp_nuclear_minor_progress_generic_reward
@@ -469,6 +448,7 @@ sp_EQS_hot_fusion = {
 		sp_nuclear_generic_electronics_tech_reward
 		sp_nuclear_reactor_radioactive_leak_stabilized_reward
 		sp_nuclear_reactor_minor_explosion_reward
+		sp_hot_fusion_reactor_by_products
 	}
 }
 
@@ -521,11 +501,6 @@ sp_EQS_super_flamers = {
         }
     }
 
-    unique_prototype_rewards = {
-        sp_super_flamers_flame_compound
-		sp_super_flamers_sticky_or_liquid_compound
-    }
-
     generic_prototype_rewards = {
 		sp_land_generic_reward_scientist_xp_1
 		sp_land_generic_reward_scientist_xp_2
@@ -540,6 +515,8 @@ sp_EQS_super_flamers = {
 		sp_land_generic_reward_test_failure_2
 		sp_land_generic_reward_test_failure_3
 		sp_land_generic_reward_resource_scarcity
+		sp_super_flamers_flame_compound
+		sp_super_flamers_sticky_or_liquid_compound
 	}
 }
 
@@ -598,11 +575,6 @@ sp_EQS_plasma_cannons = {
         }
     }
 
-    unique_prototype_rewards = {
-        sp_plasma_cannons_reducing_load
-		sp_plasma_cannons_traditional_usage
-    }
-
     generic_prototype_rewards = {
 		sp_naval_generic_reward_scientist_xp_1
 		sp_naval_generic_reward_scientist_xp_2
@@ -616,6 +588,8 @@ sp_EQS_plasma_cannons = {
 		sp_naval_generic_reward_test_failure_1
 		sp_naval_generic_reward_test_failure_2
 		sp_naval_generic_reward_test_failure_3
+		sp_plasma_cannons_reducing_load
+		sp_plasma_cannons_traditional_usage
 	}
 }
 
@@ -668,10 +642,6 @@ sp_EQS_pilot_drug_programs = {
         }
     }
 
-    unique_prototype_rewards = {
-        sp_pilot_drug_programs_test_subject_groups
-    }
-
     generic_prototype_rewards = {
 		sp_air_generic_reward_scientist_xp_1
 		sp_air_generic_reward_scientist_xp_2
@@ -682,5 +652,6 @@ sp_EQS_pilot_drug_programs = {
 		sp_air_generic_reward_test_failure_2
 		sp_air_generic_reward_air_xp_1
 		sp_air_generic_reward_air_xp_2
+		sp_pilot_drug_programs_test_subject_groups
 	}
 }

@@ -34,7 +34,7 @@ ludicrous_speed = {
         custom_trigger_tooltip = {
             tooltip = EQS_speedy_boi_tt
             tag = EQS
-            has_completed_focus = SOL_Imperium_Solis
+            is_EQS_SOL = yes
             date < 1008.01.02
         }
     }
@@ -367,6 +367,31 @@ spike_take_a_flamer = {
     happened = {
         is_EQS_SOL = yes
         has_country_flag = SOL_spike_broken
+    }
+}
+
+we_have_assumed_control = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1007.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		tag = EQS
+    }
+
+    happened = {
+        custom_trigger_tooltip = {
+            tooltip = EQS_is_that_a_rush_reference_tt
+            is_EQS_SOL = yes
+            has_power_balance = {
+                id = EQS_vestments_of_power
+            }
+            power_balance_value = {
+                id = EQS_vestments_of_power
+                value < -0.999
+            }
+        }
     }
 }
 

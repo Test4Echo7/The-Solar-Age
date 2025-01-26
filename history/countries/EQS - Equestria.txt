@@ -641,6 +641,11 @@ recruit_character = EQS_sky_high
 recruit_character = EQS_treadwell
 recruit_character = EQS_butter_knife
 recruit_character = EQS_nurse_redheart
+recruit_character = EQS_High_Impact
+recruit_character = EQS_crimson_line
+recruit_character = EQS_tangent
+recruit_character = EQS_rock_solid
+recruit_character = EQS_morning_mulch
 #Foreign characters
 recruit_character = CRY_nightshade
 recruit_character = CRY_morning_mist

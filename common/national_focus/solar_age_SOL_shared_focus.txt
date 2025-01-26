@@ -7206,7 +7206,7 @@ shared_focus = {
 					NOT = { country_exists = GRF }
 					GFF = {
 						exists = yes
-						NOT = { is_subject = GRF }
+						NOT = { is_subject_of = GRF }
 						owns_state = 243
 					}
 				}
@@ -11339,7 +11339,12 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_strike_iron"
 		###An event of some troops desperately trying to fight back against an enemy assault of their lines, and asking where their reinforcements are at, and as the enemy continues to advance, they believe that they'll be overrun, before the cavalry arrives with motorized divisions and start to push back the opposing forces (has to be generic)
-		country_event = solarreworked.82
+		#country_event = solarreworked.82
+		add_ideas = SOL_motorized_spearheads
+        add_breakthrough_progress = {
+			specialization = specialization_land
+			value = 0.6
+		}
 	}
 	ai_will_do = { factor = 60 }
 }

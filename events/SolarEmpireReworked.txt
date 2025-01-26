@@ -1041,9 +1041,11 @@ country_event = { #Follow a group of fanatical followers of Daybreaker, who have
     option = { #BURN THE BATS! BURN THE BATS!
         name = solarreworked.43.a
         add_political_power = 100
+        set_country_flag = SOL_burned_them_bats
 		if = {
 			limit = {
 				EQS_SOL_comet_trail = { is_unit_leader = yes }
+				has_country_flag = SOL_new_generals_flag
 			}
 			remove_unit_leader_role = EQS_SOL_comet_trail
 		}
@@ -1847,7 +1849,7 @@ country_event = { #As a small company is working through a town along the border
     }
 }
 
-country_event = { #A trainee evoker is put to the test on one of the main combat spells of the Solar Empire and are given instructions on how to do it properly beforehand, and the instructor searches for things they could improve upon, but the student takes to it naturally, and utterly destroys the targets, which leads to a bit of concern, given the pony loves the thrill of it
+country_event = { #A trainee evoker is put to the test on one of the main combat spells of the Solar Empire and is given instructions on how to do it properly beforehand, and the instructor searches for things they could improve upon, but the student takes to it naturally, and utterly destroys the targets, which leads to a bit of concern, given the pony loves the thrill of it
     id = solarreworked.80
     title = solarreworked.80.t
     desc = solarreworked.80.d
@@ -1906,7 +1908,7 @@ country_event = { #In a panic, a soldier manages to get to their radio to start 
 }
 
 country_event = { #Daybreaker leads dozens if not a hundred or more troops into the Wonderbolt Academy in Cloudsdale, which still has a number of the Wonderbolts; Spitfire is already captured, since she was in Canterlot, and Soarin' and the other Wonderbolts have already been dealt with in the military purges, and the entire meeting is her shutting it down, and declaring that something better will follow in its place
-    id = solarreworked.83
+    id = solarreworked.83 #Possibly be instead Daybreaker having a bit of a showdown with the Wonderbolts outside the academy, and besting them to then have them captured
     title = solarreworked.83.t
     desc = solarreworked.83.d
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.83"}
@@ -1921,6 +1923,7 @@ country_event = { #Daybreaker leads dozens if not a hundred or more troops into 
 		show_ideas_tooltip = thunderlane
 		custom_effect_tooltip = available_theorist
 		show_ideas_tooltip = wind_rider
+		retire_character = EQS_spitfire
 		EQS_wonderbolts = {
             set_character_name = { name = EQS_solarbeams }
         }
@@ -4740,6 +4743,7 @@ country_event = { #With herself established, Daybreaker hosts a grand ceremony i
             name = "EQS_sanctum_solar"
         }
         set_cosmetic_tag = EQS_SOL_romanophile
+        custom_effect_tooltip = available_political_advisor
         show_ideas_tooltip = padlock
     }
 }
@@ -4986,6 +4990,13 @@ country_event = { #A short event speaking about how many who have gone to serve 
         name = solarreworked.313.a
         custom_effect_tooltip = SOL_solaris_inquisitionis_would_like_to_know_your_location_tt
         set_country_flag = SOL_inquisitor_generals
+        custom_effect_tooltip = burning_plage_stats_tp
+        custom_effect_tooltip = aurora_shinespark_solar_age_stats_tp
+        custom_effect_tooltip = novus_flux_stats_tp
+        custom_effect_tooltip = nova_glow_stats_tp
+        custom_effect_tooltip = quasar_pulse_stats_tp
+        custom_effect_tooltip = fidelis_flamma_stats_tp
+        custom_effect_tooltip = steel_sickle_stats_tp
     }
 }
 
@@ -5172,7 +5183,10 @@ country_event = { #Follow one of the new generals as he or she are put through s
 
     option = { #You have earned your place at my side.
         name = solarreworked.329.a
-        ###Generals here
+        set_country_flag = SOL_mothers_call
+        custom_effect_tooltip = crimson_line_stats_tp
+        custom_effect_tooltip = tangent_stats_tp
+        custom_effect_tooltip = high_impact_stats_tp
     }
 }
 
@@ -5298,7 +5312,9 @@ country_event = { #A radio advertisement plays speaking about how much Celestia 
 
     option = { #It is the least you can do!
         name = solarreworked.344.a
-        ###Generals here
+        set_country_flag = SOL_empresss_protectors
+        custom_effect_tooltip = rock_solid_stats_tp
+        custom_effect_tooltip = morning_mulch_stats_tp
     }
 }
 
@@ -8433,7 +8449,10 @@ country_event = { #Country event speaking of either of GRD's acceptance or rejec
         clr_country_flag = SOL_twilight_away
         add_political_power = -200
         add_stability = -0.05
-        add_opinion_modifier = EQS_GRI_spurned
+        add_opinion_modifier = {
+            target = FROM
+            modifier = EQS_GRI_spurned
+        }
     }
 }
 

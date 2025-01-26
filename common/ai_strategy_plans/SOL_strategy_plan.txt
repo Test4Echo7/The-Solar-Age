@@ -37,7 +37,7 @@ SOL_solar_empire_historical_politics = {
         SOL_plants_in_chaos
         SOL_solidify_merger
         SOL_take_charge
-        SOL_imperium_solis
+        SOL_Imperium_Solis
         SOL_god_empress
         SOL_twilight_ascend
         SOL_sunset_awaken
@@ -165,14 +165,13 @@ SOL_solar_empire_historical_conquest_phase_2 = {
     }
 
     enable = {
-            is_historical_focus_on = yes
-            has_game_rule = {
-                rule = EQS_ai_behavior
-                option = SOLAR_EMPIRE
-            }
-            has_completed_focus = SOL_last_grover
-            date > 1024.12.31
+        is_historical_focus_on = yes
+        has_game_rule = {
+            rule = EQS_ai_behavior
+            option = SOLAR_EMPIRE
         }
+        has_completed_focus = SOL_last_grover
+        date > 1024.12.31
     }
     abort = {
 
@@ -211,12 +210,11 @@ SOL_solar_empire_civil_war = {
     }
 
     enable = {
-            has_country_flag = EQS_AI_STOP_VANILLA_STRATEGY
-            eqs_has_civil_war = yes
-            has_game_rule = {
-                rule = EQS_ai_behavior
-                option = SOLAR_EMPIRE
-            }
+        has_country_flag = EQS_AI_STOP_VANILLA_STRATEGY
+        eqs_has_civil_war = yes
+        has_game_rule = {
+            rule = EQS_ai_behavior
+            option = SOLAR_EMPIRE
         }
     }
     abort = {

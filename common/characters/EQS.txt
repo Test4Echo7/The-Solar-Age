@@ -1713,20 +1713,6 @@ characters={
 					limit = { NOT = { tag = event_target:solar_empire } }
 					has_government = democratic
 				}
-				if = {
-					limit = { event_target:solar_empire = { exists = yes } }
-					OR = {
-						AND = {
-							tag = event_target:solar_empire
-							NOT = { country_exists = event_target:equestria }
-							NOT = {
-								has_country_flag = SOL_harmonic_commanders_leave
-								has_country_flag = SOL_purge_finished
-							}
-						}
-						tag = event_target:equestria
-					}
-				}
 			}
 
 			traits = { EQS_wonderbolts_captain }
@@ -2354,6 +2340,7 @@ characters={
 					AND = {
 						is_EQS_SOL = yes
 						has_country_flag = SOL_new_generals_flag
+						NOT = { has_country_flag = SOL_burned_them_bats }
 					}
 				}
 			}

@@ -52,7 +52,7 @@ EQS_alternate_lunar_civil_war_normal = {
 		War_Plan
 		Remove_Harmonic_Stagnation
 		Suppress_bureaucracy
-		EQS_anti_changeling_tactics
+		EQS_anti_changeling_training
 	}
 	focus_factors = {
 
@@ -140,7 +140,7 @@ EQS_alternate_lunar_civil_war_max = {
 		War_Plan
 		Remove_Harmonic_Stagnation
 		Suppress_bureaucracy
-		EQS_anti_changeling_tactics
+		EQS_anti_changeling_training
 	}
 	focus_factors = {
 
@@ -267,7 +267,7 @@ EQS_alternate_solar_and_lunar = {
 		War_Plan
 		Remove_Harmonic_Stagnation
 		Suppress_bureaucracy
-		EQS_anti_changeling_tactics
+		EQS_anti_changeling_training
 	}
 	focus_factors = {
 

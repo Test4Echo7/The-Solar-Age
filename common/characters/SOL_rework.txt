@@ -191,9 +191,9 @@ characters = {
 		corps_commander = {
             traits = { pony_race_trait heat_specialist }
             skill = 2
-            attack_skill = 3
+            attack_skill = 2
             defense_skill = 1
-            planning_skill = 1
+            planning_skill = 2
             logistics_skill = 2
             visible = {
                 is_EQS_SOL = yes
@@ -234,10 +234,10 @@ characters = {
 		}
 		corps_commander = {
             traits = { pony_race_trait old_guard }
-            skill = 2
+            skill = 1
             attack_skill = 1
-            defense_skill = 3
-            planning_skill = 2
+            defense_skill = 1
+            planning_skill = 1
             logistics_skill = 1
             visible = {
                 is_EQS_SOL = yes
@@ -563,6 +563,74 @@ characters = {
 			available = { is_EQS_SOL = yes }
 			visible = { has_country_flag = SOL_mothers_best }
 			traits = { army_logistics_2 }
+		}
+	}
+	EQS_High_Impact = {
+		name = EQS_High_Impact
+
+		corps_commander = {
+			traits = { pony_race_trait artillery_specialist trickster }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+			visible = { has_country_flag = SOL_mothers_call }
+		}
+	}
+	EQS_crimson_line = {
+		name = EQS_crimson_line
+		gender = female
+
+		corps_commander = {
+			traits = { pony_race_trait infantry_leader infantry_expert }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+			visible = { has_country_flag = SOL_mothers_call }
+		}
+	}
+	EQS_tangent = { #Can go off on tangents, too
+		name = EQS_tangent
+		gender = female
+
+		corps_commander = {
+			traits = { pony_race_trait trait_engineer skilled_staffer }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 4
+			visible = { has_country_flag = SOL_mothers_call }
+		}
+	}
+	EQS_rock_solid = {
+		name = EQS_rock_solid
+
+		corps_commander = {
+			traits = { pony_race_trait panzer_leader armor_officer organizer harsh_leader }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 4
+			visible = { has_country_flag = SOL_empresss_protectors }
+		}
+	}
+	EQS_morning_mulch = {
+		name = EQS_morning_mulch
+		gender = female
+
+		corps_commander = {
+			traits = { pony_race_trait ranger infantry_expert commando }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 5
+			visible = { has_country_flag = SOL_empresss_protectors }
 		}
 	}
 
