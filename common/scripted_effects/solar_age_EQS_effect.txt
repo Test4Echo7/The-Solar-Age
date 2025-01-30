@@ -83,18 +83,243 @@ EQS_update_lost_soldier_corpses = {
     }
     set_variable = { EQS_viable_corpse_var = EQS_current_casualties }
 }
+SOL_helios_effect = {
+    custom_effect_tooltip = SOL_glass_them_all_tt
+    custom_effect_tooltip = SOL_this_is_whats_called_a_pro_gamer_move_tt
+    clr_country_flag = SOL_project_helios_warming_up
+    create_entity = {
+        entity = nuke_entity
+        id = 1337420
+        var = helios_effect_ent_2
+        x = 0
+        y = 0
+        z = 0
+        state = FROM
+        scale = 2
+        rotation = 1.0
+        min_zoom = 3000.0
+    }
+    set_entity_animation = {
+        id = 1337420
+        animation = attack
+    }
+    #Long line of ifs for the good, ol' laser firer
+    hidden_effect = {
+        if = {
+            limit = { NOT = { has_global_flag = SOL_helios_first_used } }
+            set_global_flag = SOL_helios_first_used
+            hidden_effect = {
+                FROM = {
+                    OWNER = {
+                        news_event = { id = news.solarage.20 hours = 3 }
+                    }
+                }
+            }
+        }
+        if = {
+            limit = {
+                FROM = { state = 251 }
+                NOT = { has_global_flag = SOL_vesalipolis_vaporized }
+            }
+            set_global_flag = SOL_vesalipolis_vaporized
+            #Event for vaporizing Vesalipolis
+            country_event = { id = solarreworked.138 hours = 3 }
+            news_event = { id = news.solarage.21 hours = 6 }
+        }
+        if = {
+            limit = {
+                FROM = { state = 389 }
+                NOT = { has_global_flag = SOL_griffonstone_glassed }
+            }
+            set_temp_variable = {
+                nuked = FROM.owner
+            }
+            set_global_flag = SOL_griffonstone_glassed
+            news_event = { id = news.solarage.22 hours = 3 }
+            every_other_country = {
+                limit = { is_griffon_continent_griffon_country = yes }
+                add_ai_strategy = {
+                    type = antagonize
+                    id = PREV
+                    value = 500
+                }
+                add_ai_strategy = {
+                    type = contain
+                    id = PREV
+                    value = 500
+                }
+                add_ai_strategy = {
+                    type = befriend
+                    id = PREV
+                    value = -500
+                }
+                add_ai_strategy = {
+                    type = alliance
+                    id = PREV
+                    value = -500
+                }
+                add_ai_strategy = {
+                    type = ignore
+                    id = PREV
+                    value = -200
+                }
+                var:nuked = {
+                    PREV = {
+                        add_ai_strategy = {
+                            type = protect
+                            id = PREV
+                            value = 500
+                        }
+                        add_ai_strategy = {
+                            type = alliance
+                            id = PREV
+                            value = 500
+                        }
+                        add_ai_strategy = {
+                            type = send_volunteers_desire
+                            id = PREV
+                            value = 500
+                        }
+                        add_ai_strategy = {
+                            type = support
+                            id = PREV
+                            value = 500
+                        }
+                        add_ai_strategy = {
+                            type = ignore
+                            id = PREV
+                            value = -200
+                        }
+                    }
+                }
+            }
+            add_opinion_modifier = {
+                target = EQS
+                modifier = nuked_griffonstone
+            }
+            add_opinion_modifier = {
+                target = EQS
+                modifier = CHN_embargo
+            }
+        }
+        else_if = {
+            limit = {
+                FROM = { state = 382 }
+                NOT = { has_global_flag = SOL_griffenheim_glassed }
+            }
+            set_global_flag = SOL_griffenheim_glassed
+            news_event = { id = news.solarage.23 hours = 3 }
+        }
+        else_if = {
+            limit = {
+                FROM = { state = 377 }
+                NOT = { has_global_flag = SOL_aquila_glassed }
+            }
+            set_global_flag = SOL_aquila_glassed
+            news_event = { id = news.solarage.24 hours = 3 }
+        }
+        else_if = {
+            limit = {
+                FROM = { state = 371 }
+                NOT = { has_global_flag = SOL_karthin_glassed }
+            }
+            set_global_flag = SOL_karthin_glassed
+            news_event = { id = news.solarage.25 hours = 3 }
+        }
+        else_if = {
+            limit = {
+                FROM = { state = 415 }
+                NOT = { has_global_flag = SOL_magehold_glassed }
+            }
+            set_global_flag = SOL_magehold_glassed
+            news_event = { id = news.solarage.26 hours = 3 }
+        }
+        else_if = {
+            limit = {
+                FROM = { state = 381 }
+                NOT = { has_global_flag = SOL_skyfall_glassed }
+            }
+            set_global_flag = SOL_skyfall_glassed
+            news_event = { id = news.solarage.27 hours = 3 }
+        }
+        else_if = {
+            limit = {
+                FROM = { state = 3 }
+                NOT = { has_global_flag = SOL_canterlot_glassed }
+            }
+            set_global_flag = SOL_canterlot_glassed
+            news_event = { id = news.solarage.28 hours = 3 }
+        }
+        else_if = {
+            limit = {
+                FROM = { state = 619 }
+                NOT = { has_global_flag = SOL_rijekograd_glassed }
+            }
+            set_global_flag = SOL_rijekograd_glassed
+            news_event = { id = news.solarage.29 hours = 3 }
+        }
+        else_if = {
+            limit = {
+                FROM = {
+                    OR = { ##### There are 3 provinces named Crystal City
+                        state = 53
+                        state = 345
+                        state = 344
+                    }
+                }
+                NOT = { has_global_flag = SOL_crystal_city_glassed }
+            }
+            set_global_flag = SOL_crystal_city_glassed
+            news_event = { id = news.solarage.30 hours = 3 }
+        }
+        else_if = {
+            limit = {
+                FROM = { state = 153 }
+                153 = {is_capital = yes}
+                NOT = { has_global_flag = SOL_stalliongrad_glassed }
+            }
+            set_global_flag = SOL_stalliongrad_glassed
+            news_event = { id = news.solarage.31 hours = 3 }
+        }
+        else_if = {
+            limit = {
+                FROM = { state = 875 }
+                NOT = { has_global_flag = SOL_colthage_glassed }
+            }
+            set_global_flag = SOL_colthage_glassed
+            news_event = { id = news.solarage.32 hours = 3 }
+        }
+        else_if = {
+            limit = {
+                FROM = { state = 1165 }
+                NOT = { has_global_flag = SOL_mount_aris_glassed }
+            }
+            set_global_flag = SOL_mount_aris_glassed
+            news_event = { id = news.solarage.33 hours = 3 }
+        }
+        else_if = {
+            limit = {
+                FROM = { state = 712 }
+                NOT = { has_global_flag = SOL_new_ayacachtli_glassed }
+            }
+            set_global_flag = SOL_new_ayacachtli_glassed
+            news_event = { id = news.solarage.34 hours = 3 }
+        }
+    }
+}
 EQS_project_helios_destruction = {
     set_state_flag = SOL_firing_mah_lazaaah
     every_state_division = {
         destroy_unit = yes
     }
     #Why remake the nuke population loss effect when you can just yoink it and change it slightly?
-    decrease_population_on_nuke = yes
-    clr_state_flag = recently_nuked
-    decrease_population_on_nuke = yes
-    clr_state_flag = recently_nuked
-    decrease_population_on_nuke = yes
-    clr_state_flag = recently_nuked
+    decrease_population_on_laser = yes
+    decrease_population_on_laser = yes
+    decrease_population_on_laser = yes
+    add_dynamic_modifier = {
+        modifier = SOL_evaporated_state
+        days = 400
+    }
     if = {
         limit = { infrastructure > 0 }
         damage_building = {

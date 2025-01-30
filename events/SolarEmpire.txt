@@ -5700,3 +5700,120 @@ country_event = { # celestia Puppet
 		set_country_flag = is_solar_puppet
 	}
 }
+
+country_event = { # celestia Puppet
+	id = solarempire.1042
+	immediate = {log = "[GetDateText]: [Root.GetName]: event solarempire.1042"}
+	hidden = yes
+
+	is_triggered_only = yes
+	option = {
+		set_cosmetic_tag = CTH_SOL
+
+		set_country_flag = is_solar_puppet
+	}
+}
+
+country_event = { # celestia Puppet
+	id = solarempire.1043
+	immediate = {log = "[GetDateText]: [Root.GetName]: event solarempire.1043"}
+	hidden = yes
+
+	is_triggered_only = yes
+	option = {
+		set_cosmetic_tag = CTL_SOL
+
+		set_country_flag = is_solar_puppet
+	}
+}
+
+country_event = { # celestia Puppet
+	id = solarempire.1044
+	immediate = {log = "[GetDateText]: [Root.GetName]: event solarempire.1044"}
+	hidden = yes
+
+	is_triggered_only = yes
+	option = {
+		set_cosmetic_tag = ROA_SOL
+
+		set_country_flag = is_solar_puppet
+	}
+}
+
+country_event = { # celestia Puppet
+	id = solarempire.1045
+	immediate = {log = "[GetDateText]: [Root.GetName]: event solarempire.1045"}
+	hidden = yes
+
+	is_triggered_only = yes
+	option = {
+		set_cosmetic_tag = ZAR_SOL
+
+		set_country_flag = is_solar_puppet
+	}
+}
+
+country_event = { # celestia Puppet
+	id = solarempire.1046
+	immediate = {log = "[GetDateText]: [Root.GetName]: event solarempire.1046"}
+	hidden = yes
+
+	is_triggered_only = yes
+	option = {
+		set_cosmetic_tag = ABY_SOL
+
+		set_country_flag = is_solar_puppet
+	}
+}
+
+country_event = { # celestia Puppet
+	id = solarempire.1047
+	immediate = {log = "[GetDateText]: [Root.GetName]: event solarempire.1047"}
+	hidden = yes
+
+	is_triggered_only = yes
+	option = {
+		set_cosmetic_tag = STM_SOL
+
+		set_country_flag = is_solar_puppet
+	}
+}
+
+country_event = { # celestia Puppet
+	id = solarempire.1048
+	immediate = {log = "[GetDateText]: [Root.GetName]: event solarempire.1048"}
+	hidden = yes
+
+	is_triggered_only = yes
+	option = {
+		set_cosmetic_tag = MAZ_SOL
+
+		set_country_flag = is_solar_puppet
+	}
+}
+
+country_event = { # celestia Puppet
+	id = solarempire.1049
+	immediate = {log = "[GetDateText]: [Root.GetName]: event solarempire.1049"}
+	hidden = yes
+
+	is_triggered_only = yes
+	option = {
+		set_cosmetic_tag = GAR_SOL
+
+		set_country_flag = is_solar_puppet
+	}
+}
+
+country_event = { # celestia Puppet
+	id = solarempire.1050
+	immediate = {log = "[GetDateText]: [Root.GetName]: event solarempire.1050"}
+	hidden = yes
+
+	is_triggered_only = yes
+	option = {
+		set_cosmetic_tag = HLR_SOL
+
+		set_country_flag = is_solar_puppet
+	}
+}

@@ -1362,6 +1362,16 @@ EQS_orbital_order_cannon_category = {
         icon = daybreaker_sun
         state_target = yes
         on_map_mode = map_only
+        available = {
+            if = {
+                limit = { has_country_flag = SOL_bad_momma }
+                manpower > 15000
+            }
+            else_if = {
+                limit = { has_country_flag = SOL_even_worse_momma }
+                manpower > 10000
+            }
+        }
         visible = {
             has_country_flag = SOL_choosing_firing_location
             FROM = {
@@ -1379,7 +1389,27 @@ EQS_orbital_order_cannon_category = {
         complete_effect = {
             clr_country_flag = SOL_choosing_firing_location
             set_country_flag = SOL_project_helios_warming_up
-            set_variable = { SOL_project_helios_countdown = 190 }
+            set_variable = { SOL_project_helios_countdown = 180 }
+            if = {
+                limit = { has_country_flag = SOL_careless_attacks }
+                add_to_variable = { SOL_project_helios_countdown = 60 }
+            }
+            if = {
+                limit = { has_country_flag = SOL_expensive_attacks }
+                add_to_variable = { SOL_project_helios_countdown = 45 }
+            }
+            if = {
+                limit = {
+                    OR = {
+                        has_country_flag = SOL_bad_momma
+                        has_country_flag = SOL_even_worse_momma
+                    }
+                }
+                set_country_flag = SOL_statistics_tt
+            }
+        }
+        remove_effect = {
+            log = "[GetDateText]: [ROOT.GetName] Decision remove EQS_designate_firing_target"
             hidden_effect = {
                 country_event = {
                     id = solarreworked.514
@@ -1388,48 +1418,27 @@ EQS_orbital_order_cannon_category = {
                 FROM = {
                     EQS_project_helios_destruction = yes
                 }
-            }
-        }
-        remove_effect = {
-            log = "[GetDateText]: [ROOT.GetName] Decision remove EQS_designate_firing_target"
-            custom_effect_tooltip = SOL_glass_them_all_tt
-            custom_effect_tooltip = SOL_this_is_whats_called_a_pro_gamer_move_tt
-            clr_country_flag = SOL_project_helios_warming_up
-            create_entity = {
-                entity = nuke_entity
-                id = 1337420
-                var = helios_effect_ent_2
-                x = 0
-                y = 0
-                z = 0
-                state = FROM
-                scale = 2
-                rotation = 1.0
-                min_zoom = 3000.0
-            }
-            set_entity_animation = {
-                id = 1337420
-                animation = attack
-            }
-            if = {
-                limit = { NOT = { has_global_flag = SOL_helios_first_used } }
-                set_global_flag = SOL_helios_first_used
-                hidden_effect = {
-                    FROM = {
-                        OWNER = {
-                            #News event for being vaporized
+                FROM = {
+                    OWNER = {
+                        add_war_support = -0.1
+                        if = {
+                            limit = {
+                                ROOT = { has_country_flag = SOL_devastating_attacks }
+                            }
+                            add_war_support = -0.05
                         }
                     }
                 }
-            }
-            if = {
-                limit = {
-                    #FROM = { state = vesalipolis }
-                    NOT = { has_global_flag = SOL_vesalipolis_vaporized }
+                if = {
+                    limit = { has_country_flag = SOL_bad_momma }
+                    add_manpower = -15000
                 }
-                set_global_flag = SOL_vesalipolis_vaporized
-                #Event for vaporizing Vesalipolis
+                else_if = {
+                    limit = { has_country_flag = SOL_even_worse_momma }
+                    add_manpower = -10000
+                }
             }
+            SOL_helios_effect = yes
         }
         ai_will_do = { factor = 50 }
     }
@@ -3841,6 +3850,87 @@ EQS_pan_pony_empire_category = {
 			SOL_release_RIV = yes
 		}
 	}
+	SOL_release_HLR_super_puppet = {
+        allowed = {
+            original_tag = EQS
+        }
+        available = {
+            is_EQS_SOL = yes
+            HLR = { all_cores_owned_by_ROOT = yes }
+            DED = { all_cores_owned_by_ROOT = yes }
+            NCH = { all_cores_owned_by_ROOT = yes }
+        }
+        visible = {
+            HLR = { all_cores_owned_by_ROOT = yes }
+            DED = { all_cores_owned_by_ROOT = yes }
+            NCH = { all_cores_owned_by_ROOT = yes }
+            NOT = { has_country_flag = SOL_formed_super_griffonia }
+        }
+        highlight_states = {
+            highlight_states_trigger = {
+                is_core_of = HLR
+                is_core_of = DED
+                is_core_of = NCH
+            }
+        }
+        fire_only_once = yes
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision SOL_release_HLR_super_puppet"
+            SOL_release_HLR = yes
+        }
+	}
+	SOL_release_MIT = {
+        allowed = {
+            original_tag = EQS
+        }
+        available = {
+            is_EQS_SOL = yes
+            MIT = { all_cores_owned_by_ROOT = yes }
+        }
+        visible = {
+            MIT = { all_cores_owned_by_ROOT = yes }
+            NOT = { has_country_flag = SOL_formed_super_griffonia }
+        }
+        highlight_states = {
+            highlight_states_trigger = {
+                is_core_of = MIT
+                NOT = { is_core_of = CYA }
+            }
+        }
+        fire_only_once = yes
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision SOL_release_MIT"
+            SOL_release_MIT = yes
+        }
+	}
+	SOL_release_ZES_super_puppet = {
+        allowed = {
+            original_tag = EQS
+        }
+        available = {
+            is_EQS_SOL = yes
+            ZES = { all_cores_owned_by_ROOT = yes }
+            OLV = { all_cores_owned_by_ROOT = yes }
+        }
+        visible = {
+            ZES = { all_cores_owned_by_ROOT = yes }
+            OLV = { all_cores_owned_by_ROOT = yes }
+            NOT = { has_country_flag = SOL_formed_super_griffonia }
+        }
+        highlight_states = {
+            highlight_states_trigger = {
+                OR = {
+                    is_core_of = ZES
+                    is_core_of = OLV
+                }
+            }
+        }
+        fire_only_once = yes
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision SOL_release_ZES_super_puppet"
+            SOL_release_ZES = yes
+        }
+	}
 	#SOL_release_TBK = {
     #    allowed = {
     #        original_tag = EQS
@@ -3853,7 +3943,7 @@ EQS_pan_pony_empire_category = {
     #        TBK = { all_cores_owned_by_ROOT = yes }
     #        NOT = { has_country_flag = SOL_formed_super_zebrica }
     #    }
-    #    highlight_state_targets = {
+    #    highlight_states = {
     #        highlight_states_trigger = { is_core_of = TBK }
     #    }
     #    fire_only_once = yes
@@ -3862,6 +3952,63 @@ EQS_pan_pony_empire_category = {
 	#		SOL_release_TBK = yes
 	#	}
 	#}
+	SOL_demand_KLG = {
+        allowed = {
+            original_tag = EQS
+        }
+        cost = 10
+        available = {
+            is_EQS_SOL = yes
+            MGY = { all_cores_owned_by_ROOT_or_subject = yes }
+            has_country_flag = SOL_tempest_joined
+            NOT = { has_country_flag = SOL_formed_super_zebrica }
+        }
+        visible = {
+            MGY = { all_cores_owned_by_ROOT_or_subject = yes }
+            KLG = {
+                exists = yes
+                is_subject = no
+            }
+        }
+        highlight_states = {
+            highlight_state_targets = {
+                state = 1208
+            }
+        }
+        fire_only_once = yes
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision SOL_demand_KLG"
+            country_event = solarreworked.411
+        }
+	}
+	SOL_stamp_out_KLG_mafia = {
+        allowed = {
+            original_tag = EQS
+        }
+        custom_cost_trigger = {
+            command_power > 49.99
+        }
+        custom_cost_text = EQS_decision_cost_command_power_50
+        available = {
+            is_EQS_SOL = yes
+            KLG = { all_cores_owned_by_ROOT_or_subject = yes }
+        }
+        visible = {
+            OR = {
+                KLG = { all_cores_owned_by_ROOT_or_subject = yes }
+                has_country_flag = SOL_formed_super_zebrica
+        }
+        highlight_states = {
+            highlight_state_targets = {
+                state = 1208
+            }
+        }
+        fire_only_once = yes
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision SOL_stamp_out_mafia"
+            country_event = solarreworked.412
+        }
+	}
 	SOL_fate_of_MDL = {
 		allowed = {
 			original_tag = EQS
@@ -3884,6 +4031,360 @@ EQS_pan_pony_empire_category = {
 			log = "[GetDateText]: [Root.GetName]: Decision SOL_fate_of_MDL"
 			country_event = solarreworked.507
 		}
+	}
+	SOL_release_HIP_super_puppet = {
+        allowed = {
+            original_tag = EQS
+        }
+        available = {
+            is_EQS_SOL = yes
+            HIP = { all_cores_owned_by_ROOT = yes }
+            TBK = { all_cores_owned_by_ROOT = yes }
+            WAR = { all_cores_owned_by_ROOT = yes }
+            ZUM = { all_cores_owned_by_ROOT = yes }
+            MER = { all_cores_owned_by_ROOT = yes }
+        }
+        visible = {
+            HIP = { all_cores_owned_by_ROOT = yes }
+            TBK = { all_cores_owned_by_ROOT = yes }
+            WAR = { all_cores_owned_by_ROOT = yes }
+            ZUM = { all_cores_owned_by_ROOT = yes }
+            MER = { all_cores_owned_by_ROOT = yes }
+            NOT = { has_country_flag = SOL_formed_super_zebrica }
+        }
+        highlight_states = {
+            highlight_states_trigger = {
+                OR = {
+                    is_core_of = HIP
+                    is_core_of = TBK
+                    is_core_of = WAR
+                    is_core_of = ZUM
+                    is_core_of = MER
+                }
+            }
+        }
+        fire_only_once = yes
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision SOL_release_HIP_super_puppet"
+            SOL_release_HIP = yes
+        }
+	}
+	SOL_release_CTH_super_puppet = {
+        allowed = {
+            original_tag = EQS
+        }
+        available = {
+            is_EQS_SOL = yes
+            CTH = { all_cores_owned_by_ROOT = yes }
+            CGI = { all_cores_owned_by_ROOT = yes }
+            MCW = { all_cores_owned_by_ROOT = yes }
+            CVA = { all_cores_owned_by_ROOT_or_subject = yes }
+            CDR = { all_cores_owned_by_ROOT = yes }
+        }
+        visible = {
+            CTH = { all_cores_owned_by_ROOT = yes }
+            CGI = { all_cores_owned_by_ROOT = yes }
+            MCW = { all_cores_owned_by_ROOT = yes }
+            CVA = { all_cores_owned_by_ROOT_or_subject = yes }
+            CDR = { all_cores_owned_by_ROOT = yes }
+            NOT = { has_country_flag = SOL_formed_super_zebrica }
+        }
+        highlight_states = {
+            highlight_states_trigger = {
+                OR = {
+                    is_core_of = CTH
+                    is_core_of = CGI
+                    is_core_of = MCW
+                    is_core_of = CVA
+                    is_core_of = CDR
+                }
+                if = {
+                    limit = { CTL = { has_country_flag = is_solar_puppet } }
+                    NOT = { state = 1092 }
+                }
+            }
+        }
+        fire_only_once = yes
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision SOL_release_CTH_super_puppet"
+            SOL_release_CTH = yes
+        }
+	}
+	SOL_release_CTL_super_puppet = {
+        allowed = {
+            original_tag = EQS
+        }
+        available = {
+            is_EQS_SOL = yes
+            CTL = { all_cores_owned_by_ROOT = yes }
+            HRV = { all_cores_owned_by_ROOT = yes }
+            LMB = { all_cores_owned_by_ROOT_or_subject = yes }
+            SPL = { all_cores_owned_by_ROOT = yes }
+            HIN = { all_cores_owned_by_ROOT = yes }
+            SAM = { all_cores_owned_by_ROOT = yes }
+            BRS = { all_cores_owned_by_ROOT = yes }
+            GAZ = { all_cores_owned_by_ROOT = yes }
+        }
+        visible = {
+            CTL = { all_cores_owned_by_ROOT = yes }
+            HRV = { all_cores_owned_by_ROOT = yes }
+            LMB = { all_cores_owned_by_ROOT_or_subject = yes }
+            SPL = { all_cores_owned_by_ROOT = yes }
+            HIN = { all_cores_owned_by_ROOT = yes }
+            SAM = { all_cores_owned_by_ROOT = yes }
+            BRS = { all_cores_owned_by_ROOT = yes }
+            GAZ = { all_cores_owned_by_ROOT = yes }
+            NOT = { has_country_flag = SOL_formed_super_zebrica }
+        }
+        highlight_states = {
+            highlight_states_trigger = {
+                OR = {
+                    is_core_of = CTL
+                    is_core_of = HRV
+                    is_core_of = LMB
+                    is_core_of = SPL
+                    is_core_of = HIN
+                    is_core_of = SAM
+                    is_core_of = BRS
+                    is_core_of = GAZ
+                }
+                if = {
+                    limit = { CTH = { has_country_flag = is_solar_puppet } }
+                    NOT = { state = 1092 }
+                }
+            }
+        }
+        fire_only_once = yes
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision SOL_release_CTL_super_puppet"
+            SOL_release_CTL = yes
+        }
+	}
+	SOL_release_ABY_super_puppet = {
+        allowed = {
+            original_tag = EQS
+        }
+        available = {
+            is_EQS_SOL = yes
+            custom_trigger_tooltip = {
+                tooltip = SOL_owns_all_ABY_starting_territory_tt
+                owns_state = 783
+                owns_state = 1201
+                owns_state = 782
+                owns_state = 774
+                owns_state = 779
+                owns_state = 780
+                owns_state = 777
+                owns_state = 778
+                owns_state = 771
+                owns_state = 772
+                owns_state = 773
+                owns_state = 775
+                owns_state = 785
+                owns_state = 776
+                owns_state = 786
+                owns_state = 781
+            }
+            ASS = { all_cores_owned_by_ROOT = yes }
+            ANS = { all_cores_owned_by_ROOT_or_subject = yes }
+        }
+        visible = {
+            owns_state = 783
+            owns_state = 1201
+            owns_state = 782
+            owns_state = 774
+            owns_state = 779
+            owns_state = 780
+            owns_state = 777
+            owns_state = 778
+            owns_state = 771
+            owns_state = 772
+            owns_state = 773
+            owns_state = 775
+            owns_state = 785
+            owns_state = 776
+            owns_state = 786
+            owns_state = 781
+            ASS = { all_cores_owned_by_ROOT = yes }
+            ANS = { all_cores_owned_by_ROOT_or_subject = yes }
+            NOT = { has_country_flag = SOL_formed_super_zebrica }
+        }
+        highlight_states = {
+            highlight_states_trigger = {
+                OR = {
+                    is_core_of = ABY
+                    is_core_of = ASS
+                    is_core_of = ANS
+                }
+            }
+        }
+        fire_only_once = yes
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision SOL_release_ABY_super_puppet"
+            SOL_release_ABY = yes
+        }
+	}
+	SOL_release_ZAR_super_puppet = {
+        allowed = {
+            original_tag = EQS
+        }
+        available = {
+            is_EQS_SOL = yes
+            ZAR = { all_cores_owned_by_ROOT = yes }
+            ZAI = { all_cores_owned_by_ROOT = yes }
+            CZR = { all_cores_owned_by_ROOT = yes }
+            ALO = { all_cores_owned_by_ROOT = yes }
+        }
+        visible = {
+            ZAR = { all_cores_owned_by_ROOT = yes }
+            ZAI = { all_cores_owned_by_ROOT = yes }
+            CZR = { all_cores_owned_by_ROOT = yes }
+            ALO = { all_cores_owned_by_ROOT = yes }
+            NOT = { has_country_flag = SOL_formed_super_zebrica }
+        }
+        highlight_states = {
+            highlight_states_trigger = {
+                OR = {
+                    is_core_of = ZAR
+                    is_core_of = ZAI
+                    is_core_of = CZR
+                    is_core_of = ALO
+                }
+            }
+        }
+        fire_only_once = yes
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision SOL_release_ZAR_super_puppet"
+            SOL_release_ZAR = yes
+        }
+	}
+	SOL_release_ROA_super_puppet = {
+        allowed = {
+            original_tag = EQS
+        }
+        available = {
+            is_EQS_SOL = yes
+            ROA = { all_cores_owned_by_ROOT = yes }
+            BLT = { all_cores_owned_by_ROOT = yes }
+            CME = { all_cores_owned_by_ROOT = yes }
+            GFS = { all_cores_owned_by_ROOT = yes }
+            GIF = { all_cores_owned_by_ROOT = yes }
+            TSV = { all_cores_owned_by_ROOT = yes }
+            ZLU = { all_cores_owned_by_ROOT = yes }
+        }
+        visible = {
+            ROA = { all_cores_owned_by_ROOT = yes }
+            BLT = { all_cores_owned_by_ROOT = yes }
+            CME = { all_cores_owned_by_ROOT = yes }
+            GFS = { all_cores_owned_by_ROOT = yes }
+            GIF = { all_cores_owned_by_ROOT = yes }
+            TSV = { all_cores_owned_by_ROOT = yes }
+            ZLU = { all_cores_owned_by_ROOT = yes }
+            NOT = { has_country_flag = SOL_formed_super_zebrica }
+        }
+        highlight_states = {
+            highlight_states_trigger = {
+                OR = {
+                    is_core_of = ROA
+                    is_core_of = BLT
+                    is_core_of = CME
+                    is_core_of = GFS
+                    is_core_of = GIF
+                    is_core_of = TSV
+                    is_core_of = ZLU
+                }
+            }
+        }
+        fire_only_once = yes
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision SOL_release_ROA_super_puppet"
+            SOL_release_ROA = yes
+
+        }
+	}
+	SOL_release_STM_super_puppet = {
+        allowed = {
+            original_tag = EQS
+        }
+        available = {
+            is_EQS_SOL = yes
+            STM = { all_cores_owned_by_ROOT_or_subject = yes }
+            GYZ = { all_cores_owned_by_ROOT_or_subject = yes }
+            SLC = { all_cores_owned_by_ROOT_or_subject = yes }
+            THU = { all_cores_owned_by_ROOT_or_subject = yes }
+        }
+        visible = {
+            STM = { all_cores_owned_by_ROOT_or_subject = yes }
+            GYZ = { all_cores_owned_by_ROOT_or_subject = yes }
+            SLC = { all_cores_owned_by_ROOT_or_subject = yes }
+            THU = { all_cores_owned_by_ROOT_or_subject = yes }
+            NOT = { has_country_flag = SOL_formed_super_zebrica }
+        }
+        highlight_states = {
+            highlight_states_trigger = {
+                OR = {
+                    is_core_of = STM
+                    is_core_of = GYZ
+                    is_core_of = SLC
+                    is_core_of = THU
+                }
+                if = {
+                    limit = { GAR = { has_country_flag = is_solar_puppet } }
+                    NOT = { is_core_of = HYE }
+                }
+            }
+        }
+        fire_only_once = yes
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision SOL_release_STM_super_puppet"
+            SOL_release_STM = yes
+        }
+	}
+	SOL_release_ZOO_super_puppet = {
+        allowed = {
+            original_tag = EQS
+        }
+        available = {
+            is_EQS_SOL = yes
+            ZOO = { all_cores_owned_by_ROOT = yes }
+            TAI = { all_cores_owned_by_ROOT = yes }
+            MEL = { all_cores_owned_by_ROOT = yes }
+            MQA = { all_cores_owned_by_ROOT = yes }
+            YAN = { all_cores_owned_by_ROOT = yes }
+            DEL = { all_cores_owned_by_ROOT = yes }
+            IDO = { all_cores_owned_by_ROOT = yes }
+            IST = { all_cores_owned_by_ROOT = yes }
+        }
+        visible = {
+            ZOO = { all_cores_owned_by_ROOT = yes }
+            TAI = { all_cores_owned_by_ROOT = yes }
+            MEL = { all_cores_owned_by_ROOT = yes }
+            MQA = { all_cores_owned_by_ROOT = yes }
+            YAN = { all_cores_owned_by_ROOT = yes }
+            DEL = { all_cores_owned_by_ROOT = yes }
+            IDO = { all_cores_owned_by_ROOT = yes }
+            IST = { all_cores_owned_by_ROOT = yes }
+            NOT = { has_country_flag = SOL_formed_super_zebrica }
+        }
+        highlight_states = {
+            highlight_states_trigger = {
+                OR = {
+                    is_core_of = ZOO
+                    is_core_of = TAI
+                    is_core_of = MEL
+                    is_core_of = MQA
+                    is_core_of = YAN
+                    is_core_of = DEL
+                    is_core_of = IDO
+                    is_core_of = IST
+                }
+            }
+        }
+        fire_only_once = yes
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision SOL_release_ZOO_super_puppet"
+            SOL_release_ZOO = yes
+        }
 	}
 	SOL_release_MTA_super_puppet = {
         allowed = {
@@ -3919,6 +4420,90 @@ EQS_pan_pony_empire_category = {
 			SOL_release_MTA = yes
 		}
 	}
+	SOL_release_MAZ_super_puppet = {
+        allowed = {
+            original_tag = EQS
+        }
+        available = {
+            is_EQS_SOL = yes
+            MAZ = { all_cores_owned_by_ROOT = yes }
+            MSS = { all_cores_owned_by_ROOT = yes }
+            SON = { all_cores_owned_by_ROOT = yes }
+            TIM = { all_cores_owned_by_ROOT = yes }
+            MSH = { all_cores_owned_by_ROOT = yes }
+            ZWA = { all_cores_owned_by_ROOT = yes }
+            ZUG = { all_cores_owned_by_ROOT = yes }
+            ZEL = { all_cores_owned_by_ROOT = yes }
+            HAY = { all_cores_owned_by_ROOT = yes }
+        }
+        visible = {
+            MAZ = { all_cores_owned_by_ROOT = yes }
+            MSS = { all_cores_owned_by_ROOT = yes }
+            SON = { all_cores_owned_by_ROOT = yes }
+            TIM = { all_cores_owned_by_ROOT = yes }
+            MSH = { all_cores_owned_by_ROOT = yes }
+            ZWA = { all_cores_owned_by_ROOT = yes }
+            ZUG = { all_cores_owned_by_ROOT = yes }
+            ZEL = { all_cores_owned_by_ROOT = yes }
+            HAY = { all_cores_owned_by_ROOT = yes }
+            NOT = { has_country_flag = SOL_formed_super_zebrica }
+        }
+        highlight_states = {
+            highlight_states_trigger = {
+                OR = {
+                    is_core_of = MAZ
+                    is_core_of = MSS
+                    is_core_of = SON
+                    is_core_of = TIM
+                    is_core_of = MSH
+                    is_core_of = ZWA
+                    is_core_of = ZUG
+                    is_core_of = ZEL
+                    is_core_of = HAY
+                }
+            }
+        }
+        fire_only_once = yes
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision SOL_release_MAZ_super_puppet"
+            SOL_release_MAZ = yes
+        }
+	}
+	SOL_release_GAR_super_puppet = {
+        allowed = {
+            original_tag = EQS
+        }
+        available = {
+            is_EQS_SOL = yes
+            HYE = { all_cores_owned_by_ROOT_or_subject = yes }
+            CNT = { all_cores_owned_by_ROOT = yes }
+            GAR = { all_cores_owned_by_ROOT = yes }
+        }
+        visible = {
+            HYE = { all_cores_owned_by_ROOT_or_subject = yes }
+            CNT = { all_cores_owned_by_ROOT = yes }
+            GAR = { all_cores_owned_by_ROOT = yes }
+            NOT = { has_country_flag = SOL_formed_super_zebrica }
+        }
+        highlight_states = {
+            highlight_states_trigger = {
+                OR = {
+                    is_core_of = HYE
+                    is_core_of = CNT
+                    is_core_of = GAR
+                }
+                if = {
+                    limit = { STM = { has_country_flag = is_solar_puppet } }
+                    NOT = { is_core_of = STM }
+                }
+            }
+        }
+        fire_only_once = yes
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision SOL_release_GAR_super_puppet"
+            SOL_release_GAR = yes
+        }
+	}
 	SOL_release_MTO_super_puppet = {
         allowed = {
             original_tag = EQS
@@ -3928,11 +4513,13 @@ EQS_pan_pony_empire_category = {
             MTO = { all_cores_owned_by_ROOT = yes }
             AES = { all_cores_owned_by_ROOT = yes }
             KAR = { all_cores_owned_by_ROOT = yes }
+            IDT = { all_cores_owned_by_ROOT = yes }
         }
         visible = {
             MTO = { all_cores_owned_by_ROOT = yes }
             AES = { all_cores_owned_by_ROOT = yes }
             KAR = { all_cores_owned_by_ROOT = yes }
+            IDT = { all_cores_owned_by_ROOT = yes }
             NOT = { has_country_flag = SOL_formed_super_zebrica }
         }
         highlight_states = {

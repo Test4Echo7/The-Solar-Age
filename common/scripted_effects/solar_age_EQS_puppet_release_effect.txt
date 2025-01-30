@@ -40,6 +40,19 @@ SOL_release_GRF = {
         autonomous_state = autonomy_reichsprotectorate
     }
     GRF = { set_cosmetic_tag = GRF_SOL }
+    hidden_effect = {
+        if = {
+            limit = {
+                EQS = { has_country_flag = SOL_can_core_GRF_states }
+            }
+            58 = { transfer_state_to = EQS }
+            338 = { transfer_state_to = EQS }
+            222 = { transfer_state_to = EQS }
+            239 = { transfer_state_to = EQS }
+            242 = { transfer_state_to = EQS }
+            329 = { transfer_state_to = EQS }
+        }
+    }
 }
 SOL_release_YAK = {
     hidden_effect = {
@@ -121,6 +134,245 @@ SOL_release_FBK = {
     }
     FBK = { set_cosmetic_tag = FBK_SOL }
 }
+SOL_release_HLR = {
+    hidden_effect = {
+        every_state = {
+            limit = {
+                OR = {
+                    is_core_of = DED
+                    is_core_of = NCH
+                }
+            }
+            add_core_of = HLR
+        }
+    }
+    release_autonomy = {
+        target = HLR
+        autonomous_state = autonomy_reichsprotectorate
+    }
+    HLR = { set_cosmetic_tag = HLR_SOL }
+}
+SOL_release_MIT = {
+    release_autonomy = {
+        target = MIT
+        autonomy_state = autonomy_reichsprotectorate
+    }
+    MIT = { set_cosmetic_tag = MIT_SOL }
+}
+SOL_release_ZES = {
+    hidden_effect = {
+        every_state = {
+            limit = {
+                is_core_of = OLV
+            }
+            add_core_of = ZES
+        }
+    }
+    release_autonomy = {
+        target = ZES
+        autonomy_state = autonomy_reichsprotectorate
+    }
+    ZES = { set_cosmetic_tag = ZES_SOL }
+}
+SOL_release_HIP = {
+    hidden_effect = {
+        every_state = {
+            limit = {
+                OR = {
+                    is_core_of = TBK
+                    is_core_of = WAR
+                    is_core_of = ZUM
+                    is_core_of = MER
+                }
+            }
+            add_core_of = HIP
+        }
+    }
+    release_autonomy = {
+        target = HIP
+        autonomy_state = autonomy_reichsprotectorate
+    }
+    HIP = { set_cosmetic_tag = HIP_SOL }
+}
+SOL_release_CTH = {
+    hidden_effect = {
+        every_state = {
+            limit = {
+                OR = {
+                    is_core_of = CGI
+                    is_core_of = MCW
+                    is_core_of = CVA
+                    is_core_of = CDR
+                }
+            }
+            add_core_of = CTH
+        }
+    }
+    release_autonomy = {
+        target = CTH
+        autonomy_state = autonomy_reichsprotectorate
+    }
+    CTH = { set_cosmetic_tag = CTH_SOL }
+}
+SOL_release_CTL = {
+    hidden_effect = {
+        every_state = {
+            limit = {
+                OR = {
+                    is_core_of = HRV
+                    is_core_of = LMB
+                    is_core_of = SPL
+                    is_core_of = HIN
+                    is_core_of = SAM
+                    is_core_of = BRS
+                    is_core_of = GAZ
+                }
+            }
+            add_core_of = CTL
+        }
+    }
+    release_autonomy = {
+        target = CTL
+        autonomy_state = autonomy_reichsprotectorate
+    }
+    CTL = { set_cosmetic_tag = CTL_SOL }
+}
+SOL_release_ABY = {
+    hidden_effect = {
+        every_state = {
+            limit = {
+                OR = {
+                    is_core_of = ASS
+                    is_core_of = ANS
+                }
+            }
+            add_core_of = ABY
+        }
+    }
+    release_autonomy = {
+        target = ABY
+        autonomy_state = autonomy_reichsprotectorate
+    }
+    ABY = { set_cosmetic_tag = ABY_SOL }
+    custom_effect_tooltip = SOL_laser_pointer_tt
+    if = {
+        limit = {
+            784 = {
+                OWNER = {
+                    is_subject_of = ROOT
+                }
+            }
+        }
+        784 = { transfer_state_to = ABY }
+    }
+    if = {
+        limit = {
+            1200 = {
+                OWNER = {
+                    is_subject_of = ROOT
+                }
+            }
+        }
+        transfer_state_to = ABY
+    }
+    if = {
+        limit = {
+            788 = {
+                OWNER = {
+                    is_subject_of = ROOT
+                }
+            }
+        }
+        transfer_state_to = ABY
+    }
+}
+SOL_release_ZAR = {
+    hidden_effect = {
+        every_state = {
+            limit = {
+                OR = {
+                    is_core_of = ZAI
+                    is_core_of = CZR
+                    is_core_of = ALO
+                }
+            }
+            add_core_of = ZAR
+        }
+    }
+    release_autonomy = {
+        target = ZAR
+        autonomy_state = autonomy_reichsprotectorate
+    }
+    ZAR = { set_cosmetic_tag = ZAR_SOL }
+}
+SOL_release_ROA = {
+    hidden_effect = {
+        every_state = {
+            limit = {
+                OR = {
+                    is_core_of = BLT
+                    is_core_of = CME
+                    is_core_of = GFS
+                    is_core_of = GIF
+                    is_core_of = TSV
+                    is_core_of = ZLU
+                }
+            }
+            add_core_of = ROA
+        }
+    }
+    release_autonomy = {
+        target = ROA
+        autonomy_state = autonomy_reichsprotectorate
+    }
+    ROA = { set_cosmetic_tag = ROA_SOL }
+}
+SOL_release_STM = {
+    hidden_effect = {
+        every_state = {
+            limit = {
+                OR = {
+                    is_core_of = GYZ
+                    is_core_of = SLC
+                    is_core_of = THU
+                }
+                if = {
+                    limit = { GAR = { has_country_flag = is_solar_puppet } }
+                    NOT = { is_core_of = HYE }
+                }
+            }
+            add_core_of = STM
+        }
+    }
+    release_autonomy = {
+        target = STM
+        autonomy_state = autonomy_reichsprotectorate
+    }
+    STM = { set_cosmetic_tag = STM_SOL }
+}
+SOL_release_ZOO = {
+    hidden_effect = {
+        every_state = {
+            limit = {
+                OR = {
+                    is_core_of = TAI
+                    is_core_of = MEL
+                    is_core_of = MQA
+                    is_core_of = YAN
+                    is_core_of = DEL
+                    is_core_of = IDO
+                    is_core_of = IST
+                }
+            }
+            add_core_of = ZOO
+        }
+    }
+    release_autonomy = {
+        target = ZOO
+        autonomy_state = autonomy_reichsprotectorate
+    }
+    ZOO = { set_cosmetic_tag = ZOO_SOL }
+}
 SOL_release_MTA = {
     hidden_effect = {
         every_state = {
@@ -139,6 +391,53 @@ SOL_release_MTA = {
         autonomous_state = autonomy_reichsprotectorate
     }
     MTA = { set_cosmetic_tag = MTA_SOL }
+}
+SOL_release_MAZ = {
+    hidden_effect = {
+        every_state = {
+            limit = {
+                OR = {
+                is_core_of = MAZ
+                is_core_of = MSS
+                is_core_of = SON
+                is_core_of = TIM
+                is_core_of = MSH
+                is_core_of = ZWA
+                is_core_of = ZUG
+                is_core_of = ZEL
+                is_core_of = HAY
+            }
+            }
+            add_core_of = MAZ
+        }
+    }
+    release_autonomy = {
+        target = MAZ
+        autonomy_state = autonomy_reichsprotectorate
+    }
+    MAZ = { set_cosmetic_tag = MAZ_SOL }
+}
+SOL_release_GAR = {
+    hidden_effect = {
+    every_state = {
+            limit = {
+                OR = {
+                    is_core_of = HYE
+                    is_core_of = CNT
+                }
+                if = {
+                    limit = { STM = { has_country_flag = is_solar_puppet } }
+                    NOT = { is_core_of = STM }
+                }
+            }
+            add_core_of = GAR
+        }
+    }
+    release_autonomy = {
+        target = GAR
+        autonomy_state = autonomy_reichsprotectorate
+    }
+    GAR = { set_cosmetic_tag = GAR_SOL }
 }
 SOL_release_KXN = {
     hidden_effect = {
@@ -165,6 +464,7 @@ SOL_release_MTO = {
                 OR = {
                     is_core_of = KAR
                     is_core_of = AES
+                    is_core_of = IDT
                 }
             }
             add_core_of = MTO

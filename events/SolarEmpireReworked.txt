@@ -2694,6 +2694,20 @@ country_event = { #Aurora Shinespark does one last interrogation of Sweet Bliss,
     }
 }
 
+country_event = { #A changeling experiences his last moments in Vesalipolis before the entire city is incinerated from Project Helios, and he resigns to his fate as the world burns around him
+    id = solarreworked.138
+    title = solarreworked.138.t
+    desc = solarreworked.138.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.138"}
+
+    is_triggered_only = yes
+
+    option = { #The bugs have been enlightened.
+        name = solarreworked.138.a
+    }
+}
+
 ###Luna and M6 stuff###
 country_event = { #Luna arrives in Ponyville, after leaving the front when she hears about how Canterlot going dark, despite the war being actively controlled, and that there have been more and more concerning commands from Canterlot before that about what to do with the changelings; she speaks briefly with Twilight about her fears that something has gone wrong with Celestia, and she states that she has no clue what to expect, but that Twilight must be ready to flee with her friends
     id = solarreworked.150
@@ -6425,6 +6439,79 @@ country_event = { #Red Tide steps off her plane from the mainland and is instant
     }
 }
 
+###General Flavour###
+country_event = {
+    id = solarreworked.411
+    title = solarreworked.411.t
+    desc = solarreworked.411.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.411"}
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.411.a
+        effect_tooltip = {
+            custom_effect_tooltip = if_they_accept_tt
+            country_event = solarreworked.519
+        }
+        hidden_effect = {
+            KLG = {
+                country_event = {
+                    id = solarreworked.518
+                    hours = 6
+                }
+            }
+        }
+    }
+}
+
+country_event = {
+    id = solarreworked.412
+    title = solarreworked.412.t
+    desc = solarreworked.412.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.412"}
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.412.a
+        if = {
+            limit = {
+                1208 = { is_owned_by = ROOT }
+            }
+            save_current_manpower = yes
+            1208 = {
+                add_manpower = -1742
+                remove_dynamic_modifier = { modifier = klugetown_criminals }
+            }
+            restore_previous_manpower = yes
+        }
+        else_if = {
+            limit = {
+                1208 = { is_owned_by = MGY }
+            }
+            effect_tooltip = {
+                1208 = {
+                    add_manpower = -1742
+                    remove_dynamic_modifier = { modifier = klugetown_criminals }
+                }
+            }
+            hidden_effect = {
+                MGY = {
+                    save_current_manpower = yes
+                    1208 = {
+                        add_manpower = -1742
+                        remove_dynamic_modifier = { modifier = klugetown_criminals }
+                    }
+                    restore_previous_manpower = yes
+                }
+            }
+        }
+    }
+}
+
 ###EQC###
 country_event = { #An event sumarrazing how the current leader (probably Jet Set) has made the colony go wayward, and that the Empire needs its crown in Griffonia returned, and that they will be given one chance to submit
     id = solarreworked.430
@@ -8944,7 +9031,7 @@ country_event = { #BAT soldiers fight their way through the city of Canterlot/Sa
     option = { #Welcome back, our Empress!
         name = solarreworked.511.a
         hidden_effect = {
-            news_event = { id = news.solarage.30 hours = 6 }
+            news_event = { id = news.solarage.40 hours = 6 }
             every_possible_country = {
                 limit = { has_character = NLR_nightmare_moon }
                 NLR_nightmare_moon = {
@@ -9174,6 +9261,87 @@ country_event = { #Response event where the territory is given or not; if not, a
             target = FROM
             type = take_state_focus
             generator = { 741 764 }
+        }
+    }
+}
+
+country_event = { #Short event summarzing for KLG what happened with Tempest and how she's basically holding Verko at gunpoint to accept, although the populace can reject it for independence
+    id = solarreworked.518
+    title = solarreworked.518.t
+    desc = solarreworked.518.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.518"}
+
+    is_triggered_only = yes
+
+    option = { #How can we fight back?
+        name = solarreworked.518.a
+        set_country_flag = SOL_KLG_accepted
+        FROM = {
+            country_event = {
+                id = solarreworked.519
+                hours = 6
+            }
+        }
+    }
+    option = { #We won't give up our freedom!
+        name = solarreworked.518.b
+        ai_chance = {
+            factor = 0 #Literally no-one would be stupid enough to reject; only for player choice
+        }
+        set_country_flag = SOL_KLG_rejected
+        FROM = {
+            country_event = {
+                id = solarreworked.519
+                hours = 6
+            }
+        }
+    }
+}
+
+country_event = { #SOL gets back KLG's answer and will either annex it, give it to MGY, or get a war goal
+    id = solarreworked.519
+    title = solarreworked.519.t
+    desc = {
+        trigger = { FROM = { has_country_flag = SOL_KLG_accepted } }
+        text = solarreworked.519.d.a
+    }
+    desc = {
+        trigger = { FROM = { has_country_flag = SOL_KLG_rejected } }
+        text = solarreworked.519.d.b
+    }
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.519"}
+
+    is_triggered_only = yes
+
+    option = { #How droll. Like they stand a chance.
+        name = solarreworked.519.a
+        trigger = { FROM = { has_country_flag = SOL_KLG_rejected } }
+        create_wargoal = {
+            target = FROM
+            type = annex_everything
+        }
+    }
+    option = { #We shall take this port ourselves.
+        name = solarreworked.519.b
+        trigger = { FROM = { has_country_flag = SOL_KLG_accepted } }
+        annex_country = {
+            target = FROM
+        }
+    }
+    option = { #Let the Maregyptians handle this headache.
+        name = solarreworked.519.b
+        trigger = {
+            FROM = { has_country_flag = SOL_KLG_accepted }
+            MGY = {
+                exists = yes
+                is_subject_of = ROOT
+                has_country_flag = is_solar_puppet
+            }
+        }
+        MGY = {
+            annex_country = {
+                target = FROM
+            }
         }
     }
 }

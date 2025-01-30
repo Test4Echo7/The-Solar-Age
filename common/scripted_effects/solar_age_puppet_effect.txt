@@ -213,13 +213,45 @@ apply_SOL_cosmetic_tags_on_puppet = {
         limit = { original_tag = MDL }
         country_event = solarempire.1039
     }
-    #else_if = {
-    #    limit = { original_tag = HIP }
-    #    country_event = solarempire.1040
-    #}
+    else_if = {
+        limit = { original_tag = HIP }
+        country_event = solarempire.1040
+    }
     else_if = {
         limit = { original_tag = DMT }
         country_event = solarempire.1041
+    }
+    else_if = {
+        limit = { original_tag = CTH }
+        country_event = solarempire.1042
+    }
+    else_if = {
+        limit = { original_tag = CTL }
+        country_event = solarempire.1043
+    }
+    else_if = {
+        limit = { original_tag = ROA }
+        country_event = solarempire.1044
+    }
+    else_if = {
+        limit = { original_tag = ZAR }
+        country_event = solarempire.1045
+    }
+    else_if = {
+        limit = { original_tag = ABY }
+        country_event = solarempire.1046
+    }
+    else_if = {
+        limit = { original_tag = STM }
+        country_event = solarempire.1047
+    }
+    else_if = {
+        limit = { original_tag = MAZ }
+        country_event = solarempire.1048
+    }
+    else_if = {
+        limit = { original_tag = GAR }
+        country_event = solarempire.1049
     }
 }
 

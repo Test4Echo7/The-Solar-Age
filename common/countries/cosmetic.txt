@@ -2767,6 +2767,54 @@ HIP_SOL = {
 	color = rgb { 255 224 129 }
 	color_ui = rgb { 130 123 100 }
 }
+MIT_SOL = {
+	color = rgb { 255 224 129 }
+	color_ui = rgb { 130 123 100 }
+}
+ZES_SOL = {
+	color = rgb { 255 224 129 }
+	color_ui = rgb { 130 123 100 }
+}
+CTL_SOL = {
+	color = rgb { 255 224 129 }
+	color_ui = rgb { 130 123 100 }
+}
+CTH_SOL = {
+	color = rgb { 255 224 129 }
+	color_ui = rgb { 130 123 100 }
+}
+ABY_SOL = {
+	color = rgb { 255 224 129 }
+	color_ui = rgb { 130 123 100 }
+}
+ZAR_SOL = {
+	color = rgb { 255 224 129 }
+	color_ui = rgb { 130 123 100 }
+}
+ROA_SOL = {
+	color = rgb { 255 224 129 }
+	color_ui = rgb { 130 123 100 }
+}
+STM_SOL = {
+	color = rgb { 255 224 129 }
+	color_ui = rgb { 130 123 100 }
+}
+ZOO_SOL = {
+	color = rgb { 255 224 129 }
+	color_ui = rgb { 130 123 100 }
+}
+MAZ_SOL = {
+	color = rgb { 255 224 129 }
+	color_ui = rgb { 130 123 100 }
+}
+GAR_SOL = {
+	color = rgb { 255 224 129 }
+	color_ui = rgb { 130 123 100 }
+}
+HLR_SOL = {
+	color = rgb { 255 224 129 }
+	color_ui = rgb { 130 123 100 }
+}
 SOL_imperium_equus = {
 	color = rgb { 255 224 129 }
 	color_ui = rgb { 130 123 100 }

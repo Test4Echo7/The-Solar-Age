@@ -130,14 +130,398 @@ news_event = { #Conflict between NLR and SOL between Daybreaker and NMM, with st
 	}
 }
 
-news_event = { #BAT liberates NMM from her captivity
-	id = news.solarage.30
-	immediate = {
-		log = "[GetDateText]: [Root.GetName]: event news.solarage.30"
-		event_target:solar_empire = { clr_country_flag = SOL_holding_nmm }
+news_event = { #Kaboom? Kaboom.
+	id = news.solarage.20
+	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.20"}
+	title = news.solarage.20.t
+	desc = news.solarage.20.d
+	picture = GFX_news_daybreaker
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = { #They have tasted the fury of the Sun!
+		name = news.solarage.20.a
+		trigger = {
+			tag = event_target:solar_empire
+		}
 	}
+	option = { #What madmare believes this acceptable?
+		name = news.solarage.20.b
+		trigger = {
+			NOT = { tag = event_target:solar_empire }
+		}
+	}
+}
+
+news_event = { #Vesalipolis? More like Vesawlipolis, right?
+	id = news.solarage.21
+	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.21"}
+	title = news.solarage.21.t
+	desc = news.solarage.21.d
+	picture = GFX_news_daybreaker
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = { #These abominations will soon be crushed!
+		name = news.solarage.21.a
+		trigger = {
+			tag = event_target:solar_empire
+		}
+	}
+	option = { #We will never surrender!
+		name = news.solarage.21.b
+		trigger = {
+			tag = CHN
+		}
+	}
+	option = { #How could Celestia have fallen so?
+		name = news.solarage.21.c
+		trigger = {
+			NOT = {
+				tag = event_target:solar_empire
+				tag = CHN
+			}
+		}
+	}
+}
+
+news_event = { #
+	id = news.solarage.22
+	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.22"}
+	title = news.solarage.22.t
+	desc = news.solarage.22.d
+	picture = GFX_news_daybreaker
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = { #
+		name = news.solarage.22.a
+		trigger = {
+			NOT = { tag = event_target:solar_empire }
+		}
+	}
+	option = { #
+		name = news.solarage.22.b
+		trigger = {
+			NOT = { tag = event_target:solar_empire }
+		}
+	}
+}
+
+news_event = { #
+	id = news.solarage.23
+	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.23"}
+	title = news.solarage.23.t
+	desc = news.solarage.23.d
+	picture = GFX_news_daybreaker
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = { #
+		name = news.solarage.23.a
+		trigger = {
+			tag = event_target:solar_empire
+		}
+	}
+	option = { #
+		name = news.solarage.23.b
+		trigger = {
+			NOT = { tag = event_target:solar_empire }
+		}
+	}
+}
+
+news_event = { #
+	id = news.solarage.24
+	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.24"}
+	title = news.solarage.24.t
+	desc = news.solarage.24.d
+	picture = GFX_news_daybreaker
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = { #
+		name = news.solarage.24.a
+		trigger = {
+			tag = event_target:solar_empire
+		}
+	}
+	option = { #
+		name = news.solarage.24.b
+		trigger = {
+			NOT = { tag = event_target:solar_empire }
+		}
+	}
+}
+
+news_event = { #
+	id = news.solarage.25
+	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.25"}
+	title = news.solarage.25.t
+	desc = news.solarage.25.d
+	picture = GFX_news_daybreaker
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = { #
+		name = news.solarage.25.a
+		trigger = {
+			tag = event_target:solar_empire
+		}
+	}
+	option = { #
+		name = news.solarage.25.b
+		trigger = {
+			NOT = { tag = event_target:solar_empire }
+		}
+	}
+}
+
+news_event = { #
+	id = news.solarage.26
+	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.26"}
+	title = news.solarage.26.t
+	desc = news.solarage.26.d
+	picture = GFX_news_daybreaker
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = { #
+		name = news.solarage.26.a
+		trigger = {
+			tag = event_target:solar_empire
+		}
+	}
+	option = { #
+		name = news.solarage.26.b
+		trigger = {
+			NOT = { tag = event_target:solar_empire }
+		}
+	}
+}
+
+news_event = { #
+	id = news.solarage.27
+	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.27"}
+	title = news.solarage.27.t
+	desc = news.solarage.27.d
+	picture = GFX_news_daybreaker
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = { #
+		name = news.solarage.27.a
+		trigger = {
+			tag = event_target:solar_empire
+		}
+	}
+	option = { #
+		name = news.solarage.27.b
+		trigger = {
+			NOT = { tag = event_target:solar_empire }
+		}
+	}
+}
+
+news_event = { #
+	id = news.solarage.28
+	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.28"}
+	title = news.solarage.28.t
+	desc = news.solarage.28.d
+	picture = GFX_news_daybreaker
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = { #
+		name = news.solarage.28.a
+		trigger = {
+			tag = event_target:solar_empire
+		}
+	}
+	option = { #
+		name = news.solarage.28.b
+		trigger = {
+			NOT = { tag = event_target:solar_empire }
+		}
+	}
+}
+
+news_event = { #
+	id = news.solarage.29
+	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.29"}
+	title = news.solarage.29.t
+	desc = news.solarage.29.d
+	picture = GFX_news_daybreaker
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = { #
+		name = news.solarage.29.a
+		trigger = {
+			tag = event_target:solar_empire
+		}
+	}
+	option = { #
+		name = news.solarage.29.b
+		trigger = {
+			NOT = { tag = event_target:solar_empire }
+		}
+	}
+}
+
+news_event = { #
+	id = news.solarage.30
+	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.30"}
 	title = news.solarage.30.t
 	desc = news.solarage.30.d
+	picture = GFX_news_daybreaker
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = { #
+		name = news.solarage.30.a
+		trigger = {
+			tag = event_target:solar_empire
+		}
+	}
+	option = { #
+		name = news.solarage.30.b
+		trigger = {
+			NOT = { tag = event_target:solar_empire }
+		}
+	}
+}
+
+news_event = { #
+	id = news.solarage.31
+	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.31"}
+	title = news.solarage.31.t
+	desc = news.solarage.31.d
+	picture = GFX_news_daybreaker
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = { #
+		name = news.solarage.31.a
+		trigger = {
+			tag = event_target:solar_empire
+		}
+	}
+	option = { #
+		name = news.solarage.31.b
+		trigger = {
+			NOT = { tag = event_target:solar_empire }
+		}
+	}
+}
+
+news_event = { #
+	id = news.solarage.32
+	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.32"}
+	title = news.solarage.32.t
+	desc = news.solarage.32.d
+	picture = GFX_news_daybreaker
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = { #
+		name = news.solarage.32.a
+		trigger = {
+			tag = event_target:solar_empire
+		}
+	}
+	option = { #
+		name = news.solarage.32.b
+		trigger = {
+			NOT = { tag = event_target:solar_empire }
+		}
+	}
+}
+
+news_event = { #
+	id = news.solarage.33
+	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.33"}
+	title = news.solarage.33.t
+	desc = news.solarage.33.d
+	picture = GFX_news_daybreaker
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = { #
+		name = news.solarage.33.a
+		trigger = {
+			tag = event_target:solar_empire
+		}
+	}
+	option = { #
+		name = news.solarage.33.b
+		trigger = {
+			NOT = { tag = event_target:solar_empire }
+		}
+	}
+}
+
+news_event = { #
+	id = news.solarage.34
+	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.34"}
+	title = news.solarage.34.t
+	desc = news.solarage.34.d
+	picture = GFX_news_daybreaker
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = { #
+		name = news.solarage.34.a
+		trigger = {
+			tag = event_target:solar_empire
+		}
+	}
+	option = { #
+		name = news.solarage.34.b
+		trigger = {
+			NOT = { tag = event_target:solar_empire }
+		}
+	}
+}
+
+news_event = { #BAT liberates NMM from her captivity
+	id = news.solarage.40
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event news.solarage.40"
+		event_target:solar_empire = { clr_country_flag = SOL_holding_nmm }
+	}
+	title = news.solarage.40.t
+	desc = news.solarage.40.d
 	picture = GFX_news_event_galloping_gala
 
 	major = yes
@@ -145,20 +529,20 @@ news_event = { #BAT liberates NMM from her captivity
 	is_triggered_only = yes
 
 	option = { #We should have banished her to the moon!
-		name = news.solarage.30.a
+		name = news.solarage.40.a
 		trigger = {
 			tag = event_target:solar_empire
 		}
 		remove_ideas = SOL_nmm_prisoner
 	}
 	option = { #Our Empress is free!
-		name = news.solarage.30.b
+		name = news.solarage.40.b
 		trigger = {
 			tag = BAT
 		}
 	}
 	option = { #One crazy alicorn for another...
-		name = news.solarage.30.c
+		name = news.solarage.40.c
 		trigger = {
 			NOT = {
 				tag = event_target:solar_empire
