@@ -431,28 +431,8 @@ DIPLOMACY_RELEASE_NATION_ENABLE_TRIGGER = { #Going to have to set this up for po
 			}
 		}
 		custom_trigger_tooltip = {
-			tooltip = SOL_cannot_release_pony_or_adjacent_freely
-			FROM = {
-				NOT = {
-					has_idea = pony_race
-					has_idea = horse_race
-					has_idea = kirin_race
-					has_idea = yak_race
-				}
-				NOT = {
-					tag = OLE
-					tag = CHN
-					tag = CCA
-					tag = PLB
-					tag = PNG
-					tag = BUF
-					tag = DRG
-					tag = GRF
-					tag = GFF
-					tag = GRD
-					tag = DMT
-				}
-			}
+			tooltip = SOL_rebuilding_planet_please_stand_by
+			always = no
 		}
 	}
 }

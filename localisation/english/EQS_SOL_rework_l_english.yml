@@ -496,6 +496,7 @@
   SOL_spawn_horde_tt:0 "A small contingent of the §YSolaris Militarium§! will be stationed in §Y[EQC.GetNameDef]§!."
   SOL_solaris_inquisitionis_would_like_to_know_your_location_tt:0 "A number of §Yinquisitors§! have volunteered to lead the disorganized troops."
   SOL_tempest_joined:0 "§YTempest Shadow§! has joined the Empress's cause."
+  SOL_rebuilding_planet_please_stand_by:0 "We cannot release §Y[FROM.GetName]§! from this menu as we are bringing §YOrder§! to the other nations. Look to your §YDecision§! tab or continue progressing in your §YFocus Tree§! in order to release it."
 
   ###Last one in the chain. Remove comment later###
   SOL_conglaturation_a_winner_is_you_tt:0 "§GHarmony has been preserved and all of ponykind now bends the knee to Daybreaker. Thank you for playing the Solar Age! - Test4Echo§!"

@@ -1365,11 +1365,11 @@ EQS_orbital_order_cannon_category = {
         available = {
             if = {
                 limit = { has_country_flag = SOL_bad_momma }
-                manpower > 15000
+                has_manpower > 15000
             }
             else_if = {
                 limit = { has_country_flag = SOL_even_worse_momma }
-                manpower > 10000
+                has_manpower > 10000
             }
         }
         visible = {
@@ -3868,9 +3868,11 @@ EQS_pan_pony_empire_category = {
         }
         highlight_states = {
             highlight_states_trigger = {
-                is_core_of = HLR
-                is_core_of = DED
-                is_core_of = NCH
+                OR = {
+                    is_core_of = HLR
+                    is_core_of = DED
+                    is_core_of = NCH
+                }
             }
         }
         fire_only_once = yes
@@ -3997,6 +3999,7 @@ EQS_pan_pony_empire_category = {
             OR = {
                 KLG = { all_cores_owned_by_ROOT_or_subject = yes }
                 has_country_flag = SOL_formed_super_zebrica
+            }
         }
         highlight_states = {
             highlight_state_targets = {
@@ -4234,12 +4237,14 @@ EQS_pan_pony_empire_category = {
             ZAI = { all_cores_owned_by_ROOT = yes }
             CZR = { all_cores_owned_by_ROOT = yes }
             ALO = { all_cores_owned_by_ROOT = yes }
+            TIM = { all_cores_owned_by_ROOT = yes }
         }
         visible = {
             ZAR = { all_cores_owned_by_ROOT = yes }
             ZAI = { all_cores_owned_by_ROOT = yes }
             CZR = { all_cores_owned_by_ROOT = yes }
             ALO = { all_cores_owned_by_ROOT = yes }
+            TIM = { all_cores_owned_by_ROOT = yes }
             NOT = { has_country_flag = SOL_formed_super_zebrica }
         }
         highlight_states = {
@@ -4249,6 +4254,7 @@ EQS_pan_pony_empire_category = {
                     is_core_of = ZAI
                     is_core_of = CZR
                     is_core_of = ALO
+                    is_core_of = TIM
                 }
             }
         }
@@ -4429,7 +4435,6 @@ EQS_pan_pony_empire_category = {
             MAZ = { all_cores_owned_by_ROOT = yes }
             MSS = { all_cores_owned_by_ROOT = yes }
             SON = { all_cores_owned_by_ROOT = yes }
-            TIM = { all_cores_owned_by_ROOT = yes }
             MSH = { all_cores_owned_by_ROOT = yes }
             ZWA = { all_cores_owned_by_ROOT = yes }
             ZUG = { all_cores_owned_by_ROOT = yes }
@@ -4440,7 +4445,6 @@ EQS_pan_pony_empire_category = {
             MAZ = { all_cores_owned_by_ROOT = yes }
             MSS = { all_cores_owned_by_ROOT = yes }
             SON = { all_cores_owned_by_ROOT = yes }
-            TIM = { all_cores_owned_by_ROOT = yes }
             MSH = { all_cores_owned_by_ROOT = yes }
             ZWA = { all_cores_owned_by_ROOT = yes }
             ZUG = { all_cores_owned_by_ROOT = yes }
@@ -4454,7 +4458,6 @@ EQS_pan_pony_empire_category = {
                     is_core_of = MAZ
                     is_core_of = MSS
                     is_core_of = SON
-                    is_core_of = TIM
                     is_core_of = MSH
                     is_core_of = ZWA
                     is_core_of = ZUG

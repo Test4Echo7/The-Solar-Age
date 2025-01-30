@@ -17,6 +17,7 @@ SOL_release_CHN = {
     CHN = {
         restore_previous_government_type = yes
         set_cosmetic_tag = CHN_SOL
+        set_country_flag = is_solar_puppet
     }
     hidden_effect = {
         transfer_state = 291
@@ -39,7 +40,10 @@ SOL_release_GRF = {
         target = GRF
         autonomous_state = autonomy_reichsprotectorate
     }
-    GRF = { set_cosmetic_tag = GRF_SOL }
+    GRF = {
+        set_cosmetic_tag = GRF_SOL
+        set_country_flag = is_solar_puppet
+    }
     hidden_effect = {
         if = {
             limit = {
@@ -67,7 +71,10 @@ SOL_release_YAK = {
         target = YAK
         autonomous_state = autonomy_reichsprotectorate
     }
-    YAK = { set_cosmetic_tag = YAK_SOL }
+    YAK = {
+        set_cosmetic_tag = YAK_SOL
+        set_country_flag = is_solar_puppet
+    }
 }
 SOL_release_PLB = {
     hidden_effect = {
@@ -82,7 +89,10 @@ SOL_release_PLB = {
         target = PLB
         autonomous_state = autonomy_reichsprotectorate
     }
-    PLB = { set_cosmetic_tag = ARC_SOL }
+    PLB = {
+        set_cosmetic_tag = ARC_SOL
+        set_country_flag = is_solar_puppet
+    }
 }
 SOL_release_RIV = {
     hidden_effect = {
@@ -114,7 +124,10 @@ SOL_release_RIV = {
         target = RCT
         autonomous_state = autonomy_reichsprotectorate
     }
-    RCT = { set_cosmetic_tag = RIV_SOL }
+    RCT = {
+        set_cosmetic_tag = RIV_SOL
+        set_country_flag = is_solar_puppet
+    }
 }
 SOL_release_FBK = {
     hidden_effect = {
@@ -132,7 +145,10 @@ SOL_release_FBK = {
         target = FBK
         autonomous_state = autonomy_reichsprotectorate
     }
-    FBK = { set_cosmetic_tag = FBK_SOL }
+    FBK = {
+        set_cosmetic_tag = FBK_SOL
+        set_country_flag = is_solar_puppet
+    }
 }
 SOL_release_HLR = {
     hidden_effect = {
@@ -150,14 +166,20 @@ SOL_release_HLR = {
         target = HLR
         autonomous_state = autonomy_reichsprotectorate
     }
-    HLR = { set_cosmetic_tag = HLR_SOL }
+    HLR = {
+        set_cosmetic_tag = HLR_SOL
+        set_country_flag = is_solar_puppet
+    }
 }
 SOL_release_MIT = {
     release_autonomy = {
         target = MIT
         autonomy_state = autonomy_reichsprotectorate
     }
-    MIT = { set_cosmetic_tag = MIT_SOL }
+    MIT = {
+        set_cosmetic_tag = MIT_SOL
+        set_country_flag = is_solar_puppet
+    }
 }
 SOL_release_ZES = {
     hidden_effect = {
@@ -172,7 +194,10 @@ SOL_release_ZES = {
         target = ZES
         autonomy_state = autonomy_reichsprotectorate
     }
-    ZES = { set_cosmetic_tag = ZES_SOL }
+    ZES = {
+        set_cosmetic_tag = ZES_SOL
+        set_country_flag = is_solar_puppet
+    }
 }
 SOL_release_HIP = {
     hidden_effect = {
@@ -192,7 +217,10 @@ SOL_release_HIP = {
         target = HIP
         autonomy_state = autonomy_reichsprotectorate
     }
-    HIP = { set_cosmetic_tag = HIP_SOL }
+    HIP = {
+        set_cosmetic_tag = HIP_SOL
+        set_country_flag = is_solar_puppet
+    }
 }
 SOL_release_CTH = {
     hidden_effect = {
@@ -212,7 +240,10 @@ SOL_release_CTH = {
         target = CTH
         autonomy_state = autonomy_reichsprotectorate
     }
-    CTH = { set_cosmetic_tag = CTH_SOL }
+    CTH = {
+        set_cosmetic_tag = CTH_SOL
+        set_country_flag = is_solar_puppet
+    }
 }
 SOL_release_CTL = {
     hidden_effect = {
@@ -235,7 +266,10 @@ SOL_release_CTL = {
         target = CTL
         autonomy_state = autonomy_reichsprotectorate
     }
-    CTL = { set_cosmetic_tag = CTL_SOL }
+    CTL = {
+        set_cosmetic_tag = CTL_SOL
+        set_country_flag = is_solar_puppet
+    }
 }
 SOL_release_ABY = {
     hidden_effect = {
@@ -253,7 +287,10 @@ SOL_release_ABY = {
         target = ABY
         autonomy_state = autonomy_reichsprotectorate
     }
-    ABY = { set_cosmetic_tag = ABY_SOL }
+    ABY = {
+        set_cosmetic_tag = ABY_SOL
+        set_country_flag = is_solar_puppet
+    }
     custom_effect_tooltip = SOL_laser_pointer_tt
     if = {
         limit = {
@@ -294,6 +331,7 @@ SOL_release_ZAR = {
                     is_core_of = ZAI
                     is_core_of = CZR
                     is_core_of = ALO
+                    is_core_of = TIM
                 }
             }
             add_core_of = ZAR
@@ -303,7 +341,10 @@ SOL_release_ZAR = {
         target = ZAR
         autonomy_state = autonomy_reichsprotectorate
     }
-    ZAR = { set_cosmetic_tag = ZAR_SOL }
+    ZAR = {
+        set_cosmetic_tag = ZAR_SOL
+        set_country_flag = is_solar_puppet
+    }
 }
 SOL_release_ROA = {
     hidden_effect = {
@@ -325,7 +366,10 @@ SOL_release_ROA = {
         target = ROA
         autonomy_state = autonomy_reichsprotectorate
     }
-    ROA = { set_cosmetic_tag = ROA_SOL }
+    ROA = {
+        set_cosmetic_tag = ROA_SOL
+        set_country_flag = is_solar_puppet
+    }
 }
 SOL_release_STM = {
     hidden_effect = {
@@ -348,7 +392,10 @@ SOL_release_STM = {
         target = STM
         autonomy_state = autonomy_reichsprotectorate
     }
-    STM = { set_cosmetic_tag = STM_SOL }
+    STM = {
+        set_cosmetic_tag = STM_SOL
+        set_country_flag = is_solar_puppet
+    }
 }
 SOL_release_ZOO = {
     hidden_effect = {
@@ -371,7 +418,10 @@ SOL_release_ZOO = {
         target = ZOO
         autonomy_state = autonomy_reichsprotectorate
     }
-    ZOO = { set_cosmetic_tag = ZOO_SOL }
+    ZOO = {
+        set_cosmetic_tag = ZOO_SOL
+        set_country_flag = is_solar_puppet
+    }
 }
 SOL_release_MTA = {
     hidden_effect = {
@@ -390,23 +440,25 @@ SOL_release_MTA = {
         target = MTA
         autonomous_state = autonomy_reichsprotectorate
     }
-    MTA = { set_cosmetic_tag = MTA_SOL }
+    MTA = {
+        set_cosmetic_tag = MTA_SOL
+        set_country_flag = is_solar_puppet
+    }
 }
 SOL_release_MAZ = {
     hidden_effect = {
         every_state = {
             limit = {
                 OR = {
-                is_core_of = MAZ
-                is_core_of = MSS
-                is_core_of = SON
-                is_core_of = TIM
-                is_core_of = MSH
-                is_core_of = ZWA
-                is_core_of = ZUG
-                is_core_of = ZEL
-                is_core_of = HAY
-            }
+                    is_core_of = MAZ
+                    is_core_of = MSS
+                    is_core_of = SON
+                    is_core_of = MSH
+                    is_core_of = ZWA
+                    is_core_of = ZUG
+                    is_core_of = ZEL
+                    is_core_of = HAY
+                }
             }
             add_core_of = MAZ
         }
@@ -415,7 +467,10 @@ SOL_release_MAZ = {
         target = MAZ
         autonomy_state = autonomy_reichsprotectorate
     }
-    MAZ = { set_cosmetic_tag = MAZ_SOL }
+    MAZ = {
+        set_cosmetic_tag = MAZ_SOL
+        set_country_flag = is_solar_puppet
+    }
 }
 SOL_release_GAR = {
     hidden_effect = {
@@ -437,7 +492,10 @@ SOL_release_GAR = {
         target = GAR
         autonomy_state = autonomy_reichsprotectorate
     }
-    GAR = { set_cosmetic_tag = GAR_SOL }
+    GAR = {
+        set_cosmetic_tag = GAR_SOL
+        set_country_flag = is_solar_puppet
+    }
 }
 SOL_release_KXN = {
     hidden_effect = {
@@ -455,7 +513,10 @@ SOL_release_KXN = {
         target = KXN
         autonomous_state = autonomy_reichsprotectorate
     }
-    KXN = { set_cosmetic_tag = KXN_SOL }
+    KXN = {
+        set_cosmetic_tag = KXN_SOL
+        set_country_flag = is_solar_puppet
+    }
 }
 SOL_release_MTO = {
     hidden_effect = {
@@ -474,19 +535,28 @@ SOL_release_MTO = {
         target = MTO
         autonomous_state = autonomy_reichsprotectorate
     }
-    MTO = { set_cosmetic_tag = MTO_SOL }
+    MTO = {
+        set_cosmetic_tag = MTO_SOL
+        set_country_flag = is_solar_puppet
+    }
 }
 SOL_release_KIR = {
     release_autonomy = {
         target = KIR
         autonomous_state = autonomy_reichsprotectorate
     }
-    KIR = { set_cosmetic_tag = KIR_SOL }
+    KIR = {
+        set_cosmetic_tag = KIR_SOL
+        set_country_flag = is_solar_puppet
+    }
 }
 SOL_release_TBK = {
     release_autonomy = {
         target = TBK
         autonomous_state = autonomy_reichsprotectorate
     }
-    TBK = { set_cosmetic_tag = TBK_SOL }
+    TBK = {
+        set_cosmetic_tag = TBK_SOL
+        set_country_flag = is_solar_puppet
+    }
 }
