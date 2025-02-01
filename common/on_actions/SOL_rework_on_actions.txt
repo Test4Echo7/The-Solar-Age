@@ -329,11 +329,39 @@ on_actions = {
                         has_country_flag = is_solar_puppet
                     }
                     OR = {
+                        original_tag = PLB
+                        original_tag = GRF
+                        original_tag = PNG
+                        original_tag = STL
+                        original_tag = BUF
+                        original_tag = DRG
+                        original_tag = GFF
+                        original_tag = OLE
+                        original_tag = BAL
+                        original_tag = CES
+                        original_tag = JUN
+                        original_tag = SCS
+                        original_tag = STG
+                        original_tag = JAK
+                        original_tag = CHN
+                        original_tag = YAK
+                        original_tag = AST
+                        original_tag = HLR
+                        original_tag = ZES
+                        original_tag = HIP
+                        original_tag = CTH
+                        original_tag = CTL
+                        original_tag = ABY
+                        original_tag = ZOO
+                        original_tag = MAZ
+                        original_tag = STM
+                        original_tag = GAR
+                        original_tag = ROA
+                        original_tag = ZAR
                         original_tag = SDL
                         original_tag = YMN
                         original_tag = MGY
                         original_tag = KAR
-                        original_tag = HMR
                         original_tag = REE
                         original_tag = MTA
                         original_tag = OSQ
@@ -342,13 +370,6 @@ on_actions = {
                         original_tag = NVA
                         original_tag = KHM
                         original_tag = KXN
-                        original_tag = WAT
-                        original_tag = FIR
-                        original_tag = FBK
-                        original_tag = NTR
-                        original_tag = AES
-                        original_tag = MTO
-                        original_tag = MDL
                         original_tag = DMT
                     }
                 }
@@ -376,11 +397,39 @@ on_actions = {
                         has_country_flag = is_solar_puppet
                     }
                     OR = {
+                        original_tag = PLB
+                        original_tag = GRF
+                        original_tag = PNG
+                        original_tag = STL
+                        original_tag = BUF
+                        original_tag = DRG
+                        original_tag = GFF
+                        original_tag = OLE
+                        original_tag = BAL
+                        original_tag = CES
+                        original_tag = JUN
+                        original_tag = SCS
+                        original_tag = STG
+                        original_tag = JAK
+                        original_tag = CHN
+                        original_tag = YAK
+                        original_tag = AST
+                        original_tag = HLR
+                        original_tag = ZES
+                        original_tag = HIP
+                        original_tag = CTH
+                        original_tag = CTL
+                        original_tag = ABY
+                        original_tag = ZOO
+                        original_tag = MAZ
+                        original_tag = STM
+                        original_tag = GAR
+                        original_tag = ROA
+                        original_tag = ZAR
                         original_tag = SDL
                         original_tag = YMN
                         original_tag = MGY
                         original_tag = KAR
-                        original_tag = HMR
                         original_tag = REE
                         original_tag = MTA
                         original_tag = OSQ
@@ -389,13 +438,6 @@ on_actions = {
                         original_tag = NVA
                         original_tag = KHM
                         original_tag = KXN
-                        original_tag = WAT
-                        original_tag = FIR
-                        original_tag = FBK
-                        original_tag = NTR
-                        original_tag = AES
-                        original_tag = MTO
-                        original_tag = MDL
                         original_tag = DMT
                     }
                 }
@@ -805,6 +847,16 @@ on_actions = {
                         add_core_of = AES
                     }
                 }
+                if = {
+                    limit = { country_exists = IDT }
+                    annex_country = {
+                        target = IDT
+                    }
+                    every_state = {
+                        limit = { is_core_of = IDT }
+                        add_core_of = ROOT
+                    }
+                }
             }
             if = {
                 limit = {
@@ -978,26 +1030,870 @@ on_actions = {
                     }
                 }
             }
-            #if = {
-            #    limit = {
-            #        country_exists = HIP
-            #        HIP = { is_subject_of = EQS }
-            #        WIN = {
-            #            exists = yes
-            #            is_subject_of = EQS
-            #        }
-            #        is_EQS_SOL = yes
-            #    }
-            #    every_state = {
-            #        limit = { is_core_of = WIN }
-            #        add_core_of = HIP
-            #    }
-            #    HIP = {
-            #        annex_country = {
-            #            target = WIN
-            #        }
-            #    }
-            #}
+            if = {
+                limit = {
+                    country_exists = HIP
+                    HIP = { is_subject_of = EQS }
+                    OR = {
+                        WIN = {
+                            exists = yes
+                            is_subject_of = EQS
+                        }
+                        MED = {
+                            exists = yes
+                            is_subject_of = EQS
+                        }
+                        WAR = {
+                            exists = yes
+                            is_subject_of = EQS
+                        }
+                        ZUM = {
+                            OR = {
+                                AND = {
+                                    exists = yes
+                                    is_subject_of = EQS
+                                }
+                                all_cores_owned_by_ROOT = yes
+                            }
+                        }
+                        TBK = {
+                            exists = yes
+                            is_subject_of = EQS
+                        }
+                    }
+                    is_EQS_SOL = yes
+                }
+                if = {
+                    limit = { country_exists = WIN }
+                    every_state = {
+                        limit = { is_core_of = WIN }
+                        add_core_of = HIP
+                    }
+                    HIP = {
+                        annex_country = {
+                            target = WIN
+                        }
+                    }
+                }
+                if = {
+                    limit = {
+                        ZUM = {
+                            OR = {
+                                all_cores_owned_by_ROOT = yes
+                                exists = yes
+                            }
+                        }
+                    }
+                    every_state = {
+                        limit = { is_core_of = ZUM }
+                        add_core_of = HIP
+                    }
+                    if = {
+                        limit = { country_exists = ZUM }
+                        HIP = {
+                            annex_country = {
+                                target = ZUM
+                            }
+                        }
+                    }
+                }
+                if = {
+                    limit = { country_exists = WAR }
+                    every_state = {
+                        limit = { is_core_of = WAR }
+                        add_core_of = HIP
+                    }
+                    HIP = {
+                        annex_country = {
+                            target = WAR
+                        }
+                    }
+                }
+                if = {
+                    limit = { country_exists = TBK }
+                    every_state = {
+                        limit = { is_core_of = TBK }
+                        add_core_of = HIP
+                    }
+                    HIP = {
+                        annex_country = {
+                            target = TBK
+                        }
+                    }
+                }
+                if = {
+                    limit = { country_exists = MED }
+                    every_state = {
+                        limit = { is_core_of = MED }
+                        add_core_of = HIP
+                    }
+                    HIP = {
+                        annex_country = {
+                            target = MED
+                        }
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    country_exists = ABY
+                    ABY = { is_subject_of = EQS }
+                    OR = {
+                        ANS = {
+                            exists = yes
+                            is_subject_of = EQS
+                        }
+                        ASS = {
+                            exists = yes
+                            is_subject_of = EQS
+                        }
+                    }
+                    is_EQS_SOL = yes
+                }
+                if = {
+                    limit = { country_exists = ANS }
+                    every_state = {
+                        limit = { is_core_of = ANS }
+                        add_core_of = ABY
+                    }
+                    ABY = {
+                        annex_country = {
+                            target = ANS
+                        }
+                    }
+                }
+                if = {
+                    limit = { country_exists = ASS }
+                    every_state = {
+                        limit = { is_core_of = ASS }
+                        add_core_of = ABY
+                    }
+                    ABY = {
+                        annex_country = {
+                            target = ASS
+                        }
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    country_exists = ZES
+                    ZES = { is_subject_of = EQS }
+                    OLV = {
+                        exists = yes
+                        is_subject_of = EQS
+                    }
+                    is_EQS_SOL = yes
+                }
+                if = {
+                    limit = { country_exists = OLV }
+                    every_state = {
+                        limit = { is_core_of = OLV }
+                        add_core_of = ZES
+                    }
+                    ZES = {
+                        annex_country = {
+                            target = OLV
+                        }
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    country_exists = HLR
+                    HLR = { is_subject_of = EQS }
+                    OR = {
+                        DED = {
+                            exists = yes
+                            is_subject_of = EQS
+                        }
+                        NCH = {
+                            exists = yes
+                            is_subject_of = EQS
+                        }
+                    }
+                    is_EQS_SOL = yes
+                }
+                if = {
+                    limit = { country_exists = DED }
+                    every_state = {
+                        limit = { is_core_of = DED }
+                        add_core_of = HLR
+                    }
+                    HLR = {
+                        annex_country = {
+                            target = DED
+                        }
+                    }
+                }
+                if = {
+                    limit = { country_exists = NCH }
+                    every_state = {
+                        limit = { is_core_of = NCH }
+                        add_core_of = HLR
+                    }
+                    HLR = {
+                        annex_country = {
+                            target = NCH
+                        }
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    country_exists = MAZ
+                    MAZ = { is_subject_of = EQS }
+                    OR = {
+                        MSS = {
+                            exists = yes
+                            is_subject_of = EQS
+                        }
+                        SON = {
+                            exists = yes
+                            is_subject_of = EQS
+                        }
+                        ZWA = {
+                            exists = yes
+                            is_subject_of = EQS
+                        }
+                        MSH = {
+                            exists = yes
+                            is_subject_of = EQS
+                        }
+                        ZUG = {
+                            exists = yes
+                            is_subject_of = EQS
+                        }
+                        ZEL = {
+                            exists = yes
+                            is_subject_of = EQS
+                        }
+                        HAY = {
+                            exists = yes
+                            is_subject_of = EQS
+                        }
+                    }
+                    is_EQS_SOL = yes
+                }
+                if = {
+                    limit = { country_exists = MSS }
+                    every_state = {
+                        limit = { is_core_of = MSS }
+                        add_core_of = MAZ
+                    }
+                    MAZ = {
+                        annex_country = {
+                            target = MSS
+                        }
+                    }
+                }
+                if = {
+                    limit = { country_exists = SON }
+                    every_state = {
+                        limit = { is_core_of = SON }
+                        add_core_of = MAZ
+                    }
+                    MAZ = {
+                        annex_country = {
+                            target = SON
+                        }
+                    }
+                }
+                if = {
+                    limit = { country_exists = ZWA }
+                    every_state = {
+                        limit = { is_core_of = ZWA }
+                        add_core_of = MAZ
+                    }
+                    MAZ = {
+                        annex_country = {
+                            target = ZWA
+                        }
+                    }
+                }
+                if = {
+                    limit = { country_exists = ZUG }
+                    every_state = {
+                        limit = { is_core_of = ZUG }
+                        add_core_of = MAZ
+                    }
+                    MAZ = {
+                        annex_country = {
+                            target = ZUG
+                        }
+                    }
+                }
+                if = {
+                    limit = { country_exists = ZEL }
+                    every_state = {
+                        limit = { is_core_of = ZEL }
+                        add_core_of = MAZ
+                    }
+                    MAZ = {
+                        annex_country = {
+                            target = ZEL
+                        }
+                    }
+                }
+                if = {
+                    limit = { country_exists = MSH }
+                    every_state = {
+                        limit = { is_core_of = MSH }
+                        add_core_of = MAZ
+                    }
+                    MAZ = {
+                        annex_country = {
+                            target = MSH
+                        }
+                    }
+                }
+                if = {
+                    limit = { country_exists = HAY }
+                    every_state = {
+                        limit = { is_core_of = HAY }
+                        add_core_of = MAZ
+                    }
+                    MAZ = {
+                        annex_country = {
+                            target = HAY
+                        }
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    country_exists = ZAR
+                    ZAR = { is_subject_of = EQS }
+                    OR = {
+                        ZAI = {
+                            exists = yes
+                            is_subject_of = EQS
+                        }
+                        ALO = {
+                            exists = yes
+                            is_subject_of = EQS
+                        }
+                        TIM = {
+                            exists = yes
+                            is_subject_of = EQS
+                        }
+                        CZR = {
+                            exists = yes
+                            is_subject_of = EQS
+                        }
+                    }
+                    is_EQS_SOL = yes
+                }
+                if = {
+                    limit = { country_exists = ZAI }
+                    every_state = {
+                        limit = { is_core_of = ZAI }
+                        add_core_of = ZAR
+                    }
+                    ZAR = {
+                        annex_country = {
+                            target = ZAI
+                        }
+                    }
+                }
+                if = {
+                    limit = { country_exists = ALO }
+                    every_state = {
+                        limit = { is_core_of = ALO }
+                        add_core_of = ZAR
+                    }
+                    ZAR = {
+                        annex_country = {
+                            target = ALO
+                        }
+                    }
+                }
+                if = {
+                    limit = { country_exists = CZR }
+                    every_state = {
+                        limit = { is_core_of = CZR }
+                        add_core_of = ZAR
+                    }
+                    ZAR = {
+                        annex_country = {
+                            target = CZR
+                        }
+                    }
+                }
+                if = {
+                    limit = { country_exists = TIM }
+                    every_state = {
+                        limit = { is_core_of = TIM }
+                        add_core_of = ZAR
+                    }
+                    ZAR = {
+                        annex_country = {
+                            target = TIM
+                        }
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    country_exists = CTL
+                    CTL = { is_subject_of = EQS }
+                    OR = {
+                        HRV = {
+                            exists = yes
+                            is_subject_of = EQS
+                        }
+                        SAM = {
+                            exists = yes
+                            is_subject_of = EQS
+                        }
+                        HIN = {
+                            exists = yes
+                            is_subject_of = EQS
+                        }
+                        LMB = {
+                            exists = yes
+                            is_subject_of = EQS
+                        }
+                        SPL = {
+                            exists = yes
+                            is_subject_of = EQS
+                        }
+                        BRS = {
+                            exists = yes
+                            is_subject_of = EQS
+                        }
+                        GAZ = {
+                            exists = yes
+                            is_subject_of = EQS
+                        }
+                    }
+                    is_EQS_SOL = yes
+                }
+                if = {
+                    limit = { country_exists = HRV }
+                    every_state = {
+                        limit = { is_core_of = HRV }
+                        add_core_of = CTL
+                    }
+                    CTL = {
+                        annex_country = {
+                            target = HRV
+                        }
+                    }
+                }
+                if = {
+                    limit = { country_exists = SAM }
+                    every_state = {
+                        limit = { is_core_of = SAM }
+                        add_core_of = CTL
+                    }
+                    CTL = {
+                        annex_country = {
+                            target = SAM
+                        }
+                    }
+                }
+                if = {
+                    limit = { country_exists = HIN }
+                    every_state = {
+                        limit = { is_core_of = HIN }
+                        add_core_of = CTL
+                    }
+                    CTL = {
+                        annex_country = {
+                            target = HIN
+                        }
+                    }
+                }
+                if = {
+                    limit = { country_exists = SPL }
+                    every_state = {
+                        limit = { is_core_of = SPL }
+                        add_core_of = CTL
+                    }
+                    CTL = {
+                        annex_country = {
+                            target = SPL
+                        }
+                    }
+                }
+                if = {
+                    limit = { country_exists = BRS }
+                    every_state = {
+                        limit = { is_core_of = BRS }
+                        add_core_of = CTL
+                    }
+                    CTL = {
+                        annex_country = {
+                            target = BRS
+                        }
+                    }
+                }
+                if = {
+                    limit = { country_exists = LMB }
+                    every_state = {
+                        limit = { is_core_of = LMB }
+                        add_core_of = CTL
+                    }
+                    CTL = {
+                        annex_country = {
+                            target = LMB
+                        }
+                    }
+                }
+                if = {
+                    limit = { country_exists = GAZ }
+                    every_state = {
+                        limit = { is_core_of = GAZ }
+                        add_core_of = CTL
+                    }
+                    CTL = {
+                        annex_country = {
+                            target = GAZ
+                        }
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    country_exists = ROA
+                    ROA = { is_subject_of = EQS }
+                    OR = {
+                        BLT = {
+                            exists = yes
+                            is_subject_of = EQS
+                        }
+                        CME = {
+                            exists = yes
+                            is_subject_of = EQS
+                        }
+                        GIF = {
+                            exists = yes
+                            is_subject_of = EQS
+                        }
+                        GFS = {
+                            exists = yes
+                            is_subject_of = EQS
+                        }
+                        ZLU = {
+                            exists = yes
+                            is_subject_of = EQS
+                        }
+                        TSV = {
+                            exists = yes
+                            is_subject_of = EQS
+                        }
+                    }
+                    is_EQS_SOL = yes
+                }
+                if = {
+                    limit = { country_exists = BLT }
+                    every_state = {
+                        limit = { is_core_of = BLT }
+                        add_core_of = ROA
+                    }
+                    ROA = {
+                        annex_country = {
+                            target = ROA
+                        }
+                    }
+                }
+                if = {
+                    limit = { country_exists = CME }
+                    every_state = {
+                        limit = { is_core_of = CME }
+                        add_core_of = ROA
+                    }
+                    ROA = {
+                        annex_country = {
+                            target = CME
+                        }
+                    }
+                }
+                if = {
+                    limit = { country_exists = GIF }
+                    every_state = {
+                        limit = { is_core_of = GIF }
+                        add_core_of = ROA
+                    }
+                    ROA = {
+                        annex_country = {
+                            target = GIF
+                        }
+                    }
+                }
+                if = {
+                    limit = { country_exists = GFS }
+                    every_state = {
+                        limit = { is_core_of = GFS }
+                        add_core_of = ROA
+                    }
+                    ROA = {
+                        annex_country = {
+                            target = GFS
+                        }
+                    }
+                }
+                if = {
+                    limit = { country_exists = ZLU }
+                    every_state = {
+                        limit = { is_core_of = ZLU }
+                        add_core_of = ROA
+                    }
+                    ROA = {
+                        annex_country = {
+                            target = ZLU
+                        }
+                    }
+                }
+                if = {
+                    limit = { country_exists = TSV }
+                    every_state = {
+                        limit = { is_core_of = TSV }
+                        add_core_of = ROA
+                    }
+                    ROA = {
+                        annex_country = {
+                            target = TSV
+                        }
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    country_exists = ZOO
+                    ZOO = { is_subject_of = EQS }
+                    OR = {
+                        TAI = {
+                            exists = yes
+                            is_subject_of = EQS
+                        }
+                        MEL = {
+                            exists = yes
+                            is_subject_of = EQS
+                        }
+                        MQA = {
+                            exists = yes
+                            is_subject_of = EQS
+                        }
+                        IST = {
+                            exists = yes
+                            is_subject_of = EQS
+                        }
+                        IDO = {
+                            exists = yes
+                            is_subject_of = EQS
+                        }
+                        DEL = {
+                            exists = yes
+                            is_subject_of = EQS
+                        }
+                        YAN = {
+                            exists = yes
+                            is_subject_of = EQS
+                        }
+                    }
+                    is_EQS_SOL = yes
+                }
+                if = {
+                    limit = { country_exists = TAI }
+                    every_state = {
+                        limit = { is_core_of = TAI }
+                        add_core_of = ZOO
+                    }
+                    ZOO = {
+                        annex_country = {
+                            target = TAI
+                        }
+                    }
+                }
+                if = {
+                    limit = { country_exists = MEL }
+                    every_state = {
+                        limit = { is_core_of = MEL }
+                        add_core_of = ZOO
+                    }
+                    TAI = {
+                        annex_country = {
+                            target = MEL
+                        }
+                    }
+                }
+                if = {
+                    limit = { country_exists = MQA }
+                    every_state = {
+                        limit = { is_core_of = MQA }
+                        add_core_of = ZOO
+                    }
+                    ZOO = {
+                        annex_country = {
+                            target = MQA
+                        }
+                    }
+                }
+                if = {
+                    limit = { country_exists = IDO }
+                    every_state = {
+                        limit = { is_core_of = IDO }
+                        add_core_of = ZOO
+                    }
+                    ZOO = {
+                        annex_country = {
+                            target = IDO
+                        }
+                    }
+                }
+                if = {
+                    limit = { country_exists = IST }
+                    every_state = {
+                        limit = { is_core_of = IST }
+                        add_core_of = ZOO
+                    }
+                    ZOO = {
+                        annex_country = {
+                            target = IST
+                        }
+                    }
+                }
+                if = {
+                    limit = { country_exists = DEL }
+                    every_state = {
+                        limit = { is_core_of = DEL }
+                        add_core_of = ZOO
+                    }
+                    ZOO = {
+                        annex_country = {
+                            target = DEL
+                        }
+                    }
+                }
+                if = {
+                    limit = { country_exists = YAN }
+                    every_state = {
+                        limit = { is_core_of = YAN }
+                        add_core_of = ZOO
+                    }
+                    ZOO = {
+                        annex_country = {
+                            target = YAN
+                        }
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    country_exists = CTH
+                    CTH = { is_subject_of = EQS }
+                    OR = {
+                        CDR = {
+                            exists = yes
+                            is_subject_of = EQS
+                        }
+                        CVA = {
+                            exists = yes
+                            is_subject_of = EQS
+                        }
+                        CGI = {
+                            exists = yes
+                            is_subject_of = EQS
+                        }
+                        MCW = {
+                            exists = yes
+                            is_subject_of = EQS
+                        }
+                    }
+                    is_EQS_SOL = yes
+                }
+                if = {
+                    limit = { country_exists = CDR }
+                    every_state = {
+                        limit = { is_core_of = CDR }
+                        add_core_of = CTH
+                    }
+                    CTH = {
+                        annex_country = {
+                            target = CDR
+                        }
+                    }
+                }
+                if = {
+                    limit = { country_exists = CVA }
+                    every_state = {
+                        limit = { is_core_of = CVA }
+                        add_core_of = CTH
+                    }
+                    CTH = {
+                        annex_country = {
+                            target = CVA
+                        }
+                    }
+                }
+                if = {
+                    limit = { country_exists = CGI }
+                    every_state = {
+                        limit = { is_core_of = CGI }
+                        add_core_of = CTH
+                    }
+                    CTH = {
+                        annex_country = {
+                            target = CGI
+                        }
+                    }
+                }
+                if = {
+                    limit = { country_exists = MCW }
+                    every_state = {
+                        limit = { is_core_of = MCW }
+                        add_core_of = CTH
+                    }
+                    CTH = {
+                        annex_country = {
+                            target = MCW
+                        }
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    country_exists = GAR
+                    GAR = { is_subject_of = EQS }
+                    OR = {
+                        CNT = {
+                            exists = yes
+                            is_subject_of = EQS
+                        }
+                        HYE = {
+                            exists = yes
+                            is_subject_of = EQS
+                        }
+                    }
+                    is_EQS_SOL = yes
+                }
+                if = {
+                    limit = { country_exists = CNT }
+                    every_state = {
+                        limit = { is_core_of = CNT }
+                        add_core_of = GAR
+                    }
+                    GAR = {
+                        annex_country = {
+                            target = CNT
+                        }
+                    }
+                }
+                if = {
+                    limit = { country_exists = HYE }
+                    every_state = {
+                        limit = { is_core_of = HYE }
+                        add_core_of = GAR
+                    }
+                    GAR = {
+                        annex_country = {
+                            target = HYE
+                        }
+                    }
+                }
+            }
         }
     }
     on_startup = { #Don't want to touch MGY files. But seriously, EaW, why no Somnambula advisor trait despite having her recruited?

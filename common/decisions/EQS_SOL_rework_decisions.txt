@@ -3857,12 +3857,37 @@ EQS_pan_pony_empire_category = {
         available = {
             is_EQS_SOL = yes
             HLR = { all_cores_owned_by_ROOT = yes }
-            DED = { all_cores_owned_by_ROOT = yes }
+            if = {
+                limit = { 415 = { is_core_of = DED } }
+                DED = { all_cores_owned_by_ROOT = yes }
+            }
+            else = {
+                custom_trigger_tooltip = {
+                    tooltip = SOL_better_ded_than_red_tt
+                    owns_state = 415
+                    owns_state = 416
+                    owns_state = 417
+                    owns_state = 418
+                    owns_state = 419
+                    owns_state = 420
+                }
+            }
             NCH = { all_cores_owned_by_ROOT = yes }
         }
         visible = {
             HLR = { all_cores_owned_by_ROOT = yes }
-            DED = { all_cores_owned_by_ROOT = yes }
+            if = {
+                limit = { 415 = { is_core_of = DED } }
+                DED = { all_cores_owned_by_ROOT = yes }
+            }
+            else = {
+                owns_state = 415
+                owns_state = 416
+                owns_state = 417
+                owns_state = 418
+                owns_state = 419
+                owns_state = 420
+            }
             NCH = { all_cores_owned_by_ROOT = yes }
             NOT = { has_country_flag = SOL_formed_super_griffonia }
         }
@@ -3870,7 +3895,20 @@ EQS_pan_pony_empire_category = {
             highlight_states_trigger = {
                 OR = {
                     is_core_of = HLR
-                    is_core_of = DED
+                    if = {
+                        limit = { 415 = { is_core_of = DED } }
+                        is_core_of = DED
+                    }
+                    else = {
+                        OR = {
+                            state = 415
+                            state = 416
+                            state = 417
+                            state = 418
+                            state = 419
+                            state = 420
+                        }
+                    }
                     is_core_of = NCH
                 }
             }
@@ -4215,9 +4253,15 @@ EQS_pan_pony_empire_category = {
         highlight_states = {
             highlight_states_trigger = {
                 OR = {
-                    is_core_of = ABY
+                    AND = {
+                        is_core_of = ABY
+                        is_owned_by = ROOT
+                    }
                     is_core_of = ASS
-                    is_core_of = ANS
+                    AND = {
+                        is_core_of = ANS
+                        is_owned_by = ROOT
+                    }
                 }
             }
         }

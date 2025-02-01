@@ -155,7 +155,12 @@ SOL_release_HLR = {
         every_state = {
             limit = {
                 OR = {
-                    is_core_of = DED
+                    state = 415
+                    state = 416
+                    state = 417
+                    state = 418
+                    state = 419
+                    state = 420
                     is_core_of = NCH
                 }
             }

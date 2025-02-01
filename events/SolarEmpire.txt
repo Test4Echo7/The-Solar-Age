@@ -5614,6 +5614,23 @@ country_event = { # celestia Puppet
 				add_core_of = ROOT
 			}
 		}
+		if = {
+			limit = {
+				IDT = {
+					exists = yes
+					is_subject_of = OVERLORD
+				}
+			}
+			annex_country = {
+				target = IDT
+			}
+			every_state = {
+				limit = {
+					is_core_of = IDT
+				}
+				add_core_of = ROOT
+			}
+		}
 
 		set_country_flag = is_solar_puppet
 	}
@@ -5685,6 +5702,89 @@ country_event = { # celestia Puppet
 				add_core_of = ROOT
 			}
 		}
+		if = {
+			limit = {
+				MED = {
+					exists = yes
+					is_subject_of = OVERLORD
+				}
+			}
+			annex_country = {
+				target = MED
+			}
+			every_state = {
+				limit = {
+					is_core_of = MED
+				}
+				add_core_of = ROOT
+			}
+		}
+		if = {
+			limit = {
+				WAR = {
+					exists = yes
+					is_subject_of = OVERLORD
+				}
+			}
+			annex_country = {
+				target = WAR
+			}
+			every_state = {
+				limit = {
+					is_core_of = WAR
+				}
+				add_core_of = ROOT
+			}
+		}
+		if = {
+			limit = {
+				TBK = {
+					exists = yes
+					is_subject_of = OVERLORD
+				}
+			}
+			annex_country = {
+				target = TBK
+			}
+			every_state = {
+				limit = {
+					is_core_of = TBK
+				}
+				add_core_of = ROOT
+			}
+		}
+		if = {
+			limit = {
+				ZUM = {
+					exists = yes
+					is_subject_of = OVERLORD
+				}
+			}
+			annex_country = {
+				target = ZUM
+			}
+			every_state = {
+				limit = {
+					is_core_of = ZUM
+				}
+				add_core_of = ROOT
+			}
+		}
+		else_if = {
+			limit = {
+				ZUM = {
+					exists = no
+					all_cores_owned_by_ROOT = yes
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = ZUM
+				}
+				add_core_of = ROOT
+				transfer_state_to = ROOT
+			}
+		}
 	}
 }
 
@@ -5711,6 +5811,61 @@ country_event = { # celestia Puppet
 		set_cosmetic_tag = CTH_SOL
 
 		set_country_flag = is_solar_puppet
+		every_state = {
+			limit = {
+				OR = {
+					is_core_of = CVA
+					is_core_of = CDR
+				}
+			}
+			add_core_of = ROOT
+			if = {
+				limit = {
+					NOT = { is_owned_by = ROOT }
+					OWNER = {
+						OR = {
+							tag = OVERLORD
+							is_subject_of = OVERLORD
+						}
+					}
+				}
+				transfer_state_to = ROOT
+			}
+		}
+		if = {
+			limit = {
+				CGI = {
+					exists = yes
+					is_subject_of = OVERLORD
+				}
+			}
+			annex_country = {
+				target = CGI
+			}
+			every_state = {
+				limit = {
+					is_core_of = CGI
+				}
+				add_core_of = ROOT
+			}
+		}
+		if = {
+			limit = {
+				MCW = {
+					exists = yes
+					is_subject_of = OVERLORD
+				}
+			}
+			annex_country = {
+				target = MCW
+			}
+			every_state = {
+				limit = {
+					is_core_of = MCW
+				}
+				add_core_of = ROOT
+			}
+		}
 	}
 }
 
@@ -5724,6 +5879,143 @@ country_event = { # celestia Puppet
 		set_cosmetic_tag = CTL_SOL
 
 		set_country_flag = is_solar_puppet
+		if = {
+			limit = {
+				HRV = {
+					exists = yes
+					is_subject_of = OVERLORD
+				}
+			}
+			annex_country = {
+				target = HRV
+			}
+			every_state = {
+				limit = {
+					is_core_of = HRV
+				}
+				add_core_of = ROOT
+			}
+		}
+		if = {
+			limit = {
+				SAM = {
+					exists = yes
+					is_subject_of = OVERLORD
+				}
+			}
+			annex_country = {
+				target = SAM
+			}
+			every_state = {
+				limit = {
+					is_core_of = SAM
+				}
+				add_core_of = ROOT
+			}
+		}
+		if = {
+			limit = {
+				HIN = {
+					exists = yes
+					is_subject_of = OVERLORD
+				}
+			}
+			annex_country = {
+				target = HIN
+			}
+			every_state = {
+				limit = {
+					is_core_of = HIN
+				}
+				add_core_of = ROOT
+			}
+		}
+		if = {
+			limit = {
+				MCW = {
+					exists = yes
+					is_subject_of = OVERLORD
+				}
+			}
+			annex_country = {
+				target = MCW
+			}
+			every_state = {
+				limit = {
+					is_core_of = MCW
+				}
+				add_core_of = ROOT
+			}
+		}
+		if = {
+			limit = {
+				BRS = {
+					exists = yes
+					is_subject_of = OVERLORD
+				}
+			}
+			annex_country = {
+				target = BRS
+			}
+			every_state = {
+				limit = {
+					is_core_of = BRS
+				}
+				add_core_of = ROOT
+			}
+		}
+		if = {
+			limit = {
+				SPL = {
+					exists = yes
+					is_subject_of = OVERLORD
+				}
+			}
+			annex_country = {
+				target = SPL
+			}
+			every_state = {
+				limit = {
+					is_core_of = SPL
+				}
+				add_core_of = ROOT
+			}
+		}
+		if = {
+			limit = {
+				LMB = {
+					exists = yes
+					is_subject_of = OVERLORD
+				}
+			}
+			annex_country = {
+				target = LMB
+			}
+			every_state = {
+				limit = {
+					is_core_of = LMB
+					NOT = { is_owned_by = CTH }
+				}
+				add_core_of = ROOT
+			}
+		}
+		if = {
+			limit = {
+				GAZ = {
+					exists = yes
+					is_subject_of = OVERLORD
+				}
+			}
+			annex_country = {
+				target = GAZ
+			}
+			every_state = {
+				limit = {
+					is_core_of = GAZ
+				}
+				add_core_of = ROOT
+			}
+		}
 	}
 }
 
@@ -5737,6 +6029,108 @@ country_event = { # celestia Puppet
 		set_cosmetic_tag = ROA_SOL
 
 		set_country_flag = is_solar_puppet
+		if = {
+			limit = {
+				TSV = {
+					exists = yes
+					is_subject_of = OVERLORD
+				}
+			}
+			annex_country = {
+				target = TSV
+			}
+			every_state = {
+				limit = {
+					is_core_of = TSV
+				}
+				add_core_of = ROOT
+			}
+		}
+		if = {
+			limit = {
+				BLT = {
+					exists = yes
+					is_subject_of = OVERLORD
+				}
+			}
+			annex_country = {
+				target = BLT
+			}
+			every_state = {
+				limit = {
+					is_core_of = BLT
+				}
+				add_core_of = ROOT
+			}
+		}
+		if = {
+			limit = {
+				CME = {
+					exists = yes
+					is_subject_of = OVERLORD
+				}
+			}
+			annex_country = {
+				target = CME
+			}
+			every_state = {
+				limit = {
+					is_core_of = CME
+				}
+				add_core_of = ROOT
+			}
+		}
+		if = {
+			limit = {
+				GFS = {
+					exists = yes
+					is_subject_of = OVERLORD
+				}
+			}
+			annex_country = {
+				target = GFS
+			}
+			every_state = {
+				limit = {
+					is_core_of = GFS
+				}
+				add_core_of = ROOT
+			}
+		}
+		if = {
+			limit = {
+				GIF = {
+					exists = yes
+					is_subject_of = OVERLORD
+				}
+			}
+			annex_country = {
+				target = GIF
+			}
+			every_state = {
+				limit = {
+					is_core_of = GIF
+				}
+				add_core_of = ROOT
+			}
+		}
+		if = {
+			limit = {
+				ZLU = {
+					exists = yes
+					is_subject_of = OVERLORD
+				}
+			}
+			annex_country = {
+				target = ZLU
+			}
+			every_state = {
+				limit = {
+					is_core_of = ZLU
+				}
+				add_core_of = ROOT
+			}
+		}
 	}
 }
 
@@ -5750,6 +6144,74 @@ country_event = { # celestia Puppet
 		set_cosmetic_tag = ZAR_SOL
 
 		set_country_flag = is_solar_puppet
+		if = {
+			limit = {
+				ZAI = {
+					exists = yes
+					is_subject_of = OVERLORD
+				}
+			}
+			annex_country = {
+				target = ZAI
+			}
+			every_state = {
+				limit = {
+					is_core_of = ZAI
+				}
+				add_core_of = ROOT
+			}
+		}
+		if = {
+			limit = {
+				ALO = {
+					exists = yes
+					is_subject_of = OVERLORD
+				}
+			}
+			annex_country = {
+				target = ALO
+			}
+			every_state = {
+				limit = {
+					is_core_of = ALO
+				}
+				add_core_of = ROOT
+			}
+		}
+		if = {
+			limit = {
+				TIM = {
+					exists = yes
+					is_subject_of = OVERLORD
+				}
+			}
+			annex_country = {
+				target = TIM
+			}
+			every_state = {
+				limit = {
+					is_core_of = TIM
+				}
+				add_core_of = ROOT
+			}
+		}
+		if = {
+			limit = {
+				CZR = {
+					exists = yes
+					is_subject_of = OVERLORD
+				}
+			}
+			annex_country = {
+				target = CZR
+			}
+			every_state = {
+				limit = {
+					is_core_of = CZR
+				}
+				add_core_of = ROOT
+			}
+		}
 	}
 }
 
@@ -5763,6 +6225,41 @@ country_event = { # celestia Puppet
 		set_cosmetic_tag = ABY_SOL
 
 		set_country_flag = is_solar_puppet
+		if = {
+			limit = {
+				ASS = {
+					exists = yes
+					is_subject_of = OVERLORD
+				}
+			}
+			annex_country = {
+				target = ASS
+			}
+			every_state = {
+				limit = {
+					is_core_of = ASS
+				}
+				add_core_of = ROOT
+			}
+		}
+		if = {
+			limit = {
+				ANS = {
+					exists = yes
+					is_subject_of = OVERLORD
+				}
+			}
+			annex_country = {
+				target = ANS
+			}
+			every_state = {
+				limit = {
+					is_core_of = ANS
+					NOT = { is_owned_and_controlled_by = EMR }
+				}
+				add_core_of = ROOT
+			}
+		}
 	}
 }
 
@@ -5773,9 +6270,60 @@ country_event = { # celestia Puppet
 
 	is_triggered_only = yes
 	option = {
-		set_cosmetic_tag = STM_SOL
+		if = {
+			limit = { tag = STM }
+			set_cosmetic_tag = STM_SOL
 
-		set_country_flag = is_solar_puppet
+			set_country_flag = is_solar_puppet
+		}
+		else_if = {
+			limit = { tag = THU }
+			set_cosmetic_tag = STM_SOL
+
+			set_country_flag = is_solar_puppet
+			every_state = {
+				limit = { is_owned_by = ROOT }
+				transfer_state_to = STM
+			}
+			EQS = {
+				set_autonomy = {
+					target = STM
+					autonomy_state = autonomy_reichsprotectorate
+				}
+			}
+		}
+		else_if = {
+			limit = { tag = SLC }
+			set_cosmetic_tag = STM_SOL
+
+			set_country_flag = is_solar_puppet
+			every_state = {
+				limit = { is_owned_by = ROOT }
+				transfer_state_to = STM
+			}
+			EQS = {
+				set_autonomy = {
+					target = STM
+					autonomy_state = autonomy_reichsprotectorate
+				}
+			}
+		}
+		else_if = {
+			limit = { tag = GYZ }
+			set_cosmetic_tag = STM_SOL
+
+			set_country_flag = is_solar_puppet
+			every_state = {
+				limit = { is_owned_by = ROOT }
+				transfer_state_to = STM
+			}
+			EQS = {
+				set_autonomy = {
+					target = STM
+					autonomy_state = autonomy_reichsprotectorate
+				}
+			}
+		}
 	}
 }
 
@@ -5789,6 +6337,125 @@ country_event = { # celestia Puppet
 		set_cosmetic_tag = MAZ_SOL
 
 		set_country_flag = is_solar_puppet
+		if = {
+			limit = {
+				MSS = {
+					exists = yes
+					is_subject_of = OVERLORD
+				}
+			}
+			annex_country = {
+				target = MSS
+			}
+			every_state = {
+				limit = {
+					is_core_of = MSS
+				}
+				add_core_of = ROOT
+			}
+		}
+		if = {
+			limit = {
+				SON = {
+					exists = yes
+					is_subject_of = OVERLORD
+				}
+			}
+			annex_country = {
+				target = SON
+			}
+			every_state = {
+				limit = {
+					is_core_of = SON
+				}
+				add_core_of = ROOT
+			}
+		}
+		if = {
+			limit = {
+				ZWA = {
+					exists = yes
+					is_subject_of = OVERLORD
+				}
+			}
+			annex_country = {
+				target = ZWA
+			}
+			every_state = {
+				limit = {
+					is_core_of = ZWA
+				}
+				add_core_of = ROOT
+			}
+		}
+		if = {
+			limit = {
+				ZUG = {
+					exists = yes
+					is_subject_of = OVERLORD
+				}
+			}
+			annex_country = {
+				target = ZUG
+			}
+			every_state = {
+				limit = {
+					is_core_of = ZUG
+				}
+				add_core_of = ROOT
+			}
+		}
+		if = {
+			limit = {
+				ZEL = {
+					exists = yes
+					is_subject_of = OVERLORD
+				}
+			}
+			annex_country = {
+				target = ZEL
+			}
+			every_state = {
+				limit = {
+					is_core_of = ZEL
+				}
+				add_core_of = ROOT
+			}
+		}
+		if = {
+			limit = {
+				MSH = {
+					exists = yes
+					is_subject_of = OVERLORD
+				}
+			}
+			annex_country = {
+				target = MSH
+			}
+			every_state = {
+				limit = {
+					is_core_of = MSH
+				}
+				add_core_of = ROOT
+			}
+		}
+		if = {
+			limit = {
+				HAY = {
+					exists = yes
+					is_subject_of = OVERLORD
+				}
+			}
+			annex_country = {
+				target = HAY
+			}
+			every_state = {
+				limit = {
+					is_core_of = HAY
+				}
+				add_core_of = ROOT
+			}
+		}
 	}
 }
 
@@ -5802,6 +6469,41 @@ country_event = { # celestia Puppet
 		set_cosmetic_tag = GAR_SOL
 
 		set_country_flag = is_solar_puppet
+		if = {
+			limit = {
+				HYE = {
+					exists = yes
+					is_subject_of = OVERLORD
+				}
+			}
+			annex_country = {
+				target = HYE
+			}
+			every_state = {
+				limit = {
+					is_core_of = HYE
+					NOT = { is_owned_by = STM }
+				}
+				add_core_of = ROOT
+			}
+		}
+		if = {
+			limit = {
+				CNT = {
+					exists = yes
+					is_subject_of = OVERLORD
+				}
+			}
+			annex_country = {
+				target = CNT
+			}
+			every_state = {
+				limit = {
+					is_core_of = CNT
+				}
+				add_core_of = ROOT
+			}
+		}
 	}
 }
 
@@ -5815,5 +6517,195 @@ country_event = { # celestia Puppet
 		set_cosmetic_tag = HLR_SOL
 
 		set_country_flag = is_solar_puppet
+		if = {
+			limit = {
+				NCH = {
+					exists = yes
+					is_subject_of = OVERLORD
+				}
+			}
+			annex_country = {
+				target = NCH
+			}
+			every_state = {
+				limit = {
+					is_core_of = NCH
+				}
+				add_core_of = ROOT
+			}
+		}
+		if = {
+			limit = {
+				DED = {
+					exists = yes
+					is_subject_of = OVERLORD
+				}
+			}
+			annex_country = {
+				target = DED
+			}
+			every_state = {
+				limit = {
+					is_core_of = DED
+				}
+				add_core_of = ROOT
+			}
+		}
+		else_if = {
+			limit  {
+				OVERLORD = {
+					owns_state = 415
+					owns_state = 416
+					owns_state = 417
+					owns_state = 418
+					owns_state = 419
+					owns_state = 420
+				}
+			}
+			every_state = {
+				limit = {
+					state = 415
+					state = 416
+					state = 417
+					state = 418
+					state = 419
+					state = 420
+				}
+				add_core_of = ROOT
+				transfer_state_to = ROOT
+			}
+		}
+	}
+}
+
+country_event = { # celestia Puppet
+	id = solarempire.1051
+	immediate = {log = "[GetDateText]: [Root.GetName]: event solarempire.1051"}
+	hidden = yes
+
+	is_triggered_only = yes
+	option = {
+		set_cosmetic_tag = ZOO_SOL
+
+		set_country_flag = is_solar_puppet
+		if = {
+			limit = {
+				TAI = {
+					exists = yes
+					is_subject_of = OVERLORD
+				}
+			}
+			annex_country = {
+				target = TAI
+			}
+			every_state = {
+				limit = {
+					is_core_of = TAI
+				}
+				add_core_of = ROOT
+			}
+		}
+		if = {
+			limit = {
+				MEL = {
+					exists = yes
+					is_subject_of = OVERLORD
+				}
+			}
+			annex_country = {
+				target = MEL
+			}
+			every_state = {
+				limit = {
+					is_core_of = MEL
+				}
+				add_core_of = ROOT
+			}
+		}
+		if = {
+			limit = {
+				MQA = {
+					exists = yes
+					is_subject_of = OVERLORD
+				}
+			}
+			annex_country = {
+				target = MQA
+			}
+			every_state = {
+				limit = {
+					is_core_of = MQA
+				}
+				add_core_of = ROOT
+			}
+		}
+		if = {
+			limit = {
+				IST = {
+					exists = yes
+					is_subject_of = OVERLORD
+				}
+			}
+			annex_country = {
+				target = IST
+			}
+			every_state = {
+				limit = {
+					is_core_of = IST
+				}
+				add_core_of = ROOT
+			}
+		}
+		if = {
+			limit = {
+				IDO = {
+					exists = yes
+					is_subject_of = OVERLORD
+				}
+			}
+			annex_country = {
+				target = IDO
+			}
+			every_state = {
+				limit = {
+					is_core_of = IDO
+				}
+				add_core_of = ROOT
+			}
+		}
+		if = {
+			limit = {
+				DEL = {
+					exists = yes
+					is_subject_of = OVERLORD
+				}
+			}
+			annex_country = {
+				target = DEL
+			}
+			every_state = {
+				limit = {
+					is_core_of = DEL
+				}
+				add_core_of = ROOT
+			}
+		}
+		if = {
+			limit = {
+				YAN = {
+					exists = yes
+					is_subject_of = OVERLORD
+				}
+			}
+			annex_country = {
+				target = YAN
+			}
+			every_state = {
+				limit = {
+					is_core_of = YAN
+				}
+				add_core_of = ROOT
+			}
+		}
 	}
 }
