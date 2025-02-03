@@ -9922,6 +9922,12 @@ country_event = { #Bon Bon is ushered into Celestia's chambers, and Bon Bon sees
                 add_trait = { trait = director_of_smile_lar slot = political_advisor }
             }
         }
+        else = {
+            EQS_sweetie_drops = {
+                hidden_effect = { remove_trait = { trait = agent_of_smile slot = political_advisor } }
+                add_trait = { trait = director_of_smile slot = political_advisor }
+            }
+        }
     }
 }
 
