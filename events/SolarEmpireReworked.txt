@@ -10059,7 +10059,8 @@ country_event = { #An event recapping that with the ascension of Daybreaker, SMI
                 35 = {
                     country_event = {
                         id = equestriaexpanded.7
-
+                        days = 90
+                        random_days = 270
                     }
                 }
             }
