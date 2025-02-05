@@ -5704,17 +5704,17 @@ country_event = { # celestia Puppet
 		}
 		if = {
 			limit = {
-				MED = {
+				MER = {
 					exists = yes
 					is_subject_of = OVERLORD
 				}
 			}
 			annex_country = {
-				target = MED
+				target = MER
 			}
 			every_state = {
 				limit = {
-					is_core_of = MED
+					is_core_of = MER
 				}
 				add_core_of = ROOT
 			}
@@ -6552,7 +6552,7 @@ country_event = { # celestia Puppet
 			}
 		}
 		else_if = {
-			limit  {
+			limit = {
 				OVERLORD = {
 					owns_state = 415
 					owns_state = 416

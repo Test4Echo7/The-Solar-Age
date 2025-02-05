@@ -7683,6 +7683,11 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_destroy_night_guard"
 		###Event of a number of Solarist elite units going in on where the Night Guard still has some level of influence and doing what they can to assassinate leaders
 		country_event = solarreworked.239
+		hidden_effect = {
+			CRY = {
+				country_event = solarreworked.239
+			}
+		}
 	}
 	ai_will_do = { factor = 50 }
 }
@@ -11860,7 +11865,8 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_mimic_pegasi"
 		###Event of a new test pilot being thrown into a ground attack bomber, with improved diving brakes and the like, as well as increased maneuverability, which, after a short bit of time having fun, he does his test, and nearly crashes as he both blacks out and the automatic dive brakes fail at first, but he does manage to land after the wings are clipped by being so close to the ground, and it's deemed a success, despite almost dying
-		country_event = solarreworked.86
+		#country_event = solarreworked.86
+		add_ideas = SOL_pegasi_planes
 	}
 	ai_will_do = { factor = 50 }
 }
@@ -12249,7 +12255,8 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_judge_ground"
 		###As a battle unfolds beneath her, a fighter pilot, leading a couple of other divebombers, takes charge of a sortie to try and free up a pinned down position near the back, and she effectively ingores all the dangers, including those that damage her plane, as she delivers a large payload of destruction against the enemy beneath her
-		country_event = solarreworked.88
+		#country_event = solarreworked.88
+		add_ideas = SOL_dive_bombers_justice
 	}
 	ai_will_do = { factor = 75 }
 }
@@ -12272,7 +12279,8 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_order_skies"
 		###Event of about half a dozen ponies, two different flight groups, getting into a bit of a scuffle after spending a day at the canteen in the air base, as they both believe they have the better skills, and it causes a bit of havoc as they aim to test munitions for good on some target dummies, not realizing how damaging to the base it would be
-		country_event = solarreworked.89
+		#country_event = solarreworked.89
+		add_ideas = SOL_balanced_air_powers
 	}
 	ai_will_do = { factor = 60 }
 }
@@ -12292,7 +12300,8 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_heavenly_backdrop"
 		###Event of a sole pilot, as the others are sleeping overnight, as he flies high toward his destination target far into enemy territory to destroy some different targets, and he finds the beauty of the night rather haunting, especially since he's supposed to be loyal to the day, and wishes that he could spend all his time in the high altitude of flight, given how amazing it is, and to an extent regrets the damage he will have to do
-		country_event = solarreworked.90
+		#country_event = solarreworked.90
+		add_ideas = SOL_limitless_bombing
 	}
 	ai_will_do = { factor = 75 }
 }
@@ -12454,7 +12463,154 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_scraping_barrels"
 		###Event of Daybreaker meeting with some of the new admiralty to see what the state of the Imperial Navy is, since other nations around them are also building to a larger standard, and she knows that the Navy has been neglected, despite its size, and they are a bit nervous, since they only have some mothballs to help in the meantime, and she isn't impressed, but sadly accepts they need them as protection, and agrees after she sees how inadequate they are
-		country_event = solarreworked.91
+		#country_event = solarreworked.91
+		add_breakthrough_progress = {
+			specialization = specialization_naval
+			value = 0.25
+		}
+        custom_effect_tooltip = SOL_who_called_in_the_fleet_tt
+        hidden_effect = {
+            if = {
+                limit = { has_dlc = "Man the Guns" }
+                create_ship = {
+                    type = ship_hull_light_1
+                    equipment_variant = "Ardent Class"
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = ship_hull_light_1
+                    equipment_variant = "Ardent Class"
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = ship_hull_light_1
+                    equipment_variant = "Ardent Class"
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = ship_hull_light_1
+                    equipment_variant = "Ardent Class"
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = ship_hull_light_1
+                    equipment_variant = "Ardent Class"
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = ship_hull_light_1
+                    equipment_variant = "Ardent Class"
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = ship_hull_light_1
+                    equipment_variant = "Ardent Class"
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = ship_hull_light_1
+                    equipment_variant = "Ardent Class"
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = ship_hull_light_1
+                    equipment_variant = "Ardent Class"
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = ship_hull_light_1
+                    equipment_variant = "Ardent Class"
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = ship_hull_cruiser_1
+                    equipment_variant = "Emerald Class"
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = ship_hull_cruiser_1
+                    equipment_variant = "Emerald Class"
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = ship_hull_cruiser_1
+                    equipment_variant = "Emerald Class"
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = ship_hull_cruiser_1
+                    equipment_variant = "Canterlot Class"
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = ship_hull_cruiser_1
+                    equipment_variant = "Canterlot Class"
+                    creator = ROOT
+                }
+            }
+            else = {
+                create_ship = {
+                    type = destroyer_1
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = destroyer_1
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = destroyer_1
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = destroyer_1
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = destroyer_1
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = destroyer_1
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = destroyer_1
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = destroyer_1
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = destroyer_1
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = destroyer_1
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = light_cruiser_1
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = light_cruiser_1
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = light_cruiser_1
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = heavy_cruiser_1
+                    creator = ROOT
+                }
+                create_ship = {
+                    type = heavy_cruiser_1
+                    creator = ROOT
+                }
+            }
+        }
 	}
 	ai_will_do = { factor = 40 }
 }
@@ -13038,7 +13194,8 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_sun_never_sets"
 		###Event of Daybreaker stepping upon the Daybreak, and going out to see to experience the waves at her hooftips once more, which makes her feel freer. Freer to test her weaponry, since she knows she's gathering a crowd, and she wants to make sure she impresses them, and if there are a few bits of collateral damage, she can live with it if it means that Order is maintained
-		country_event = solarreworked.95
+		#country_event = solarreworked.95
+		add_ideas = SOL_high_seas_empire
 	}
 	ai_will_do = { factor = 70 }
 }

@@ -497,6 +497,7 @@
   SOL_solaris_inquisitionis_would_like_to_know_your_location_tt:0 "A number of §Yinquisitors§! have volunteered to lead the disorganized troops."
   SOL_tempest_joined:0 "§YTempest Shadow§! has joined the Empress's cause."
   SOL_rebuilding_planet_please_stand_by:0 "We cannot release §Y[FROM.GetName]§! from this menu as we are bringing §YOrder§! to the other nations. Look to your §YDecision§! tab or continue progressing in your §YFocus Tree§! in order to release it."
+  SOL_repair_speed_buildings_tt:0 "Building Repair Speed: §R-95.00%§!"
 
   ###Last one in the chain. Remove comment later###
   SOL_conglaturation_a_winner_is_you_tt:0 "§GHarmony has been preserved and all of ponykind now bends the knee to Daybreaker. Thank you for playing the Solar Age! - Test4Echo§!"
@@ -576,10 +577,11 @@
   aussenseiter_regentin:0 "Foreign Regent"
   empresss_representative:0 "Empress's Representative"
   die_kaiserin_der_greifen:0 "Die Kaiserin der Greifen"
-  cowled_governor:0 "Cowed by Daybreaker"
+  cowed_governor:0 "Cowed by Daybreaker"
   miffed_inquisitor:0 "Irritated Governess"
   wounded_monarch:0 "Wounded"
   goddess_of_nightmares:0 "Goddess of Nightmares"
+  blessed_by_daybreaker:0 "Blessed by Daybreaker"
 
   ###Advisor Traits###
   eea_chancellor:0 "Head of the EEA"
@@ -723,6 +725,7 @@
   EQS_smile_upgrades:0 "Increased S.M.I.L.E. Funding"
   EQS_smile_upgrades_desc:0 "To actively fight and defend Harmony, S.M.I.L.E. requires more resources than it's ever been given, even during the days of the greatest monster hunts. Although they will be unsung, their work will pave the way for a brighter future for us all."
   SOL_dragon_miners:0 "Dragon Laborers"
+  SOL_evaporated_state:0 "Slagged Infrastructure"
 
   ###Military Industrial Organizations/MIOs###
   SOL_sanctum_infernal_corps:0 "Sanctum Infernal Corps"
@@ -1575,9 +1578,9 @@
   SOL_expand_imperial_arsenals:0 "Expand Imperial Arsenals"
   SOL_expand_imperial_arsenals_desc:0 "Although there are a few primary weapons manufactuers in the Empire, there are many smaller ones that supply regional garrisons and stock their armories. Some of these have made interesting variants of standard [ROOT.GetAdjectiveCap] weaponry, and providing them with further funding could lead to better defenses against dangers to ponies. All would be needed are a few volunteers."
   SOL_government_of_one:0 "Government of One"
-  SOL_government_of_one_desc:0 "Much has been accomplished since Daybreaker became empress, but the government still has too much inertia behind stalling its reformation. With this becoming obvious, voices have proposed that the Empress be vested further powers. The nobles and lower chambers will be little more than formalities, as the Empress may pass any law she wishes and deems fit, as she benevolently rules over us forever."
+  SOL_government_of_one_desc:0 "Much has been accomplished since Daybreaker became empress, but the government still has too much inertia stalling its reformation. With this becoming obvious, voices have proposed that the Empress be vested further powers. The nobles and lower chambers will be little more than formalities, as the Empress may pass any law she wishes and deems fit, as she benevolently rules over us forever."
   SOL_honest_cabinet:0 "An Honest Cabinet"
-  # SOL_honest_cabinet_desc:0 "A mistake of the old Equestria was that the former privy council was a mix of honest loyalists, sycophants, and ambitious parasites seeking to elevate themselves. However, as much as the Empress is wise, a single pony may make mistakes, and there are numerous, learned ponies who can aid her. This cabinet shall be hoofpicked, so ensure that she hears what she needs to hear, with no bias or selfishness tainting it."
+  SOL_honest_cabinet_desc:0 "A mistake of the old Equestria was that the former privy council was a mix of honest loyalists, sycophants, and ambitious parasites seeking to elevate themselves. However, as much as the Empress is wise, a single pony may make mistakes, and there are numerous, learned ponies who can aid her. This cabinet shall be hoofpicked, so ensure that she hears what she needs to hear, untainted by bias and selfishness."
   SOL_forgiveness_available:0 "Forgiveness is Available"
   SOL_forgiveness_available_desc:0 "Despite every lie, insult, and pony inspired by their rebellion, the Empress has made clear that the Element Bearers are to be unharmed. As she is nothing but a merciful empress, she has given them a choice of remaining in their confinement, or they can repent of their actions and seek forgiveness for the trouble they caused. This will no doubt cause a stir, but such is the price of exonerating the heroes of Equus."
   SOL_legion_of_labor:0 "Legion of Labor"

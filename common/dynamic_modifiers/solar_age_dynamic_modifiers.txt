@@ -84,8 +84,38 @@ SOL_evaporated_state = {
     local_org_regain = -0.85
     local_resources = -0.75
     local_supplies = -0.9
-    state_repair_speed_buildings_factor = -0.95
-    army_speed_for_controller = -0.5
+    hidden_modifier = {
+        state_repair_speed_infrastructure_factor = -0.95
+        state_repair_speed_arms_factory_factor = -0.95
+        state_repair_speed_industrial_complex_factor = -0.95
+        state_repair_speed_air_base_factor = -0.95
+        state_repair_speed_supply_node_factor = -0.95
+        state_repair_speed_rail_way_factor = -0.95
+        state_repair_speed_naval_facility_factor = -0.95
+        state_repair_speed_naval_base_factor = -0.95
+        state_repair_speed_bunker_factor = -0.95
+        state_repair_speed_coastal_bunker_factor = -0.95
+        state_repair_speed_stronghold_network_factor = -0.95
+        state_repair_speed_anti_air_building_factor = -0.95
+        state_repair_speed_dockyard_factor = -0.95
+        state_repair_speed_synthetic_refinery_factor = -0.95
+        state_repair_speed_syntehtic_crystal_refinery_factor = -0.95
+        state_repair_speed_magical_quarry_factor = -0.95
+        state_repair_speed_fuel_silo_factor = -0.95
+        state_repair_speed_radar_station_factor = -0.95
+        state_repair_speed_mega_gun_emplacement_factor = -0.95
+        state_repair_speed_rocket_site_factor = -0.95
+        state_repair_speed_nuclear_reactor_factor = -0.95
+        state_repair_speed_nuclear_reactor_heavy_water_factor = -0.95
+        state_repair_speed_commercial_nuclear_reactor_factor = -0.95
+        state_repair_speed_nuclear_facility_factor = -0.95
+        state_repair_speed_air_facility_factor = -0.95
+        state_repair_speed_magical_facility_factor = -0.95
+        state_repair_speed_dam_factor = -0.95
+        state_repair_speed_dam_mountain_factor = -0.95
+    }
+    custom_modifier_tooltip = SOL_repair_speed_buildings_tt #Why no repair_speed_buildings_factor PDX?!
+    army_speed_factor_for_controller = -0.5
 }
 
 #OLE

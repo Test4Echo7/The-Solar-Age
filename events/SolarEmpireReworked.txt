@@ -1247,7 +1247,8 @@ country_event = { #Event of a thestral officer being pushed to her limit, after 
 				planning_skill = 1
 				logistics_skill = 1
 				legacy_id = 40
-			} custom_effect_tooltip = new_ksen_autumn_stats_tp
+			}
+			custom_effect_tooltip = new_ksen_autumn_stats_tp
 		}
 		if = {
 			limit = { NOT = { EQS_gushing_pulse = { has_character_flag = EQS_EEEEEEEEE } } }
@@ -1889,23 +1890,23 @@ country_event = { #One scientist late into the day is penning their notes about 
     }
 }
 
-country_event = { #In a panic, a soldier manages to get to their radio to start begging for reinforcements, as the position the soldier is at has been overrun by one of the foes fighting SOL from a breakthrough, and as they are pushed further in, they believe that they will be captured or killed, until a number of mobile infantry divisions show up and relieve them, although they are called out for being close to the wire
-    id = solarreworked.82
-    title = solarreworked.82.t
-    desc = solarreworked.82.d
-    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.82"}
-
-    is_triggered_only = yes
-
-    option = { #A few minutes earlier would have been nice!
-        name = solarreworked.82.a
-        add_ideas = SOL_motorized_spearheads
-        add_breakthrough_progress = {
-			specialization = specialization_land
-			value = 0.6
-		}
-    }
-}
+#country_event = { #In a panic, a soldier manages to get to their radio to start begging for reinforcements, as the position the soldier is at has been overrun by one of the foes fighting SOL from a breakthrough, and as they are pushed further in, they believe that they will be captured or killed, until a number of mobile infantry divisions show up and relieve them, although they are called out for being close to the wire
+#    id = solarreworked.82
+#    title = solarreworked.82.t
+#    desc = solarreworked.82.d
+#    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.82"}
+#
+#    is_triggered_only = yes
+#
+#    option = { #A few minutes earlier would have been nice!
+#        name = solarreworked.82.a
+#        add_ideas = SOL_motorized_spearheads
+#        add_breakthrough_progress = {
+#			specialization = specialization_land
+#			value = 0.6
+#		}
+#    }
+#}
 
 country_event = { #Daybreaker leads dozens if not a hundred or more troops into the Wonderbolt Academy in Cloudsdale, which still has a number of the Wonderbolts; Spitfire is already captured, since she was in Canterlot, and Soarin' and the other Wonderbolts have already been dealt with in the military purges, and the entire meeting is her shutting it down, and declaring that something better will follow in its place
     id = solarreworked.83 #Possibly be instead Daybreaker having a bit of a showdown with the Wonderbolts outside the academy, and besting them to then have them captured
@@ -1988,19 +1989,19 @@ country_event = { #Spitfire, after being forced into some new suit, is placed in
     }
 }
 
-country_event = { #A pilot eagerly hops into his new plane that he has been assigned, given that he's in an experimental plane squadron, and he is given the task of wiping out some resistance with it, and he mostly has fun in the skies as he moves toward the target, before taking an incredibly steep dive which it is rated for, and blacks out, only to be saved by the new dive brakes that react without input
-    id = solarreworked.86
-    title = solarreworked.86.t
-    desc = solarreworked.86.d
-    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.86"}
-
-    is_triggered_only = yes
-
-    option = { #Maybe tone down the adrenaline junky aspect.
-        name = solarreworked.86.a
-        add_ideas = SOL_pegasi_planes
-    }
-}
+#country_event = { #A pilot eagerly hops into his new plane that he has been assigned, given that he's in an experimental plane squadron, and he is given the task of wiping out some resistance with it, and he mostly has fun in the skies as he moves toward the target, before taking an incredibly steep dive which it is rated for, and blacks out, only to be saved by the new dive brakes that react without input
+#    id = solarreworked.86
+#    title = solarreworked.86.t
+#    desc = solarreworked.86.d
+#    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.86"}
+#
+#    is_triggered_only = yes
+#
+#    option = { #Maybe tone down the adrenaline junky aspect.
+#        name = solarreworked.86.a
+#        add_ideas = SOL_pegasi_planes
+#    }
+#}
 
 country_event = { #A short event of a propaganda piece that is done up to tempt ponies to join the Imperial air force, using some of the totally big names of the Solarbeams, who are mostly knock-offs of the Wonderbolt ponies, but it at least promises excitement and the ability to let out aggression on enemies, and downplays the survival rate of pilots
     id = solarreworked.87
@@ -2016,207 +2017,207 @@ country_event = { #A short event of a propaganda piece that is done up to tempt 
     }
 }
 
-country_event = { #A dive bomber pilot leads a sortie of other dive bombers into a battle that is unfolding beneath them, as she hears radio chatter claiming that a unit is pinned down, and the location is determined, before she dives down to try and rescue them, and she only hopes she can make it, and unleash her payload, which she does, and it obliterates most of the enemy forces, and earning her a few medals in the process
-    id = solarreworked.88
-    title = solarreworked.88.t
-    desc = solarreworked.88.d
-    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.88"}
+#country_event = { #A dive bomber pilot leads a sortie of other dive bombers into a battle that is unfolding beneath them, as she hears radio chatter claiming that a unit is pinned down, and the location is determined, before she dives down to try and rescue them, and she only hopes she can make it, and unleash her payload, which she does, and it obliterates most of the enemy forces, and earning her a few medals in the process
+#    id = solarreworked.88
+#    title = solarreworked.88.t
+#    desc = solarreworked.88.d
+#    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.88"}
+#
+#    is_triggered_only = yes
+#
+#    option = { #Next round's on me!
+#        name = solarreworked.88.a
+#        add_ideas = SOL_dive_bombers_justice
+#    }
+#}
 
-    is_triggered_only = yes
+#country_event = { #Follow one fighter pilot as he starts getting into chatter with another pilot leading a different sortie, and the two sorties get into a bit of a competition on who can be better at combat, which leads to them trying rather reckless things while dogfighting, but they both come out alive, and better friends because of it
+#    id = solarreworked.89
+#    title = solarreworked.89.t
+#    desc = solarreworked.89.d
+#    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.89"}
+#
+#    is_triggered_only = yes
+#
+#    option = { #Who knew killing was bond forming?
+#        name = solarreworked.89.a
+#        add_ideas = SOL_balanced_air_powers
+#    }
+#}
 
-    option = { #Next round's on me!
-        name = solarreworked.88.a
-        add_ideas = SOL_dive_bombers_justice
-    }
-}
+#country_event = { #A sole bomber pilot is flying his plane toward a target destination hours away, and the rest of the crew are nodding off because it is nighttime and will still be night, and he merely thinks to himself about how beautiful the world and the night sky is, which makes him instantly consider crashing his plane because he should be loyal to the day, but he talks himself out of his wonder and into a proper anger about the enemies he will bombard
+#    id = solarreworked.90
+#    title = solarreworked.90.t
+#    desc = solarreworked.90.d
+#    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.90"}
+#
+#    is_triggered_only = yes
+#
+#    option = { #Just a moment of weakness!
+#        name = solarreworked.90.a
+#        add_ideas = SOL_limitless_bombing
+#    }
+#}
 
-country_event = { #Follow one fighter pilot as he starts getting into chatter with another pilot leading a different sortie, and the two sorties get into a bit of a competition on who can be better at combat, which leads to them trying rather reckless things while dogfighting, but they both come out alive, and better friends because of it
-    id = solarreworked.89
-    title = solarreworked.89.t
-    desc = solarreworked.89.d
-    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.89"}
-
-    is_triggered_only = yes
-
-    option = { #Who knew killing was bond forming?
-        name = solarreworked.89.a
-        add_ideas = SOL_balanced_air_powers
-    }
-}
-
-country_event = { #A sole bomber pilot is flying his plane toward a target destination hours away, and the rest of the crew are nodding off because it is nighttime and will still be night, and he merely thinks to himself about how beautiful the world and the night sky is, which makes him instantly consider crashing his plane because he should be loyal to the day, but he talks himself out of his wonder and into a proper anger about the enemies he will bombard
-    id = solarreworked.90
-    title = solarreworked.90.t
-    desc = solarreworked.90.d
-    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.90"}
-
-    is_triggered_only = yes
-
-    option = { #Just a moment of weakness!
-        name = solarreworked.90.a
-        add_ideas = SOL_limitless_bombing
-    }
-}
-
-country_event = { #Daybreaker arrives on the docks of Manehattan to speak with some of the admiralty regarding the state of the navy, which has been neglected for a bit of time, and they are all nervous when speaking to her, since she can see that the ships they were so excited about are, in fact, mothballs that have been repaired, and that's about it, and she is far from amused, although agrees that some ships are better than none
-    id = solarreworked.91
-    title = solarreworked.91.t
-    desc = solarreworked.91.d
-    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.91"}
-
-    is_triggered_only = yes
-
-    option = { #This better not be all of them.
-        name = solarreworked.91.a
-        add_breakthrough_progress = {
-			specialization = specialization_naval
-			value = 0.25
-		}
-        custom_effect_tooltip = SOL_who_called_in_the_fleet_tt
-        hidden_effect = {
-            if = {
-                limit = { has_dlc = "Man the Guns" }
-                create_ship = {
-                    type = ship_hull_light_1
-                    equipment_variant = "Ardent Class"
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = ship_hull_light_1
-                    equipment_variant = "Ardent Class"
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = ship_hull_light_1
-                    equipment_variant = "Ardent Class"
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = ship_hull_light_1
-                    equipment_variant = "Ardent Class"
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = ship_hull_light_1
-                    equipment_variant = "Ardent Class"
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = ship_hull_light_1
-                    equipment_variant = "Ardent Class"
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = ship_hull_light_1
-                    equipment_variant = "Ardent Class"
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = ship_hull_light_1
-                    equipment_variant = "Ardent Class"
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = ship_hull_light_1
-                    equipment_variant = "Ardent Class"
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = ship_hull_light_1
-                    equipment_variant = "Ardent Class"
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = ship_hull_cruiser_1
-                    equipment_variant = "Emerald Class"
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = ship_hull_cruiser_1
-                    equipment_variant = "Emerald Class"
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = ship_hull_cruiser_1
-                    equipment_variant = "Emerald Class"
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = ship_hull_cruiser_1
-                    equipment_variant = "Canterlot Class"
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = ship_hull_cruiser_1
-                    equipment_variant = "Canterlot Class"
-                    creator = ROOT
-                }
-            }
-            else = {
-                create_ship = {
-                    type = destroyer_1
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = destroyer_1
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = destroyer_1
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = destroyer_1
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = destroyer_1
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = destroyer_1
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = destroyer_1
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = destroyer_1
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = destroyer_1
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = destroyer_1
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = light_cruiser_1
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = light_cruiser_1
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = light_cruiser_1
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = heavy_cruiser_1
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = heavy_cruiser_1
-                    creator = ROOT
-                }
-            }
-        }
-    }
-}
+#country_event = { #Daybreaker arrives on the docks of Manehattan to speak with some of the admiralty regarding the state of the navy, which has been neglected for a bit of time, and they are all nervous when speaking to her, since she can see that the ships they were so excited about are, in fact, mothballs that have been repaired, and that's about it, and she is far from amused, although agrees that some ships are better than none
+#    id = solarreworked.91
+#    title = solarreworked.91.t
+#    desc = solarreworked.91.d
+#    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.91"}
+#
+#    is_triggered_only = yes
+#
+#    option = { #This better not be all of them.
+#        name = solarreworked.91.a
+#        add_breakthrough_progress = {
+#			specialization = specialization_naval
+#			value = 0.25
+#		}
+#        custom_effect_tooltip = SOL_who_called_in_the_fleet_tt
+#        hidden_effect = {
+#            if = {
+#                limit = { has_dlc = "Man the Guns" }
+#                create_ship = {
+#                    type = ship_hull_light_1
+#                    equipment_variant = "Ardent Class"
+#                    creator = ROOT
+#                }
+#                create_ship = {
+#                    type = ship_hull_light_1
+#                    equipment_variant = "Ardent Class"
+#                    creator = ROOT
+#                }
+#                create_ship = {
+#                    type = ship_hull_light_1
+#                    equipment_variant = "Ardent Class"
+#                    creator = ROOT
+#                }
+#                create_ship = {
+#                    type = ship_hull_light_1
+#                    equipment_variant = "Ardent Class"
+#                    creator = ROOT
+#                }
+#                create_ship = {
+#                    type = ship_hull_light_1
+#                    equipment_variant = "Ardent Class"
+#                    creator = ROOT
+#                }
+#                create_ship = {
+#                    type = ship_hull_light_1
+#                    equipment_variant = "Ardent Class"
+#                    creator = ROOT
+#                }
+#                create_ship = {
+#                    type = ship_hull_light_1
+#                    equipment_variant = "Ardent Class"
+#                    creator = ROOT
+#                }
+#                create_ship = {
+#                    type = ship_hull_light_1
+#                    equipment_variant = "Ardent Class"
+#                    creator = ROOT
+#                }
+#                create_ship = {
+#                    type = ship_hull_light_1
+#                    equipment_variant = "Ardent Class"
+#                    creator = ROOT
+#                }
+#                create_ship = {
+#                    type = ship_hull_light_1
+#                    equipment_variant = "Ardent Class"
+#                    creator = ROOT
+#                }
+#                create_ship = {
+#                    type = ship_hull_cruiser_1
+#                    equipment_variant = "Emerald Class"
+#                    creator = ROOT
+#                }
+#                create_ship = {
+#                    type = ship_hull_cruiser_1
+#                    equipment_variant = "Emerald Class"
+#                    creator = ROOT
+#                }
+#                create_ship = {
+#                    type = ship_hull_cruiser_1
+#                    equipment_variant = "Emerald Class"
+#                    creator = ROOT
+#                }
+#                create_ship = {
+#                    type = ship_hull_cruiser_1
+#                    equipment_variant = "Canterlot Class"
+#                    creator = ROOT
+#                }
+#                create_ship = {
+#                    type = ship_hull_cruiser_1
+#                    equipment_variant = "Canterlot Class"
+#                    creator = ROOT
+#                }
+#            }
+#            else = {
+#                create_ship = {
+#                    type = destroyer_1
+#                    creator = ROOT
+#                }
+#                create_ship = {
+#                    type = destroyer_1
+#                    creator = ROOT
+#                }
+#                create_ship = {
+#                    type = destroyer_1
+#                    creator = ROOT
+#                }
+#                create_ship = {
+#                    type = destroyer_1
+#                    creator = ROOT
+#                }
+#                create_ship = {
+#                    type = destroyer_1
+#                    creator = ROOT
+#                }
+#                create_ship = {
+#                    type = destroyer_1
+#                    creator = ROOT
+#                }
+#                create_ship = {
+#                    type = destroyer_1
+#                    creator = ROOT
+#                }
+#                create_ship = {
+#                    type = destroyer_1
+#                    creator = ROOT
+#                }
+#                create_ship = {
+#                    type = destroyer_1
+#                    creator = ROOT
+#                }
+#                create_ship = {
+#                    type = destroyer_1
+#                    creator = ROOT
+#                }
+#                create_ship = {
+#                    type = light_cruiser_1
+#                    creator = ROOT
+#                }
+#                create_ship = {
+#                    type = light_cruiser_1
+#                    creator = ROOT
+#                }
+#                create_ship = {
+#                    type = light_cruiser_1
+#                    creator = ROOT
+#                }
+#                create_ship = {
+#                    type = heavy_cruiser_1
+#                    creator = ROOT
+#                }
+#                create_ship = {
+#                    type = heavy_cruiser_1
+#                    creator = ROOT
+#                }
+#            }
+#        }
+#    }
+#}
 
 country_event = { #Follow a newer captain as he brings his ship of which he has been given command draw nearer to Fillydelphia's port, where Daybreaker is visible and watching expectantly, which makes the captain nervous, since he's doing his first live fire drill, and of a new ship, too, and he almost has them accidently fire on the city, before realizing his mistake and firing out to sea, which he hopes impresses Daybreaker
     id = solarreworked.92
@@ -2272,19 +2273,19 @@ country_event = { #In curiosity, Daybreaker meets with a ship designer from Mane
     }
 }
 
-country_event = { #After finally getting onto her new flagship (not necessarily the Daybreak), Daybreaker finds that she still enjoys the waves, and is more than pleased with the amount of firepower her flagship has, and since she knows that ponies are watching her, she makes a short speech about how they will reach the ends of the world with her fleet, and then uses the ship to fire over the city, although the explosions past it do cause a tiny bit of collateral damage, which she is fine with
-    id = solarreworked.95
-    title = solarreworked.95.t
-    desc = solarreworked.95.d
-    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.95"}
-
-    is_triggered_only = yes
-
-    option = { #A show's a show.
-        name = solarreworked.95.a
-        add_ideas = SOL_high_seas_empire
-    }
-}
+#country_event = { #After finally getting onto her new flagship (not necessarily the Daybreak), Daybreaker finds that she still enjoys the waves, and is more than pleased with the amount of firepower her flagship has, and since she knows that ponies are watching her, she makes a short speech about how they will reach the ends of the world with her fleet, and then uses the ship to fire over the city, although the explosions past it do cause a tiny bit of collateral damage, which she is fine with
+#    id = solarreworked.95
+#    title = solarreworked.95.t
+#    desc = solarreworked.95.d
+#    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.95"}
+#
+#    is_triggered_only = yes
+#
+#    option = { #A show's a show.
+#        name = solarreworked.95.a
+#        add_ideas = SOL_high_seas_empire
+#    }
+#}
 
 ###Flavour###
 country_event = { #Daybreaker visit's Fluttershy's family, as Zephyr Breeze has been drafted into the military, but he has been dodging it wherever he could, and after a bit of a tense meeting in the library, she basically forces him into the military, as he is an example because he's Fluttershy's brother, and she will not have herself be defied again
@@ -2773,7 +2774,16 @@ country_event = { #A short follow-up event to the forces of the Solar Empire att
     id = solarreworked.153
     title = solarreworked.153.t
     desc = solarreworked.153.d
-    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.153"}
+    immediate = {
+        log = "[GetDateText]: [ROOT.GetName]: event solarreworked.153"
+        hidden_effect = {
+            country_event = {
+                id = solarreworked.420
+                days = 14
+                random_days = 63
+            }
+        }
+    }
 
     is_triggered_only = yes
 
@@ -4011,7 +4021,7 @@ country_event = { #After the submission or conquest of CRY, Daybreaker has a tou
             }
             CRY = {
                 CRY_princess_mi_amore_cadenza = {
-                    add_trait = { trait = cowled_governor ideology = alicornrule }
+                    add_trait = { trait = cowed_governor ideology = alicornrule }
                 }
                 add_popularity = {
                     ideology = fascism
@@ -4025,9 +4035,9 @@ country_event = { #After the submission or conquest of CRY, Daybreaker has a tou
                 CRY = { has_country_leader = { character = EQS_twilight_sparkle ruling_only = yes } }
             }
             CRY = {
+                EQS_twilight_sparkle = { add_trait = { trait = blessed_by_daybreaker ideology = falangism } }
                 add_political_power = 150
             }
-            ###Blessed by Daybreaker trait, +10% political power, +5% party stability, -15% heat attrition
         }
     }
 }
@@ -4042,16 +4052,42 @@ country_event = { #Follow a Lunar Guard soldier as he is on patrol in Rainbow Fa
 
     option = { #Not a sound...
         name = solarreworked.239.a
-        ###Remove Lunarist generals that flee to CRY?
-        CRY = {
+        if = {
+            limit = { tag = EQS }
+            effect_tooltip = {
+                CRY = {
+                    retire_character = EQS_NLR_tempest_wind
+                    retire_character = EQS_NLR_celenite
+                    retire_character = EQS_NLR_midnight_oil
+                    add_popularity = {
+                        ideology = fascism
+                        popularity = 0.1
+                    }
+                    add_war_support = 0.1
+                    add_stability = -0.05
+                }
+            }
+            add_war_support = 0.05
+            add_political_power = 50
+        }
+        else_if = {
+            limit = { tag = CRY }
+            retire_character = EQS_NLR_tempest_wind
+            retire_character = EQS_NLR_celenite
+            retire_character = EQS_NLR_midnight_oil
             add_popularity = {
                 ideology = fascism
                 popularity = 0.1
             }
             add_war_support = 0.1
+            add_stability = -0.05
+            effect_tooltip = {
+                EQS = {
+                    add_war_support = 0.05
+                    add_political_power = 50
+                }
+            }
         }
-        add_war_support = 0.05
-        add_political_power = 50
     }
 }
 
@@ -4959,6 +4995,7 @@ country_event = { #Daybreaker meets with Thundering Hoofbeat, after Blueblood re
             division_template = {
                 name = "Imperial Guardians"
                 is_locked = yes
+                force_allow_recruiting = yes
                 division_cap = 3
                 division_names_group = EQS_GRD_02
                 priority = 0
@@ -5611,7 +5648,7 @@ country_event = { #Queen Velvet is brought forward to Daybreaker, who is rather 
 
     option = { #Now, there is work to be done.
         name = solarreworked.377.a
-        custom_effect_tooltip = SOL_floofy_dear_puppet_tt
+        custom_effect_tooltip = SOL_floofy_deer_puppet_tt
 		if = {
 			limit = {
 				69 = { is_core_of = ROOT }
@@ -6106,7 +6143,7 @@ country_event = { #Follow either inquisitors or regular soldiers or ponies (if n
 }
 
 country_event = { #Sunrise Sparkle arrives within BAT's capital, and a number of thestral leaders have already been brought out in chains, and she takes one look at them before she has them prepared to be executed, as she lists out that that day, Daybreaker's justice against the darkness has finally been served, and she watches without hesitation of them being shot dead
-    id = solarreworked.393 #If Sunrise isn't around, then have a rapidly loyal official instead
+    id = solarreworked.393 #If Sunrise isn't around, then have a rabidly loyal official instead
     title = solarreworked.393.t
     desc = solarreworked.393.d
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.393"}
@@ -6395,7 +6432,7 @@ country_event = { #Ponse Cocktail is surprised in his home by his aide stating h
                     country_leader = {
                         expire = "1965.1.1"
                         ideology = nazism
-                        traits = { cowled_governor }
+                        traits = { cowed_governor }
                     }
                 }
             }
@@ -6508,6 +6545,57 @@ country_event = {
                     restore_previous_manpower = yes
                 }
             }
+        }
+    }
+}
+
+country_event = { #Tempest Wind and some of the other NLR-aligned generals effectively fight their way through a small patrol in the Solar Empire as they flee after Luna, as they are loyal to her and Harmony; they break through without much issue, although a couple are wounded in the process
+    id = solarreworked.420
+    title = solarreworked.420.t
+    desc = solarreworked.420.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.420"}
+
+    is_triggered_only = yes
+
+    option = { #We must fight for true Harmony!
+        name = solarreworked.420
+        effect_tooltip = {
+            EQS_NLR_tempest_wind = { set_nationality = CRY }
+            EQS_NLR_celenite = { set_nationality = CRY }
+            EQS_NLR_midnight_oil = { set_nationality = CRY }
+        }
+        hidden_effect = {
+            CRY = {
+                country_event = {
+                    id = solarreworked.421
+                    days = 5
+                }
+            }
+        }
+    }
+}
+
+country_event = { #Event detailing how a number of officers in Luna's Night Guard have escaped EQS and fled to be with Luna, and have pledged their loyalty to serve CRY so long as Luna is there
+    id = solarreworked.421 #Alternate would be Luna being called by Cadance to the Crystal Court, where a number of her officers have been brought forward, because of an altercation they caused at the border, since they were still in a state of fight for flight, and she gets things sorted out with basically them only working for her and she being entirely responsible for them
+    title = solarreworked.421.t
+    desc = solarreworked.421.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.421"}
+
+    is_triggered_only = yes
+
+    option = { #More help is always appreciated.
+        name = solarreworked.421
+        every_possible_country = {
+            limit = {
+                has_character = EQS_NLR_tempest_wind
+                has_character = EQS_NLR_celenite
+                has_character = EQS_NLR_midnight_oil
+            }
+            EQS_NLR_tempest_wind = { set_nationality = ROOT }
+            EQS_NLR_celenite = { set_nationality = ROOT }
+            EQS_NLR_midnight_oil = { set_nationality = ROOT }
         }
     }
 }

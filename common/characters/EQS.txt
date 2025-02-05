@@ -1987,6 +1987,7 @@ characters={
 				OR = {
 					has_global_flag = celestia_and_luna_fused
 					original_tag = NLR
+					original_tag = CRY
 				}
 			}
 		}
@@ -2001,7 +2002,7 @@ characters={
 			}
 		}
 		corps_commander = {
-			traits = { night_guard commando panzer_leader pony_race_trait }
+			traits = { night_guard commando panzer_leader thestral_race_trait }
 			skill = 3
 			attack_skill = 3
 			defense_skill = 2
@@ -2013,6 +2014,7 @@ characters={
 					has_global_flag = celestia_and_luna_fused
 					original_tag = NLR
 					original_tag = BAT
+					original_tag = CRY
 				}
 			}
 		}
@@ -2096,6 +2098,7 @@ characters={
 				OR = {
 					has_global_flag = celestia_and_luna_fused
 					original_tag = NLR
+					original_tag = CRY
 				}
 			}
 		}
