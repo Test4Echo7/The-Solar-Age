@@ -319,3 +319,38 @@ EQS_no_equus_nation_other_than_EQS_zebrica = {
 EQS_state_has_been_laser_beamed = {
 	has_state_flag = SOL_firing_mah_lazaaah
 }
+EQS_has_completed_all_fallen_hero_focuses = {
+	has_completed_focus = SOL_empress_protectress
+	has_completed_focus = SOL_law_of_iron
+	has_completed_focus = SOL_required_productivity
+	has_completed_focus = SOL_imperial_oversight_board
+	has_completed_focus = SOL_imperial_bureaucracy
+	has_completed_focus = SOL_defence_of_empire_act
+	has_completed_focus = SOL_solaris_speculatores
+	has_completed_focus = SOL_expand_imperial_arsenals
+	OR = {
+		has_completed_focus = SOL_government_of_one
+		has_completed_focus = SOL_honest_cabinet
+	}
+	has_completed_focus = SOL_forgiveness_available
+	has_completed_focus = SOL_legion_of_labor
+	has_completed_focus = SOL_walks_of_life
+	OR = {
+		has_completed_focus = SOL_utilize_element_bearers
+		has_completed_focus = SOL_reclaim_elements_mantle
+	}
+	has_completed_focus = SOL_Strong_Imperial_Government
+	has_completed_focus = SOL_ponykinds_savior
+	has_completed_focus = SOL_ultimate_sacrifice
+	has_completed_focus = SOL_magics_heart
+	has_completed_focus = SOL_encourage_tattling
+	OR = {
+		has_completed_focus = SOL_not_own_mistress
+		has_completed_focus = SOL_free_minds
+	}
+	OR = {
+		has_completed_focus = SOL_help_themselves
+		has_completed_focus = SOL_Protect_the_Weak
+	}
+	has_completed_focus = SOL_Freedom_from_Fear
+}

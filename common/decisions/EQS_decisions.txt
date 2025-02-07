@@ -1610,6 +1610,25 @@ demobilization = {
 	}
 }
 political_actions = {
+	SOL_corrupt_luna = {
+		allowed = {
+			original_tag = EQS
+		}
+		available = {
+			is_EQS_SOL = yes
+		}
+		visible = {
+			#is_EQS_SOL = yes
+			#EQS_has_completed_all_fallen_hero_focuses = yes
+			#has_character = EQS_princess_luna
+		}
+		cost = 25
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SOL_corrupt_luna"
+			country_event = solarreworked.415
+		}
+	}
 	SOL_order_sunrise_to_front = {
 		allowed = {
 			original_tag = EQS
@@ -1706,6 +1725,9 @@ political_actions = {
 		}
 		available = {
 			is_EQS_SOL = yes
+			EQS_civil_war_ended = yes
+		}
+		visible = {
 			EQS_civil_war_ended = yes
 		}
 		cost = 100

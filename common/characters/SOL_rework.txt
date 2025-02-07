@@ -633,6 +633,26 @@ characters = {
 			visible = { has_country_flag = SOL_empresss_protectors }
 		}
 	}
+	EQS_queen_argynnis = {
+		name = chn_queen_argynnis
+		gender = female
+		portraits = {
+			army = {
+				large = "gfx/leaders/EQS/Queen_Argynnis.tga"
+				small = GFX_idea_CHN_queen_argynnis
+			}
+		}
+
+		field_marshal = {
+			traits = { changeling_race_trait harsh_leader expert_delegator fast_planner aggressive_assaulter }
+			skill = 5
+			attack_skill = 5
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 6
+			visible = { has_country_flag = SOL_bugs_in_the_belfry }
+		}
+	}
 
 	###Foreign nation characters###
 	KIR_daybreaker = {

@@ -328,6 +328,8 @@
   SOL_establish_imperium_griffonia_desc:0 "Griffonia has been a continent of struggle and strife dating back to before the dawn of the Griffonian Empire. In the midst of that chaos, ponies were still able to establish themselves, but their culture veered drastically from the holy and pure lands of the Solar Empire. With all of the continent in her grasp, the God-Empress shall ensure there is a lasting peace in the lands of the griffons, and will enforce the Sun's dominance above the false pantheon by which so many have been wooed."
   SOL_establish_imperium_zebrica:0 "Declare Zebrica's Pacification"
   SOL_establish_imperium_zebrica_desc:0 "The massive continent of Zebrica has a number of diverse regions, but has remained disunited for centuries. Tyranny has been the norm for those who wished to establish a legacy larger and more powerful than Kiria, with the recent attempt by the Storm King to create a world-spanning empire falling to dust within years. However, the God-Empress no mere mortal, and with the continent brought under her hoof, it is time to create a regime that will last a thousand generations and further on into the future!"
+  SOL_corrupt_luna:0 "Enlighten Luna"
+  SOL_corrupt_luna_desc:0 "While some of our ponies have grown to revile anything of darkness, the Empress still believes there is hope. Everything she has done for the Empire, she has done for Harmony and for her ponies, just like before she ascended. With the return of her sister home, there is now opportunity to bring Luna around to see things as the Empress does. Everypony sees the light at some point."
 
   ###Flags and Custom Tooltips###
   owns_all_cores_subject_tt_NOT:0 "Not all core states are owned by §Y[ROOT.GetNameDef]§! or its subjects."

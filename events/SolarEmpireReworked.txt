@@ -5635,6 +5635,13 @@ country_event = { #The queens that supported Chrysalis are brought before Daybre
         name = solarreworked.376.a
         add_stability = -0.15
         add_ideas = SOL_united_queens
+        hidden_effect = {
+            country_event = {
+                id = solarreworked.520
+                days = 21
+                random_days = 14
+            }
+        }
     }
 }
 
@@ -5789,7 +5796,7 @@ country_event = { #Follow River Swirl as she and a small number of leaders and s
     }
 }
 
-country_event = { #Daybreaker enters an interrogation or torture chamber, where the father of Molly is currently held, and who has so far resisted all attempts at breaking him, and while he insults her, Daybreaker decides to take out a bit of her annoyance on him, before stating taht she will probably just use Molly instead, as she is certain Molly can break, which finally gets at him, and he states he will do what she wants, so long as Molly is safe
+country_event = { #Daybreaker enters an interrogation or torture chamber, where the father of Molly is currently held, and who has so far resisted all attempts at breaking him, and while he insults her, Daybreaker decides to take out a bit of her annoyance on him, before stating that she will probably just use Molly instead, as she is certain Molly can break, which finally gets at him, and he states he will do what she wants, so long as Molly is safe
     id = solarreworked.382
     title = solarreworked.382.t
     desc = solarreworked.382.d
@@ -6546,6 +6553,83 @@ country_event = {
                 }
             }
         }
+    }
+}
+
+country_event = { #Luna "corruption" events
+    id = solarreworked.415
+    title = solarreworked.415.t
+    desc = solarreworked.415.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.415"}
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.415.a
+        hidden_effect = {
+            country_event = {
+                id = solarreworked.416
+                days = 12
+            }
+        }
+    }
+}
+
+country_event = {
+    id = solarreworked.416
+    title = solarreworked.416.t
+    desc = solarreworked.416.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.416"}
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.416.a
+        hidden_effect = {
+            country_event = {
+                id = solarreworked.417
+                days = 7
+            }
+        }
+    }
+}
+
+country_event = {
+    id = solarreworked.417
+    title = solarreworked.417.t
+    desc = solarreworked.417.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.417"}
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.417.a
+        hidden_effect = {
+            country_event = {
+                id = solarreworked.418
+                days = 10
+            }
+        }
+    }
+}
+
+country_event = {
+    id = solarreworked.418
+    title = solarreworked.418.t
+    desc = solarreworked.418.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.418"}
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.418.a
+        add_stability = -0.1
+        add_war_support = -0.1
+        add_political_power = 75
     }
 }
 
@@ -9431,6 +9515,28 @@ country_event = { #SOL gets back KLG's answer and will either annex it, give it 
                 target = FROM
             }
         }
+    }
+}
+
+country_event = { #Queen Argynnis comes in disguise at first to plead for Vraks' further independence in exchange for her total loyalty, as Daybreaker is more mighty than Chrysalis or any other changelings
+    id = solarreworked.520
+    title = solarreworked.520.t
+    desc = solarreworked.520.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.520"}
+
+    is_triggered_only = yes
+
+    option = { #There is clearly something more at play. Enjoy your new supervision instead.
+        name = solarreworked.520.a
+        add_stability = 0.05
+        add_political_power = 50
+    }
+    option = { #A pet changeling? I could get used to this idea.
+        name = solarreworked.520.b
+        set_country_flag = SOL_bugs_in_the_belfry
+        add_stability = -0.1
+        add_war_support = -0.15
+        custom_effect_tooltip = queen_argynnis_stats_tp
     }
 }
 
