@@ -218,6 +218,10 @@ SOL_release_HIP = {
             add_core_of = HIP
         }
     }
+    if = {
+        limit = { 692 = { is_core_of = ROOT } }
+        set_temp_variable = { SOL_manebra_core = 1 }
+    }
     release_autonomy = {
         target = HIP
         autonomy_state = autonomy_reichsprotectorate
@@ -225,6 +229,17 @@ SOL_release_HIP = {
     HIP = {
         set_cosmetic_tag = HIP_SOL
         set_country_flag = is_solar_puppet
+    }
+    hidden_effect = {
+        if = {
+            limit = {
+                check_variable = { SOL_manebra_core = 1 }
+            }
+            692 = {
+                transfer_state_to = ROOT
+                add_core_of = ROOT
+            }
+        }
     }
 }
 SOL_release_CTH = {

@@ -584,6 +584,8 @@
   wounded_monarch:0 "Wounded"
   goddess_of_nightmares:0 "Goddess of Nightmares"
   blessed_by_daybreaker:0 "Blessed by Daybreaker"
+  imperial_governor:0 "Imperial Governor"
+  imperial_governess:0 "Imperial Governess"
 
   ###Advisor Traits###
   eea_chancellor:0 "Head of the EEA"

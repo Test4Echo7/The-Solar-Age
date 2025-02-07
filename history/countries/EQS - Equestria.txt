@@ -499,6 +499,11 @@ set_autonomy = {
 	autonomous_state = autonomy_dominion
 }
 
+country_event = {
+	id = solarreworked.521
+	days = 1
+}
+
 add_to_tech_sharing_group = equestrian_research
 
 set_stability = 0.65

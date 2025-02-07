@@ -2464,21 +2464,20 @@ country_event = { #Daybreaker marches and enters into the chambers of Grover, wh
 
     option = { #I shall watch the Empire in your stead.
         name = solarreworked.120.a
-        hidden_effect = {
-            every_possible_country = {
-                limit = {
-                    has_character = GRI_daybreaker
-                }
-                GRI_daybreaker = {
-                    set_nationality = GRD
-                }
-            }
-        }
 		GRD = {
             set_country_flag = is_solar_puppet
             set_country_flag = SOL_established_personal_union
             get_current_government_type = yes
             set_cosmetic_tag = GRI_SOL
+            if = {
+                limit = {
+                    NOT = { has_character = GRI_daybreaker }
+                }
+                every_possible_country = {
+                    limit = { has_character = GRI_daybreaker }
+                }
+                GRI_daybreaker = { set_nationality = GRD }
+            }
 			if = {
 				limit = { ROOT = { has_completed_focus = SOL_god_empress } }
 				GRI_daybreaker = {
@@ -2515,7 +2514,7 @@ country_event = { #Daybreaker marches and enters into the chambers of Grover, wh
 				}
 			}
             EQS = {
-                set_autonomy = {
+                release_autonomy = {
                     target = GRD
                     autonomous_state = autonomy_personal_union_eaw
                     end_wars = no
@@ -2548,21 +2547,20 @@ country_event = { #Daybreaker smugly walks through Griffonstone, in a parade wit
 
     option = { #Kneel for your new Empress!
         name = solarreworked.121.a
-        hidden_effect = {
-            every_possible_country = {
-                limit = {
-                    has_character = GRI_daybreaker
-                }
-                GRI_daybreaker = {
-                    set_nationality = GRD
-                }
-            }
-		}
 		GRD = {
             set_country_flag = is_solar_puppet
             set_country_flag = SOL_established_personal_union
             get_current_government_type = yes
             set_cosmetic_tag = GRI_SOL
+            if = {
+                limit = {
+                    NOT = { has_character = GRI_daybreaker }
+                }
+                every_possible_country = {
+                    limit = { has_character = GRI_daybreaker }
+                }
+                GRI_daybreaker = { set_nationality = GRD }
+            }
 			if = {
 				limit = { ROOT = { has_completed_focus = SOL_god_empress } }
 				GRI_daybreaker = {
@@ -2598,8 +2596,8 @@ country_event = { #Daybreaker smugly walks through Griffonstone, in a parade wit
 					long_name = EQS_fascism_party
 				}
 			}
-			EQS = {
-                set_autonomy = {
+            EQS = {
+                release_autonomy = {
                     target = GRD
                     autonomous_state = autonomy_personal_union_eaw
                     end_wars = no
@@ -4117,17 +4115,7 @@ country_event = { #A clerk in the Crystal Palace is surprised when a number of S
     id = solarreworked.241
     title = solarreworked.241.t
     desc = solarreworked.241.d
-    immediate = {
-        log = "[GetDateText]: [ROOT.GetName]: event solarreworked.241"
-        if = {
-            limit = {
-                tag = EQS
-            }
-            CRY_triplicate = { set_nationality = CRY }
-			CRY_morning_mist = { set_nationality = CRY }
-			CRY_evening_shower = { set_nationality = CRY }
-        }
-    }
+    immediate = { log = "[GetDateText]: [ROOT.GetName]: event solarreworked.241" }
 
     is_triggered_only = yes
 
@@ -4160,11 +4148,6 @@ country_event = { #Shining Armor is taken out of his house arrest, but still bou
 
     option = { #Now go think about what you've done.
         name = solarreworked.242.a
-        hidden_effect = {
-			CRY_nightshade = { set_nationality = CRY }
-			CRY_mercy = { set_nationality = CRY }
-			CRY_beryl_scabbard = { set_nationality = CRY }
-		}
 		CRY = {
 			add_ideas = SOL_dictated_directions
 			CRY_shining_armour = {
@@ -5670,6 +5653,10 @@ country_event = { #Queen Velvet is brought forward to Daybreaker, who is rather 
 				target = OLE
 				autonomy_state = autonomy_reichsprotectorate
 			}
+			OLE = {
+                set_country_flag = is_solar_puppet
+                set_cosmetic_tag = OLE_SOL
+			}
 			every_possible_country = {
                 limit = { has_character = OLE_queen_velvet }
                 if = {
@@ -5680,6 +5667,7 @@ country_event = { #Queen Velvet is brought forward to Daybreaker, who is rather 
                             country_leader = {
                                 ideology = falangism
                                 expire = "1965.1.1"
+                                traits = { imperial_governess }
                             }
                         }
                     }
@@ -5691,6 +5679,7 @@ country_event = { #Queen Velvet is brought forward to Daybreaker, who is rather 
                             country_leader = {
                                 ideology = nazism
                                 expire = "1965.1.1"
+                                traits = { imperial_governess }
                             }
                         }
                     }
@@ -5811,6 +5800,13 @@ country_event = { #Daybreaker enters an interrogation or torture chamber, where 
             target = DMT
             autonomous_state = autonomy_reichskommissariat
         }
+        DMT = {
+            set_country_flag = is_solar_puppet
+            set_cosmetic_tag = DMT_SOL
+            hidden_effect = {
+                DMT_rover_diamondshield = { add_trait = { trait = imperial_governor ideology = kratocracy } }
+            }
+        }
     }
 }
 
@@ -5903,11 +5899,17 @@ country_event = { #Daybreaker personally arrives in the Kaiserschloss, as it's h
 
     option = { #I thought that was a hasty rejection.
         name = solarreworked.387.a
-        hidden_effect = {
-            GRI_trinary_scribble = { set_nationality = GRD }
-            GRI_gratuity = { set_nationality = GRD }
-        }
         GRD = {
+            if = {
+                limit = {
+                    NOT = { has_character = GRI_gratuity }
+                    NOT = { has_character = GRI_trinary_scribble }
+                }
+                hidden_effect = {
+                    GRI_trinary_scribble = { set_nationality = ROOT }
+                    GRI_gratuity = { set_nationality = ROOT }
+                }
+            }
             add_ideas = SOL_imperial_corrections
             set_country_flag = GRI_SOL_imperial_advisors
             custom_effect_tooltip = available_political_advisor
@@ -6061,13 +6063,18 @@ country_event = { #Daybreaker meets with Prince Faisal of Saddle Arabia, who was
 			}
 		}
 		SDL = {
+            hidden_effect = {
+                SDL_grand_prince_faisal_ibn_saddle = {
+                    add_trait = { trait = imperial_governor ideology = despotism }
+                }
+            }
 			set_cosmetic_tag = SDL_SOL
 			restore_previous_government_type = yes
 		}
     }
 }
 
-country_event = { #A radio broadcast of Daybreaker is sent over the airwaves of the Saddle Arabian peninsual, as she claims the title of calipha of some religion the horses once followed, which was also a corruption of her as Celestia, as she visited there at one point, and she claims that anypony or horse who resists will feel her wrath
+country_event = { #A radio broadcast of Daybreaker is sent over the airwaves of the Saddle Arabian peninsula, as she claims the title of calipha of some religion the horses once followed, which was also a corruption of her as Celestia, as she visited there at one point, and she claims that anypony or horse who resists will feel her wrath
     id = solarreworked.389
     title = solarreworked.389.t
     desc = solarreworked.389.d
@@ -6090,6 +6097,9 @@ country_event = { #A radio broadcast of Daybreaker is sent over the airwaves of 
 			}
 		}
 		YMN = {
+            hidden_effect = {
+                YMN_omar_bin_asim = { add_trait = { trait = imperial_governor ideology = despotism } }
+            }
 			restore_previous_government_type = yes
 			set_cosmetic_tag = YMN_SOL
 		}
@@ -7103,10 +7113,6 @@ country_event = { #Arcane Nova enters into Midnight Poppy's office again, bringi
 
     option = { #I'd suggest not insulting your commander.
         name = solarreworked.442.a
-        hidden_effect = {
-			EQC_full_band = { set_nationality = EQC }
-			EQC_triple_strike = { set_nationality = EQC }
-		}
 		EQC = {
 			add_war_support = 0.05
 			custom_effect_tooltip = full_band_stats_tp
@@ -9090,7 +9096,37 @@ country_event = { #Event for deciding the fate of MDL, and whether it is held by
             target = MDL
             autonomous_state = autonomy_reichsprotectorate
         }
-        MDL = { set_cosmetic_tag = MDL_SOL }
+        MDL = {
+            set_cosmetic_tag = MDL_SOL
+            set_country_flag = is_solar_puppet
+            hidden_effect = {
+                MDL_velvet_qamar = {
+                    if = {
+                        limit = {
+                            ROOT = { has_completed_focus = SOL_god_empress }
+                        }
+                        add_country_leader_role = {
+                            promote_leader = yes
+                            country_leader = {
+                                ideology = falangism
+                                expire = "1965.1.1"
+                                traits = { imperial_governor }
+                            }
+                        }
+                    }
+                    else = {
+                        add_country_leader_role = {
+                            promote_leader = yes
+                            country_leader = {
+                                ideology = nazism
+                                expire = "1965.1.1"
+                                traits = { imperial_governor }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -9537,6 +9573,31 @@ country_event = { #Queen Argynnis comes in disguise at first to plead for Vraks'
         add_stability = -0.1
         add_war_support = -0.15
         custom_effect_tooltip = queen_argynnis_stats_tp
+    }
+}
+
+country_event = { #Hidden event that will move all foreign characters to their respective countries to avoid wonkiness and also editing other country's history files
+    id = solarreworked.521
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.521"}
+
+    hidden = yes
+    is_triggered_only = yes
+
+    option = {
+        GRI_daybreaker = { set_nationality = GRD }
+        GRI_trinary_scribble = { set_nationality = GRD }
+        GRI_gratuity = { set_nationality = GRD }
+        CRY_triplicate = { set_nationality = CRY }
+        CRY_morning_mist = { set_nationality = CRY }
+        CRY_evening_shower = { set_nationality = CRY }
+        CRY_nightshade = { set_nationality = CRY }
+        CRY_mercy = { set_nationality = CRY }
+        CRY_beryl_scabbard = { set_nationality = CRY }
+        EQC_full_band = { set_nationality = EQC }
+        EQC_triple_strike = { set_nationality = EQC }
+        EQC_long_cast = { set_nationality = EQC }
+        EQC_dot_form = { set_nationality = EQC }
+        EQC_sharp_treble = { set_nationality = EQC }
     }
 }
 

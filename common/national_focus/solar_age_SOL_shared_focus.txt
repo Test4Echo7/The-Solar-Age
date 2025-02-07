@@ -5365,11 +5365,17 @@ shared_focus = {
 					target = MDL
 					autonomy_state = autonomy_reichsprotectorate
 				}
+				MDL = {
+					set_country_flag = is_solar_puppet
+					set_cosmetic_tag = MDL_SOL
+				}
 			}
 			transfer_state = 737
 			transfer_state = 734
 			set_country_flag = SOL_can_core_MGY_port_states
 			MGY = {
+				set_cosmetic_tag = MGY_SOL
+				set_country_flag = is_solar_puppet
 				transfer_state = 763
 				transfer_state = 770
 				transfer_state = 766
@@ -5902,8 +5908,10 @@ shared_focus = {
 		is_subject = no
 		389 = {
 			owner = {
-				tag = EQS
-				is_subject_of = ROOT
+				OR = {
+					tag = EQS
+					is_subject_of = ROOT
+				}
 			}
 		}
 	}
@@ -9504,10 +9512,6 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_allies_in_high_places"
-		hidden_effect = {
-			EQC_dot_form = { set_nationality = ROOT }
-			EQC_sharp_treble = { set_nationality = ROOT }
-		}
 		EQC = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = dot_form
@@ -9685,7 +9689,6 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_cadet_militarium"
-		hidden_effect = { EQC_long_cast = { set_nationality = EQC } }
 		EQC = {
 			add_ideas = SOL_correct_warfare
 			set_country_flag = EQC_snack_break_time
