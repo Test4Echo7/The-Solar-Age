@@ -1495,6 +1495,43 @@ EQS_GRD_assistance = {
         }
         ai_will_do = { factor = 100 }
     }
+    EQS_GRD_demand_return_of_pony_lands = {
+        allowed = { tag = EQS }
+        visible = {
+            any_state = {
+                is_core_of = SRS
+                is_owned_and_controlled_by = GRD
+            }
+            #OR = {
+            #    has_completed_focus = SOL_educate_kaiser
+            #    has_completed_focus = SOL_last_grover
+            #}
+            GRD = {
+                OR = {
+                    is_subject_of = ROOT
+                    is_in_faction_with = ROOT
+                }
+            }
+            NTR = {
+                is_subject_of = ROOT
+            }
+        }
+
+        highlight_states = {
+            highlight_states_trigger = {
+                is_core_of = SRS
+            }
+        }
+
+        days_re_enable = 365
+
+        complete_effect = {
+            log = "[GetDateText]: [ROOT.GetName] Decision EQS_demand_return_of_pony_lands"
+            GRD = {
+                country_event = solarreworked.522
+            }
+        }
+    }
     EQS_GRD_end_southern_autonomy = {
         allowed = { tag = EQS }
         available = {
@@ -3750,7 +3787,9 @@ EQS_pan_pony_empire_category = {
         complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision SOL_release_GRF"
 			hidden_effect = {
-                GRF_reyhard_ironclaw = { add_trait = { trait = imperial_governor ideology = nazism } }
+                GRF = {
+                    GRF_reyhard_ironclaw = { add_trait = { trait = imperial_governor ideology = nazism } }
+                }
 			}
 			SOL_release_GRF = yes
 		}
@@ -3811,6 +3850,16 @@ EQS_pan_pony_empire_category = {
 			release_autonomy = {
                 target = NTR
                 autonomous_state = autonomy_reichsprotectorate
+			}
+			hidden_effect = {
+                every_state = {
+                    limit = {
+                        is_core_of = SRS
+                        is_controlled_by = ROOT
+                    }
+                    transfer_state_to = NTR
+                    add_core_of = NTR
+                }
 			}
 			NTR = {
                 set_cosmetic_tag = NTR_SOL
@@ -3877,7 +3926,7 @@ EQS_pan_pony_empire_category = {
 			hidden_effect = {
                 FBK = {
                     FBK_hermane_gering = {
-                        add_trait = { trait = imperial_governor ideology = kratocracy }
+                        add_trait = { trait = imperial_governor ideology = kratokracy }
                     }
                 }
 			}
@@ -4044,27 +4093,29 @@ EQS_pan_pony_empire_category = {
             log = "[GetDateText]: [Root.GetName]: Decision SOL_release_HLR_super_puppet"
             SOL_release_HLR = yes
             hidden_effect = {
-                HLR_ostwald_vind = {
-                    if = {
-                        limit = {
-                            ROOT = { has_completed_focus = SOL_god_empress }
-                        }
-                        add_country_leader_role = {
-                            promote_leader = yes
-                            country_leader = {
-                                ideology = falangism
-                                expire = "1965.1.1"
-                                traits = { imperial_governor }
+                HLR = {
+                    HLR_ostwald_vind = {
+                        if = {
+                            limit = {
+                                ROOT = { has_completed_focus = SOL_god_empress }
+                            }
+                            add_country_leader_role = {
+                                promote_leader = yes
+                                country_leader = {
+                                    ideology = falangism
+                                    expire = "1965.1.1"
+                                    traits = { imperial_governor }
+                                }
                             }
                         }
-                    }
-                    else = {
-                        add_country_leader_role = {
-                            promote_leader = yes
-                            country_leader = {
-                                ideology = nazism
-                                expire = "1965.1.1"
-                                traits = { imperial_governor }
+                        else = {
+                            add_country_leader_role = {
+                                promote_leader = yes
+                                country_leader = {
+                                    ideology = nazism
+                                    expire = "1965.1.1"
+                                    traits = { imperial_governor }
+                                }
                             }
                         }
                     }
@@ -4517,7 +4568,7 @@ EQS_pan_pony_empire_category = {
             log = "[GetDateText]: [Root.GetName]: Decision SOL_release_ZAR_super_puppet"
             SOL_release_ZAR = yes
             hidden_effect = {
-                ZAR = { ZAR_zawgha_amsarmud = { add_trait = { trait = imperial_governor ideology = kratocracy } } }
+                ZAR = { ZAR_zawgha = { add_trait = { trait = imperial_governor ideology = kratokracy } } }
             }
         }
 	}
@@ -4713,7 +4764,7 @@ EQS_pan_pony_empire_category = {
 			SOL_release_MTA = yes
 			hidden_effect = {
                 MTA = {
-                    MTA_taous_bin_habal = {
+                    MTA_taous_bin_hanbal = {
                         if = {
                             limit = {
                                 ROOT = { has_completed_focus = SOL_god_empress }

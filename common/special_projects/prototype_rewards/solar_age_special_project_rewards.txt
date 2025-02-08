@@ -114,7 +114,7 @@ sp_sun_laser_solar_concentration_application = {
     narrative = {
         #Concentrating all the sunlight gives new light to ways to improve the use of crystal lenses for different purposes
         name = EQS_lazah
-        name = EQS_lazah_desc
+        desc = EQS_lazah_desc
     }
 
     threshold = {
@@ -177,7 +177,7 @@ sp_sun_laser_faulty_concentration_spell = {
     narrative = {
         #Early tests point to the incantations to be slightly off and it takes more magical energy to focus on forming the laser, which requires rectification
         name = EQS_performance_anxiety
-        name = EQS_performance_anxiety_desc
+        desc = EQS_performance_anxiety_desc
     }
 
     threshold = {

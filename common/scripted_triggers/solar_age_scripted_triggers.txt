@@ -320,7 +320,7 @@ EQS_state_has_been_laser_beamed = {
 	has_state_flag = SOL_firing_mah_lazaaah
 }
 EQS_has_completed_all_fallen_hero_focuses = {
-	has_completed_focus = SOL_empress_protectress
+	has_completed_focus = SOL_empress_protector
 	has_completed_focus = SOL_law_of_iron
 	has_completed_focus = SOL_required_productivity
 	has_completed_focus = SOL_imperial_oversight_board

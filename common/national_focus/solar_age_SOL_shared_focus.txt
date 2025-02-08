@@ -5368,6 +5368,31 @@ shared_focus = {
 				MDL = {
 					set_country_flag = is_solar_puppet
 					set_cosmetic_tag = MDL_SOL
+					hidden_effect = {
+						MDL_velvet_qamar = {
+							if = {
+								limit = { ROOT = { has_completed_focus = SOL_god_empress } }
+								add_country_leader_role = {
+									promote_leader = yes
+									country_leader = {
+										ideology = falangism
+										expire = "1965.1.1"
+										traits = { imperial_governess }
+									}
+								}
+							}
+							else = {
+								add_country_leader_role = {
+									promote_leader = yes
+									country_leader = {
+										ideology = nazism
+										expire = "1965.1.1"
+										traits = { imperial_governess }
+									}
+								}
+							}
+						}
+					}
 				}
 			}
 			transfer_state = 737
@@ -5382,6 +5407,11 @@ shared_focus = {
 				add_state_core = 763
 				add_state_core = 770
 				add_state_core = 766
+				hidden_effect = {
+					MGY_far_hook = {
+						add_trait = { trait = imperial_governor ideology = falangsim }
+					}
+				}
 			}
 		}
 	}

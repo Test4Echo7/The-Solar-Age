@@ -385,10 +385,10 @@ we_have_assumed_control = {
             tooltip = EQS_is_that_a_rush_reference_tt
             is_EQS_SOL = yes
             has_power_balance = {
-                id = EQS_vestments_of_power
+                id = EQS_vestments_of_power_bop
             }
             power_balance_value = {
-                id = EQS_vestments_of_power
+                id = EQS_vestments_of_power_bop
                 value < -0.999
             }
         }

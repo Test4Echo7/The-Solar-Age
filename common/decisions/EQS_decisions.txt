@@ -1618,9 +1618,9 @@ political_actions = {
 			is_EQS_SOL = yes
 		}
 		visible = {
-			#is_EQS_SOL = yes
-			#EQS_has_completed_all_fallen_hero_focuses = yes
-			#has_character = EQS_princess_luna
+			is_EQS_SOL = yes
+			EQS_has_completed_all_fallen_hero_focuses = yes
+			has_character = EQS_princess_luna
 		}
 		cost = 25
 		fire_only_once = yes

@@ -2517,8 +2517,6 @@ country_event = { #Daybreaker marches and enters into the chambers of Grover, wh
                 release_autonomy = {
                     target = GRD
                     autonomous_state = autonomy_personal_union_eaw
-                    end_wars = no
-                    end_civil_wars = yes
                 }
             }
             restore_previous_government_type = yes
@@ -2600,8 +2598,6 @@ country_event = { #Daybreaker smugly walks through Griffonstone, in a parade wit
                 release_autonomy = {
                     target = GRD
                     autonomous_state = autonomy_personal_union_eaw
-                    end_wars = no
-                    end_civil_wars = yes
                 }
             }
             restore_previous_government_type = yes
@@ -5804,7 +5800,7 @@ country_event = { #Daybreaker enters an interrogation or torture chamber, where 
             set_country_flag = is_solar_puppet
             set_cosmetic_tag = DMT_SOL
             hidden_effect = {
-                DMT_rover_diamondshield = { add_trait = { trait = imperial_governor ideology = kratocracy } }
+                DMT_rover_diamondshield = { add_trait = { trait = imperial_governor ideology = kratokracy } }
             }
         }
     }
@@ -9110,7 +9106,7 @@ country_event = { #Event for deciding the fate of MDL, and whether it is held by
                             country_leader = {
                                 ideology = falangism
                                 expire = "1965.1.1"
-                                traits = { imperial_governor }
+                                traits = { imperial_governess }
                             }
                         }
                     }
@@ -9120,7 +9116,7 @@ country_event = { #Event for deciding the fate of MDL, and whether it is held by
                             country_leader = {
                                 ideology = nazism
                                 expire = "1965.1.1"
-                                traits = { imperial_governor }
+                                traits = { imperial_governess }
                             }
                         }
                     }
@@ -9598,6 +9594,89 @@ country_event = { #Hidden event that will move all foreign characters to their r
         EQC_long_cast = { set_nationality = EQC }
         EQC_dot_form = { set_nationality = EQC }
         EQC_sharp_treble = { set_nationality = EQC }
+    }
+}
+
+country_event = { #Short event of SOL demanding that the SRS territory which NTR has claimed be given, since it's pony land
+    id = solarreworked.522
+    title = solarreworked.522.t
+    desc = solarreworked.522.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.522"}
+
+    is_triggered_only = yes
+
+    option = { #It is their right and only fair.
+        name = solarreworked.522.a
+        ai_chance = {
+            factor = 2
+        }
+        effect_tooltip = {
+            every_state = {
+                limit = {
+                    is_core_of = SRS
+                    is_owned_and_controlled_by = ROOT
+                }
+                add_core_of = NTR
+                NTR = { transfer_state = PREV.id }
+            }
+        }
+        set_country_flag = SOL_GRD_submitted_territory
+        hidden_effect = {
+            EQS = {
+                country_event = {
+                    id = solarreworked.523
+                    days = 3
+                }
+            }
+        }
+    }
+    option = { #It is ours! Who are they to demand this?!
+        name = solarreworked.522.b
+        ai_chance = {
+            factor = 1
+            modifier = {
+                factor = 0
+                is_subject_of = EQS
+            }
+        }
+        set_country_flag = SOL_GRD_refused_territory
+        hidden_effect = {
+            EQS = {
+                country_event = {
+                    id = solarreworked.523
+                    days = 3
+                }
+            }
+        }
+    }
+}
+
+country_event = { #SOL receives GRD's response about their demands
+    id = solarreworked.523
+    title = solarreworked.523.t
+    desc = solarreworked.523.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.523"}
+
+    is_triggered_only = yes
+
+    option = { #Good to see they're reasonable.
+        name = solarreworked.523.a
+        trigger = { GRD = { has_country_flag = SOL_GRD_submitted_territory } }
+        FROM = { clr_country_flag = SOL_GRD_submitted_territory }
+        every_state = {
+            limit = {
+                is_core_of = SRS
+                is_owned_and_controlled_by = FROM
+            }
+            add_core_of = NTR
+            NTR = { transfer_state = PREV.id }
+        }
+    }
+    option = { #We will have it back, one way or another...
+        name = solarreworked.523.b
+        trigger = { GRD = { has_country_flag = SOL_GRD_refused_territory } }
+        FROM = { clr_country_flag = SOL_GRD_refused_territory }
+        add_political_power = -25
     }
 }
 

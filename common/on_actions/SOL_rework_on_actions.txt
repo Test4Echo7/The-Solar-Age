@@ -636,53 +636,53 @@ on_actions = {
                     set_cosmetic_tag = ARC_SOL
                 }
             }
-            if = {
-                limit = {
-                    NTR = { is_subject_of = EQS }
-                    EQS = { is_EQS_SOL = yes }
-                    AND = {
-                        OR = {
-                            GRD = { is_subject_of = EQS }
-                            SRS = { is_subject_of = EQS }
-                        }
-                        522 = {
-                            OR = {
-                                is_owned_and_controlled_by = SRS
-                                is_owned_and_controlled_by = GRD
-                            }
-                        }
-                        561 = {
-                            OR = {
-                                is_owned_and_controlled_by = SRS
-                                is_owned_and_controlled_by = GRD
-                            }
-                        }
-                        542 = {
-                            OR = {
-                                is_owned_and_controlled_by = SRS
-                                is_owned_and_controlled_by = GRD
-                            }
-                        }
-                        585 = {
-                            OR = {
-                                is_owned_and_controlled_by = SRS
-                                is_owned_and_controlled_by = GRD
-                            }
-                        }
-                        601 = {
-                            OR = {
-                                is_owned_and_controlled_by = SRS
-                                is_owned_and_controlled_by = GRD
-                            }
-                        }
-                    }
-                }
-                every_state = {
-                    limit = { is_core_of = SRS }
-                    add_core_of = NTR
-                    NTR = { transfer_state = PREV.id }
-                }
-            }
+            #if = {
+            #    limit = {
+            #        NTR = { is_subject_of = EQS }
+            #        EQS = { is_EQS_SOL = yes }
+            #        AND = {
+            #            OR = {
+            #                GRD = { is_subject_of = EQS }
+            #                SRS = { is_subject_of = EQS }
+            #            }
+            #            522 = {
+            #                OR = {
+            #                    is_owned_and_controlled_by = SRS
+            #                    is_owned_and_controlled_by = GRD
+            #                }
+            #            }
+            #            561 = {
+            #                OR = {
+            #                    is_owned_and_controlled_by = SRS
+            #                    is_owned_and_controlled_by = GRD
+            #                }
+            #            }
+            #            542 = {
+            #                OR = {
+            #                    is_owned_and_controlled_by = SRS
+            #                    is_owned_and_controlled_by = GRD
+            #                }
+            #            }
+            #            585 = {
+            #                OR = {
+            #                    is_owned_and_controlled_by = SRS
+            #                    is_owned_and_controlled_by = GRD
+            #                }
+            #            }
+            #            601 = {
+            #                OR = {
+            #                    is_owned_and_controlled_by = SRS
+            #                    is_owned_and_controlled_by = GRD
+            #                }
+            #            }
+            #        }
+            #    }
+            #    every_state = {
+            #        limit = { is_core_of = SRS }
+            #        add_core_of = NTR
+            #        NTR = { transfer_state = PREV.id }
+            #    }
+            #}
             if = {
                 limit = {
                     country_exists = FBK
@@ -1018,7 +1018,7 @@ on_actions = {
                         DMT = {
                             exists = yes
                             is_puppet_of = OVERLORD
-                            OVERLORD = { NOT = { has_completed_focus = SOL_doghouse } }
+                            OVERLORD = { NOT = { has_country_flag = SOL_doghouse_set_up } }
                         }
                     }
                     every_state = {

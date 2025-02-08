@@ -279,13 +279,7 @@ sp_EQS_inferno_cas = {
 
     project_output = {
         country_effects = {
-            if = {
-                limit = { has_dlc = "By Blood Alone" }
-                custom_effect_tooltip = SOL_inferno_cas_bba_tt
-            }
-            else = {
-                custom_effect_tooltip = SOL_inferno_cas_tt
-            }
+            custom_effect_tooltip = SOL_inferno_cas_tt
         }
     }
 
@@ -492,6 +486,7 @@ sp_EQS_super_flamers = {
     }
 
     project_output = {
+        custom_effect_tooltip = SOL_choose_bonuses_tt
         sub_unit_bonus = {
             light_flame_tank = { soft_attack = 1 defense = 0.5 }
             medium_flame_tank = { soft_attack = 1 defense = 0.5 }
