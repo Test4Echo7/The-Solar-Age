@@ -2668,15 +2668,15 @@ GRI_SOL = {
 	color_ui = rgb { 229 138 47 }
 }
 SDL_SOL = {
-	color = rgb { 255 224 129 }
+	color = rgb { 186 184 121 }
 	color_ui = rgb { 130 123 100 }
 }
 KAR_SOL = {
-	color = rgb { 255 224 129 }
+	color = rgb { 169 171 139 }
 	color_ui = rgb { 130 123 100 }
 }
 YMN_SOL = {
-	color = rgb { 255 224 129 }
+	color = rgb { 177 175 115 }
 	color_ui = rgb { 130 123 100 }
 }
 REE_SOL = {
@@ -2684,7 +2684,7 @@ REE_SOL = {
 	color_ui = rgb { 130 123 100 }
 }
 MTA_SOL = {
-	color = rgb { 255 224 129 }
+	color = rgb { 169 163 108 }
 	color_ui = rgb { 130 123 100 }
 }
 HMR_SOL = {
@@ -2696,31 +2696,31 @@ OSQ_SOL = {
 	color_ui = rgb { 130 123 100 }
 }
 RIV_SOL = {
-	color = rgb { 255 224 129 }
+	color = rgb { 174 162 108 }
 	color_ui = rgb { 130 123 100 }
 }
 DMT_SOL = {
-	color = rgb { 255 224 129 }
+	color = rgb { 127 125 78 }
 	color_ui = rgb { 130 123 100 }
 }
 MGY_SOL = {
-	color = rgb { 255 224 129 }
+	color = rgb { 180 175 81 }
 	color_ui = rgb { 130 123 100 }
 }
 MDL_SOL = {
-	color = rgb { 255 224 129 }
+	color = rgb { 160 156 86 }
 	color_ui = rgb { 130 123 100 }
 }
 FBK_SOL = {
-	color = rgb { 255 224 129 }
+	color = rgb { 165 162 118 }
 	color_ui = rgb { 130 123 100 }
 }
 NTR_SOL = {
-	color = rgb { 255 224 129 }
+	color = rgb { 255 255 202 }
 	color_ui = rgb { 130 123 100 }
 }
 KIR_SOL = {
-	color = rgb { 255 224 129 }
+	color = rgb { 196 190 137 }
 	color_ui = rgb { 130 123 100 }
 }
 NVA_SOL = {
@@ -2732,7 +2732,7 @@ KHM_SOL = {
 	color_ui = rgb { 130 123 100 }
 }
 KXN_SOL = {
-	color = rgb { 255 224 129 }
+	color = rgb { 173 169 115 }
 	color_ui = rgb { 130 123 100 }
 }
 PLB_SOL_new = {
@@ -2752,7 +2752,7 @@ AES_SOL = {
 	color_ui = rgb { 130 123 100 }
 }
 MTO_SOL = {
-	color = rgb { 255 224 129 }
+	color = rgb { 157 155 111 }
 	color_ui = rgb { 130 123 100 }
 }
 WAT_SOL = {
@@ -2764,55 +2764,55 @@ FIR_SOL = {
 	color_ui = rgb { 130 123 100 }
 }
 HIP_SOL = {
-	color = rgb { 255 224 129 }
+	color = rgb { 223 208 145 }
 	color_ui = rgb { 130 123 100 }
 }
 MIT_SOL = {
-	color = rgb { 255 224 129 }
+	color = rgb { 151 145 77 }
 	color_ui = rgb { 130 123 100 }
 }
 ZES_SOL = {
-	color = rgb { 255 224 129 }
+	color = rgb { 157 149 103 }
 	color_ui = rgb { 130 123 100 }
 }
 CTL_SOL = {
-	color = rgb { 255 224 129 }
+	color = rgb { 204 206 136 }
 	color_ui = rgb { 130 123 100 }
 }
 CTH_SOL = {
-	color = rgb { 255 224 129 }
+	color = rgb { 235 235 180 }
 	color_ui = rgb { 130 123 100 }
 }
 ABY_SOL = {
-	color = rgb { 255 224 129 }
+	color = rgb { 151 145 71 }
 	color_ui = rgb { 130 123 100 }
 }
 ZAR_SOL = {
-	color = rgb { 255 224 129 }
+	color = rgb { 125 124 56 }
 	color_ui = rgb { 130 123 100 }
 }
 ROA_SOL = {
-	color = rgb { 255 224 129 }
+	color = rgb { 138 135 44 }
 	color_ui = rgb { 130 123 100 }
 }
 STM_SOL = {
-	color = rgb { 255 224 129 }
+	color = rgb { 138 137 86 }
 	color_ui = rgb { 130 123 100 }
 }
 ZOO_SOL = {
-	color = rgb { 255 224 129 }
+	color = rgb { 179 178 85 }
 	color_ui = rgb { 130 123 100 }
 }
 MAZ_SOL = {
-	color = rgb { 255 224 129 }
+	color = rgb { 128 128 69 }
 	color_ui = rgb { 130 123 100 }
 }
 GAR_SOL = {
-	color = rgb { 255 224 129 }
+	color = rgb { 162 165 102 }
 	color_ui = rgb { 130 123 100 }
 }
 HLR_SOL = {
-	color = rgb { 255 224 129 }
+	color = rgb { 193 191 152 }
 	color_ui = rgb { 130 123 100 }
 }
 SOL_imperium_equus = {
