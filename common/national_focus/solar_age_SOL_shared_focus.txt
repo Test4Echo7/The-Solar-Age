@@ -7565,6 +7565,7 @@ shared_focus = {
 	mutually_exclusive = { focus = SOL_gesture_of_strength }
 	available = {
 		eqs_has_civil_war = no
+		has_global_flag = SOL_twilight_converted
 		CRY = {
 			has_war = no
 			OR = {
@@ -7576,7 +7577,6 @@ shared_focus = {
 	bypass = {
 		OR = {
 			NOT = { country_exists = CRY }
-			NOT = { has_global_flag = SOL_twilight_converted }
 			has_war_with = CRY
 			CRY = { is_subject_of = ROOT }
 		}
@@ -7612,7 +7612,6 @@ shared_focus = {
 	bypass = {
 		OR = {
 			NOT = { country_exists = CRY }
-			NOT = { has_global_flag = SOL_twilight_converted }
 			has_war_with = CRY
 			CRY = { is_subject_of = ROOT }
 		}
@@ -7648,10 +7647,7 @@ shared_focus = {
 		eqs_not_has_civil_war = yes
 		is_subject = no
 		CRY = {
-			OR = {
-				is_subject_of = ROOT
-				is_in_faction_with = ROOT
-			}
+			is_subject_of = ROOT
 			has_civil_war = no
 		}
 	}
