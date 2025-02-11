@@ -1311,8 +1311,10 @@
   SOL_professional_guerillas_desc:0 "Every stallion, mare, and foal must be trained in basic warfare and tactics that can be used to harm and delay our opponents. Let them bleed for every foot of ground they take!"
 
   ###CRY-Related Ideas###
+  SOL_winter_preparations:0 "Northern Training"
+  SOL_winter_preparations_desc:0 "The lands of [CRY.GetNameDef] can be harsh and unforgiving to those accustomed to the warmth and safety of the Empress's lands. In the advent of war between [CRY.GetNameDef] and us, our troops must be prepared to push into the cold embrace of the northern plains and mountains."
   SOL_CRY_imperial_capital:0 "[EQS.GetAdjectiveCap] Funds"
-  SOL_CRY_imperial_capital_desc:0 "As our economy still lags behind [EQS.GetNameDef], [EQS.GetLeader] has generously provided from the royal treasury to assist with kickstarting more of our own industry. These investments will be given to the sectors that need it most, so that we can reach a stable threshold much sooner"
+  SOL_CRY_imperial_capital_desc:0 "As our economy still lags behind [EQS.GetNameDef], [EQS.GetLeader] has generously provided from the royal treasury to assist with kickstarting more of our own industry. These investments will be given to the sectors that need it most, so that we can reach a stable threshold much sooner."
   SOL_solarist_education:0 "Solarist Education"
   SOL_solarist_education_desc:0 "Too much free thought has been allowed to flourish in the universities in [ROOT.GetNameDef]. Much of the resistance to [EQS.GetLeader] comes from the students whose minds have been turned against her. New curriculum, courses, and grants will be provided, from [EQS.GetNameDef] itself to encourage more proper thought and raise a generation inquisitive in the right direction."
   SOL_solarist_minds:0 "A Solarist Mind"

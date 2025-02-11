@@ -1944,7 +1944,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_god_empress
-	icon = GFX_goal_daybreaker_god
+	icon = GFX_goal_god_empress
 	prerequisite = {
 		focus = SOL_Imperium_Solis
 	}
@@ -2004,6 +2004,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_unveil_cultus
+	icon = GFX_goal_unveil_cultus
 	x = 0
 	y = 1
 	relative_position_id = SOL_god_empress
@@ -2025,6 +2026,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_solaris_adoratio
+	icon = GFX_goal_solaris_adoratio
 	x = -3
 	y = 1
 	relative_position_id = SOL_unveil_cultus
@@ -2046,7 +2048,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_solaris_inquisitionis
-	icon = GFX_goal_solar_inquisition
+	icon = GFX_goal_solaris_inquisitionis
 	x = 5
 	y = 2
 	relative_position_id = SOL_god_empress
@@ -2080,6 +2082,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_suffer_not_heresy
+	icon = GFX_goal_suffer_not_heresy
 	x = -2
 	y = 1
 	relative_position_id = SOL_solaris_adoratio
@@ -2101,7 +2104,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_Mandatory_Temple_Attendance
-	icon = GFX_goal_solar_church
+	icon = GFX_goal_mandatory_temple_attendance
 	prerequisite = {
 		focus = SOL_unveil_cultus
 	}
@@ -2131,6 +2134,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_inquisitionis_secondary_role
+	icon = GFX_goal_inquisitionis_secondary_role
 	x = 3
 	y = 2
 	relative_position_id = SOL_unveil_cultus
@@ -2153,6 +2157,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_inquisitionis_primary_role
+	icon = GFX_goal_inquisitionis_primary_role
 	x = 0
 	y = 1
 	relative_position_id = SOL_solaris_inquisitionis
@@ -2174,6 +2179,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_solaris_speculatores
+	icon = GFX_goal_solaris_speculatores
 	x = 2
 	y = 1
 	relative_position_id = SOL_solaris_inquisitionis
@@ -2221,7 +2227,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_Lux_et_Tenebris
-	icon = GFX_goal_lux_in_tenebris
+	icon = GFX_goal_Lux_et_Tenebris
 	prerequisite = {
 		focus = SOL_suffer_not_heresy
 		focus = SOL_innovative_corpo_grant
@@ -2286,6 +2292,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_faith_honor_family
+	icon = GFX_goal_faith_honor_family
 	x = 0
 	y = 2
 	relative_position_id = SOL_solaris_adoratio

@@ -1,5 +1,51 @@
 SpriteTypes = {
+    ###God-Empress###
+    SpriteType = {
+        name = GFX_goal_god_empress
+        texturefile = "gfx/interface/goals/EQS/god_empress.png"
+    }
+    SpriteType = {
+        name = GFX_goal_unveil_cultus
+        texturefile = "gfx/interface/goals/EQS/unveil_cultus.png"
+    }
+    SpriteType = {
+        name = GFX_goal_solaris_adoratio
+        texturefile = "gfx/interface/goals/EQS/solaris_adoratio.png"
+    }
+    SpriteType = {
+        name = GFX_goal_solaris_inquisitionis
+        texturefile = "gfx/interface/goals/EQS/solaris_inquisitionis.png"
+    }
+    SpriteType = {
+        name = GFX_goal_suffer_not_heresy
+        texturefile = "gfx/interface/goals/EQS/suffer_not_heresy.png"
+    }
+    SpriteType = {
+        name = GFX_goal_mandatory_temple_attendance
+        texturefile = "gfx/interface/goals/EQS/mandatory_temple_attendance.png"
+    }
+    SpriteType = {
+        name = GFX_goal_inquisitionis_primary_role
+        texturefile = "gfx/interface/goals/EQS/inquisitionis_primary_role.png"
+    }
+    SpriteType = {
+        name = GFX_goal_inquisitionis_secondary_role
+        texturefile = "gfx/interface/goals/EQS/inquisitionis_secondary_role.png"
+    }
+    SpriteType = {
+        name = GFX_goal_solaris_speculatores
+        texturefile = "gfx/interface/goals/EQS/solaris_speculatores.png"
+    }
+    SpriteType = {
+        name = GFX_goal_Lux_et_Tenebris
+        texturefile = "gfx/interface/goals/EQS/Lux_et_Tenebris.png"
+    }
+    SpriteType = {
+        name = GFX_goal_faith_honor_family
+        texturefile = "gfx/interface/goals/EQS/faith_honor_family.png"
+    }
 
+    ###Army###
     SpriteType = {
         name = GFX_goal_solaris_militarium
         texturefile = "gfx/interface/goals/EQS/solaris_militarium.tga"
@@ -48,6 +94,8 @@ SpriteTypes = {
         name = GFX_goal_only_statistics
         texturefile = "gfx/interface/goals/EQS/only_statistics.tga"
     }
+
+    ###Diplomatic Corps###
     SpriteType = {
         name = GFX_goal_fealty_of_the_griffons
         texturefile = "gfx/interface/goals/EQS/fealty_of_the_griffons.png"
