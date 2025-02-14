@@ -442,6 +442,7 @@ sp_EQS_hot_fusion = {
 		sp_nuclear_generic_electronics_tech_reward
 		sp_nuclear_reactor_radioactive_leak_stabilized_reward
 		sp_nuclear_reactor_minor_explosion_reward
+		sp_hot_fusion_reactor_venting_problems
 		sp_hot_fusion_reactor_by_products
 	}
 }

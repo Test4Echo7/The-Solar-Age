@@ -5902,8 +5902,8 @@ country_event = { #Daybreaker personally arrives in the Kaiserschloss, as it's h
                     NOT = { has_character = GRI_trinary_scribble }
                 }
                 hidden_effect = {
-                    GRI_trinary_scribble = { set_nationality = ROOT }
-                    GRI_gratuity = { set_nationality = ROOT }
+                    GRI_trinary_scribble = { set_nationality = GRD }
+                    GRI_gratuity = { set_nationality = GRD }
                 }
             }
             add_ideas = SOL_imperial_corrections

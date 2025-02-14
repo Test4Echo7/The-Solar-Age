@@ -699,7 +699,7 @@ sp_adeptus_astartes_magical_abilities = {
 
 sp_enhanced_matrices_crystal_decisions = {
     narrative = {
-        #Matrices are comprised of a specific kind of crystal, but it is possible to modify them to be made of multiples, or of a rarer, more powerful crystal
+        #Matrices are comprised of a specific kind of crystal, but it is possible to modify them to be made of multiple types, or of a rarer, more powerful crystal
         name = EQS_tinker_tinker
         desc = EQS_tinker_tinker_desc
     }
@@ -902,7 +902,7 @@ sp_super_flamers_sticky_or_liquid_compound = {
     narrative = {
         #There are two avenues that can be taken with the magical fuel, either be like napalm and stick to anything it can, and better; or be coalesced into an incredibly runny but coherent liquid that will spread rapidly and burn anything it touches
         name = EQS_fires_of_tartarus
-        name = EQS_fires_of_tartarus_desc
+        desc = EQS_fires_of_tartarus_desc
     }
 
     threshold = {
@@ -978,6 +978,11 @@ sp_plasma_cannons_reducing_load = {
             equipment_bonus = {
                 ship_hull_heavy = { naval_range = 0.05 lg_attack = -0.05 instant = yes }
             }
+            country_effects = {
+                sp:sp_EQS_plasma_cannons = {
+                    add_project_progress_ratio = -0.08
+                }
+            }
         }
     }
 
@@ -992,6 +997,11 @@ sp_plasma_cannons_reducing_load = {
             equipment_bonus = {
                 ship_hull_heavy = { naval_range = 0.05 armor_value = -0.05 instant = yes }
             }
+            country_effects = {
+                sp:sp_EQS_plasma_cannons = {
+                    add_project_progress_ratio = -0.08
+                }
+            }
         }
     }
 
@@ -1003,6 +1013,11 @@ sp_plasma_cannons_reducing_load = {
             #Increase range of battleship by 10% but increase production cost by 3% and fuel usage by 5%
             equipment_bonus = {
                 ship_hull_heavy = { naval_range = 0.1 fuel_consumption = 0.05 build_cost_ic = 0.03 instant = yes }
+            }
+            country_effects = {
+                sp:sp_EQS_plasma_cannons = {
+                    add_project_progress_ratio = -0.15
+                }
             }
         }
     }
@@ -1131,7 +1146,7 @@ sp_inferno_cas_bobomb = {
     narrative = {
         #The magic that's used for the explosives in the bombs for this cas can be tweaked slightly to either spread more effectively on the ground and burn more of a battlefield, bite through armor on ships, or have general heat improvements to burn better on both, and should be chosen to iterate upon
         name = EQS_chomp
-        name = EQS_chomp_desc
+        desc = EQS_chomp_desc
     }
 
     threshold = {
@@ -1497,7 +1512,7 @@ sp_hot_fusion_reactor_venting_problems = {
     narrative = {
         #For the first steps at preparing for the heat needed for large-scale fusion, there are problems with the reactors getting to the point of meltdown, and venting problems will have to be figured out
         name = EQS_spicy_pillow
-        name = EQS_spicy_pillow_desc
+        desc = EQS_spicy_pillow_desc
     }
 
     threshold = {
@@ -1521,6 +1536,9 @@ sp_hot_fusion_reactor_venting_problems = {
             #Increase reactor build speed by 10%, reduce output of nukes by 5%
             country_effects = {
                 custom_effect_tooltip = SOL_nuclear_nonproliferation_tt
+                sp:sp_EQS_hot_fusion = {
+                    add_project_progress_ratio = -0.08
+                }
                 hidden_effect = {
                     add_ideas = SOL_nuke_safety_concerns
                 }
@@ -1536,6 +1554,9 @@ sp_hot_fusion_reactor_venting_problems = {
             #Literally nothing
             country_effects = {
                 custom_effect_tooltip = SOL_no_meltdown_today_tt
+                sp:sp_EQS_hot_fusion = {
+                    add_project_progress_ratio = -0.08
+                }
             }
         }
     }
@@ -1552,7 +1573,7 @@ sp_hot_fusion_reactor_venting_problems = {
                     add_ideas = SOL_nuke_safety_nonconcerns
                 }
                 sp:sp_EQS_hot_fusion = {
-                    add_project_progress_ratio = -0.08
+                    add_project_progress_ratio = -0.12
                 }
             }
         }
