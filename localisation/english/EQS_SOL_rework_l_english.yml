@@ -499,6 +499,7 @@
   SOL_bossy_boots_tt:0 "We will send the current §Yowner§! of §Y[764.GetName]§! and §Y[741.GetName]§! an §Oultimatum§! regarding their occupation."
   SOL_spawn_horde_tt:0 "A small contingent of the §YSolaris Militarium§! will be stationed in §Y[EQC.GetNameDef]§!."
   SOL_solaris_inquisitionis_would_like_to_know_your_location_tt:0 "A number of §Yinquisitors§! have volunteered to lead the disorganized troops."
+  SOL_tempest_is_back_baybee_tt:0 "§YTempest Shadow§! will fight for §OHarmony's§! cause with might and power rivaled only by the §OEmpress§!."
   SOL_tempest_joined:0 "§YTempest Shadow§! has joined the Empress's cause."
   SOL_rebuilding_planet_please_stand_by:0 "We cannot release §Y[FROM.GetName]§! from this menu as we are bringing §YOrder§! to the other nations. Look to your §YDecision§! tab or continue progressing in your §YFocus Tree§! in order to release it."
   SOL_repair_speed_buildings_tt:0 "Building Repair Speed: §R-95.00%§!"
@@ -510,7 +511,26 @@
   SOL_pilot_drug_programs_tt:0 "We will gain:\n\nAce generation chance: §G+10.00%§!\nAgility: §G+10%§!\nAir Attack: §G+5.00%§!\nAir accidents chance: §R+25.00%§!"
   SOL_hot_fusion_tt:0 "We will gain:\n\nConstruction Speed: §G+15.00%§!\nFactory Output: §G+10.00%§!\nDockyard Output: §G+10.00%§!"
   SOL_careless_attacks_tt:0 "The time between shots of §YProject Helios§! will §Rincrease§! by §Y60§! days."
-
+  SOL_expensive_attacks_tt:0 "The time between shots of §YProject Helios§! will §Rincrease§! by §Y45§! days."
+  SOL_ya_got_shrinked_tt:0 "No effects on §YProject Helios§! will be incurred."
+  SOL_devastating_attacks_tt:0 "Casualties inflicted by §YProject Helios§! will be increased by §R25%§! and the nation attacked will lose an additional §R5%§! §YWar Support§!."
+  SOL_tik_tok_parent_tt:0 "We will §Rlose§! £manpower_icon 15000 every time we fire §YProject Helios§!."
+  SOL_trailer_park_momma_tt:0 "We will §Rlose§! £manpower_icon 15000 every time we fire §YProject Helios§! and inflict §R15%§! more casualties."
+  SOL_empress_cares_tt:0 "No £manpower_icon will be lost whenever we fire §YProject Helios§!."
+  SOL_nuclear_nonproliferation_tt:0 "§YNucler Bomb§! Production Rate: §R-5%§!\n§YNuclear Reactor construction speed: §G+10.00%§!"
+  SOL_no_meltdown_today_tt:0 "There will be no §Yeffect§! to how the reactors are produced or what they produce."
+  SOL_buck_the_nuclear_rules_tt:0 "§YNucler Bomb§! Production Rate: §G+5%§!\n§YNuclear Reactor construction speed: §R-5.00%§!"
+  SOL_freaky_factories_tt:0 "Factory Bomb Vulnerability: §G-10.00%§!"
+  SOL_hippie_populace_tt:0 "Monthly Population: §R-3.0%§!\nFactory Output: §G+2.00%§!\nDockyard Output: §G+2.00%§!"
+  SOL_hippie_pilots_tt:0 "Air ponypower requirement: §R+2.00%§!\nAir Attack: §G+1%§!\nAgility: §G+1%§!"
+  SOL_when_complete_tt:0 "When the §Yproject§! completes, in addition to original bonuses, gain:"
+  SOL_skimped_out_tt:0 "Air Range: §R-5%§!\nNaval max range factor: §R-5.00%§!\nSupply Range: §R-3%§!\n§YSupply Hub§! construction speed: §G+5.00%§!\n§YAirframe§!:\n   Production Cost: §G-2.00%§!\n§YNavy§!:\n   Production Cost: §G-2.00%§!"
+  SOL_big_spender_tt:0 "Air Range: §G+3%§!\nNaval max range factor: §G+3.00%§!\nSupply Range: §G+2%§!\n§YSupply Hub§! construction speed: §R-5.00%§!\n§YAirframe§!:\n   Production Cost: §R+2.00%§!\n§YNavy§!:\n   Production Cost: §R+2.00%§!"
+  SOL_feeling_bold_today_eh_tt:0 "There will be no effect on performance of ships and planes."
+  SOL_laser_assembly_lines_tt:0 "Production Efficiency Retention: §G+2.00%§!\nFactory Output: §G+2.00%§!"
+  SOL_new_advisors:0 "Some of the §OEmpress's§! best economists will be §Yloaned§! to §Y[CRY.GetNameDef]§!."
+  SOL_floofy_deer_puppet_tt:0 "§YVelvet§! will given control of the majority of §Y[OLE.GetNameDef]§! to lead from §Y[76.GetCapitalVictoryPointName]§!. We shall keep a large presence there to deter §Rrebellion§!."
+  SOL_enemies_get_zonked_tt:0 "Any country with which we go to §Ywar§! will receive:"
   ###Last one in the chain. Remove comment later###
   SOL_conglaturation_a_winner_is_you_tt:0 "§GHarmony has been preserved and all of ponykind now bends the knee to Daybreaker. Thank you for playing the Solar Age! - Test4Echo§!"
 
@@ -1065,6 +1085,12 @@
   ###Wartime###
   EQS_pow_laborers:0 "Changeling POW Laborers"
   EQS_pow_laborers_desc:0 "Rather than let them languish in POW camps, we have organized worker gangs of changelings, who are being put to work bettering [ROOT.GetNameDef]. While work may be tough, it beats a firing squad, and they're beging given one square meal a day of a smidgen of love."
+  EQS_magical_bioweapons:0 "Thaumaturgic Bioweaponry"
+  EQS_magical_bioweapons_desc:0 "Magic can perform many horrendous tasks. Recent discoveries have led to the creation of wide-area spells that target only the physiology of changelings and leave our own ponies unharmed. Effects vary by victim, but all are gruesome deaths."
+  EQS_stealthy_bioweapons:0 "Untraceable Assassinations"
+  EQS_stealthy_bioweapons_desc:0 "Rather than a blunt object, the spells that have been keyed to changeling physiology have been left in the hooves of S.M.I.L.E., which is choosing where and when they will be deployed. And on what targets to yield the best information."
+  EQS_stealthy_bioweapons_lar:0 "Untraceable Assassinations"
+  EQS_stealthy_bioweapons_lar_desc:0 "Rather than a blunt object, the spells that have been keyed to changeling physiology have been left in the hooves of S.M.I.L.E., which is choosing where and when they will be deployed. And on what targets to yield the best information."
   EQS_harmonic_autarky:0 "Harmonic Autarky"
   EQS_harmonic_autarky_desc:0 "So long as we fight, we must look to our own ponies before we consider the benefit of others. Every scrap must be put to our defense, no matter how it may strain our economy in the short term. Reliance on help from those who don't believe in Harmony will only lead to our downfall."
   EQS_light_autarky:0 "Economic Independence Act"
@@ -1079,6 +1105,14 @@
   ###Hidden/Enemy###
   EQS_high_attrition:0 "Incinerating Heat"
   EQS_high_attrition_desc:0 "The sun beats upon us relentlessly, and not even the cool of the night can bring us any respite. Our soldiers can barely stand and fight when the intensity of its heat and light can make some perish in the shade, as even the plains of our battles catch fire from the scorching temperatures that we must suffer."
+  SOL_laser_assembly_lines:0 "Project Helios: Assembly Lines"
+  SOL_solar_panel_weak_buff:0 "Project Solaris: Cheaper Materials"
+  SOL_solar_panel_super_buff:0 "Project Solaris: Expensive Materials"
+  SOL_drugged_populace:0 "Project Firestorm: Civilian Test Subjects"
+  SOL_drugged_pilots:0 "Project Firestorm: Airforce Test Subjects"
+  SOL_nuke_safety_concerns:0 "Project Inferno: Loose Protections"
+  SOL_nuke_safety_nonconcerns:0 "Project Inferno: Extensive Insulation"
+  SOL_protected_factories:0 "Project Inferno: Civilian Product Use"
 
   ###Harmonic Resistance###
   EQS_agitated_workers:0 "Unwilling Workers"
@@ -1290,6 +1324,10 @@
   SOL_river_brethren_desc:0 "Ponies are ponies are ponies. Promoting cross-cultural trips and explaining to both our de jure citizens and our new, integrated brethren, our backgrounds and how we can serve the Empress together, a stronger, more orderly and united pony race will emerge."
   SOL_food_for_the_empress:0 "Food for the Empress"
   SOL_food_for_the_empress_desc:0 "A hungry nation will always need more food, and the plains in Hestraya are ripe for harvesting. By providing grants and subsidies, we can increase production in short order and begin filling the ravenous mouths of our growing populace."
+  SOL_ordo_australis_archives:0 "Order Archives"
+  SOL_ordo_australis_archives_desc:0 "In the land of the bats there is only constant observation. Nothing gets in or out without the direct approval of those in Port Inferno and deeper still are buried the archives where much of the knowledge of the damned leadership of [BAT.GetNameDef] is held. Nothing will get in or out, which is perfect to keep our state secrets for all but the Empress alone."
+  SOL_ordo_australis_archives_lar:0 "Order Archives"
+  SOL_ordo_australis_archives_lar_desc:0 "In the land of the bats there is only constant observation. Nothing gets in or out without the direct approval of those in Port Inferno and deeper still are buried the archives where much of the knowledge of the damned leadership of [BAT.GetNameDef] is held. Nothing will get in or out, which is perfect to keep our state secrets for all but the Empress alone."
 
   ###Civil War###
   SOL_civil_war_measures_idea:0 "The Imperial Emergencies Act"
@@ -1512,6 +1550,12 @@
   NLR_military_disarray_desc:0 "A number of our officers have been captured or killed by agents operating under [EQS.GetLeader]. None of us thought that [EQS.GetLeader.GetSheHe] would be capable of such ruthlessness, and our military is struggling to find replacements for our losses."
   SOL_sabotaged_tanks:0 "S.M.I.L.E. Retaliation"
   SOL_sabotaged_tanks_desc:0 "Despite offering amnesty, the S.M.I.L.E. agents we permitted to stay with us have betrayed our trust and lashed out like petulant foals at some of our armor operations. Those that have been found have been dealt with, but the damage they have inflicted will take time to repair and recover."
+
+  ###Spies###
+  SOL_defensive_propaganda:0 "Bolstering Messages"
+  SOL_defensive_propaganda_desc:0 "Every mouthpiece has already been given what to say. Every newspaper has already had its news written for it. Wherever the ponies of the Empire go, they will know that they are right, and that Harmony never fails. They can't go around realizing that mistakes can happen, after all."
+  SOL_offensive_propaganda:0 "Demoralizing Messaging"
+  SOL_offensive_propaganda_desc:0 "Our airwaves are breached daily from [EQS.GetNameDef] with lies and falsehoods aimed to weaken our citizens' resolve in our fight against [EQS.GetLeader]. Despite the efforts of [ROOT.GetLeader] to sway public opinion in favor of us, the constant bombardments from [EQS.GetNameDef] have hindered our national pride and stability."
 
   ###Focuses###
   ###Sunset's Corruption###

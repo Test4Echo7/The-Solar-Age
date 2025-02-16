@@ -5293,7 +5293,8 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_second_coming"
 		###Daybreaker visits the ancient town of Somnambula, where the oldest pyramid of them all is, not the Sphynx one, though, and proclaims that everypony should bow to her, as she is the Dawn Star, the second coming of an ancient Maregyptian deity (just a corruption of Celestia), and she uses her power of raising the sun and her magic to intimidate them all as word spreads of this supposed second coming
 		###The tale of the Dawn Star is a corruption of Celestia and Luna helping the ancient Maregyptians with ridding themselves of various Egyptian legendary creatures, which earned them worship, although at the time they both tried to dissuade it
-		country_event = solarreworked.384
+		#country_event = solarreworked.384
+		add_ideas = SOL_eastern_sun_goddess
 	}
 	ai_will_do = { factor = 80 }
 }
@@ -6420,7 +6421,26 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_eastern_calipha"
 		###Daybreaker takes to the airwaves from Yemane, where she has pronounced herself the new calipha of one of the old religions of the Saddle Arabian area, and that she will inflict harm upon those who defy her, as she is the sun itself to guide them, and otherwise promises their doom if they do not obey
-		country_event = solarreworked.389
+		#country_event = solarreworked.389
+		add_ideas = SOL_calipha_of_sun
+        YMN = {
+			get_current_government_type = yes
+		}
+		if = {
+			limit = { YMN = { exists = no } }
+			release_autonomy = {
+				target = YMN
+				autonomy_state = autonomy_reichsprotectorate
+				freedom_level = 0.33
+			}
+		}
+		YMN = {
+            hidden_effect = {
+                YMN_omar_bin_asim = { add_trait = { trait = imperial_governor ideology = despotism } }
+            }
+			restore_previous_government_type = yes
+			set_cosmetic_tag = YMN_SOL
+		}
 	}
 	ai_will_do = { factor = 40 }
 }

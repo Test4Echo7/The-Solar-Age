@@ -2318,7 +2318,7 @@ country_event = { #Zephyr does his best to avoid combat as it breaks out in his 
 
     option = { #This is my life, apparently
         name = solarreworked.101.a
-        custom_effect_tooltip = zephyr_breeze_stats_tt
+        custom_effect_tooltip = zephyr_breeze_stats_tp
         EQS_zephyr_breeze = {
             set_character_flag = SOL_zephyr_enlisted
         }
@@ -3488,6 +3488,7 @@ country_event = {
                     traits = { daughter_of_sun }
                 }
             }
+            clr_character_flag = SOL_helping_twilight
         }
         custom_effect_tooltip = sunset_shimmer_stats_tp
         mark_focus_tree_layout_dirty = yes
@@ -5902,8 +5903,14 @@ country_event = { #Daybreaker personally arrives in the Kaiserschloss, as it's h
                     NOT = { has_character = GRI_trinary_scribble }
                 }
                 hidden_effect = {
-                    GRI_trinary_scribble = { set_nationality = GRD }
-                    GRI_gratuity = { set_nationality = GRD }
+                    every_possible_country = {
+                        limit = {
+                            has_character = GRI_gratuity
+                            has_character = GRI_trinary_scribble
+                        }
+                        GRI_trinary_scribble = { set_nationality = GRD }
+                        GRI_gratuity = { set_nationality = GRD }
+                    }
                 }
             }
             add_ideas = SOL_imperial_corrections
@@ -8775,7 +8782,6 @@ country_event = {
                     planning_skill = 5
                     logistics_skill = 3
                 }
-                custom_effect_tooltip = flurry_heart_stats_dynamic_tp
             }
         }
         else_if = {
@@ -8789,7 +8795,6 @@ country_event = {
                     planning_skill = 3
                     logistics_skill = 3
                 }
-                custom_effect_tooltip = flurry_heart_stats_dynamic_tp
             }
         }
         else_if = {
@@ -8803,7 +8808,6 @@ country_event = {
                     planning_skill = 3
                     logistics_skill = 1
                 }
-                custom_effect_tooltip = flurry_heart_stats_dynamic_tp
             }
         }
         else = {
@@ -8816,9 +8820,9 @@ country_event = {
                     planning_skill = 1
                     logistics_skill = 1
                 }
-                custom_effect_tooltip = flurry_heart_stats_dynamic_tp
             }
         }
+        custom_effect_tooltip = flurry_heart_stats_dynamic_tp
     }
 }
 

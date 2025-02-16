@@ -1424,6 +1424,8 @@ sp_portable_solar_panels_material_procurement = {
             #Reduce range factors by 5% and supply range by 3%, increase supply hub build speed by 5%, and reduce ic cost of planes and ships by 2%
             #Should be hidden idea
             country_effects = {
+                custom_effect_tooltip = SOL_when_complete_tt
+                custom_effect_tooltip = SOL_skimped_out_tt
                 set_country_flag = SOL_weaker_solar_panel_bonus #Will affect the final output
             }
         }
@@ -1451,6 +1453,8 @@ sp_portable_solar_panels_material_procurement = {
             #Increase range factors by 3% and supply range by 2%, decrease supply hub build speed by 5% and increase ic cost of planes and ships by 2%
             #Should be hidden idea
             country_effects = {
+                custom_effect_tooltip = SOL_when_complete_tt
+                custom_effect_tooltip = SOL_big_spender_tt
                 set_country_flag = SOL_stronger_solar_panel_bonus #Will affect final output
             }
         }
