@@ -8,13 +8,9 @@ SOL_sanctum_infernal_corps_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
-		IF = {
-			limit = {
-				FROM = {
-					is_EQS_SOL = yes
-					has_country_flag = SOL_sanctum_arms_unlocked
-				}
-			}
+		FROM = {
+			is_EQS_SOL = yes
+			has_country_flag = SOL_sanctum_arms_unlocked
 		}
 	}
 
@@ -398,13 +394,9 @@ SOL_holy_flame_arms_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
-		IF = {
-			limit = {
-				FROM = {
-					is_EQS_SOL = yes
-					has_country_flag = SOL_holy_flame_unlocked
-				}
-			}
+		FROM = {
+			is_EQS_SOL = yes
+			has_country_flag = SOL_holy_flame_unlocked
 		}
 	}
 
@@ -776,13 +768,9 @@ SOL_bitterbury_ballistics_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
-		IF = {
-			limit = {
-				FROM = {
-					is_EQS_SOL = yes
-					has_country_flag = SOL_bitterbury_unlocked
-				}
-			}
+		FROM = {
+			is_EQS_SOL = yes
+			has_country_flag = SOL_bitterbury_unlocked
 		}
 	}
 
@@ -1160,13 +1148,9 @@ CRY_polished_armor_arsenals_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
-		IF = {
-			limit = {
-				FROM = {
-					is_EQS_SOL = yes
-					has_country_flag = SOL_polished_armor_unlocked
-				}
-			}
+		FROM = {
+			is_EQS_SOL = yes
+			has_country_flag = SOL_polished_armor_unlocked
 		}
 	}
 
@@ -1527,13 +1511,12 @@ EQC_prelate_corps_organization = {
 		has_dlc = "Arms Against Tyranny"
 		original_tag = EQC
 	}
-	#Debug
-	#visible = {
-	#	FROM = {
-	#		is_EQS_SOL = yes
-	#		has_country_flag = SOL_prelate_unlocked
-	#	}
-	#}
+	visible = {
+		FROM = {
+			is_EQS_SOL = yes
+			has_country_flag = SOL_prelate_unlocked
+		}
+	}
 
 	tree_header_text = {
 		text = mio_header_guns_and_turret

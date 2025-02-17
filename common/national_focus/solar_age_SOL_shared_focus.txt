@@ -1631,7 +1631,12 @@ shared_focus = {
 			limit = {
 				has_dlc = "Arms Against Tyranny"
 			}
+			unlock_military_industrial_organization_tooltip = mio:SOL_holy_flame_arms_organization
 			show_mio_tooltip = SOL_holy_flame_arms_organization
+			mio:SOL_holy_flame_arms_organization = {
+				add_mio_size = 3
+				add_mio_funds_gain_factor = 0.25
+			}
 		}
 		else = {
 			show_ideas_tooltip = SOL_holy_flame_arms
@@ -2695,7 +2700,12 @@ shared_focus = {
 			limit = {
 				has_dlc = "Arms Against Tyranny"
 			}
+			unlock_military_industrial_organization_tooltip = mio:SOL_sanctum_infernal_corps_organization
 			show_mio_tooltip = SOL_sanctum_infernal_corps_organization
+			mio:SOL_sanctum_infernal_corps_organization = {
+				add_mio_size = 3
+				add_mio_funds_gain_factor = 0.25
+			}
 		}
 		else = {
 			show_ideas_tooltip = SOL_sanctum_infernal_corps
@@ -2968,7 +2978,12 @@ shared_focus = {
 			limit = {
 				has_dlc = "Arms Against Tyranny"
 			}
+			unlock_military_industrial_organization_tooltip = mio:SOL_bitterbury_ballistics_organization
 			show_mio_tooltip = SOL_bitterbury_ballistics_organization
+			mio:SOL_bitterbury_ballistics_organization = {
+				add_mio_size = 5
+				add_mio_funds_gain_factor = 0.25
+			}
 		}
 		else = {
 			show_ideas_tooltip = SOL_bitterbury_ballistics
@@ -8100,7 +8115,12 @@ shared_focus = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
+				unlock_military_industrial_organization_tooltip = mio:CRY_polished_armor_arsenals_organization
 				show_mio_tooltip = CRY_polished_armor_arsenals_organization
+				mio:CRY_polished_armor_arsenals_organization = {
+					add_mio_size = 3
+					add_mio_funds_gain_factor = 0.25
+				}
 			}
 			else = {
 				show_ideas_tooltip = CRY_polished_armor_arsenals
@@ -9664,7 +9684,12 @@ shared_focus = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
+				unlock_military_industrial_organization_tooltip = mio:EQC_prelate_corps_organization
 				show_mio_tooltip = EQC_prelate_corps_organization
+				mio:EQC_prelate_corps_organization = {
+					add_mio_size = 3
+					add_mio_funds_gain_factor = 0.25
+				}
 			}
 			else = {
 				show_ideas_tooltip = EQC_prelate_corps
@@ -14407,12 +14432,11 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_annex_star_energy"
 		add_ideas = SOL_star_energy_nationalized
-		#Consider it
-		#mio:EQS_star_energy_organization = {
-		#	add_mio_size = 1
-		#	add_mio_funds_gain_factor = 0.25
-		#	add_mio_research_bonus = 0.05
-		#}
+		mio:EQS_star_energy_organization = {
+			add_mio_size = 1
+			add_mio_funds_gain_factor = 0.25
+			add_mio_research_bonus = 0.05
+		}
 		106 = {
 			add_extra_state_shared_building_slots = 1
 			add_building_construction = {

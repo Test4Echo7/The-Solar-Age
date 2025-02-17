@@ -487,7 +487,9 @@ sp_EQS_super_flamers = {
     }
 
     project_output = {
-        custom_effect_tooltip = SOL_choose_bonuses_tt
+        country_effects = {
+            custom_effect_tooltip = SOL_choose_bonuses_tt
+        }
         sub_unit_bonus = {
             light_flame_tank = { soft_attack = 1 defense = 0.5 }
             medium_flame_tank = { soft_attack = 1 defense = 0.5 }
