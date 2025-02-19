@@ -51,6 +51,18 @@ shared_focus = {
         set_global_flag = SOL_sunset_converted
         set_country_flag = SOL_sunset_ascended
         country_event = solarreworked.208
+        if = {
+			limit = {
+				has_completed_focus = SOL_solaris_adoratio
+			}
+			hidden_effect = {
+				country_event = {
+					id = solarreworked.301
+					days = 90
+					random_days = 45
+				}
+			}
+        }
     }
     ai_will_do = {
         base = 150
@@ -200,6 +212,18 @@ shared_focus = {
 			clear_variable = crysparkle
 		}
 		country_event = solarempire.13
+		if = {
+			limit = {
+				has_completed_focus = SOL_solaris_inquisitionis
+			}
+			hidden_effect = {
+				country_event = {
+					id = solarreworked.302
+					days = 90
+					random_days = 45
+				}
+			}
+        }
 	}
 }
 
@@ -2045,7 +2069,13 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_solaris_adoratio"
-		country_event = solarreworked.301
+		add_ideas = SOL_solaris_adoratio_idea
+		if = {
+			limit = { has_completed_focus = SOL_sunset_awaken }
+			hidden_effect = {
+				country_event = solarreworked.301
+			}
+		}
 		###In a grand ceremony, where she proclaims some of the highlights of Sunset's life, she proclaims that Sunset shall be the head of the worship branch of the Solaris Cultus, answering only to Padlock Key, and annoints her in a branding of fire on her shoulder that she is forever Daybreaker's
 	}
 	ai_will_do = { factor = 200 }
@@ -2067,7 +2097,22 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_solaris_inquisitionis"
-		country_event = solarreworked.302
+		unlock_decision_category_tooltip = SOL_dealing_with_resistance
+        if = {
+			limit = {
+				has_dlc = "La Resistance"
+			}
+			add_ideas = SOL_Imperial_Inquisition_idea_lar
+		}
+		else = {
+			add_ideas = SOL_Imperial_Inquisition_idea
+		}
+		if = {
+			limit = { has_completed_focus = SOL_twilight_ascend }
+			hidden_effect = {
+				country_event = solarreworked.302
+			}
+		}
 		if = {
 			limit = {
 				has_country_flag = SOL_incomplete_purge

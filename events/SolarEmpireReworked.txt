@@ -4788,7 +4788,7 @@ country_event = { #Daybreaker holds a ceremony at night, so that the flames of t
 
     option = { #May you serve forever!
         name = solarreworked.301.a
-        add_ideas = SOL_solaris_adoratio_idea
+        #add_ideas = SOL_solaris_adoratio_idea
     }
 }
 
@@ -4802,16 +4802,16 @@ country_event = { #Sunrise enters into Daybreaker's throne room, opposed to bein
 
     option = { #You are already prepared, my student.
         name = solarreworked.302.a
-        unlock_decision_category_tooltip = SOL_dealing_with_resistance
-        if = {
-			limit = {
-				has_dlc = "La Resistance"
-			}
-			add_ideas = SOL_Imperial_Inquisition_idea_lar
-		}
-		else = {
-			add_ideas = SOL_Imperial_Inquisition_idea
-		}
+        #unlock_decision_category_tooltip = SOL_dealing_with_resistance
+        #if = {
+		#	limit = {
+		#		has_dlc = "La Resistance"
+		#	}
+		#	add_ideas = SOL_Imperial_Inquisition_idea_lar
+		#}
+		#else = {
+		#	add_ideas = SOL_Imperial_Inquisition_idea
+		#}
     }
 }
 
@@ -4856,14 +4856,14 @@ country_event = { #Quasar Pulse, on one of her patrols of the city of Santcum So
 
     is_triggered_only = yes
 
-    option = { #Justice has been served
+    option = { #Justice has been served.
         name = solarreworked.305.a
         custom_effect_tooltip = SOL_nopony_expects_tt
         set_country_flag = SOL_inquisitionis_occupation_law_unlocked
     }
 }
 
-country_event = { #A noble meets with Daybreaker in her throne room, despite her being busy, and begins to berate her about her newest laws that nopony else agreed to, and she gives him one warning to stand down, and he does not pick it up, and begins to state how things were betting before, and she decides that she has had enough of his nonsense, and has him arrested as a threat to Order and Harmony; her Harmony
+country_event = { #A noble meets with Daybreaker in her throne room, despite her being busy, and begins to berate her about her newest laws that nopony else agreed to, and she gives him one warning to stand down, and he does not pick it up, and begins to state how things were better before, and she decides that she has had enough of his nonsense, and has him arrested as a threat to Order and Harmony; her Harmony
     id = solarreworked.306
     title = solarreworked.306.t
     desc = solarreworked.306.d
