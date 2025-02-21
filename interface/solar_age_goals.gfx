@@ -49,7 +49,7 @@ SpriteTypes = {
         texturefile = "gfx/interface/goals/EQS/field_executions.png"
     }
     SpriteType = {
-        name = GFX_goal_state_personified
+        name = GFX_goal_state_personified_new
         texturefile = "gfx/interface/goals/EQS/state_personified.png"
     }
     SpriteType = {

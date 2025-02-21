@@ -2364,7 +2364,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_Faith_Sacrifice_Worship
-	icon = GFX_goal_solar_worship_sacrifice
+	icon = GFX_goal_faith_sacrifice_worship
 	prerequisite = {
 		focus = SOL_Mandatory_Temple_Attendance
 	}
@@ -2407,6 +2407,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_field_executions
+	icon = GFX_goal_field_executions
 	x = 1
 	y = 1
 	relative_position_id = SOL_inquisitionis_secondary_role
@@ -2434,7 +2435,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_State_Personified
-	icon = GFX_goal_state_personified
+	icon = GFX_goal_state_personified_new
 	prerequisite = { focus = SOL_inquisitionis_primary_role }
 	available = {
 		is_subject = no
@@ -2458,6 +2459,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_solar_games
+	icon = GFX_goal_the_solar_games
 	x = 1
 	y = 1
 	relative_position_id = SOL_Harmony_through_Order
