@@ -4923,7 +4923,7 @@ country_event = { #Daybreaker leads a charge against a small bunker, which has b
     }
 }
 
-country_event = { #Follow a mother as she runs with her child after she see an inquisitor point her out along with a couple of soldiers move toward her, and she realizes that they're trying to take her child, since her foal is a rather talented unicorn for his age, and she doesns't want them being taken for use for Daybreaker, although she is eventually stopped when she is threatened with execution for being a heretic
+country_event = { #Follow a mother as she runs with her child after she sees an inquisitor point her out along with a couple of soldiers move toward her, and she realizes that they're trying to take her child, since her foal is a rather talented unicorn for his age, and she doesns't want them being taken for use for Daybreaker, although she is eventually stopped when she is threatened with execution for being a heretic
     id = solarreworked.310
     title = solarreworked.310.t
     desc = solarreworked.310.d
@@ -4971,6 +4971,7 @@ country_event = { #Daybreaker meets with Thundering Hoofbeat, after Blueblood re
                 logistics_skill = 3
             }
         }
+        custom_effect_tooltip = thunderhing_hoofbeat_stats_tp
         hidden_effect = {
             division_template = {
                 name = "Imperial Guardians"

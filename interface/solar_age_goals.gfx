@@ -41,8 +41,20 @@ SpriteTypes = {
         texturefile = "gfx/interface/goals/EQS/Lux_et_Tenebris.png"
     }
     SpriteType = {
-        name = GFX_goal_faith_honor_family
-        texturefile = "gfx/interface/goals/EQS/faith_honor_family.png"
+        name = GFX_goal_faith_sacrifice_worship
+        texturefile = "gfx/interface/goals/EQS/faith_sacrifice_worship.png"
+    }
+    SpriteType = {
+        name = GFX_goal_field_executions
+        texturefile = "gfx/interface/goals/EQS/field_executions.png"
+    }
+    SpriteType = {
+        name = GFX_goal_state_personified
+        texturefile = "gfx/interface/goals/EQS/state_personified.png"
+    }
+    SpriteType = {
+        name = GFX_goal_the_solar_games
+        texturefile = "gfx/interface/goals/EQS/the_solar_games.png"
     }
 
     ###Army###
