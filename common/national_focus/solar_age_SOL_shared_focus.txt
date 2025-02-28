@@ -1715,13 +1715,17 @@ shared_focus = {
 		#Unlock Harmonic Resistance decisions
 		country_event = solarreworked.324
 		unlock_decision_category_tooltip = SOL_dealing_with_resistance
-		if = {
-			limit = {
-				has_idea = changeling_spies
+		hidden_effect = {
+			if = {
+				limit = {
+					has_idea = changeling_spies
+				}
+				country_event = {
+					id = equestriachn.2 #Maybe rework into a more detailed event of a changeling being detected by the IIS and trying to escape, using different disguises, but ultimately being captured or killed
+					days = 3
+				}
 			}
-			country_event = equestriachn.2 #Maybe rework into a more detailed event of a changeling being detected by the IIS and trying to escape, using different disguises, but ultimately being captured or killed
 		}
-		set_country_flag = SOL_spy_mares
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESISTANCE FOCUS_FILTER_STABILITY }
 }

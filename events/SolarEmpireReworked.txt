@@ -26,19 +26,23 @@ country_event = {
     option = { #We cannot return their own oppression for a brand of our own.
         name = solarreworked.1.a
         add_political_power = 50
-        add_power_balance_value = {
-            id = EQS_sanity_bop
-            value = 0.05
-            tooltip_side = EQS_kalm
+        hidden_effect = {
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = 0.05
+                tooltip_side = EQS_kalm
+            }
         }
     }
     option = { #We should place them under constant guard and constant work.
         name = solarreworked.1.b
         add_political_power = -25
-        add_power_balance_value = {
-            id = EQS_sanity_bop
-            value = -0.05
-            tooltip_side = EQS_angy
+        hidden_effect = {
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = -0.05
+                tooltip_side = EQS_angy
+            }
         }
         add_ideas = EQS_pow_laborers
     }
@@ -49,12 +53,12 @@ country_event = {
             ideology = fascism
             popularity = 0.03
         }
-        add_power_balance_value = {
-            id = EQS_sanity_bop
-            value = -0.1
-            tooltip_side = EQS_angy
-        }
         hidden_effect = {
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = -0.1
+                tooltip_side = EQS_angy
+            }
             set_technology = {
                 penal_infantry = 1
                 popup = no
@@ -136,10 +140,12 @@ country_event = {
     option = { #Blueblood is right. We must use every tactic to our advantage.
         name = solarreworked.2.a
         add_ideas = EQS_magical_bioweapons
-        add_power_balance_value = {
-            id = EQS_sanity_bop
-            value = -0.1
-            tooltip_side = EQS_angy
+        hidden_effect = {
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = -0.1
+                tooltip_side = EQS_angy
+            }
         }
         add_popularity = {
             ideology = fascism
@@ -150,22 +156,24 @@ country_event = {
             CHN = {
                 country_event = {
                     id = solarreworked.512
-                    days = 30
+                    days = 60
                     random_days = 30
                 }
             }
         }
-        add_opinion_modifier = {
+        reverse_add_opinion_modifier = {
             target = CHN
             modifier = EQS_used_bioweapons
         }
     }
     option = { #Use it for covert circumstance only.
         name = solarreworked.2.b
-        add_power_balance_value = {
-            id = EQS_sanity_bop
-            value = -0.05
-            tooltip_side = EQS_angy
+        hidden_effect = {
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = -0.05
+                tooltip_side = EQS_angy
+            }
         }
         if = {
             limit = { has_dlc = "La Resistance" }
@@ -174,7 +182,7 @@ country_event = {
         else = {
             add_ideas = EQS_stealthy_bioweapons
         }
-        add_opinion_modifier = {
+        reverse_add_opinion_modifier = {
             target = CHN
             modifier = EQS_used_bioweapons
         }
@@ -183,10 +191,12 @@ country_event = {
         name = solarreworked.2.c
         add_political_power = 25
         add_stability = 0.03
-        add_power_balance_value = {
-            id = EQS_sanity_bop
-            value = 0.05
-            tooltip_side = EQS_kalm
+        hidden_effect = {
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = 0.05
+                tooltip_side = EQS_kalm
+            }
         }
     }
 }
@@ -215,32 +225,38 @@ country_event = {
         name = solarreworked.3.a
         add_war_support = -0.05
         add_ideas = EQS_unrestricted_bombing
-        add_power_balance_value = {
-            id = EQS_sanity_bop
-            value = -0.05
-            tooltip_side = EQS_angy
-        }
-        add_popularity = {
-            ideology = fascism
-            popularity = 0.01
+        hidden_effect = {
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = -0.05
+                tooltip_side = EQS_angy
+            }
+            add_popularity = {
+                ideology = fascism
+                popularity = 0.01
+            }
         }
     }
     option = { #We should only do so if it's a last resort.
         name = solarreworked.3.b
         add_ideas = EQS_limited_unrestricted_bombing
-        add_power_balance_value = {
-            id = EQS_sanity_bop
-            value = -0.02
-            tooltip_side = EQS_angy
+        hidden_effect = {
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = -0.02
+                tooltip_side = EQS_angy
+            }
         }
     }
     option = { #We mustn't stoop to their level.
         name = solarreworked.3.c
         add_war_support = 0.03
-        add_power_balance_value = {
-            id = EQS_sanity_bop
-            value = 0.03
-            tooltip_side = EQS_kalm
+        hidden_effect = {
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = 0.03
+                tooltip_side = EQS_kalm
+            }
         }
         add_popularity = {
             ideology = democratic
@@ -260,8 +276,10 @@ country_event = {
         tag = EQS
         is_subject = no
         has_war_with = CHN
-        has_war_support < 0.75
-        surrender_progress > 0.1
+        OR = {
+            has_war_support < 0.75
+            surrender_progress > 0.1
+        }
     }
 
     fire_only_once = yes
@@ -269,10 +287,12 @@ country_event = {
     option = { #Everypony must feel like they can save Equestria.
         name = solarreworked.4.a
         add_ideas = EQS_extreme_propaganda
-        add_power_balance_value = {
-            id = EQS_sanity_bop
-            value = -0.05
-            tooltip_side = EQS_angy
+        hidden_effect = {
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = -0.05
+                tooltip_side = EQS_angy
+            }
         }
         add_popularity = {
             ideology = fascism
@@ -283,10 +303,12 @@ country_event = {
         name = solarreworked.4.b
         add_stability = 0.05
         add_war_support = 0.05
-        add_power_balance_value = {
-            id = EQS_sanity_bop
-            value = -0.03
-            tooltip_side = EQS_angy
+        hidden_effect = {
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = -0.03
+                tooltip_side = EQS_angy
+            }
         }
     }
     option = { #Ponies have a right to not be cushioned from the war.
@@ -300,10 +322,12 @@ country_event = {
         add_political_power = 100
         add_stability = -0.04
         add_war_support = -0.02
-        add_power_balance_value = {
-            id = EQS_sanity_bop
-            value = 0.05
-            tooltip_side = EQS_kalm
+        hidden_effect = {
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = 0.05
+                tooltip_side = EQS_kalm
+            }
         }
         add_popularity = {
             ideology = democratic
@@ -338,10 +362,12 @@ country_event = {
         else = {
             add_ideas = EQS_everwatching_princess
         }
-        add_power_balance_value = {
-            id = EQS_sanity_bop
-            value = -0.075
-            tooltip_side = EQS_angy
+        hidden_effect = {
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = -0.075
+                tooltip_side = EQS_angy
+            }
         }
         add_popularity = {
             ideology = fascism
@@ -357,10 +383,12 @@ country_event = {
         else = {
             add_ideas = EQS_nothing_to_hide_lar
         }
-        add_power_balance_value = {
-            id = EQS_sanity_bop
-            value = -0.04
-            tooltip_side = EQS_angy
+        hidden_effect = {
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = -0.04
+                tooltip_side = EQS_angy
+            }
         }
     }
     option = { #Everypony has a fundamental right to privacy.
@@ -406,10 +434,12 @@ country_event = {
             limit = { NOT = { has_idea = closed_economy } }
             add_ideas = closed_economy
         }
-        add_power_balance_value = {
-            id = EQS_sanity_bop
-            value = -0.05
-            tooltip_side = EQS_angy
+        hidden_effect = {
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = -0.05
+                tooltip_side = EQS_angy
+            }
         }
         add_popularity = {
             ideology = fascism
@@ -429,19 +459,23 @@ country_event = {
             }
             add_ideas = limited_exports
         }
-        add_power_balance_value = {
-            id = EQS_sanity_bop
-            value = -0.02
-            tooltip_side = EQS_angy
+        hidden_effect = {
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = -0.02
+                tooltip_side = EQS_angy
+            }
         }
     }
     option = { #Trade makes everypony prosper.
         name = solarreworked.6.c
         add_political_power = 70
-        add_power_balance_value = {
-            id = EQS_sanity_bop
-            value = 0.05
-            tooltip_side = EQS_kalm
+        hidden_effect = {
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = 0.05
+                tooltip_side = EQS_kalm
+            }
         }
         add_popularity = {
             ideology = democratic
@@ -700,6 +734,7 @@ country_event = { #Daybreaker enters her personal armory, and takes a moment to 
     id = solarreworked.31
     title = solarreworked.31.t
     desc = solarreworked.31.d
+    picture = GFX_event_palace_hall
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.31"}
 
     is_triggered_only = yes
@@ -1192,7 +1227,7 @@ country_event = { #Event of a thestral looking for work and having a hard time o
     }
 }
 
-country_event = { #Event of some thestrals gonig through a tutoring class with a Solarist teacher, who is going through again and again some of the tenets of being a Solarist citizen, and that Daybreaker is the only pony worth following, for she has all of the interests of her ponies at heart, even thestrals, although they must accept that their corruption makes it more difficult for them
+country_event = { #Event of some thestrals going through a tutoring class with a Solarist teacher, who is going through again and again some of the tenets of being a Solarist citizen, and that Daybreaker is the only pony worth following, for she has all of the interests of her ponies at heart, even thestrals, although they must accept that their corruption makes it more difficult for them
     id = solarreworked.45
     title = solarreworked.45.t
     desc = solarreworked.45.d
@@ -1315,10 +1350,13 @@ country_event = {
 
     option = {
         name = solarreworked.50.a
-        add_power_balance_value = {
-            id = EQS_sanity_bop
-            value = 0.2
-            tooltip_side = EQS_kalm
+        custom_effect_tooltip = EQS_wholesome_sister_moment_tt
+        hidden_effect = {
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = 0.2
+                tooltip_side = EQS_kalm
+            }
         }
     }
 }
@@ -1334,10 +1372,13 @@ country_event = {
 
     option = {
         name = solarreworked.51.a
-        add_power_balance_value = {
-            id = EQS_sanity_bop
-            value = -0.2
-            tooltip_side = EQS_angy
+        custom_effect_tooltip = EQS_nice_sisterly_visit_tt
+        hidden_effect = {
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = -0.2
+                tooltip_side = EQS_angy
+            }
         }
     }
 }
@@ -1373,10 +1414,12 @@ country_event = { #Luna barges into Celestia's chambers demanding to know why sh
             ideology = fascism
             popularity = 0.05
         }
-        add_power_balance_value = {
-            id = EQS_sanity_bop
-            value = -0.05
-            tooltip_side = EQS_angy
+        hidden_effect = {
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = -0.05
+                tooltip_side = EQS_angy
+            }
         }
     }
 }
@@ -1408,10 +1451,12 @@ country_event = {
 
     option = { #Twilight is obviously right.
         name = solarreworked.53.a
-        add_power_balance_value = {
-            id = EQS_sanity_bop
-            value = 0.05
-            tooltip_side = EQS_kalm
+        hidden_effect = {
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = 0.05
+                tooltip_side = EQS_kalm
+            }
         }
         add_political_power = 25
         add_popularity = {
@@ -1424,10 +1469,12 @@ country_event = {
     }
     option = { #Neighsay does have a point.
         name = solarreworked.53.b
-        add_power_balance_value = {
-            id = EQS_sanity_bop
-            value = -0.05
-            tooltip_side = EQS_angy
+        hidden_effect = {
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = -0.05
+                tooltip_side = EQS_angy
+            }
         }
         add_political_power = -50
         add_popularity = {
@@ -1440,10 +1487,12 @@ country_event = {
     }
     option = { #GET OUT OF HERE, BOTH OF YOU!
         name = solarreworked.53.c
-        add_power_balance_value = {
-            id = EQS_sanity_bop
-            value = -0.1
-            tooltip_side = EQS_angy
+        hidden_effect = {
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = -0.1
+                tooltip_side = EQS_angy
+            }
         }
         add_political_power = 200
         set_country_flag = {
@@ -1485,20 +1534,24 @@ country_event = {
 
     option = {
         name = solarreworked.54.a
-        add_power_balance_value = {
-            id = EQS_sanity_bop
-            value = -0.03
-            tooltip_side = EQS_angy
+        hidden_effect = {
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = -0.03
+                tooltip_side = EQS_angy
+            }
         }
         add_political_power = 50
         add_stability = 0.03
     }
     option = {
         name = solarreworked.54.b
-        add_power_balance_value = {
-            id = EQS_sanity_bop
-            value = 0.03
-            tooltip_side = EQS_kalm
+        hidden_effect = {
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = 0.03
+                tooltip_side = EQS_kalm
+            }
         }
         add_political_power = -50
         add_war_support = -0.03
@@ -1530,20 +1583,24 @@ country_event = {
 
     option = {
         name = solarreworked.60.a
-        add_power_balance_value = {
-            id = EQS_sanity_bop
-            value = 0.04
-            tooltip_side = EQS_kalm
+        hidden_effect = {
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = 0.04
+                tooltip_side = EQS_kalm
+            }
         }
         add_war_support = -0.03
         add_command_power = 25
     }
     option = {
         name = solarreworked.60.b
-        add_power_balance_value = {
-            id = EQS_sanity_bop
-            value = -0.03
-            tooltip_side = EQS_angy
+        hidden_effect = {
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = -0.03
+                tooltip_side = EQS_angy
+            }
         }
         add_war_support = 0.01
         add_command_power = 5
@@ -5119,7 +5176,7 @@ country_event = { #Event of Daybreaker merely looking over some of her itenerary
     }
 }
 
-country_event = { #An investigator of the IIS appears at a pony's business, since they have received "credible" intelligence that the pony is a rebell supporter, and that the investigator willp lace the pony under temporary arrest until they are proven innocent, and proceeds to start to tear through the business to find evidence; it's implied it was a false tip
+country_event = { #An investigator of the IIS appears at a pony's business, since they have received "credible" intelligence that the pony is a rebel supporter, and that the investigator will place the pony under temporary arrest until they are proven innocent, and proceeds to start to tear through the business to find evidence; it's implied it was a false tip
     id = solarreworked.324
     title = solarreworked.324.t
     desc = solarreworked.324.d
@@ -10442,7 +10499,7 @@ country_event = { #Some SMILE agents, who now work under Daybreaker, infiltrate 
                 limit = { has_completed_focus = SOL_new_imperial_chapter }
                 country_event = {
                     id = equestriaexpanded.8
-                    days = 3
+                    days = 5
                 }
             }
         }

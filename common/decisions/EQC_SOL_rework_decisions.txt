@@ -134,6 +134,17 @@ political_actions = {
             custom_effect_tooltip = EQC_SOL_game_over_man_tt
             OVERLORD = { country_event = solarreworked.508 }
         }
-        ai_will_do = { factor = 10 }
+        ai_will_do = {
+            base = 0
+            modifier = {
+                date > 1017.1.1
+                is_historical_focus_on = yes
+                add = 50
+            }
+            modifer = {
+                date = 1021.1.1
+                add = 30
+            }
+        }
     }
 }
