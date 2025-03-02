@@ -565,6 +565,7 @@ characters={
 			}
 			visible = {
 				is_EQS_SOL = yes
+				has_global_flag = SOL_twilight_converted
 			}
 			available = {
 				is_EQS_SOL = yes

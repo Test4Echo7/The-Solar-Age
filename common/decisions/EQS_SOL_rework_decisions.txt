@@ -211,11 +211,12 @@ EQS_BOP_sanity_category = {
                 NOT = { has_country_flag = EQS_bop_decision_taken }
             }
         }
-        cost = 15
+        #cost = 15
         days_remove = 7
         days_re_enable = 50
         complete_effect = {
             log = "[GetDateText]: [Root.GetName]: Decision EQS_preside_over_baking_competition"
+            add_political_power = 15
             add_power_balance_value = {
                 id = EQS_sanity_bop
                 value = 0.05
@@ -223,7 +224,7 @@ EQS_BOP_sanity_category = {
             }
             set_country_flag = {
                 flag = EQS_bop_decision_taken
-                days = 30
+                days = 45
                 value = 1
             }
         }
@@ -238,11 +239,17 @@ EQS_BOP_sanity_category = {
                 NOT = { has_country_flag = EQS_bop_decision_taken }
             }
         }
-        cost = 25
+        #cost = 25
+        custom_cost_trigger = {
+            has_war_support > 0.049
+        }
+        custom_cost_text = EQS_decision_cost_war_support_5
         days_remove = 14
         days_re_enable = 30
         complete_effect = {
             log = "[GetDateText]: [Root.GetName]: Decision EQS_take_lakeside_retreat"
+            add_stability = 0.02
+            add_political_power = 10
             add_power_balance_value = {
                 id = EQS_sanity_bop
                 value = 0.05
@@ -250,7 +257,7 @@ EQS_BOP_sanity_category = {
             }
             set_country_flag = {
                 flag = EQS_bop_decision_taken
-                days = 30
+                days = 45
                 value = 1
             }
         }
@@ -265,11 +272,19 @@ EQS_BOP_sanity_category = {
                 NOT = { has_country_flag = EQS_bop_decision_taken }
             }
         }
-        cost = 50
+        #cost = 50
+        custom_cost_trigger = {
+            command_power > 19.99
+        }
+        custom_cost_text = EQS_decision_cost_command_power_20
         days_remove = 30
         days_re_enable = 90
+        modifier = {
+            stability_weekly = 0.002
+        }
         complete_effect = {
             log = "[GetDateText]: [Root.GetName]: Decision EQS_visit_veterans_hospital"
+            add_political_power = 30
             add_power_balance_value = {
                 id = EQS_sanity_bop
                 value = 0.1
@@ -277,7 +292,7 @@ EQS_BOP_sanity_category = {
             }
             set_country_flag = {
                 flag = EQS_bop_decision_taken
-                days = 30
+                days = 45
                 value = 1
             }
         }
@@ -292,12 +307,21 @@ EQS_BOP_sanity_category = {
                 NOT = { has_country_flag = EQS_bop_decision_taken }
             }
         }
-        cost = 75
+        #cost = 75
+        #Civ factories?
+        custom_cost_trigger = {
+            num_of_civilian_factories_available_for_projects > 3
+        }
+        custom_cost_text = EQS_decision_cost_civ_factories_4
         days_remove = 45
         days_re_enable = 120
+        modifier = {
+            civilian_factory_use = 4
+        }
         complete_effect = {
             log = "[GetDateText]: [Root.GetName]: Decision EQS_provide_new_charity_grant"
             add_stability = 0.05
+            add_political_power = 35
             add_power_balance_value = {
                 id = EQS_sanity_bop
                 value = 0.1
@@ -318,7 +342,7 @@ EQS_BOP_sanity_category = {
                 NOT = { has_country_flag = EQS_bop_decision_taken }
             }
         }
-        cost = 5
+        cost = 50
         fire_only_once = yes
         complete_effect = {
             log = "[GetDateText]: [Root.GetName]: Decision EQS_discuss_fears_with_luna"
@@ -326,7 +350,7 @@ EQS_BOP_sanity_category = {
             country_event = solarreworked.50
             set_country_flag = {
                 flag = EQS_bop_decision_taken
-                days = 30
+                days = 45
                 value = 1
             }
         }
@@ -343,7 +367,7 @@ EQS_BOP_sanity_category = {
                 NOT = { has_country_flag = EQS_bop_decision_taken }
             }
         }
-        cost = 20
+        #cost = 20
         days_remove = 30
         days_re_enable = 30
         modifier = {
@@ -359,7 +383,7 @@ EQS_BOP_sanity_category = {
             }
             set_country_flag = {
                 flag = EQS_bop_decision_taken
-                days = 30
+                days = 45
                 value = 1
             }
         }
@@ -375,16 +399,20 @@ EQS_BOP_sanity_category = {
                 NOT = { has_country_flag = EQS_bop_decision_taken }
             }
         }
-        cost = 35
-        days_remove = 14
+        #cost = 35
+        days_remove = 21
         days_re_enable = 45
+        custom_cost_trigger = {
+            has_army_experience > 4.99
+        }
+        custom_cost_text = EQS_decision_cost_army_xp_5
         modifier = {
-            max_planning = 0.1
-            planning_speed = 0.15
+            max_planning = 0.15
+            planning_speed = 0.25
         }
         complete_effect = {
             log = "[GetDateText]: [Root.GetName]: Decision EQS_preside_over_war_planning"
-            add_command_power = 10
+            add_command_power = 25
             add_power_balance_value = {
                 id = EQS_sanity_bop
                 value = -0.05
@@ -392,7 +420,7 @@ EQS_BOP_sanity_category = {
             }
             set_country_flag = {
                 flag = EQS_bop_decision_taken
-                days = 30
+                days = 45
                 value = 1
             }
         }
@@ -408,15 +436,19 @@ EQS_BOP_sanity_category = {
                 NOT = { has_country_flag = EQS_bop_decision_taken }
             }
         }
-        cost = 35
+        #cost = 35
+        custom_cost_trigger = {
+            command_power > 14.99
+        }
+        custom_cost_text = EQS_decision_cost_command_power_15
         days_remove = 14
         days_re_enable = 90
         modifier = {
-            war_support_weekly = 0.005
+            war_support_weekly = 0.02
         }
         complete_effect = {
             log = "[GetDateText]: [Root.GetName]: Decision EQS_host_speech_of_fallen"
-            add_manpower = 1000
+            add_manpower = 2500
             add_power_balance_value = {
                 id = EQS_sanity_bop
                 value = -0.1
@@ -424,7 +456,7 @@ EQS_BOP_sanity_category = {
             }
             set_country_flag = {
                 flag = EQS_bop_decision_taken
-                days = 30
+                days = 45
                 value = 1
             }
         }
@@ -440,7 +472,11 @@ EQS_BOP_sanity_category = {
                 NOT = { has_country_flag = EQS_bop_decision_taken }
             }
         }
-        cost = 50
+        #cost = 50
+        custom_cost_trigger = {
+            has_manpower > 4999
+        }
+        custom_cost_text = EQS_decision_cost_manpower_5000
         days_remove = 30
         days_re_enable = 120
         modifier = {
@@ -448,7 +484,7 @@ EQS_BOP_sanity_category = {
         }
         complete_effect = {
             log = "[GetDateText]: [Root.GetName]: Decision EQS_oversee_military_trial"
-            army_experience = 10
+            army_experience = 15
             add_power_balance_value = {
                 id = EQS_sanity_bop
                 value = -0.1
@@ -456,7 +492,7 @@ EQS_BOP_sanity_category = {
             }
             set_country_flag = {
                 flag = EQS_bop_decision_taken
-                days = 30
+                days = 45
                 value = 1
             }
         }
@@ -474,7 +510,7 @@ EQS_BOP_sanity_category = {
                 NOT = { has_country_flag = EQS_bop_decision_taken }
             }
         }
-        cost = 5
+        cost = 50
         fire_only_once = yes
         complete_effect = {
             log = "[GetDateText]: [Root.GetName]: Decision EQS_taste_of_the_war"
@@ -482,7 +518,7 @@ EQS_BOP_sanity_category = {
             country_event = solarreworked.51
             set_country_flag = {
                 flag = EQS_bop_decision_taken
-                days = 30
+                days = 45
                 value = 1
             }
         }
@@ -1082,6 +1118,7 @@ EQS_solar_fury_category = {
         visible = {
             has_war = yes
             is_EQS_SOL = yes
+            EQS_princess_celestia = { has_character_flag = SOL_daybreaker_boss }
         }
         icon = celestia
         cost = 50
@@ -1146,6 +1183,7 @@ EQS_solar_fury_category = {
         visible = {
             has_war = yes
             is_EQS_SOL = yes
+            EQS_princess_celestia = { has_character_flag = SOL_daybreaker_boss }
         }
         icon = celestia
         cost = 50
@@ -1201,6 +1239,7 @@ EQS_solar_fury_category = {
         visible = {
             has_war = yes
             is_EQS_SOL = yes
+            EQS_princess_celestia = { has_character_flag = SOL_daybreaker_boss }
         }
         icon = celestia
         cost = 50
@@ -1239,6 +1278,7 @@ EQS_solar_fury_category = {
         visible = {
             has_war = yes
             is_EQS_SOL = yes
+            EQS_princess_celestia = { has_character_flag = SOL_daybreaker_boss }
         }
         icon = celestia
         cost = 50
@@ -1290,6 +1330,7 @@ EQS_solar_fury_category = {
         visible = {
             has_war = yes
             is_EQS_SOL = yes
+            EQS_princess_celestia = { has_character_flag = SOL_daybreaker_boss }
         }
         icon = celestia
         cost = 50

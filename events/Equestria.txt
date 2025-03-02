@@ -6713,13 +6713,13 @@ country_event = { #Luna is concerned
 	immediate = {log = "[GetDateText]: [Root.GetName]: event equestria.153"}
 	title = equestria.153.t
 	desc = {
-		text = equestria.153.d_luna
+		text = solarreworked.7.da
 		trigger = {
 			has_idea = alicorn_sisters
 		}
 	}
 	desc = {
-		text = equestria.153.d_nobles
+		text = solarreworked.7.db
 		trigger = {
 			NOT = { has_idea = alicorn_sisters }
 		}
@@ -6746,7 +6746,7 @@ country_event = { #Luna is concerned
 	option = { #Back down
 		name = equestria.153.a
 		hidden_effect = {
-			modify_country_flag = { flag = celestia_evil_meter value = -4 }
+			#modify_country_flag = { flag = celestia_evil_meter value = -4 }
 			add_power_balance_value = {
 				id = EQS_sanity_bop
 				value = 0.25

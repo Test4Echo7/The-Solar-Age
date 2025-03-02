@@ -141,8 +141,8 @@ political_actions = {
                 is_historical_focus_on = yes
                 add = 50
             }
-            modifer = {
-                date = 1021.1.1
+            modifier = {
+                date > 1021.1.1
                 add = 30
             }
         }

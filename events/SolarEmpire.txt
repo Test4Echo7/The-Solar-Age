@@ -1872,21 +1872,23 @@ country_event = {
 
 	fire_only_once = yes
 
-	trigger = {
-		tag = event_target:solar_empire
-		any_enemy_country = {
-			original_tag = EQS
-			has_country_flag = EQS_CRY_has_twilight
-			OR = {
-				has_capitulated = yes
-				capital_scope = { is_controlled_by = ROOT }
-			}
-		}
-	}
+	is_triggered_only = yes
 
-	mean_time_to_happen = {
-		days = 2
-	}
+	#trigger = {
+	#	tag = event_target:solar_empire
+	#	any_enemy_country = {
+	#		original_tag = EQS
+	#		has_country_flag = EQS_CRY_has_twilight
+	#		OR = {
+	#			has_capitulated = yes
+	#			capital_scope = { is_controlled_by = ROOT }
+	#		}
+	#	}
+	#}
+
+	#mean_time_to_happen = {
+	#	days = 2
+	#}
 
 	immediate = {
 		if = {
@@ -1960,30 +1962,30 @@ news_event = {
 
 	major = yes
 
-	#is_triggered_only = yes
+	is_triggered_only = yes
 
-	trigger = {
-		event_target:solar_empire = {
-			exists = yes
-			NOT = { has_country_flag = SOL_has_twilight }
-		}
-		CRY = {
-			OR = {
-				is_subject_of = event_target:solar_empire
-				exists = no
-			}
-		}
-		NOT = {
-			AND = {
-				any_country_with_original_tag = {
-					original_tag_to_check = EQS
-					NOT = { tag = ROOT }
-					NOT = { is_subject_of = event_target:solar_empire }
-					exists = yes
-				}
-			}
-		}
-	}
+	#trigger = {
+	#	event_target:solar_empire = {
+	#		exists = yes
+	#		NOT = { has_country_flag = SOL_has_twilight }
+	#	}
+	#	CRY = {
+	#		OR = {
+	#			is_subject_of = event_target:solar_empire
+	#			exists = no
+	#		}
+	#	}
+	#	NOT = {
+	#		AND = {
+	#			any_country_with_original_tag = {
+	#				original_tag_to_check = EQS
+	#				NOT = { tag = ROOT }
+	#				NOT = { is_subject_of = event_target:solar_empire }
+	#				exists = yes
+	#			}
+	#		}
+	#	}
+	#}
 
 	option = {
 		name = solarempire.23.a
@@ -3111,8 +3113,6 @@ country_event = { #Add bat resistance
 				}
 			}
 			remove_core_of = ROOT
-			add_claim_by = ROOT
-			start_resistance = yes
 			set_state_flag = eqs_bat_state
 		}
 	}

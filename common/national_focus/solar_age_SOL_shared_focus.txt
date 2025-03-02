@@ -801,6 +801,7 @@ shared_focus = {
 			}
         }
     }
+    continue_if_invalid = yes
 
     completion_reward = {
         log = "[GetDateText]: [Root.GetName]: Focus SOL_appoint_committee"
@@ -845,7 +846,11 @@ shared_focus = {
 				value < 0.3
 			}
         }
+        else = {
+			always = no
+        }
     }
+    continue_if_invalid = yes
 
     completion_reward = {
         log = "[GetDateText]: [Root.GetName]: Focus SOL_answer_crimes"
@@ -887,7 +892,11 @@ shared_focus = {
 				value < 0.3
 			}
         }
+        else = {
+			always = no #So it doesn't bypass immediately
+        }
     }
+    continue_if_invalid = yes
 
     completion_reward = {
         log = "[GetDateText]: [Root.GetName]: Focus SOL_sweeping_chaff"
@@ -919,6 +928,7 @@ shared_focus = {
 			}
         }
     }
+    continue_if_invalid = yes
 
     completion_reward = {
         log = "[GetDateText]: [Root.GetName]: Focus SOL_first_feelers"
@@ -962,7 +972,11 @@ shared_focus = {
 				value < 0.1
 			}
         }
+        else = {
+			always = no
+        }
     }
+    continue_if_invalid = yes
 
     completion_reward = {
         log = "[GetDateText]: [Root.GetName]: Focus SOL_break_dissent"
@@ -1004,7 +1018,11 @@ shared_focus = {
 				value < 0
 			}
         }
+        else = {
+			always = no
+        }
     }
+    continue_if_invalid = yes
 
     completion_reward = {
         log = "[GetDateText]: [Root.GetName]: Focus SOL_plants_in_chaos"
@@ -1063,6 +1081,7 @@ shared_focus = {
 			}
         }
     }
+    continue_if_invalid = yes
 
     completion_reward = {
         log = "[GetDateText]: [Root.GetName]: Focus SOL_reward_loyal"
@@ -1105,7 +1124,11 @@ shared_focus = {
 				value < -0.25
 			}
         }
+        else = {
+			always = no
+        }
     }
+    continue_if_invalid = yes
 
     completion_reward = {
         log = "[GetDateText]: [Root.GetName]: Focus SOL_arbitrary_judgement"
@@ -1149,7 +1172,11 @@ shared_focus = {
 				value < -0.25
 			}
         }
+        else = {
+			always = no
+        }
     }
+    continue_if_invalid = yes
 
     completion_reward = {
         log = "[GetDateText]: [Root.GetName]: Focus SOL_solidify_merger"

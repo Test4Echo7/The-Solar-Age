@@ -372,12 +372,13 @@ SOL_dealing_with_resistance = {
 		activation = {
 			has_country_leader = { character = EQS_princess_celestia ruling_only = yes }
 			is_EQS_SOL = yes
+			has_country_flag = SOL_solar_age_start_harmonic_resistance
 			NOT = { has_completed_focus = SOL_Imperium_Solis }
 		}
 		available = { has_completed_focus = SOL_Imperium_Solis }
 		cancel_trigger = { eqs_has_civil_war = yes }
 		is_good = no
-		days_mission_timeout = 250
+		days_mission_timeout = 320
 		timeout_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision timeout SOL_societal_unrest"
 			set_variable = { civ_war_size = party_popularity@democratic }
@@ -500,13 +501,13 @@ SOL_dealing_with_resistance = {
 		visible = { has_country_flag = SOL_twilight_fleeing }
 		fire_only_once = yes
 		custom_cost_trigger = {
-			has_stability > 0.099
+			has_war_support > 0.099
 		}
-		custom_cost_text = EQS_decision_cost_stability_10
+		custom_cost_text = EQS_decision_cost_war_support_10
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision SOL_implement_aerial_patrols"
 			hidden_effect = {
-				add_stability = -0.1
+				add_war_support = -0.1
 			}
 			custom_effect_tooltip = SOL_no_fleeing_now_tt
 			add_to_variable = { SOL_lockdown_procedures = 1 }
@@ -577,7 +578,7 @@ SOL_dealing_with_resistance = {
 		icon = anti_harmony
 		allowed = { tag = EQS }
 		visible = {
-			has_country_flag = SOL_unlocked_fillydelphia_pony
+			has_country_flag = SOL_unlocked_fillydelphia_ponyville
 		}
 		fire_only_once = yes
 		custom_cost_trigger = {

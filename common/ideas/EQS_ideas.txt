@@ -2355,6 +2355,7 @@ ideas = {
 			targeted_modifier = {
 				tag = CHN
 				attack_bonus_against = 0.1
+				defense_bonus_against = 0.05
 			}
 			modifier = {
 				political_power_factor = -0.1
@@ -2365,7 +2366,7 @@ ideas = {
 				has_war_with = EQS
 			}
 			targeted_modifier = {
-				tag = CHN
+				tag = EQS
 				attack_bonus_against = 0.075
 				defense_bonus_against = 0.075
 			}
@@ -2423,10 +2424,10 @@ ideas = {
 				has_war_with = CHN
 			}
 			modifier = {
-				airforce_intel_to_others = -0.1
-				army_intel_to_others = -0.1
-				navy_intel_to_others = -0.1
-				civilian_intel_to_others = -0.1
+				airforce_intel_to_others = -10
+				army_intel_to_others = -10
+				navy_intel_to_others = -10
+				civilian_intel_to_others = -10
 				stability_factor = -0.1
 				political_power_gain = -0.05
 			}
@@ -2446,10 +2447,10 @@ ideas = {
 				has_war_with = CHN
 			}
 			modifier = {
-				airforce_intel_to_others = -0.05
-				army_intel_to_others = -0.05
-				navy_intel_to_others = -0.05
-				civilian_intel_to_others = -0.05
+				airforce_intel_to_others = -5
+				army_intel_to_others = -5
+				navy_intel_to_others = -5
+				civilian_intel_to_others = -5
 				stability_factor = -0.05
 			}
 		}
