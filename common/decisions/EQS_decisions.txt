@@ -579,6 +579,7 @@ SOL_dealing_with_resistance = {
 		allowed = { tag = EQS }
 		visible = {
 			has_country_flag = SOL_unlocked_fillydelphia_ponyville
+			has_idea = SOL_harmonic_resistance_idea
 		}
 		fire_only_once = yes
 		custom_cost_trigger = {
@@ -608,7 +609,10 @@ SOL_dealing_with_resistance = {
 	SOL_raid_ponyville_cottage = {
 		icon = anti_harmony
 		allowed = { tag = EQS }
-		visible = { has_country_flag = SOL_unlocked_fillydelphia_ponyville }
+		visible = {
+			has_country_flag = SOL_unlocked_fillydelphia_ponyville
+			has_idea = SOL_harmonic_resistance_idea
+		}
 		fire_only_once = yes
 		custom_cost_trigger = {
 			set_temp_variable = { EQS_political_power_cost_var = 25 }
@@ -636,7 +640,10 @@ SOL_dealing_with_resistance = {
 	SOL_raid_freeside_restaurant = {
 		icon = anti_harmony
 		allowed = { tag = EQS }
-		visible = { has_country_flag = SOL_unlocked_freeside }
+		visible = {
+			has_country_flag = SOL_unlocked_freeside
+			has_idea = SOL_harmonic_resistance_idea
+		}
 		fire_only_once = yes
 		custom_cost_trigger = {
 			set_temp_variable = { EQS_political_power_cost_var = 20 }
@@ -667,7 +674,10 @@ SOL_dealing_with_resistance = {
 	SOL_investigate_new_horseleans_docks = {
 		icon = anti_harmony
 		allowed = { tag = EQS }
-		visible = { has_country_flag = SOL_unlocked_horseleans_manehattan }
+		visible = {
+			has_country_flag = SOL_unlocked_horseleans_manehattan
+			has_idea = SOL_harmonic_resistance_idea
+		}
 		fire_only_once = yes
 		custom_cost_trigger = {
 			set_temp_variable = { EQS_political_power_cost_var = 10 }
@@ -706,6 +716,7 @@ SOL_dealing_with_resistance = {
 				has_country_flag = SOL_unlocked_horseleans_manehattan
 				has_country_flag = SOL_unlocked_manehattan_only
 			}
+			has_idea = SOL_harmonic_resistance_idea
 		}
 		custom_cost_trigger = {
 			set_temp_variable = { EQS_political_power_cost_var = 5 }
@@ -735,7 +746,10 @@ SOL_dealing_with_resistance = {
 	SOL_search_jungle_camp = {
 		icon = anti_harmony
 		allowed = { tag = EQS }
-		visible = { has_country_flag = SOL_unlocked_jungle_camp }
+		visible = {
+			has_country_flag = SOL_unlocked_jungle_camp
+			has_idea = SOL_harmonic_resistance_idea
+		}
 		custom_cost_trigger = {
 			set_temp_variable = { EQS_political_power_cost_var = 5 }
 			set_temp_variable = { EQS_command_power_cost_var = 20 }
@@ -765,7 +779,10 @@ SOL_dealing_with_resistance = {
 	SOL_search_manehattan_opera_house = {
 		icon = anti_harmony
 		allowed = { tag = EQS }
-		visible = { has_country_flag = SOL_unlocked_opera_house }
+		visible = {
+			has_country_flag = SOL_unlocked_opera_house
+			has_idea = SOL_harmonic_resistance_idea
+		}
 		custom_cost_trigger = {
 			set_temp_variable = { EQS_political_power_cost_var = 40 }
 			set_temp_variable = { EQS_command_power_cost_var = 15 }
@@ -794,7 +811,10 @@ SOL_dealing_with_resistance = {
 	SOL_raid_dodge_city_post_office = {
 		icon = anti_harmony
 		allowed = { tag = EQS }
-		visible = { has_country_flag = SOL_unlocked_dodge_mareway }
+		visible = {
+			has_country_flag = SOL_unlocked_dodge_mareway
+			has_idea = SOL_harmonic_resistance_idea
+		}
 		custom_cost_trigger = {
 			set_temp_variable = { EQS_political_power_cost_var = 50 }
 			set_temp_variable = { EQS_command_power_cost_var = 5 }
@@ -825,7 +845,10 @@ SOL_dealing_with_resistance = {
 	SOL_hunt_for_mareway_informant = {
 		icon = anti_harmony
 		allowed = { tag = EQS }
-		visible = { has_country_flag = SOL_unlocked_dodge_mareway }
+		visible = {
+			has_country_flag = SOL_unlocked_dodge_mareway
+			has_idea = SOL_harmonic_resistance_idea
+		}
 		custom_cost_trigger = {
 			set_temp_variable = { EQS_political_power_cost_var = 25 }
 			set_temp_variable = { EQS_command_power_cost_var = 40 }
@@ -855,7 +878,10 @@ SOL_dealing_with_resistance = {
 	SOL_raid_friendship_school = {
 		icon = anti_harmony
 		allowed = { tag = EQS }
-		visible = { has_country_flag = SOL_unlocked_ponyville_manehattan }
+		visible = {
+			has_country_flag = SOL_unlocked_ponyville_manehattan
+			has_idea = SOL_harmonic_resistance_idea
+		}
 		custom_cost_trigger = {
 			set_temp_variable = { EQS_political_power_cost_var = 35 }
 			set_temp_variable = { EQS_command_power_cost_var = 25 }
@@ -888,7 +914,10 @@ SOL_dealing_with_resistance = {
 	SOL_investigate_raritys_manehattan_boutique = {
 		icon = anti_harmony
 		allowed = { tag = EQS }
-		visible = { has_country_flag = SOL_unlocked_ponyville_manehattan }
+		visible = {
+			has_country_flag = SOL_unlocked_ponyville_manehattan
+			has_idea = SOL_harmonic_resistance_idea
+		}
 		custom_cost_trigger = {
 			set_temp_variable = { EQS_political_power_cost_var = 20 }
 			set_temp_variable = { EQS_command_power_cost_var = 20 }
@@ -917,7 +946,10 @@ SOL_dealing_with_resistance = {
 	SOL_search_castle_for_clues = {
 		icon = anti_harmony
 		allowed = { tag = EQS }
-		visible = { has_country_flag = SOL_unlocked_everfree }
+		visible = {
+			has_country_flag = SOL_unlocked_everfree
+			has_idea = SOL_harmonic_resistance_idea
+		}
 		custom_cost_trigger = {
 			set_temp_variable = { EQS_political_power_cost_var = 10 }
 			set_temp_variable = { EQS_command_power_cost_var = 20 }
@@ -948,7 +980,10 @@ SOL_dealing_with_resistance = {
 	SOL_find_information_in_canterlot_library = {
 		icon = anti_harmony
 		allowed = { tag = EQS }
-		visible = { has_country_flag = SOL_unlocked_canterlot_library }
+		visible = {
+			has_country_flag = SOL_unlocked_canterlot_library
+			has_idea = SOL_harmonic_resistance_idea
+		}
 		custom_cost_trigger = {
 			set_temp_variable = { EQS_political_power_cost_var = 5 }
 			set_temp_variable = { EQS_command_power_cost_var = 10 }
@@ -977,7 +1012,10 @@ SOL_dealing_with_resistance = {
 	SOL_investigate_raritys_canterlot_boutique = {
 		icon = anti_harmony
 		allowed = { tag = EQS }
-		visible = { has_country_flag = SOL_unlocked_canterlot_boutique }
+		visible = {
+			has_country_flag = SOL_unlocked_canterlot_boutique
+			has_idea = SOL_harmonic_resistance_idea
+		}
 		custom_cost_trigger = {
 			set_temp_variable = { EQS_political_power_cost_var = 40 }
 			set_temp_variable = { EQS_command_power_cost_var = 15 }
@@ -1006,7 +1044,10 @@ SOL_dealing_with_resistance = {
 	SOL_capture_sassy = {
 		icon = anti_harmony
 		allowed = { tag = EQS }
-		visible = { has_country_flag = SOL_unlocked_sassy }
+		visible = {
+			has_country_flag = SOL_unlocked_sassy
+			has_idea = SOL_harmonic_resistance_idea
+		}
 		custom_cost_trigger = {
 			set_temp_variable = { EQS_political_power_cost_var = 20 }
 			set_temp_variable = { EQS_command_power_cost_var = 50 }
@@ -1036,7 +1077,10 @@ SOL_dealing_with_resistance = {
 	SOL_destroy_resistance = {
 		icon = anti_harmony
 		allowed = { tag = EQS }
-		visible = { has_country_flag = SOL_unlocked_resistance_location }
+		visible = {
+			has_country_flag = SOL_unlocked_resistance_location
+			has_idea = SOL_harmonic_resistance_idea
+		}
 		custom_cost_trigger = {
 			set_temp_variable = { EQS_political_power_cost_var = 25 }
 			set_temp_variable = { EQS_command_power_cost_var = 75 }
@@ -1670,6 +1714,9 @@ political_actions = {
 		}
 		available = {
 			is_EQS_SOL = yes
+			NOT = { has_war_with = CHN }
+			NOT = { has_war_with = STG }
+			NOT = { has_war_with = NLR }
 		}
 		visible = {
 			has_completed_focus = SOL_Imperium_Solis
@@ -1760,6 +1807,7 @@ political_actions = {
 			CRY = {
 				is_subject_of = ROOT
 				NOT = { has_country_flag = SOL_flurry_captured }
+				has_country_flag = SOL_CRY_peaced_out
 			}
 		}
 		fire_only_once = yes

@@ -1969,10 +1969,12 @@ country_event = { #A trainee evoker is put to the test on one of the main combat
 			specialization = specialization_magical
 			value = 0.25
 		}
-        set_technology = {
-			SOL_evoker_legions_tech = 1
-			popup = no
-		}
+		hidden_effect = {
+            set_technology = {
+                SOL_evoker_legions_tech = 1
+                popup = no
+            }
+        }
 		add_ideas = SOL_evoker_legions
     }
 }
@@ -5243,7 +5245,17 @@ country_event = { #An investigator of the IIS appears at a pony's business, sinc
 		else = {
 			add_ideas = SOL_Imperial_Investigative_Service_idea
 		}
+		if = {
+			limit = { has_dynamic_modifier = { modifier = EQS_smile_upgrades_lar } }
+			remove_dynamic_modifier = { modifier = EQS_smile_upgrades_lar }
+		}
+		else_if = {
+            limit = { has_dynamic_modifier = { modifier = EQS_smile_upgrades } }
+			remove_dynamic_modifier = { modifier = EQS_smile_upgrades }
+		}
 		set_country_flag = SOL_spy_mares
+		custom_effect_tooltip = SOL_big_daybreaker_is_watching_tt
+		mark_focus_tree_layout_dirty = yes
     }
 }
 

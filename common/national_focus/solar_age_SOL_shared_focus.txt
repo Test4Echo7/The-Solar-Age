@@ -2301,7 +2301,17 @@ shared_focus = {
 		else = {
 			add_ideas = SOL_imperial_eyes
 		}
+		if = {
+			limit = { has_dynamic_modifier = { modifier = EQS_smile_upgrades_lar } }
+			remove_dynamic_modifier = { modifier = EQS_smile_upgrades_lar }
+		}
+		else_if = {
+            limit = { has_dynamic_modifier = { modifier = EQS_smile_upgrades } }
+			remove_dynamic_modifier = { modifier = EQS_smile_upgrades }
+		}
 		set_country_flag = SOL_spy_mares
+		custom_effect_tooltip = SOL_big_daybreaker_is_watching_tt
+		mark_focus_tree_layout_dirty = yes
 	}
 	ai_will_do = { factor = 75 }
 }
@@ -4519,9 +4529,9 @@ shared_focus = {
 		is_subject = no
 	}
 	bypass = {
-		NOT = {
+		PCB = {
 			OR = {
-				country_exists = PCB
+				exists = no
 				has_war_with = ROOT
 				is_subject_of = ROOT
 			}
@@ -7190,6 +7200,10 @@ shared_focus = {
 					target = YAK
 					autonomy_state = autonomy_satellite
 				}
+				custom_effect_tooltip = SOL_twiggles_sent_tt
+				custom_effect_tooltip = SOL_super_smash_pones_yak_tt
+				custom_effect_tooltip = SOL_shim_sham_sent_tt
+				custom_effect_tooltip = SOL_slurp_them_resources_yak_tt
 			}
 			else_if = {
 				limit = { country_exists = JAK }
@@ -7197,12 +7211,12 @@ shared_focus = {
 					target = JAK
 					autonomy_state = autonomy_satellite
 				}
+				custom_effect_tooltip = SOL_twiggles_sent_tt
+				custom_effect_tooltip = SOL_super_smash_pones_jak_tt
+				custom_effect_tooltip = SOL_shim_sham_sent_tt
+				custom_effect_tooltip = SOL_slurp_them_resources_jak_tt
 			}
 		}
-		custom_effect_tooltip = SOL_twiggles_sent_tt
-		custom_effect_tooltip = SOL_super_smash_pones_tt
-		custom_effect_tooltip = SOL_shim_sham_sent_tt
-		custom_effect_tooltip = SOL_slurp_them_resources_tt
 	}
 	ai_will_do = {
 		factor = 20
@@ -7256,7 +7270,6 @@ shared_focus = {
 				limit = {
 					PNG = {
 						exists = yes
-						is_subject = no
 					}
 				}
 				set_autonomy = {
@@ -7268,7 +7281,6 @@ shared_focus = {
 				limit = {
 					PLB = {
 						exists = yes
-						is_subject = no
 					}
 				}
 				set_autonomy = {
@@ -7284,7 +7296,6 @@ shared_focus = {
 			limit = {
 				PLB = {
 					exists = yes
-					is_subject = no
 				}
 			}
 			PLB = { show_ideas_tooltip = SOL_native_oil_shim_sham }
@@ -7293,7 +7304,6 @@ shared_focus = {
 			limit = {
 				PNG = {
 					exists = yes
-					is_subject = no
 				}
 			}
 			PNG = { show_ideas_tooltip = SOL_native_oil_shim_sham }
@@ -7471,21 +7481,21 @@ shared_focus = {
 						amount = -5000
 						producer = GRF
 					}
-					add_equipment_to_stockpile = {
-						type = infantry_equipment
-						amount = 25000
-						producer = GRF
-					}
-					add_equipment_to_stockpile = {
-						type = support_equipment
-						amount = 3000
-						producer = GRF
-					}
-					add_equipment_to_stockpile = {
-						type = artillery_equipment
-						amount = 5000
-						producer = GRF
-					}
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 25000
+					producer = GRF
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 3000
+					producer = GRF
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = 5000
+					producer = GRF
 				}
 			}
 			else_if = {
@@ -8973,11 +8983,7 @@ shared_focus = {
 			has_completed_focus = SOL_god_empress
 		}
 		PCB = {
-			has_war = no
-			OR = {
-				is_subject = no
-				is_subject_of = ROOT
-			}
+			is_subject_of = ROOT
 		}
 	}
 	bypass = {
@@ -9014,11 +9020,7 @@ shared_focus = {
 			has_completed_focus = SOL_god_empress
 		}
 		PCB = {
-			has_war = no
-			OR = {
-				is_subject = no
-				is_subject_of = ROOT
-			}
+			is_subject_of = ROOT
 		}
 	}
 	bypass = {
@@ -10991,6 +10993,7 @@ shared_focus = {
 	available = {
 		has_war = yes
 	}
+	continue_if_invalid = yes
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_efficient_clearing"
@@ -11009,6 +11012,7 @@ shared_focus = {
 	cost = 5
 	prerequisite = { focus = SOL_efficient_clearing }
 	available = { has_war = yes }
+	continue_if_invalid = yes
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_generational_leaps"
@@ -11119,6 +11123,7 @@ shared_focus = {
 	cost = 5
 	prerequisite = { focus = SOL_combined_assaults }
 	available = { has_war = yes }
+	continue_if_invalid = yes
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_holy_napalm_applications"
@@ -11140,6 +11145,7 @@ shared_focus = {
 	}
 	prerequisite = { focus = SOL_mundane_magic }
 	relative_position_id = SOL_holy_napalm_applications
+	continue_if_invalid = yes
 	x = 1
 	y = 1
 	completion_reward = {
@@ -11272,6 +11278,7 @@ shared_focus = {
 	cost = 5
 	prerequisite = { focus = SOL_operational_art }
 	available = { has_war = yes }
+	continue_if_invalid = yes
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_only_statistics"
@@ -11293,6 +11300,7 @@ shared_focus = {
 		focus = SOL_streamlined_firearms
 	}
 	available = { has_war = yes }
+	continue_if_invalid = yes
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_melting_shroud"
@@ -11311,6 +11319,7 @@ shared_focus = {
 	cost = 5
 	prerequisite = { focus = SOL_streamlined_firearms }
 	available = { has_war = yes }
+	continue_if_invalid = yes
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_reduced_standards"
@@ -11430,6 +11439,7 @@ shared_focus = {
 	}
 	mutually_exclusive = { focus = SOL_mighty_hoofs }
 	available = { has_war = yes }
+	continue_if_invalid = yes
 	relative_position_id = SOL_evocation_schools
 	x = 0
 	y = 1
@@ -11455,6 +11465,7 @@ shared_focus = {
 	prerequisite = { focus = SOL_magical_adaptations }
 	prerequisite = { focus = SOL_magitech_integration }
 	available = { has_war = yes }
+	continue_if_invalid = yes
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_next_gen_spells"
@@ -11499,6 +11510,7 @@ shared_focus = {
 	prerequisite = { focus = SOL_communication_key }
 	mutually_exclusive = { focus = SOL_efficient_clearing }
 	available = { has_war = yes }
+	continue_if_invalid = yes
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_strike_iron"
@@ -11573,6 +11585,7 @@ shared_focus = {
 		focus = SOL_invincible_spotlights
 	}
 	available = { has_war = yes }
+	continue_if_invalid = yes
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_mundane_magic"
