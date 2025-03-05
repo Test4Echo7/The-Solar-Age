@@ -10,9 +10,10 @@ focus_tree = {
 		}
 	}
 	default = no
-	continuous_focus_position = { x = 1200 y = 1200 }
+	continuous_focus_position = { x = 500 y = 1200 }
 	shared_focus = CRY_military
 	shared_focus = CRY_strength
+	shared_focus = SOL_royal_province
 	focus = {
 		id = CRY_SOL_new_management
 		icon = GFX_goal_imperium_solem

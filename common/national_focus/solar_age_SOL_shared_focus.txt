@@ -7763,15 +7763,24 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_royal_province
-	x = 1
-	y = 1
+	x = -50
+	y = 3
+	offset = {
+		trigger = {
+			tag = CRY
+		}
+		x = 46
+		y = -1
+	}
 	icon = GFX_goal_crystal_fair
-	relative_position_id = SOL_follow_sunrise_plan
+	#relative_position_id = SOL_follow_sunrise_plan
 
 	cost = 5
 	prerequisite = {
 		focus = SOL_follow_sunrise_plan
 		focus = SOL_gesture_of_strength
+		focus = CRY_SOL_burn_them_all
+		focus = CRY_SOL_show_them_the_light
 	}
 	available = {
 		eqs_not_has_civil_war = yes
@@ -7779,6 +7788,7 @@ shared_focus = {
 		CRY = {
 			is_subject_of = ROOT
 			has_civil_war = no
+			exists = yes
 		}
 	}
 	bypass = {
@@ -7841,7 +7851,9 @@ shared_focus = {
 			has_completed_focus = SOL_Imperial_Investigative_Service
 			has_completed_focus = SOL_solaris_speculatores
 		}
+		country_exists = CRY
 	}
+	allow_branch = { is_EQS_SOL = yes }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_destroy_night_guard"
@@ -7856,7 +7868,7 @@ shared_focus = {
 	ai_will_do = { factor = 50 }
 }
 
-shared_focus = {
+joint_focus = {
 	id = SOL_umbrum_military_industrial_parks
 	x = 3
 	y = 1
@@ -7865,35 +7877,78 @@ shared_focus = {
 
 	cost = 6
 	prerequisite = { focus = SOL_royal_province }
+	joint_trigger = {
+		OR = {
+			tag = EQS
+			tag = CRY
+		}
+	}
 	available = {
-		is_subject = no
-		has_DB_ruler = yes
+		if = {
+			limit = { tag = EQS }
+			is_subject = no
+			has_DB_ruler = yes
+			country_exists = CRY
+		}
+		else = { is_subject_of = EQS }
 		145 = { is_owned_and_controlled_by = CRY }
 	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_umbrum_military_industrial_parks"
-		145 = {
-			add_extra_state_shared_building_slots = 3
-			add_building_construction = {
-				type = arms_factory
-				level = 2
-				instant_build = yes
+	}
+	completion_reward_joint_originator = {
+		if = {
+			limit = {
+				tag = CRY
 			}
-			add_building_construction = {
-				type = industrial_complex
-				level = 1
-				instant_build = yes
-			}
-			add_resource = {
-				type = crystals
-				amount = 15
+			145 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = crystals
+					amount = 15
+				}
 			}
 		}
 	}
+	completion_reward_joint_member = {
+		if = {
+			limit = {
+				tag = CRY
+			}
+			145 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = crystals
+					amount = 15
+				}
+			}
+		}
+	}
+	ai_will_do = { factor = 35 }
 }
 
-shared_focus = {
+joint_focus = {
 	id = SOL_investments_in_empire
 	x = -1
 	y = 2
@@ -7902,16 +7957,32 @@ shared_focus = {
 
 	cost = 6
 	prerequisite = { focus = SOL_royal_province }
+	joint_trigger = {
+		OR = {
+			tag = EQS
+			tag = CRY
+		}
+	}
 	available = {
-		is_subject = no
-		has_DB_ruler = yes
+		if = {
+			limit = { tag = EQS }
+			is_subject = no
+			has_DB_ruler = yes
+			country_exists = CRY
+		}
+		else = { is_subject_of = EQS }
 		142 = { is_owned_and_controlled_by = CRY }
 		146 = { is_owned_and_controlled_by = CRY }
 	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_investments_in_empire"
-		CRY = {
+	}
+	completion_reward_joint_originator = {
+		if = {
+			limit = {
+				tag = CRY
+			}
 			if = {
 				limit = { has_idea = SOL_CRY_industrial_investments }
 				swap_ideas = {
@@ -7922,24 +7993,58 @@ shared_focus = {
 			else = {
 				add_ideas = SOL_CRY_imperial_capital
 			}
-		}
-		146 = {
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = industrial_complex
-				level = 2
-				instant_build = yes
+			146 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
 			}
-		}
-		142 = {
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = industrial_complex
-				level = 2
-				instant_build = yes
+			142 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
 			}
 		}
 	}
+	completion_reward_joint_member = {
+		if = {
+			limit = {
+				tag = CRY
+			}
+			if = {
+				limit = { has_idea = SOL_CRY_industrial_investments }
+				swap_ideas = {
+					remove_idea = SOL_CRY_industrial_investments
+					add_idea = SOL_CRY_imperial_capital
+				}
+			}
+			else = {
+				add_ideas = SOL_CRY_imperial_capital
+			}
+			146 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			142 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	ai_will_do = { factor = 45 }
 }
 
 shared_focus = {
@@ -7954,6 +8059,9 @@ shared_focus = {
 		is_subject = no
 		has_DB_ruler = yes
 	}
+	bypass = {
+		has_global_flag = royalty_executed
+	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_family_visits"
@@ -7963,7 +8071,7 @@ shared_focus = {
 	ai_will_do = { factor = 50 }
 }
 
-shared_focus = {
+joint_focus = {
 	id = SOL_update_northern_tactics
 	x = -1
 	y = 1
@@ -7971,9 +8079,20 @@ shared_focus = {
 
 	cost = 8
 	prerequisite = { focus = SOL_umbrum_military_industrial_parks }
+	joint_trigger = {
+		OR = {
+			tag = EQS
+			tag = CRY
+		}
+	}
 	available = {
-		is_subject = no
-		has_DB_ruler = yes
+		if = {
+			limit = { tag = EQS }
+			is_subject = no
+			has_DB_ruler = yes
+			country_exists = CRY
+		}
+		else = { is_subject_of = EQS }
 	}
 
 	completion_reward = {
@@ -7989,10 +8108,48 @@ shared_focus = {
 		}
 		army_experience = 30
 	}
+	completion_reward_joint_originator = {
+		if = {
+			limit = {
+				tag = CRY
+			}
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				uses = 3
+				cost_reduction = 0.5
+				category = land_doctrine
+			}
+		}
+		else_if = {
+			limit = {
+				tag = EQS
+			}
+			army_experience = 30
+		}
+	}
+	completion_reward_joint_member = {
+		if = {
+			limit = {
+				tag = CRY
+			}
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				uses = 3
+				cost_reduction = 0.5
+				category = land_doctrine
+			}
+		}
+		else_if = {
+			limit = {
+				tag = EQS
+			}
+			army_experience = 30
+		}
+	}
 	ai_will_do = { factor = 50 }
 }
 
-shared_focus = {
+joint_focus = {
 	id = SOL_establish_crystal_legion
 	x = 1
 	y = 1
@@ -8000,9 +8157,20 @@ shared_focus = {
 
 	cost = 5
 	prerequisite = { focus = SOL_umbrum_military_industrial_parks }
+	joint_trigger = {
+		OR = {
+			tag = EQS
+			tag = CRY
+		}
+	}
 	available = {
-		is_subject = no
-		has_DB_ruler = yes
+		if = {
+			limit = { tag = EQS }
+			is_subject = no
+			has_DB_ruler = yes
+			country_exists = CRY
+		}
+		else = { is_subject_of = EQS }
 		command_power > 39.99
 	}
 
@@ -8010,7 +8178,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_establish_crystal_legion"
 		add_command_power = -40
 		CRY = {
-			 hidden_effect = {
+			hidden_effect = {
 				division_template = {
 					name = "Imperial Insurance"
 					is_locked = yes
@@ -8039,6 +8207,76 @@ shared_focus = {
 			add_war_support = 0.1
 		}
 	}
+	completion_reward_joint_originator = {
+		if = {
+			limit = {
+				tag = CRY
+			}
+			add_command_power = -40
+			hidden_effect = {
+				division_template = {
+					name = "Imperial Insurance"
+					is_locked = yes
+					division_cap = 2
+					division_names_group = EQS_GRD_02
+					priority = 0
+					regiments = {
+						magical_infantry = { x = 0 y = 0 }
+						magical_infantry = { x = 0 y = 1 }
+						magical_infantry = { x = 0 y = 2 }
+						magical_infantry = { x = 1 y = 0 }
+						magical_infantry = { x = 1 y = 1 }
+						magical_infantry = { x = 1 y = 2 }
+						artillery_brigade = { x = 2 y = 0 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+						unicorn_company = { x = 0 y = 1 }
+					}
+				}
+			}
+			344 = {
+                create_unit = { division = "name = \"Custos I - Crystallum\" division_template = \"Imperial Guardians\"" owner = CRY id = 489 }
+                create_unit = { division = "name = \"Custos II - Hiems\" division_template = \"Imperial Guardians\"" owner = CRY id = 489 }
+            }
+			add_war_support = 0.1
+		}
+		else_if = {
+			limit = {
+				tag = EQS
+			}
+			add_command_power = -40
+			CRY = {
+				hidden_effect = {
+					division_template = {
+						name = "Imperial Insurance"
+						is_locked = yes
+						division_cap = 2
+						division_names_group = EQS_GRD_02
+						priority = 0
+						regiments = {
+							magical_infantry = { x = 0 y = 0 }
+							magical_infantry = { x = 0 y = 1 }
+							magical_infantry = { x = 0 y = 2 }
+							magical_infantry = { x = 1 y = 0 }
+							magical_infantry = { x = 1 y = 1 }
+							magical_infantry = { x = 1 y = 2 }
+							artillery_brigade = { x = 2 y = 0 }
+						}
+						support = {
+							engineer = { x = 0 y = 0 }
+							unicorn_company = { x = 0 y = 1 }
+						}
+					}
+				}
+				344 = {
+					create_unit = { division = "name = \"Custos I - Crystallum\" division_template = \"Imperial Guardians\"" owner = CRY id = 489 }
+					create_unit = { division = "name = \"Custos II - Hiems\" division_template = \"Imperial Guardians\"" owner = CRY id = 489 }
+				}
+				add_war_support = 0.1
+			}
+		}
+	}
 	ai_will_do = { factor = 40 }
 }
 
@@ -8051,8 +8289,12 @@ shared_focus = {
 	cost = 10
 	prerequisite = { focus = SOL_family_visits }
 	available = {
-		CRY = { NOT = { has_country_leader = { character = CRY_princess_mi_amore_cadenza ruling_only = yes } } }
+		NOT = { has_global_flag = royalty_executed }
+		CRY = {
+			NOT = { has_country_leader = { character = CRY_princess_mi_amore_cadenza ruling_only = yes } }
+		}
 	}
+	allow_branch = { is_EQS_SOL = yes }
 
 	select_effect = {
 		hidden_effect = {
@@ -8085,7 +8327,7 @@ shared_focus = {
 	ai_will_do = { factor = 60 }
 }
 
-shared_focus = {
+joint_focus = {
 	id = SOL_appoint_economic_advisors
 	x = 1
 	y = 1
@@ -8093,18 +8335,51 @@ shared_focus = {
 
 	cost = 6
 	prerequisite = { focus = SOL_investments_in_empire }
-	allow_branch = { is_EQS_SOL = yes }
+	joint_trigger = {
+		OR = {
+			tag = EQS
+			tag = CRY
+		}
+	}
+	available = {
+		if = {
+			limit = { tag = EQS }
+			is_subject = no
+			has_DB_ruler = yes
+			country_exists = CRY
+		}
+		else = { is_subject_of = EQS }
+	}
+	#allow_branch = {
+	#	OR = {
+	#		is_EQS_SOL = yes
+	#		AND = {
+	#			tag = CRY
+	#			has_focus_tree = crystal_empire_solar_focus
+	#		}
+	#	}
+	#}
 	mutually_exclusive = { focus = SOL_retire_old_guard }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_appoint_economic_advisors"
 		###Maybe event of a number of ponies from the Solar Empire coming to replace their Crystal counterparts, after they are taken away for anti-Order propaganda or the like
-		country_event = solarreworked.241
+	}
+	completion_reward_joint_originator = {
+		if = {
+			limit = {
+				tag = CRY
+			}
+			EQS = { country_event = solarreworked.241 }
+		}
+		else = {
+			country_event = solarreworked.241
+		}
 	}
 	ai_will_do = { factor = 70 }
 }
 
-shared_focus = {
+joint_focus = {
 	id = SOL_retire_old_guard
 	x = 0
 	y = 1
@@ -8112,12 +8387,57 @@ shared_focus = {
 
 	cost = 6
 	prerequisite = { focus = SOL_update_northern_tactics }
+	joint_trigger = {
+		OR = {
+			tag = EQS
+			tag = CRY
+		}
+	}
+	available = {
+		if = {
+			limit = { tag = EQS }
+			is_subject = no
+			has_DB_ruler = yes
+			country_exists = CRY
+		}
+		else = { is_subject_of = EQS }
+	}
 	mutually_exclusive = { focus = SOL_appoint_economic_advisors }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_retire_old_guard"
 		###Event of Shining Armor being brought before a tribunal, and him making a defense of himself, and although they can't kill him for fear of angering the entire Crystal Empire, they do sack him of his position
-		country_event = solarreworked.242
+	}
+	completion_reward_joint_originator = {
+		if = {
+			limit = { tag = CRY }
+			if = {
+				limit = { NOT = { has_global_flag = royalty_executed } }
+				EQS = { country_event = solarreworked.242 }
+			}
+			else = {
+				add_ideas = SOL_dictated_directions
+				set_country_flag = CRY_solar_generals
+				custom_effect_tooltip = nightshade_stats_tp
+				custom_effect_tooltip = mercy_stats_tp
+				custom_effect_tooltip = beryl_scabbard_stats_tp
+			}
+		}
+		else = {
+			if = {
+				limit = { NOT = { has_global_flag = royalty_executed } }
+				country_event = solarreworked.242
+			}
+			else = {
+				CRY = {
+					add_ideas = SOL_dictated_directions
+					set_country_flag = CRY_solar_generals
+					custom_effect_tooltip = nightshade_stats_tp
+					custom_effect_tooltip = mercy_stats_tp
+					custom_effect_tooltip = beryl_scabbard_stats_tp
+				}
+			}
+		}
 	}
 	ai_will_do = { factor = 80 }
 }
@@ -8140,7 +8460,7 @@ shared_focus = {
 
 	select_effect = {
 		hidden_effect = {
-			random_country = {
+			every_possible_country = {
 				limit = { has_character = CRY_flurry_heart }
 				CRY_flurry_heart = {
 					set_nationality = ROOT
@@ -8148,6 +8468,18 @@ shared_focus = {
 						slot = political_advisor
 					}
 				}
+			}
+			country_event = {
+				id = solarreworked.200
+				days = 23
+			}
+			country_event = {
+				id = solarreworked.201
+				days = 45
+			}
+			country_event = {
+				id = solarreworked.202
+				days = 68
 			}
 		}
 	}
@@ -8162,7 +8494,7 @@ shared_focus = {
 	ai_will_do = { factor = 75 }
 }
 
-shared_focus = {
+joint_focus = {
 	id = SOL_cadance_university
 	x = 1
 	y = 2
@@ -8170,22 +8502,49 @@ shared_focus = {
 
 	cost = 7
 	prerequisite = { focus = SOL_family_visits }
+	available = {
+		if = {
+			limit = { tag = EQS }
+			is_subject = no
+			has_DB_ruler = yes
+			country_exists = CRY
+		}
+		else = { is_subject_of = EQS }
+	}
+	joint_trigger = {
+		OR = {
+			tag = EQS
+			tag = CRY
+		}
+	}
 	mutually_exclusive = { focus = SOL_polished_armor_arsenals }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_cadance_university"
-		CRY = {
+	}
+	completion_reward_joint_originator = {
+		if = {
+			limit = { tag = CRY }
 			add_ideas = SOL_solarist_education
 			if = {
 				limit = { amount_research_slots < 5 }
 				add_research_slot = 1
 			}
 		}
+		else = {
+			CRY = {
+				add_ideas = SOL_solarist_education
+				if = {
+					limit = { amount_research_slots < 5 }
+					add_research_slot = 1
+				}
+			}
+		}
 	}
 	ai_will_do = { factor = 70 }
 }
 
-shared_focus = {
+joint_focus = {
 	id = SOL_polished_armor_arsenals
 	x = 0
 	y = 2
@@ -8193,11 +8552,30 @@ shared_focus = {
 
 	cost = 7
 	prerequisite = { focus = SOL_establish_crystal_legion }
+	available = {
+		if = {
+			limit = { tag = EQS }
+			is_subject = no
+			has_DB_ruler = yes
+			country_exists = CRY
+		}
+		else = { is_subject_of = EQS }
+	}
+	joint_trigger = {
+		OR = {
+			tag = EQS
+			tag = CRY
+		}
+	}
 	mutually_exclusive = { focus = SOL_cadance_university }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_polished_armor_arsenals"
-		CRY = {
+
+	}
+	completion_reward_joint_originator = {
+		if = {
+			limit = { tag = CRY }
 			set_country_flag = SOL_polished_armor_unlocked
 			if = {
 				limit = {
@@ -8214,11 +8592,30 @@ shared_focus = {
 				show_ideas_tooltip = CRY_polished_armor_arsenals
 			}
 		}
+		else = {
+			CRY = {
+				set_country_flag = SOL_polished_armor_unlocked
+				if = {
+					limit = {
+						has_dlc = "Arms Against Tyranny"
+					}
+					unlock_military_industrial_organization_tooltip = mio:CRY_polished_armor_arsenals_organization
+					show_mio_tooltip = CRY_polished_armor_arsenals_organization
+					mio:CRY_polished_armor_arsenals_organization = {
+						add_mio_size = 3
+						add_mio_funds_gain_factor = 0.25
+					}
+				}
+				else = {
+					show_ideas_tooltip = CRY_polished_armor_arsenals
+				}
+			}
+		}
 	}
 	ai_will_do = { factor = 80 }
 }
 
-shared_focus = {
+joint_focus = {
 	id = SOL_imperial_mind
 	x = 0
 	y = 2
@@ -8227,20 +8624,46 @@ shared_focus = {
 	cost = 8
 	prerequisite = { focus = SOL_appoint_economic_advisors }
 	prerequisite = { focus = SOL_cadance_university }
+	available = {
+	if = {
+			limit = { tag = EQS }
+			is_subject = no
+			has_DB_ruler = yes
+			country_exists = CRY
+		}
+		else = { is_subject_of = EQS }
+	}
+	joint_trigger = {
+		OR = {
+			tag = EQS
+			tag = CRY
+		}
+	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_imperial_mind"
-		CRY = {
+	}
+	completion_reward_joint_originator = {
+		if = {
+			limit = { tag = CRY }
 			swap_ideas = {
 				remove_idea = SOL_solarist_education
 				add_idea = SOL_solarist_minds
+			}
+		}
+		else = {
+			CRY = {
+				swap_ideas = {
+					remove_idea = SOL_solarist_education
+					add_idea = SOL_solarist_minds
+				}
 			}
 		}
 	}
 	ai_will_do = { factor = 80 }
 }
 
-shared_focus = {
+joint_focus = {
 	id = SOL_imperial_guardian
 	x = 0
 	y = 2
@@ -8249,13 +8672,39 @@ shared_focus = {
 	cost = 8
 	prerequisite = { focus = SOL_retire_old_guard }
 	prerequisite = { focus = SOL_polished_armor_arsenals }
+	available = {
+		if = {
+			limit = { tag = EQS }
+			is_subject = no
+			has_DB_ruler = yes
+			country_exists = CRY
+		}
+		else = { is_subject_of = EQS }
+	}
+	joint_trigger = {
+		OR = {
+			tag = EQS
+			tag = CRY
+		}
+	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_imperial_guardian"
-		CRY = {
+	}
+	completion_reward_joint_originator = {
+		if = {
+			limit = { tag = CRY }
 			swap_ideas = {
 				remove_idea = SOL_dictated_directions
 				add_idea = SOL_aegis_guard
+			}
+		}
+		else = {
+			CRY = {
+				swap_ideas = {
+					remove_idea = SOL_dictated_directions
+					add_idea = SOL_aegis_guard
+				}
 			}
 		}
 	}
@@ -9202,14 +9651,30 @@ shared_focus = {
 	ai_will_do = { factor = 80 }
 }
 
-shared_focus = {
+joint_focus = {
 	id = SOL_ensuring_loyalty
-	x = 0
-	y = 1
-	relative_position_id = SOL_force_jet_sets_hoof
+	x = -16
+	y = 2
+	offset = {
+		x = 37
+		y = -1
+		trigger = { tag = EQC }
+	}
+	#relative_position_id = SOL_force_jet_sets_hoof
 
 	cost = 3
-	prerequisite = { focus = SOL_force_jet_sets_hoof }
+	prerequisite = {
+		focus = SOL_force_jet_sets_hoof
+		focus = EQC_SOL_reorganise_the_government
+		focus = EQC_SOL_pacify_the_state
+		focus = EQC_SOL_embrace_the_sun
+	}
+	joint_trigger = {
+		OR = {
+			tag = EQS
+			tag = EQC
+		}
+	}
 	available = {
 		eqs_not_has_civil_war = yes
 		EQC = {
@@ -9217,6 +9682,7 @@ shared_focus = {
 			has_war = no
 			is_subject_of = ROOT
 		}
+		NOT = { tag = EQC }
 	}
 	bypass = {
 		has_war_with = EQC
@@ -9230,7 +9696,7 @@ shared_focus = {
 	ai_will_do = { factor = 70 }
 }
 
-shared_focus = {
+joint_focus = {
 	id = SOL_smooth_transitions
 	x = -2
 	y = 1
@@ -9256,6 +9722,12 @@ shared_focus = {
 	cost = 4
 	prerequisite = { focus = SOL_ensuring_loyalty }
 	mutually_exclusive = { focus = SOL_faiths_reward }
+	joint_trigger = {
+		OR = {
+			tag = EQS
+			tag = EQC
+		}
+	}
 	available = {
 		eqs_not_has_civil_war = yes
 		EQC = {
@@ -9273,11 +9745,23 @@ shared_focus = {
 					option = HIDE
 				}
 			}
-			is_EQS_SOL = yes
+			OR = {
+				is_EQS_SOL = yes
+				AND = {
+					tag = EQC
+					has_focus_tree = eqc_sol_focus
+				}
+			}
 			NOT = { has_completed_focus = SOL_faiths_reward  }
 		}
 		else = {
-			is_EQS_SOL = yes
+			OR = {
+				is_EQS_SOL = yes
+				AND = {
+					tag = EQC
+					has_focus_tree = eqc_sol_focus
+				}
+			}
 		}
 	}
 
@@ -9285,14 +9769,17 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_smooth_transitions"
 		###Maybe event of Jet Set being called back to Canterlot so that he can have a meeting with Daybreaker, who has been informed that so far he has remained loyal, and that he can continue to remain the governor general, but if he thinks about betraying her trust, she will ensure that the entire colony is wiped out as a response to his insult
 		country_event = solarreworked.440
-		mark_focus_tree_layout_dirty = yes
+		if = {
+			limit = { has_game_rule = { rule = obsolete_focus_branches_visibility option = HIDE } }
+			mark_focus_tree_layout_dirty = yes
+		}
 	}
 	ai_will_do = {
 		factor = 100
 	}
 }
 
-shared_focus = {
+joint_focus = {
 	id = SOL_faiths_reward
 	x = 2
 	y = 1
@@ -9327,6 +9814,12 @@ shared_focus = {
 			has_country_flag = EQC_SOL_leader_chosen
 		}
 	}
+	joint_trigger = {
+		OR = {
+			tag = EQS
+			tag = EQC
+		}
+	}
 	allow_branch = {
 		if = {
 			limit = {
@@ -9335,11 +9828,23 @@ shared_focus = {
 					option = HIDE
 				}
 			}
-			is_EQS_SOL = yes
+			OR = {
+				is_EQS_SOL = yes
+				AND = {
+					tag = EQC
+					has_focus_tree = eqc_sol_focus
+				}
+			}
 			NOT = { has_completed_focus = SOL_smooth_transitions  }
 		}
 		else = {
-			is_EQS_SOL = yes
+			OR = {
+				is_EQS_SOL = yes
+				AND = {
+					tag = EQC
+					has_focus_tree = eqc_sol_focus
+				}
+			}
 		}
 	}
 
@@ -9347,14 +9852,17 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_faiths_reward"
 		###Maybe event of Arcane Nova coming in to arrest Jet Set, as he is too much of a risk to the Empress's plans, and that he will be placed under house arrest until he is determined to be loyal or not; either way, he will be forever relieved of his post as governor general, and she appreciates the attractive accommodations he has, and otherwise it a bit playful in her arrest
 		country_event = solarreworked.441
-		mark_focus_tree_layout_dirty = yes
+		if = {
+			limit = { has_game_rule = { rule = obsolete_focus_branches_visibility option = HIDE } }
+			mark_focus_tree_layout_dirty = yes
+		}
 	}
 	ai_will_do = {
 		factor = 100
 	}
 }
 
-shared_focus = {
+joint_focus = {
 	id = SOL_empresss_eyes
 	x = -1
 	y = 1
@@ -9362,18 +9870,38 @@ shared_focus = {
 
 	cost = 3
 	prerequisite = { focus = SOL_smooth_transitions }
+	joint_trigger = {
+		OR = {
+			tag = EQS
+			tag = EQC
+		}
+	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_empresss_eyes"
-		EQC = {
+	}
+	completion_reward_joint_originator = {
+		if = {
+			limit = { tag = EQC }
 			add_stability = 0.1
 		}
-		add_political_power = -50
+		else = {
+			add_political_power = -50
+		}
+	}
+	completion_reward_joint_member = {
+		if = {
+			limit = { tag = EQC }
+			add_stability = 0.1
+		}
+		else = {
+			add_political_power = -50
+		}
 	}
 	ai_will_do = { factor = 40 }
 }
 
-shared_focus = {
+joint_focus = {
 	id = SOL_colonial_investments
 	x = 2
 	y = 1
@@ -9401,28 +9929,50 @@ shared_focus = {
 		focus = SOL_smooth_transitions
 		focus = SOL_faiths_reward
 	}
+	joint_trigger = {
+		OR = {
+			tag = EQS
+			tag = EQC
+		}
+	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_colonial_investments"
-		356 = {
-			increase_state_category = yes
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = industrial_complex
-				level = 2
-				instant_build = yes
+	}
+	completion_reward_joint_originator = {
+		if = {
+			limit = {
+				356 = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+				}
 			}
-			add_building_construction = {
-				type = dockyard
-				level = 1
-				instant_build = yes
+			356 = {
+				increase_state_category = yes
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
 			}
+		}
+		else = {
+			EQC = { add_political_power = 150 }
 		}
 	}
 	ai_will_do = { factor = 70 }
 }
 
-shared_focus = {
+joint_focus = {
 	id = SOL_personnel_support
 	x = 2
 	y = 2
@@ -9431,6 +9981,12 @@ shared_focus = {
 	cost = 7
 	prerequisite = { focus = SOL_faiths_reward }
 	prerequisite = { focus = SOL_colonial_investments }
+	joint_trigger = {
+		OR = {
+			tag = EQS
+			tag = EQC
+		}
+	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_personnel_support"
@@ -9440,7 +9996,7 @@ shared_focus = {
 	ai_will_do = { factor = 70 }
 }
 
-shared_focus = {
+joint_focus = {
 	id = SOL_homegrown_plan
 	x = 0
 	y = 1
@@ -9448,16 +10004,33 @@ shared_focus = {
 
 	cost = 6
 	prerequisite = { focus = SOL_empresss_eyes }
+	joint_trigger = {
+		OR = {
+			tag = EQS
+			tag = EQC
+		}
+	}
 	mutually_exclusive = { focus = SOL_debt_council }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_homegrown_plan"
-		EQC = { add_ideas = SOL_marelandian_deal }
+	}
+	completion_reward_joint_originator = {
+		if = {
+			limit = { tag = EQC }
+			add_ideas = SOL_marelandian_deal
+		}
+	}
+	completion_reward_joint_member = {
+		if = {
+			limit = { tag = EQC }
+			add_ideas = SOL_marelandian_deal
+		}
 	}
 	ai_will_do = { factor = 50 }
 }
 
-shared_focus = {
+joint_focus = {
 	id = SOL_debt_council
 	x = -1
 	y = 1
@@ -9465,6 +10038,12 @@ shared_focus = {
 
 	cost = 6
 	prerequisite = { focus = SOL_colonial_investments }
+	joint_trigger = {
+		OR = {
+			tag = EQS
+			tag = EQC
+		}
+	}
 	mutually_exclusive = { focus = SOL_homegrown_plan }
 	available = {
 		EQC = { all_cores_owned_by_ROOT_or_subject = yes }
@@ -9472,7 +10051,18 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_debt_council"
-		EQC = { add_ideas = SOL_managed_debt_repayments }
+	}
+	completion_reward_joint_originator = {
+		if = {
+			limit = { tag = EQC }
+			add_ideas = SOL_managed_debt_repayments
+		}
+	}
+	completion_reward_joint_member = {
+		if = {
+			limit = { tag = EQC }
+			add_ideas = SOL_managed_debt_repayments
+		}
 	}
 	ai_will_do = { factor = 80 }
 }
@@ -9500,7 +10090,7 @@ shared_focus = {
 #	ai_will_do = { factor = 100 }
 #}
 
-shared_focus = {
+joint_focus = {
 	id = SOL_fund_sunset_plays
 	x = 1
 	y = 1
@@ -9508,6 +10098,12 @@ shared_focus = {
 
 	cost = 5
 	prerequisite = { focus = SOL_colonial_investments }
+	joint_trigger = {
+		OR = {
+			tag = EQS
+			tag = EQC
+		}
+	}
 	available = {
 		EQC = {
 			is_subject_of = ROOT
@@ -9519,10 +10115,22 @@ shared_focus = {
 		EQC = { add_ideas = SOL_patriotic_plays }
 		###Maybe event for one ofthe patriotic plays, and how they are being used to get ponies to agree to Daybreaker's rule by using overly cringy propaganda and the like, which upsets the thespians who perform in them
 	}
+	completion_reward_joint_originator = {
+		if = {
+			limit = { tag = EQC }
+			add_ideas = SOL_patriotic_plays
+		}
+	}
+	completion_reward_joint_member = {
+		if = {
+			limit = { tag = EQC }
+			add_ideas = SOL_patriotic_plays
+		}
+	}
 	ai_will_do = { factor = 60 }
 }
 
-shared_focus = {
+joint_focus = {
 	id = SOL_griffon_workers
 	x = 1
 	y = 1
@@ -9530,6 +10138,12 @@ shared_focus = {
 
 	cost = 7
 	prerequisite = { focus = SOL_debt_council }
+	joint_trigger = {
+		OR = {
+			tag = EQS
+			tag = EQC
+		}
+	}
 	available = {
 		EQC = {
 			is_subject_of = ROOT
@@ -9539,35 +10153,47 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_griffon_workers"
-		EQC = {
-			random_state = {
-				limit = {
-					is_owned_and_controlled_by = EQC
-				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = industrial_complex
-					level = 3
-					instant_build = yes
+	}
+	completion_reward_joint_originator = {
+		random_state = {
+			limit = {
+				is_owned_and_controlled_by = EQC
+				is_core_of = EQC
+				free_building_slots = {
+					building = industrial_complex
+					size > 2
+					include_locked = yes
 				}
 			}
-			random_state = {
-				limit = {
-					is_owned_and_controlled_by = EQC
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}
+		}
+		random_state = {
+			limit = {
+				is_owned_and_controlled_by = EQC
+				is_core_of = EQC
+				free_building_slots = {
+					building = industrial_complex
+					size > 2
+					include_locked = yes
 				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = industrial_complex
-					level = 3
-					instant_build = yes
-				}
+			}
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
 			}
 		}
 	}
 	ai_will_do = { factor = 40 }
 }
 
-shared_focus = {
+joint_focus = {
 	id = SOL_strip_mine_bauxite
 	x = 2
 	y =2
@@ -9575,6 +10201,12 @@ shared_focus = {
 
 	cost = 6
 	prerequisite = { focus = SOL_colonial_investments }
+	joint_trigger = {
+		OR = {
+			tag = EQS
+			tag = EQC
+		}
+	}
 	available = {
 		EQC = {
 			is_subject_of = ROOT
@@ -9584,6 +10216,8 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_strip_mine_bauxite"
+	}
+	completion_reward_joint_originator = {
 		355 = {
 			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
@@ -9612,7 +10246,7 @@ shared_focus = {
 	ai_will_do = { factor = 50 }
 }
 
-shared_focus = {
+joint_focus = {
 	id = SOL_church_of_day
 	x = 1
 	y = 1
@@ -9620,23 +10254,40 @@ shared_focus = {
 
 	cost = 5
 	prerequisite = { focus = SOL_personnel_support }
+	joint_trigger = {
+		OR = {
+			tag = EQS
+			tag = EQC
+		}
+	}
 	mutually_exclusive = { focus = SOL_united_goal }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_church_of_day"
-		EQC = { add_ideas = SOL_mandatory_worship }
 		###Maybe event of Arcane hosting the first service of Daybreaker, whether or not she's the God-Empress, since Arcane reveres Daybreaker as a goddess regardless, and she has the fire and brimstone of an aggressive preacher promising death for thsoe who rebel against her and also for the surrounding nations of EQC
+	}
+	completion_reward_joint_originator = {
+		if = {
+			limit = { tag = EQC }
+			add_ideas = SOL_mandatory_worship
+		}
+	}
+	completion_reward_joint_member = {
+		if = {
+			limit = { tag = EQC }
+			add_ideas = SOL_mandatory_worship
+		}
 	}
 	ai_will_do = {
 		factor = 40
 		modifier = {
-			has_completed_focus = SOL_god_empress
+			EQS = { has_completed_focus = SOL_god_empress }
 			factor = 2
 		}
 	}
 }
 
-shared_focus = {
+joint_focus = {
 	id = SOL_united_goal
 	x = 3
 	y = 1
@@ -9644,17 +10295,34 @@ shared_focus = {
 
 	cost = 5
 	prerequisite = { focus = SOL_personnel_support }
+	joint_trigger = {
+		OR = {
+			tag = EQS
+			tag = EQC
+		}
+	}
 	mutually_exclusive = { focus = SOL_church_of_day }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_personnel_support"
-		EQC = { add_ideas = SOL_united_in_purpose }
 		###Maybe event of Arcane working with some ponies from Canterlot regarding some passing of laws in EQC, even though she doesn't see the need for them, since it only makes her job harder, but it helps make the Empress's easier, so she begrudgingly agrees to it
+	}
+	completion_reward_joint_originator = {
+		if = {
+			limit = { tag = EQC }
+			add_ideas = SOL_united_in_purpose
+		}
+	}
+	completion_reward_joint_member = {
+		if = {
+			limit = { tag = EQC }
+			add_ideas = SOL_united_in_purpose
+		}
 	}
 	ai_will_do = { factor = 60 }
 }
 
-shared_focus = {
+joint_focus = {
 	id = SOL_allies_in_high_places
 	x = -2
 	y = 1
@@ -9662,10 +10330,30 @@ shared_focus = {
 
 	cost = 6
 	prerequisite = { focus = SOL_homegrown_plan }
+	joint_trigger = {
+		OR = {
+			tag = EQS
+			tag = EQC
+		}
+	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_allies_in_high_places"
-		EQC = {
+	}
+	completion_reward_joint_originator = {
+		if = {
+			limit = { tag = EQC }
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = dot_form
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = sharp_treble
+			set_country_flag = EQC_daybreakers_friends
+			add_stability = 0.05
+		}
+	}
+	completion_reward_joint_member = {
+		if = {
+			limit = { tag = EQC }
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = dot_form
 			custom_effect_tooltip = available_political_advisor
@@ -9677,35 +10365,57 @@ shared_focus = {
 	ai_will_do = { factor = 60 }
 }
 
-shared_focus = {
+joint_focus = {
 	id = SOL_expand_sunset_university
-	x = 1
+	x = -1
 	y = 1
-	relative_position_id = SOL_homegrown_plan
+	relative_position_id = SOL_debt_council
 
 	cost = 8
 	prerequisite = {
 		focus = SOL_homegrown_plan
 		focus = SOL_debt_council
 	}
+	joint_trigger = {
+		OR = {
+			tag = EQS
+			tag = EQC
+		}
+	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_expand_sunset_university"
-		EQC = {
+	}
+	completion_reward_joint_originator = {
+		if = {
+			limit = { tag = EQC }
 			if = {
-				limit = {
-					amount_research_slots < 5
-				}
+				limit = { amount_research_slots < 5 }
 				add_research_slot = 1
 			}
 			add_ideas = SOL_EQC_international_student_transfers
 		}
-		add_ideas = SOL_international_student_transfers
+		else = {
+			add_ideas = SOL_international_student_transfers
+		}
+	}
+	completion_reward_joint_member = {
+		if = {
+			limit = { tag = EQC }
+			if = {
+				limit = { amount_research_slots < 5 }
+				add_research_slot = 1
+			}
+			add_ideas = SOL_EQC_international_student_transfers
+		}
+		else = {
+			add_ideas = SOL_international_student_transfers
+		}
 	}
 	ai_will_do = { factor = 90 }
 }
 
-shared_focus = {
+joint_focus = {
 	id = SOL_prisoner_restructuring
 	x = -1
 	y = 1
@@ -9716,6 +10426,12 @@ shared_focus = {
 		focus = SOL_church_of_day
 		focus = SOL_united_goal
 	}
+	joint_trigger = {
+		OR = {
+			tag = EQS
+			tag = EQC
+		}
+	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_prisoner_restructuring"
@@ -9725,7 +10441,7 @@ shared_focus = {
 	ai_will_do = { factor = 70 }
 }
 
-shared_focus = {
+joint_focus = {
 	id = SOL_homeland_investments
 	x = 2
 	y = 1
@@ -9733,32 +10449,71 @@ shared_focus = {
 
 	cost = 5
 	prerequisite = { focus = SOL_allies_in_high_places }
+	joint_trigger = {
+		OR = {
+			tag = EQS
+			tag = EQC
+		}
+	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_homeland_investments"
-		EQC = {
-			random_state = {
-				limit = {
-					is_owned_and_controlled_by = EQC
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_state = {
-				limit = {
-					is_owned_and_controlled_by = EQC
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
+	}
+	completion_reward_joint_originator = {
+		random_state = {
+			limit = {
+				is_owned_and_controlled_by = EQC
+				free_building_slots = {
+					building = industrial_complex
+					size > 1
+					include_locked = yes
 				}
 			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_state = {
+			limit = {
+				is_owned_and_controlled_by = EQC
+				free_building_slots = {
+					building = industrial_complex
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		if = {
+			limit = { tag = EQC }
+			set_country_flag = SOL_prelate_unlocked
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				unlock_military_industrial_organization_tooltip = mio:EQC_prelate_corps_organization
+				show_mio_tooltip = EQC_prelate_corps_organization
+				mio:EQC_prelate_corps_organization = {
+					add_mio_size = 3
+					add_mio_funds_gain_factor = 0.25
+				}
+			}
+			else = {
+				show_ideas_tooltip = EQC_prelate_corps
+			}
+		}
+	}
+	completion_reward_joint_member = {
+		if = {
+			limit = { tag = EQC }
 			set_country_flag = SOL_prelate_unlocked
 			if = {
 				limit = {
@@ -9779,7 +10534,7 @@ shared_focus = {
 	ai_will_do = { factor = 30 }
 }
 
-shared_focus = {
+joint_focus = {
 	id = SOL_station_legions
 	x = -1
 	y = 1
@@ -9787,11 +10542,64 @@ shared_focus = {
 
 	cost = 5
 	prerequisite = { focus = SOL_strip_mine_bauxite }
+	joint_trigger = {
+		OR = {
+			tag = EQS
+			tag = EQC
+		}
+	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_station_legions"
 		#Soldiers here
-		EQC = {
+	}
+	completion_reward_joint_originator = {
+		if = {
+			limit = { tag = EQC }
+			add_war_support = 0.1
+			custom_effect_tooltip = SOL_spawn_horde_tt
+			hidden_effect = {
+                division_template = {
+                    name = "Solaris Militarium Garrison"
+                    is_locked = yes
+                    division_cap = 5
+                    force_allow_recruiting = yes
+                    division_names_group = EQS_INF_02
+                    regiments = {
+                        infantry = { x = 0 y = 0 }
+                        infantry = { x = 0 y = 1 }
+                        infantry = { x = 0 y = 2 }
+                        infantry = { x = 0 y = 3 }
+                        infantry = { x = 1 y = 0 }
+                        infantry = { x = 1 y = 1 }
+                        infantry = { x = 1 y = 2 }
+                        infantry = { x = 1 y = 3 }
+                        artillery_brigade = { x = 2 y = 0 }
+                        artillery_brigade = { x = 2 y = 1 }
+                        artillery_brigade = { x = 2 y = 2 }
+                    }
+                    support = {
+                        recon = { x = 0 y = 0 }
+                        engineer = { x = 0 y = 1 }
+                        military_police = { x = 0 y = 2 }
+                    }
+                }
+                356 = {
+                    create_unit = {
+                        division = "name = \"Solar Day Company\" division_template = \"Solaris Militarium Garrison\" start_experience_factor = 0.3"
+                        owner = EQC
+                    }
+                    create_unit = {
+                        division = "name = \"Astral Spear Company\" division_template = \"Solaris Militarium Garrison\" start_experience_factor = 0.3"
+                        owner = EQC
+                    }
+                }
+            }
+		}
+	}
+	completion_reward_joint_member = {
+		if = {
+			limit = { tag = EQC }
 			add_war_support = 0.1
 			custom_effect_tooltip = SOL_spawn_horde_tt
 			hidden_effect = {
@@ -9836,7 +10644,7 @@ shared_focus = {
 	ai_will_do = { factor = 60 }
 }
 
-shared_focus = {
+joint_focus = {
 	id = SOL_cadet_militarium
 	x = -1
 	y = 2
@@ -9844,19 +10652,41 @@ shared_focus = {
 
 	cost = 5
 	prerequisite = { focus = SOL_personnel_support }
+	joint_trigger = {
+		OR = {
+			tag = EQS
+			tag = EQC
+		}
+	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_cadet_militarium"
-		EQC = {
+	}
+	completion_reward_joint_originator = {
+		if = {
+			limit = { tag = EQC }
 			add_ideas = SOL_correct_warfare
 			set_country_flag = EQC_snack_break_time
+			EQS = {
+				custom_effect_tooltip = available_high_command
+				show_ideas_tooltip = long_cast
+			}
 		}
-		custom_effect_tooltip = available_high_command
-		show_ideas_tooltip = long_cast
+	}
+	completion_reward_joint_member = {
+		if = {
+			limit = { tag = EQC }
+			add_ideas = SOL_correct_warfare
+			set_country_flag = EQC_snack_break_time
+			EQS = {
+				custom_effect_tooltip = available_high_command
+				show_ideas_tooltip = long_cast
+			}
+		}
 	}
 }
 
-shared_focus = {
+joint_focus = {
 	id = SOL_refuge_in_sun
 	x = 0
 	y = 2
@@ -9864,6 +10694,12 @@ shared_focus = {
 
 	cost = 6
 	prerequisite = { focus = SOL_allies_in_high_places }
+	joint_trigger = {
+		OR = {
+			tag = EQS
+			tag = EQC
+		}
+	}
 	mutually_exclusive = { focus = SOL_economic_opportunity }
 	mutually_exclusive = { focus = SOL_world_station }
 	mutually_exclusive = { focus = SOL_joint_military_expeditions }
@@ -9875,7 +10711,7 @@ shared_focus = {
 	ai_will_do = { factor = 40 }
 }
 
-shared_focus = {
+joint_focus = {
 	id = SOL_economic_opportunity
 	x = 0
 	y = 2
@@ -9883,6 +10719,12 @@ shared_focus = {
 
 	cost = 6
 	prerequisite = { focus = SOL_expand_sunset_university }
+	joint_trigger = {
+		OR = {
+			tag = EQS
+			tag = EQC
+		}
+	}
 	mutually_exclusive = { focus = SOL_refuge_in_sun }
 	mutually_exclusive = { focus = SOL_world_station }
 	mutually_exclusive = { focus = SOL_joint_military_expeditions }
@@ -9895,7 +10737,7 @@ shared_focus = {
 	ai_will_do = { factor = 40 }
 }
 
-shared_focus = {
+joint_focus = {
 	id = SOL_world_station
 	x = 1
 	y = 1
@@ -9903,6 +10745,12 @@ shared_focus = {
 
 	cost = 6
 	prerequisite = { focus = SOL_station_legions }
+	joint_trigger = {
+		OR = {
+			tag = EQS
+			tag = EQC
+		}
+	}
 	mutually_exclusive = { focus = SOL_refuge_in_sun }
 	mutually_exclusive = { focus = SOL_economic_opportunity }
 	mutually_exclusive = { focus = SOL_joint_military_expeditions }
@@ -9915,7 +10763,7 @@ shared_focus = {
 	ai_will_do = { factor =  50 }
 }
 
-shared_focus = {
+joint_focus = {
 	id = SOL_joint_military_expeditions
 	x = 3
 	y = 2
@@ -9924,6 +10772,12 @@ shared_focus = {
 	cost = 6
 	prerequisite = { focus = SOL_strip_mine_bauxite }
 	prerequisite = { focus = SOL_prisoner_restructuring }
+	joint_trigger = {
+		OR = {
+			tag = EQS
+			tag = EQC
+		}
+	}
 	mutually_exclusive = { focus = SOL_refuge_in_sun }
 	mutually_exclusive = { focus = SOL_economic_opportunity }
 	mutually_exclusive = { focus = SOL_world_station }

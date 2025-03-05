@@ -2893,11 +2893,69 @@ country_event = { #A short follow-up event to the forces of the Solar Empire att
         if = {
             limit = { has_war = yes }
             hidden_effect = {
-                CRY = {
-                    country_event = {
-                        id = solarreworked.155
-                        days = 7
-                        random_days = 5
+                if = { #Because CRY could potentially be Sombra or communist on non-historical
+                    limit = {
+                        CRY = {
+                            has_government = democratic
+                        }
+                    }
+                    CRY = {
+                        country_event = {
+                            id = solarreworked.155
+                            days = 7
+                            random_days = 5
+                        }
+                    }
+                }
+                else_if = {
+                    limit = {
+                        YAK = {
+                            has_government = democratic
+                        }
+                    }
+                    YAK = {
+                        country_event = {
+                            id = solarreworked.155
+                            days = 7
+                            random_days = 5
+                        }
+                    }
+                }
+                else_if = {
+                    limit = {
+                        HIP = {
+                            has_government = democratic
+                        }
+                        HIP = {
+                            country_event = {
+                                id = solarreworked.155
+                                days = 7
+                                random_days = 5
+                            }
+                        }
+                    }
+                }
+                else_if = {
+                    limit = {
+                        EQC = {
+                            has_government = democratic
+                        }
+                        EQC = {
+                            country_event = {
+                                id = solarreworked.155
+                                days = 7
+                                random_days = 5
+                            }
+                        }
+                    }
+                }
+                else = {
+                    MGY = {
+                        country_event = {
+                            id = solarreworked.155
+                            days = 7
+                            random_days = 5
+                        }
                     }
                 }
                 country_event = {
@@ -7096,6 +7154,7 @@ country_event = { #EQC receives a notification that Daybreaker has personally se
 			limit = {
 				NOT = { has_focus_tree = eqc_sol_focus }
 			}
+			set_country_flag = EQC_SOL_leader_chosen
 			load_focus_tree = eqc_sol_focus
 		}
 	}
@@ -7156,6 +7215,7 @@ country_event = { #EQC receives a notification that Daybreaker has personally se
 			load_focus_tree = eqc_sol_focus
 			set_cosmetic_tag = EQC_SOL
 		}
+		set_country_flag = EQC_SOL_leader_chosen
 		hidden_effect = { set_global_flag = SOL_chose_EQC_leader }
 	}
 	option = { #No!
@@ -7194,11 +7254,23 @@ country_event = { #Jet Set arrives in Canterlot and the palace to be ushered int
 
     option = { #I'm sure there won't be any problems, will there?
         name = solarreworked.440.a
-        EQC = {
-            add_stability = 0.1
-            add_popularity = {
-                ideology = fascism
-                popularity = 0.05
+        if = {
+            limit = { tag = EQS }
+            EQC = {
+                add_stability = 0.1
+                add_popularity = {
+                    ideology = fascism
+                    popularity = 0.05
+                }
+            }
+        }
+        else = {
+            effect_tooltip = {
+                add_stability = 0.1
+                add_popularity = {
+                    ideology = fascism
+                    popularity = 0.05
+                }
             }
         }
     }
@@ -7214,11 +7286,23 @@ country_event = { #As Jet Set begins to prepare his things for moving back to Ca
 
     option = { #How do you think it'll look in orange?
         name = solarreworked.441.a
-        EQC = {
-            add_war_support = 0.05
-            add_popularity = {
-                ideology = fascism
-                popularity = 0.1
+        if = {
+            limit = { tag = EQS }
+            EQC = {
+                add_war_support = 0.05
+                add_popularity = {
+                    ideology = fascism
+                    popularity = 0.1
+                }
+            }
+        }
+        else = {
+            effect_tooltip = {
+                add_war_support = 0.05
+                add_popularity = {
+                    ideology = fascism
+                    popularity = 0.1
+                }
             }
         }
     }
@@ -7234,20 +7318,43 @@ country_event = { #Arcane Nova enters into Midnight Poppy's office again, bringi
 
     option = { #I'd suggest not insulting your commander.
         name = solarreworked.442.a
-		EQC = {
-			add_war_support = 0.05
-			custom_effect_tooltip = full_band_stats_tp
-			custom_effect_tooltip = triple_strike_stats_tp
-			set_country_flag = EQC_the_backup_arrived
-			#This will be moved to EQC's reworked tree if that gets developed
-			if = {
-				limit = { has_character = EQS_SOL_arcane_nova }
-				EQS_SOL_arcane_nova = {
-					promote_leader = yes
-					remove_trait = { trait = recently_promoted }
-				}
-			}
-		}
+        if = {
+            limit = { tag = EQS }
+            EQC = {
+                add_war_support = 0.05
+                custom_effect_tooltip = full_band_stats_tp
+                custom_effect_tooltip = triple_strike_stats_tp
+                set_country_flag = EQC_the_backup_arrived
+                #This will be moved to EQC's reworked tree if that gets developed
+                if = {
+                    limit = { has_character = EQS_SOL_arcane_nova }
+                    EQS_SOL_arcane_nova = {
+                        promote_leader = yes
+                        hidden_effect = {
+                            remove_trait = { trait = recently_promoted }
+                        }
+                    }
+                }
+            }
+        }
+        else = {
+            effect_tooltip = {
+                add_war_support = 0.05
+                custom_effect_tooltip = full_band_stats_tp
+                custom_effect_tooltip = triple_strike_stats_tp
+                set_country_flag = EQC_the_backup_arrived
+                #This will be moved to EQC's reworked tree if that gets developed
+                every_possible_country = {
+                    limit = { has_character = EQS_SOL_arcane_nova }
+                    EQS_SOL_arcane_nova = {
+                        promote_leader = yes
+                        hidden_effect = {
+                            remove_trait = { trait = recently_promoted }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -7261,50 +7368,134 @@ country_event = { #Follow a worker as he goes about some of the forced tasks tha
 
     option = { #But we're all ponies!
         name = solarreworked.443.a
-        random_state = {
-            limit = {
-                is_core_of = EQC
-                is_owned_by = EQC
-            }
-            add_extra_state_shared_building_slots = 1
-        }
-        random_state = {
-            limit = {
-                is_core_of = EQC
-                is_owned_by = EQC
-            }
-            add_extra_state_shared_building_slots = 1
-        }
-        random_state = {
-            limit = {
-                is_core_of = EQC
-                is_owned_by = EQC
-            }
-            add_extra_state_shared_building_slots = 1
-        }
         if = {
-            limit = {
-                has_idea = EQC_great_depression_1
+            limit = { tag = EQC }
+            random_state = {
+                limit = {
+                    is_core_of = EQC
+                    is_owned_by = EQC
+                    free_building_slots = {
+                        building = industrial_complex
+                        size > 0
+                        include_locked = yes
+                    }
+                }
+                add_extra_state_shared_building_slots = 1
             }
-            swap_ideas = {
-                remove_idea = EQC_great_depression_1
-                add_idea = EQC_great_depression_2
+            random_state = {
+                limit = {
+                    is_core_of = EQC
+                    is_owned_by = EQC
+                    free_building_slots = {
+                        building = industrial_complex
+                        size > 0
+                        include_locked = yes
+                    }
+                }
+                add_extra_state_shared_building_slots = 1
+            }
+            random_state = {
+                limit = {
+                    is_core_of = EQC
+                    is_owned_by = EQC
+                    free_building_slots = {
+                        building = industrial_complex
+                        size > 0
+                        include_locked = yes
+                    }
+                }
+                add_extra_state_shared_building_slots = 1
+            }
+            if = {
+                limit = {
+                    has_idea = EQC_great_depression_1
+                }
+                swap_ideas = {
+                    remove_idea = EQC_great_depression_1
+                    add_idea = EQC_great_depression_2
+                }
+            }
+            else_if = {
+                limit = {
+                    has_idea = EQC_great_depression_2
+                }
+                swap_ideas = {
+                    remove_idea = EQC_great_depression_2
+                    add_idea = EQC_great_depression_3
+                }
+            }
+            else_if = {
+                limit = {
+                    has_idea = EQC_great_depression_3
+                }
+                remove_ideas = EQC_great_depression_3
             }
         }
-        else_if = {
-            limit = {
-                has_idea = EQC_great_depression_2
+        else = {
+            effect_tooltip = {
+                random_state = {
+                    limit = {
+                        is_core_of = EQC
+                        is_owned_by = EQC
+                        free_building_slots = {
+                            building = industrial_complex
+                            size > 0
+                            include_locked = yes
+                        }
+                    }
+                    add_extra_state_shared_building_slots = 1
+                }
+                random_state = {
+                    limit = {
+                        is_core_of = EQC
+                        is_owned_by = EQC
+                        free_building_slots = {
+                            building = industrial_complex
+                            size > 0
+                            include_locked = yes
+                        }
+                    }
+                    add_extra_state_shared_building_slots = 1
+                }
+                random_state = {
+                    limit = {
+                        is_core_of = EQC
+                        is_owned_by = EQC
+                        free_building_slots = {
+                            building = industrial_complex
+                            size > 0
+                            include_locked = yes
+                        }
+                    }
+                    add_extra_state_shared_building_slots = 1
+                }
+                EQC = {
+                    if = {
+                        limit = {
+                            has_idea = EQC_great_depression_1
+                        }
+                        swap_ideas = {
+                            remove_idea = EQC_great_depression_1
+                            add_idea = EQC_great_depression_2
+                        }
+                    }
+                    else_if = {
+                        limit = {
+                            has_idea = EQC_great_depression_2
+                        }
+                        swap_ideas = {
+                            remove_idea = EQC_great_depression_2
+                            add_idea = EQC_great_depression_3
+                        }
+                    }
+                    else_if = {
+                        limit = {
+                            has_idea = EQC_great_depression_3
+                        }
+                        remove_ideas = EQC_great_depression_3
+                    }
+                }
             }
-            swap_ideas = {
-                remove_idea = EQC_great_depression_2
-                add_idea = EQC_great_depression_3
-            }
-        }
-        else_if = {
-            limit = {
-                has_idea = EQC_great_depression_3
-            }
-            remove_ideas = EQC_great_depression_3
         }
     }
 }
@@ -7319,19 +7510,39 @@ country_event = { #Follow some settlers from EQS arriving finally in EQC, as it 
 
     option = { #We were promised this?!
         name = solarreworked.444.a
-        356 = {
-			add_manpower = 100382
-		}
-		362 = {
-			add_manpower = 72930
-		}
-		359 = {
-			add_manpower = 28347
-		}
-		354 = {
-			add_manpower = 22895
-		}
-		EQC = { add_ideas = SOL_griffonian_refuge }
+		if = {
+            limit = { tag = EQS }
+            EQC = { add_ideas = SOL_griffonian_refuge }
+            356 = {
+                add_manpower = 100382
+            }
+            362 = {
+                add_manpower = 72930
+            }
+            359 = {
+                add_manpower = 28347
+            }
+            354 = {
+                add_manpower = 22895
+            }
+        }
+        else = {
+            effect_tooltip = {
+                356 = {
+                    add_manpower = 100382
+                }
+                362 = {
+                    add_manpower = 72930
+                }
+                359 = {
+                    add_manpower = 28347
+                }
+                354 = {
+                    add_manpower = 22895
+                }
+                add_ideas = SOL_griffonian_refuge
+            }
+        }
     }
 }
 
@@ -7345,64 +7556,181 @@ country_event = { #A businesspony from EQS arrives in Sunset to listen to a busi
 
     option = { #How much could that save us?
         name = solarreworked.445.a
-        random_state = {
-            limit = {
-                is_core_of = EQC
-                is_owned_by = EQC
+        if = {
+            limit = { tag = EQS }
+            random_state = {
+                limit = {
+                    is_core_of = EQC
+                    is_owned_by = EQC
+                    free_building_slots = {
+                        building = industrial_complex
+                        size > 0
+                        include_locked = yes
+                    }
+                }
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
             }
-            add_extra_state_shared_building_slots = 1
-            add_building_construction = {
-                type = arms_factory
-                level = 1
-                instant_build = yes
+            random_state = {
+                limit = {
+                    is_core_of = EQC
+                    is_owned_by = EQC
+                    free_building_slots = {
+                        building = industrial_complex
+                        size > 0
+                        include_locked = yes
+                    }
+                }
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            random_state = {
+                limit = {
+                    is_core_of = EQC
+                    is_owned_by = EQC
+                    free_building_slots = {
+                        building = industrial_complex
+                        size > 0
+                        include_locked = yes
+                    }
+                }
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            random_state = {
+                limit = {
+                    is_core_of = EQC
+                    is_owned_by = EQC
+                    free_building_slots = {
+                        building = industrial_complex
+                        size > 1
+                        include_locked = yes
+                    }
+                }
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_state = {
+                limit = {
+                    is_core_of = EQC
+                    is_owned_by = EQC
+                    free_building_slots = {
+                        building = industrial_complex
+                        size > 1
+                        include_locked = yes
+                    }
+                }
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
             }
         }
-        random_state = {
-            limit = {
-                is_core_of = EQC
-                is_owned_by = EQC
-            }
-            add_extra_state_shared_building_slots = 1
-            add_building_construction = {
-                type = arms_factory
-                level = 1
-                instant_build = yes
-            }
-        }
-        random_state = {
-            limit = {
-                is_core_of = EQC
-                is_owned_by = EQC
-            }
-            add_extra_state_shared_building_slots = 1
-            add_building_construction = {
-                type = arms_factory
-                level = 1
-                instant_build = yes
-            }
-        }
-        random_state = {
-            limit = {
-                is_core_of = EQC
-                is_owned_by = EQC
-            }
-            add_extra_state_shared_building_slots = 2
-            add_building_construction = {
-                type = industrial_complex
-                level = 2
-                instant_build = yes
-            }
-        }
-        random_state = {
-            limit = {
-                is_core_of = EQC
-                is_owned_by = EQC
-            }
-            add_extra_state_shared_building_slots = 2
-            add_building_construction = {
-                type = industrial_complex
-                level = 2
-                instant_build = yes
+        else = {
+            effect_tooltip = {
+                random_state = {
+                    limit = {
+                        is_core_of = EQC
+                        is_owned_by = EQC
+                        free_building_slots = {
+                            building = industrial_complex
+                            size > 0
+                            include_locked = yes
+                        }
+                    }
+                    add_extra_state_shared_building_slots = 1
+                    add_building_construction = {
+                        type = arms_factory
+                        level = 1
+                        instant_build = yes
+                    }
+                }
+                random_state = {
+                    limit = {
+                        is_core_of = EQC
+                        is_owned_by = EQC
+                        free_building_slots = {
+                            building = industrial_complex
+                            size > 0
+                            include_locked = yes
+                        }
+                    }
+                    add_extra_state_shared_building_slots = 1
+                    add_building_construction = {
+                        type = arms_factory
+                        level = 1
+                        instant_build = yes
+                    }
+                }
+                random_state = {
+                    limit = {
+                        is_core_of = EQC
+                        is_owned_by = EQC
+                        free_building_slots = {
+                            building = industrial_complex
+                            size > 0
+                            include_locked = yes
+                        }
+                    }
+                    add_extra_state_shared_building_slots = 1
+                    add_building_construction = {
+                        type = arms_factory
+                        level = 1
+                        instant_build = yes
+                    }
+                }
+                random_state = {
+                    limit = {
+                        is_core_of = EQC
+                        is_owned_by = EQC
+                        free_building_slots = {
+                            building = industrial_complex
+                            size > 1
+                            include_locked = yes
+                        }
+                    }
+                    add_extra_state_shared_building_slots = 2
+                    add_building_construction = {
+                        type = industrial_complex
+                        level = 2
+                        instant_build = yes
+                    }
+                }
+                random_state = {
+                    limit = {
+                        is_core_of = EQC
+                        is_owned_by = EQC
+                        free_building_slots = {
+                            building = industrial_complex
+                            size > 1
+                            include_locked = yes
+                        }
+                    }
+                    add_extra_state_shared_building_slots = 2
+                    add_building_construction = {
+                        type = industrial_complex
+                        level = 2
+                        instant_build = yes
+                    }
+                }
             }
         }
     }
@@ -7418,61 +7746,265 @@ country_event = { #A captain of a ship making port in Sunset's harbor, which has
 
     option = { #Are you ponies or animals?!
         name = solarreworked.446.a
-        #Dockyards here
-        356 = {
-            add_extra_state_shared_building_slots = 2
-            add_building_construction = {
-                type = dockyard
-                level = 2
-                instant_build = yes
+        if = {
+            limit = { tag = EQS }
+            if = {
+                limit = {
+                    356 = {
+                        free_building_slots = {
+                            building = dockyard
+                            slots > 1
+                            include_locked = yes
+                        }
+                    }
+                }
+                356 = {
+                    add_extra_state_shared_building_slots = 2
+                    add_building_construction = {
+                        type = dockyard
+                        level = 2
+                        instant_build = yes
+                    }
+                    add_building_construction = {
+                        type = naval_base
+                        level = 3
+                        instant_build = yes
+                        province = 10005
+                    }
+                }
             }
-            add_building_construction = {
-                type = naval_base
-                level = 3
-                instant_build = yes
-                province = 10005
+            if = {
+                limit = {
+                    362 = {
+                        free_building_slots = {
+                            building = dockyard
+                            slots > 0
+                            include_locked = yes
+                        }
+                    }
+                }
+                362 = {
+                    add_extra_state_shared_building_slots = 1
+                    add_building_construction = {
+                        type = dockyard
+                        level = 1
+                        instant_build = yes
+                    }
+                    if = {
+                        limit = {
+                            any_province_building_level = {
+                                province = { id = 829 }
+                                building = naval_base
+                                level < 9
+                            }
+                        }
+                        add_building_construction = {
+                            type = naval_base
+                            level = 2
+                            instant_build = yes
+                            province = 829
+                        }
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    354 = {
+                        free_building_slots = {
+                            building = dockyard
+                            slots > 0
+                            include_locked = yes
+                        }
+                    }
+                }
+                354 = {
+                    add_extra_state_shared_building_slots = 1
+                    add_building_construction = {
+                        type = dockyard
+                        level = 1
+                        instant_build = yes
+                    }
+                    if = {
+                        limit = {
+                            any_province_building_level = {
+                                province = { id = 11071 }
+                                building = naval_base
+                                level < 10
+                            }
+                        }
+                        add_building_construction = {
+                            type = naval_base
+                            level = 1
+                            instant_build = yes
+                            province = 11071
+                        }
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    361 = {
+                        free_building_slots = {
+                            building = dockyard
+                            slots > 0
+                            include_locked = yes
+                        }
+                    }
+                }
+                361 = {
+                    add_extra_state_shared_building_slots = 1
+                    add_building_construction = {
+                        type = dockyard
+                        level = 1
+                        instant_build = yes
+                    }
+                    if = {
+                        limit = {
+                            any_province_building_level = {
+                                province = { id = 11137 }
+                                building = naval_base
+                                level < 9
+                            }
+                        }
+                        add_building_construction = {
+                            type = naval_base
+                            level = 2
+                            instant_build = yes
+                            province = 11137
+                        }
+                    }
+                }
             }
         }
-        362 = {
-            add_extra_state_shared_building_slots = 1
-            add_building_construction = {
-                type = dockyard
-                level = 1
-                instant_build = yes
-            }
-            add_building_construction = {
-                type = naval_base
-                level = 2
-                instant_build = yes
-                province = 829
-            }
-        }
-        354 = {
-            add_extra_state_shared_building_slots = 1
-            add_building_construction = {
-                type = dockyard
-                level = 1
-                instant_build = yes
-            }
-            add_building_construction = {
-                type = naval_base
-                level = 1
-                instant_build = yes
-                province = 11071
-            }
-        }
-        361 = {
-            add_extra_state_shared_building_slots = 1
-            add_building_construction = {
-                type = dockyard
-                level = 1
-                instant_build = yes
-            }
-            add_building_construction = {
-                type = naval_base
-                level = 2
-                instant_build = yes
-                province = 11137
+        else = {
+            effect_tooltip = {
+                if = {
+                    limit = {
+                        356 = {
+                            free_building_slots = {
+                                building = dockyard
+                                slots > 1
+                                include_locked = yes
+                            }
+                        }
+                    }
+                    356 = {
+                        add_extra_state_shared_building_slots = 2
+                        add_building_construction = {
+                            type = dockyard
+                            level = 2
+                            instant_build = yes
+                        }
+                        add_building_construction = {
+                            type = naval_base
+                            level = 3
+                            instant_build = yes
+                            province = 10005
+                        }
+                    }
+                }
+                if = {
+                    limit = {
+                        362 = {
+                            free_building_slots = {
+                                building = dockyard
+                                slots > 0
+                                include_locked = yes
+                            }
+                        }
+                    }
+                    362 = {
+                        add_extra_state_shared_building_slots = 1
+                        add_building_construction = {
+                            type = dockyard
+                            level = 1
+                            instant_build = yes
+                        }
+                        if = {
+                            limit = {
+                                any_province_building_level = {
+                                    province = { id = 829 }
+                                    building = naval_base
+                                    level < 9
+                                }
+                            }
+                            add_building_construction = {
+                                type = naval_base
+                                level = 2
+                                instant_build = yes
+                                province = 829
+                            }
+                        }
+                    }
+                }
+                if = {
+                    limit = {
+                        354 = {
+                            free_building_slots = {
+                                building = dockyard
+                                slots > 0
+                                include_locked = yes
+                            }
+                        }
+                    }
+                    354 = {
+                        add_extra_state_shared_building_slots = 1
+                        add_building_construction = {
+                            type = dockyard
+                            level = 1
+                            instant_build = yes
+                        }
+                        if = {
+                            limit = {
+                                any_province_building_level = {
+                                    province = { id = 11071 }
+                                    building = naval_base
+                                    level < 10
+                                }
+                            }
+                            add_building_construction = {
+                                type = naval_base
+                                level = 1
+                                instant_build = yes
+                                province = 11071
+                            }
+                        }
+                    }
+                }
+                if = {
+                    limit = {
+                        361 = {
+                            free_building_slots = {
+                                building = dockyard
+                                slots > 0
+                                include_locked = yes
+                            }
+                        }
+                    }
+                    361 = {
+                        add_extra_state_shared_building_slots = 1
+                        add_building_construction = {
+                            type = dockyard
+                            level = 1
+                            instant_build = yes
+                        }
+                        if = {
+                            limit = {
+                                any_province_building_level = {
+                                    province = { id = 11137 }
+                                    building = naval_base
+                                    level < 9
+                                }
+                            }
+                            add_building_construction = {
+                                type = naval_base
+                                level = 2
+                                instant_build = yes
+                                province = 11137
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -7488,13 +8020,18 @@ country_event = { #Follow an EQS officer as he gets into a bit of a competition 
 
     option = { #This time again next year?
         name = solarreworked.447.a
-        army_experience = 30
-        EQC = {
+        if = {
+            limit = { tag = EQS }
             army_experience = 30
             random_state = {
                 limit = {
                     is_core_of = EQC
                     is_owned_by = EQC
+                    free_building_slots = {
+                        building = arms_factory
+                        slots > 1
+                        include_locked = yes
+                    }
                 }
                 add_extra_state_shared_building_slots = 2
                 add_building_construction = {
@@ -7507,6 +8044,11 @@ country_event = { #Follow an EQS officer as he gets into a bit of a competition 
                 limit = {
                     is_core_of = EQC
                     is_owned_by = EQC
+                    free_building_slots = {
+                        building = arms_factory
+                        slots > 2
+                        include_locked = yes
+                    }
                 }
                 add_extra_state_shared_building_slots = 3
                 add_building_construction = {
@@ -7515,11 +8057,60 @@ country_event = { #Follow an EQS officer as he gets into a bit of a competition 
                     instant_build = yes
                 }
             }
-            add_doctrine_cost_reduction = {
-                name = land_doctrine_bonus
-                uses = 2
-                cost_reduction = 0.5
-                category = land_doctrine
+            EQC = {
+                army_experience = 30
+                add_doctrine_cost_reduction = {
+                    name = land_doctrine_bonus
+                    uses = 2
+                    cost_reduction = 0.5
+                    category = land_doctrine
+                }
+            }
+        }
+        else = {
+            effect_tooltip = {
+                EQS = { army_experience = 30 }
+                random_state = {
+                    limit = {
+                        is_core_of = EQC
+                        is_owned_by = EQC
+                        free_building_slots = {
+                            building = arms_factory
+                            slots > 1
+                            include_locked = yes
+                        }
+                    }
+                    add_extra_state_shared_building_slots = 2
+                    add_building_construction = {
+                        type = arms_factory
+                        level = 2
+                        instant_build = yes
+                    }
+                }
+                random_state = {
+                    limit = {
+                        is_core_of = EQC
+                        is_owned_by = EQC
+                        free_building_slots = {
+                            building = arms_factory
+                            slots > 2
+                            include_locked = yes
+                        }
+                    }
+                    add_extra_state_shared_building_slots = 3
+                    add_building_construction = {
+                        type = arms_factory
+                        level = 3
+                        instant_build = yes
+                    }
+                }
+                army_experience = 30
+                add_doctrine_cost_reduction = {
+                    name = land_doctrine_bonus
+                    uses = 2
+                    cost_reduction = 0.5
+                    category = land_doctrine
+                }
             }
         }
     }
@@ -10000,7 +10591,7 @@ country_event = { #Event recapping for CHN that an assassination attempt has bee
         hidden_effect = {
             country_event = {
                 id = solarreworked.611
-                days = 300
+                days = 400
                 random_days = 100
             }
         }
