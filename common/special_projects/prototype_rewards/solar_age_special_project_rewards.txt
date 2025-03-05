@@ -15,7 +15,7 @@ sp_sun_laser_increased_magic_output = {
     fire_only_once = yes
 
     weight = {
-        factor = 3
+        factor = 100
     }
 
     #Improve magical energy weapons slightly
@@ -65,7 +65,7 @@ sp_sun_laser_increased_safety = {
     fire_only_once = yes
 
     weight = {
-        factor = 4
+        factor = 100
     }
 
     #Ignore dangers and press on
@@ -125,7 +125,7 @@ sp_sun_laser_solar_concentration_application = {
     fire_only_once = yes
 
     weight = {
-        factor = 4
+        factor = 100
     }
 
     #Use it for punching through armor
@@ -188,7 +188,7 @@ sp_sun_laser_faulty_concentration_spell = {
     fire_only_once = yes
 
     weight = {
-        factor = 7
+        factor = 100
     }
 
     #Do not delay the final product
@@ -252,7 +252,7 @@ sp_sun_laser_fusion_catalyst = {
     fire_only_once = yes
 
     weight = {
-        factor = 10
+        factor = 100
     }
 
     #Use it for megaspell material replacements
@@ -313,7 +313,7 @@ sp_sun_laser_exhaustive_casting = {
     fire_only_once = yes
 
     weight = {
-        factor = 10
+        factor = 100
     }
 
     #A few mages lost is no big deal
@@ -373,7 +373,7 @@ sp_adeptus_astartes_initial_perfection = {
     fire_only_once = yes
 
     weight = {
-        factor = 10
+        factor = 100
     }
 
     #Focus on her grace
@@ -436,7 +436,7 @@ sp_adeptus_astartes_power_overwhelming = {
     fire_only_once = yes
 
     weight = {
-        factor = 5
+        factor = 100
     }
 
     #Carefully twine with normal pony DNA
@@ -517,7 +517,7 @@ sp_adeptus_astartes_armor_applications = {
     fire_only_once = yes
 
     weight = {
-        factor = 6
+        factor = 100
     }
 
     #Apply to infantry armor
@@ -586,7 +586,7 @@ sp_adeptus_astartes_weapon_applications = {
     fire_only_once = yes
 
     weight = {
-        factor = 7
+        factor = 100
     }
 
     #Use the cheapest option, Flim Flam Arms
@@ -649,7 +649,7 @@ sp_adeptus_astartes_magical_abilities = {
     fire_only_once = yes
 
     weight = {
-        factor = 15
+        factor = 100
     }
 
     #Focus on unicorn magic
@@ -712,7 +712,7 @@ sp_enhanced_matrices_crystal_decisions = {
     fire_only_once = yes
 
     weight = {
-        factor = 3
+        factor = 100
     }
 
     #Amalgamate different crystals together
@@ -762,7 +762,7 @@ sp_enhanced_matrices_unstable_matrices = {
     fire_only_once = yes
 
     weight = {
-        factor = 3.5
+        factor = 100
     }
 
     #Use as a kind of magical grenade
@@ -839,7 +839,7 @@ sp_super_flamers_flame_compound = {
     fire_only_once = yes
 
     weight = {
-        factor = 4
+        factor = 100
     }
 
     #Continue as planned
@@ -913,7 +913,7 @@ sp_super_flamers_sticky_or_liquid_compound = {
     fire_only_once = yes
 
     weight = {
-        factor = 4
+        factor = 100
     }
 
     #Stick to anything
@@ -966,7 +966,7 @@ sp_plasma_cannons_reducing_load = {
     fire_only_once = yes
 
     weight = {
-        factor = 3
+        factor = 100
     }
 
     #Reduce unnecessary armaments
@@ -1038,7 +1038,7 @@ sp_plasma_cannons_traditional_usage = {
     fire_only_once = yes
 
     weight = {
-        factor = 4
+        factor = 100
     }
 
     #Apply these to our tank weapons
@@ -1095,7 +1095,7 @@ sp_inferno_cas_flight_problem = {
     fire_only_once = yes
 
     weight = {
-        factor = 15
+        factor = 100
     }
 
     #Just strap more engines to it
@@ -1157,7 +1157,7 @@ sp_inferno_cas_bobomb = {
     fire_only_once = yes
 
     weight = {
-        factor = 10
+        factor = 100
     }
 
     #Burn everything
@@ -1214,7 +1214,7 @@ sp_inferno_cas_flimsy_wings = {
     fire_only_once = yes
 
     weight = {
-        factor = 12
+        factor = 100
     }
 
     #Lighten the loads
@@ -1269,7 +1269,7 @@ sp_inferno_cas_taking_flight = {
     fire_only_once = yes
 
     weight = {
-        factor = 15
+        factor = 100
     }
 
     #Apply more armor
@@ -1341,7 +1341,7 @@ sp_inferno_cas_unstable_bombs = {
     fire_only_once = yes
 
     weight = {
-        factor = 20
+        factor = 100
     }
 
     #Warn the pilots to be careful
@@ -1413,7 +1413,7 @@ sp_portable_solar_panels_material_procurement = {
     fire_only_once = yes
 
     weight = {
-        factor = 5
+        factor = 100
     }
 
     #Use readily available materials
@@ -1476,7 +1476,7 @@ sp_pilot_drug_programs_test_subject_groups = {
     fire_only_once = yes
 
     weight = {
-        factor = 10
+        factor = 100
     }
 
     #Use civilians
@@ -1599,7 +1599,7 @@ sp_hot_fusion_reactor_by_products = {
     fire_only_once = yes
 
     weight = {
-        factor = 10
+        factor = 100
     }
 
     #Utilize it for tank armor

@@ -72,33 +72,34 @@ can_host_M6 = {
 EQS_no_equus_nation_other_than_EQS = {
 	custom_trigger_tooltip = {
 		tooltip = SOL_all_equus_nations_pwned_tt
-		DRG = { OR = { is_subject_of = ROOT exists = no } }
-		OLE = { OR = { is_subject_of = ROOT exists = no } }
-		CHN = { OR = { is_subject_of = ROOT exists = no } }
-		CCN = { OR = { is_subject_of = ROOT exists = no } }
-		YAK = { OR = { is_subject_of = ROOT exists = no } }
-		GRF = { OR = { is_subject_of = ROOT exists = no } }
-		STG = { OR = { is_subject_of = ROOT exists = no } }
-		BUF = { OR = { is_subject_of = ROOT exists = no } }
-		CRY = { OR = { is_subject_of = ROOT exists = no } }
-		PLB = { OR = { is_subject_of = ROOT exists = no } }
-		PNG = { OR = { is_subject_of = ROOT exists = no } }
-		STL = { OR = { is_subject_of = ROOT exists = no } }
-		NLR = { OR = { is_subject_of = ROOT exists = no } }
-		VAN = { OR = { is_subject_of = ROOT exists = no } }
-		SCS = { OR = { is_subject_of = ROOT exists = no } }
-		BAL = { OR = { is_subject_of = ROOT exists = no } }
-		NMS = { OR = { is_subject_of = ROOT exists = no } }
-		CES = { OR = { is_subject_of = ROOT exists = no } }
-		JUN = { OR = { is_subject_of = ROOT exists = no } }
-		GFF = { OR = { is_subject_of = ROOT exists = no } }
-		JAK = { OR = { is_subject_of = ROOT exists = no } }
-		TEM = { OR = { is_subject_of = ROOT exists = no } }
-		ZRS = { OR = { is_subject_of = ROOT exists = no } }
-		CCN = { OR = { is_subject_of = ROOT exists = no } }
-		LSP = { OR = { is_subject_of = ROOT exists = no } }
-		MAN = { OR = { is_subject_of = ROOT exists = no } }
-		ELF = { OR = { is_subject_of = ROOT exists = no } }
+		DRG = { all_cores_owned_by_ROOT_or_subject = yes }
+		OLE = { all_cores_owned_by_ROOT_or_subject = yes }
+		CHN = { all_cores_owned_by_ROOT_or_subject = yes }
+		CCN = { all_cores_owned_by_ROOT_or_subject = yes }
+		YAK = { all_cores_owned_by_ROOT_or_subject = yes }
+		GRF = { all_cores_owned_by_ROOT_or_subject = yes }
+		STG = { all_cores_owned_by_ROOT_or_subject = yes }
+		BUF = { all_cores_owned_by_ROOT_or_subject = yes }
+		CRY = { all_cores_owned_by_ROOT_or_subject = yes }
+		PLB = { all_cores_owned_by_ROOT_or_subject = yes }
+		PNG = { all_cores_owned_by_ROOT_or_subject = yes }
+		STL = { all_cores_owned_by_ROOT_or_subject = yes }
+		NLR = { all_cores_owned_by_ROOT_or_subject = yes }
+		VAN = { all_cores_owned_by_ROOT_or_subject = yes }
+		SCS = { all_cores_owned_by_ROOT_or_subject = yes }
+		BAL = { all_cores_owned_by_ROOT_or_subject = yes }
+		NMS = { all_cores_owned_by_ROOT_or_subject = yes }
+		CES = { all_cores_owned_by_ROOT_or_subject = yes }
+		JUN = { all_cores_owned_by_ROOT_or_subject = yes }
+		GFF = { all_cores_owned_by_ROOT_or_subject = yes }
+		JAK = { all_cores_owned_by_ROOT_or_subject = yes }
+		TEM = { all_cores_owned_by_ROOT_or_subject = yes }
+		ZRS = { all_cores_owned_by_ROOT_or_subject = yes }
+		CCN = { all_cores_owned_by_ROOT_or_subject = yes }
+		LSP = { all_cores_owned_by_ROOT_or_subject = yes }
+		MAN = { all_cores_owned_by_ROOT_or_subject = yes }
+		ELF = { all_cores_owned_by_ROOT_or_subject = yes }
+
 	}
 }
 EQS_no_equus_nation_other_than_EQS_griffonia = {
@@ -134,85 +135,85 @@ EQS_no_equus_nation_other_than_EQS_griffonia = {
 	#}
 	custom_trigger_tooltip = {
 		tooltip = SOL_all_griffonian_nations_pwned_tt
-		MIT = { OR = { is_subject_of = ROOT exists = no } }
-		LUS = { OR = { is_subject_of = ROOT exists = no } }
-		SRS = { OR = { is_subject_of = ROOT exists = no } }
-		VED = { OR = { is_subject_of = ROOT exists = no } }
-		FAT = { OR = { is_subject_of = ROOT exists = no } }
-		MNC = { OR = { is_subject_of = ROOT exists = no } }
-		STW = { OR = { is_subject_of = ROOT exists = no } }
-		BRZ = { OR = { is_subject_of = ROOT exists = no } }
-		FEA = { OR = { is_subject_of = ROOT exists = no } }
-		GRI = { OR = { is_subject_of = ROOT exists = no } }
-		HLQ = { OR = { is_subject_of = ROOT exists = no } }
-		LNS = { OR = { is_subject_of = ROOT exists = no } }
-		KAT = { OR = { is_subject_of = ROOT exists = no } }
-		ANG = { OR = { is_subject_of = ROOT exists = no } }
-		YAL = { OR = { is_subject_of = ROOT exists = no } }
-		ROU = { OR = { is_subject_of = ROOT exists = no } }
-		PYT = { OR = { is_subject_of = ROOT exists = no } }
-		HEL = { OR = { is_subject_of = ROOT exists = no } }
-		AET = { OR = { is_subject_of = ROOT exists = no } }
-		TRD = { OR = { is_subject_of = ROOT exists = no } }
-		FEZ = { OR = { is_subject_of = ROOT exists = no } }
-		JEB = { OR = { is_subject_of = ROOT exists = no } }
-		JES = { OR = { is_subject_of = ROOT exists = no } }
-		JRR = { OR = { is_subject_of = ROOT exists = no } }
-		JER = { OR = { is_subject_of = ROOT exists = no } }
-		JFT = { OR = { is_subject_of = ROOT exists = no } }
-		VIN = { OR = { is_subject_of = ROOT exists = no } }
-		POM = { OR = { is_subject_of = ROOT exists = no } }
-		FLO = { OR = { is_subject_of = ROOT exists = no } }
-		AVI = { OR = { is_subject_of = ROOT exists = no } }
-		ERI = { OR = { is_subject_of = ROOT exists = no } }
-		EYR = { OR = { is_subject_of = ROOT exists = no } }
-		BOI = { OR = { is_subject_of = ROOT exists = no } }
-		BAN = { OR = { is_subject_of = ROOT exists = no } }
-		LAK = { OR = { is_subject_of = ROOT exists = no } }
-		FAL = { OR = { is_subject_of = ROOT exists = no } }
-		ARA = { OR = { is_subject_of = ROOT exists = no } }
-		FRN = { OR = { is_subject_of = ROOT exists = no } }
-		TAL = { OR = { is_subject_of = ROOT exists = no } }
-		WNG = { OR = { is_subject_of = ROOT exists = no } }
-		SIC = { OR = { is_subject_of = ROOT exists = no } }
-		CYA = { OR = { is_subject_of = ROOT exists = no } }
-		FIR = { OR = { is_subject_of = ROOT exists = no } }
-		WAT = { OR = { is_subject_of = ROOT exists = no } }
-		GRW = { OR = { is_subject_of = ROOT exists = no } }
-		FBK = { OR = { is_subject_of = ROOT exists = no } }
-		RCT = { OR = { is_subject_of = ROOT exists = no } }
-		LCT = { OR = { is_subject_of = ROOT exists = no } }
-		WIT = { OR = { is_subject_of = ROOT exists = no } }
-		BAR = { OR = { is_subject_of = ROOT exists = no } }
-		NIM = { OR = { is_subject_of = ROOT exists = no } }
-		BAK = { OR = { is_subject_of = ROOT exists = no } }
-		FRE = { OR = { is_subject_of = ROOT exists = no } }
-		DEP = { OR = { is_subject_of = ROOT exists = no } }
-		DMT = { OR = { is_subject_of = ROOT exists = no } }
-		BRF = { OR = { is_subject_of = ROOT exists = no } }
-		GRY = { OR = { is_subject_of = ROOT exists = no } }
-		GRU = { OR = { is_subject_of = ROOT exists = no } }
-		ZES = { OR = { is_subject_of = ROOT exists = no } }
-		OLV = { OR = { is_subject_of = ROOT exists = no } }
-		DED = { OR = { is_subject_of = ROOT exists = no } }
-		EWI = { OR = { is_subject_of = ROOT exists = no } }
-		NCH = { OR = { is_subject_of = ROOT exists = no } }
-		HLR = { OR = { is_subject_of = ROOT exists = no } }
-		FAW = { OR = { is_subject_of = ROOT exists = no } }
-		NTR = { OR = { is_subject_of = ROOT exists = no } }
-		LSC = { OR = { is_subject_of = ROOT exists = no } }
-		LSM = { OR = { is_subject_of = ROOT exists = no } }
-		HAU = { OR = { is_subject_of = ROOT exists = no } }
-		JHZ = { OR = { is_subject_of = ROOT exists = no } }
-		JNG = { OR = { is_subject_of = ROOT exists = no } }
-		JGF = { OR = { is_subject_of = ROOT exists = no } }
-		JKR = { OR = { is_subject_of = ROOT exists = no } }
-		JOS = { OR = { is_subject_of = ROOT exists = no } }
-		JHP = { OR = { is_subject_of = ROOT exists = no } }
-		JRV = { OR = { is_subject_of = ROOT exists = no } }
-		JAS = { OR = { is_subject_of = ROOT exists = no } }
-		JEV = { OR = { is_subject_of = ROOT exists = no } }
-		EQC = { OR = { is_subject_of = ROOT exists = no } }
+		MIT = { all_cores_owned_by_ROOT_or_subject = yes }
+		LUS = { all_cores_owned_by_ROOT_or_subject = yes }
+		SRS = { all_cores_owned_by_ROOT_or_subject = yes }
+		VED = { all_cores_owned_by_ROOT_or_subject = yes }
+		FAT = { all_cores_owned_by_ROOT_or_subject = yes }
+		MNC = { all_cores_owned_by_ROOT_or_subject = yes }
+		STW = { all_cores_owned_by_ROOT_or_subject = yes }
+		BRZ = { all_cores_owned_by_ROOT_or_subject = yes }
+		FEA = { all_cores_owned_by_ROOT_or_subject = yes }
+		GRI = { all_cores_owned_by_ROOT_or_subject = yes }
+		HLQ = { all_cores_owned_by_ROOT_or_subject = yes }
+		LNS = { all_cores_owned_by_ROOT_or_subject = yes }
+		KAT = { all_cores_owned_by_ROOT_or_subject = yes }
+		ANG = { all_cores_owned_by_ROOT_or_subject = yes }
+		YAL = { all_cores_owned_by_ROOT_or_subject = yes }
+		ROU = { all_cores_owned_by_ROOT_or_subject = yes }
+		PYT = { all_cores_owned_by_ROOT_or_subject = yes }
+		HEL = { all_cores_owned_by_ROOT_or_subject = yes }
+		AET = { all_cores_owned_by_ROOT_or_subject = yes }
+		TRD = { all_cores_owned_by_ROOT_or_subject = yes }
+		FEZ = { all_cores_owned_by_ROOT_or_subject = yes }
+		JEB = { all_cores_owned_by_ROOT_or_subject = yes }
+		JES = { all_cores_owned_by_ROOT_or_subject = yes }
+		JRR = { all_cores_owned_by_ROOT_or_subject = yes }
+		JER = { all_cores_owned_by_ROOT_or_subject = yes }
+		JFT = { all_cores_owned_by_ROOT_or_subject = yes }
+		VIN = { all_cores_owned_by_ROOT_or_subject = yes }
+		POM = { all_cores_owned_by_ROOT_or_subject = yes }
+		FLO = { all_cores_owned_by_ROOT_or_subject = yes }
+		AVI = { all_cores_owned_by_ROOT_or_subject = yes }
+		ERI = { all_cores_owned_by_ROOT_or_subject = yes }
+		EYR = { all_cores_owned_by_ROOT_or_subject = yes }
+		BOI = { all_cores_owned_by_ROOT_or_subject = yes }
+		BAN = { all_cores_owned_by_ROOT_or_subject = yes }
+		LAK = { all_cores_owned_by_ROOT_or_subject = yes }
+		FAL = { all_cores_owned_by_ROOT_or_subject = yes }
+		ARA = { all_cores_owned_by_ROOT_or_subject = yes }
+		FRN = { all_cores_owned_by_ROOT_or_subject = yes }
+		TAL = { all_cores_owned_by_ROOT_or_subject = yes }
+		WNG = { all_cores_owned_by_ROOT_or_subject = yes }
+		SIC = { all_cores_owned_by_ROOT_or_subject = yes }
+		CYA = { all_cores_owned_by_ROOT_or_subject = yes }
+		FIR = { all_cores_owned_by_ROOT_or_subject = yes }
+		WAT = { all_cores_owned_by_ROOT_or_subject = yes }
+		GRW = { all_cores_owned_by_ROOT_or_subject = yes }
+		FBK = { all_cores_owned_by_ROOT_or_subject = yes }
+		RCT = { all_cores_owned_by_ROOT_or_subject = yes }
+		LCT = { all_cores_owned_by_ROOT_or_subject = yes }
+		WIT = { all_cores_owned_by_ROOT_or_subject = yes }
+		BAR = { all_cores_owned_by_ROOT_or_subject = yes }
+		NIM = { all_cores_owned_by_ROOT_or_subject = yes }
+		BAK = { all_cores_owned_by_ROOT_or_subject = yes }
+		FRE = { all_cores_owned_by_ROOT_or_subject = yes }
+		DEP = { all_cores_owned_by_ROOT_or_subject = yes }
+		DMT = { all_cores_owned_by_ROOT_or_subject = yes }
+		BRF = { all_cores_owned_by_ROOT_or_subject = yes }
+		GRY = { all_cores_owned_by_ROOT_or_subject = yes }
+		GRU = { all_cores_owned_by_ROOT_or_subject = yes }
+		ZES = { all_cores_owned_by_ROOT_or_subject = yes }
+		OLV = { all_cores_owned_by_ROOT_or_subject = yes }
+		DED = { all_cores_owned_by_ROOT_or_subject = yes }
+		EWI = { all_cores_owned_by_ROOT_or_subject = yes }
+		NCH = { all_cores_owned_by_ROOT_or_subject = yes }
+		HLR = { all_cores_owned_by_ROOT_or_subject = yes }
+		FAW = { all_cores_owned_by_ROOT_or_subject = yes }
+		NTR = { all_cores_owned_by_ROOT_or_subject = yes }
+		LSC = { all_cores_owned_by_ROOT_or_subject = yes }
+		LSM = { all_cores_owned_by_ROOT_or_subject = yes }
+		HAU = { all_cores_owned_by_ROOT_or_subject = yes }
+		JHZ = { all_cores_owned_by_ROOT_or_subject = yes }
+		JNG = { all_cores_owned_by_ROOT_or_subject = yes }
+		JGF = { all_cores_owned_by_ROOT_or_subject = yes }
+		JKR = { all_cores_owned_by_ROOT_or_subject = yes }
+		JOS = { all_cores_owned_by_ROOT_or_subject = yes }
+		JHP = { all_cores_owned_by_ROOT_or_subject = yes }
+		JRV = { all_cores_owned_by_ROOT_or_subject = yes }
+		JAS = { all_cores_owned_by_ROOT_or_subject = yes }
+		JEV = { all_cores_owned_by_ROOT_or_subject = yes }
+		EQC = { all_cores_owned_by_ROOT_or_subject = yes }
 	}
 }
 EQS_no_equus_nation_other_than_EQS_zebrica = {
@@ -230,90 +231,90 @@ EQS_no_equus_nation_other_than_EQS_zebrica = {
 	#}
 	custom_trigger_tooltip = {
 		tooltip = SOL_all_zebrican_nations_pwned_tt
-		MAZ = { OR = { is_subject_of = ROOT exists = no } }
-		ABY = { OR = { is_subject_of = ROOT exists = no } }
-		HIP = { OR = { is_subject_of = ROOT exists = no } }
-		MGY = { OR = { is_subject_of = ROOT exists = no } }
-		BAT = { OR = { is_subject_of = ROOT exists = no } }
-		MDL = { OR = { is_subject_of = ROOT exists = no } }
-		TBK = { OR = { is_subject_of = ROOT exists = no } }
-		WAR = { OR = { is_subject_of = ROOT exists = no } }
-		ZAR = { OR = { is_subject_of = ROOT exists = no } }
-		TSV = { OR = { is_subject_of = ROOT exists = no } }
-		ROA = { OR = { is_subject_of = ROOT exists = no } }
-		GFS = { OR = { is_subject_of = ROOT exists = no } }
-		ZAI = { OR = { is_subject_of = ROOT exists = no } }
-		ZWA = { OR = { is_subject_of = ROOT exists = no } }
-		ZUG = { OR = { is_subject_of = ROOT exists = no } }
-		MKS = { OR = { is_subject_of = ROOT exists = no } }
-		TIM = { OR = { is_subject_of = ROOT exists = no } }
-		SON = { OR = { is_subject_of = ROOT exists = no } }
-		HAY = { OR = { is_subject_of = ROOT exists = no } }
-		SLC = { OR = { is_subject_of = ROOT exists = no } }
-		CZR = { OR = { is_subject_of = ROOT exists = no } }
-		SDL = { OR = { is_subject_of = ROOT exists = no } }
-		EMR = { OR = { is_subject_of = ROOT exists = no } }
-		SDF = { OR = { is_subject_of = ROOT exists = no } }
-		SDS = { OR = { is_subject_of = ROOT exists = no } }
-		SDC = { OR = { is_subject_of = ROOT exists = no } }
-		ALO = { OR = { is_subject_of = ROOT exists = no } }
-		MSH = { OR = { is_subject_of = ROOT exists = no } }
-		ASS = { OR = { is_subject_of = ROOT exists = no } }
-		ANS = { OR = { is_subject_of = ROOT exists = no } }
-		STM = { OR = { is_subject_of = ROOT exists = no } }
-		THU = { OR = { is_subject_of = ROOT exists = no } }
-		GYZ = { OR = { is_subject_of = ROOT exists = no } }
-		KIR = { OR = { is_subject_of = ROOT exists = no } }
-		KIS = { OR = { is_subject_of = ROOT exists = no } }
-		KIC = { OR = { is_subject_of = ROOT exists = no } }
-		NVA = { OR = { is_subject_of = ROOT exists = no } }
-		YMN = { OR = { is_subject_of = ROOT exists = no } }
-		MTA = { OR = { is_subject_of = ROOT exists = no } }
-		REE = { OR = { is_subject_of = ROOT exists = no } }
-		MSS = { OR = { is_subject_of = ROOT exists = no } }
-		HMR = { OR = { is_subject_of = ROOT exists = no } }
-		OSQ = { OR = { is_subject_of = ROOT exists = no } }
-		KAR = { OR = { is_subject_of = ROOT exists = no } }
-		MTO = { OR = { is_subject_of = ROOT exists = no } }
-		AES = { OR = { is_subject_of = ROOT exists = no } }
-		IDT = { OR = { is_subject_of = ROOT exists = no } }
-		ZLU = { OR = { is_subject_of = ROOT exists = no } }
-		HYE = { OR = { is_subject_of = ROOT exists = no } }
-		GIF = { OR = { is_subject_of = ROOT exists = no } }
-		CTH = { OR = { is_subject_of = ROOT exists = no } }
-		CDR = { OR = { is_subject_of = ROOT exists = no } }
-		CVA = { OR = { is_subject_of = ROOT exists = no } }
-		MCW = { OR = { is_subject_of = ROOT exists = no } }
-		BKH = { OR = { is_subject_of = ROOT exists = no } }
-		CGI = { OR = { is_subject_of = ROOT exists = no } }
-		BLT = { OR = { is_subject_of = ROOT exists = no } }
-		KXN = { OR = { is_subject_of = ROOT exists = no } }
-		KHM = { OR = { is_subject_of = ROOT exists = no } }
-		GAZ = { OR = { is_subject_of = ROOT exists = no } }
-		LMB = { OR = { is_subject_of = ROOT exists = no } }
-		SPL = { OR = { is_subject_of = ROOT exists = no } }
-		HIN = { OR = { is_subject_of = ROOT exists = no } }
-		CTL = { OR = { is_subject_of = ROOT exists = no } }
-		BRS = { OR = { is_subject_of = ROOT exists = no } }
-		HRV = { OR = { is_subject_of = ROOT exists = no } }
-		CME = { OR = { is_subject_of = ROOT exists = no } }
-		ZOO = { OR = { is_subject_of = ROOT exists = no } }
-		TAI = { OR = { is_subject_of = ROOT exists = no } }
-		MEL = { OR = { is_subject_of = ROOT exists = no } }
-		MQA = { OR = { is_subject_of = ROOT exists = no } }
-		ZEL = { OR = { is_subject_of = ROOT exists = no } }
-		GAR = { OR = { is_subject_of = ROOT exists = no } }
-		CNT = { OR = { is_subject_of = ROOT exists = no } }
-		WIN = { OR = { is_subject_of = ROOT exists = no } }
-		ZUM = { OR = { is_subject_of = ROOT exists = no } }
-		SAM = { OR = { is_subject_of = ROOT exists = no } }
-		YAN = { OR = { is_subject_of = ROOT exists = no } }
-		DEL = { OR = { is_subject_of = ROOT exists = no } }
-		IST = { OR = { is_subject_of = ROOT exists = no } }
-		IDO = { OR = { is_subject_of = ROOT exists = no } }
-		KLG = { OR = { is_subject_of = ROOT exists = no } }
-		HIE = { OR = { is_subject_of = ROOT exists = no } }
-		TRO = { OR = { is_subject_of = ROOT exists = no } }
+		MAZ = { all_cores_owned_by_ROOT_or_subject = yes }
+		ABY = { all_cores_owned_by_ROOT_or_subject = yes }
+		HIP = { all_cores_owned_by_ROOT_or_subject = yes }
+		MGY = { all_cores_owned_by_ROOT_or_subject = yes }
+		BAT = { all_cores_owned_by_ROOT_or_subject = yes }
+		MDL = { all_cores_owned_by_ROOT_or_subject = yes }
+		TBK = { all_cores_owned_by_ROOT_or_subject = yes }
+		WAR = { all_cores_owned_by_ROOT_or_subject = yes }
+		ZAR = { all_cores_owned_by_ROOT_or_subject = yes }
+		TSV = { all_cores_owned_by_ROOT_or_subject = yes }
+		ROA = { all_cores_owned_by_ROOT_or_subject = yes }
+		GFS = { all_cores_owned_by_ROOT_or_subject = yes }
+		ZAI = { all_cores_owned_by_ROOT_or_subject = yes }
+		ZWA = { all_cores_owned_by_ROOT_or_subject = yes }
+		ZUG = { all_cores_owned_by_ROOT_or_subject = yes }
+		MKS = { all_cores_owned_by_ROOT_or_subject = yes }
+		TIM = { all_cores_owned_by_ROOT_or_subject = yes }
+		SON = { all_cores_owned_by_ROOT_or_subject = yes }
+		HAY = { all_cores_owned_by_ROOT_or_subject = yes }
+		SLC = { all_cores_owned_by_ROOT_or_subject = yes }
+		CZR = { all_cores_owned_by_ROOT_or_subject = yes }
+		SDL = { all_cores_owned_by_ROOT_or_subject = yes }
+		EMR = { all_cores_owned_by_ROOT_or_subject = yes }
+		SDF = { all_cores_owned_by_ROOT_or_subject = yes }
+		SDS = { all_cores_owned_by_ROOT_or_subject = yes }
+		SDC = { all_cores_owned_by_ROOT_or_subject = yes }
+		ALO = { all_cores_owned_by_ROOT_or_subject = yes }
+		MSH = { all_cores_owned_by_ROOT_or_subject = yes }
+		ASS = { all_cores_owned_by_ROOT_or_subject = yes }
+		ANS = { all_cores_owned_by_ROOT_or_subject = yes }
+		STM = { all_cores_owned_by_ROOT_or_subject = yes }
+		THU = { all_cores_owned_by_ROOT_or_subject = yes }
+		GYZ = { all_cores_owned_by_ROOT_or_subject = yes }
+		KIR = { all_cores_owned_by_ROOT_or_subject = yes }
+		KIS = { all_cores_owned_by_ROOT_or_subject = yes }
+		KIC = { all_cores_owned_by_ROOT_or_subject = yes }
+		NVA = { all_cores_owned_by_ROOT_or_subject = yes }
+		YMN = { all_cores_owned_by_ROOT_or_subject = yes }
+		MTA = { all_cores_owned_by_ROOT_or_subject = yes }
+		REE = { all_cores_owned_by_ROOT_or_subject = yes }
+		MSS = { all_cores_owned_by_ROOT_or_subject = yes }
+		HMR = { all_cores_owned_by_ROOT_or_subject = yes }
+		OSQ = { all_cores_owned_by_ROOT_or_subject = yes }
+		KAR = { all_cores_owned_by_ROOT_or_subject = yes }
+		MTO = { all_cores_owned_by_ROOT_or_subject = yes }
+		AES = { all_cores_owned_by_ROOT_or_subject = yes }
+		IDT = { all_cores_owned_by_ROOT_or_subject = yes }
+		ZLU = { all_cores_owned_by_ROOT_or_subject = yes }
+		HYE = { all_cores_owned_by_ROOT_or_subject = yes }
+		GIF = { all_cores_owned_by_ROOT_or_subject = yes }
+		CTH = { all_cores_owned_by_ROOT_or_subject = yes }
+		CDR = { all_cores_owned_by_ROOT_or_subject = yes }
+		CVA = { all_cores_owned_by_ROOT_or_subject = yes }
+		MCW = { all_cores_owned_by_ROOT_or_subject = yes }
+		BKH = { all_cores_owned_by_ROOT_or_subject = yes }
+		CGI = { all_cores_owned_by_ROOT_or_subject = yes }
+		BLT = { all_cores_owned_by_ROOT_or_subject = yes }
+		KXN = { all_cores_owned_by_ROOT_or_subject = yes }
+		KHM = { all_cores_owned_by_ROOT_or_subject = yes }
+		GAZ = { all_cores_owned_by_ROOT_or_subject = yes }
+		LMB = { all_cores_owned_by_ROOT_or_subject = yes }
+		SPL = { all_cores_owned_by_ROOT_or_subject = yes }
+		HIN = { all_cores_owned_by_ROOT_or_subject = yes }
+		CTL = { all_cores_owned_by_ROOT_or_subject = yes }
+		BRS = { all_cores_owned_by_ROOT_or_subject = yes }
+		HRV = { all_cores_owned_by_ROOT_or_subject = yes }
+		CME = { all_cores_owned_by_ROOT_or_subject = yes }
+		ZOO = { all_cores_owned_by_ROOT_or_subject = yes }
+		TAI = { all_cores_owned_by_ROOT_or_subject = yes }
+		MEL = { all_cores_owned_by_ROOT_or_subject = yes }
+		MQA = { all_cores_owned_by_ROOT_or_subject = yes }
+		ZEL = { all_cores_owned_by_ROOT_or_subject = yes }
+		GAR = { all_cores_owned_by_ROOT_or_subject = yes }
+		CNT = { all_cores_owned_by_ROOT_or_subject = yes }
+		WIN = { all_cores_owned_by_ROOT_or_subject = yes }
+		ZUM = { all_cores_owned_by_ROOT_or_subject = yes }
+		SAM = { all_cores_owned_by_ROOT_or_subject = yes }
+		YAN = { all_cores_owned_by_ROOT_or_subject = yes }
+		DEL = { all_cores_owned_by_ROOT_or_subject = yes }
+		IST = { all_cores_owned_by_ROOT_or_subject = yes }
+		IDO = { all_cores_owned_by_ROOT_or_subject = yes }
+		KLG = { all_cores_owned_by_ROOT_or_subject = yes }
+		HIE = { all_cores_owned_by_ROOT_or_subject = yes }
+		TRO = { all_cores_owned_by_ROOT_or_subject = yes }
 	}
 }
 EQS_state_has_been_laser_beamed = {

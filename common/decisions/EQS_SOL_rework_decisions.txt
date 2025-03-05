@@ -3805,10 +3805,10 @@ EQS_pan_pony_empire_category = {
         }
         available = {
             is_EQS_SOL = yes
-            GRF = { all_cores_owned_by_ROOT = yes }
+            GRF = { all_cores_owned_by_ROOT_or_subject = yes }
         }
         visible = {
-            GRF = { all_cores_owned_by_ROOT = yes }
+            GRF = { all_cores_owned_by_ROOT_or_subject = yes }
             NOT = { has_country_flag = SOL_formed_super_equus }
         }
         highlight_states = {

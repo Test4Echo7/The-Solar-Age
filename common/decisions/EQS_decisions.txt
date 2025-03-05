@@ -460,6 +460,41 @@ SOL_dealing_with_resistance = {
 			}
 		}
 	}
+	SOL_location_of_luna_and_m6 = {
+		allowed = {
+			tag = EQS
+		}
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		visible = {
+			OR = {
+				AND = {
+					has_completed_focus = SOL_return_elements_home
+					any_country = { has_country_flag = SOL_hosting_M6 }
+				}
+				AND = {
+					has_completed_focus = SOL_remove_evidence
+					NOT = { has_character = EQS_princess_luna }
+				}
+			}
+		}
+		highlight_states = {
+			highlight_states_trigger = {
+				OWNER = {
+					OR = {
+						has_character = EQS_princess_luna
+						has_country_flag = SOL_hosting_M6
+					}
+				}
+			}
+		}
+		complete_effect = {
+			log = "How are you getting this if you can never select it?"
+		}
+	}
 	SOL_lock_down_border = {
 		allowed = {
 			tag = EQS

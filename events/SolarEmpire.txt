@@ -685,12 +685,12 @@ country_event = {
 				character = EQS_big_macintosh
 			}
 		}
-		if = {
-			limit = { EQS_pinkie_pie = { is_unit_leader = yes } }
-			remove_unit_leader_role = {
-				character = EQS_pinkie_pie
-			}
-		}
+		#if = {
+		#	limit = { EQS_pinkie_pie = { is_unit_leader = yes } }
+		#	remove_unit_leader_role = {
+		#		character = EQS_pinkie_pie
+		#	}
+		#}
 		if = {
 			limit = { EQS_caltrop_decay = { is_unit_leader = yes } }
 			remove_unit_leader_role = {
@@ -703,12 +703,12 @@ country_event = {
 				character = EQS_braeburn
 			}
 		}
-		if = {
-			limit = { EQS_applejack = { is_unit_leader = yes } }
-			remove_unit_leader_role = {
-				character = EQS_applejack
-			}
-		}
+		#if = {
+		#	limit = { EQS_applejack = { is_unit_leader = yes } }
+		#	remove_unit_leader_role = {
+		#		character = EQS_applejack
+		#	}
+		#}
 		#wait a sec this should never be possible... ah fuck it
 		if = {
 			limit = { has_global_flag = celestia_and_luna_fused }
@@ -4631,8 +4631,15 @@ country_event = {
 				limit = { is_core_of = FROM }
 				add_core_of = ROOT
 			}
+			hidden_effect = {
+				EQS_twilight_sparkle = {
+					set_nationality = ROOT
+				}
+			}
 		}
-		annex_country = { target = FROM transfer_troops = yes }
+		annex_country = {
+			target = FROM transfer_troops = yes
+		}
 		add_political_power = -200
 		ai_chance = {
 			modifier = {

@@ -320,3 +320,71 @@ defined_text = { # Country
 		localization_key = EQS_decision_cost_dynamic_political_command_power_blocked
 	}
 }
+
+defined_text = {
+	name = GetLunaHostCountry
+	text = {
+		trigger = {
+			any_country = {
+				tag = RCT
+				has_character = EQS_princess_luna
+			}
+		}
+		localization_key = EQS_get_RCT_luna_name_with_flag
+	}
+	text = {
+		trigger = {
+			any_country = {
+				tag = HIP
+				has_character = EQS_princess_luna
+			}
+		}
+		localization_key = EQS_get_HIP_luna_name_with_flag
+	}
+	text = {
+		trigger = {
+			any_country = {
+				tag = MGY
+				has_character = EQS_princess_luna
+			}
+		}
+		localization_key = EQS_get_RCT_luna_name_with_flag
+	}
+	text = {
+		localization_key = EQS_it_be_a_mystery
+	}
+}
+
+defined_text = {
+	name = GetM6HostCountry
+	text = {
+		trigger = {
+			any_country = {
+				tag = RCT
+				has_country_flag = SOL_hosting_M6
+			}
+		}
+		localization_key = EQS_get_RCT_m6_name_with_flag
+	}
+	text = {
+		trigger = {
+			any_country = {
+				tag = HIP
+				has_country_flag = SOL_hosting_M6
+			}
+		}
+		localization_key = EQS_get_HIP_m6_name_with_flag
+	}
+	text = {
+		trigger = {
+			any_country = {
+				tag = MGY
+				has_country_flag = SOL_hosting_M6
+			}
+		}
+		localization_key = EQS_get_MGY_m6_name_with_flag
+	}
+	text = {
+		localization_key = EQS_it_be_a_mystery_m6
+	}
+}

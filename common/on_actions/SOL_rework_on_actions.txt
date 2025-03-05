@@ -548,17 +548,25 @@ on_actions = {
                     }
                     NOT = { has_global_flag = SOL_attempted_enemy_assassinations }
                 }
-                random_country = {
+                every_possible_country = {
                     limit = {
                         has_character = EQS_princess_luna
+                        NOT = { tag = HIP }
+                        NOT = { tag = RCT }
+                        NOT = { tag = MGY }
                     }
                     country_event = {
                         id = solarreworked.163
                         random_days = 14
                     }
                 }
-                random_country = {
-                    limit = { has_country_flag = SOL_hosting_M6 }
+                every_possible_country = {
+                    limit = {
+                        has_country_flag = SOL_hosting_M6
+                        NOT = { tag = HIP }
+                        NOT = { tag = RCT }
+                        NOT = { tag = MGY }
+                    }
                     country_event = {
                         id = solarreworked.164
                         random_days = 30
@@ -1934,7 +1942,7 @@ on_actions = {
     }
     on_startup = { #Don't want to touch MGY files. But seriously, EaW, why no Somnambula advisor trait despite having her recruited?
         effect = {
-            random_country = {
+            every_possible_country = {
                 limit = { has_character = MGY_somnambula }
                 MGY_somnambula = {
                     add_advisor_role = {
