@@ -4831,7 +4831,7 @@ shared_focus = {
 			}
 		}
 	}
-	will_lead_to_war_with = GRI
+	will_lead_to_war_with = GRD
 	cost = 8
 	ai_will_do = {
 		factor = 10
@@ -8098,15 +8098,6 @@ joint_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_update_northern_tactics"
 		###Maybe event for doing some kind of war games exercise between SOL and CRY soldiers
-		CRY = {
-			add_doctrine_cost_reduction = {
-				name = land_doc_bonus
-				uses = 3
-				cost_reduction = 0.5
-				category = land_doctrine
-			}
-		}
-		army_experience = 30
 	}
 	completion_reward_joint_originator = {
 		if = {
@@ -8176,36 +8167,6 @@ joint_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_establish_crystal_legion"
-		add_command_power = -40
-		CRY = {
-			hidden_effect = {
-				division_template = {
-					name = "Imperial Insurance"
-					is_locked = yes
-					division_cap = 2
-					division_names_group = EQS_GRD_02
-					priority = 0
-					regiments = {
-						magical_infantry = { x = 0 y = 0 }
-						magical_infantry = { x = 0 y = 1 }
-						magical_infantry = { x = 0 y = 2 }
-						magical_infantry = { x = 1 y = 0 }
-						magical_infantry = { x = 1 y = 1 }
-						magical_infantry = { x = 1 y = 2 }
-						artillery_brigade = { x = 2 y = 0 }
-					}
-					support = {
-						engineer = { x = 0 y = 0 }
-						unicorn_company = { x = 0 y = 1 }
-					}
-				}
-			}
-			344 = {
-                create_unit = { division = "name = \"Custos I - Crystallum\" division_template = \"Imperial Guardians\"" owner = CRY id = 489 }
-                create_unit = { division = "name = \"Custos II - Hiems\" division_template = \"Imperial Guardians\"" owner = CRY id = 489 }
-            }
-			add_war_support = 0.1
-		}
 	}
 	completion_reward_joint_originator = {
 		if = {
@@ -9876,6 +9837,17 @@ joint_focus = {
 			tag = EQC
 		}
 	}
+	available = {
+		EQC = {
+			if = {
+				limit = {
+					ROOT = { tag = EQS }
+				}
+				is_subject_of = ROOT
+			}
+			exists = yes
+		}
+	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_empresss_eyes"
@@ -9898,7 +9870,13 @@ joint_focus = {
 			add_political_power = -50
 		}
 	}
-	ai_will_do = { factor = 40 }
+	ai_will_do = {
+		factor = 40
+		modifier = {
+			tag = EQC
+			factor = 0.1
+		}
+	}
 }
 
 joint_focus = {
@@ -9935,6 +9913,17 @@ joint_focus = {
 			tag = EQC
 		}
 	}
+	available = {
+		EQC = {
+			if = {
+				limit = {
+					ROOT = { tag = EQS }
+				}
+				is_subject_of = ROOT
+			}
+			exists = yes
+		}
+	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_colonial_investments"
@@ -9943,6 +9932,7 @@ joint_focus = {
 		if = {
 			limit = {
 				356 = {
+					is_owned_and_controlled_by = EQC
 					free_building_slots = {
 						building = industrial_complex
 						size > 2
@@ -9969,7 +9959,13 @@ joint_focus = {
 			EQC = { add_political_power = 150 }
 		}
 	}
-	ai_will_do = { factor = 70 }
+	ai_will_do = {
+		factor = 70
+		modifier = {
+			tag = EQC
+			factor = 0.1
+		}
+	}
 }
 
 joint_focus = {
@@ -9987,13 +9983,30 @@ joint_focus = {
 			tag = EQC
 		}
 	}
+	available = {
+		EQC = {
+			if = {
+				limit = {
+					ROOT = { tag = EQS }
+				}
+				is_subject_of = ROOT
+			}
+			exists = yes
+		}
+	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_personnel_support"
 		###Maybe a short event of EQC receiving the new generals with Arcane Nova meeting them with speaking on the state of the country and how they will need to enforce law
 		country_event = solarreworked.442
 	}
-	ai_will_do = { factor = 70 }
+	ai_will_do = {
+		factor = 70
+		modifier = {
+			tag = EQC
+			factor = 0.1
+		}
+	}
 }
 
 joint_focus = {
@@ -10008,6 +10021,17 @@ joint_focus = {
 		OR = {
 			tag = EQS
 			tag = EQC
+		}
+	}
+	available = {
+		EQC = {
+			if = {
+				limit = {
+					ROOT = { tag = EQS }
+				}
+				is_subject_of = ROOT
+			}
+			all_cores_owned_by_ROOT_or_subject = yes
 		}
 	}
 	mutually_exclusive = { focus = SOL_debt_council }
@@ -10027,7 +10051,13 @@ joint_focus = {
 			add_ideas = SOL_marelandian_deal
 		}
 	}
-	ai_will_do = { factor = 50 }
+	ai_will_do = {
+		factor = 50
+		modifier = {
+			tag = EQC
+			factor = 0.1
+		}
+	}
 }
 
 joint_focus = {
@@ -10046,7 +10076,15 @@ joint_focus = {
 	}
 	mutually_exclusive = { focus = SOL_homegrown_plan }
 	available = {
-		EQC = { all_cores_owned_by_ROOT_or_subject = yes }
+		EQC = {
+			if = {
+				limit = {
+					ROOT = { tag = EQS }
+				}
+				is_subject_of = ROOT
+			}
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
 	}
 
 	completion_reward = {
@@ -10064,7 +10102,13 @@ joint_focus = {
 			add_ideas = SOL_managed_debt_repayments
 		}
 	}
-	ai_will_do = { factor = 80 }
+	ai_will_do = {
+		factor = 80
+		modifier = {
+			tag = EQC
+			factor = 0.1
+		}
+	}
 }
 
 ###More operation shenanigans, PDX
@@ -10105,14 +10149,19 @@ joint_focus = {
 		}
 	}
 	available = {
-		EQC = {
-			is_subject_of = ROOT
+		if = {
+			limit = { tag = EQS }
+			EQC = {
+				is_subject_of = ROOT
+			}
+		}
+		356 = {
+			is_owned_and_controlled_by = EQC
 		}
 	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_fund_sunset_plays"
-		EQC = { add_ideas = SOL_patriotic_plays }
 		###Maybe event for one ofthe patriotic plays, and how they are being used to get ponies to agree to Daybreaker's rule by using overly cringy propaganda and the like, which upsets the thespians who perform in them
 	}
 	completion_reward_joint_originator = {
@@ -10127,7 +10176,13 @@ joint_focus = {
 			add_ideas = SOL_patriotic_plays
 		}
 	}
-	ai_will_do = { factor = 60 }
+	ai_will_do = {
+		factor = 60
+		modifier = {
+			tag = EQC
+			factor = 0.1
+		}
+	}
 }
 
 joint_focus = {
@@ -10146,7 +10201,12 @@ joint_focus = {
 	}
 	available = {
 		EQC = {
-			is_subject_of = ROOT
+			if = {
+				limit = {
+					ROOT = { tag = EQS }
+				}
+				is_subject_of = ROOT
+			}
 			all_cores_owned_by_ROOT_or_subject = yes
 		}
 	}
@@ -10190,7 +10250,15 @@ joint_focus = {
 			}
 		}
 	}
-	ai_will_do = { factor = 40 }
+	ai_will_do = {
+		factor = 40
+		modifier = {
+			if = {
+				limit = { tag = EQC }
+				factor = 0.1
+			}
+		}
+	}
 }
 
 joint_focus = {
@@ -10209,7 +10277,12 @@ joint_focus = {
 	}
 	available = {
 		EQC = {
-			is_subject_of = ROOT
+			if = {
+				limit = {
+					ROOT = { tag = EQS }
+				}
+				is_subject_of = ROOT
+			}
 			all_cores_owned_by_ROOT_or_subject = yes
 		}
 	}
@@ -10243,7 +10316,13 @@ joint_focus = {
 			}
 		}
 	}
-	ai_will_do = { factor = 50 }
+	ai_will_do = {
+		factor = 50
+		modifier = {
+			tag = EQC
+			factor = 0.1
+		}
+	}
 }
 
 joint_focus = {
@@ -10258,6 +10337,17 @@ joint_focus = {
 		OR = {
 			tag = EQS
 			tag = EQC
+		}
+	}
+	available = {
+		EQC = {
+			if = {
+				limit = {
+					ROOT = { tag = EQS }
+				}
+				is_subject_of = ROOT
+			}
+			exists = yes
 		}
 	}
 	mutually_exclusive = { focus = SOL_united_goal }
@@ -10281,8 +10371,12 @@ joint_focus = {
 	ai_will_do = {
 		factor = 40
 		modifier = {
-			EQS = { has_completed_focus = SOL_god_empress }
+			ROOT = { has_completed_focus = SOL_god_empress }
 			factor = 2
+		}
+		modifier = {
+			tag = EQC
+			factor = 0.1
 		}
 	}
 }
@@ -10299,6 +10393,17 @@ joint_focus = {
 		OR = {
 			tag = EQS
 			tag = EQC
+		}
+	}
+	available = {
+		EQC = {
+			if = {
+				limit = {
+					ROOT = { tag = EQS }
+				}
+				is_subject_of = ROOT
+			}
+			exists = yes
 		}
 	}
 	mutually_exclusive = { focus = SOL_church_of_day }
@@ -10319,7 +10424,13 @@ joint_focus = {
 			add_ideas = SOL_united_in_purpose
 		}
 	}
-	ai_will_do = { factor = 60 }
+	ai_will_do = {
+		factor = 60
+		modifier = {
+			tag = EQC
+			factor = 0.15
+		}
+	}
 }
 
 joint_focus = {
@@ -10334,6 +10445,17 @@ joint_focus = {
 		OR = {
 			tag = EQS
 			tag = EQC
+		}
+	}
+	available = {
+		EQC = {
+			if = {
+				limit = {
+					ROOT = { tag = EQS }
+				}
+				is_subject_of = ROOT
+			}
+			exists = yes
 		}
 	}
 
@@ -10362,7 +10484,13 @@ joint_focus = {
 			add_stability = 0.05
 		}
 	}
-	ai_will_do = { factor = 60 }
+	ai_will_do = {
+		factor = 60
+		modifier = {
+			tag = EQC
+			factor = 0.1
+		}
+	}
 }
 
 joint_focus = {
@@ -10380,6 +10508,17 @@ joint_focus = {
 		OR = {
 			tag = EQS
 			tag = EQC
+		}
+	}
+	available = {
+		EQC = {
+			if = {
+				limit = {
+					ROOT = { tag = EQS }
+				}
+				is_subject_of = ROOT
+			}
+			exists = yes
 		}
 	}
 
@@ -10412,7 +10551,13 @@ joint_focus = {
 			add_ideas = SOL_international_student_transfers
 		}
 	}
-	ai_will_do = { factor = 90 }
+	ai_will_do = {
+		factor = 90
+		modifier = {
+			tag = EQC
+			factor = 0.2
+		}
+	}
 }
 
 joint_focus = {
@@ -10432,13 +10577,30 @@ joint_focus = {
 			tag = EQC
 		}
 	}
+	available = {
+		EQC = {
+			if = {
+				limit = {
+					ROOT = { tag = EQS }
+				}
+				is_subject_of = ROOT
+			}
+			exists = yes
+		}
+	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_prisoner_restructuring"
 		###Event of a political prisoner who is currently laboring in a work gang as pennance for his transgressions finds an opening to escape and tries to do so, leading to a small chase before he is trapped and forced to surrender, and his workload becomes even worse because of it
 		country_event = solarreworked.443
 	}
-	ai_will_do = { factor = 70 }
+	ai_will_do = {
+		factor = 70
+		modifier = {
+			tag = EQC
+			factor = 0.1
+		}
+	}
 }
 
 joint_focus = {
@@ -10453,6 +10615,17 @@ joint_focus = {
 		OR = {
 			tag = EQS
 			tag = EQC
+		}
+	}
+	available = {
+		EQC = {
+			if = {
+				limit = {
+					ROOT = { tag = EQS }
+				}
+				is_subject_of = ROOT
+			}
+			all_cores_owned_by_ROOT_or_subject = yes
 		}
 	}
 
@@ -10531,7 +10704,13 @@ joint_focus = {
 			}
 		}
 	}
-	ai_will_do = { factor = 30 }
+	ai_will_do = {
+		factor = 30
+		modifier = {
+			tag = EQC
+			factor = 0.1
+		}
+	}
 }
 
 joint_focus = {
@@ -10546,6 +10725,17 @@ joint_focus = {
 		OR = {
 			tag = EQS
 			tag = EQC
+		}
+	}
+	available = {
+		EQC = {
+			if = {
+				limit = {
+					ROOT = { tag = EQS }
+				}
+				is_subject_of = ROOT
+			}
+			all_cores_owned_by_ROOT_or_subject = yes
 		}
 	}
 
@@ -10641,7 +10831,13 @@ joint_focus = {
             }
 		}
 	}
-	ai_will_do = { factor = 60 }
+	ai_will_do = {
+		factor = 60
+		modifier = {
+			tag = EQC
+			factor = 0.1
+		}
+	}
 }
 
 joint_focus = {
@@ -10656,6 +10852,17 @@ joint_focus = {
 		OR = {
 			tag = EQS
 			tag = EQC
+		}
+	}
+	available = {
+		EQC = {
+			if = {
+				limit = {
+					ROOT = { tag = EQS }
+				}
+				is_subject_of = ROOT
+			}
+			all_cores_owned_by_ROOT_or_subject = yes
 		}
 	}
 
@@ -10684,6 +10891,13 @@ joint_focus = {
 			}
 		}
 	}
+	ai_will_do = {
+		factor = 50
+		modifier = {
+			tag = EQC
+			factor = 0.1
+		}
+	}
 }
 
 joint_focus = {
@@ -10700,6 +10914,17 @@ joint_focus = {
 			tag = EQC
 		}
 	}
+	available = {
+		EQC = {
+			if = {
+				limit = {
+					ROOT = { tag = EQS }
+				}
+				is_subject_of = ROOT
+			}
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+	}
 	mutually_exclusive = { focus = SOL_economic_opportunity }
 	mutually_exclusive = { focus = SOL_world_station }
 	mutually_exclusive = { focus = SOL_joint_military_expeditions }
@@ -10708,7 +10933,13 @@ joint_focus = {
 		###Maybe event of some colonists from SOL arriving to then force some of the griffon minorities so they can use their land instead, forcing them to be destitute
 		country_event = solarreworked.444
 	}
-	ai_will_do = { factor = 40 }
+	ai_will_do = {
+		factor = 40
+		modifier = {
+			tag = EQC
+			factor = 0.1
+		}
+	}
 }
 
 joint_focus = {
@@ -10725,6 +10956,17 @@ joint_focus = {
 			tag = EQC
 		}
 	}
+	available = {
+		EQC = {
+			if = {
+				limit = {
+					ROOT = { tag = EQS }
+				}
+				is_subject_of = ROOT
+			}
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+	}
 	mutually_exclusive = { focus = SOL_refuge_in_sun }
 	mutually_exclusive = { focus = SOL_world_station }
 	mutually_exclusive = { focus = SOL_joint_military_expeditions }
@@ -10734,7 +10976,13 @@ joint_focus = {
 		###Event of number of megacorps moving their headquarters to the lands of EQC, since they have found multiple ways to abuse the tax code to make more money, so that they do not have to give back as much to Daybreaker, since they still chafe under her
 		country_event = solarreworked.445
 	}
-	ai_will_do = { factor = 40 }
+	ai_will_do = {
+		factor = 40
+		modifier = {
+			tag = EQC
+			factor = 0.1
+		}
+	}
 }
 
 joint_focus = {
@@ -10751,6 +10999,17 @@ joint_focus = {
 			tag = EQC
 		}
 	}
+	available = {
+		EQC = {
+			if = {
+				limit = {
+					ROOT = { tag = EQS }
+				}
+				is_subject_of = ROOT
+			}
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+	}
 	mutually_exclusive = { focus = SOL_refuge_in_sun }
 	mutually_exclusive = { focus = SOL_economic_opportunity }
 	mutually_exclusive = { focus = SOL_joint_military_expeditions }
@@ -10760,7 +11019,13 @@ joint_focus = {
 		###Event of some sailors finally getting shore leave and causing a bit of havoc on the mainland of EQC, probably as some kind of report, or of the CO of the sailors coming in to get them out of lockup
 		country_event = solarreworked.446
 	}
-	ai_will_do = { factor =  50 }
+	ai_will_do = {
+		factor =  50
+		modifier = {
+			tag = EQC
+			factor = 0.1
+		}
+	}
 }
 
 joint_focus = {
@@ -10778,6 +11043,17 @@ joint_focus = {
 			tag = EQC
 		}
 	}
+	available = {
+		EQC = {
+			if = {
+				limit = {
+					ROOT = { tag = EQS }
+				}
+				is_subject_of = ROOT
+			}
+			all_cores_owned_by_ROOT_or_subject = yes
+		}
+	}
 	mutually_exclusive = { focus = SOL_refuge_in_sun }
 	mutually_exclusive = { focus = SOL_economic_opportunity }
 	mutually_exclusive = { focus = SOL_world_station }
@@ -10787,7 +11063,13 @@ joint_focus = {
 		###Maybe event of some imperial and EQC soldiers getting into a bit of a competition on a training exercise, which ends up getting into a proper skirmish with some of the griffons nearby, and they both end up promising to keep it even in score
 		country_event = solarreworked.447
 	}
-	ai_will_do = { factor = 80 }
+	ai_will_do = {
+		factor = 80
+		modifier = {
+			tag = EQC
+			factor = 0.1
+		}
+	}
 }
 
 ###Ministry of Defense Additions###

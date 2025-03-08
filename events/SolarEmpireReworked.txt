@@ -10710,7 +10710,6 @@ country_event = { #The player is presented the options of what to exactly do wit
         }
         if = {
             limit = {
-                has_intelligence_agency = yes
                 has_completed_focus = SOL_Imperial_Investigative_Service
             }
             create_intelligence_agency = {
@@ -10720,7 +10719,6 @@ country_event = { #The player is presented the options of what to exactly do wit
         }
         else_if = {
             limit = {
-                has_intelligence_agency = yes
                 has_completed_focus = SOL_solaris_speculatores
             }
             create_intelligence_agency = {
@@ -10758,7 +10756,6 @@ country_event = { #The player is presented the options of what to exactly do wit
         }
         if = {
             limit = {
-                has_intelligence_agency = yes
                 has_completed_focus = SOL_Imperial_Investigative_Service
             }
             create_intelligence_agency = {
@@ -10768,7 +10765,6 @@ country_event = { #The player is presented the options of what to exactly do wit
         }
         else_if = {
             limit = {
-                has_intelligence_agency = yes
                 has_completed_focus = SOL_solaris_speculatores
             }
             create_intelligence_agency = {
@@ -10792,7 +10788,6 @@ country_event = { #The player is presented the options of what to exactly do wit
         name = solarreworked.650.c
         if = {
             limit = {
-                has_intelligence_agency = yes
                 has_completed_focus = SOL_Imperial_Investigative_Service
             }
             create_intelligence_agency = {
@@ -10802,7 +10797,6 @@ country_event = { #The player is presented the options of what to exactly do wit
         }
         else_if = {
             limit = {
-                has_intelligence_agency = yes
                 has_completed_focus = SOL_solaris_speculatores
             }
             create_intelligence_agency = {
