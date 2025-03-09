@@ -8892,13 +8892,6 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_enlighten_darkness"
 		add_stability = -0.05
 		add_political_power = -50
-		every_state = {
-			limit = {
-				has_state_flag = eqs_bat_state
-			}
-			add_compliance = 2
-			add_resistance = -5
-		}
 		mark_focus_tree_layout_dirty = yes
 	}
 	ai_will_do = { factor = 120 }
@@ -8994,13 +8987,21 @@ shared_focus = {
 			}
 			#Reduce pop further
 			add_stability = 0.1
+			save_current_manpower = yes
+			every_state = {
+				limit = {
+					has_state_flag = EQS_guaranteed_bat_state
+				}
+				add_manpower = -5000
+			}
+			restore_previous_manpower = yes
 		}
 		if = {
 			limit = { has_completed_focus = SOL_useful_servants }
 			add_stability = -0.05
 			random_state = {
 				limit = {
-					has_state_flag = eqs_bat_state
+					has_state_flag = EQS_guaranteed_bat_state
 				}
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -9010,7 +9011,7 @@ shared_focus = {
 				}
 			}
 			random_state = {
-				limit = { has_state_flag = eqs_bat_state }
+				limit = { has_state_flag = EQS_guaranteed_bat_state }
 				add_extra_state_shared_building_slots = 1
 			}
 		}
@@ -9044,7 +9045,7 @@ shared_focus = {
 				type = oil
 				amount = 4
 			}
-			#Add modifier here
+			#Add modifier +15% local resources
 		}
 	}
 	ai_will_do = { factor = 80 }
@@ -9088,7 +9089,6 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_remote_no_more"
-		#Add stuff here
 		build_railway = {
 			level = 2
 			fallback = yes
@@ -9105,10 +9105,13 @@ shared_focus = {
 					instant_build = yes
 				}
 			}
-			add_building_construction = {
-				type = air_base
-				level = 3
-				instant_build = yes
+			if = {
+				limit = { air_base < 10 }
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
 			}
 		}
 		if = {
@@ -9144,10 +9147,13 @@ shared_focus = {
 					instant_build = yes
 				}
 			}
-			add_building_construction = {
-				type = air_base
-				level = 2
-				instant_build = yes
+			if = {
+				limit = { air_base < 10 }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
 			}
 		}
 		32 = {
@@ -9203,7 +9209,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_modern_south_east"
 		random_state = {
 			limit = {
-				has_state_flag = eqs_bat_state
+				has_state_flag = EQS_guaranteed_bat_state
 				is_owned_and_controlled_by = ROOT
 				NOT = { state = 30 }
 			}
@@ -9221,7 +9227,7 @@ shared_focus = {
 		}
 		random_state = {
 			limit = {
-				has_state_flag = eqs_bat_state
+				has_state_flag = EQS_guaranteed_bat_state
 				is_owned_and_controlled_by = ROOT
 				NOT = { state = 30 }
 			}
@@ -9248,7 +9254,7 @@ shared_focus = {
 		}
 		random_state = {
 			limit = {
-				has_state_flag = eqs_bat_state
+				has_state_flag = EQS_guaranteed_bat_state
 				is_owned_and_controlled_by = ROOT
 				NOT = { state = 30 }
 			}
@@ -9309,7 +9315,7 @@ shared_focus = {
 		random_state = {
 			limit = {
 				is_owned_and_controlled_by = ROOT
-				has_state_flag = eqs_bat_state
+				has_state_flag = EQS_guaranteed_bat_state
 				NOT = { state = 40 }
 				NOT = { state = 30 }
 			}
@@ -9321,7 +9327,7 @@ shared_focus = {
 		random_state = {
 			limit = {
 				is_owned_and_controlled_by = ROOT
-				has_state_flag = eqs_bat_state
+				has_state_flag = EQS_guaranteed_bat_state
 				NOT = { state = 40 }
 				NOT = { state = 30 }
 			}
@@ -9556,6 +9562,7 @@ shared_focus = {
 			exists = no
 			all_cores_owned_by_ROOT = yes
 		}
+		NOT = { has_country_flag = SOL_cored_PCB_by_event }
 	}
 
 	completion_reward = {

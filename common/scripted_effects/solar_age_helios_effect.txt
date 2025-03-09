@@ -1,3 +1,658 @@
+SOL_helios_effect = {
+    custom_effect_tooltip = SOL_glass_them_all_tt
+    custom_effect_tooltip = SOL_this_is_whats_called_a_pro_gamer_move_tt
+    clr_country_flag = SOL_project_helios_warming_up
+    create_entity = {
+        entity = nuke_entity
+        id = 1337420
+        var = helios_effect_ent_2
+        x = 0
+        y = 0
+        z = 0
+        state = FROM
+        scale = 2
+        rotation = 1.0
+        min_zoom = 3000.0
+    }
+    set_entity_animation = {
+        id = 1337420
+        animation = attack
+    }
+    #Long line of ifs for the good, ol' laser firer
+    hidden_effect = {
+		ROOT = {
+			country_event = { id = solarreworked.526 days = 30 } #One month as animations play at a fixed speed, and therefore, require a delay before being removed. Not a perfect fix, but the only one that won't look bad in gameplay
+		}
+        if = {
+            limit = { NOT = { has_global_flag = SOL_helios_first_used } }
+            set_global_flag = SOL_helios_first_used
+            hidden_effect = {
+                FROM = {
+                    OWNER = {
+                        news_event = { id = news.solarage.20 hours = 3 }
+                    }
+                }
+            }
+        }
+        if = {
+            limit = {
+                FROM = { state = 251 }
+                NOT = { has_global_flag = SOL_vesalipolis_vaporized }
+            }
+            set_global_flag = SOL_vesalipolis_vaporized
+            #Event for vaporizing Vesalipolis
+            country_event = { id = solarreworked.138 hours = 3 }
+            news_event = { id = news.solarage.21 hours = 6 }
+        }
+        if = {
+            limit = {
+                FROM = { state = 389 }
+                NOT = { has_global_flag = SOL_griffonstone_glassed }
+            }
+            set_temp_variable = {
+                nuked = FROM.owner
+            }
+            set_global_flag = SOL_griffonstone_glassed
+            news_event = { id = news.solarage.22 hours = 3 }
+            every_other_country = {
+                limit = { is_griffon_continent_griffon_country = yes }
+                add_ai_strategy = {
+                    type = antagonize
+                    id = PREV
+                    value = 500
+                }
+                add_ai_strategy = {
+                    type = contain
+                    id = PREV
+                    value = 500
+                }
+                add_ai_strategy = {
+                    type = befriend
+                    id = PREV
+                    value = -500
+                }
+                add_ai_strategy = {
+                    type = alliance
+                    id = PREV
+                    value = -500
+                }
+                add_ai_strategy = {
+                    type = ignore
+                    id = PREV
+                    value = -200
+                }
+                var:nuked = {
+                    PREV = {
+                        add_ai_strategy = {
+                            type = protect
+                            id = PREV
+                            value = 500
+                        }
+                        add_ai_strategy = {
+                            type = alliance
+                            id = PREV
+                            value = 500
+                        }
+                        add_ai_strategy = {
+                            type = send_volunteers_desire
+                            id = PREV
+                            value = 500
+                        }
+                        add_ai_strategy = {
+                            type = support
+                            id = PREV
+                            value = 500
+                        }
+                        add_ai_strategy = {
+                            type = ignore
+                            id = PREV
+                            value = -200
+                        }
+                    }
+                }
+            }
+            add_opinion_modifier = {
+                target = EQS
+                modifier = nuked_griffonstone
+            }
+            add_opinion_modifier = {
+                target = EQS
+                modifier = CHN_embargo
+            }
+        }
+        else_if = {
+            limit = {
+                FROM = { state = 382 }
+                NOT = { has_global_flag = SOL_griffenheim_glassed }
+            }
+            set_global_flag = SOL_griffenheim_glassed
+            news_event = { id = news.solarage.23 hours = 3 }
+        }
+        else_if = {
+            limit = {
+                FROM = { state = 377 }
+                NOT = { has_global_flag = SOL_aquila_glassed }
+            }
+            set_global_flag = SOL_aquila_glassed
+            news_event = { id = news.solarage.24 hours = 3 }
+        }
+        else_if = {
+            limit = {
+                FROM = { state = 371 }
+                NOT = { has_global_flag = SOL_karthin_glassed }
+            }
+            set_global_flag = SOL_karthin_glassed
+            news_event = { id = news.solarage.25 hours = 3 }
+        }
+        else_if = {
+            limit = {
+                FROM = { state = 415 }
+                NOT = { has_global_flag = SOL_magehold_glassed }
+            }
+            set_global_flag = SOL_magehold_glassed
+            news_event = { id = news.solarage.26 hours = 3 }
+        }
+        else_if = {
+            limit = {
+                FROM = { state = 381 }
+                NOT = { has_global_flag = SOL_skyfall_glassed }
+            }
+            set_global_flag = SOL_skyfall_glassed
+            news_event = { id = news.solarage.27 hours = 3 }
+        }
+        else_if = {
+            limit = {
+                FROM = { state = 3 }
+                NOT = { has_global_flag = SOL_canterlot_glassed }
+            }
+            set_global_flag = SOL_canterlot_glassed
+            news_event = { id = news.solarage.28 hours = 3 }
+        }
+        else_if = {
+            limit = {
+                FROM = { state = 619 }
+                NOT = { has_global_flag = SOL_rijekograd_glassed }
+            }
+            set_global_flag = SOL_rijekograd_glassed
+            news_event = { id = news.solarage.29 hours = 3 }
+        }
+        else_if = {
+            limit = {
+                FROM = {
+                    OR = { ##### There are 3 provinces named Crystal City
+                        state = 53
+                        state = 345
+                        state = 344
+                    }
+                }
+                NOT = { has_global_flag = SOL_crystal_city_glassed }
+            }
+            set_global_flag = SOL_crystal_city_glassed
+            news_event = { id = news.solarage.30 hours = 3 }
+        }
+        else_if = {
+            limit = {
+                FROM = { state = 153 }
+                153 = {is_capital = yes}
+                NOT = { has_global_flag = SOL_stalliongrad_glassed }
+            }
+            set_global_flag = SOL_stalliongrad_glassed
+            news_event = { id = news.solarage.31 hours = 3 }
+        }
+        else_if = {
+            limit = {
+                FROM = { state = 875 }
+                NOT = { has_global_flag = SOL_colthage_glassed }
+            }
+            set_global_flag = SOL_colthage_glassed
+            news_event = { id = news.solarage.32 hours = 3 }
+        }
+        else_if = {
+            limit = {
+                FROM = { state = 1165 }
+                NOT = { has_global_flag = SOL_mount_aris_glassed }
+            }
+            set_global_flag = SOL_mount_aris_glassed
+            news_event = { id = news.solarage.33 hours = 3 }
+        }
+        else_if = {
+            limit = {
+                FROM = { state = 712 }
+                NOT = { has_global_flag = SOL_new_ayacachtli_glassed }
+            }
+            set_global_flag = SOL_new_ayacachtli_glassed
+            news_event = { id = news.solarage.34 hours = 3 }
+        }
+    }
+}
+EQS_project_helios_destruction = {
+    set_state_flag = SOL_firing_mah_lazaaah
+    every_state_division = {
+        destroy_unit = yes
+    }
+    #Why remake the nuke population loss effect when you can just yoink it and change it slightly?
+    decrease_population_on_laser = yes
+    decrease_population_on_laser = yes
+    decrease_population_on_laser = yes
+    add_dynamic_modifier = {
+        modifier = SOL_evaporated_state
+        days = 400
+    }
+    if = {
+        limit = { infrastructure > 0 }
+        damage_building = {
+            type = infrastructure
+            damage = 5
+        }
+    }
+    if = {
+        limit = { arms_factory > 0 }
+        damage_building = {
+            type = arms_factory
+            damage = 100
+        }
+    }
+    if = {
+        limit = { industrial_complex > 0 }
+        damage_building = {
+            type = industrial_complex
+            damage = 100
+        }
+    }
+    if = {
+        limit = { dockyard > 0 }
+        damage_building = {
+            type = dockyard
+            damage = 100
+        }
+    }
+    if = {
+        limit = { air_base > 0 }
+        damage_building = {
+            type = air_base
+            damage = 10
+        }
+    }
+    if = {
+        limit = { synthetic_refinery > 0 }
+        damage_building = {
+            type = synthetic_refinery
+            damage = 3
+        }
+    }
+    if = {
+        limit = { anti_air_building > 0 }
+        damage_building = {
+            type = anti_air_building
+            damage = 5
+        }
+    }
+    if = {
+        limit = { synthetic_crystal_refinery > 0 }
+        damage_building = {
+            type = synthetic_crystal_refinery
+            damage = 3
+        }
+    }
+    if = {
+        limit = { magical_quarry > 0 }
+        damage_building = {
+            type = magical_quarry
+            damage = 1
+        }
+    }
+    if = {
+        limit = { radar_station > 0 }
+        damage_building = {
+            type = radar_station
+            damage = 12
+        }
+    }
+    if = {
+        limit = { rocket_site > 0 }
+        damage_building = {
+            type = rocket_site
+            damage = 3
+        }
+    }
+    if = {
+        limit = { nuclear_reactor > 0 }
+        damage_building = {
+            type = nuclear_reactor
+            damage = 1
+        }
+    }
+    if = {
+        limit = { nuclear_reactor_heavy_water > 0 }
+        damage_building = {
+            type = nuclear_reactor_heavy_water
+            damage = 1
+        }
+    }
+    if = {
+        limit = { commercial_nuclear_reactor > 0 }
+        damage_building = {
+            type = commercial_nuclear_reactor
+            damage = 1
+        }
+    }
+    if = {
+        limit = { bunker > 0 }
+        damage_building = {
+            type = bunker
+            damage = 10
+        }
+    }
+    if = {
+        limit = { coastal_bunker > 0 }
+        damage_building = {
+            type = coastal_bunker
+            damage = 10
+        }
+    }
+    if = {
+        limit = { stronghold_network > 0 }
+        damage_building = {
+            type = stronghold_network
+            damage = 1
+        }
+    }
+    if = {
+        limit = { naval_base > 0 }
+        damage_building = {
+            type = naval_base
+            damage = 10
+        }
+    }
+    if = {
+        limit = { rail_way > 0 }
+        damage_building = {
+            type = rail_way
+            damage = 5
+        }
+    }
+    if = {
+        limit = { supply_node > 0 }
+        damage_building = {
+            type = supply_node
+            damage = 1
+        }
+    }
+    if = {
+        limit = { naval_facility > 0 }
+        damage_building = {
+            type = naval_facility
+            damage = 1
+        }
+    }
+    if = {
+        limit = { fuel_silo > 0 }
+        damage_building = {
+            type = fuel_silo
+            damage = 3
+        }
+    }
+    if = {
+        limit = { mega_gun_emplacement > 0 }
+        damage_building = {
+            type = mega_gun_emplacement
+            damage = 0.2
+        }
+    }
+    if = {
+        limit = { nuclear_facility > 0 }
+        damage_building = {
+            type = nuclear_facility
+            damage = 1
+        }
+    }
+    if = {
+        limit = { air_facility > 0 }
+        damage_building = {
+            type = air_facility
+            damage = 1
+        }
+    }
+    if = {
+        limit = { magical_facility > 0 }
+        damage_building = {
+            type = magical_facility
+            damage = 1
+        }
+    }
+    if = {
+        limit = { land_facility > 0 }
+        damage_building = {
+            type = land_facility
+            damage = 1
+        }
+    }
+    if = {
+        limit = { dam > 0 }
+        damage_building = {
+            type = dam
+            damage = 1
+        }
+    }
+    if = {
+        limit = { dam_mountain > 0 }
+        damage_building = {
+            type = dam_mountain
+            damage = 1
+        }
+    }
+    if = {
+        limit = { landmark_queens_tower > 0 }
+        damage_building = {
+            type = landmark_queens_tower
+            damage = 1
+        }
+    }
+    if = {
+        limit = { landmark_palace_of_the_soviets > 0 }
+        damage_building = {
+            type = landmark_palace_of_the_soviets
+            damage = 1
+        }
+    }
+    if = {
+        limit = { landmark_canterlot_castle > 0 }
+        damage_building = {
+            type = landmark_canterlot_castle
+            damage = 1
+        }
+    }
+    if = {
+        limit = { landmark_mount_aris > 0 }
+        damage_building = {
+            type = landmark_mount_aris
+            damage = 1
+        }
+    }
+    if = {
+        limit = { landmark_griffenheim_palace > 0 }
+        damage_building = {
+            type = landmark_griffenheim_palace
+            damage = 1
+        }
+    }
+    if = {
+        limit = { landmark_cothon_colthage > 0 }
+        damage_building = {
+            type = landmark_cothon_colthage
+            damage = 1
+        }
+    }
+    if = {
+        limit = { landmark_crystal_heart > 0 }
+        damage_building = {
+            type = landmark_crystal_heart
+            damage = 1
+        }
+    }
+    if = {
+        limit = { landmark_yak_statues > 0 }
+        damage_building = {
+            type = landmark_yak_statues
+            damage = 1
+        }
+    }
+    if = {
+        limit = { landmark_dragon_throne > 0 }
+        damage_building = {
+            type = landmark_dragon_throne
+            damage = 1
+        }
+    }
+    if = {
+        limit = { landmark_magehold > 0 }
+        damage_building = {
+            type = landmark_magehold
+            damage = 1
+        }
+    }
+    if = {
+        limit = { landmark_tarpian_rock > 0 }
+        damage_building = {
+            type = landmark_tarpian_rock
+            damage = 1
+        }
+    }
+    if = {
+        limit = { landmark_palaca_rijeke > 0 }
+        damage_building = {
+            type = landmark_palaca_rijeke
+            damage = 1
+        }
+    }
+    if = {
+        limit = { landmark_tomb_of_arantigos > 0 }
+        damage_building = {
+            type = landmark_tomb_of_arantigos
+            damage = 1
+        }
+    }
+    if = {
+        limit = { landmark_vermilion_palace > 0 }
+        damage_building = {
+            type = landmark_vermilion_palace
+            damage = 1
+        }
+    }
+    if = {
+        limit = { landmark_storm_kings_palace > 0 }
+        damage_building = {
+            type = landmark_storm_kings_palace
+            damage = 1
+        }
+    }
+    if = {
+        limit = { landmark_temple_of_sphinx > 0 }
+        damage_building = {
+            type = landmark_temple_of_sphinx
+            damage = 1
+        }
+    }
+    if = {
+        limit = { landmark_home_of_griffons > 0 }
+        damage_building = {
+            type = landmark_home_of_griffons
+            damage = 1
+        }
+    }
+    if = {
+        limit = { landmark_grand_temple_arcturius > 0 }
+        damage_building = {
+            type = landmark_grand_temple_arcturius
+            damage = 1
+        }
+    }
+    if = {
+        limit = { landmark_castle_of_the_order_brothers_of_the_griffon_house_of_prelate_aloysious_in_cloudbury > 0 }
+        damage_building = {
+            type = landmark_castle_of_the_order_brothers_of_the_griffon_house_of_prelate_aloysious_in_cloudbury
+            damage = 1
+        }
+    }
+    if = {
+        limit = { landmark_great_library > 0 }
+        damage_building = {
+            type = landmark_great_library
+            damage = 1
+        }
+    }
+    if = {
+        limit = { landmark_palace_of_grand_prince > 0 }
+        damage_building = {
+            type = landmark_palace_of_grand_prince
+            damage = 1
+        }
+    }
+    if = {
+        limit = { landmark_dvash > 0 }
+        damage_building = {
+            type = landmark_dvash
+            damage = 1
+        }
+    }
+    if = {
+        limit = { landmark_akropolis > 0 }
+        damage_building = {
+            type = landmark_akropolis
+            damage = 1
+        }
+    }
+    if = {
+        limit = { landmark_grand_temple_of_eviliana > 0 }
+        damage_building = {
+            type = landmark_grand_temple_of_eviliana
+            damage = 1
+        }
+    }
+    if = {
+        limit = { landmark_university_of_timbucktu > 0 }
+        damage_building = {
+            type = landmark_university_of_timbucktu
+            damage = 1
+        }
+    }
+    if = {
+        limit = { landmark_grand_temple_eyr > 0 }
+        damage_building = {
+            type = landmark_grand_temple_eyr
+            damage = 1
+        }
+    }
+    if = {
+        limit = { landmark_grand_temple_boreas > 0 }
+        damage_building = {
+            type = landmark_grand_temple_boreas
+            damage = 1
+        }
+    }
+    if = {
+        limit = { landmark_monument_to_revolution > 0 }
+        damage_building = {
+            type = landmark_monument_to_revolution
+            damage = 1
+        }
+    }
+    if = {
+        limit = { landmark_aby_af_katown_pyramid > 0 }
+        damage_building = {
+            type = landmark_aby_af_katown_pyramid
+            damage = 1
+        }
+    }
+    if = {
+        limit = { landmark_aby_af_zebtropa_dam > 0 }
+        damage_building = {
+            type = landmark_aby_af_zebtropa_dam
+            damage = 1
+        }
+    }
+}
+
 #THIS is state
 #Shameless ctrl-c+ctrl-v of EaW Nuke effects is shameless
 decrease_population_on_laser = {

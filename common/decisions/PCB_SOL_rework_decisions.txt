@@ -1,0 +1,24 @@
+political_actions = {
+    PCB_request_annexation = {
+        allowed = { tag = PCB }
+        visible = { OVERLORD = { has_completed_focus = SOL_plumb_mountain_depths } }
+        fire_only_once = yes
+        complete_effect = {
+            log = "[GetTimeDateText]: [ROOT.GetName]: decision PCB_request_annexation"
+            custom_effect_tooltip = EQC_SOL_game_over_man_tt
+            OVERLORD = { country_event = solarreworked.524 }
+        }
+        ai_will_do = {
+            base = 0
+            modifier = {
+                date > 1016.1.1
+                is_historical_focus_on = yes
+                add = 30
+            }
+            modifier = {
+                date > 1019.1.1
+                add = 30
+            }
+        }
+    }
+}

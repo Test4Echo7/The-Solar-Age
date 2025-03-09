@@ -10393,6 +10393,87 @@ country_event = { #SOL receives GRD's response about their demands
     }
 }
 
+country_event = { #PCB asks for annexation into SOL
+    id = solarreworked.524
+    title = solarreworked.524.t
+    desc = solarreworked.524.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.524"}
+
+    is_triggered_only = yes
+
+    option = { #The Empress need not be bothered with such a small addition. They can remain under [FROM.GetLeader].
+        name = solarreworked.524.a
+        FROM = {
+            country_event = {
+                id = solarreworked.525
+                days = 1
+            }
+        }
+        ai_chance = {
+            base = 1
+            modifier = {
+                has_completed_focus = SOL_empress_protector
+                factor = 10
+            }
+            modifier = {
+                has_completed_focus = SOL_empress_mother
+                factor = 5
+            }
+        }
+    }
+    option = { #If ponies wish to be directly under the Empress then so be it.
+        name = solarreworked.524.b
+        annex_country = {
+            target = FROM
+            transfer_troops = yes
+        }
+        every_state = {
+            limit = { is_core_of = FROM }
+            add_core_of = ROOT
+        }
+        set_country_flag = SOL_cored_PCB_by_event
+        ai_chance = {
+            base = 1
+            modifier = {
+                has_completed_focus = SOL_god_empress
+                factor = 5
+            }
+            modifier = {
+                is_historical_focus_on = yes
+                factor = 0
+            }
+        }
+    }
+}
+
+country_event = { #PCB is informed that there is little reason for direct annexation into the Empire, and that they will be kept as another model colony as true, loyal Solarists; Ponse is worried because he'll still be closely watched by Daybreaker and Red Tide is just annoyed she has to stay and suffer in the tropical heat
+    id = solarreworked.525
+    title = solarreworked.525.t
+    desc = solarreworked.525.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.525"}
+
+    is_triggered_only = yes
+
+    option = { #It would be nice if she had reconsidered.
+        name = solarreworked.525.a
+        add_ideas = SOL_model_imperial_colony
+    }
+}
+
+country_event = { #Hidden event for removing the entity created by Project Helios, as it otherwise plays every time the game is loaded
+    id = solarreworked.526
+    hidden = yes
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.526"}
+
+    is_triggered_only = yes
+
+    option = {
+        destroy_entity = 1337420
+    }
+}
+
 ###Operation Events###
 country_event = { #Luna is awoken in her new cell as Daybreaker enters the dungeons of the palace, and Daybreaker sees how pathetic Luna now is and how her defiance will end, and Luna is adamant that she will not beg nor plead for her life, and Daybreaker is pleased, since it'd be boring if she did; she can languish while she sees how her sister has always been the better, and will lead harmony into greatness alone
     id = solarreworked.600

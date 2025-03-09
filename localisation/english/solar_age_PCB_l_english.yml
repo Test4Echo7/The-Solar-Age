@@ -1,0 +1,4 @@
+﻿l_english:
+  ###Decisions###
+  PCB_request_annexation:0 "Request [3.GetCapitalVictoryPointName] Administration"
+  PCB_request_annexation_desc:0 "After putting §Y[ROOT.GetNameDef]§! under her protection again, the Empress allowed us some level of autonomy under §Y[ROOT.GetLeader]§! as we were §Oenlightened§! in serving §YOrder§!. Yet with recent investments from [3.GetCapitalVictoryPointName], the question has been raised on why we are not directly administered from the capital instead. While there was initial resistance to her rule, our citizens have accepted their lot and now are willing to follow her like all those in §Y[EQS.GetNameDef]§!. There is no reason for us to be disunited with our [EQS.GetAdjectiveCap] brothers! Therefore, §Y[ROOT.GetLeader]§! will send a letter at once requesting annexation as §Y[EQS.GetNameDef]'s§! newest member state so that we may join with all our fellow loyalists in the Empress."

@@ -3114,6 +3114,7 @@ country_event = { #Add bat resistance
 			}
 			remove_core_of = ROOT
 			set_state_flag = eqs_bat_state
+			set_state_flag = EQS_guaranteed_bat_state
 		}
 	}
 }
