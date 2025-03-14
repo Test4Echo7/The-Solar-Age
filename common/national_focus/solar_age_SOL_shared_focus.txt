@@ -16283,7 +16283,10 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_return_elements_home"
 		hidden_effect = {
 			#Decision or op here, with an event of Astrum Solus (who is a spy either way) meeting with the leader of the EQC (possibly just make it Arcane Nova either way) to begin planning the op to take out the M6, who have been her main mission for a year or more, which makes her incredibly passionate to finally get them
-			country_event = solarreworked.656
+			every_possible_country = {
+				limit = { has_country_flag = SOL_hosting_M6 }
+				EQS = { country_event = solarreworked.656 }
+			}
 		}
 		if = {
 			limit = { has_dlc = "La Resistance" }

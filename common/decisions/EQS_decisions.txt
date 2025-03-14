@@ -667,8 +667,7 @@ SOL_dealing_with_resistance = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_raid_ponyville_cottage"
 			###Event of results of raiding the cottage, which is Fluttershy's old cottage before she and the others fled the country; involved fighting a few ferocious animals to get through, and also one resistance trap, which claimed a few ponies
 			###40% chance to fail
-			country_event = solarreworked.285
-			add_manpower = -3
+			country_event = solarreworked.286
 		}
 		ai_will_do = { factor = 80 }
 	}
@@ -700,9 +699,7 @@ SOL_dealing_with_resistance = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_raid_freeside_restaurant"
 			###Event of results of the raid, and how one searcher was overzealous in questioning one of the proprietors, and ended up killing them; find indications of resistance contacts in both New Horseleans and Manehattan at a dead-drop point
-			country_event = solarreworked.286
-			add_manpower = -1
-			add_stability = -0.02
+			country_event = solarreworked.285
 		}
 		ai_will_do = { factor = 70 }
 	}

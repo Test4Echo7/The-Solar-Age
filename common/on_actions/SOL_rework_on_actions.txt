@@ -868,7 +868,10 @@ on_actions = {
                     }
                 }
                 if = {
-                    limit = { country_exists = KAR }
+                    limit = {
+                        country_exists = KAR
+                        is_subject_of = EQS
+                    }
                     MTO = {
                         annex_country = {
                             target = KAR
@@ -880,7 +883,10 @@ on_actions = {
                     }
                 }
                 if = {
-                    limit = { country_exists = AES }
+                    limit = {
+                        country_exists = AES
+                        is_subject_of = EQS
+                    }
                     MTO = {
                         annex_country = {
                             target = AES
@@ -892,13 +898,18 @@ on_actions = {
                     }
                 }
                 if = {
-                    limit = { country_exists = IDT }
-                    annex_country = {
-                        target = IDT
+                    limit = {
+                        country_exists = IDT
+                        is_subject_of = EQS
+                    }
+                    MTO = {
+                        annex_country = {
+                            target = IDT
+                        }
                     }
                     every_state = {
                         limit = { is_core_of = IDT }
-                        add_core_of = ROOT
+                        add_core_of = MTO
                     }
                 }
             }

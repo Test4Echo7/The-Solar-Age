@@ -99,16 +99,26 @@ SOL_release_RIV = {
         every_state = {
             limit = {
                 OR = {
+                    AND = {
+                        is_core_of = RCT
+                        NOT = { is_core_of = ROOT }
+                        NOT = { is_core_of = DMT }
+                    }
                     is_core_of = BAK
-                    is_core_of = LCT
-                    is_core_of = FRE
                     is_core_of = WIT
                     is_core_of = NIM
-                    is_core_of = DEP
                     is_core_of = BAR
+                    is_core_of = FRE
+                    is_core_of = LCT
+                    is_core_of = DEP
                 }
+                NOT = { is_core_of = FIR }
+                NOT = { is_core_of = FBK }
+                NOT = { is_core_of = GRY }
+                NOT = { is_core_of = WAT }
             }
             add_core_of = RCT
+            transfer_state_to = RCT
         }
         if = {
             limit = { NOT = { has_country_flag = SOL_doghouse_set_up } }
@@ -117,12 +127,19 @@ SOL_release_RIV = {
                     is_core_of = DMT
                 }
                 add_core_of = RCT
+                transfer_state_to = RCT
             }
         }
+        set_autonomy = {
+            target = RCT
+            autonomous_state = autonomy_reichsprotectorate
+        }
     }
-    release_autonomy = {
-        target = RCT
-        autonomous_state = autonomy_reichsprotectorate
+    effect_tooltip = {
+        release_autonomy = {
+            target = RCT
+            autonomous_state = autonomy_reichsprotectorate
+        }
     }
     RCT = {
         set_cosmetic_tag = RIV_SOL
@@ -177,9 +194,21 @@ SOL_release_HLR = {
     }
 }
 SOL_release_MIT = {
-    release_autonomy = {
-        target = MIT
-        autonomy_state = autonomy_reichsprotectorate
+    effect_tooltip = {
+        release_autonomy = {
+            target = MIT
+            autonomy_state = autonomy_reichsprotectorate
+        }
+    }
+    hidden_effect = {
+        every_state = {
+            limit = { EQS_is_a_starting_MIT_state = yes }
+            transfer_state_to = MIT
+        }
+        set_autonomy = {
+            target = MIT
+            autonomous_state = autonomy_reichsprotectorate
+        }
     }
     MIT = {
         set_cosmetic_tag = MIT_SOL
@@ -194,10 +223,26 @@ SOL_release_ZES = {
             }
             add_core_of = ZES
         }
+        every_state = {
+            limit = {
+                OR = {
+                    is_core_of = OLV
+                    is_core_of = ZES
+                }
+                NOT = { is_core_of = BAR }
+            }
+            transfer_state_to = ZES
+        }
+        set_autonomy = {
+            target = ZES
+            autonomous_state = autonomy_reichsprotectorate
+        }
     }
-    release_autonomy = {
-        target = ZES
-        autonomy_state = autonomy_reichsprotectorate
+    effect_tooltip = {
+        release_autonomy = {
+            target = ZES
+            autonomy_state = autonomy_reichsprotectorate
+        }
     }
     ZES = {
         set_cosmetic_tag = ZES_SOL
@@ -252,8 +297,21 @@ SOL_release_CTH = {
                     is_core_of = CVA
                     is_core_of = CDR
                 }
+                NOT = { is_core_of = ZUM }
             }
             add_core_of = CTH
+        }
+        if = {
+            limit = {
+                any_state = {
+                    is_core_of = ZUM
+                    is_core_of = CTH
+                }
+            }
+            every_state = {
+                limit = { is_core_of = ZUM }
+                remove_core_of = CTH
+            }
         }
     }
     release_autonomy = {
@@ -351,7 +409,7 @@ SOL_release_ZAR = {
                     is_core_of = ZAI
                     is_core_of = CZR
                     is_core_of = ALO
-                    is_core_of = TIM
+                    NOT = { is_core_of = TIM }
                 }
             }
             add_core_of = ZAR
@@ -478,7 +536,9 @@ SOL_release_MAZ = {
                     is_core_of = ZUG
                     is_core_of = ZEL
                     is_core_of = HAY
+                    is_core_of = TIM
                 }
+                NOT = { state = 768 }
             }
             add_core_of = MAZ
         }

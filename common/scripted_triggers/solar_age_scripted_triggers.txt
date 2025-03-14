@@ -355,3 +355,121 @@ EQS_has_completed_all_fallen_hero_focuses = {
 	}
 	has_completed_focus = SOL_Freedom_from_Fear
 }
+EQS_owns_all_MIT_starting_states = {
+	custom_trigger_tooltip = {
+		tooltip = EQS_owns_all_MIT_starting_states_tt
+		owns_state = 469
+		owns_state = 655
+		owns_state = 654
+		owns_state = 664
+		owns_state = 513
+		owns_state = 657
+		owns_state = 667
+		owns_state = 468
+		owns_state = 467
+		owns_state = 464
+		owns_state = 656
+		owns_state = 386
+		owns_state = 463
+		owns_state = 465
+		owns_state = 462
+		owns_state = 464
+		owns_state = 466
+	}
+}
+EQS_is_a_starting_MIT_state = {
+	OR = {
+		state = 469
+		state = 655
+		state = 654
+		state = 664
+		state = 513
+		state = 657
+		state = 667
+		state = 468
+		state = 467
+		state = 464
+		state = 656
+		state = 386
+		state = 463
+		state = 465
+		state = 462
+		state = 464
+		state = 466
+	}
+}
+#EQS_is_core_riverlands = {
+#	OR = {
+#		#Add all RIV cores and make sure not FBK, WAT, or FIR cores
+#		AND = {
+#			is_core_of = RCT
+#			NOT = { is_core_of = FBK }
+#			NOT = { is_core_of = WAT }
+#			NOT = { is_core_of = GRY }
+#			NOT = { is_core_of = FIR }
+#			NOT = { is_core_of = ROOT }
+#		}
+#		AND = {
+#			is_core_of = LCT
+#			NOT = { is_core_of = FBK }
+#			NOT = { is_core_of = WAT }
+#			NOT = { is_core_of = GRY }
+#			NOT = { is_core_of = FIR }
+#		}
+#		AND = {
+#			is_core_of = BAK
+#			NOT = { is_core_of = FBK }
+#			NOT = { is_core_of = WAT }
+#			NOT = { is_core_of = GRY }
+#			NOT = { is_core_of = FIR }
+#		}
+#		AND = {
+#			is_core_of = DEP
+#			NOT = { is_core_of = FBK }
+#			NOT = { is_core_of = WAT }
+#			NOT = { is_core_of = GRY }
+#			NOT = { is_core_of = FIR }
+#		}
+#		AND = {
+#			is_core_of = WIT
+#			NOT = { is_core_of = FBK }
+#			NOT = { is_core_of = WAT }
+#			NOT = { is_core_of = GRY }
+#			NOT = { is_core_of = FIR }
+#		}
+#		AND = {
+#			is_core_of = NIM
+#			NOT = { is_core_of = FBK }
+#			NOT = { is_core_of = WAT }
+#			NOT = { is_core_of = GRY }
+#			NOT = { is_core_of = FIR }
+#		}
+#		AND = {
+#			is_core_of = BAR
+#			NOT = { is_core_of = FBK }
+#			NOT = { is_core_of = WAT }
+#			NOT = { is_core_of = GRY }
+#			NOT = { is_core_of = FIR }
+#		}
+#		AND = {
+#			is_core_of = FRE
+#			NOT = { is_core_of = FBK }
+#			NOT = { is_core_of = WAT }
+#			NOT = { is_core_of = GRY }
+#			NOT = { is_core_of = FIR }
+#		}
+#		if = {
+#			limit = { EQS = { NOT = { has_country_flag = SOL_doghouse_set_up } } }
+#			AND = {
+#				is_core_of = DMT
+#				NOT = { is_core_of = FBK }
+#				NOT = { is_core_of = WAT }
+#				NOT = { is_core_of = GRY }
+#				NOT = { is_core_of = FIR }
+#			}
+#		}
+#		else = {
+#			NOT = { is_core_of = DMT }
+#		}
+#	}
+#}

@@ -4696,6 +4696,8 @@ country_event = { #Freeside restaurant
     option = {
         name = solarreworked.285.a
         set_country_flag = SOL_unlocked_horseleans_manehattan
+        add_manpower = -1
+        add_stability = -0.02
     }
 }
 
@@ -4711,6 +4713,7 @@ country_event = { #Make fail chance later; Ponyville cottage
     option = {
         name = solarreworked.286.a
         set_country_flag = SOL_unlocked_manehattan_only
+        add_manpower = -3
     }
 }
 
@@ -5829,6 +5832,19 @@ country_event = { #Queen Velvet is brought forward to Daybreaker, who is rather 
 			OLE = {
                 set_country_flag = is_solar_puppet
                 set_cosmetic_tag = OLE_SOL
+			}
+			if = {
+                limit = {
+                    OLE = {
+                        NOT = { has_character = OLE_queen_velvet }
+                    }
+                }
+                every_possible_country = {
+                    limit = { has_character = OLE_queen_velvet }
+                    OLE_queen_velvet = {
+                        set_nationality = OLE
+                    }
+                }
 			}
 			every_possible_country = {
                 limit = { has_character = OLE_queen_velvet }
@@ -10976,7 +10992,7 @@ country_event = { #A newer agent for the SOL agency is running through an obstac
     }
 }
 
-country_event = { #A citizen in their home is awoken suddenly as it's barged into by a number of soldiers and a couple of agents, and they place the pony under arrest, and the pony protests, since they believe they've done nothing wrong, and are quite loyal to Daybreaker, and the agent is confident that that is not the case, as they point out various indicators that the pony would turn, which the pony thinks insane and nopony will prove it, but teh agent thinks otherwise, since they must prove they're innocent
+country_event = { #A citizen in their home is awoken suddenly as it's barged into by a number of soldiers and a couple of agents, and they place the pony under arrest, and the pony protests, since they believe they've done nothing wrong, and are quite loyal to Daybreaker, and the agent is confident that that is not the case, as they point out various indicators that the pony would turn, which the pony thinks insane and nopony will prove it, but the agent thinks otherwise, since they must prove they're innocent
     id = solarreworked.655
     title = solarreworked.655.t
     desc = solarreworked.655.d
