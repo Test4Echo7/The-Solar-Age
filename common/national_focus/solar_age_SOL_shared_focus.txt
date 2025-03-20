@@ -708,7 +708,7 @@ shared_focus = {
 ###New Politics! We love Democracy###
 shared_focus = {
     id = SOL_waking_dawn_star
-    icon = GFX_goal_imperium_solem
+    icon = GFX_goal_waking_dawn_star
     x = 10
     y = -1
     available = {

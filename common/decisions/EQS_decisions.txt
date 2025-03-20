@@ -615,6 +615,7 @@ SOL_dealing_with_resistance = {
 		visible = {
 			has_country_flag = SOL_unlocked_fillydelphia_ponyville
 			has_idea = SOL_harmonic_resistance_idea
+			NOT = { has_country_flag = SOL_unlocked_sassy }
 		}
 		fire_only_once = yes
 		custom_cost_trigger = {
@@ -647,6 +648,7 @@ SOL_dealing_with_resistance = {
 		visible = {
 			has_country_flag = SOL_unlocked_fillydelphia_ponyville
 			has_idea = SOL_harmonic_resistance_idea
+			NOT = { has_country_flag = SOL_unlocked_sassy }
 		}
 		fire_only_once = yes
 		custom_cost_trigger = {
@@ -667,6 +669,16 @@ SOL_dealing_with_resistance = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_raid_ponyville_cottage"
 			###Event of results of raiding the cottage, which is Fluttershy's old cottage before she and the others fled the country; involved fighting a few ferocious animals to get through, and also one resistance trap, which claimed a few ponies
 			###40% chance to fail
+			hidden_effect = {
+				random_list = {
+					60 = {
+						set_country_flag = SOL_cottage_success
+					}
+					40 = {
+						set_country_flag = SOL_cottage_failure
+					}
+				}
+			}
 			country_event = solarreworked.286
 		}
 		ai_will_do = { factor = 80 }
@@ -677,6 +689,7 @@ SOL_dealing_with_resistance = {
 		visible = {
 			has_country_flag = SOL_unlocked_freeside
 			has_idea = SOL_harmonic_resistance_idea
+			NOT = { has_country_flag = SOL_unlocked_sassy }
 		}
 		fire_only_once = yes
 		custom_cost_trigger = {
@@ -709,6 +722,7 @@ SOL_dealing_with_resistance = {
 		visible = {
 			has_country_flag = SOL_unlocked_horseleans_manehattan
 			has_idea = SOL_harmonic_resistance_idea
+			NOT = { has_country_flag = SOL_unlocked_sassy }
 		}
 		fire_only_once = yes
 		custom_cost_trigger = {
@@ -732,11 +746,6 @@ SOL_dealing_with_resistance = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_investigate_new_horseleans_docks"
 			###Event of raid on the docks, where there was a largescale search; a few ponies saw some clearly suspicious ponies leaving for a location in the jungle, which they believe they know the general location of; also killed in a shoot-out a single harmonist fighter, who was probably a contact for other members, which further indicated there was a camp nearby
 			country_event = solarreworked.287
-			add_manpower = -1
-			add_popularity = {
-				ideology = democratic
-				popularity = -0.001
-			}
 		}
 		ai_will_do = { factor = 55 }
 	}
@@ -747,6 +756,7 @@ SOL_dealing_with_resistance = {
 			OR = {
 				has_country_flag = SOL_unlocked_horseleans_manehattan
 				has_country_flag = SOL_unlocked_manehattan_only
+				NOT = { has_country_flag = SOL_unlocked_sassy }
 			}
 			has_idea = SOL_harmonic_resistance_idea
 		}
@@ -781,6 +791,7 @@ SOL_dealing_with_resistance = {
 		visible = {
 			has_country_flag = SOL_unlocked_jungle_camp
 			has_idea = SOL_harmonic_resistance_idea
+			NOT = { has_country_flag = SOL_unlocked_sassy }
 		}
 		custom_cost_trigger = {
 			set_temp_variable = { EQS_political_power_cost_var = 5 }
@@ -814,6 +825,7 @@ SOL_dealing_with_resistance = {
 		visible = {
 			has_country_flag = SOL_unlocked_opera_house
 			has_idea = SOL_harmonic_resistance_idea
+			NOT = { has_country_flag = SOL_unlocked_sassy }
 		}
 		custom_cost_trigger = {
 			set_temp_variable = { EQS_political_power_cost_var = 40 }
@@ -846,6 +858,7 @@ SOL_dealing_with_resistance = {
 		visible = {
 			has_country_flag = SOL_unlocked_dodge_mareway
 			has_idea = SOL_harmonic_resistance_idea
+			NOT = { has_country_flag = SOL_unlocked_sassy }
 		}
 		custom_cost_trigger = {
 			set_temp_variable = { EQS_political_power_cost_var = 50 }
@@ -870,6 +883,12 @@ SOL_dealing_with_resistance = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_raid_dodge_city_post_office"
 			###Event of the results of raiding the Dodge City post office, which finds that there were a couple of letters in code to Starlight, although unless they are lucky to decipher the code, they don't know it's from Sassy Saddles; if they do, they know she currently is in Las Pegasus, because she is on a trip to court more businessponies to the resistance
 			###60% chance to fail
+			hidden_effect = {
+				random_list = {
+					60 = { set_country_flag = SOL_dodge_city_failure }
+					40 = { set_country_flag = SOL_dodge_city_success }
+				}
+			}
 			country_event = solarreworked.291
 		}
 		ai_will_do = { factor = 75 }
@@ -880,6 +899,7 @@ SOL_dealing_with_resistance = {
 		visible = {
 			has_country_flag = SOL_unlocked_dodge_mareway
 			has_idea = SOL_harmonic_resistance_idea
+			NOT = { has_country_flag = SOL_unlocked_sassy }
 		}
 		custom_cost_trigger = {
 			set_temp_variable = { EQS_political_power_cost_var = 25 }
@@ -913,6 +933,7 @@ SOL_dealing_with_resistance = {
 		visible = {
 			has_country_flag = SOL_unlocked_ponyville_manehattan
 			has_idea = SOL_harmonic_resistance_idea
+			NOT = { has_country_flag = SOL_unlocked_sassy }
 		}
 		custom_cost_trigger = {
 			set_temp_variable = { EQS_political_power_cost_var = 35 }
@@ -936,10 +957,6 @@ SOL_dealing_with_resistance = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_raid_friendship_school"
 			###Event summarizing what happened in the raid on the Friendship School, as it was abandoned, but still seen as a symbol by most of Ponyville; the investigators find strong evidence that it has been used by the resistance, which is a frustration since they were in Ponyville at the start, and clues that point to a meeting in the Everfree; they also confiscate some harmonist propaganda there, and then permanently cordon off the school and have a guard stationed to break morale
 			country_event = solarreworked.293
-			add_popularity = {
-				ideology = democratic
-				popularity = -0.02
-			}
 		}
 		ai_will_do = { factor = 100 }
 	}
@@ -949,6 +966,7 @@ SOL_dealing_with_resistance = {
 		visible = {
 			has_country_flag = SOL_unlocked_ponyville_manehattan
 			has_idea = SOL_harmonic_resistance_idea
+			NOT = { has_country_flag = SOL_unlocked_sassy }
 		}
 		custom_cost_trigger = {
 			set_temp_variable = { EQS_political_power_cost_var = 20 }
@@ -981,6 +999,7 @@ SOL_dealing_with_resistance = {
 		visible = {
 			has_country_flag = SOL_unlocked_everfree
 			has_idea = SOL_harmonic_resistance_idea
+			NOT = { has_country_flag = SOL_unlocked_sassy }
 		}
 		custom_cost_trigger = {
 			set_temp_variable = { EQS_political_power_cost_var = 10 }
@@ -1005,6 +1024,12 @@ SOL_dealing_with_resistance = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_search_castle_for_clues"
 			###Event of the results of searching the castle grounds; if successful, there was another resistance meeting in that area, and there are some clues that one dead-drop point in Sanctum Solar is within the head library there, where there is supposedly going to be another drop soon
 			###35% chance of failing
+			hidden_effect = {
+				random_list = {
+					70 = { set_country_flag = SOL_castle_success }
+					30 = { set_country_flag = SOL_castle_failure }
+				}
+			}
 			country_event = solarreworked.295
 		}
 		ai_will_do = { factor = 90 }
@@ -1015,6 +1040,7 @@ SOL_dealing_with_resistance = {
 		visible = {
 			has_country_flag = SOL_unlocked_canterlot_library
 			has_idea = SOL_harmonic_resistance_idea
+			NOT = { has_country_flag = SOL_unlocked_sassy }
 		}
 		custom_cost_trigger = {
 			set_temp_variable = { EQS_political_power_cost_var = 5 }
@@ -1035,7 +1061,7 @@ SOL_dealing_with_resistance = {
 			}
 		}
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_"
+			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_find_information_in_canterlot_library"
 			###Event of the results of searching the Canterlot library; the investigators found a small, unused office in the library which was turned into a communications post; there was one operator there, who is brought in for interrogation, and also there was a recently letter that was in the middle of being encoded from Sassy to Starlight, stating that she will be in Las Pegasus trying to get some more business support and cannot attend the next meeting
 			country_event = solarreworked.296
 		}
@@ -1047,6 +1073,7 @@ SOL_dealing_with_resistance = {
 		visible = {
 			has_country_flag = SOL_unlocked_canterlot_boutique
 			has_idea = SOL_harmonic_resistance_idea
+			NOT = { has_country_flag = SOL_unlocked_sassy }
 		}
 		custom_cost_trigger = {
 			set_temp_variable = { EQS_political_power_cost_var = 40 }

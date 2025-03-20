@@ -4729,6 +4729,11 @@ country_event = { #New Horseleans docks
     option = {
         name = solarreworked.287.a
         set_country_flag = SOL_unlocked_jungle_camp
+        add_manpower = -1
+        add_popularity = {
+            ideology = democratic
+            popularity = -0.001
+        }
     }
 }
 
@@ -4807,7 +4812,7 @@ country_event = { #Mareway hunt
     }
 }
 
-country_event = { #Castle of Two Sisters search; include fail chance later
+country_event = { #Friendship school
     id = solarreworked.293
     title = solarreworked.293.t
     desc = solarreworked.293.d
@@ -4818,11 +4823,11 @@ country_event = { #Castle of Two Sisters search; include fail chance later
 
     option = {
         name = solarreworked.293.a
-        set_country_flag = SOL_unlocked_canterlot_library
+        set_country_flag = SOL_unlocked_everfree
     }
 }
 
-country_event = { #Canterlot library
+country_event = { #Manehattan boutique
     id = solarreworked.294
     title = solarreworked.294.t
     desc = solarreworked.294.d
@@ -4837,7 +4842,7 @@ country_event = { #Canterlot library
     }
 }
 
-country_event = { #Friendship school
+country_event = { #Castle of Two Sisters search; include fail chance later
     id = solarreworked.295
     title = solarreworked.295.t
     desc = solarreworked.295.d
@@ -4848,11 +4853,15 @@ country_event = { #Friendship school
 
     option = {
         name = solarreworked.295.a
-        set_country_flag = SOL_unlocked_everfree
+        set_country_flag = SOL_unlocked_canterlot_library
+        add_popularity = {
+            ideology = democratic
+            popularity = -0.02
+        }
     }
 }
 
-country_event = { #Manehattan boutique
+country_event = { #Canterlot library
     id = solarreworked.296
     title = solarreworked.296.t
     desc = solarreworked.296.d
@@ -4863,7 +4872,7 @@ country_event = { #Manehattan boutique
 
     option = {
         name = solarreworked.296.a
-        set_country_flag = SOL_unlocked_canterlot_boutique
+        set_country_flag = SOL_unlocked_sassy
     }
 }
 
@@ -5334,7 +5343,7 @@ country_event = { #A couple of administrators from Daybreaker's government arriv
     }
 }
 
-country_event = { #Event of a book burning, led by Sunrise Sparkle, happening in Canterlot, and some ponies are shocked that even she would be on board with it, since she loves all knowledge so much, but Sunrise shuts that suggestion down instantly, since she is the loyal servant of Daybreaker, and wil do as she asks, although it's implied she's at least a bit pained; the books are history that make reference to Luna being related to Celestia
+country_event = { #Event of a book burning, led by Sunrise Sparkle, happening in Canterlot, and some ponies are shocked that even she would be on board with it, since she loves all knowledge so much, but Sunrise shuts that suggestion down instantly, since she is the loyal servant of Daybreaker, and will do as she asks, although it's implied she's at least a bit pained; the books are history that make reference to Luna being related to Celestia
     id = solarreworked.326 #Alternate without Sunrise would be Daybreaker having a speech leading a book burning instead, with her proclaiming they are doing what they can to protect themselves by not giving in to the lies that claim that Luna ever existed and was her sister
     title = solarreworked.326.t
     desc = solarreworked.326.d

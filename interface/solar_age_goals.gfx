@@ -1,4 +1,9 @@
 SpriteTypes = {
+    ###Opening Section###
+    SpriteType = {
+        name = GFX_goal_waking_dawn_star
+        texturefile = "gfx/interface/goals/EQS/waking_dawn_star.png"
+    }
     ###God-Empress###
     SpriteType = {
         name = GFX_goal_god_empress
@@ -39,6 +44,10 @@ SpriteTypes = {
     SpriteType = {
         name = GFX_goal_Lux_et_Tenebris
         texturefile = "gfx/interface/goals/EQS/Lux_et_Tenebris.png"
+    }
+    SpriteType = {
+        name = GFX_goal_faith_honor_family
+        texturefile = "gfx/interface/goals/EQS/faith_honor_family.png"
     }
     SpriteType = {
         name = GFX_goal_faith_sacrifice_worship
