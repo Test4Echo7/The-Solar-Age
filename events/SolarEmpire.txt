@@ -3074,25 +3074,27 @@ country_event = { #Add bat resistance
 	desc = solarempire.44.d
 	picture = GFX_event_bat_ponies
 
-	trigger = {
-		is_EQS_SOL = yes
-		NOT = { has_completed_focus = SOL_bat_problems }
-		40 = { is_owned_and_controlled_by = ROOT NOT = { has_state_flag = eqs_bat_state } }
-		31 = { is_owned_and_controlled_by = ROOT NOT = { has_state_flag = eqs_bat_state } }
-		36 = { is_owned_and_controlled_by = ROOT NOT = { has_state_flag = eqs_bat_state } }
-		24 = { is_owned_and_controlled_by = ROOT NOT = { has_state_flag = eqs_bat_state } }
-		81 = { is_owned_and_controlled_by = ROOT NOT = { has_state_flag = eqs_bat_state } }
-		350 = { is_owned_and_controlled_by = ROOT NOT = { has_state_flag = eqs_bat_state } }
-		32 = { is_owned_and_controlled_by = ROOT NOT = { has_state_flag = eqs_bat_state } }
-		25 = { is_owned_and_controlled_by = ROOT NOT = { has_state_flag = eqs_bat_state } }
-		30 = { is_owned_and_controlled_by = ROOT NOT = { has_state_flag = eqs_bat_state } }
-	}
+	#trigger = {
+	#	is_EQS_SOL = yes
+	#	NOT = { has_completed_focus = SOL_bat_problems }
+	#	40 = { is_owned_and_controlled_by = ROOT NOT = { has_state_flag = eqs_bat_state } }
+	#	31 = { is_owned_and_controlled_by = ROOT NOT = { has_state_flag = eqs_bat_state } }
+	#	36 = { is_owned_and_controlled_by = ROOT NOT = { has_state_flag = eqs_bat_state } }
+	#	24 = { is_owned_and_controlled_by = ROOT NOT = { has_state_flag = eqs_bat_state } }
+	#	81 = { is_owned_and_controlled_by = ROOT NOT = { has_state_flag = eqs_bat_state } }
+	#	350 = { is_owned_and_controlled_by = ROOT NOT = { has_state_flag = eqs_bat_state } }
+	#	32 = { is_owned_and_controlled_by = ROOT NOT = { has_state_flag = eqs_bat_state } }
+	#	25 = { is_owned_and_controlled_by = ROOT NOT = { has_state_flag = eqs_bat_state } }
+	#	30 = { is_owned_and_controlled_by = ROOT NOT = { has_state_flag = eqs_bat_state } }
+	#}
 
-	mean_time_to_happen = {
-		days = 7
-	}
+	#mean_time_to_happen = {
+	#	days = 7
+	#}
 
-	fire_only_once = yes
+	#fire_only_once = yes
+
+	is_triggered_only = yes
 
 	option = {
 		name = solarempire.44.a
@@ -3112,7 +3114,7 @@ country_event = { #Add bat resistance
 					state = 30
 				}
 			}
-			remove_core_of = ROOT
+			add_dynamic_modifier = { modifier = SOL_thestral_resistance }
 			set_state_flag = eqs_bat_state
 			set_state_flag = EQS_guaranteed_bat_state
 		}

@@ -360,6 +360,7 @@ EQS_SOL_wartime_change = {
 	#country_event = { id = solarempire.2 days = 2 }
 	#news_event = { id = news.sol.4 hours = 6 }
 	country_event = { id = solarreworked.219 days = 250 random_days = 100 } #Gain Tempest back
+	country_event = { id = solarempire.44 days = 7 random_days = 35 } #Manual trigger of thestral resistance to slightly reduce MTTH load and also because state flags are broken anyway
 }
 
 #Just make it easier
@@ -630,6 +631,7 @@ EQS_SOL_civil_war = {
 	}
 	#EQS_SOL_show_advisors = yes
 	country_event = { id = solarreworked.219 days = 250 random_days = 100 }
+	country_event = { id = solarempire.44 days = 7 random_days = 35 }
 }
 
 #ROOT is EQS

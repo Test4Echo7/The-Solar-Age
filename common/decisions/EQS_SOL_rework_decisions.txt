@@ -3872,7 +3872,7 @@ EQS_pan_pony_empire_category = {
 		available = {
 			is_EQS_SOL = yes
 			CHN = {
-				all_cores_owned_by_ROOT = yes
+				all_original_cores_owned_by_ROOT = yes
 			}
 		}
 		visible = {
@@ -3936,14 +3936,14 @@ EQS_pan_pony_empire_category = {
         available = {
             is_EQS_SOL = yes
             OR = {
-                YAK = { all_cores_owned_by_ROOT = yes }
-                JAK = { all_cores_owned_by_ROOT = yes }
+                YAK = { all_original_cores_owned_by_ROOT = yes }
+                JAK = { all_original_cores_owned_by_ROOT = yes }
             }
         }
         visible = {
             OR = {
-                YAK = { all_cores_owned_by_ROOT = yes }
-                JAK = { all_cores_owned_by_ROOT = yes }
+                YAK = { all_original_cores_owned_by_ROOT = yes }
+                JAK = { all_original_cores_owned_by_ROOT = yes }
             }
             NOT = { has_country_flag = SOL_formed_super_equus }
         }
@@ -3972,10 +3972,14 @@ EQS_pan_pony_empire_category = {
         }
         available = {
             is_EQS_SOL = yes
-            GRF = { all_cores_owned_by_ROOT_or_subject = yes }
+            GRF = { all_original_cores_owned_by_ROOT = yes }
+            GFF = { all_original_cores_owned_by_ROOT = yes }
         }
         visible = {
-            GRF = { all_cores_owned_by_ROOT_or_subject = yes }
+            OR = {
+                GRF = { all_original_cores_owned_by_ROOT = yes }
+                GFF = { all_original_cores_owned_by_ROOT = yes }
+            }
             NOT = { has_country_flag = SOL_formed_super_equus }
         }
         highlight_states = {
@@ -4016,13 +4020,13 @@ EQS_pan_pony_empire_category = {
         }
         available = {
             is_EQS_SOL = yes
-            PLB = { all_cores_owned_by_ROOT = yes }
-            PNG = { all_cores_owned_by_ROOT = yes }
+            PLB = { all_original_cores_owned_by_ROOT = yes }
+            PNG = { all_original_cores_owned_by_ROOT = yes }
         }
         visible = {
             OR = {
-                PLB = { all_cores_owned_by_ROOT = yes }
-                PNG = { all_cores_owned_by_ROOT = yes }
+                PLB = { all_original_cores_owned_by_ROOT = yes }
+                PNG = { all_original_cores_owned_by_ROOT = yes }
             }
             NOT = { has_country_flag = SOL_formed_super_equus }
         }
@@ -4051,10 +4055,10 @@ EQS_pan_pony_empire_category = {
         }
         available = {
             is_EQS_SOL = yes
-            NTR = { all_cores_owned_by_ROOT = yes }
+            NTR = { all_original_cores_owned_by_ROOT = yes }
         }
         visible = {
-            NTR = { all_cores_owned_by_ROOT = yes }
+            NTR = { all_original_cores_owned_by_ROOT = yes }
             NOT = { has_country_flag = SOL_formed_super_griffonia }
         }
         highlight_states = {
@@ -4118,15 +4122,15 @@ EQS_pan_pony_empire_category = {
         }
         available = {
             is_EQS_SOL = yes
-            FBK = { all_cores_owned_by_ROOT = yes }
-            FIR = { all_cores_owned_by_ROOT = yes }
-            WAT = { all_cores_owned_by_ROOT = yes }
+            FBK = { all_original_cores_owned_by_ROOT = yes }
+            FIR = { all_original_cores_owned_by_ROOT = yes }
+            WAT = { all_original_cores_owned_by_ROOT = yes }
         }
         visible = {
             OR = {
-                FBK = { all_cores_owned_by_ROOT = yes }
-                FIR = { all_cores_owned_by_ROOT = yes }
-                WAT = { all_cores_owned_by_ROOT = yes }
+                FBK = { all_original_cores_owned_by_ROOT = yes }
+                FIR = { all_original_cores_owned_by_ROOT = yes }
+                WAT = { all_original_cores_owned_by_ROOT = yes }
             }
             NOT = { has_country_flag = SOL_formed_super_griffonia }
         }
@@ -4268,43 +4272,25 @@ EQS_pan_pony_empire_category = {
         }
         available = {
             is_EQS_SOL = yes
-            HLR = { all_cores_owned_by_ROOT = yes }
-            if = {
-                limit = { 415 = { is_core_of = DED } }
-                DED = { all_cores_owned_by_ROOT = yes }
-            }
-            else = {
-                custom_trigger_tooltip = {
-                    tooltip = SOL_better_ded_than_red_tt
-                    owns_state = 415
-                    owns_state = 416
-                    owns_state = 417
-                    owns_state = 418
-                    owns_state = 419
-                    owns_state = 420
-                }
-            }
-            NCH = { all_cores_owned_by_ROOT = yes }
+            HLR = { all_original_cores_owned_by_ROOT = yes }
+            DED = { all_original_cores_owned_by_ROOT = yes }
+            #else = {
+            #    custom_trigger_tooltip = {
+            #        tooltip = SOL_better_ded_than_red_tt
+            #        owns_state = 415
+            #        owns_state = 416
+            #        owns_state = 417
+            #        owns_state = 418
+            #        owns_state = 419
+            #        owns_state = 420
+            #    }
+            #}
+            NCH = { all_original_cores_owned_by_ROOT = yes }
         }
         visible = {
-            HLR = { all_cores_owned_by_ROOT = yes }
-            OR = {
-                if = {
-                    limit = { 415 = { is_core_of = DED } }
-                    DED = { all_cores_owned_by_ROOT = yes }
-                }
-                else = {
-                    OR = {
-                        owns_state = 415
-                        owns_state = 416
-                        owns_state = 417
-                        owns_state = 418
-                        owns_state = 419
-                        owns_state = 420
-                    }
-                }
-                NCH = { all_cores_owned_by_ROOT = yes }
-            }
+            HLR = { all_original_cores_owned_by_ROOT = yes }
+            DED = { all_original_cores_owned_by_ROOT = yes }
+            NCH = { all_original_cores_owned_by_ROOT = yes }
             NOT = { has_country_flag = SOL_formed_super_griffonia }
         }
         highlight_states = {
@@ -4370,10 +4356,12 @@ EQS_pan_pony_empire_category = {
         }
         available = {
             is_EQS_SOL = yes
-            EQS_owns_all_MIT_starting_states = yes
+            #EQS_owns_all_MIT_starting_states = yes
+            all_original_cores_owned_by_ROOT = yes
         }
         visible = {
-            EQS_owns_all_MIT_starting_states = yes
+            #EQS_owns_all_MIT_starting_states = yes
+            all_original_cores_owned_by_ROOT = yes
             NOT = { has_country_flag = SOL_formed_super_griffonia }
         }
         highlight_states = {
@@ -4434,10 +4422,10 @@ EQS_pan_pony_empire_category = {
     #    }
     #    available = {
     #        is_EQS_SOL = yes
-    #        TBK = { all_cores_owned_by_ROOT = yes }
+    #        TBK = { all_original_cores_owned_by_ROOT = yes }
     #    }
     #    visible = {
-    #        TBK = { all_cores_owned_by_ROOT = yes }
+    #        TBK = { all_original_cores_owned_by_ROOT = yes }
     #        NOT = { has_country_flag = SOL_formed_super_zebrica }
     #    }
     #    highlight_states = {
@@ -4456,12 +4444,12 @@ EQS_pan_pony_empire_category = {
         cost = 10
         available = {
             is_EQS_SOL = yes
-            MGY = { all_cores_owned_by_ROOT_or_subject = yes }
+            MGY = { all_original_cores_owned_by_ROOT_or_subject = yes }
             has_country_flag = SOL_tempest_joined
             NOT = { has_country_flag = SOL_formed_super_zebrica }
         }
         visible = {
-            MGY = { all_cores_owned_by_ROOT_or_subject = yes }
+            MGY = { all_original_cores_owned_by_ROOT_or_subject = yes }
             KLG = {
                 exists = yes
                 is_subject = no
@@ -4488,7 +4476,7 @@ EQS_pan_pony_empire_category = {
         custom_cost_text = EQS_decision_cost_command_power_50
         available = {
             is_EQS_SOL = yes
-            KLG = { all_cores_owned_by_ROOT_or_subject = yes }
+            KLG = { all_original_cores_owned_by_ROOT_or_subject = yes }
         }
         visible = {
             OR = {
@@ -4513,11 +4501,11 @@ EQS_pan_pony_empire_category = {
 		}
 		available = {
 			is_EQS_SOL = yes
-			MDL = { all_cores_owned_by_ROOT_or_subject = yes }
+			MDL = { all_original_cores_owned_by_ROOT_or_subject = yes }
 		}
 		visible = {
 			MDL = {
-                all_cores_owned_by_ROOT_or_subject = yes
+                all_original_cores_owned_by_ROOT_or_subject = yes
                 exists = no
             }
 			NOT = { has_country_flag = SOL_formed_super_zebrica }
@@ -4539,19 +4527,19 @@ EQS_pan_pony_empire_category = {
         }
         available = {
             is_EQS_SOL = yes
-            HIP = { all_cores_owned_by_ROOT = yes }
-            TBK = { all_cores_owned_by_ROOT = yes }
-            WAR = { all_cores_owned_by_ROOT = yes }
-            ZUM = { all_cores_owned_by_ROOT = yes }
-            MER = { all_cores_owned_by_ROOT = yes }
+            HIP = { all_original_cores_owned_by_ROOT = yes }
+            TBK = { all_original_cores_owned_by_ROOT = yes }
+            WAR = { all_original_cores_owned_by_ROOT = yes }
+            ZUM = { all_original_cores_owned_by_ROOT = yes }
+            MER = { all_original_cores_owned_by_ROOT = yes }
         }
         visible = {
             OR = {
-                HIP = { all_cores_owned_by_ROOT = yes }
-                TBK = { all_cores_owned_by_ROOT = yes }
-                WAR = { all_cores_owned_by_ROOT = yes }
-                ZUM = { all_cores_owned_by_ROOT = yes }
-                MER = { all_cores_owned_by_ROOT = yes }
+                HIP = { all_original_cores_owned_by_ROOT = yes }
+                TBK = { all_original_cores_owned_by_ROOT = yes }
+                WAR = { all_original_cores_owned_by_ROOT = yes }
+                ZUM = { all_original_cores_owned_by_ROOT = yes }
+                MER = { all_original_cores_owned_by_ROOT = yes }
             }
             NOT = { has_country_flag = SOL_formed_super_zebrica }
         }
@@ -4614,18 +4602,18 @@ EQS_pan_pony_empire_category = {
         available = {
             is_EQS_SOL = yes
             CTH = { all_original_cores_owned_by_ROOT = yes }
-            CGI = { all_cores_owned_by_ROOT = yes }
-            MCW = { all_cores_owned_by_ROOT = yes }
-            CVA = { all_cores_owned_by_ROOT_or_subject = yes }
-            CDR = { all_cores_owned_by_ROOT = yes }
+            CGI = { all_original_cores_owned_by_ROOT = yes }
+            MCW = { all_original_cores_owned_by_ROOT = yes }
+            CVA = { all_original_cores_owned_by_ROOT_or_subject = yes }
+            CDR = { all_original_cores_owned_by_ROOT = yes }
         }
         visible = {
             OR = {
                 CTH = { all_original_cores_owned_by_ROOT = yes }
-                CGI = { all_cores_owned_by_ROOT = yes }
-                MCW = { all_cores_owned_by_ROOT = yes }
-                CVA = { all_cores_owned_by_ROOT_or_subject = yes }
-                CDR = { all_cores_owned_by_ROOT = yes }
+                CGI = { all_original_cores_owned_by_ROOT = yes }
+                MCW = { all_original_cores_owned_by_ROOT = yes }
+                CVA = { all_original_cores_owned_by_ROOT_or_subject = yes }
+                CDR = { all_original_cores_owned_by_ROOT = yes }
             }
             NOT = { has_country_flag = SOL_formed_super_zebrica }
         }
@@ -4639,6 +4627,7 @@ EQS_pan_pony_empire_category = {
                     is_core_of = CDR
                 }
                 NOT = { is_core_of = ZUM }
+                NOT = { is_core_of = ZAR }
                 if = {
                     limit = { CTL = { has_country_flag = is_solar_puppet } }
                     NOT = { state = 1092 }
@@ -4660,25 +4649,25 @@ EQS_pan_pony_empire_category = {
         }
         available = {
             is_EQS_SOL = yes
-            CTL = { all_cores_owned_by_ROOT = yes }
-            HRV = { all_cores_owned_by_ROOT = yes }
-            LMB = { all_cores_owned_by_ROOT_or_subject = yes }
-            SPL = { all_cores_owned_by_ROOT = yes }
-            HIN = { all_cores_owned_by_ROOT = yes }
-            SAM = { all_cores_owned_by_ROOT = yes }
-            BRS = { all_cores_owned_by_ROOT = yes }
-            GAZ = { all_cores_owned_by_ROOT = yes }
+            CTL = { all_original_cores_owned_by_ROOT = yes }
+            HRV = { all_original_cores_owned_by_ROOT = yes }
+            LMB = { all_original_cores_owned_by_ROOT_or_subject = yes }
+            SPL = { all_original_cores_owned_by_ROOT = yes }
+            HIN = { all_original_cores_owned_by_ROOT = yes }
+            SAM = { all_original_cores_owned_by_ROOT = yes }
+            BRS = { all_original_cores_owned_by_ROOT = yes }
+            GAZ = { all_original_cores_owned_by_ROOT = yes }
         }
         visible = {
             OR = {
-                CTL = { all_cores_owned_by_ROOT = yes }
-                HRV = { all_cores_owned_by_ROOT = yes }
-                LMB = { all_cores_owned_by_ROOT_or_subject = yes }
-                SPL = { all_cores_owned_by_ROOT = yes }
-                HIN = { all_cores_owned_by_ROOT = yes }
-                SAM = { all_cores_owned_by_ROOT = yes }
-                BRS = { all_cores_owned_by_ROOT = yes }
-                GAZ = { all_cores_owned_by_ROOT = yes }
+                CTL = { all_original_cores_owned_by_ROOT = yes }
+                HRV = { all_original_cores_owned_by_ROOT = yes }
+                LMB = { all_original_cores_owned_by_ROOT_or_subject = yes }
+                SPL = { all_original_cores_owned_by_ROOT = yes }
+                HIN = { all_original_cores_owned_by_ROOT = yes }
+                SAM = { all_original_cores_owned_by_ROOT = yes }
+                BRS = { all_original_cores_owned_by_ROOT = yes }
+                GAZ = { all_original_cores_owned_by_ROOT = yes }
             }
             NOT = { has_country_flag = SOL_formed_super_zebrica }
         }
@@ -4734,8 +4723,8 @@ EQS_pan_pony_empire_category = {
                 owns_state = 786
                 owns_state = 781
             }
-            ASS = { all_cores_owned_by_ROOT = yes }
-            ANS = { all_cores_owned_by_ROOT_or_subject = yes }
+            ASS = { all_original_cores_owned_by_ROOT = yes }
+            ANS = { all_original_cores_owned_by_ROOT_or_subject = yes }
         }
         visible = {
             OR = {
@@ -4755,8 +4744,8 @@ EQS_pan_pony_empire_category = {
                 owns_state = 776
                 owns_state = 786
                 owns_state = 781
-                ASS = { all_cores_owned_by_ROOT = yes }
-                ANS = { all_cores_owned_by_ROOT_or_subject = yes }
+                ASS = { all_original_cores_owned_by_ROOT = yes }
+                ANS = { all_original_cores_owned_by_ROOT_or_subject = yes }
             }
             NOT = { has_country_flag = SOL_formed_super_zebrica }
         }
@@ -4790,18 +4779,18 @@ EQS_pan_pony_empire_category = {
         }
         available = {
             is_EQS_SOL = yes
-            ZAR = { all_cores_owned_by_ROOT = yes }
-            ZAI = { all_cores_owned_by_ROOT = yes }
-            CZR = { all_cores_owned_by_ROOT = yes }
-            ALO = { all_cores_owned_by_ROOT = yes }
+            ZAR = { all_original_cores_owned_by_ROOT = yes }
+            ZAI = { all_original_cores_owned_by_ROOT = yes }
+            CZR = { all_original_cores_owned_by_ROOT = yes }
+            ALO = { all_original_cores_owned_by_ROOT = yes }
             #TIM = { all_cores_owned_by_ROOT = yes }
         }
         visible = {
             OR = {
-                ZAR = { all_cores_owned_by_ROOT = yes }
-                ZAI = { all_cores_owned_by_ROOT = yes }
-                CZR = { all_cores_owned_by_ROOT = yes }
-                ALO = { all_cores_owned_by_ROOT = yes }
+                ZAR = { all_original_cores_owned_by_ROOT = yes }
+                ZAI = { all_original_cores_owned_by_ROOT = yes }
+                CZR = { all_original_cores_owned_by_ROOT = yes }
+                ALO = { all_original_cores_owned_by_ROOT = yes }
                 #TIM = { all_cores_owned_by_ROOT = yes }
             }
             NOT = { has_country_flag = SOL_formed_super_zebrica }
@@ -4833,22 +4822,22 @@ EQS_pan_pony_empire_category = {
         available = {
             is_EQS_SOL = yes
             ROA = { all_original_cores_owned_by_ROOT = yes }
-            BLT = { all_cores_owned_by_ROOT = yes }
-            CME = { all_cores_owned_by_ROOT = yes }
-            GFS = { all_cores_owned_by_ROOT = yes }
-            GIF = { all_cores_owned_by_ROOT = yes }
-            TSV = { all_cores_owned_by_ROOT = yes }
-            ZLU = { all_cores_owned_by_ROOT = yes }
+            BLT = { all_original_cores_owned_by_ROOT = yes }
+            CME = { all_original_cores_owned_by_ROOT = yes }
+            GFS = { all_original_cores_owned_by_ROOT = yes }
+            GIF = { all_original_cores_owned_by_ROOT = yes }
+            TSV = { all_original_cores_owned_by_ROOT = yes }
+            ZLU = { all_original_cores_owned_by_ROOT = yes }
         }
         visible = {
             OR = {
-                ROA = { all_cores_owned_by_ROOT = yes }
-                BLT = { all_cores_owned_by_ROOT = yes }
-                CME = { all_cores_owned_by_ROOT = yes }
-                GFS = { all_cores_owned_by_ROOT = yes }
-                GIF = { all_cores_owned_by_ROOT = yes }
-                TSV = { all_cores_owned_by_ROOT = yes }
-                ZLU = { all_cores_owned_by_ROOT = yes }
+                ROA = { all_original_cores_owned_by_ROOT = yes }
+                BLT = { all_original_cores_owned_by_ROOT = yes }
+                CME = { all_original_cores_owned_by_ROOT = yes }
+                GFS = { all_original_cores_owned_by_ROOT = yes }
+                GIF = { all_original_cores_owned_by_ROOT = yes }
+                TSV = { all_original_cores_owned_by_ROOT = yes }
+                ZLU = { all_original_cores_owned_by_ROOT = yes }
             }
             NOT = { has_country_flag = SOL_formed_super_zebrica }
         }
@@ -4929,25 +4918,25 @@ EQS_pan_pony_empire_category = {
         }
         available = {
             is_EQS_SOL = yes
-            ZOO = { all_cores_owned_by_ROOT = yes }
-            TAI = { all_cores_owned_by_ROOT = yes }
-            MEL = { all_cores_owned_by_ROOT = yes }
-            MQA = { all_cores_owned_by_ROOT = yes }
-            YAN = { all_cores_owned_by_ROOT = yes }
-            DEL = { all_cores_owned_by_ROOT = yes }
-            IDO = { all_cores_owned_by_ROOT = yes }
-            IST = { all_cores_owned_by_ROOT = yes }
+            ZOO = { all_original_cores_owned_by_ROOT = yes }
+            TAI = { all_original_cores_owned_by_ROOT = yes }
+            MEL = { all_original_cores_owned_by_ROOT = yes }
+            MQA = { all_original_cores_owned_by_ROOT = yes }
+            YAN = { all_original_cores_owned_by_ROOT = yes }
+            DEL = { all_original_cores_owned_by_ROOT = yes }
+            IDO = { all_original_cores_owned_by_ROOT = yes }
+            IST = { all_original_cores_owned_by_ROOT = yes }
         }
         visible = {
             OR = {
-                ZOO = { all_cores_owned_by_ROOT = yes }
-                TAI = { all_cores_owned_by_ROOT = yes }
-                MEL = { all_cores_owned_by_ROOT = yes }
-                MQA = { all_cores_owned_by_ROOT = yes }
-                YAN = { all_cores_owned_by_ROOT = yes }
-                DEL = { all_cores_owned_by_ROOT = yes }
-                IDO = { all_cores_owned_by_ROOT = yes }
-                IST = { all_cores_owned_by_ROOT = yes }
+                ZOO = { all_original_cores_owned_by_ROOT = yes }
+                TAI = { all_original_cores_owned_by_ROOT = yes }
+                MEL = { all_original_cores_owned_by_ROOT = yes }
+                MQA = { all_original_cores_owned_by_ROOT = yes }
+                YAN = { all_original_cores_owned_by_ROOT = yes }
+                DEL = { all_original_cores_owned_by_ROOT = yes }
+                IDO = { all_original_cores_owned_by_ROOT = yes }
+                IST = { all_original_cores_owned_by_ROOT = yes }
             }
             NOT = { has_country_flag = SOL_formed_super_zebrica }
         }
@@ -5006,17 +4995,17 @@ EQS_pan_pony_empire_category = {
         }
         available = {
             is_EQS_SOL = yes
-            MTA = { all_cores_owned_by_ROOT = yes }
-            REE = { all_cores_owned_by_ROOT = yes }
-            OSQ = { all_cores_owned_by_ROOT = yes }
-            HMR = { all_cores_owned_by_ROOT = yes }
+            MTA = { all_original_cores_owned_by_ROOT = yes }
+            REE = { all_original_cores_owned_by_ROOT = yes }
+            OSQ = { all_original_cores_owned_by_ROOT = yes }
+            HMR = { all_original_cores_owned_by_ROOT = yes }
         }
         visible = {
             OR = {
-                MTA = { all_cores_owned_by_ROOT = yes }
-                REE = { all_cores_owned_by_ROOT = yes }
-                OSQ = { all_cores_owned_by_ROOT = yes }
-                HMR = { all_cores_owned_by_ROOT = yes }
+                MTA = { all_original_cores_owned_by_ROOT = yes }
+                REE = { all_original_cores_owned_by_ROOT = yes }
+                OSQ = { all_original_cores_owned_by_ROOT = yes }
+                HMR = { all_original_cores_owned_by_ROOT = yes }
             }
             NOT = { has_country_flag = SOL_formed_super_zebrica }
         }
@@ -5192,17 +5181,17 @@ EQS_pan_pony_empire_category = {
         }
         available = {
             is_EQS_SOL = yes
-            MTO = { all_cores_owned_by_ROOT = yes }
-            AES = { all_cores_owned_by_ROOT = yes }
-            KAR = { all_cores_owned_by_ROOT = yes }
-            IDT = { all_cores_owned_by_ROOT = yes }
+            MTO = { all_original_cores_owned_by_ROOT = yes }
+            AES = { all_original_cores_owned_by_ROOT = yes }
+            KAR = { all_original_cores_owned_by_ROOT = yes }
+            IDT = { all_original_cores_owned_by_ROOT = yes }
         }
         visible = {
             OR = {
-                MTO = { all_cores_owned_by_ROOT = yes }
-                AES = { all_cores_owned_by_ROOT = yes }
-                KAR = { all_cores_owned_by_ROOT = yes }
-                IDT = { all_cores_owned_by_ROOT = yes }
+                MTO = { all_original_cores_owned_by_ROOT = yes }
+                AES = { all_original_cores_owned_by_ROOT = yes }
+                KAR = { all_original_cores_owned_by_ROOT = yes }
+                IDT = { all_original_cores_owned_by_ROOT = yes }
             }
             NOT = { has_country_flag = SOL_formed_super_zebrica }
         }
@@ -5256,15 +5245,15 @@ EQS_pan_pony_empire_category = {
         }
         available = {
             is_EQS_SOL = yes
-            NVA = { all_cores_owned_by_ROOT = yes }
-            KHM = { all_cores_owned_by_ROOT = yes }
-            KXN = { all_cores_owned_by_ROOT = yes }
+            NVA = { all_original_cores_owned_by_ROOT = yes }
+            KHM = { all_original_cores_owned_by_ROOT = yes }
+            KXN = { all_original_cores_owned_by_ROOT = yes }
         }
         visible = {
             OR = {
-                NVA = { all_cores_owned_by_ROOT = yes }
-                KHM = { all_cores_owned_by_ROOT = yes }
-                KXN = { all_cores_owned_by_ROOT = yes }
+                NVA = { all_original_cores_owned_by_ROOT = yes }
+                KHM = { all_original_cores_owned_by_ROOT = yes }
+                KXN = { all_original_cores_owned_by_ROOT = yes }
             }
             NOT = { has_country_flag = SOL_formed_super_zebrica }
         }
@@ -5292,10 +5281,10 @@ EQS_pan_pony_empire_category = {
         }
         available = {
             is_EQS_SOL = yes
-            KIR = { all_cores_owned_by_ROOT = yes }
+            KIR = { all_original_cores_owned_by_ROOT = yes }
         }
         visible = {
-            KIR = { all_cores_owned_by_ROOT = yes }
+            KIR = { all_original_cores_owned_by_ROOT = yes }
             NOT = { has_country_flag = SOL_formed_super_zebrica }
         }
         highlight_states = {
@@ -5601,6 +5590,12 @@ EQS_pan_pony_empire_category = {
                     name = SOL_zebrica_super_capital
                 }
                 set_country_flag = SOL_formed_super_zebrica
+                hidden_effect = {
+                    every_state = {
+                        is_on_continent = africa
+                    }
+                    remove_core_of = KIR
+                }
             }
         }
         ai_will_do = { factor = 1000 }

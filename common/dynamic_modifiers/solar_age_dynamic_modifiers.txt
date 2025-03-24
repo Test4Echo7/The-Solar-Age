@@ -76,6 +76,15 @@ SOL_dragon_miners = {
     local_resources = 0.75
 }
 
+SOL_thestral_resistance = {
+    icon = GFX_modifiers_FRN_tarrin_resistance
+
+    local_manpower = -1
+    local_resources = -0.9
+    local_building_slots_factor = -0.75
+    state_production_speed_buildings_factor = -0.5
+}
+
 SOL_evaporated_state = {
     icon = GFX_idea_EQS_unicorn_academy
 
@@ -124,7 +133,7 @@ SOL_figurehead_compliance = {
 
     remove_trigger = { is_core_of = EQS }
 
-    compliance_gain = 0.003
+    compliance_gain = 0.02
 }
 
 SOL_crushed_deer_dreams = {
@@ -132,7 +141,7 @@ SOL_crushed_deer_dreams = {
 
     remove_trigger = { is_core_of = EQS }
 
-    local_resources = 0.05
+    local_resources = 0.15
     resistance_target = -0.05
-    compliance_gain = -0.002
+    compliance_gain = -0.01
 }

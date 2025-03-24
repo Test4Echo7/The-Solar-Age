@@ -2926,12 +2926,12 @@ country_event = { #A short follow-up event to the forces of the Solar Empire att
                         HIP = {
                             has_government = democratic
                         }
-                        HIP = {
-                            country_event = {
-                                id = solarreworked.155
-                                days = 7
-                                random_days = 5
-                            }
+                    }
+                    HIP = {
+                        country_event = {
+                            id = solarreworked.155
+                            days = 7
+                            random_days = 5
                         }
                     }
                 }
@@ -2940,12 +2940,12 @@ country_event = { #A short follow-up event to the forces of the Solar Empire att
                         EQC = {
                             has_government = democratic
                         }
-                        EQC = {
-                            country_event = {
-                                id = solarreworked.155
-                                days = 7
-                                random_days = 5
-                            }
+                    }
+                    EQC = {
+                        country_event = {
+                            id = solarreworked.155
+                            days = 7
+                            random_days = 5
                         }
                     }
                 }
@@ -7778,7 +7778,7 @@ country_event = { #A captain of a ship making port in Sunset's harbor, which has
                     356 = {
                         free_building_slots = {
                             building = dockyard
-                            slots > 1
+                            size > 1
                             include_locked = yes
                         }
                     }
@@ -7803,7 +7803,7 @@ country_event = { #A captain of a ship making port in Sunset's harbor, which has
                     362 = {
                         free_building_slots = {
                             building = dockyard
-                            slots > 0
+                            size > 0
                             include_locked = yes
                         }
                     }
@@ -7837,7 +7837,7 @@ country_event = { #A captain of a ship making port in Sunset's harbor, which has
                     354 = {
                         free_building_slots = {
                             building = dockyard
-                            slots > 0
+                            size > 0
                             include_locked = yes
                         }
                     }
@@ -7871,7 +7871,7 @@ country_event = { #A captain of a ship making port in Sunset's harbor, which has
                     361 = {
                         free_building_slots = {
                             building = dockyard
-                            slots > 0
+                            size > 0
                             include_locked = yes
                         }
                     }
@@ -7908,7 +7908,7 @@ country_event = { #A captain of a ship making port in Sunset's harbor, which has
                         356 = {
                             free_building_slots = {
                                 building = dockyard
-                                slots > 1
+                                size > 1
                                 include_locked = yes
                             }
                         }
@@ -7933,7 +7933,7 @@ country_event = { #A captain of a ship making port in Sunset's harbor, which has
                         362 = {
                             free_building_slots = {
                                 building = dockyard
-                                slots > 0
+                                size > 0
                                 include_locked = yes
                             }
                         }
@@ -7967,7 +7967,7 @@ country_event = { #A captain of a ship making port in Sunset's harbor, which has
                         354 = {
                             free_building_slots = {
                                 building = dockyard
-                                slots > 0
+                                size > 0
                                 include_locked = yes
                             }
                         }
@@ -8001,7 +8001,7 @@ country_event = { #A captain of a ship making port in Sunset's harbor, which has
                         361 = {
                             free_building_slots = {
                                 building = dockyard
-                                slots > 0
+                                size > 0
                                 include_locked = yes
                             }
                         }
@@ -8054,7 +8054,7 @@ country_event = { #Follow an EQS officer as he gets into a bit of a competition 
                     is_owned_by = EQC
                     free_building_slots = {
                         building = arms_factory
-                        slots > 1
+                        size > 1
                         include_locked = yes
                     }
                 }
@@ -8071,7 +8071,7 @@ country_event = { #Follow an EQS officer as he gets into a bit of a competition 
                     is_owned_by = EQC
                     free_building_slots = {
                         building = arms_factory
-                        slots > 2
+                        size > 2
                         include_locked = yes
                     }
                 }
@@ -8101,7 +8101,7 @@ country_event = { #Follow an EQS officer as he gets into a bit of a competition 
                         is_owned_by = EQC
                         free_building_slots = {
                             building = arms_factory
-                            slots > 1
+                            size > 1
                             include_locked = yes
                         }
                     }
@@ -8118,7 +8118,7 @@ country_event = { #Follow an EQS officer as he gets into a bit of a competition 
                         is_owned_by = EQC
                         free_building_slots = {
                             building = arms_factory
-                            slots > 2
+                            size > 2
                             include_locked = yes
                         }
                     }

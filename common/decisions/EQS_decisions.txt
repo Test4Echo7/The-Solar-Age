@@ -753,11 +753,9 @@ SOL_dealing_with_resistance = {
 		icon = anti_harmony
 		allowed = { tag = EQS }
 		visible = {
-			OR = {
-				has_country_flag = SOL_unlocked_horseleans_manehattan
-				has_country_flag = SOL_unlocked_manehattan_only
-				NOT = { has_country_flag = SOL_unlocked_sassy }
-			}
+			has_country_flag = SOL_unlocked_horseleans_manehattan
+			has_country_flag = SOL_unlocked_manehattan_only
+			NOT = { has_country_flag = SOL_unlocked_sassy }
 			has_idea = SOL_harmonic_resistance_idea
 		}
 		custom_cost_trigger = {

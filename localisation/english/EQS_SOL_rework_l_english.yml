@@ -922,6 +922,10 @@
   EQS_smile_upgrades:0 "Increased S.M.I.L.E. Funding"
   EQS_smile_upgrades_desc:0 "To actively fight and defend Harmony, S.M.I.L.E. requires more resources than it's ever been given, even during the days of the greatest monster hunts. Although they will be unsung, their work will pave the way for a brighter future for us all."
   SOL_dragon_miners:0 "Dragon Laborers"
+  SOL_figurehead_compliance:0 "Olenian Puppet Regime"
+  SOL_crushed_deer_dreams:0 "Olenian Occupation Zone"
+  SOL_direct_solarian_administration:0 "Direct Imperial Administration"
+  SOL_thestral_resistance:0 "Thestral Resistance"
   SOL_evaporated_state:0 "Slagged Infrastructure"
 
   ###Military Industrial Organizations/MIOs###
@@ -1614,6 +1618,10 @@
   SOL_offensive_propaganda:0 "Demoralizing Messaging"
   SOL_offensive_propaganda_desc:0 "Our airwaves are breached daily from [EQS.GetNameDef] with lies and falsehoods aimed to weaken our citizens' resolve in our fight against [EQS.GetLeader]. Despite the efforts of [ROOT.GetLeader] to sway public opinion in favor of us, the constant bombardments from [EQS.GetNameDef] have hindered our national pride and stability."
 
+  ###Shhhhhhhh!###
+  SOL_imperium_solaris_aeterna:0 "Imperium Solaris Aeterna"
+  SOL_imperium_solaris_aeterna_desc:0 "The God-Empress has fully subdued this continent. From the coasts to the most remote inland town, they speak her praises and readily comply with her demands for sacrifice for the betterment of Harmony. Any heresy is repressed until there nothing remains but complete dedication to Her and to Order."
+
   ###Focuses###
   ###Sunset's Corruption###
   SOL_sunset_awaken:0 "Awakening"
@@ -2214,6 +2222,9 @@
   SOL_imperial_guardian_desc:0 "As much of the land is frozen wasteland, [CRY.GetNameDef] is ideally situated to protect our northern territories. Without the nagging naysayers of Shining Armor's clique and with the invigorated youth who have accepted the Empress, [CRY.GetNameDef] shall be a ward against all Disharmony and Chaos in the artict fringes as well as be our shield in times of trouble elsewhere on Equus."
 
   ###Bats###
+  SOL_bat_problems:0 "The Bat Problem"
+  #SOL_bat_problems_desc:0 "Now that we have our hooves firmly planted on the ground and our rule is secured, we must solve the issue of thestrals as soon as possible. These "children of the night" have to be dealt with in an appropriate manner."
+  SOL_bat_problems_desc:0 "The situation has stabilized in the Empire, but there still remain a host of issues that have been thus far unaddressed. Chiefest among them is the issue of the thestrals, who have resisted the Empress more rabidly than any other group. They claim to be the night's children, so they must be handled with prejudice for their crimes against Harmony."
   SOL_fire_and_brimstone:0 "Fire and Brimstone"
   SOL_fire_and_brimstone_desc:0 "Thestrals have been behind issues and pains within the rest of Equus for generations, which originated when they first sided with Nightmare Moon. Because of her rebellious nature, they have been tainted. There is no redemption for them, for they will always be opposed to us. Therefore, we must show them that we are their superiors, and by the only language they will understand."
   SOL_what_homes:0 "What Homes?"
