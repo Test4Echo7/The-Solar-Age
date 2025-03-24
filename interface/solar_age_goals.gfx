@@ -65,6 +65,58 @@ SpriteTypes = {
         name = GFX_goal_the_solar_games
         texturefile = "gfx/interface/goals/EQS/the_solar_games.png"
     }
+    SpriteType = {
+        name = GFX_goal_raising_generations
+        texturefile = "gfx/interface/goals/EQS/raising_generations.png"
+    }
+    SpriteType = {
+        name = GFX_goal_sacrifices_from_birth
+        texturefile = "gfx/interface/goals/EQS/sacrifices_from_birth.png"
+    }
+    SpriteType = {
+        name = GFX_goal_annual_purges
+        texturefile = "gfx/interface/goals/EQS/annual_purges.png"
+    }
+    SpriteType = {
+        name = GFX_goal_enlightened_education
+        texturefile = "gfx/interface/goals/EQS/enlightened_education.png"
+    }
+    SpriteType = {
+        name = GFX_goal_tradition_of_worship
+        texturefile = "gfx/interface/goals/EQS/tradition_of_worship.png"
+    }
+    SpriteType = {
+        name = GFX_goal_sacrifices_on_assembly_line
+        texturefile = "gfx/interface/goals/EQS/sacrifices_on_assembly_line.png"
+    }
+    SpriteType = {
+        name = GFX_goal_generals_above_rest
+        texturefile = "gfx/interface/goals/EQS/generals_above_rest.png"
+    }
+    SpriteType = {
+        name = GFX_goal_fodder_troops
+        texturefile = "gfx/interface/goals/EQS/fodder_troops.png"
+    }
+    SpriteType = {
+        name = GFX_goal_combine_church_and_state
+        texturefile = "gfx/interface/goals/EQS/combine_church_and_state.png"
+    }
+    SpriteType = {
+        name = GFX_goal_honorable_guards
+        texturefile = "gfx/interface/goals/EQS/honorable_guards.png"
+    }
+    SpriteType = {
+        name = GFX_goal_monsters_of_earth
+        texturefile = "gfx/interface/goals/EQS/monsters_of_earth.png"
+    }
+    SpriteType = {
+        name = GFX_goal_she_who_raises_the_sun_new
+        texturefile = "gfx/interface/goals/EQS/she_who_raises_the_sun.png"
+    }
+    SpriteType = {
+        name = GFX_goal_better_than_best
+        texturefile = "gfx/interface/goals/EQS/better_than_best.png"
+    }
 
     ###Army###
     SpriteType = {
