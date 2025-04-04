@@ -506,11 +506,11 @@ country_event = {
 
 add_to_tech_sharing_group = equestrian_research
 
-set_var = { EQS_flurry_skill_level = 1 }
-set_var = { EQS_flurry_attack_level = 1 }
-set_var = { EQS_flurry_defense_level = 1 }
-set_var = { EQS_flurry_planning_level = 1 }
-set_var = { EQS_flurry_logistics_level = 1 }
+set_variable = { EQS_flurry_skill_level = 1 }
+set_variable = { EQS_flurry_attack_level = 1 }
+set_variable = { EQS_flurry_defense_level = 1 }
+set_variable = { EQS_flurry_planning_level = 1 }
+set_variable = { EQS_flurry_logistics_level = 1 }
 
 set_stability = 0.65
 set_war_support = 0.3
@@ -658,6 +658,7 @@ recruit_character = EQS_tangent
 recruit_character = EQS_rock_solid
 recruit_character = EQS_morning_mulch
 recruit_character = EQS_queen_argynnis
+recruit_character = EQS_sunsane
 #Foreign characters
 recruit_character = CRY_nightshade
 recruit_character = CRY_morning_mist

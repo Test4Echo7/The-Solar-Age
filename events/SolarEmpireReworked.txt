@@ -504,6 +504,7 @@ country_event = { #A soldier is on a patrol outside the palace and thinks about 
     title = solarreworked.20.t
     desc = solarreworked.20.d
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.20"}
+    picture = GFX_event_canterlot
 
     is_triggered_only = yes
 
@@ -539,6 +540,7 @@ country_event = { #Daybreaker, who is still cementing her power, is confronted b
     title = solarreworked.21.t
     desc = solarreworked.21.d
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.21"}
+    picture = GFX_event_daybreaker_throne
 
     is_triggered_only = yes
 
@@ -561,6 +563,7 @@ country_event = { #Blueblood is still busily working on the front when Daybreake
     title = solarreworked.22.t
     desc = solarreworked.22.d
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.22"}
+    picture = GFX_event_griffon_camp
 
     is_triggered_only = yes
 
@@ -590,6 +593,7 @@ country_event = { #A soldier under the orders of a new officer loyal to Daybreak
     title = solarreworked.23.t
     desc = solarreworked.23.d
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.23"}
+    picture = GFX_event_celestia_poster
 
     is_triggered_only = yes
 
@@ -613,6 +617,7 @@ country_event = { #A short report about how the military is potentially a danger
     title = solarreworked.24.t
     desc = solarreworked.24.d
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.24"}
+    picture = GFX_event_solarempire
 
     is_triggered_only = yes
 
@@ -633,6 +638,7 @@ country_event = { #A radio personality in Manehattan or Baltimare is going on th
     title = solarreworked.25.t
     desc = solarreworked.25.d
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.25"}
+    picture = GFX_event_speech
 
     is_triggered_only = yes
 
@@ -656,6 +662,7 @@ country_event = { #Daybreaker enters the training room again, after dealing with
     title = solarreworked.26.t
     desc = solarreworked.26.d
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.26"}
+    picture = GFX_event_dim_library
 
     is_triggered_only = yes
 
@@ -673,6 +680,7 @@ country_event = { #Raven is summoned into the throne room of Daybreaker, who is 
     title = solarreworked.27.t
     desc = solarreworked.27.d
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.27"}
+    picture = GFX_event_daybreaker_throne
 
     is_triggered_only = yes
 
@@ -690,6 +698,7 @@ country_event = { #Daybreaker rests on her throne while a pony or two is dragged
     title = solarreworked.28.t
     desc = solarreworked.28.d
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.28"}
+    picture = GFX_event_angy_daybreaker
 
     is_triggered_only = yes
 
@@ -713,6 +722,7 @@ country_event = { #A pony is taken before a bureaucrat or civil servant, who goe
     title = solarreworked.29.t
     desc = solarreworked.29.d
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.29"}
+    picture = GFX_event_luna_work_sad
 
     is_triggered_only = yes
 
@@ -757,6 +767,7 @@ country_event = { #Blueblood enters Daybreaker's quarters, privately, and confus
     title = solarreworked.30.t
     desc = solarreworked.30.d
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.30"}
+    picture = GFX_event_dim_library
 
     is_triggered_only = yes
 
@@ -849,6 +860,7 @@ country_event = { #Daybreaker holds a speech in Sanctum Solar, which has just be
     title = solarreworked.33.t
     desc = solarreworked.33.d
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.33"}
+    picture = GFX_event_daybreaker_power
 
     is_triggered_only = yes
 
@@ -1223,7 +1235,7 @@ country_event = { #Event of a thestral looking for work and having a hard time o
     id = solarreworked.44
     title = solarreworked.44.t
     desc = solarreworked.44.d
-    picture = GFX_event_solarempire
+    picture = GFX_event_bat_ponies
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.44"}
 
     is_triggered_only = yes
@@ -1279,7 +1291,7 @@ country_event = { #Event of some thestrals going through a tutoring class with a
     id = solarreworked.45
     title = solarreworked.45.t
     desc = solarreworked.45.d
-    picture = GFX_event_solarempire
+    picture = GFX_event_bat_momma
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.45"}
 
     is_triggered_only = yes
@@ -1307,7 +1319,7 @@ country_event = { #Event of a thestral officer being pushed to her limit, after 
     id = solarreworked.46
     title = solarreworked.46.t
     desc = solarreworked.46.d
-    picture = GFX_event_solarempire
+    picture = GFX_event_bat_soldier
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.45"}
 
     is_triggered_only = yes
@@ -1377,6 +1389,7 @@ country_event = { #Follow a soldier as he reluctantly goes into Ayacachtli to ge
     title = solarreworked.47.t
     desc = solarreworked.47.d
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.47"}
+    picture = GFX_event_medieval_city_in_mountains
 
     is_triggered_only = yes
 
@@ -1677,6 +1690,7 @@ country_event = { #An officer of the Militarium is surprised when he sees that a
     id = solarreworked.70
     title = solarreworked.70.t
     desc = solarreworked.70.d
+    picture = GFX_event_solarempire
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.70"}
 
     is_triggered_only = yes
@@ -1693,6 +1707,7 @@ country_event = { #Daybreaker inspects a number of troops that have been aligned
     id = solarreworked.71
     title = solarreworked.71.t
     desc = solarreworked.71.d
+    picture = GFX_event_daybreaker_throne
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.71"}
 
     is_triggered_only = yes
@@ -1708,6 +1723,7 @@ country_event = { #Follow one of the generals, probably Fast Clip, as he is led 
     id = solarreworked.72
     title = solarreworked.72.t
     desc = solarreworked.72.d
+    picture = GFX_event_exu_news
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.72"}
 
     is_triggered_only = yes
@@ -1742,6 +1758,7 @@ country_event = { #One of the generals who is suspected of being a traitor is br
     id = solarreworked.74
     title = solarreworked.74.t
     desc = solarreworked.74.d
+    picture = GFX_event_angy_daybreaker
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.74"}
 
     is_triggered_only = yes
@@ -1889,6 +1906,7 @@ country_event = { #Follow a soldier as he heads into a quartermaster or otherwis
     id = solarreworked.75
     title = solarreworked.75.t
     desc = solarreworked.75.d
+    picture = GFX_event_exu_ration
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.75"}
 
     is_triggered_only = yes
@@ -1903,6 +1921,7 @@ country_event = { #A soldier dives into a trench after being ordered to, and he 
     id = solarreworked.76
     title = solarreworked.76.t
     desc = solarreworked.76.d
+    picture = GFX_event_pony_trench
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.76"}
 
     is_triggered_only = yes
@@ -1917,6 +1936,7 @@ country_event = { # Follow an artillery operator as he gets his first and possib
     id = solarreworked.77
     title = solarreworked.77.t
     desc = solarreworked.77.d
+    picture = GFX_event_pony_soldiers_sunset
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.77"}
 
     is_triggered_only = yes
@@ -1931,6 +1951,7 @@ country_event = { #A report of some of the latest casualties in the war are pres
     id = solarreworked.78
     title = solarreworked.78.t
     desc = solarreworked.78.d
+    picture = GFX_event_exu_news
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.78"}
 
     is_triggered_only = yes
@@ -1945,6 +1966,7 @@ country_event = { #As a small company is working through a town along the border
     id = solarreworked.79
     title = solarreworked.79.t
     desc = solarreworked.79.d
+    picture = GFX_event_medieval_village_2
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.79"}
 
     is_triggered_only = yes
@@ -1959,6 +1981,7 @@ country_event = { #A trainee evoker is put to the test on one of the main combat
     id = solarreworked.80
     title = solarreworked.80.t
     desc = solarreworked.80.d
+    #Fire GFX for pony training
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.80"}
 
     is_triggered_only = yes
@@ -1983,6 +2006,7 @@ country_event = { #One scientist late into the day is penning their notes about 
     id = solarreworked.81
     title = solarreworked.81.t
     desc = solarreworked.81.d
+    picture = GFX_event_exu_news
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.81"}
 
     is_triggered_only = yes
@@ -2019,6 +2043,7 @@ country_event = { #Daybreaker leads dozens if not a hundred or more troops into 
     id = solarreworked.83 #Possibly be instead Daybreaker having a bit of a showdown with the Wonderbolts outside the academy, and besting them to then have them captured
     title = solarreworked.83.t
     desc = solarreworked.83.d
+    picture = GFX_event_solarempire
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.83"}
 
     is_triggered_only = yes
@@ -2068,6 +2093,7 @@ country_event = { #Follow a normal citizen as they go about their day in a villa
     id = solarreworked.84
     title = solarreworked.84.t
     desc = solarreworked.84.d
+    picture = GFX_event_forest_village
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.84"}
 
     is_triggered_only = yes
@@ -4646,7 +4672,7 @@ country_event = { #Daybreaker enters Sunrise's laboratory, where she is busy stu
     option = { #Wait until we're at peace.
         name = solarreworked.269.a
         EQS_twilight_sparkle = {
-            set_character_flag = SOL_sunrise_joined_fight
+            set_character_flag = EQS_sunrise_joined_fight
         }
         custom_effect_tooltip = EQS_twiggles_field_marshal_tt
 		custom_effect_tooltip = grand_inquisitor_sunrise_sparkle_new_stats_tp
@@ -5455,7 +5481,7 @@ country_event = { #Follow a citizen as they are brought before Daybreaker to ask
 }
 
 ###Fallen Hero###
-country_event = { #A series of laws are read allowed, and end with an official signature of Daybreaker, which speak about how pony society will be changing and adapting to the new order, and that she will ensure that ponies will do various things, such as community service, free labor for others, mandatory donations to charities, etc., which will ultimately better society to her vision and Harmony's vision
+country_event = { #A series of laws are read aloud, and end with an official signature of Daybreaker, which speak about how pony society will be changing and adapting to the new order, and that she will ensure that ponies will do various things, such as community service, free labor for others, mandatory donations to charities, etc., which will ultimately better society to her vision and Harmony's vision
     id = solarreworked.340
     title = solarreworked.340.t
     desc = solarreworked.340.d
@@ -5510,7 +5536,7 @@ country_event = { #Daybreaker stalks into one of the cells of the M6, probably R
 
     is_triggered_only = yes
 
-    option = { #You will awaken your potential
+    option = { #You will awaken your potential.
         name = solarreworked.343.a
         add_political_power = 200
 		add_popularity = {
@@ -11057,6 +11083,7 @@ country_event = { #Bon Bon is ushered into Celestia's chambers, and Bon Bon sees
     title = equestriaexpanded.1.t
     desc = equestriaexpanded.1.d
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event equestriaexpanded.1"}
+    picture = GFX_event_palace_hall
 
     is_triggered_only = yes
 
@@ -11083,6 +11110,7 @@ country_event = { #Follow a new SMILE agent as she is being tested on some of he
     title = equestriaexpanded.2.t
     desc = equestriaexpanded.2.d
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event equestriaexpanded.2"}
+    picture = GFX_event_changeling_spies
 
     is_triggered_only = yes
 
@@ -11120,6 +11148,7 @@ country_event = { #Celestia enters the planning room of the Equestrian Military,
     title = equestriaexpanded.3.t
     desc = equestriaexpanded.3.d
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event equestriaexpanded.3"}
+    picture = GFX_event_nmm_red_moon
 
     is_triggered_only = yes
 
@@ -11138,6 +11167,7 @@ country_event = { #An excerpt of a new training manual from SMILE regarding how 
     title = equestriaexpanded.4.t
     desc = equestriaexpanded.4.d
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event equestriaexpanded.4"}
+    picture = GFX_event_changeling_spies
 
     is_triggered_only = yes
 
@@ -11174,6 +11204,7 @@ country_event = { #A report is slid across Celestia's desk, and after she reads 
     title = equestriaexpanded.5.t
     desc = equestriaexpanded.5.d
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event equestriaexpanded.5"}
+    picture = GFX_event_chrysalis_parade
 
     is_triggered_only = yes
 
@@ -11192,6 +11223,7 @@ country_event = { #An event recapping that with the ascension of Daybreaker, SMI
     title = equestriaexpanded.6.t
     desc = equestriaexpanded.6.d
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event equestriaexpanded.6"}
+    picture = GFX_event_solarempire
 
     is_triggered_only = yes
 
@@ -11239,6 +11271,7 @@ country_event = { #Some SMILE agents, who now work under Daybreaker, infiltrate 
     title = equestriaexpanded.7.t
     desc = equestriaexpanded.7.d
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event equestriaexpanded.7"}
+    picture = GFX_event_attacked_convoy
 
     is_triggered_only = yes
 
@@ -11278,6 +11311,7 @@ country_event = { #Follow Absconditus as he leads a number of loyal agents and a
     title = equestriaexpanded.8.t
     desc = equestriaexpanded.8.d
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event equestriaexpanded.8"}
+    picture = GFX_event_solarempire
 
     is_triggered_only = yes
 

@@ -433,6 +433,27 @@ characters = {
 			}
 		}
 	}
+	EQS_sunsane = {
+		name = EQS_sunsane
+		portraits = {
+			army = {
+				large = "gfx/leaders/EQS/Sunsane.tga"
+				small = "gfx/interface/ideas/advisors/EQS/EQS_sunsane.tga"
+			}
+		}
+		corps_commander = {
+			traits = { pony_race_trait trickster }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+			visible = {
+				is_EQS_SOL = yes
+				has_country_flag = SOL_new_generals_flag
+			}
+		}
+	}
 	EQS_bunsen_beaker = {
 		name = EQS_bunsen_beaker
 		portraits = {
@@ -453,11 +474,7 @@ characters = {
 		scientist = {
 			traits = { scientist_trait_bright scientist_trait_race_expert }
 			skills = { specialization_magical = 3 }
-			visible = {
-				OWNER = {
-					has_country_flag = SOL_bunsen_unlocked
-				}
-			}
+			visible = { OWNER = { has_country_flag = SOL_bunsen_unlocked } }
 		}
 	}
 	EQS_nightshift = {

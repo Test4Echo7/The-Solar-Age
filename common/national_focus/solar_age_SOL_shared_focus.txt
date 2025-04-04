@@ -144,11 +144,11 @@ shared_focus = {
 						set_character_name = EQS_SOL_evil_twilight_sparkle
 						set_portraits = {
 							civilian = {
-								large = "gfx/leaders/CRY/TwilightSunrise.tga"
+								large = "gfx/leaders/EQS/Sunrise_Sparkle_new.tga"
 								small = "GFX_idea_evil_twilight_sparkle"
 							}
 							army = {
-								large = "gfx/leaders/CRY/TwilightSunrise.tga"
+								large = "gfx/leaders/EQS/Sunrise_Sparkle_new.tga"
 								small = "GFX_idea_evil_twilight_sparkle"
 
 							}

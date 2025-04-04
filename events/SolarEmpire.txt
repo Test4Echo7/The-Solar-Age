@@ -862,6 +862,8 @@ country_event = {
         custom_effect_tooltip = scorched_earth_stats_tp
 
         custom_effect_tooltip = arcane_nova_stats_tp
+
+        custom_effect_tooltip = sunsane_stats_tp
 	}
 }
 

@@ -8,6 +8,14 @@ spriteTypes = {
         texturefile = "gfx/event_pictures/event_admiral_daybreaker.png"
     }
     spriteType = {
+        name = "GFX_event_daybreaker_throne"
+        texturefile = "gfx/event_pictures/event_daybreaker_throne.png"
+    }
+    spriteType = {
+        name = "GFX_event_daybreaker_power"
+        texturefile = "gfx/event_pictures/event_daybreaker_power.png"
+    }
+    spriteType = {
         name = "GFX_event_celestia_ascension"
         texturefile = "gfx/event_pictures/event_celestia_ascension.png"
     }
