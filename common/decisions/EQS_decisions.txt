@@ -1749,9 +1749,9 @@ political_actions = {
 				has_completed_focus = SOL_She_Who_Raises_the_Sun
 				has_completed_focus = SOL_Empress_knows_Best
 			}
-			#EQS_twilight_sparkle = {
-			#	is_unit_leader = no
-			#}
+			EQS_twilight_sparkle = {
+				is_unit_leader = no
+			}
 			NOT = {
 				any_other_country = {
 					has_character = EQS_twilight_sparkle
@@ -1777,6 +1777,13 @@ political_actions = {
 		}
 		visible = {
 			has_completed_focus = SOL_Imperium_Solis
+			OR = {
+				has_idea = eqs_war_admin
+				has_idea = eqs_war_admin_extreme
+				has_idea = eqs_war_law_extreme
+				has_idea = eqs_war_law
+				has_idea = eqs_media_control
+			}
 		}
 		cost = 75
 		days_remove = 30

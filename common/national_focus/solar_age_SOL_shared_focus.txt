@@ -10279,10 +10279,8 @@ joint_focus = {
 	ai_will_do = {
 		factor = 40
 		modifier = {
-			if = {
-				limit = { tag = EQC }
-				factor = 0.1
-			}
+			tag = EQC
+			factor = 0.1
 		}
 	}
 }

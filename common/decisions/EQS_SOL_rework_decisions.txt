@@ -5592,9 +5592,11 @@ EQS_pan_pony_empire_category = {
                 set_country_flag = SOL_formed_super_zebrica
                 hidden_effect = {
                     every_state = {
-                        is_on_continent = africa
+                        limit = {
+                            is_on_continent = africa
+                        }
+                        remove_core_of = KIR
                     }
-                    remove_core_of = KIR
                 }
             }
         }
