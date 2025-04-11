@@ -1,7 +1,10 @@
 political_actions = {
     PCB_request_annexation = {
         allowed = { tag = PCB }
-        visible = { OVERLORD = { has_completed_focus = SOL_plumb_mountain_depths } }
+        visible = {
+            OVERLORD = { has_completed_focus = SOL_plumb_mountain_depths }
+            NOT = { has_country_flag = SOL_annexation_blocker }
+        }
         fire_only_once = yes
         complete_effect = {
             log = "[GetTimeDateText]: [ROOT.GetName]: decision PCB_request_annexation"

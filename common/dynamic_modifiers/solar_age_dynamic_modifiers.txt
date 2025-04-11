@@ -56,6 +56,19 @@ SOL_imperial_intelligence_lar = {
     new_operative_slot_bonus = new_operative_slot_bonus_var
 }
 
+SOL_basic_improved_sanctum = {
+    state_production_speed_buildings_factor = 0.1
+    local_manpower = 0.1
+    local_org_regain = 0.5
+}
+
+SOL_better_improved_sanctum = {
+    state_production_speed_buildings_factor = 0.2
+    local_manpower = 0.25
+    local_org_regain = 0.75
+    local_resources = 0.05
+}
+
 SOL_improved_river_architecture = {
     icon = GFX_idea_EQS_unicorn_academy
 

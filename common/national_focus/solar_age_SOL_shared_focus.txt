@@ -6893,78 +6893,8 @@ shared_focus = {
 		custom_effect_tooltip = SOL_beatings_continue_until_morale_improves_tt
 		add_stability = -0.1
 		add_political_power = -125
-		#Advisors here
-		every_possible_country = {
-			limit = { has_character = BAT_advisor_9 }
-			BAT_advisor_9 = {
-				set_nationality = ROOT
-				remove_advisor_role = { slot = political_advisor }
-				add_advisor_role = {
-					advisor = {
-						slot = political_advisor
-						idea_token = BAT_eternal_advisor_3
-						traits = { field_surgeon }
-					}
-				}
-			}
-		}
-		#Glitches out because SOL has a Shining Star already. Don't ask me why, since they're separate entities
-		#every_possible_country = {
-		#	limit = { has_character = BAT_advisor_4 }
-		#	BAT_advisor_4 = {
-		#		set_nationality = ROOT
-		#		remove_advisor_role = { slot = political_advisor }
-		#		add_advisor_role = {
-		#			advisor = {
-		#				slot = political_advisor
-		#				idea_token = BAT_emerald_advisor_1
-		#				traits = { technocrat }
-		#			}
-		#		}
-		#	}
-		#}
-		every_possible_country = {
-			limit = { has_character = BAT_advisor_15 }
-			BAT_advisor_15 = {
-				set_nationality = ROOT
-				remove_advisor_role = { slot = political_advisor }
-				add_advisor_role = {
-					advisor = {
-						slot = political_advisor
-						idea_token = BAT_lightning_advisor_3
-						traits = { special_forces_commander }
-					}
-				}
-			}
-		}
-		every_possible_country = {
-			limit = { has_character = BAT_advisor_17 }
-			BAT_advisor_17 = {
-				set_nationality = ROOT
-				remove_advisor_role = { slot = political_advisor }
-				add_advisor_role = {
-					advisor = {
-						slot = political_advisor
-						idea_token = BAT_stone_advisor_2
-						traits = { war_hero_grunt }
-					}
-				}
-			}
-		}
-		every_possible_country = {
-			limit = { has_character = BAT_advisor_36 }
-			BAT_advisor_36 = {
-				set_nationality = ROOT
-				remove_advisor_role = { slot = high_command }
-				add_advisor_role = {
-					advisor = {
-						slot = high_command
-						cost = 100
-						idea_token = BAT_high_advisor_8
-						traits = { alt_navy_chief_maneuver_2 }
-					}
-				}
-			}
+		hidden_effect = {
+			country_event = solarreworked.139
 		}
 	}
 	ai_will_do = { factor = 60 }
@@ -8858,6 +8788,26 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_burn_bats"
 		###Event like the vanilla God-Empress burning event, except follow the vigilantes stirred up by faithful ponies to Daybreaker to wipe out the filth of darkness; have the same effect as vanilla, but also +10% ST
 		country_event = solarreworked.43
+		hidden_effect = {
+			if = {
+				limit = { CES = { has_character = CES_crescent_glow } }
+				if = {
+					limit = { has_completed_focus = SOL_god_empress }
+					country_event = {
+						id = solarreworked.143
+						days = 200
+						random_days = 200
+					}
+				}
+				else = {
+					country_event = {
+						id = solarreworked.145
+						days = 200
+						random_days = 200
+					}
+				}
+			}
+		}
 	}
 	ai_will_do = { factor = 150 }
 }
@@ -8967,6 +8917,16 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_useful_servants"
 		###Event a thestral being forcibly taken into service for the armed forces, since they can be used as both fodder and night scouts (with appropriate detonation enchantments if they try to flee), and she tries to fight it off, but is ultimately taken anyway, after basically being treated like a raging animal
 		country_event = solarreworked.46
+		hidden_effect = {
+			if = {
+				limit = { CES = { has_character = CES_crescent_glow } }
+				country_event = {
+					id = solarreworked.144
+					days = 200
+					random_days = 200
+				}
+			}
+		}
 	}
 	ai_will_do = { factor = 150 }
 }
@@ -14997,7 +14957,7 @@ shared_focus = { #Imperial Collegiate of Blessed Unicorns
 			add_dynamic_modifier = {
 				modifier = SOL_imperial_science
 			}
-			add_ideas = SOL_streng_geheim_magic
+			add_ideas = SOL_streng_geheim_1
 		}
 		EQS_remove_science_ideas = yes #Removes any of EQS's science ideas
 	}
@@ -15192,7 +15152,33 @@ shared_focus = {
 		add_to_variable = { industrial_tech_factor_var = 5 }
 		custom_effect_tooltip = SOL_imperial_science_2_tt
 		hidden_effect = {
-			add_ideas = SOL_streng_geheim_industry
+			if = {
+				limit = { has_idea = SOL_streng_geheim_5_2 }
+				swap_ideas = {
+					add_idea = SOL_streng_geheim_5_3
+					remove_idea = SOL_streng_geheim_5_2
+				}
+			}
+			else_if = {
+				limit = { has_idea = SOL_streng_geheim_6_2 }
+				swap_ideas = {
+					add_idea = SOL_streng_geheim_6_3
+					remove_idea = SOL_streng_geheim_6_2
+				}
+			}
+			else_if = {
+				limit = { has_idea = SOL_streng_geheim_2_2 }
+				swap_ideas = {
+					add_idea = SOL_streng_geheim_2_3
+					remove_idea = SOL_streng_geheim_2_2
+				}
+			}
+			else = {
+				swap_ideas = {
+					add_idea = SOL_streng_geheim_2_1
+					remove_idea = SOL_streng_geheim_1
+				}
+			}
 		}
 		add_tech_bonus = {
 			name = industrial_bonus
@@ -15224,9 +15210,32 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_magical_primacy"
 		custom_effect_tooltip = SOL_imperial_science_3_tt
 		hidden_effect = {
-			swap_ideas = {
-				remove_idea = SOL_streng_geheim_magic
-				add_idea = SOL_streng_geheim_magic_2
+			if = {
+				limit = { has_idea = SOL_streng_geheim_5 }
+				swap_ideas = {
+					add_idea = SOL_streng_geheim_5_1
+					remove_idea = SOL_streng_geheim_5
+				}
+			}
+			else_if = {
+				limit = { has_idea = SOL_streng_geheim_6 }
+				swap_ideas = {
+					add_idea = SOL_streng_geheim_6_1
+					remove_idea = SOL_streng_geheim_6_1
+				}
+			}
+			else_if = {
+				limit = { has_idea = SOL_streng_geheim_2_1 }
+				swap_ideas = {
+					add_idea = SOL_streng_geheim_2_3
+					remove_idea = SOL_streng_geheim_2_1
+				}
+			}
+			else = {
+				swap_ideas = {
+					add_idea = SOL_streng_geheim_2_2
+					remove_idea = SOL_streng_geheim_1
+				}
 			}
 		}
 		add_to_variable = { magical_tech_factor_var = 10 }
@@ -15453,7 +15462,19 @@ shared_focus = {
 		add_to_variable = { research_speed_var = 0.05 }
 		add_to_variable = { electronics_tech_factor_var = 10 }
 		hidden_effect = {
-			add_ideas = SOL_streng_geheim_electronics
+			if = {
+				limit = { has_idea = SOL_streng_geheim_2_1 }
+				swap_ideas = {
+					add_idea = SOL_streng_geheim_3
+					remove_idea = SOL_streng_geheim_2_1
+				}
+			}
+			else = {
+				swap_ideas = {
+					add_idea = SOL_streng_geheim_2_3
+					remove_idea = SOL_streng_geheim_3_1
+				}
+			}
 		}
 		if = {
 			limit = { amount_research_slots < 5 }
@@ -15497,7 +15518,19 @@ shared_focus = {
 				id = 6118
 				name = EQS_sol_victoria
 			}
-			add_ideas = SOL_streng_geheim_race
+			if = {
+				limit = { has_idea = SOL_streng_geheim_2_2 }
+				swap_ideas = {
+					add_idea = SOL_streng_geheim_4
+					remove_idea = SOL_streng_geheim_2_2
+				}
+			}
+			else = {
+				swap_ideas = {
+					add_idea = SOL_streng_geheim_4_1
+					remove_idea = SOL_streng_geheim_2_3
+				}
+			}
 		}
 	}
 	ai_will_do = { factor = 80 }

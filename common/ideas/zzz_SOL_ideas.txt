@@ -2152,44 +2152,110 @@ ideas = {
 	}
 	###Research buffs
 	hidden_ideas = {
-		SOL_streng_geheim_electronics = {
-			research_bonus = {
-				electronics = 0.1
-			}
-		}
-		SOL_streng_geheim_industry = {
-			research_bonus = {
-				industry = 0.05
-			}
-		}
-		SOL_streng_geheim_magic = {
+		###I love that dyanmic modifiers can't have research bonuses so much###
+		SOL_streng_geheim_1 = {
 			research_bonus = {
 				magical_tech = 0.05
 			}
 		}
-		SOL_streng_geheim_magic_2 = {
+		SOL_streng_geheim_2_1 = {
+			research_bonus = {
+				magical_tech = 0.05
+				industry = 0.05
+			}
+		}
+		SOL_streng_geheim_2_2 = {
 			research_bonus = {
 				magical_tech = 0.15
 			}
 		}
-		SOL_streng_geheim_magic_3 = {
+		SOL_streng_geheim_2_3 = {
 			research_bonus = {
-				magical_tech = 0.05
+				magical_tech = 0.15
+				industry = 0.05
 			}
 		}
-		SOL_streng_geheim_race = {
+		SOL_streng_geheim_3 = {
 			research_bonus = {
+				magical_tech = 0.05
+				industry = 0.05
+				electronics = 0.1
+			}
+		}
+		SOL_streng_geheim_3_1 = {
+			research_bonus = {
+				magical_tech = 0.15
+				industry = 0.05
+				electronics = 0.1
+			}
+		}
+		SOL_streng_geheim_4 = {
+			research_bonus = {
+				magical_tech = 0.15
 				race_tech = 0.1
 			}
 		}
-		SOL_streng_geheim_race_2 = {
+		SOL_streng_geheim_4_1 = {
 			research_bonus = {
+				magical_tech = 0.15
+				industry = 0.05
+				race_tech = 0.1
+			}
+		}
+		SOL_streng_geheim_5 = {
+			research_bonus = {
+				magical_tech = 0.1
+				industry = 0.05
+				electronics = 0.1
+			}
+		}
+		SOL_streng_geheim_5_1 = {
+			research_bonus = {
+				magical_tech = 0.2
+				industry = 0.05
+				electronics = 0.1
+			}
+		}
+		SOL_streng_geheim_5_2 = {
+			research_bonus = {
+				magical_tech = 0.2
+				race_tech = 0.1
+			}
+		}
+		SOL_streng_geheim_5_3 = {
+			research_bonus = {
+				magical_tech = 0.2
+				industry = 0.05
+				race_tech = 0.1
+			}
+		}
+		SOL_streng_geheim_6 = {
+			research_bonus = {
+				magical_tech = 0.05
+				industry = 0.05
+				electronics = 0.1
+				race_tech = 0.075
+			}
+		}
+		SOL_streng_geheim_6_1 = {
+			research_bonus = {
+				magical_tech = 0.15
+				industry = 0.05
+				electronics = 0.1
+				race_tech = 0.075
+			}
+		}
+		SOL_streng_geheim_6_2 = {
+			research_bonus = {
+				magical_tech = 0.15
 				race_tech = 0.175
 			}
 		}
-		SOL_streng_geheim_race_3 = {
+		SOL_streng_geheim_6_3 = {
 			research_bonus = {
-				race_tech = 0.075
+				magical_tech = 0.15
+				industry = 0.05
+				race_tech = 0.175
 			}
 		}
 		###Projects###

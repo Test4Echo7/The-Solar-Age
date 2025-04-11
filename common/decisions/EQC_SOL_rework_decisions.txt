@@ -127,6 +127,7 @@ political_actions = {
                 has_completed_focus = EQC_SOL_stability_prevails
                 has_completed_focus = EQC_SOL_solar_economy
             }
+            NOT = { has_country_flag = SOL_annexation_blocker }
         }
         fire_only_once = yes
         complete_effect = {

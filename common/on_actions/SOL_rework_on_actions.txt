@@ -293,6 +293,27 @@ on_actions = {
             }
         }
     }
+    on_capitulation = { #Literally just for seeing if RCT had River Swirl as leader
+        effect = {
+            if = {
+                limit = {
+                    ROOT = {
+                        OR = {
+                            tag = RCT
+                            tag = RIV
+                        }
+                        has_country_leader = { character = RCT_river_swirl ruling_only = yes }
+                    }
+                    FROM = {
+                        tag = EQS
+                        is_EQS_SOL = yes
+                    }
+                }
+                log = "[GetDateText]: [ROOT.GetName]: on_capitulation solar_age"
+                FROM = { set_country_flag = SOL_RCT_had_river_leader }
+            }
+        }
+    }
     on_state_control_changed = { #Root is new controller. From is old controller. FROM.FROM is the state
         effect = {
             log = "[GetDateText]: [ROOT.GetName]: on_state_control_changed solar_age"

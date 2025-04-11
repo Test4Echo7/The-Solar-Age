@@ -1129,7 +1129,7 @@ EQS_solar_fury_category = {
                 limit = {
                    NOT = { has_country_flag = SOL_supernova_seen }
                 }
-                country_event = solarreworked.130
+                country_event = solarreworked.114
             }
             custom_effect_tooltip = EQS_SOL_they_bucked_up_tt
             hidden_effect = {
@@ -1190,6 +1190,10 @@ EQS_solar_fury_category = {
         days_remove = 60
         complete_effect = {
             log = "[GetDateText]: [Root.GetName]: Decision EQS_melt_our_foes"
+            if = {
+                limit = { NOT = { has_country_flag = SOL_perdition_seen } }
+                country_event = solarreworked.115
+            }
             every_possible_country = {
                 limit = {
                     has_war_with = ROOT
@@ -1246,6 +1250,10 @@ EQS_solar_fury_category = {
         days_remove = 45
         complete_effect = {
             log = "[GetDateText]: [Root.GetName]: Decision EQS_pierce_the_heart"
+            if = {
+                limit = { NOT = { has_country_flag = SOL_conflagration_seen } }
+                country_event = solarreworked.116
+            }
             EQS_princess_celestia = {
                 add_timed_unit_leader_trait = { trait = magic_piercing days = 45 }
             }
@@ -2976,6 +2984,13 @@ EQS_great_projects_category = {
         }
         complete_effect = {
             set_country_flag = SOL_constructing_temple
+            hidden_effect = {
+                country_event = {
+                    id = solarreworked.137
+                    days = 150
+                    random_days = 50
+                }
+            }
         }
         remove_effect = {
             log = "[GetDateText]: [Root.GetName]: Decision remove SOL_construct_cathedral_of_sun"
@@ -2983,7 +2998,41 @@ EQS_great_projects_category = {
             3 = {
                 add_extra_state_shared_building_slots = 2
                 improve_state_category = yes
-                #There will be a state modifier that gives +10% construction speed, +10% local manpower, +0.5 local org regain
+                #There will be a state modifier that gives +10% construction speed, +10% local manpower, +0.5 local org regain, doubled, and with +5% resource gain if God-Empress
+                if = {
+                    limit = { OWNER = { has_country_flag = SOL_improved_cathedral } }
+                    effect_tooltip = {
+                        add_state_modifier = {
+                            modifier = {
+                                state_production_speed_buildings_factor = 0.2
+                                local_manpower = 0.25
+                                local_org_regain = 0.75
+                                local_resources = 0.05
+                            }
+                        }
+                    }
+                    hidden_effect = {
+                        add_dynamic_modifier = { modifier = SOL_better_improved_sanctum }
+                    }
+                    add_resource = {
+                        type = crystals
+                        amount = 6
+                    }
+                }
+                else = {
+                    effect_tooltip = {
+                        add_state_modifier = {
+                            modifier = {
+                                state_production_speed_buildings_factor = 0.1
+                                local_manpower = 0.1
+                                local_org_regain = 0.5
+                            }
+                        }
+                        hidden_effect = {
+                            add_dynamic_modifier = { modifier = SOL_basic_improved_sanctum }
+                        }
+                    }
+                }
                 add_resource = {
                     type = steel
                     amount = 8
@@ -3029,6 +3078,9 @@ EQS_great_projects_category = {
                 }
             }
             ###Event of the final unveiling of the Cathedral of the Sun, which is a exquisite structure of pure marble and gold, to show the radiance and beauty of Daybreaker, which pleases Daybreaker immensely that her grandest vision of affecting Sanctum Solar has been accomplished, as it is truly a beacon of her power
+            hidden_effect = {
+                country_event = solarreworked.142
+            }
         }
         ai_will_do = {
             base = 0
@@ -4245,6 +4297,7 @@ EQS_pan_pony_empire_category = {
                                 promote_leader = yes
                                 country_leader = {
                                     ideology = falangism
+                                    desc = "POLITICS_PUMPKIN_SWIRL_SOLAR_AGE_DESC"
                                     expire = "1965.1.1"
                                     traits = { imperial_governess }
                                 }
@@ -4255,6 +4308,7 @@ EQS_pan_pony_empire_category = {
                                 promote_leader = yes
                                 country_leader = {
                                     ideology = nazism
+                                    desc = "POLITICS_PUMPKIN_SWIRL_SOLAR_AGE_DESC"
                                     expire = "1965.1.1"
                                     traits = { imperial_governess }
                                 }

@@ -14,6 +14,32 @@ characters = {
             }
         }
     }
+    EQS_lyra_heartstrings = {
+		name = EQS_lyra_heartstrings
+		gender = female
+		portraits = {
+			army = {
+				large = "gfx/leaders/EQS/Lyra_Heartstrings.tga"
+				small = "gfx/interface/ideas/advisors/EQS/EQS_lyra_heartstrings.tga"
+			}
+		}
+
+		corps_commander = {
+			traits = { pony_race_trait artillery_officer arrow }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 2
+			visible = {
+				has_country_flag = EQS_rumbly_tummies
+				NOT = {
+					has_country_flag = SOL_harmonic_commanders_leave
+					has_country_flag = SOL_purge_finished
+				}
+			}
+		}
+    }
     EQS_nurse_redheart = {
 		name = EQS_nurse_redheart
 		portraits = {

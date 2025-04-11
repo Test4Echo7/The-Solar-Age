@@ -659,6 +659,7 @@ recruit_character = EQS_rock_solid
 recruit_character = EQS_morning_mulch
 recruit_character = EQS_queen_argynnis
 recruit_character = EQS_sunsane
+recruit_character = EQS_lyra_heartstrings
 #Foreign characters
 recruit_character = CRY_nightshade
 recruit_character = CRY_morning_mist

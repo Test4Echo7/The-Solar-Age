@@ -20,8 +20,44 @@ spriteTypes = {
         texturefile = "gfx/event_pictures/event_celestia_ascension.png"
     }
     spriteType = {
+        name = "GFX_event_sunrise_sparkle"
+        texturefile = "gfx/event_pictures/event_sunrise_sparkle.png"
+    }
+    spriteType = {
+        name = "GFX_event_spitfire"
+        texturefile = "gfx/event_pictures/event_spitfire_spitfiring.png"
+    }
+    spriteType = {
+        name = "GFX_event_vapor_trail_poster"
+        texturefile = "gfx/event_pictures/event_vapor_trail_poster.png"
+    }
+    spriteType = {
+        name = "GFX_event_zephyr_snoozing"
+        texturefile = "gfx/event_pictures/event_zephyr_snoozing.png"
+    }
+    spriteType = {
+        name = "GFX_event_celestia_nuke"
+        texturefile = "gfx/event_pictures/event_celestia_nuke.png"
+    }
+    spriteType = {
         name = "GFX_event_tempest_fighting"
         texturefile = "gfx/event_pictures/event_tempest_fighting.png"
+    }
+    spriteType = {
+        name = "GFX_event_twilight_vs_daybreaker"
+        texturefile = "gfx/event_pictures/event_twilight_vs_daybreaker.png"
+    }
+    spriteType = {
+        name = "GFX_event_punished_twilight"
+        texturefile = "gfx/event_pictures/event_punished_twilight.png"
+    }
+    spriteType = {
+        name = "GFX_event_many_inquisitors"
+        texturefile = "gfx/event_pictures/event_many_inquisitors.png"
+    }
+    spriteType = {
+        name = "GFX_event_summer_sun_celebration"
+        texturefile = "gfx/event_pictures/event_summer_sun_celebration.png"
     }
     ###News Events###
     spriteType = {
