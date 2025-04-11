@@ -3517,7 +3517,15 @@ country_event = {
 
     option = {
         name = solarreworked.135.a
-        #Unlock Lyra here
+        custom_effect_tooltip = lyra_heartstrings_stats_tp
+        set_country_flag = EQS_rumbly_tummies
+        hidden_effect = {
+            country_event = {
+                id = solarreworked.140
+                days = 30
+                random_days = 150
+            }
+        }
     }
 }
 
@@ -4051,6 +4059,11 @@ country_event = { #Report to Daybreaker that so far the hunt for the M6 and Suns
     immediate = {
         log = "[GetDateText]: [ROOT.GetName]: event solarreworked.159"
         clr_country_flag = SOL_twilight_fleeing
+        country_event = {
+            id = solarreworked.100
+            days = 365
+            random_days = 180
+        }
     }
 
     is_triggered_only = yes

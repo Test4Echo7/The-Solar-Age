@@ -93,6 +93,33 @@ on_actions = {
                     add_ideas = SOL_offensive_propaganda
                 }
             }
+            if = {
+                limit = {
+                    ROOT = {
+                        OR = {
+                            tag = EQS
+                            tag = CHN
+                            tag = NLR
+                        }
+                    }
+                    FROM = {
+                        OR = {
+                            tag = EQS
+                            tag = CHN
+                            tag = NLR
+                        }
+                    }
+                    EQS = { NOT = { has_country_flag = EQS_tummies_be_rumbly } }
+                }
+                EQS = {
+                    country_event = {
+                        id = solarreworked.133
+                        days = 180
+                        random_days = 90
+                    }
+                    set_country_flag = EQS_tummies_be_rumbly
+                }
+            }
         }
     }
     on_war_relation_added = { #ROOT is attacker. FROM is defender

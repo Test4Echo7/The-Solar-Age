@@ -33,6 +33,7 @@
   thundering_hoofbeat_stats_tp:0 "§gLevel§!: §Y4§!, (£trait_attack §Y4§!, £trait_defense §Y4§!, £trait_planning §Y2§!, £trait_logistics §Y3§!)\n§gTraits§!: §C$harsh_leader$§!, §C$infantry_expert$§!, §C$ambusher$§!\n\n"
   sunsane_stats_tp:0 "§YSunsane§! becomes a General\n§gLevel§!: §Y2§!, (£trait_attack §Y2§!, £trait_defense §Y2§!, £trait_planning §Y2§!, £trait_logistics §Y1§!)\n§gTraits§!: §C$trickster$§!\n\n"
   crescent_glow_stats_tp:0 "§YCrescent Glow§! becomes a General\n§gLevel§!: §Y2§!, (£trait_attack §Y2§!, £trait_defense §Y2§!, £trait_planning §Y2§! £trait_logistics §Y1§!)\n§gTraits§!: §CNight Guard§!, §CPromising Leader§!, §CBleeding Heart§!\n\n"
+  lyra_heartstrings_stats_tp:0 "§YLyra Heartstrings§! becomes a General\n§gLevel§!: §Y2§!, (£trait_attack §Y1§!, £trait_defense §Y3§!, £trait_planning §Y1§!, £trait_logistics §Y2§!)\n§gTraits§!: §C$artillery_officer$§!, §C$arrow$§!\n\n"
 
   shining_star_pak_solar_age_stats_tp:0 "§YShining Star§! becomes a General.\n§gLevel§!: §Y2§!, (£trait_attack §Y3§!, £trait_defense §Y2§!, £trait_planning §Y1§!, £trait_logistics §Y1§!)\n§gTraits§!: §C$trait_unpredictable$§!, §C$arrow$§!\n\n"
   scroup_whitemares_solar_age_stats_tp:0 "§YScroup Whitemares§! becomes a General.\n§gLevel§!: §Y2§!, (£trait_attack §Y1§!, £trait_defense §Y2§!, £trait_planning §Y2§!, £trait_logistics §Y2§!)\n§gTraits§!: §C$trait_scroup_raspberry$§!\n\n"
