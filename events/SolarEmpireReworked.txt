@@ -3247,7 +3247,7 @@ country_event = { #Daybreaker has one of her first longer meetings with Grover, 
     id = solarreworked.122
     title = solarreworked.122.t
     desc = solarreworked.122.d
-    picture = GFX_event_solarempire ###Change this perhaps to be a new GFX portrait of Grover
+    picture = GFX_event_solarempire ###GFX - Change this perhaps to be a new portrait of Grover
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.122"}
 
     is_triggered_only = yes
@@ -3289,7 +3289,7 @@ country_event = { #Grover is overly grumpy as he is made to have an official, an
     id = solarreworked.124
     title = solarreworked.124.t
     desc = solarreworked.124.d
-    picture = GFX_event_griffenheim
+    picture = GFX_event_sunset_throne_room
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.124"}
 
     is_triggered_only = yes
@@ -6867,8 +6867,7 @@ country_event = { #In a prison, Chrysalis is languishing and Daybreaker soon vis
     id = solarreworked.375
     title = solarreworked.375.t
     desc = solarreworked.375.d
-    ###GFX of Chrysalis hissing
-    picture = GFX_event_chrysalis_parade
+    picture = GFX_event_chrysalis_hissing
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.375"}
 
     is_triggered_only = yes
@@ -7622,7 +7621,7 @@ country_event = { #Culmination event for Daybreaker, where she has her reward (t
         trigger = { has_completed_focus = SOL_empress_protector }
         text = solarreworked.399.dc
     }
-    ###GFX using the one image where Daybreaker is shooting a pillar into the air
+    picture = GFX_event_daybreaker_triumphant
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.399"}
 
     is_triggered_only = yes
@@ -8036,7 +8035,7 @@ country_event = {
     id = solarreworked.453
     title = solarreworked.453.t
     desc = solarreworked.453.d
-    ###GFX of Twilight's EQS advisor portrait source
+    picture = GFX_event_twilight_reading
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.453"}
 
     trigger = {
@@ -8382,7 +8381,7 @@ country_event = { #Arcane Nova spends some time investigating one of the MPs in 
     id = solarreworked.434
     title = solarreworked.434.t
     desc = solarreworked.434.d
-    ###GFX of Arcane Nova and Jet Set for entire chain
+    picture = GFX_event_arcane_nova_and_jet_set
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.434"}
 
     is_triggered_only = yes
@@ -8403,6 +8402,7 @@ country_event = { #Midnight Poppy is interrupted in one of her meetings by her a
     id = solarreworked.435
     title = solarreworked.435.t
     desc = solarreworked.435.d
+    picture = GFX_event_arcane_nova_and_jet_set
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.435"}
 
     is_triggered_only = yes
@@ -8423,6 +8423,7 @@ country_event = { #Jet Set walks in on Upper Crust having a lovely conversation 
     id = solarreworked.436
     title = solarreworked.436.t
     desc = solarreworked.436.d
+    picture = GFX_event_arcane_nova_and_jet_set
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.436"}
 
     is_triggered_only = yes
@@ -8443,6 +8444,7 @@ country_event = { #Arcane Nova slips into the office of Jet Set at parliament, a
     id = solarreworked.437
     title = solarreworked.437.t
     desc = solarreworked.437.d
+    picture = GFX_event_arcane_nova_and_jet_set
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.437"}
 
     is_triggered_only = yes
@@ -8463,6 +8465,7 @@ country_event = { #Arcane arrives directly in Canterlot, where she gets an audie
     id = solarreworked.438
     title = solarreworked.438.t
     desc = solarreworked.438.d
+    picture = GFX_event_arcane_nova_and_jet_set
     immediate = {
         log = "[GetDateText]: [ROOT.GetName]: event solarreworked.438"
         set_global_flag = SOL_chose_EQC_leader
@@ -8665,7 +8668,7 @@ country_event = { #As Jet Set begins to prepare his things for moving back to Ca
     id = solarreworked.441
     title = solarreworked.441.t
     desc = solarreworked.441.d
-    ###GFX of solely Arcane
+    picture = GFX_event_arcane_nova
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.441"}
 
     is_triggered_only = yes
@@ -9790,7 +9793,7 @@ country_event = { #The diplomat arrives in YAK; Rutherford would be far more on 
     id = solarreworked.484
     title = solarreworked.484.t
     desc = solarreworked.484.d
-    ###GFX of Yakyakistan doors
+    picture = GFX_event_yakyakistan_entrance
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.484"}
 
     is_triggered_only = yes
@@ -11676,7 +11679,7 @@ country_event = { #Queen Argynnis comes in disguise at first to plead for Vraks'
     id = solarreworked.520
     title = solarreworked.520.t
     desc = solarreworked.520.d
-    ###GFX of Argynnis
+    picture = GFX_event_queen_argynnis
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.520"}
 
     is_triggered_only = yes

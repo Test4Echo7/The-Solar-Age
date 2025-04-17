@@ -59,6 +59,62 @@ spriteTypes = {
         name = "GFX_event_summer_sun_celebration"
         texturefile = "gfx/event_pictures/event_summer_sun_celebration.png"
     }
+    spriteType = {
+        name = "GFX_event_summer_sun_celebration"
+        texturefile = "gfx/event_pictures/event_summer_sun_celebration.png"
+    }
+    spriteType = {
+        name = "GFX_event_arcane_nova"
+        texturefile = "gfx/event_pictures/event_arcane_nova.png"
+    }
+    spriteType = {
+        name = "GFX_event_arcane_nova_and_jet_set"
+        texturefile = "gfx/event_pictures/event_arcane_nova_and_jet_set.png"
+    }
+    spriteType = {
+        name = "GFX_event_chrysalis_hissing"
+        texturefile = "gfx/event_pictures/event_chrysalis_hissing.png"
+    }
+    spriteType = {
+        name = "GFX_event_daybreaker_laughing"
+        texturefile = "gfx/event_pictures/event_daybreaker_laughing.png"
+    }
+    spriteType = {
+        name = "GFX_event_daybreaker_triumphant"
+        texturefile = "gfx/event_pictures/event_daybreaker_triumphant.png"
+    }
+    spriteType = {
+        name = "GFX_event_four_queens"
+        texturefile = "gfx/event_pictures/event_four_queens.png"
+    }
+    spriteType = {
+        name = "GFX_event_grover_vi"
+        texturefile = "gfx/event_pictures/event_grover_vi.png"
+    }
+    spriteType = {
+        name = "GFX_event_princess_snaplestia"
+        texturefile = "gfx/event_pictures/event_princess_snaplestia.png"
+    }
+    spriteType = {
+        name = "GFX_event_queen_argynnis"
+        texturefile = "gfx/event_pictures/event_queen_argynnis.png"
+    }
+    spriteType = {
+        name = "GFX_event_sunset_throne_room"
+        texturefile = "gfx/event_pictures/event_sunset_throne_room.png"
+    }
+    spriteType = {
+        name = "GFX_event_twilight_reading"
+        texturefile = "gfx/event_pictures/event_twiggles_reading.png"
+    }
+    spriteType = {
+        name = "GFX_event_verko"
+        texturefile = "gfx/event_pictures/event_verko.png"
+    }
+    spriteType = {
+        name = "GFX_event_yakyakistan_entrance"
+        texturefile = "gfx/event_pictures/event_yakyakistan_entrance.png"
+    }
     ###News Events###
     spriteType = {
         name = "GFX_news_daybreaker_fighting"
