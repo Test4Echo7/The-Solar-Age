@@ -4823,7 +4823,7 @@ EQS_pan_pony_empire_category = {
             log = "[GetDateText]: [Root.GetName]: Decision SOL_release_ABY_super_puppet"
             SOL_release_ABY = yes
             hidden_effect = {
-                ABY = { ABY_sheba_taddlepaw = { add_trait = { trait = imperial_governess ideology = fascism_ideology } } }
+                ABY = { ABY_catrina_catwe = { add_trait = { trait = imperial_governess ideology = neo_fuedalism } } }
             }
         }
 	}

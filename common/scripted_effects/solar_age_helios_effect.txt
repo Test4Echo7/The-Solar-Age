@@ -638,16 +638,23 @@ EQS_project_helios_destruction = {
         }
     }
     if = {
-        limit = { landmark_aby_af_katown_pyramid > 0 }
+        limit = { landmark_tbk_af_eduz_tobuck > 0 }
         damage_building = {
-            type = landmark_aby_af_katown_pyramid
+            type = landmark_tbk_af_eduz_tobuck
             damage = 1
         }
     }
     if = {
-        limit = { landmark_aby_af_zebtropa_dam > 0 }
+        limit = { landmark_KTZ_katown_pyramid > 0 }
         damage_building = {
-            type = landmark_aby_af_zebtropa_dam
+            type = landmark_KTZ_katown_pyramid
+            damage = 1
+        }
+    }
+    if = {
+        limit = { landmark_KTZ_zebtropa_dam > 0 }
+        damage_building = {
+            type = landmark_KTZ_zebtropa_dam
             damage = 1
         }
     }

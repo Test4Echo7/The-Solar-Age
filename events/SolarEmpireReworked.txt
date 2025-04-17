@@ -6794,7 +6794,7 @@ country_event = { #A short event of Daybreaker relaxing on the beaches of PCB, a
     id = solarreworked.372
     title = solarreworked.372.t
     desc = solarreworked.372.d
-    ###GFX of Celestia on a beach
+    picture = GFX_event_solarempire
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.372"}
 
     is_triggered_only = yes
