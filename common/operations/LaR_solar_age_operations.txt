@@ -426,7 +426,7 @@ SOL_storm_king_discount = {
     risk_modifiers = { operation_risk }
 
     outcome_potential = {
-        custom_effect_tooltip = SOL_goth_to_boss_tt
+        custom_effect_tooltip = SOL_magic_extended_warranty_tt
         #country_event = solarreworked.606 #Event of barely escaping the Storm King's stronghold as the agents make their way back to a safe location to escape via magic; they use the staff a couple of times to blast their way through, until they can concentrate enough to use magic to escape
     }
     risk_chance = 0.25
