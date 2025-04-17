@@ -3791,6 +3791,7 @@ country_event = { #Luna arrives in Ponyville, after leaving the front when she h
             EQS_princess_luna = {
                 set_character_flag = EQS_luna_leader_disabled
             }
+            set_country_flag = SOL_luna_twiggles_summit
         }
     }
 }
@@ -3986,7 +3987,14 @@ country_event = { #Luna arrives in CRY to speak with Cadance about at least gett
 country_event = { #After Luna speaks with Twilight, Twilight summons her friends from across the front to speak about how they're in danger; Rarity and Fluttershy both know what's going on more-so than anypony else, since they're both stationed in Canterlot, but even they don't know much more; it was dangerous to leave, though; by now, Twilight guesses something went wrong, since Luna hasn't returned, and they have to make a quick escape when her castle is breached by ponies planning to arrest her
     id = solarreworked.156
     title = solarreworked.156.t
-    desc = solarreworked.156.d
+    desc = {
+        trigger = { has_country_flag = SOL_luna_twiggles_summit }
+        text = solarreworked.156.d_a
+    }
+    desc = {
+        trigger = { NOT = { has_country_flag = SOL_luna_twiggles_summit } }
+        text = solarreworked.156.d_b
+    }
     picture = GFX_event_ponyville
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.156"}
 
