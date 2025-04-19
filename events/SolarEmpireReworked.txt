@@ -4323,6 +4323,12 @@ country_event = { #As Luna is having a meeting with some of her staff, somepony,
                         days = 12
                         random_days = 5
                     }
+                    ROOT = {
+                        EQS_princess_luna = {
+                            set_character_flag = EQS_luna_leader_disabled
+                            set_nationality = THIS
+                        }
+                    }
                 }
             }
             else_if = {
@@ -4335,6 +4341,12 @@ country_event = { #As Luna is having a meeting with some of her staff, somepony,
                         days = 12
                         random_days = 5
                     }
+                    ROOT = {
+                        EQS_princess_luna = {
+                            set_character_flag = EQS_luna_leader_disabled
+                            set_nationality = THIS
+                        }
+                    }
                 }
             }
             else = {
@@ -4344,6 +4356,26 @@ country_event = { #As Luna is having a meeting with some of her staff, somepony,
                         days = 12
                         random_days = 5
                     }
+                    ROOT = {
+                        EQS_princess_luna = {
+                            set_character_flag = EQS_luna_leader_disabled
+                            set_nationality = THIS
+                        }
+                    }
+                }
+            }
+            every_possible_country = {
+                limit = {
+                    has_country_flag = SOL_hosting_M6
+                    NOT = { tag = HIP }
+                    NOT = { tag = RCT }
+                    NOT = { tag = MGY }
+                    exists = yes
+                }
+                country_event = {
+                    id = solarreworked.164
+                    days = 1
+                    random_days = 14
                 }
             }
         }
@@ -4364,37 +4396,12 @@ country_event = { #The Mane Six, or what's left of them, meet to try and solve a
         custom_effect_tooltip = SOL_mane_six_dip_tt
         clr_country_flag = SOL_hosting_M6
         hidden_effect = {
-            if = {
-                limit = {
-                    HIP = { has_government = democratic }
-                }
-                HIP = {
-                    country_event = {
-                        id = solarreworked.166
-                        days = 15
-                        random_days = 9
-                    }
-                }
-            }
-            else_if = {
-                limit = {
-                    RCT = { has_government = democratic }
-                }
-                RCT = {
-                    country_event = {
-                        id = solarreworked.166
-                        days = 15
-                        random_days = 9
-                    }
-                }
-            }
-            else = {
-                MGY = {
-                    country_event = {
-                        id = solarreworked.166
-                        days = 15
-                        random_days = 9
-                    }
+            every_possible_country = {
+                limit = { has_character = EQS_princess_luna }
+                country_event = {
+                    id = solarreworked.166
+                    days = 15
+                    random_days = 9
                 }
             }
         }
@@ -4403,8 +4410,19 @@ country_event = { #The Mane Six, or what's left of them, meet to try and solve a
 
 country_event = { #Luna arrives in Hippogriffia and is greeted by Novo, as one of the only harmonic monarchists left in the world, and they briefly discuss what has transpired, and that Luna now has an even harder time eventually finding a way to overthrow Daybreaker and restore her country, but Novo promises more materiel support than Cadance could
     id = solarreworked.165 #Alternate would be arriving in Rijekograd and Luna meeting with either River Swirl or Arclight and speaking of the horrors of what Daybreaker is doing to what Equestria's legacy is; River would be quite horrified, and promise to do whatever she could to help, since she had her education there and she is motivated to assist
-    title = solarreworked.165.t #Third alternate would be meeting with Somnambula, who is most concerned about the country that she helped protect more times than she can count, but Maregypt is not in a position to much more than the Crystal Empire
-    desc = solarreworked.165.d
+    title = solarreworked.165.t #Third alternate would be meeting with Somnambula, who is most concerned about the country that she helped protect more times than she can count, but Maregypt is not in a position to help much more than the Crystal Empire
+    desc = {
+        trigger = { ROOT = { tag = HIP } }
+        text = solarreworked.165.d_a
+    }
+    desc = {
+        trigger = { ROOT = { tag = RCT } }
+        text = solarreworked.165.d_b
+    }
+    desc = {
+        trigger = { ROOT = { tag = MGY } }
+        text = solarreworked.165.d_c
+    }
     picture = GFX_event_luna
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.165"}
 
@@ -4412,10 +4430,11 @@ country_event = { #Luna arrives in Hippogriffia and is greeted by Novo, as one o
 
     option = { #Our flight is at an end.
         name = solarreworked.165.a
+        custom_effect_tooltip = EQS_night_waifu_arrived_tt
         every_possible_country = {
             limit = { has_character = EQS_princess_luna }
             EQS_princess_luna = {
-                set_nationality = ROOT
+                clr_character_flag = EQS_luna_leader_disabled
             }
             set_country_flag = EQS_hosted_luna
         }
@@ -4425,7 +4444,18 @@ country_event = { #Luna arrives in Hippogriffia and is greeted by Novo, as one o
 country_event = { #The Mane Six arrive in Hippogriffia and meet up with both Novo and Skystar, as well as Luna, since she has come first, and are all the more worried about the final fate of Equestria and what will happen under Daybreaker
     id = solarreworked.166 #Alternate would be arriving in RCT and meeting Luna, who has been trying to gather support beyond River Swirl and some in the government, and feels rather defeated, since most ponies simply don't care about what is happening half a world away
     title = solarreworked.166.t #Third alternate would be arriving in MGY and catching up with Somnambula and Luna, who both speak about how what Maregypt can do is minimal, but they must still hope that they can one day free Equestria from Daybreaker's grip
-    desc = solarreworked.166.d
+    desc = {
+        trigger = { ROOT = { tag = HIP } }
+        text = solarreworked.166.d_a
+    }
+    desc = {
+        trigger = { ROOT = { tag = RCT } }
+        text = solarreworked.166.d_b
+    }
+    desc = {
+        trigger = { ROOT = { tag = MGY } }
+        text = solarreworked.166.d_c
+    }
     picture = GFX_event_aris_and_beach
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.166"}
 
@@ -4923,6 +4953,128 @@ country_event = {
             add_attack = 1
             gain_xp = 600
         }
+        hidden_effect = {
+            country_event = {
+                id = solarreworked.225
+                days = 365
+                random_days = 180
+            }
+        }
+    }
+}
+
+country_event = {
+    id = solarreworked.225
+    title = solarreworked.225.t
+    desc = solarreworked.225.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.225"}
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.225.a
+        hidden_effect = {
+            country_event = {
+                id = solarreworked.226
+                days = 30
+                random_days = 15
+            }
+        }
+    }
+}
+
+country_event = {
+    id = solarreworked.226
+    title = solarreworked.226.t
+    desc = solarreworked.226.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.226"}
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.226.a
+        hidden_effect = {
+            country_event = {
+                id = solarreworked.227
+                days = 30
+                random_days = 15
+            }
+        }
+    }
+}
+
+country_event = {
+    id = solarreworked.227
+    title = solarreworked.227.t
+    desc = solarreworked.227.d
+    picture = GFX_event_solarempire
+    immediate = {
+        log = "[GetDateText]: [ROOT.GetName]: event solarreworked.227"
+        country_event = {
+            id = solarreworked.228
+            days = 1
+        }
+    }
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.227.a
+        set_country_flag = SOL_tempy_good
+    }
+    option = {
+        name = solarreworked.227.b
+        set_country_flag = SOL_tempy_bad
+    }
+}
+
+country_event = {
+    id = solarreworked.228
+    title = solarreworked.228.t
+    desc = {
+        trigger = { has_country_flag = SOL_tempy_good }
+        text = solarreworked.228.d_a
+    }
+    desc = {
+        trigger = { has_country_flag = SOL_tempy_bad }
+        text = solarreworked.228.d_b
+    }
+    picture = GFX_event_solarempire
+    immediate = {
+        log = "[GetDateText]: [ROOT.GetName]: event solarreworked.228"
+        country_event = {
+            id = solarreworked.229
+            days = 180
+            random_days = 90
+        }
+    }
+
+    is_triggered_only = yes
+
+    ###Eventually give traits
+    option = {
+        name = solarreworked.228.a
+        trigger = { has_country_flag = SOL_tempy_good }
+    }
+    option = {
+        name = solarreworked.228.b
+        trigger = { has_country_flag = SOL_tempy_bad }
+    }
+}
+
+country_event = {
+    id = solarreworked.229
+    title = solarreworked.229.t
+    desc = solarreworked.229.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.229"}
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.229.a
     }
 }
 

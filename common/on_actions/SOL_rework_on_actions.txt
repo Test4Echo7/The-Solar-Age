@@ -604,22 +604,14 @@ on_actions = {
                         NOT = { tag = HIP }
                         NOT = { tag = RCT }
                         NOT = { tag = MGY }
+                        NOT = { tag = NLR }
+                        NOT = { tag = EQS }
+                        NOT = { tag = event_target:equestria }
+                        exists = yes
                     }
                     country_event = {
                         id = solarreworked.163
                         random_days = 14
-                    }
-                }
-                every_possible_country = {
-                    limit = {
-                        has_country_flag = SOL_hosting_M6
-                        NOT = { tag = HIP }
-                        NOT = { tag = RCT }
-                        NOT = { tag = MGY }
-                    }
-                    country_event = {
-                        id = solarreworked.164
-                        random_days = 30
                     }
                 }
                 set_global_flag = SOL_attempted_enemy_assassinations
