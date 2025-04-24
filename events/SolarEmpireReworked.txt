@@ -5098,11 +5098,11 @@ country_event = { #If Sunrise hasn't ascended, then either an inquisitor, if the
     title = solarreworked.231.t
     desc = {
         trigger = { has_completed_focus = SOL_god_empress }
-        text = solarreworked.231.da
+        text = solarreworked.231.d_a
     }
     desc = {
         trigger = { NOT = { has_completed_focus = SOL_god_empress } }
-        text = solarreworked.231.db
+        text = solarreworked.231.d_b
     }
     picture = GFX_event_solarempire
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.231"}
@@ -5478,11 +5478,11 @@ country_event = { #Cadance gives into the threats from either Nova or the insinu
     title = solarreworked.243.t
     desc = {
         trigger = { has_completed_focus = SOL_god_empress }
-        text = solarreworked.243.da
+        text = solarreworked.243.d_a
     }
     desc = {
         trigger = { NOT = { has_completed_focus = SOL_god_empress } }
-        text = solarreworked.243.db
+        text = solarreworked.243.d_b
     }
     picture = GFX_event_solarempire
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.243"}
@@ -5506,11 +5506,11 @@ country_event = { #Cadance refuses to surrender to Daybreaker, despite the threa
     title = solarreworked.244.t
     desc = {
         trigger = { has_completed_focus = SOL_god_empress }
-        text = solarreworked.244.da
+        text = solarreworked.244.d_a
     }
     desc = {
         trigger = { NOT = { has_completed_focus = SOL_god_empress } }
-        text = solarreworked.244.db
+        text = solarreworked.244.d_b
     }
     picture = GFX_event_solarempire
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.244"}
@@ -5787,7 +5787,7 @@ country_event = { #Daybreaker meets with Neighsay, whom she has summoned in orde
     }
 }
 
-country_event = { #Neighsay is surprised when Daybreaker enters his office, as he is in the middle of paperwork, which has been caused by her new rule changes, and she states that she heard he had issues, and wanted to hear them, and he does give her a piece of his mind, alhtough she shuts it all down when she implies that she will replace him with somepony incompetent who will follow her, and it scares him into submission
+country_event = { #Neighsay is surprised when Daybreaker enters his office, as he is in the middle of paperwork, which has been caused by her new rule changes, and she states that she heard he had issues, and wanted to hear them, and he does give her a piece of his mind, although she shuts it all down when she implies that she will replace him with somepony incompetent who will follow her, and it scares him into submission
     id = solarreworked.268
     title = solarreworked.268.t
     desc = solarreworked.268.d
@@ -7771,15 +7771,25 @@ country_event = { #Culmination event for Daybreaker, where she has her reward (t
     title = solarreworked.399.t
     desc = {
         trigger = { has_completed_focus = SOL_god_empress }
-        text = solarreworked.399.da
+        text = solarreworked.399.d_a
     }
     desc = {
         trigger = { has_completed_focus = SOL_empress_mother }
-        text = solarreworked.399.db
+        text = solarreworked.399.d_b
     }
     desc = {
-        trigger = { has_completed_focus = SOL_empress_protector }
-        text = solarreworked.399.dc
+        trigger = {
+            has_completed_focus = SOL_empress_protector
+            has_character = EQS_princess_luna
+        }
+        text = solarreworked.399.d_c
+    }
+    desc = {
+        trigger = {
+            has_completed_focus = SOL_empress_protector
+            NOT = { has_character = EQS_princess_luna }
+        }
+        text = solarreworked.399.d_d
     }
     picture = GFX_event_daybreaker_triumphant
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.399"}
