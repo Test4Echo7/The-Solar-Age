@@ -3771,6 +3771,29 @@ country_event = {
     }
 }
 
+country_event = { #Queen Argynnis comes in disguise at first to plead for Vraks' further independence in exchange for her total loyalty, as Daybreaker is more mighty than Chrysalis or any other changelings
+    id = solarreworked.146
+    title = solarreworked.146.t
+    desc = solarreworked.146.d
+    picture = GFX_event_queen_argynnis
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.146"}
+
+    is_triggered_only = yes
+
+    option = { #There is clearly something more at play. Enjoy your new supervision instead.
+        name = solarreworked.146.a
+        add_stability = 0.05
+        add_political_power = 50
+    }
+    option = { #A pet changeling? I could get used to this idea.
+        name = solarreworked.146.b
+        set_country_flag = SOL_bugs_in_the_belfry
+        add_stability = -0.1
+        add_war_support = -0.15
+        custom_effect_tooltip = queen_argynnis_stats_tp
+    }
+}
+
 ###Luna and M6 stuff###
 country_event = { #Luna arrives in Ponyville, after leaving the front when she hears about how Canterlot going dark, despite the war being actively controlled, and that there have been more and more concerning commands from Canterlot before that about what to do with the changelings; she speaks briefly with Twilight about her fears that something has gone wrong with Celestia, and she states that she has no clue what to expect, but that Twilight must be ready to flee with her friends
     id = solarreworked.150
@@ -7057,7 +7080,7 @@ country_event = { #The queens that supported Chrysalis are brought before Daybre
         add_ideas = SOL_united_queens
         hidden_effect = {
             country_event = {
-                id = solarreworked.520
+                id = solarreworked.146
                 days = 21
                 random_days = 14
             }
@@ -7861,7 +7884,7 @@ country_event = { #The leader of PCB is offered a choice of either annhilation o
         set_country_flag = SOL_annexation_blocker
         hidden_effect = {
             country_event = {
-                id = solarreworked.527
+                id = solarreworked.526
                 days = 1825
                 random_days = 365
             }
@@ -8693,11 +8716,11 @@ country_event = { #EQC receives a notification that Daybreaker has personally se
     title = solarreworked.439.t
     desc = {
         trigger = { EQS = { has_country_flag = SOL_chose_arcane } }
-        text = solarreworked.439.da
+        text = solarreworked.439.d_a
     }
     desc = {
         trigger = { EQS = { NOT = { has_country_flag = SOL_chose_arcane } } }
-        text = solarreworked.439.db
+        text = solarreworked.439.d_b
     }
     picture = GFX_event_solarempire
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.439"}
@@ -8714,6 +8737,14 @@ country_event = { #EQC receives a notification that Daybreaker has personally se
 			set_country_flag = EQC_SOL_leader_chosen
 			load_focus_tree = eqc_sol_focus
 		}
+		hidden_effect = {
+            set_global_flag = SOL_chose_EQC_leader
+            country_event = {
+                id = solarreworked.526
+                days = 1825
+                random_days = 365
+            }
+        }
 	}
 	option = { #Get lost
         trigger = { EQS = { NOT = { has_country_flag = SOL_chose_arcane } } }
@@ -8773,7 +8804,15 @@ country_event = { #EQC receives a notification that Daybreaker has personally se
 			set_cosmetic_tag = EQC_SOL
 		}
 		set_country_flag = EQC_SOL_leader_chosen
-		hidden_effect = { set_global_flag = SOL_chose_EQC_leader }
+		set_country_flag = SOL_annexation_blocker
+		hidden_effect = {
+            set_global_flag = SOL_chose_EQC_leader
+            country_event = {
+                id = solarreworked.526
+                days = 1825
+                random_days = 365
+            }
+        }
 	}
 	option = { #No!
         trigger = {
@@ -11489,7 +11528,14 @@ country_event = { #EQC asks for annexation into SOL
 country_event = { #EQC gets told that they are still going to be a colony, and that they will be put as the pedestal of what can be achieved; either Jet Set is a bit worried since he'll still be watched closely, or Arcane is excited to still flex her governmental muscles
     id = solarreworked.509
     title = solarreworked.509.t
-    desc = solarreworked.509.d
+    desc = {
+        trigger = { has_country_leader = { character = EQC_jet_set ruling_only = yes } }
+        text = solarreworked.509.d_a
+    }
+    desc = {
+        trigger = { has_country_leader = { character = EQS_SOL_arcane_nova ruling_only = yes } }
+        text = solarreworked.509.d_b
+    }
     picture = GFX_event_solarempire
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.509"}
 
@@ -11845,32 +11891,9 @@ country_event = { #SOL gets back KLG's answer and will either annex it, give it 
     }
 }
 
-country_event = { #Queen Argynnis comes in disguise at first to plead for Vraks' further independence in exchange for her total loyalty, as Daybreaker is more mighty than Chrysalis or any other changelings
-    id = solarreworked.520
-    title = solarreworked.520.t
-    desc = solarreworked.520.d
-    picture = GFX_event_queen_argynnis
-    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.520"}
-
-    is_triggered_only = yes
-
-    option = { #There is clearly something more at play. Enjoy your new supervision instead.
-        name = solarreworked.520.a
-        add_stability = 0.05
-        add_political_power = 50
-    }
-    option = { #A pet changeling? I could get used to this idea.
-        name = solarreworked.520.b
-        set_country_flag = SOL_bugs_in_the_belfry
-        add_stability = -0.1
-        add_war_support = -0.15
-        custom_effect_tooltip = queen_argynnis_stats_tp
-    }
-}
-
 country_event = { #Hidden event that will move all foreign characters to their respective countries to avoid wonkiness and also editing other country's history files
-    id = solarreworked.521
-    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.521"}
+    id = solarreworked.520
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.520"}
 
     hidden = yes
     is_triggered_only = yes
@@ -11894,16 +11917,16 @@ country_event = { #Hidden event that will move all foreign characters to their r
 }
 
 country_event = { #Short event of SOL demanding that the SRS territory which NTR has claimed be given, since it's pony land
-    id = solarreworked.522
-    title = solarreworked.522.t
-    desc = solarreworked.522.d
+    id = solarreworked.521
+    title = solarreworked.521.t
+    desc = solarreworked.521.d
     picture = GFX_event_solarempire
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.522"}
 
     is_triggered_only = yes
 
     option = { #It is their right and only fair.
-        name = solarreworked.522.a
+        name = solarreworked.521.a
         ai_chance = {
             factor = 2
         }
@@ -11921,14 +11944,14 @@ country_event = { #Short event of SOL demanding that the SRS territory which NTR
         hidden_effect = {
             EQS = {
                 country_event = {
-                    id = solarreworked.523
+                    id = solarreworked.522
                     days = 3
                 }
             }
         }
     }
     option = { #It is ours! Who are they to demand this?!
-        name = solarreworked.522.b
+        name = solarreworked.521.b
         ai_chance = {
             factor = 1
             modifier = {
@@ -11940,7 +11963,7 @@ country_event = { #Short event of SOL demanding that the SRS territory which NTR
         hidden_effect = {
             EQS = {
                 country_event = {
-                    id = solarreworked.523
+                    id = solarreworked.522
                     days = 3
                 }
             }
@@ -11949,16 +11972,16 @@ country_event = { #Short event of SOL demanding that the SRS territory which NTR
 }
 
 country_event = { #SOL receives GRD's response about their demands
-    id = solarreworked.523
-    title = solarreworked.523.t
-    desc = solarreworked.523.d
+    id = solarreworked.522
+    title = solarreworked.522.t
+    desc = solarreworked.522.d
     picture = GFX_event_solarempire
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.523"}
 
     is_triggered_only = yes
 
     option = { #Good to see they're reasonable.
-        name = solarreworked.523.a
+        name = solarreworked.522.a
         trigger = { GRD = { has_country_flag = SOL_GRD_submitted_territory } }
         FROM = { clr_country_flag = SOL_GRD_submitted_territory }
         every_state = {
@@ -11971,7 +11994,7 @@ country_event = { #SOL receives GRD's response about their demands
         }
     }
     option = { #We will have it back, one way or another...
-        name = solarreworked.523.b
+        name = solarreworked.522.b
         trigger = { GRD = { has_country_flag = SOL_GRD_refused_territory } }
         FROM = { clr_country_flag = SOL_GRD_refused_territory }
         add_political_power = -25
@@ -11979,19 +12002,19 @@ country_event = { #SOL receives GRD's response about their demands
 }
 
 country_event = { #PCB asks for annexation into SOL
-    id = solarreworked.524
-    title = solarreworked.524.t
-    desc = solarreworked.524.d
+    id = solarreworked.523
+    title = solarreworked.523.t
+    desc = solarreworked.523.d
     picture = GFX_event_solarempire
-    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.524"}
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.523"}
 
     is_triggered_only = yes
 
     option = { #The Empress need not be bothered with such a small addition. They can remain under [FROM.GetLeader].
-        name = solarreworked.524.a
+        name = solarreworked.523.a
         FROM = {
             country_event = {
-                id = solarreworked.525
+                id = solarreworked.524
                 days = 1
             }
         }
@@ -12008,7 +12031,7 @@ country_event = { #PCB asks for annexation into SOL
         }
     }
     option = { #If ponies wish to be directly under the Empress then so be it.
-        name = solarreworked.524.b
+        name = solarreworked.523.b
         annex_country = {
             target = FROM
             transfer_troops = yes
@@ -12033,24 +12056,24 @@ country_event = { #PCB asks for annexation into SOL
 }
 
 country_event = { #PCB is informed that there is little reason for direct annexation into the Empire, and that they will be kept as another model colony as true, loyal Solarists; Ponse is worried because he'll still be closely watched by Daybreaker and Red Tide is just annoyed she has to stay and suffer in the tropical heat
-    id = solarreworked.525
-    title = solarreworked.525.t
-    desc = solarreworked.525.d
+    id = solarreworked.524
+    title = solarreworked.524.t
+    desc = solarreworked.524.d
     picture = GFX_event_solarempire
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.525"}
 
     is_triggered_only = yes
 
     option = { #It would be nice if she had reconsidered.
-        name = solarreworked.525.a
+        name = solarreworked.524.a
         add_ideas = SOL_model_imperial_colony
     }
 }
 
 country_event = { #Hidden event for removing the entity created by Project Helios, as it otherwise plays every time the game is loaded
-    id = solarreworked.526
+    id = solarreworked.525
     hidden = yes
-    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.526"}
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.525"}
 
     is_triggered_only = yes
 
@@ -12060,9 +12083,9 @@ country_event = { #Hidden event for removing the entity created by Project Helio
 }
 
 country_event = { #Removes the blocker for preventing asking for annexation by SOL for both PCB and EQC
-    id = solarreworked.527
+    id = solarreworked.526
     hidden = yes
-    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.527"}
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.526"}
 
     is_triggered_only = yes
 

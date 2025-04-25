@@ -1748,7 +1748,7 @@ EQS_GRD_assistance = {
         complete_effect = {
             log = "[GetDateText]: [ROOT.GetName] Decision EQS_demand_return_of_pony_lands"
             GRD = {
-                country_event = solarreworked.522
+                country_event = solarreworked.521
             }
         }
     }

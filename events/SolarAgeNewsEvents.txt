@@ -88,7 +88,7 @@ news_event = { #Declaring the new Solar Empire
 	}
 }
 
-news_event = { #Conflict between NLR and SOL between Daybreaker and NMM, with stheir battle leaving destruction everywhere
+news_event = { #Conflict between NLR and SOL between Daybreaker and NMM, with their battle leaving destruction everywhere
 	id = news.solarage.3
 	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.3"}
 	title = news.solarage.3.t
@@ -127,6 +127,72 @@ news_event = { #Conflict between NLR and SOL between Daybreaker and NMM, with st
 				tag = BAT
 			}
 		}
+	}
+}
+
+news_event = {
+	id = news.solarage.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.4"}
+	title = news.solarage.4.t
+	desc = news.solarage.4.d
+	picture = GFX_news_celestia_nuke
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = news.solarage.4.a
+		trigger = {
+			tag = event_target:solar_empire
+		}
+	}
+	option = {
+		name = news.solarage.4.b
+		trigger = {
+			NOT = { tag = event_target:solar_empire }
+		}
+	}
+}
+
+news_event = {
+	id = news.solarage.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.5"}
+	title = news.solarage.5.t
+	desc = news.solarage.5.d
+	picture = GFX_news_coloratura_performing
+
+	major = yes
+
+	trigger = {
+		has_global_flag = octavia_performs
+		3 = { is_controlled_by = EQS }
+		EQS = {
+			has_war_with = CHN
+			surrender_progress > 0.15
+		}
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = news.solarage.5.a
+	}
+}
+
+news_event = {
+	id = news.solarage.10
+	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.10"}
+	title = news.solarage.10.t
+	desc = news.solarage.10.d
+	picture = GFX_news_forever_sun
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = news.solarage.10.a
 	}
 }
 
@@ -206,8 +272,15 @@ news_event = { #
 			NOT = { tag = event_target:solar_empire }
 		}
 	}
-	option = { #
+	option = {
 		name = news.solarage.22.b
+		triger = {
+			tag = BOI
+			owns_state = 382
+		}
+	}
+	option = { #
+		name = news.solarage.22.c
 		trigger = {
 			NOT = { tag = event_target:solar_empire }
 		}
@@ -231,8 +304,15 @@ news_event = { #
 			tag = event_target:solar_empire
 		}
 	}
-	option = { #
+	option = {
 		name = news.solarage.23.b
+		triger = {
+			tag = GRD
+			owns_state = 389
+		}
+	}
+	option = { #
+		name = news.solarage.23.c
 		trigger = {
 			NOT = { tag = event_target:solar_empire }
 		}
@@ -256,8 +336,15 @@ news_event = { #
 			tag = event_target:solar_empire
 		}
 	}
-	option = { #
+	option = {
 		name = news.solarage.24.b
+		triger = {
+			tag = JER
+			owns_state = 377
+		}
+	}
+	option = { #
+		name = news.solarage.24.c
 		trigger = {
 			NOT = { tag = event_target:solar_empire }
 		}
@@ -281,8 +368,15 @@ news_event = { #
 			tag = event_target:solar_empire
 		}
 	}
-	option = { #
+	option = {
 		name = news.solarage.25.b
+		triger = {
+			tag = WNG
+			owns_state = 375
+		}
+	}
+	option = { #
+		name = news.solarage.25.c
 		trigger = {
 			NOT = { tag = event_target:solar_empire }
 		}
@@ -306,8 +400,15 @@ news_event = { #
 			tag = event_target:solar_empire
 		}
 	}
-	option = { #
+	option = {
 		name = news.solarage.26.b
+		triger = {
+			tag = DED
+			owns_state = 415
+		}
+	}
+	option = { #
+		name = news.solarage.26.c
 		trigger = {
 			NOT = { tag = event_target:solar_empire }
 		}
@@ -331,8 +432,15 @@ news_event = { #
 			tag = event_target:solar_empire
 		}
 	}
-	option = { #
+	option = {
 		name = news.solarage.27.b
+		triger = {
+			tag = TRD
+			owns_state = 381
+		}
+	}
+	option = { #
+		name = news.solarage.27.c
 		trigger = {
 			NOT = { tag = event_target:solar_empire }
 		}
@@ -381,8 +489,15 @@ news_event = { #
 			tag = event_target:solar_empire
 		}
 	}
-	option = { #
+	option = {
 		name = news.solarage.29.b
+		triger = {
+			tag = RCT
+			owns_state = 619
+		}
+	}
+	option = { #
+		name = news.solarage.29.c
 		trigger = {
 			NOT = { tag = event_target:solar_empire }
 		}
@@ -393,7 +508,28 @@ news_event = { #
 	id = news.solarage.30
 	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.30"}
 	title = news.solarage.30.t
-	desc = news.solarage.30.d
+	desc = {
+		trigger = {
+			CRY = {
+				has_idea = crystal_heart
+				exists = yes
+			}
+		}
+		text = news.solarage.30.d_a
+	}
+	desc = {
+		trigger = {
+			CRY = {
+				OR = {
+					NOT = {
+						has_idea = crystal_heart
+					}
+					exists = no
+				}
+			}
+		}
+		text = news.solarage.30.d_b
+	}
 	picture = GFX_news_daybreaker
 
 	major = yes
@@ -404,12 +540,58 @@ news_event = { #
 		name = news.solarage.30.a
 		trigger = {
 			tag = event_target:solar_empire
+			CRY = {
+				has_idea = crystal_heart
+				exists = yes
+			}
 		}
 	}
 	option = { #
 		name = news.solarage.30.b
 		trigger = {
+			tag = CRY
+			has_idea = crystal_heart
+		}
+	}
+	option = { #
+		name = news.solarage.30.c
+		trigger = {
 			NOT = { tag = event_target:solar_empire }
+			CRY = {
+				has_idea = crystal_heart
+				exists = yes
+			}
+		}
+	}
+	option = { #
+		name = news.solarage.30.d
+		trigger = {
+			tag = event_target:solar_empire
+			CRY = {
+				OR = {
+					NOT = { has_idea = crystal_heart }
+				}
+				exists = no
+			}
+		}
+	}
+	option = { #
+		name = news.solarage.30.e
+		trigger = {
+			tag = CRY
+			NOT = { has_idea = crystal_heart }
+		}
+	}
+	option = { #
+		name = news.solarage.30.f
+		trigger = {
+			NOT = { tag = event_target:solar_empire }
+			CRY = {
+				OR = {
+					NOT = { has_idea = crystal_heart }
+				}
+				exists = no
+			}
 		}
 	}
 }
@@ -431,8 +613,15 @@ news_event = { #
 			tag = event_target:solar_empire
 		}
 	}
-	option = { #
+	option = {
 		name = news.solarage.31.b
+		triger = {
+			tag = STG
+			owns_state = 153
+		}
+	}
+	option = { #
+		name = news.solarage.31.c
 		trigger = {
 			NOT = { tag = event_target:solar_empire }
 		}
@@ -456,8 +645,15 @@ news_event = { #
 			tag = event_target:solar_empire
 		}
 	}
-	option = { #
+	option = {
 		name = news.solarage.32.b
+		triger = {
+			tag = CTH
+			owns_state = 875
+		}
+	}
+	option = { #
+		name = news.solarage.32.c
 		trigger = {
 			NOT = { tag = event_target:solar_empire }
 		}
@@ -481,8 +677,15 @@ news_event = { #
 			tag = event_target:solar_empire
 		}
 	}
-	option = { #
+	option = {
 		name = news.solarage.33.b
+		triger = {
+			tag = HIP
+			owns_state = 1165
+		}
+	}
+	option = { #
+		name = news.solarage.33.c
 		trigger = {
 			NOT = { tag = event_target:solar_empire }
 		}
@@ -506,8 +709,15 @@ news_event = { #
 			tag = event_target:solar_empire
 		}
 	}
-	option = { #
+	option = {
 		name = news.solarage.34.b
+		triger = {
+			tag = BAT
+			owns_state = 712
+		}
+	}
+	option = { #
+		name = news.solarage.34.c
 		trigger = {
 			NOT = { tag = event_target:solar_empire }
 		}

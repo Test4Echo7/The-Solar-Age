@@ -9,7 +9,7 @@ political_actions = {
         complete_effect = {
             log = "[GetTimeDateText]: [ROOT.GetName]: decision PCB_request_annexation"
             custom_effect_tooltip = EQC_SOL_game_over_man_tt
-            OVERLORD = { country_event = solarreworked.524 }
+            OVERLORD = { country_event = solarreworked.523 }
         }
         ai_will_do = {
             base = 0

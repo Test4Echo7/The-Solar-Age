@@ -21,7 +21,7 @@ SOL_helios_effect = {
     #Long line of ifs for the good, ol' laser firer
     hidden_effect = {
 		ROOT = {
-			country_event = { id = solarreworked.526 days = 30 } #One month as animations play at a fixed speed, and therefore, require a delay before being removed. Not a perfect fix, but the only one that won't look bad in gameplay
+			country_event = { id = solarreworked.525 days = 30 } #One month as animations play at a fixed speed, and therefore, require a delay before being removed. Not a perfect fix, but the only one that won't look bad in gameplay
 		}
         if = {
             limit = { NOT = { has_global_flag = SOL_helios_first_used } }

@@ -500,7 +500,7 @@ set_autonomy = {
 }
 
 country_event = {
-	id = solarreworked.521
+	id = solarreworked.520
 	days = 1
 }
 
