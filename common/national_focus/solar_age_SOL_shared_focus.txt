@@ -1439,6 +1439,11 @@ shared_focus = {
 				}
 			}
 			mark_focus_tree_layout_dirty = yes
+			country_event = {
+				id = solarreworked.333
+				days = 180
+				random_days = 90
+			}
 		}
 		country_event = {
 			id = solarempire.45

@@ -25,7 +25,8 @@ characters = {
 		}
 
 		corps_commander = {
-			traits = { pony_race_trait artillery_officer arrow }
+			#traits = { pony_race_trait artillery_officer arrow }
+			traits = { pony_race_trait artillery_officer excitable_pone }
 			skill = 2
 			attack_skill = 1
 			defense_skill = 3

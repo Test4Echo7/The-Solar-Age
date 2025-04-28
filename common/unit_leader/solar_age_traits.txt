@@ -18,7 +18,7 @@ leader_traits = {
             experience_gain_factor = 0.66
         }
 
-        ai_will_do = { factor = 1 }
+        new_commander_weight = { factor = 0 }
     }
     bearer_of_the_sun = {
         type = all
@@ -43,7 +43,7 @@ leader_traits = {
             experience_gain_factor = -0.25
         }
 
-        ai_will_do = { factor = 1 }
+        new_commander_weight = { factor = 0 }
     }
     ponykinds_goddess = {
         type = all
@@ -57,7 +57,7 @@ leader_traits = {
         non_shared_modifier = {
             experience_gain_factor = -0.1
         }
-        ai_will_do = { factor = 1 }
+        new_commander_weight = { factor = 0 }
     }
     hoof_of_iron = {
         type = all
@@ -69,7 +69,7 @@ leader_traits = {
             army_speed_factor = 0.1
             coordination_bonus = 0.05
         }
-        ai_will_do = { factor = 1 }
+        new_commander_weight = { factor = 0 }
     }
     savior_of_ponykind = {
         type = all
@@ -82,7 +82,7 @@ leader_traits = {
             land_reinforce_rate = 0.02
             coordination_bonus = 0.03
         }
-        ai_will_do = { factor = 1 }
+        new_commander_weight = { factor = 0 }
     }
     alicorn_of_fury = {
         type = all
@@ -96,7 +96,7 @@ leader_traits = {
             army_speed_factor = 0.1
             winter_attrition_factor = -0.25
         }
-        ai_will_do = { factor = 1 }
+        new_commander_weight = { factor = 0 }
     }
     alicorn_of_desire = {
         type = all
@@ -109,7 +109,7 @@ leader_traits = {
             initiative_factor = 0.1
             winter_attrition_factor = -0.1
         }
-        ai_will_do = { factor = 1 }
+        new_commander_weight = { factor = 0 }
     }
     faithful_assistant = {
         type = all
@@ -123,7 +123,7 @@ leader_traits = {
         non_shared_modifier = {
             experience_gain_factor = 0.05
         }
-        ai_will_do = { factor = 1 }
+        new_commander_weight = { factor = 0 }
     }
     sunrise_sparkle_t_alt = {
         type = all
@@ -139,7 +139,19 @@ leader_traits = {
         non_shared_modifier = {
             experience_gain_factor = 0.15
         }
-        ai_will_do = { factor = 1 }
+        new_commander_weight = { factor = 0 }
+    }
+    excitable_pone = {
+        type = all
+        trait_type = personality_trait
+        allowed = { always = no }
+        modifier = {
+            army_speed_factor = 0.075
+            army_morale_factor = 0.03
+            army_org_factor = -0.05
+            wounded_chance_factor = 0.25
+        }
+        new_commander_weight = { factor = 0 }
     }
     ###NLR NMM Field Marshal Trait###
     empress_of_the_night = {
@@ -156,6 +168,7 @@ leader_traits = {
                 defence = 0.05
             }
         }
+        new_commander_weight = { factor = 0 }
     }
 
     ###Special###
@@ -167,7 +180,7 @@ leader_traits = {
         modifier = {
             breakthrough_factor = 0.75
         }
-        ai_will_do = { factor = 1 }
+        new_commander_weight = { factor = 0 }
     }
     magic_defense = {
         type = all
@@ -177,7 +190,7 @@ leader_traits = {
         modifier = {
             army_defence_factor = 2
         }
-        ai_will_do = { factor = 1 }
+        new_commander_weight = { factor = 0 }
     }
     magic_drained = {
         type = all
@@ -196,6 +209,6 @@ leader_traits = {
         non_shared_modifier = {
             experience_gain_factor = -0.1
         }
-        ai_will_do = { factor = 1 }
+        new_commander_weight = { factor = 0 }
     }
 }

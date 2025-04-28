@@ -6707,6 +6707,62 @@ country_event = { #Follow a citizen as they are brought before Daybreaker to ask
     }
 }
 
+country_event = {
+    id = solarreworked.333
+    title = solarreworked.333.t
+    desc = solarreworked.333.d
+    picture = GFX_event_daybreaker_throne
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.333"}
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.333.a
+        hidden_effect = {
+            country_event = {
+                id = solarreworked.334
+                days = 14
+                random_days = 14
+            }
+        }
+    }
+}
+
+country_event = {
+    id = solarreworked.334
+    title = solarreworked.334.t
+    desc = solarreworked.334.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.334"}
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.334.a
+        hidden_effect = {
+            country_event = {
+                id = solarreworked.335
+                days = 28
+                random_days = 14
+            }
+        }
+    }
+}
+
+country_event = {
+    id = solarreworked.335
+    title = solarreworked.335.t
+    desc = solarreworked.335.d
+    picture = GFX_event_daybreaker_throne
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.335"}
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.335.a
+    }
+}
+
 ###Fallen Hero###
 country_event = { #A series of laws are read aloud, and end with an official signature of Daybreaker, which speak about how pony society will be changing and adapting to the new order, and that she will ensure that ponies will do various things, such as community service, free labor for others, mandatory donations to charities, etc., which will ultimately better society to her vision and Harmony's vision
     id = solarreworked.340

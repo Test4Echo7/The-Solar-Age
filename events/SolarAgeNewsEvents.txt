@@ -201,7 +201,7 @@ news_event = { #Kaboom? Kaboom.
 	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.20"}
 	title = news.solarage.20.t
 	desc = news.solarage.20.d
-	picture = GFX_news_daybreaker
+	picture = GFX_news_celestia_nuke
 
 	major = yes
 
@@ -226,7 +226,7 @@ news_event = { #Vesalipolis? More like Vesawlipolis, right?
 	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.21"}
 	title = news.solarage.21.t
 	desc = news.solarage.21.d
-	picture = GFX_news_daybreaker
+	picture = GFX_news_celestia_nuke
 
 	major = yes
 
@@ -260,7 +260,7 @@ news_event = { #
 	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.22"}
 	title = news.solarage.22.t
 	desc = news.solarage.22.d
-	picture = GFX_news_daybreaker
+	picture = GFX_news_celestia_nuke
 
 	major = yes
 
@@ -292,7 +292,7 @@ news_event = { #
 	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.23"}
 	title = news.solarage.23.t
 	desc = news.solarage.23.d
-	picture = GFX_news_daybreaker
+	picture = GFX_news_celestia_nuke
 
 	major = yes
 
@@ -324,7 +324,7 @@ news_event = { #
 	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.24"}
 	title = news.solarage.24.t
 	desc = news.solarage.24.d
-	picture = GFX_news_daybreaker
+	picture = GFX_news_celestia_nuke
 
 	major = yes
 
@@ -356,7 +356,7 @@ news_event = { #
 	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.25"}
 	title = news.solarage.25.t
 	desc = news.solarage.25.d
-	picture = GFX_news_daybreaker
+	picture = GFX_news_celestia_nuke
 
 	major = yes
 
@@ -388,7 +388,7 @@ news_event = { #
 	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.26"}
 	title = news.solarage.26.t
 	desc = news.solarage.26.d
-	picture = GFX_news_daybreaker
+	picture = GFX_news_celestia_nuke
 
 	major = yes
 
@@ -420,7 +420,7 @@ news_event = { #
 	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.27"}
 	title = news.solarage.27.t
 	desc = news.solarage.27.d
-	picture = GFX_news_daybreaker
+	picture = GFX_news_celestia_nuke
 
 	major = yes
 
@@ -452,7 +452,7 @@ news_event = { #
 	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.28"}
 	title = news.solarage.28.t
 	desc = news.solarage.28.d
-	picture = GFX_news_daybreaker
+	picture = GFX_news_celestia_nuke
 
 	major = yes
 
@@ -477,7 +477,7 @@ news_event = { #
 	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.29"}
 	title = news.solarage.29.t
 	desc = news.solarage.29.d
-	picture = GFX_news_daybreaker
+	picture = GFX_news_celestia_nuke
 
 	major = yes
 
@@ -530,7 +530,7 @@ news_event = { #
 		}
 		text = news.solarage.30.d_b
 	}
-	picture = GFX_news_daybreaker
+	picture = GFX_news_celestia_nuke
 
 	major = yes
 
@@ -601,7 +601,7 @@ news_event = { #
 	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.31"}
 	title = news.solarage.31.t
 	desc = news.solarage.31.d
-	picture = GFX_news_daybreaker
+	picture = GFX_news_celestia_nuke
 
 	major = yes
 
@@ -633,7 +633,7 @@ news_event = { #
 	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.32"}
 	title = news.solarage.32.t
 	desc = news.solarage.32.d
-	picture = GFX_news_daybreaker
+	picture = GFX_news_celestia_nuke
 
 	major = yes
 
@@ -665,7 +665,7 @@ news_event = { #
 	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.33"}
 	title = news.solarage.33.t
 	desc = news.solarage.33.d
-	picture = GFX_news_daybreaker
+	picture = GFX_news_celestia_nuke
 
 	major = yes
 
@@ -697,7 +697,7 @@ news_event = { #
 	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.34"}
 	title = news.solarage.34.t
 	desc = news.solarage.34.d
-	picture = GFX_news_daybreaker
+	picture = GFX_news_celestia_nuke
 
 	major = yes
 
