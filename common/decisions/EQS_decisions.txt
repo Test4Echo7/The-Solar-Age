@@ -1762,7 +1762,7 @@ political_actions = {
 		fire_only_once = yes
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision SOL_order_sunrise_to_front"
-			country_event = solarreworked.349
+			country_event = solarreworked.408
 		}
 	}
 	SOL_remove_temporary_laws = {

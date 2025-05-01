@@ -628,6 +628,19 @@ on_actions = {
                 }
                 country_event = solarreworked.259
             }
+            if = {
+                limit = {
+                    has_completed_focus = SOL_solaris_inquisitionis
+                    has_global_flag = SOL_twilight_converted
+                    NOT = { has_country_flag = SOL_god_empress_flavor }
+                }
+                country_event = {
+                    id = solarreworked.315
+                    days = 60
+                    random_days = 90
+                }
+                set_country_flag = SOL_god_empress_flavor
+            }
             #Transferring impassable states to correct puppets
             if = {
                 limit = {

@@ -319,7 +319,7 @@ shared_focus = {
 	completion_reward = {
         log = "[GetDateText]: [Root.GetName]: Focus SOL_promise_swift_end"
         ###Daybreaker hosts a speech outside Canterlot castle, where ponies are frightened of what is happening, and she promises that she will always be with them, unlike her traitor sister, and that they will drive back the forces of darkness and see the light of day shine forever
-        country_event = solarreworked.250
+        country_event = solarreworked.251
 	}
 	ai_will_do = { factor = 150 }
 }
@@ -555,7 +555,7 @@ shared_focus = {
     completion_reward = {
         log = "[GetDateText]: [Root.GetName]: Focus SOL_herald_doom"
         ###Event of a pony preacher for Daybreaker using fear and cursing to fire up ponies to remain hateful of those who would "free" them from Daybreaker's enslavement
-        country_event = solarreworked.251
+        country_event = solarreworked.252
     }
     ai_will_do = { factor = 250 }
 }
@@ -1444,10 +1444,10 @@ shared_focus = {
 				days = 180
 				random_days = 90
 			}
-		}
-		country_event = {
-			id = solarempire.45
-			days = 7
+			country_event = {
+				id = solarempire.45
+				days = 7
+			}
 		}
 	}
 }
@@ -2931,6 +2931,11 @@ shared_focus = {
 			country_event = {
 				id = solarempire.45
 				days = 7
+			}
+			country_event = {
+				id = solarreworked.354
+				days = 300
+				random_days = 65
 			}
 		}
 	}
