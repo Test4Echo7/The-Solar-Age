@@ -4,3 +4,11 @@ SpriteTypes = {
         textureFile = "gfx/interface/decisions/daybreaker_sun.tga"
     }
 }
+
+###Categories###
+SpriteTypes = {
+    spriteType = {
+        name = "GFX_decision_category_solar_empire"
+        textureFile = "gfx/interface/decisions/decision_category_solar_empire.tga"
+    }
+}

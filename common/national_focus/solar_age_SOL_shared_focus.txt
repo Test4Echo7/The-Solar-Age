@@ -8634,7 +8634,7 @@ joint_focus = {
 ###Bats? Bats! BAAAAATS!###
 shared_focus = {
 	id = SOL_bat_problems
-	icon = GFX_goal_bat
+	icon = GFX_goal_the_bat_problem
 	cost = 3
 	ai_will_do = {
 		factor = 150
@@ -8685,7 +8685,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_fire_and_brimstone
-	icon = GFX_goal_bat
+	icon = GFX_goal_fire_and_brimstone
 	x = -2
 	y = 1
 	relative_position_id = SOL_bat_problems
@@ -8746,7 +8746,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_what_homes
-	icon = GFX_goal_bat
+	icon = GFX_goal_what_homes
 	x = -1
 	y = 1
 	relative_position_id = SOL_fire_and_brimstone
@@ -8765,7 +8765,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_what_jobs
-	icon = GFX_goal_bat
+	icon = GFX_goal_what_jobs
 	x = 1
 	y = 1
 	relative_position_id = SOL_fire_and_brimstone
@@ -8784,7 +8784,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_burn_bats
-	icon = GFX_goal_bat
+	icon = GFX_goal_burn_bats
 	x = 1
 	y = 1
 	relative_position_id = SOL_what_homes
@@ -8824,7 +8824,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_enlighten_darkness
-	icon = GFX_goal_bat
+	icon = GFX_goal_enlighten_darkness
 	x = 2
 	y = 1
 	relative_position_id = SOL_bat_problems
@@ -8878,7 +8878,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_second_class_employers
-	icon = GFX_goal_bat
+	icon = GFX_goal_second_class_employers
 	x = -1
 	y = 1
 	relative_position_id = SOL_enlighten_darkness
@@ -8896,7 +8896,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_mandatory_education
-	icon = GFX_goal_bat
+	icon = GFX_goal_mandatory_education
 	x = 1
 	y = 1
 	relative_position_id = SOL_enlighten_darkness
@@ -8913,7 +8913,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_useful_servants
-	icon = GFX_goal_bat
+	icon = GFX_goal_useful_servants
 	x = 1
 	y = 1
 	relative_position_id = SOL_second_class_employers
@@ -8943,7 +8943,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_peninsula_of_damned
-	icon = GFX_goal_bat
+	icon = GFX_goal_peninsula_of_damned
 	x = 2
 	y = 1
 	relative_position_id = SOL_burn_bats

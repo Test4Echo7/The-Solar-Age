@@ -194,4 +194,45 @@ SpriteTypes = {
         texturefile = "gfx/interface/goals/EQS/the_empire_across_the_sea.png"
     }
 
+    ###Bats###
+    SpriteType = {
+        name = GFX_goal_the_bat_problem
+        texturefile = "gfx/interface/goals/EQS/the_bat_problem.png"
+    }
+    SpriteType = {
+        name = GFX_goal_fire_and_brimstone
+        texturefile = "gfx/interface/goals/EQS/fire_and_brimstone.png"
+    }
+    SpriteType = {
+        name = GFX_goal_what_homes
+        texturefile = "gfx/interface/goals/EQS/what_homes.png"
+    }
+    SpriteType = {
+        name = GFX_goal_what_jobs
+        texturefile = "gfx/interface/goals/EQS/what_jobs.png"
+    }
+    SpriteType = {
+        name = GFX_goal_burn_bats
+        texturefile = "gfx/interface/goals/EQS/burn_bats.png"
+    }
+    SpriteType = {
+        name = GFX_goal_enlighten_darkness
+        texturefile = "gfx/interface/goals/EQS/enlighten_darkness.png"
+    }
+    SpriteType = {
+        name = GFX_goal_second_class_employers
+        texturefile = "gfx/interface/goals/EQS/second_class_employers.png"
+    }
+    SpriteType = {
+        name = GFX_goal_mandatory_education
+        texturefile = "gfx/interface/goals/EQS/mandatory_education.png"
+    }
+    SpriteType = {
+        name = GFX_goal_useful_servants
+        texturefile = "gfx/interface/goals/EQS/useful_servants.png"
+    }
+    SpriteType = {
+        name = GFX_goal_peninsula_of_damned
+        texturefile = "gfx/interface/goals/EQS/peninsula_of_damned.png"
+    }
 }

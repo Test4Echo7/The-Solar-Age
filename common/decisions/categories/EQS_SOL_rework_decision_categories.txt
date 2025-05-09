@@ -3,6 +3,7 @@ EQS_debug_category = {
         tag = EQS
         is_debug = yes
     }
+    icon = GFX_decision_category_solar_empire
     visible_when_empty = yes
     priority = {
         base = 150
@@ -31,6 +32,7 @@ EQS_GRD_assistance = {
             }
         }
     }
+    icon = GFX_decision_category_form_griffon_empire
     priority = {
         base = 144
     }
@@ -67,28 +69,28 @@ EQS_great_projects_category = {
     visible = {
         is_EQS_SOL = yes
     }
-    icon = celestia_cat
+    icon = GFX_decision_category_solar_empire
 }
 EQS_covert_ops_category = {
     allowed = { tag = EQS }
     priority = {
         base = 137
     }
-    icon = celestia_cat
+    icon = GFX_decision_category_solar_empire
 }
 EQS_expand_imperial_territory_category = {
     allowed = { tag = EQS }
     priority = {
         base = 136
     }
-    icon = celestia_cat
+    icon = GFX_decision_category_solar_empire
 }
 EQS_pan_pony_empire_category = {
     allowed = { tag = EQS }
     priority = {
         base = 135
     }
-    icon = celestia_cat
+    icon = GFX_decision_category_solar_empire
 }
 EQS_BOP_sanity_category = {
     allowed = {

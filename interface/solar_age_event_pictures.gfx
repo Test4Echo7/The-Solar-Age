@@ -115,6 +115,14 @@ spriteTypes = {
         name = "GFX_event_yakyakistan_entrance"
         texturefile = "gfx/event_pictures/event_yakyakistan_entrance.png"
     }
+    spriteType = {
+        name = "GFX_event_rara"
+        texturefile = "gfx/event_pictures/event_rara.png"
+    }
+    spriteType = {
+        name = "GFX_event_octavia_performing"
+        texturefile = "gfx/event_pictures/event_octavia_performing.png"
+    }
     ###News Events###
     spriteType = {
         name = "GFX_news_daybreaker_fighting"

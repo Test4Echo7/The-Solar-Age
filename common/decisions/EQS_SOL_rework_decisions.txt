@@ -3917,6 +3917,60 @@ EQS_expand_imperial_territory_category = {
     }
 }
 EQS_pan_pony_empire_category = {
+    SOL_demand_CES_integration = {
+        allowed = {
+            original_tag = EQS
+        }
+        available = {
+            is_EQS_SOL = yes
+            CES = {
+                OR = {
+                    is_subject_of = ROOT
+                    is_in_faction_with = ROOT
+                }
+            }
+        }
+        visible = {
+            CES = {
+                OR = {
+                    is_subject_of = ROOT
+                    is_in_faction_with = ROOT
+                }
+                OR = {
+                    has_idea = CES_solarist_partially_pleased_daybreaker
+                    has_country_flag = CES_vindictive_god_ending
+                    has_country_flag = CES_zealous_mother_ending
+                    has_country_flag = CES_reverent_protector_ending
+                    has_country_flag = CES_faced_divine_judgement
+                }
+            }
+        }
+        highlight_states = {
+            highlight_states_trigger = {
+                is_core_of = CES
+            }
+        }
+        fire_only_once = yes
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision SOL_demand_CES_integration"
+            custom_effect_tooltip = SOL_bow_to_daybreaker_tt
+            hidden_effect = {
+                CES = {
+                    country_event = {
+                        id = solarreworked.527
+                        days = 3
+                    }
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 3
+            modifier = {
+                CES = { is_ai = no }
+                factor = 0
+            }
+        }
+    }
     SOL_spawn_CHN_puppet = {
 		allowed = {
 			original_tag = EQS
@@ -3999,6 +4053,7 @@ EQS_pan_pony_empire_category = {
             }
             NOT = { has_country_flag = SOL_formed_super_equus }
         }
+        icon = GFX_decision_category_yak_empire
         highlight_states = {
             highlight_states_trigger = {
                 OR = {
@@ -4034,6 +4089,7 @@ EQS_pan_pony_empire_category = {
             }
             NOT = { has_country_flag = SOL_formed_super_equus }
         }
+        icon = GFX_decision_griffon
         highlight_states = {
             highlight_states_trigger = {
                 if = {
@@ -4082,6 +4138,7 @@ EQS_pan_pony_empire_category = {
             }
             NOT = { has_country_flag = SOL_formed_super_equus }
         }
+        icon = GFX_decision_category_bearlore
         highlight_states = {
             highlight_states_trigger = {
                 OR = {

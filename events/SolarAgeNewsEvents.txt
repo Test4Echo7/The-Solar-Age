@@ -162,18 +162,9 @@ news_event = {
 	desc = news.solarage.5.d
 	picture = GFX_news_coloratura_performing
 
-	major = yes
+	#major = yes
 
-	trigger = {
-		has_global_flag = octavia_performs
-		3 = { is_controlled_by = EQS }
-		EQS = {
-			has_war_with = CHN
-			surrender_progress > 0.15
-		}
-	}
-
-	fire_only_once = yes
+	is_triggered_only = yes
 
 	option = {
 		name = news.solarage.5.a
@@ -274,7 +265,7 @@ news_event = { #
 	}
 	option = {
 		name = news.solarage.22.b
-		triger = {
+		trigger = {
 			tag = BOI
 			owns_state = 382
 		}
@@ -306,7 +297,7 @@ news_event = { #
 	}
 	option = {
 		name = news.solarage.23.b
-		triger = {
+		trigger = {
 			tag = GRD
 			owns_state = 389
 		}
@@ -338,7 +329,7 @@ news_event = { #
 	}
 	option = {
 		name = news.solarage.24.b
-		triger = {
+		trigger = {
 			tag = JER
 			owns_state = 377
 		}
@@ -370,7 +361,7 @@ news_event = { #
 	}
 	option = {
 		name = news.solarage.25.b
-		triger = {
+		trigger = {
 			tag = WNG
 			owns_state = 375
 		}
@@ -402,7 +393,7 @@ news_event = { #
 	}
 	option = {
 		name = news.solarage.26.b
-		triger = {
+		trigger = {
 			tag = DED
 			owns_state = 415
 		}
@@ -434,7 +425,7 @@ news_event = { #
 	}
 	option = {
 		name = news.solarage.27.b
-		triger = {
+		trigger = {
 			tag = TRD
 			owns_state = 381
 		}
@@ -491,7 +482,7 @@ news_event = { #
 	}
 	option = {
 		name = news.solarage.29.b
-		triger = {
+		trigger = {
 			tag = RCT
 			owns_state = 619
 		}
@@ -615,7 +606,7 @@ news_event = { #
 	}
 	option = {
 		name = news.solarage.31.b
-		triger = {
+		trigger = {
 			tag = STG
 			owns_state = 153
 		}
@@ -647,7 +638,7 @@ news_event = { #
 	}
 	option = {
 		name = news.solarage.32.b
-		triger = {
+		trigger = {
 			tag = CTH
 			owns_state = 875
 		}
@@ -679,7 +670,7 @@ news_event = { #
 	}
 	option = {
 		name = news.solarage.33.b
-		triger = {
+		trigger = {
 			tag = HIP
 			owns_state = 1165
 		}
@@ -711,7 +702,7 @@ news_event = { #
 	}
 	option = {
 		name = news.solarage.34.b
-		triger = {
+		trigger = {
 			tag = BAT
 			owns_state = 712
 		}

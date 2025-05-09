@@ -320,9 +320,9 @@ on_actions = {
             }
         }
     }
-    on_capitulation = { #Literally just for seeing if RCT had River Swirl as leader
+    on_capitulation = {
         effect = {
-            if = {
+            if = { #Check if RCT had River Swirl as leader
                 limit = {
                     ROOT = {
                         OR = {
@@ -338,6 +338,30 @@ on_actions = {
                 }
                 log = "[GetDateText]: [ROOT.GetName]: on_capitulation solar_age"
                 FROM = { set_country_flag = SOL_RCT_had_river_leader }
+            }
+            if = {
+                limit = {
+                    ROOT = {
+                        tag = CES
+                        has_country_leader = { character = CES_good_word ruling_only = yes }
+                        NOT = {
+                            has_country_flag = CES_vindictive_god_ending
+                            has_country_flag = CES_faced_divine_judgement
+                            has_idea = CES_solarist_partially_pleased_daybreaker
+                        }
+                    }
+                    FROM = {
+                        tag = EQS
+                        has_completed_focus = SOL_god_empress
+                    }
+                }
+                FROM = {
+                    country_event = {
+                        id = solarreworked.465
+                        days = 7
+                        random_days = 7
+                    }
+                }
             }
         }
     }
