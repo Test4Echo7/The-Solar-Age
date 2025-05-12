@@ -660,6 +660,15 @@ recruit_character = EQS_morning_mulch
 recruit_character = EQS_queen_argynnis
 recruit_character = EQS_sunsane
 recruit_character = EQS_lyra_heartstrings
+recruit_character = EQS_opal_rosamond
+recruit_character = EQS_crepuscular_ray
+recruit_character = EQS_kertz_schmane
+recruit_character = EQS_silverfoot
+recruit_character = EQS_sunny_chill
+recruit_character = EQS_winter_white
+recruit_character = EQS_weisse_feder
+recruit_character = EQS_blue_bolt
+recruit_character = EQS_zokolo
 #Foreign characters
 recruit_character = CRY_nightshade
 recruit_character = CRY_morning_mist

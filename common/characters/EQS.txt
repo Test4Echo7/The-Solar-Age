@@ -1282,6 +1282,23 @@ characters={
 				factor = 1
 			}
 		}
+		corps_commander = {
+			traits = { pony_race_trait rock_girl }
+			skill = 3
+			attack_skill = 1
+			defense_skill = 4
+			planning_skill = 1
+			logistics_skill = 4
+			legacy_id = 73241
+			desc = "EQS_maudpie_desc"
+			visible = {
+				has_country_flag = EQS_create_new_commanders_flag
+				if = {
+					limit = { is_EQS_SOL = yes }
+					NOT = { has_country_flag = SOL_purge_finished }
+				}
+			}
+		}
 		gender = female
 	}
 	EQS_limestone = {

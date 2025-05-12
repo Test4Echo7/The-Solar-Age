@@ -12001,7 +12001,10 @@ country_event = { #New purge event
 		}
 	}
     picture = GFX_event_solarempire
-    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.503"}
+    immediate = {
+        log = "[GetDateText]: [ROOT.GetName]: event solarreworked.503"
+        set_country_flag = SOL_purge_finished
+    }
 
     is_triggered_only = yes
 
@@ -12979,6 +12982,26 @@ country_event = { #SOL gets CES's response
             target = FROM
             type = annex_everything
         }
+    }
+}
+
+country_event = { #Choose a governor for a released nation
+    id = solarreworked.529
+    title = solarreworked.529.t
+    desc = solarreworked.529.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.529"}
+
+    is_triggered_only = yes
+
+    option = { #Appoint somepony from the Empire.
+        name = solarreworked.529.a
+        #Scripted effect here: this event should be triggered from the country being released, so FROM is a valid dynamic scope to use
+        SOL_promote_SOL_governor = yes
+    }
+    option = {
+        name = solarreworked.529.b
+        #Scripted effect for appointing governor from the released country. Same sort of deal as above.
+        SOL_promote_local_governor = yes
     }
 }
 

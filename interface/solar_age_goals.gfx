@@ -235,4 +235,32 @@ SpriteTypes = {
         name = GFX_goal_peninsula_of_damned
         texturefile = "gfx/interface/goals/EQS/peninsula_of_damned.png"
     }
+    SpriteType = {
+        name = GFX_goal_prison_of_fire
+        texturefile = "gfx/interface/goals/EQS/prison_of_fire.png"
+    }
+    SpriteType = {
+        name = GFX_goal_peaks_of_wealth
+        texturefile = "gfx/interface/goals/EQS/peaks_of_wealth.png"
+    }
+    SpriteType = {
+        name = GFX_goal_remote_no_more
+        texturefile = "gfx/interface/goals/EQS/remote_no_more.png"
+    }
+    SpriteType = {
+        name = GFX_goal_expand_oil_fields
+        texturefile = "gfx/interface/goals/EQS/expand_oil_fields.png"
+    }
+    SpriteType = {
+        name = GFX_goal_modern_south_east
+        texturefile = "gfx/interface/goals/EQS/modern_south_east.png"
+    }
+    SpriteType = {
+        name = GFX_goal_moonspeaker_tax
+        texturefile = "gfx/interface/goals/EQS/moonspeaker_tax.png"
+    }
+    SpriteType = {
+        name = GFX_goal_replanting_jungle
+        texturefile = "gfx/interface/goals/EQS/replanting_jungle.png"
+    }
 }

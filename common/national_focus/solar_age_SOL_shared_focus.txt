@@ -5542,7 +5542,7 @@ shared_focus = {
 				add_state_core = 766
 				hidden_effect = {
 					MGY_far_hook = {
-						add_trait = { trait = imperial_governor ideology = falangsim }
+						add_trait = { trait = imperial_governor ideology = falangism }
 					}
 				}
 			}
@@ -9010,7 +9010,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_prison_of_fire
-	icon = GFX_goal_bat
+	icon = GFX_goal_prison_of_fire
 	x = 0
 	y = 1
 	relative_position_id = SOL_peninsula_of_damned
@@ -9042,7 +9042,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_peaks_of_wealth
-	icon = GFX_goal_bat
+	icon = GFX_goal_peaks_of_wealth
 	x = 2
 	y = 1
 	relative_position_id = SOL_peninsula_of_damned
@@ -9068,7 +9068,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_remote_no_more
-	icon = GFX_goal_bat
+	icon = GFX_goal_remote_no_more
 	x = -2
 	y = 2
 	relative_position_id = SOL_peninsula_of_damned
@@ -9159,7 +9159,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_expand_oil_fields
-	icon = GFX_goal_bat
+	icon = GFX_goal_expand_oil_fields
 	x = -1
 	y = 1
 	relative_position_id = SOL_peaks_of_wealth
@@ -9184,7 +9184,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_modern_south_east
-	icon = GFX_goal_bat
+	icon = GFX_goal_modern_south_east
 	x = -1
 	y = 1
 	relative_position_id = SOL_remote_no_more
@@ -9261,7 +9261,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_moonspeaker_tax
-	icon = GFX_goal_bat
+	icon = GFX_goal_moonspeaker_tax
 	x = 1
 	y = 1
 	relative_position_id = SOL_remote_no_more
@@ -9289,7 +9289,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_replanting_jungle
-	icon = GFX_goal_bat
+	icon = GFX_goal_replanting_jungle
 	x = 0
 	y = 1
 	relative_position_id = SOL_expand_oil_fields
