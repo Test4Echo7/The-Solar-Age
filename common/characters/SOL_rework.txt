@@ -699,41 +699,85 @@ characters = {
 	}
 
 	###Imperial Governors###
-	EQS_opal_rosamond = {
-		name = EQS_opal_rosamond
-		gender = female
-		#portraits = {
-		#
-		#}
-	}
 	EQS_crepuscular_ray = {
 		name = EQS_crepuscular_ray
 		gender = female
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EQS/Crespuscular_Ray.tga"
+			}
+		}
 	}
 	EQS_kertz_schmane = {
 		name = EQS_kertz_schmane
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EQS/Kertz_Schmane.tga"
+			}
+		}
 	}
 	EQS_silverfoot = {
 		name = EQS_silverfoot
 		gender = female
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EQS/Silverfoot.tga"
+			}
+		}
 	}
 	EQS_sunny_chill = {
 		name = EQS_sunny_chill
 		gender = female
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EQS/Sunny_Chill.tga"
+			}
+		}
 	}
 	EQS_winter_white = {
 		name = EQS_winter_white
 		gender = female
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EQS/Winter_White.tga"
+			}
+		}
 	}
-	EQS_weisse_feder = {
-		name = EQS_weisse_feder
-	}
-	EQS_blue_bolt = {
-		name = EQS_blue_bolt
+	EQS_silver_bullet = {
+		name = EQS_silver_bullet
 		gender = female
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EQS/Silver_Bullet.tga"
+			}
+		}
 	}
-	EQS_zokolo = {
-		name = EQS_zokolo
+	EQS_burnt_comet = {
+		name = EQS_burnt_comet
+		gender = female
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EQS/Burnt_Comet.tga"
+			}
+		}
+	}
+	EQS_smoke_signal = {
+		name = EQS_smoke_signal
+		gender = female
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EQS/Smoke_Signal.tga"
+			}
+		}
+	}
+	EQS_sweet_vale = {
+		name = EQS_sweet_vale
+		gender = female
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EQS/Sweet_Vale.tga"
+			}
+		}
 	}
 
 	###Foreign nation characters###

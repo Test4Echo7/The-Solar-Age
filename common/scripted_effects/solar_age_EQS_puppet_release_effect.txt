@@ -48,34 +48,6 @@ SOL_promote_SOL_governor = {
         limit = {
             FROM = { tag = HIP }
         }
-        hidden_effect = {
-            EQS_opal_rosamond = {
-                if = {
-                    limit = {
-                        ROOT = { has_completed_focus = SOL_god_empress }
-                    }
-                    add_country_leader_role = {
-                        promote_leader = yes
-                        country_leader = {
-                            ideology = falangism
-                            expire = "1965.1.1"
-                            traits = { imperial_governess }
-                        }
-                    }
-                }
-                else = {
-                    add_country_leader_role = {
-                        promote_leader = yes
-                        country_leader = {
-                            ideology = nazism
-                            expire = "1965.1.1"
-                            traits = { imperial_governess }
-                        }
-                    }
-                }
-                set_nationality = HIP
-            }
-        }
     }
     else_if = {
         limit = {
@@ -196,7 +168,7 @@ SOL_promote_SOL_governor = {
             FROM = { tag = ZOO }
         }
         hidden_effect = {
-            EQS_zokolo = {
+            EQS_smoke_signal = {
                 if = {
                     limit = {
                         ROOT = { has_completed_focus = SOL_god_empress }
@@ -227,6 +199,34 @@ SOL_promote_SOL_governor = {
     else_if = {
         limit = {
             FROM = { tag = MTA }
+        }
+        hidden_effect = {
+            EQS_silver_bullet = {
+                if = {
+                    limit = {
+                        ROOT = { has_completed_focus = SOL_god_empress }
+                    }
+                    add_country_leader_role = {
+                        promote_leader = yes
+                        country_leader = {
+                            ideology = falangism
+                            expire = "1965.1.1"
+                            traits = { imperial_governess }
+                        }
+                    }
+                }
+                else = {
+                    add_country_leader_role = {
+                        promote_leader = yes
+                        country_leader = {
+                            ideology = nazism
+                            expire = "1965.1.1"
+                            traits = { imperial_governess }
+                        }
+                    }
+                }
+                set_nationality = KIR
+            }
         }
     }
     else_if = {
@@ -272,7 +272,7 @@ SOL_promote_SOL_governor = {
             FROM = { tag = MTO }
         }
         hidden_effect = {
-            EQS_blue_bolt = {
+            EQS_sweet_vale = {
                 if = {
                     limit = {
                         ROOT = { has_completed_focus = SOL_god_empress }
@@ -305,7 +305,7 @@ SOL_promote_SOL_governor = {
             FROM = { tag = KXN }
         }
         hidden_effect = {
-            EQS_weisse_feder = {
+            EQS_burnt_comet = {
                 if = {
                     limit = {
                         ROOT = { has_completed_focus = SOL_god_empress }
