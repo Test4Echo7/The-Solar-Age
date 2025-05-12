@@ -395,6 +395,25 @@ we_have_assumed_control = {
     }
 }
 
+just_to_be_sure = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1007.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+        tag = EQS
+    }
+
+    happened = {
+        custom_trigger_tooltip = {
+            tooltip = EQS_no_kill_like_overkill_tt
+            is_EQS_SOL = yes
+            has_country_flag = SOL_double_dipped
+        }
+    }
+}
+
 #ad_astra_per_aspera = { #Add this when EQC gets their focus tree
 #    possible = {
 #        # classic triggers used in all vanilla achievements

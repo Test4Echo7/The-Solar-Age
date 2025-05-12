@@ -16,7 +16,7 @@
   this_is_getting_out_of_hoof_DESC:0 "As the Solar Empire, defeat the Griffonian Empire or its successor and have all griffons recognize Daybreaker as their new Kaiserin."
   empress_mommy_NAME:0 "Empress Mommy"
   empress_mommy_DESC:0 "As the Solar Empire, achieve a wholesome moment between Daybreaker and Grover VI after finally settling tensions."
-  its_all_solar_NAME:0 "Wait, it's ALL the Solar Empire?"
+  its_all_solar_NAME:0 "Wait, It's ALL the Solar Empire?"
   #its_all_solar_DESC:0 "As the Solar Empire, achieve complete world dominance."
   its_all_solar_DESC:0 "Always has been."
   elements_of_order_NAME:0 "The Elements of Order"
@@ -41,6 +41,8 @@
   spike_take_a_flamer_DESC:0 "As the Solar Empire, have Sunrise Sparkle perform her own enlightenment."
   we_have_assumed_control_NAME:0 "Attention All Citizens of the Solar Empire"
   we_have_assumed_control_DESC:0 "We have assumed control. We have assumed control."
+  just_to_be_sure_NAME:0 "Just to be Sure"
+  just_to_be_sure_DESC:0 "As the Solar Empire, kick Griffonstone while they're already down."
   ad_astra_per_aspera_NAME:0 "Ad Astra per Aspera"
   ad_astra_per_aspera_DESC:0 "As Solarist New Mareland, form Greater New Mareland."
 
@@ -61,3 +63,4 @@
   EQS_how_scandalous_tt:0 "§PCadance§! has been awakened to reality."
   SOL_spike_broken:0 "§GSpike§! has been convinced to submit to Daybreaker."
   EQS_is_that_a_rush_reference_tt:0 "§OWe have assumed control.§!"
+  EQS_no_kill_like_overkill_tt:0 "Performed a §Rsecond Griffonstone atrocity§!."

@@ -12499,7 +12499,7 @@ country_event = { #Triggered event informing GRD or EQS that the attache has bee
     }
 }
 
-country_event = { #Short event for whoever owns the two MDL states that Daybreaker is demanding that they be given back, as they are pony territory and majority ponies, and will wipe the owners if not returned
+country_event = { #Short event for whoever owns the two MDL states that Daybreaker is demanding that they be given back, as they are pony territory and majority ponies, and will wipe out the owners if not returned
     id = solarreworked.516
     title = solarreworked.516.t
     desc = solarreworked.516.d
@@ -12528,6 +12528,8 @@ country_event = { #Short event for whoever owns the two MDL states that Daybreak
             }
         }
         set_country_flag = SOL_surrendered_MDL_cores
+        add_stability = -0.05
+        add_political_power = -75
         FROM = { country_event = { id = solarreworked.517 days = 1 } }
     }
     option = { #It is ours by right!
@@ -12557,6 +12559,8 @@ country_event = { #Short event for whoever owns the two MDL states that Daybreak
             }
         }
         set_country_flag = SOL_kept_MDL_cores
+        add_war_support = 0.1
+        add_political_power = 50
         FROM = { country_event = { id = solarreworked.517 days = 1 } }
     }
 }
@@ -12564,7 +12568,14 @@ country_event = { #Short event for whoever owns the two MDL states that Daybreak
 country_event = { #Response event where the territory is given or not; if not, a wargoal is created
     id = solarreworked.517
     title = solarreworked.517.t
-    desc = solarreworked.517.d
+    desc = {
+        trigger = { FROM = { has_country_flag = SOL_surrendered_MDL_cores } }
+        text = solarreworked.517.d_a
+    }
+    desc = {
+        trigger = { FROM = { has_country_flag = SOL_kept_MDL_cores } }
+        text = solarreworked.517.d_b
+    }
     picture = GFX_event_solarempire
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.517"}
 

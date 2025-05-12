@@ -260,7 +260,15 @@ news_event = { #
 	option = { #
 		name = news.solarage.22.a
 		trigger = {
-			NOT = { tag = event_target:solar_empire }
+			tag = event_target:solar_empire
+		}
+		if = {
+			limit = { has_country_flag = nuked_griffonstone }
+			custom_effect_tooltip = despicable_action
+			add_country_flag = SOL_double_dipped
+			add_political_power = -200
+			add_stability = -0.05
+			add_war_support = -0.05
 		}
 	}
 	option = {
