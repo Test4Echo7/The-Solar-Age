@@ -153,6 +153,17 @@ leader_traits = {
         }
         new_commander_weight = { factor = 0 }
     }
+    sonic_rainboomer = {
+        type = all
+        trait_type = personality_trait
+        allowed = { always = no }
+        modifier = {
+            army_morale_factor = 0.1
+            breakthrough_factor = 0.05
+            wounded_chance_factor = 0.25
+        }
+        new_commander_weight = { factor = 0 }
+    }
     ###NLR NMM Field Marshal Trait###
     empress_of_the_night = {
         type = all

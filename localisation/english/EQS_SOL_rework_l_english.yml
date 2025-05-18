@@ -672,7 +672,9 @@
   empress_of_the_night:0 "Empress of the Night"
   empress_of_the_night_desc:0 "§LAs the very embodiment of the night and darkness, Nightmare Moon bestows uncanny perception within the blackest of new moons for her soldiers. Where Luna was a stern but understanding pony, Nightmare Moon is harsh and forceful. Troops under her are driven to extremes, but will follow her ultimately to the ends of Equus."
   excitable_pone:0 "Excitable"
-  excitable_pone_desc:0 ""Oh. My. Celestia! Is that a super snazzy uniform or what?! I mean, look at this crest. Those shoulders! Wow! This is like, totally amazing! I can't believe that I'm—Is that a SPITFIRE?! They're all like, "zoom" and "woosh" and—Is that a TIMBERWOLF?! Oh. My. Celestia!""
+  excitable_pone_desc:0 "§L"Oh. My. Celestia! Is that a super snazzy uniform or what?! I mean, look at this crest. Those shoulders! Wow! This is like, totally amazing! I can't believe that I'm—Is that a SPITFIRE?! They're all like, "zoom" and "woosh" and—Is that a TIMBERWOLF?! Oh. My. Celestia!"§!"
+  sonic_rainboomer:0 "Untouchable"
+  sonic_rainboomer_desc:0 "§LThe top Wonderbolt, Rainbow Dash is outwardly confident and brash and gets along well with the troops. While her skill in the sky is unrivaled, every successful battle has only further inflated her ego and in downtime she spins to the soldiers tales of her exploits, true and fabricated. Since she takes an active role at the front, the constant danger she puts herself in may one day catch up with her.§!"
 
   ###Country Leader Traits###
   aussenseiter_regentin:0 "Foreign Regent"
@@ -3866,10 +3868,10 @@
   solarreworked.528.d_b:0 "Although the response from [FROM.GetLeader] came quickly to our message, it was not what the Empress anticipated. As the Friendship Lodge's entire goal is worship of the Empress, it was logical to conclude they would accept more direct influence from [3.GetCapitalVictoryPointName], especially since they have already been rewarded in the past. However, the letter that the Empress received has defied expectations. Although polite, [FROM.GetLeader] reminded the Empress of her agreement with [FROM.GetLeader.GetHerHim] and that she is betraying the trust and faith of hundreds of thousands of ponies who live in the South-East. [FROM.GetAjdectiveCap] troops have yet to stand down, and they appear to be mobilizing. It appears that the cult has grown some teeth, and it will be up to us to file them back down to a managable length.\n\nThe Empress's orders will not be ignored."
   solarreworked.528.a:0 "[FROM.GetLeader] refuses to disappoint."
   solarreworked.528.b:0 "So [FROM.GetLeader.GetHeShe] shows [FROM.GetLeader.GetHerHis] true colors."
-  solarreworked.529.t:0 "Imperial Appointment"
-  solarreworked.529.d:0 ""
-  solarreworked.529.a:0 "Somepony loyal from the Empire shall keep the region in line."
-  solarreworked.529.b:0 "Find a collaborator and ensure they obey every word of the Empress."
+  solarreworked.530.t:0 "Imperial Appointment"
+  solarreworked.530.d:0 ""
+  solarreworked.530.a:0 "Somepony loyal from the Empire shall keep the region in line."
+  solarreworked.530.b:0 "Find a collaborator and ensure they obey every word of the Empress."
 
   ###Operations Events###
   solarreworked.600.t:0 "Sisters Reunited"

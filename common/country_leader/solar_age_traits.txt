@@ -366,7 +366,7 @@ leader_traits = {
         conscription_factor = -0.15
         army_core_defence_factor = 0.05
         army_core_attack_factor = 0.05
-        fascism_drift = 0.02
+        fascism_drift = 0.01
 
         ai_will_do = { factor = 1 }
     }
@@ -378,8 +378,9 @@ leader_traits = {
         stability_factor = 0.075
         conscription_factor = -0.05
         army_core_attack_factor = 0.05
-        army_core_attack_factor = 0.05
+        army_core_defence_factor = 0.05
         consumer_goods_factor = -0.05
+        fascism_drift = 0.02
 
         ai_will_do = { factor = 1 }
     }

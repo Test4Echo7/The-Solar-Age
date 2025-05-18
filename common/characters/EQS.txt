@@ -1073,6 +1073,7 @@ characters={
 		portraits = {
 			army = {
 				small = "GFX_idea_EQS_rainbow_dash"
+				large = "gfx/leaders/EQS/Rainbow_Dash.tga"
 			}
 		}
 
@@ -1134,6 +1135,22 @@ characters={
 			traits = { element_of_loyalty }
 			ai_will_do = {
 				factor = 1
+			}
+		}
+		corps_commander = {
+			traits = { pony_race_trait trait_reckless media_personality air_force_commander sonic_rainboomer } #Unique trait of 10% recovery rate, 25% chance to get wounded, because she's charismatic and popular, but headstrong
+			skill = 3
+			attack_skill = 5
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+			desc = "rainbowdash_desc"
+			visible = {
+				NOT = { has_country_flag = SOL_mane_six_escape }
+				OR = {
+					has_country_flag = EQS_create_new_commanders_flag
+					can_host_M6 = yes
+				}
 			}
 		}
 		gender = female

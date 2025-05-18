@@ -19,4 +19,8 @@ spriteTypes = {
 		name = "GFX_trait_magic_defense"
 		texturefile = "gfx/interface/traits/personal/trait_magic_defense.tga"
 	}
+	spriteType = {
+		name = "GFX_trait_sonic_rainboomer"
+		texturefile = "gfx/interface/traits/personal/trait_sonic_rainboomer.tga"
+	}
 }

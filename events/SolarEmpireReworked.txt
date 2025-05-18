@@ -12764,7 +12764,23 @@ country_event = { #Short event of SOL demanding that the SRS territory which NTR
 country_event = { #SOL receives GRD's response about their demands
     id = solarreworked.522
     title = solarreworked.522.t
-    desc = solarreworked.522.d
+    desc = {
+        trigger = { FROM = { has_country_flag = SOL_GRD_submitted_territory } }
+        text = solarreworked.521.d_a
+    }
+    desc = {
+        trigger = { FROM = { has_country_flag = SOL_GRD_refused_territory } }
+        text = solarreworked.521.d_b
+    }
+    desc = {
+        trigger = {
+            FROM = {
+                is_puppet_of = ROOT
+                has_country_flag = SOL_GRD_submitted_territory
+            }
+        }
+        text = solarreworked.521.d_c
+    }
     picture = GFX_event_solarempire
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.523"}
 
@@ -12996,22 +13012,34 @@ country_event = { #SOL gets CES's response
     }
 }
 
-country_event = { #Choose a governor for a released nation
+country_event = { #Hidden effect to hopefully get FROM to work with promoting a governor
     id = solarreworked.529
-    title = solarreworked.529.t
-    desc = solarreworked.529.d
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.529"}
+    hidden = yes
+
+    option = {
+        EQS = { country_event = solarreworked.530 }
+    }
+}
+
+country_event = { #Choose a governor for a released nation
+    id = solarreworked.530
+    title = solarreworked.530.t
+    desc = solarreworked.530.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.530"}
 
     is_triggered_only = yes
 
     option = { #Appoint somepony from the Empire.
-        name = solarreworked.529.a
+        name = solarreworked.530.a
         #Scripted effect here: this event should be triggered from the country being released, so FROM is a valid dynamic scope to use
+        custom_effect_tooltip = SOL_other_duties_as_assigned_tt
         SOL_promote_SOL_governor = yes
     }
     option = {
-        name = solarreworked.529.b
+        name = solarreworked.530.b
         #Scripted effect for appointing governor from the released country. Same sort of deal as above.
+        custom_effect_tooltip = SOL_lesser_choices_tt
         SOL_promote_local_governor = yes
     }
 }
