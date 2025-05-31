@@ -128,6 +128,8 @@ EQS_create_new_commanders = {
 		custom_effect_tooltip = oli_equites_stats_tp
 		set_global_flag = EQS_Oligarch_created
 	}
+
+	custom_effect_tooltip = rainbow_dash_stats_tp
 }
 
 EQS_SOL_remove_ideas = {

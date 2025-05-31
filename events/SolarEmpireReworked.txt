@@ -1346,6 +1346,7 @@ country_event = { #Event of a thestral officer being pushed to her limit, after 
 				defense_skill = 1
 				planning_skill = 1
 				logistics_skill = 1
+				desc = EQS_SOL_ksen_autumn_desc
 				legacy_id = 40
 			}
 			custom_effect_tooltip = new_ksen_autumn_stats_tp
@@ -1366,6 +1367,7 @@ country_event = { #Event of a thestral officer being pushed to her limit, after 
 				defense_skill = 2
 				planning_skill = 1
 				logistics_skill = 2
+				desc = EQS_wintergleam_desc
 			}
 			custom_effect_tooltip = wintergleam_stats_tp
 		}
@@ -6456,9 +6458,10 @@ country_event = { #Daybreaker meets with Thundering Hoofbeat, after Blueblood re
                 defense_skill = 4
                 planning_skill = 2
                 logistics_skill = 3
+                desc = EQS_thundering_hoofbeat_desc
             }
         }
-        custom_effect_tooltip = thunderhing_hoofbeat_stats_tp
+        custom_effect_tooltip = thundering_hoofbeat_stats_tp
         hidden_effect = {
             division_template = {
                 name = "Imperial Guardians"
@@ -6466,7 +6469,7 @@ country_event = { #Daybreaker meets with Thundering Hoofbeat, after Blueblood re
                 force_allow_recruiting = yes
                 division_cap = 3
                 division_names_group = EQS_GRD_02
-                priority = 0
+                priority = 2
                 regiments = {
                     magical_infantry = { x = 0 y = 0 }
                     magical_infantry = { x = 0 y = 1 }
@@ -6489,9 +6492,9 @@ country_event = { #Daybreaker meets with Thundering Hoofbeat, after Blueblood re
                 }
             }
             3 = {
-                create_unit = { division = "name = \"Aegis I - Solaris\" division_template = \"Imperial Guardians\"" owner = EQS id = 179 }
-                create_unit = { division = "name = \"Aegis II - Stellar\" division_template = \"Imperial Guardians\"" owner = EQS id = 179 }
-                create_unit = { division = "name = \"Aegis III - Infernis\" division_template = \"Imperial Guardians\"" owner = EQS id = 179 }
+                create_unit = { division = "name = \"Aegis I - Solaris\" division_template = \"Imperial Guardians\" start_experience_factor = 0.3" owner = EQS id = 179 }
+                create_unit = { division = "name = \"Aegis II - Stellar\" division_template = \"Imperial Guardians\" start_experience_factor = 0.3" owner = EQS id = 179 }
+                create_unit = { division = "name = \"Aegis III - Infernis\" division_template = \"Imperial Guardians\" start_experience_factor = 0.3" owner = EQS id = 179 }
             }
         }
     }

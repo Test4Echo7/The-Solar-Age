@@ -2013,14 +2013,14 @@ SOL_release_CTL = {
             add_core_of = CTL
         }
     }
-    release_autonomy = {
-        target = CTL
-        autonomy_state = autonomy_reichsprotectorate
-    }
     CTL = {
         set_cosmetic_tag = CTL_SOL
         set_country_flag = is_solar_puppet
         hidden_effect = { country_event = solarreworked.529 }
+    }
+    release_autonomy = {
+        target = CTL
+        autonomy_state = autonomy_reichsprotectorate
     }
 }
 SOL_release_ABY = {

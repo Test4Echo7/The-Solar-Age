@@ -9,6 +9,7 @@ characters = {
             defense_skill = 1
             planning_skill = 1
             logistics_skill = 1
+            desc = EQS_zephyr_breeze_desc
             visible = {
                 has_character_flag = SOL_zephyr_enlisted
             }
@@ -32,6 +33,7 @@ characters = {
 			defense_skill = 3
 			planning_skill = 1
 			logistics_skill = 2
+			desc = EQS_lyra_heartstrings_desc
 			visible = {
 				has_country_flag = EQS_rumbly_tummies
 				NOT = {
@@ -113,6 +115,7 @@ characters = {
 			defense_skill = 3
 			planning_skill = 2
 			logistics_skill = 1
+			desc = EQS_SOL_novus_flux_desc
 			visible = {
                 is_EQS_SOL = yes
                 has_country_flag = SOL_inquisitor_generals
@@ -156,6 +159,7 @@ characters = {
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 2
+			desc = EQS_SOL_nova_glow_desc
 			visible = {
 				is_EQS_SOL = yes
 				has_country_flag = SOL_inquisitor_generals
@@ -178,6 +182,7 @@ characters = {
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 1
+			desc = EQS_SOL_quasar_pulse_desc
 			visible = {
 				is_EQS_SOL = yes
 				has_country_flag = SOL_inquisitor_generals
@@ -222,6 +227,7 @@ characters = {
             defense_skill = 1
             planning_skill = 2
             logistics_skill = 2
+            desc = EQS_SOL_fidelis_flamma_desc
             visible = {
                 is_EQS_SOL = yes
                 has_country_flag = SOL_inquisitor_generals
@@ -244,6 +250,7 @@ characters = {
             defense_skill = 3
             planning_skill = 1
             logistics_skill = 4
+            desc = EQS_SOL_burning_plage_desc
             visible = {
 				is_EQS_SOL = yes
 				has_country_flag = SOL_inquisitor_generals
@@ -266,6 +273,7 @@ characters = {
             defense_skill = 1
             planning_skill = 1
             logistics_skill = 1
+            desc = EQS_SOL_steel_sickle_desc
             visible = {
                 is_EQS_SOL = yes
                 has_country_flag = SOL_inquisitor_generals
@@ -288,6 +296,7 @@ characters = {
 			defense_skill = 1
 			planning_skill = 4
 			logistics_skill = 2
+			desc = EQS_SOL_gushing_pulse_desc
 			visible = {
 				has_character_flag = EQS_EEEEEEEEE
 			}
@@ -454,6 +463,7 @@ characters = {
 			defense_skill = 3
 			planning_skill = 1
 			logistics_skill = 3
+			desc = EQS_SOL_scorched_earth_desc
 			visible = {
 				is_EQS_SOL = yes
 				has_country_flag = SOL_new_generals_flag
@@ -475,6 +485,7 @@ characters = {
 			defense_skill = 2
 			planning_skill = 2
 			logistics_skill = 1
+			desc = EQS_SOL_sunsane_desc
 			visible = {
 				is_EQS_SOL = yes
 				has_country_flag = SOL_new_generals_flag
@@ -565,6 +576,7 @@ characters = {
 			defense_skill = 1
 			maneuvering_skill = 2
 			coordination_skill = 1
+			desc = EQS_riptide_desc
 			visible = { has_country_flag = SOL_new_admirals }
 		}
 	}
@@ -579,6 +591,7 @@ characters = {
 			defense_skill = 1
 			maneuvering_skill = 1
 			coordination_skill = 3
+			desc = EQS_sky_high_desc
 			visible = { has_country_flag = SOL_new_admirals }
 		}
 	}
@@ -619,6 +632,7 @@ characters = {
 			defense_skill = 2
 			planning_skill = 1
 			logistics_skill = 1
+			desc = EQS_SOL_high_impact_desc
 			visible = { has_country_flag = SOL_mothers_call }
 		}
 	}
@@ -633,6 +647,7 @@ characters = {
 			defense_skill = 3
 			planning_skill = 2
 			logistics_skill = 2
+			desc = EQS_SOL_crimson_line_desc
 			visible = { has_country_flag = SOL_mothers_call }
 		}
 	}
@@ -647,6 +662,7 @@ characters = {
 			defense_skill = 3
 			planning_skill = 1
 			logistics_skill = 4
+			desc = EQS_SOL_tangent_desc
 			visible = { has_country_flag = SOL_mothers_call }
 		}
 	}
@@ -660,6 +676,7 @@ characters = {
 			defense_skill = 2
 			planning_skill = 3
 			logistics_skill = 4
+			desc = EQS_SOL_rock_solid_desc
 			visible = { has_country_flag = SOL_empresss_protectors }
 		}
 	}
@@ -674,6 +691,7 @@ characters = {
 			defense_skill = 3
 			planning_skill = 2
 			logistics_skill = 5
+			desc = EQS_SOL_morning_mulch_desc
 			visible = { has_country_flag = SOL_empresss_protectors }
 		}
 	}
@@ -694,6 +712,7 @@ characters = {
 			defense_skill = 3
 			planning_skill = 2
 			logistics_skill = 6
+			desc = EQS_queen_argynnis_desc
 			visible = { has_country_flag = SOL_bugs_in_the_belfry }
 		}
 	}

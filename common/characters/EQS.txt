@@ -18,7 +18,7 @@ characters={
 			planning_skill=2
 			logistics_skill=2
 			legacy_id=1
-			desc = EQS_arrogant_cunt_desc
+			desc = EQS_blueblood_desc
 			visible = {
 				original_tag = EQS
 				OR = {
@@ -136,6 +136,7 @@ characters={
 			defense_skill = 2
 			planning_skill = 4
 			logistics_skill = 3
+			desc = EQS_daybreaker_general_desc
 			visible = {
 				has_character_flag = SOL_daybreaker_boss
 			}
@@ -149,8 +150,8 @@ characters={
 				large="gfx/leaders/EQS/Starlight.tga"
 			}
 			army = {
-				large = "gfx/leaders/MAN/Starlight.tga"
-				small = "gfx/interface/ideas/Advisors/ELF/ELF_starlight.tga"
+				large = "gfx/leaders/EQS/Starlight_Glimmer.tga"
+				small = "gfx/interface/ideas/Advisors/EQS/EQS_starlight_glimmer.tga"
 			}
 		}
 		country_leader={
@@ -188,7 +189,7 @@ characters={
 			defense_skill = 4
 			planning_skill = 4
 			logistics_skill = 1
-			desc = LUNA_DESC
+			desc = EQS_luna_desc
 			visible = {
 				NOT = {
 					has_character_flag = EQS_luna_leader_disabled
@@ -271,6 +272,7 @@ characters={
 			maneuvering_skill=2
 			coordination_skill=2
 			legacy_id=13
+			desc = EQS_madoor_stronghammer_desc
 		}
 	}
 	EQS_evening_squall={
@@ -289,6 +291,7 @@ characters={
 			maneuvering_skill=1
 			coordination_skill=1
 			legacy_id=14
+			desc = EQS_evening_squall_desc
 		}
 	}
 	EQS_cynosura={
@@ -359,6 +362,7 @@ characters={
 			maneuvering_skill=2
 			coordination_skill=1
 			legacy_id=15
+			desc = EQS_dust_hoover_desc
 		}
 	}
 	EQS_copper_gearheart_cog={
@@ -377,6 +381,7 @@ characters={
 			maneuvering_skill=1
 			coordination_skill=1
 			legacy_id=-1
+			desc = EQS_copper_gearheart_cog_desc
 		}
 	}
 	EQS_twilight_sparkle = {
@@ -532,6 +537,7 @@ characters={
 			defense_skill = 2
 			planning_skill = 6
 			logistics_skill = 4
+			desc = EQS_SOL_sunrise_sparkle_desc
 			visible = {
 				has_character_flag = EQS_sunrise_joined_fight
 				OR = {
@@ -1144,7 +1150,7 @@ characters={
 			defense_skill = 2
 			planning_skill = 1
 			logistics_skill = 2
-			desc = "rainbowdash_desc"
+			desc = "rainbowdash_general_desc"
 			visible = {
 				NOT = { has_country_flag = SOL_mane_six_escape }
 				OR = {
@@ -1975,6 +1981,7 @@ characters={
 			planning_skill = 1
 			logistics_skill = 2
 			legacy_id = 10000
+			desc = EQS_braeburn_desc
 			visible = {
 				if = {
 					limit = {
@@ -2252,6 +2259,7 @@ characters={
 			defense_skill = 2
 			planning_skill = 1
 			logistics_skill = 1
+			desc = EQS_SOL_shining_star_desc
 			visible = {
 				is_EQS_SOL = yes
 				has_country_flag = SOL_new_generals_flag
@@ -2274,18 +2282,19 @@ characters={
 			defense_skill = 2
 			planning_skill = 2
 			logistics_skill = 2
+			desc = EQS_SOL_scroup_whitemares_desc
 			visible = {
 				is_EQS_SOL = yes
 				has_country_flag = SOL_new_generals_flag
 			}
 		}
 	}
-	EQS_SOL_aurora_shinesparck = {
-		name = EQS_SOL_aurora_shinesparck
+	EQS_SOL_aurora_shinespark = {
+		name = EQS_SOL_aurora_shinespark
 		portraits = {
 			army = {
 				large = "gfx/leaders/SOL/Aurora_Shinespark.tga"
-				small = "GFX_idea_EQS_SOL_aurora_shinesparck"
+				small = "gfx/interface/ideas/advisors/EQS/EQS_SOL_aurora_shinespark.dds"
 			}
 		}
 
@@ -2296,6 +2305,7 @@ characters={
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 2
+			desc = EQS_SOL_aurora_shinespark_desc
 			visible = {
 				is_EQS_SOL = yes
 				has_country_flag = SOL_inquisitor_generals
@@ -2320,6 +2330,7 @@ characters={
 			planning_skill = 4
 			logistics_skill = 3
 			legacy_id = 35
+			desc = EQS_SOL_midwinter_halo_desc
 			visible = {
 				is_EQS_SOL = yes
 				has_country_flag = SOL_new_generals_flag
@@ -2344,6 +2355,7 @@ characters={
 			defense_skill = 3
 			planning_skill = 2
 			logistics_skill = 2
+			desc = EQS_august_von_eisenstadt_desc
 			visible = {
 				OR = {
 					AND = {
@@ -2372,6 +2384,7 @@ characters={
 			planning_skill = 2
 			logistics_skill = 3
 			legacy_id= 204
+			desc = EQS_SOL_comet_trail_desc
 			visible = {
 				OR = {
 					original_tag = CES
@@ -2401,6 +2414,7 @@ characters={
 			planning_skill = 1
 			logistics_skill = 2
 			legacy_id = 36
+			desc = EQS_SOL_capsaicin_desc
 			visible = {
 				is_EQS_SOL = yes
 				has_country_flag = SOL_new_generals_flag
@@ -2424,6 +2438,7 @@ characters={
 			planning_skill = 2
 			logistics_skill = 1
 			legacy_id = 37
+			desc = EQS_SOL_comm_rush_desc
 			visible = {
 				is_EQS_SOL = yes
 				has_country_flag = SOL_new_generals_flag
@@ -2447,6 +2462,7 @@ characters={
 			planning_skill = 2
 			logistics_skill = 2
 			legacy_id = 38
+			desc = EQS_SOL_stormchaser_desc
 			visible = {
 				is_EQS_SOL = yes
 				has_country_flag = SOL_new_generals_flag
@@ -2741,6 +2757,7 @@ characters={
 			defense_skill = 2
 			planning_skill = 4
 			logistics_skill = 1
+			desc = fancy_albino_sunhorse_desc
 			visible = {
 				OR = {
 					AND = {
@@ -2898,7 +2915,7 @@ characters={
 			planning_skill = 1
 			logistics_skill = 3
 			legacy_id = 31
-
+			desc = EQS_allen_spark_desc
 			visible = {
 				has_country_flag = EQS_create_new_commanders_flag
 			}
@@ -2920,7 +2937,7 @@ characters={
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 2
-			desc = swift_milf_desc
+			desc = EQS_swift_wing_desc
 			legacy_id = 39
 			visible = {
 				has_country_flag = EQS_create_new_commanders_flag
@@ -2944,6 +2961,7 @@ characters={
 			planning_skill = 2
 			logistics_skill = 2
 			legacy_id = 32
+			desc = EQS_fireflight_desc
 			visible = {
 				has_country_flag = EQS_create_new_commanders_flag
 			}
@@ -2965,6 +2983,7 @@ characters={
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 1
+			desc = "EQS_anonfilly_desc"
 			visible = {
 				has_country_flag = EQS_create_new_commanders_flag
 			}
@@ -2987,6 +3006,7 @@ characters={
 			defense_skill = 3
 			planning_skill = 2
 			logistics_skill = 2
+			desc = EQS_sergeant_reckless_desc
 			visible = {
 				has_country_flag = EQS_create_new_commanders_flag
 			}
@@ -3058,6 +3078,7 @@ characters={
 			defense_skill = 2
 			planning_skill = 3
 			logistics_skill = 1
+			desc = EQS_caltrop_decay_desc
 			traits = { panzer_leader panzer_expert pony_race_trait }
 			visible = {
 				has_country_flag = EQS_create_new_commanders_flag
@@ -3081,6 +3102,7 @@ characters={
 			planning_skill = 3
 			logistics_skill = 3
 			legacy_id = 33
+			desc = EQS_sun_marble_desc
 			visible = {
 				has_country_flag = EQS_create_new_commanders_flag
 			}
@@ -3102,6 +3124,7 @@ characters={
 			defense_skill = 2
 			planning_skill = 2
 			logistics_skill = 1
+			desc = EQS_orion_star_desc
 			visible = {
 				has_country_flag = EQS_create_new_commanders_flag
 			}
@@ -3118,12 +3141,13 @@ characters={
 
 		corps_commander = {
 			traits = { pony_race_trait }
-			skill = 2
+			skill = 3
 			attack_skill = 3
-			defense_skill = 2
+			defense_skill = 1
 			planning_skill = 3
 			logistics_skill = 3
 			legacy_id = 30
+			desc = EQS_bernard_hoofgonery_desc
 			visible = {
 				has_country_flag = EQS_create_new_commanders_flag
 			}
@@ -3175,6 +3199,7 @@ characters={
 			defense_skill = 3
 			planning_skill = 1
 			logistics_skill = 1
+			desc = EQS_SOL_red_rocket_desc
 			visible = {
 				is_EQS_SOL = yes
 				has_country_flag = SOL_new_generals_flag
