@@ -274,6 +274,40 @@ characters={
 			legacy_id=13
 			desc = EQS_madoor_stronghammer_desc
 		}
+		advisor = {
+			slot = navy_chief
+			idea_token = madoor_stronghammer
+			cost = 100
+
+			allowed = {
+				original_tag = EQS
+			}
+			available = {
+				if = {
+					limit = { is_original_EQS = yes }
+					has_completed_focus = Advisors
+				}
+				if = {
+					limit = { is_EQS_SOL = yes }
+					has_global_flag = EQS_completed_advisors
+				}
+				if = {
+					limit = { event_target:solar_empire = { exists = yes } }
+					OR = {
+						AND = {
+							tag = event_target:solar_empire
+							NOT = { country_exists = event_target:equestria }
+						}
+						tag = event_target:equestria
+					}
+				}
+			}
+
+			traits = { navy_chief_naval_aviation_2 }
+			ai_will_do = {
+				factor = 1
+			}
+		}
 	}
 	EQS_evening_squall={
 		name=EQS_evening_squall
@@ -1222,6 +1256,7 @@ characters={
 			allowed = {
 				original_tag = EQS
 			}
+			visible = { always = no }
 			available = {
 				if = {
 					limit = { is_original_EQS = yes }
@@ -2757,7 +2792,7 @@ characters={
 			defense_skill = 2
 			planning_skill = 4
 			logistics_skill = 1
-			desc = fancy_albino_sunhorse_desc
+			desc = fancy_general_albino_sunhorse_desc
 			visible = {
 				OR = {
 					AND = {

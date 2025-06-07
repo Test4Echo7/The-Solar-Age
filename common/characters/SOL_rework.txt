@@ -939,6 +939,7 @@ characters = {
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 3
+			desc = CRY_nightshade_desc
 			visible = { has_country_flag = CRY_solar_generals }
 		}
 	}
@@ -953,6 +954,7 @@ characters = {
 			defense_skill = 3
 			planning_skill = 3
 			logistics_skill = 2
+			desc = CRY_mercy_desc
 			visible = { has_country_flag = CRY_solar_generals }
 		}
 	}
@@ -966,6 +968,7 @@ characters = {
 			defense_skill = 3
 			planning_skill = 4
 			logistics_skill = 2
+			desc = CRY_beryl_scabbard_desc
 			visible = { has_country_flag = CRY_solar_generals }
 		}
 	}
@@ -1005,6 +1008,7 @@ characters = {
 			defense_skill = 1
 			planning_skill = 3
 			logistics_skill = 2
+			desc = EQC_full_band_desc
 			visible = { has_country_flag = EQC_the_backup_arrived }
 		}
 	}
@@ -1019,6 +1023,7 @@ characters = {
 			defense_skill = 2
 			planning_skill = 3
 			logistics_skill = 1
+			desc = EQC_triple_strike_desc
 			visible = { has_country_flag = EQC_the_backup_arrived }
 		}
 	}
