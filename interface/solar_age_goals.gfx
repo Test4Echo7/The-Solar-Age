@@ -263,4 +263,30 @@ SpriteTypes = {
         name = GFX_goal_replanting_jungle
         texturefile = "gfx/interface/goals/EQS/replanting_jungle.png"
     }
+
+    ###PCB###
+    SpriteType = {
+        name = GFX_goal_change_management
+        texturefile = "gfx/interface/goals/EQS/change_management.png"
+    }
+    SpriteType = {
+        name = GFX_goal_communist_examples
+        texturefile = "gfx/interface/goals/EQS/communist_examples.png"
+    }
+    SpriteType = {
+        name = GFX_goal_coercion_campaign
+        texturefile = "gfx/interface/goals/EQS/coercion_campaign.png"
+    }
+    SpriteType = {
+        name = GFX_goal_naval_staging_grounds
+        texturefile = "gfx/interface/goals/EQS/naval_staging_grounds.png"
+    }
+    SpriteType = {
+        name = GFX_goal_plumb_mountain_depths
+        texturefile = "gfx/interface/goals/EQS/plumb_mountain_depths.png"
+    }
+    SpriteType = {
+        name = GFX_goal_isle_of_sun
+        texturefile = "gfx/interface/goals/EQS/isle_of_sun.png"
+    }
 }
