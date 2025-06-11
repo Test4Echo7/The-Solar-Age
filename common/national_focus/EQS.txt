@@ -5076,6 +5076,7 @@ shared_focus = {
 		###Event of Bon Bon being brought into Celestia's quarters, so it's a private affair, and Celestia is clearly a bit nervous, and after a bit of chatting, finally gets to her point of promoting Bon Bon to the new SMILE director, which surprises Bon Bon, but she takes it
 		country_event = equestriaexpanded.1
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
 	ai_will_do = { factor = 125 }
 }
 
@@ -5093,6 +5094,7 @@ shared_focus = {
 		###A number of new recruits for SMILE are put through the ringer by Bon Bon herself, since she was good at being deep cover for years, given how she lived in Ponyville, and she pushes the recruits to their limit on what they can do
 		country_event = equestriaexpanded.2
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
 	ai_will_do = { factor = 60 }
 }
 
@@ -5130,6 +5132,7 @@ shared_focus = {
 		}
 		###Maybe short event of the remaking of SMILE's headquarters, with a tour for Celestia
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
 	ai_will_do = { factor = 45 }
 }
 
@@ -5155,6 +5158,7 @@ shared_focus = {
 			country_event = equestriaexpanded.3
 		}
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_BALANCE_OF_POWER }
 	ai_will_do = {
 		factor = 30
 		modifier = {
@@ -5189,6 +5193,7 @@ shared_focus = {
 			custom_effect_tooltip = EQS_smile_upgrades_3_tt
 		}
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
 	ai_will_do = { factor = 120 }
 }
 
@@ -5215,6 +5220,7 @@ shared_focus = {
 			custom_effect_tooltip = EQS_smile_upgrades_4_tt
 		}
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
 	ai_will_do = { factor = 75 }
 }
 
@@ -5238,6 +5244,7 @@ shared_focus = {
 		###Maybe an event of Bon Bon and others going through training for different ways to spot a changeling or how to flush one out, or even act like one when around other changelings who believe that they're in disguise as a pony
 		country_event = equestriaexpanded.4
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
 	ai_will_do = { factor = 170 }
 }
 
@@ -5263,5 +5270,6 @@ shared_focus = {
 			country_event = equestriaexpanded.5
 		}
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_BALANCE_OF_POWER }
 	ai_will_do = { factor = 200 }
 }

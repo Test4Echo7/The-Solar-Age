@@ -71,6 +71,7 @@ shared_focus = {
             add = 150
         }
     }
+    search_filters = { FOCUS_FILTER_MANPOWER }
 }
 
 ###Tweaked checks for Sunrise focus###
@@ -225,6 +226,7 @@ shared_focus = {
 			}
         }
 	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
 }
 
 ###New civil war focuses###
@@ -321,6 +323,7 @@ shared_focus = {
         ###Daybreaker hosts a speech outside Canterlot castle, where ponies are frightened of what is happening, and she promises that she will always be with them, unlike her traitor sister, and that they will drive back the forces of darkness and see the light of day shine forever
         country_event = solarreworked.251
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
 	ai_will_do = { factor = 150 }
 }
 
@@ -368,6 +371,7 @@ shared_focus = {
         three_random_arms_factory = yes
         add_stability = -0.1
     }
+    search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
     ai_will_do = { factor = 250 }
 }
 
@@ -417,6 +421,7 @@ shared_focus = {
         104 = { create_unit = { division = "division_template = \"Garrison Regiment\"start_experience_factor =0.1 " owner = EQS id = 11100 } }
         add_ideas = SOL_minimal_training_requirements
 	}
+	search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_BONUS }
 	ai_will_do = { factor = 300 }
 }
 
@@ -464,6 +469,7 @@ shared_focus = {
         log = "[GetDateText]: [Root.GetName]: Focus SOL_counter_terrorists"
         add_ideas = SOL_counter_insurgents
     }
+    search_filters = { FOCUS_FILTER_RESISTANCE }
     ai_will_do = { factor = 200 }
 }
 
@@ -509,6 +515,7 @@ shared_focus = {
         log = "[GetDateText]: [Root.GetName]: Focus SOL_spending_money"
         add_ideas = SOL_inflationary_spending
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = { factor = 150 }
 }
 
@@ -557,6 +564,7 @@ shared_focus = {
         ###Event of a pony preacher for Daybreaker using fear and cursing to fire up ponies to remain hateful of those who would "free" them from Daybreaker's enslavement
         country_event = solarreworked.252
     }
+    search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
     ai_will_do = { factor = 250 }
 }
 
@@ -605,6 +613,7 @@ shared_focus = {
         add_ideas = SOL_desperate_drafting
         ###Maybe event of a recruiter being forced to pass every single pony she sees, just so that they can get more bodies on the front, even though some of them are cowards, drunks, etc.
 	}
+	search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_BONUS }
 	ai_will_do = { factor = 200 }
 }
 
@@ -735,6 +744,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_waking_dawn_star"
 		country_event = solarreworked.20
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_BALANCE_OF_POWER }
 }
 
 shared_focus = {
@@ -755,6 +765,7 @@ shared_focus = {
        country_event = solarreworked.21
        ###Daybreaker secures most of the castle and is confronted by Fancy Pants, who she finds droll, and ends up sacking him, as well as most of her cabinet, and has them all arrested to avoid disruptions
     }
+    search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
     ai_will_do = { factor = 200 }
 }
 
@@ -776,6 +787,7 @@ shared_focus = {
         country_event = solarreworked.22
         ###Daybreaker gets hold of Blueblood in his war tent, and appears to him as a fiery demon, which makes him scared enough to basically prostrate himself to her, and swear that he will serve her
     }
+    search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER }
     ai_will_do = { factor = 200 }
 }
 
@@ -807,6 +819,7 @@ shared_focus = {
         log = "[GetDateText]: [Root.GetName]: Focus SOL_appoint_committee"
         add_ideas = SOL_imperial_war_committee
     }
+    search_filters = { FOCUS_FILTER_INDUSTRY }
     ai_will_do = { factor = 150 }
 }
 
@@ -857,6 +870,7 @@ shared_focus = {
         country_event = solarreworked.23
         ###Event of soldiers being sent in to crack down on a large series of union protests and organized riots in Fillydelphia, after the Fillydelphian mayor also rebelled against Daybreaker, with casualties in the streets once they are attacked
     }
+    search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_BALANCE_OF_POWER }
     ai_will_do = { factor = 200 }
 }
 
@@ -903,6 +917,7 @@ shared_focus = {
         country_event = solarreworked.24
         ###Event overviewing how the loyal aspects of the military went in and started to purge some of the officers and rank and file, which has led to extreme fear within the remaining soldiers, as it should be
     }
+    search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_BALANCE_OF_POWER FOCUS_FILTER_MANPOWER }
     ai_will_do = { factor = 200 }
 }
 
@@ -937,6 +952,7 @@ shared_focus = {
 		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = hard_sell
     }
+    search_filters = { FOCUS_FILTER_POLITICAL }
     ai_will_do = { factor = 150 }
 }
 
@@ -983,6 +999,7 @@ shared_focus = {
         country_event = solarreworked.25
         ###Event of a news reporter who is on the air on the radio being barged into by some of the military, who are shutting down the station, as they have been determined to have been broadcasting "anti-Harmony propaganda" and are hauled away, with some final statements by a soldier
     }
+    search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_BALANCE_OF_POWER FOCUS_FILTER_POLITICAL }
     ai_will_do = { factor = 200 }
 }
 
@@ -1035,6 +1052,7 @@ shared_focus = {
         }
         ###Maybe event of a plant in one of the suspect divisions coming across some truly damning evidence, and barely getting away with it to report
     }
+    search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER FOCUS_FILTER_BALANCE_OF_POWER }
     ai_will_do = { factor = 150 }
 }
 
@@ -1056,6 +1074,7 @@ shared_focus = {
         country_event = solarreworked.26
         ###Daybreaker meets with a tired Blueblood, whom she has been training for the last day, the entire day, without her breaking a sweat, and he is finally starting to get some of the ideas behind what she is teaching him, despite the punishments for failure, which include improving his magic, awareness, and decision making
     }
+    search_filters = { FOCUS_FILTER_MANPOWER }
     ai_will_do = { factor = 100 }
 }
 
@@ -1088,6 +1107,7 @@ shared_focus = {
         country_event = solarreworked.27
         ###Daybreaker meets privately with Raven, who is still so busy she doesn't really care that Daybreaker is now leading versus Celestia, since she is still coordinating most of Daybreaker's life, and Daybreaker rewards her for her steadfast loyalty with a new position, although she will still need to be Daybreaker's assistant, which annoys Raven
     }
+    search_filters = { FOCUS_FILTER_POLITICAL }
     ai_will_do = { factor = 100 }
 }
 
@@ -1135,6 +1155,7 @@ shared_focus = {
         country_event = solarreworked.28
         ###Maybe event of Daybreaker going rapidfire through some different trials, all of which she proclaims as guilty, even though they want to plead their case
     }
+    search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_BALANCE_OF_POWER }
     ai_will_do = { factor = 200 }
 }
 
@@ -1183,6 +1204,7 @@ shared_focus = {
         country_event = solarreworked.29
         ###Maybe event of a couple of mid-level pencil pushers trying to navigate how much more confusing the laws have become, while at the same time, seeing how effective they are, since a couple of ponies just get taken out and shot for breaking a law
     }
+    search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_RESISTANCE FOCUS_FILTER_BALANCE_OF_POWER }
     ai_will_do = { factor = 300 }
 }
 
@@ -1204,6 +1226,7 @@ shared_focus = {
         country_event = solarreworked.30
         ###Daybreaker oversees his last test, which is choosing between her, and choosing between one of his old suitors, of whom she found pictures in his quarters, and how it is potentially a distraction, and he ultimately chooses Daybreaker, which means, since she was also a staunch anti-Daybreaker pony, she gets to be executed by him, in cold blood
     }
+    search_filters = { FOCUS_FILTER_MANPOWER }
     ai_will_do = { factor = 100 }
 }
 
@@ -1252,6 +1275,7 @@ shared_focus = {
 			tooltip_side = EQS_powa
         }
     }
+    search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_MANPOWER FOCUS_FILTER_BALANCE_OF_POWER }
     ai_will_do = { factor = 150 }
 }
 
@@ -1286,6 +1310,7 @@ shared_focus = {
         country_event = solarreworked.31
         ###Maybe short event of her suiting up for battle with the enemies of the Empire, as she realizes that her ponies are forever lost without her, and they will be guided like the sheep they are
     }
+    search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL }
     ai_will_do = { factor = 500 }
 }
 
@@ -1318,6 +1343,7 @@ shared_focus = {
         country_event = solarreworked.32
         ###Event of discussing that there is the unlikely, and disliked, event that if Daybreaker is either wounded and indisposed, or killed, that there needs to be somepony who fills her role; there will only be Raven and Blueblood to choose from initially, but Sunrise and Dawnbreak open up when they become corrupted, if taken later
     }
+    search_filters = { FOCUS_FILTER_POLITICAL }
     ai_will_do = { factor = 100 }
 }
 
@@ -1354,7 +1380,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_Imperium_Solis"
 		country_event = solarreworked.33
 	}
-	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
+	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
 }
 
 ###Revamped Paths###
@@ -1438,7 +1464,15 @@ shared_focus = {
 					}
 				}
 			}
-			mark_focus_tree_layout_dirty = yes
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				mark_focus_tree_layout_dirty = yes
+			}
 			country_event = {
 				id = solarreworked.333
 				days = 180
@@ -1450,6 +1484,7 @@ shared_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_ARMY_BONUS }
 }
 
 shared_focus = {
@@ -1470,6 +1505,7 @@ shared_focus = {
 		###Event of Daybreaker speaking of all the things that she has done for her ponies, and how that means she is the pure manifestation of Harmony, and that she will do all that she can to better everypony through her
 		country_event = solarreworked.320
 	}
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
 	ai_will_do = { factor = 50 }
 }
 
@@ -1528,6 +1564,7 @@ shared_focus = {
 			category = industry
 		}
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 120 }
 }
 
@@ -1549,6 +1586,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_world_opportunity"
 		add_ideas = SOL_war_of_worlds
 	}
+	search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_RESISTANCE }
 	ai_will_do = { factor = 70 }
 }
 
@@ -1570,6 +1608,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_land_of_subjects"
 		add_ideas = SOL_holy_solar_empire
 	}
+	search_filters = { FOCUS_FILTER_ANNEXATION }
 	ai_will_do = { factor = 80 }
 }
 
@@ -1591,6 +1630,7 @@ shared_focus = {
 		###Maybe event of Daybreaker basically being on a board meeting of some corporation that is in EQS, and pushing to the point that any of their interests become hers, because what she wants is obviously the best for everpony else, especially her
 		country_event = solarreworked.321
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = { factor = 50 }
 }
 
@@ -1616,6 +1656,7 @@ shared_focus = {
 		###Maybe event of Daybreaker proudly standing before an idea she had of something meant to honor her, or to show her glory, despite how it is draining the Empire's resources, but because she needs it, then she gets it, no matter what other ponies need
 		###solarreworked.322 is for one of the other projects, which is her proudly watching as something made in her image is almost finished, ignoring how it has been a strain on the Empire's resources and therefore, ability to protect itself and Harmony; solarreworked.315 is for creating the Cathedral of the Sun, and is Daybreaker having a final tour of it, and how it is dedicated to her
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
 	ai_will_do = { factor = 50 }
 }
 
@@ -1651,6 +1692,7 @@ shared_focus = {
 
 	cost = 4
 	prerequisite = { focus = SOL_bed_companies }
+	prerequisite = { focus = SOL_land_of_subjects }
 	available = {
 		is_subject = no
 		has_DB_ruler = yes
@@ -1661,6 +1703,7 @@ shared_focus = {
 		two_random_arms_factory = yes
 		two_random_industrial_complex = yes
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = { factor = 50 }
 }
 
@@ -1699,6 +1742,7 @@ shared_focus = {
 		}
 		###Perhaps an event of one of the scientists in Holy Flames giving a demonstration of new technology that can be used for Daybreaker and the Empire to her, which pleases her as she finds it a small reflection of herself, and approves it, which makes him panic, since he wasn't expecting that level of support
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_BONUS }
 	ai_will_do = { factor = 70 }
 }
 
@@ -1720,6 +1764,7 @@ shared_focus = {
 		###Event of Daybreaker musing on the oddity that ponies, zebra, changelings, and the rest of the world seems obsessed with desiring peace, but they always fight for it, and she concludes she is the end all and be all of peace, because she will bring it to everypony, partially for her own amusement to see Chrysalis or others gobsmacked
 		country_event = solarreworked.323
 	}
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_ARMY_BONUS }
 	ai_will_do = { factor = 50 }
 }
 
@@ -1770,7 +1815,6 @@ shared_focus = {
 
 	cost = 5
 	prerequisite = { focus = SOL_empresss_bits }
-	prerequisite = { focus = SOL_land_of_subjects }
 	available = {
 		is_subject = no
 		has_DB_ruler = yes
@@ -1778,10 +1822,10 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_imperial_betters"
-		add_ideas = SOL_masters_of_equus
 		###Possibly event of some administrators coming to a recently integrated town and reworking the entire thing, even though it's already running smoothly, simply because they are superior since they're from the Empire proper
 		country_event = solarreworked.325
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
 	ai_will_do = { factor = 100 }
 }
 
@@ -1838,6 +1882,7 @@ shared_focus = {
 		###Event of a book burning of most of Canterlot's library, led by Twilight, as it is for destroying all evidence that Daybreaker is anything but the only true alicorn (Twilight is "only" a "demi-alicorn") and that she alone controls the day and night, no matter what ponies say about Luna; could include one pony being arrested when they protest destroying history
 		country_event = solarreworked.326
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_BONUS }
 	ai_will_do = { factor = 60 }
 }
 
@@ -1862,6 +1907,7 @@ shared_focus = {
 		###Event of Daybreaker effectively taking additional charge or bossing around even further some armies, and not allowing herself to be questioned at all, since she is the ultimate general in the Imperial Army
 		country_event = solarreworked.327
 	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
 	ai_will_do = { factor = 40 }
 }
 
@@ -1886,6 +1932,7 @@ shared_focus = {
 		###Possibly short event of some training sessions for new mages, using their aggression and emotions to further improve their magical ability
 		country_event = solarreworked.328
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 50 }
 }
 
@@ -1907,6 +1954,7 @@ shared_focus = {
 		###Another short event about how some of the ponies who didn't work well with the Equestrian Military can be recruited, as they were quite talented, and they should have been accepted long ago
 		country_event = solarreworked.329
 	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
 	ai_will_do = { factor = 50 }
 }
 
@@ -1953,6 +2001,7 @@ shared_focus = {
 		###Perhaps a short event of how ponies are the superior beings, because of their magic, their endurance, and simply being better (much like "Let's be Xenophobic"), and how they will reach great heights, led by their even more amazing empress
 		country_event = solarreworked.330
 	}
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 40 }
 }
 
@@ -1975,6 +2024,7 @@ shared_focus = {
 		###Maybe short event about how nopony can hope to match the beauty, grace, strength, and intelligence of Daybreaker, so they are better off learning something that is befitting their lot in life, such as farming or groveling
 		country_event = solarreworked.331
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
 	ai_will_do = { factor = 100 }
 }
 
@@ -2061,10 +2111,19 @@ shared_focus = {
 				id = solarempire.45
 				days = 7
 			}
-			mark_focus_tree_layout_dirty = yes
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				mark_focus_tree_layout_dirty = yes
+			}
 		}
 		set_faction_name = SOL_romanophile_faction
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ARMY_BONUS }
 }
 
 shared_focus = {
@@ -2086,6 +2145,7 @@ shared_focus = {
 		country_event = solarreworked.300
 		###Daybreaker hosts the first service of the now front and center Solaris Cultus, with the priestly duties done by Padlock Key, and she inaugarates the first service with a proclamation of her godhood, and that she will guide the world into a new era of light and peace
 	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 300 }
 }
 
@@ -2114,6 +2174,7 @@ shared_focus = {
 		}
 		###In a grand ceremony, where she proclaims some of the highlights of Sunset's life, she proclaims that Sunset shall be the head of the worship branch of the Solaris Cultus, answering only to Padlock Key, and annoints her in a branding of fire on her shoulder that she is forever Daybreaker's
 	}
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 200 }
 }
 
@@ -2163,6 +2224,7 @@ shared_focus = {
 		}
 		###Event of Twilight meeting privately with Daybreaker, who is pleased to offer Twilight an even better position than she had before, which will be the head inquisitor of the Solaris Inquisitionis, her holy inquisition, that will be used to keep Harmony and Order, which Twilight readily accepts, as she is worried that ponies don't understand Daybreaker's desires; it is close to a mother-daughter relationship kind of talk
 	}
+	search_filters = { FOCUS_FILTER_RESISTANCE FOCUS_FILTER_POLITICAL }
 	ai_will_do = { factor = 250 }
 }
 
@@ -2185,6 +2247,7 @@ shared_focus = {
 		country_event = solarreworked.303
 		###Follow some inquisitors as they barge into an office building that has been used for quite a while in Canterlot, declaring that every single pony has been declared a heretic after one was determined to work there, and taint the very labor they intend to do for the Empress, and since none of them reported on the heretic, they are all co-sinners, and will be cleansed with fire; one of the heads (Aurora) happily lights a pony on fire or the like as they try to flee, and sets the entire building on fire
 	}
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER }
 	ai_will_do = { factor = 100 }
 }
 
@@ -2238,6 +2301,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_inquisitionis_secondary_role"
 		add_ideas = SOL_unseen_inquisitors
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESISTANCE }
 	ai_will_do = { factor = 50 }
 }
 
@@ -2260,6 +2324,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_inquisitionis_primary_role"
 		add_ideas = SOL_active_inquisitors
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_RESISTANCE }
 	ai_will_do = { factor = 80 }
 }
 
@@ -2318,6 +2383,7 @@ shared_focus = {
 		custom_effect_tooltip = SOL_big_daybreaker_is_watching_tt
 		mark_focus_tree_layout_dirty = yes
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
 	ai_will_do = { factor = 75 }
 }
 
@@ -2405,6 +2471,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_faith_honor_family"
 		add_ideas = SOL_faithful_families
 	}
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 100 }
 }
 
@@ -2448,7 +2515,7 @@ shared_focus = {
 		}
 		custom_effect_tooltip = kamikaze_focus_tooltip
 	}
-	search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
+	search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
 }
 
 shared_focus = {
@@ -2476,6 +2543,7 @@ shared_focus = {
 		country_event = solarreworked.305
 		###Event of an inquisitor (Quasar) being brought forward a suspected heretic, although there is nothing proven, and the pony tries to defend themselves, especially considering they don't recognize the rule of the Solar Empire since they are an occupier, and the inquisitor takes justice into her own hooves, as simply the accusing is enough, especially since they're supsicious already
 	}
+	search_filters = { FOCUS_FILTER_RESISTANCE }
 	ai_will_do = { factor = 40 }
 }
 
@@ -2500,7 +2568,7 @@ shared_focus = {
 		###Event of a noble attempting to argue his way into Daybreaker agreeing to his cause, which ultimately backfires when he makes a slip-up about something that Equestria did better than the Empire
 		#Maybe change this to an idea of -10% advisor cost, -15% conscription cost
 	}
-	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	search_filters = { FOCUS_FILTER_POLITICAL }
 }
 
 shared_focus = {
@@ -2525,6 +2593,7 @@ shared_focus = {
 		country_event = solarreworked.307
 		###Event of a fighter in Daybreaker's new Solar Games fighting through different opponents, both animal and pony, just to entertain the crowd and Daybreaker, of whom they gain approval to execute an opponent, just like in Rome
 	}
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
 	ai_will_do = { factor = 60 }
 }
 
@@ -2547,6 +2616,7 @@ shared_focus = {
 		country_event = solarreworked.308
 		###Event of a concerned mother or the like speaking to another, and having an intervention with the Inquisitionis with one of the other parents of the community, because their child appears to be showing "concerning" beliefs and how they don't follow the Empress's teachings enough, and the other mother tries to argue against it, but her child is ultimately taken and the parent is arrested
 	}
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 50 }
 }
 
@@ -2573,6 +2643,7 @@ shared_focus = {
 		country_event = solarreworked.309
 		###Possibly event of Daybreaker taking a lead role in an attack of a heretic stronghold or the like, and she wants to test some of the new spells that she practiced as she needs to see what her soldiers are doing under her command, and also so she can enact some judgement of ponies herself, and she is basically a walking death machine, although it clear she is at her limits protecting herself
 	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
 	ai_will_do = { factor = 70 }
 }
 
@@ -2596,6 +2667,7 @@ shared_focus = {
 		country_event = solarreworked.310
 		###Event of a parent trying to keep their foal when an inquisitor and a couple of soldiers come to them to take their foal to become another inquisitor from a very young age, and they are basically forced to give them up, since they were identified as probably a decently strong unicorn to serve Daybreaker, and they are threatened with being declared heretics if they don't give up the foal
 	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_POLITICAL }
 	ai_will_do = { factor = 100 }
 }
 
@@ -2618,6 +2690,7 @@ shared_focus = {
 		country_event = solarreworked.311
 		###Event of Quasar Pulse moving through the castle, being led by Sunrise Sparkle, to different rooms and dragging some nobles and government officials out, as even though they aren't overtly heretic, they aren't loyal enough, and every year, there will be some who will be purged, so to ensure that only the most loyal to Daybreaker are in government
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
 	ai_will_do = { factor = 40 }
 }
 
@@ -2641,6 +2714,7 @@ shared_focus = {
 		add_ideas = SOL_daybreakers_knowledge
 		###Perhaps an event of a few ponies in school being taught some obvious propaganda of Daybreaker, and questioning it, which leads to first strong whaps, and then actual beatings (they are adults), to ensure that they learn the "truth"
 	}
+	search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 50 }
 }
 
@@ -2664,6 +2738,7 @@ shared_focus = {
 		###Perhaps an event of the worship service of the Cultus, and some of the younger ponies asking questions of the priestess, and ultimately getting forced to agree, since they do see some of the faulty logic about Daybreaker being the center of everything
 		add_ideas = SOL_traditional_sacrifice
 	}
+	search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 100 }
 }
 
@@ -2685,6 +2760,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_sacrifices_on_assembly_line"
 		add_ideas = SOL_sacrificial_work
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = { factor = 80 }
 }
 
@@ -2706,6 +2782,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_fodder_troops"
 		add_ideas = SOL_heretic_cannon_fodder
 	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_MANPOWER }
 	ai_will_do = { factor = 80 }
 }
 
@@ -2728,6 +2805,7 @@ shared_focus = {
 		add_ideas = SOL_religious_government
 		###Perhaps an event of a number of ministers being replaced with members of the Adoratio, since they are no longer trusted, or an event of basically a theological matter being placed in government, and being voted on, while also declaring that anything else is heresy, through law, let alone religion
 	}
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 	ai_will_do = { factor = 70 }
 }
 
@@ -2754,6 +2832,7 @@ shared_focus = {
 		country_event = solarreworked.312
 		#Spawn 3 25-width, max xp infantry-arty divisions, one general of 4 4/4/2/3
 	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
 	ai_will_do = { factor = 50 }
 }
 
@@ -2777,6 +2856,7 @@ shared_focus = {
 		country_event = solarreworked.313
 		###Possibly short event of how there are skilled fighters in the Inquisitionis and the Adoratio who could also serve for the Empress, and that they will happily serve and die for her
 	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
 	ai_will_do = { factor = 60 }
 }
 
@@ -2816,6 +2896,7 @@ shared_focus = {
 			show_ideas_tooltip = SOL_sanctum_infernal_corps
 		}
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_BONUS }
 	ai_will_do = { factor = 50 }
 }
 
@@ -2844,7 +2925,7 @@ shared_focus = {
 		###Possibly event of speaking how everypony is nothing but dust compared to Daybreaker, as she is the being that raises the sun and is untouchable, and how the only service is that of death and honor for her
 		country_event = solarreworked.314
 	}
-	search_filters = { FOCUS_FILTER_STABILITY }
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_ARMY_BONUS }
 }
 
 shared_focus = {
@@ -2927,7 +3008,15 @@ shared_focus = {
 					}
 				}
 			}
-			mark_focus_tree_layout_dirty = yes
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				mark_focus_tree_layout_dirty = yes
+			}
 			country_event = {
 				id = solarempire.45
 				days = 7
@@ -2939,6 +3028,7 @@ shared_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_POLITICAL }
 }
 
 shared_focus = {
@@ -2960,6 +3050,7 @@ shared_focus = {
 		###Event of a new set of laws tabulated by Daybreaker, signed by Daybreaker, and approved by her government, of various punishments that ponies will expect for even some minor crimes. All results are meant for ponies to help others, for example extensive community service, free labor in construction or factories, etc. Excessively harsh, but beneficial, since she wants to protect her ponies
 		country_event = solarreworked.340
 	}
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 	ai_will_do = { factor = 100 }
 }
 
@@ -2982,6 +3073,7 @@ shared_focus = {
 		###Follow a government official or noble as he goes to one of his weekly meetings and they instantly start to worry about what they can even say they did to further the benefit of the Empire by the end of it, since they need to have something that will improve ponies' lives, at least in the eyes of Daybreaker, and one eventually suggests some kind of wartime reform regarding social welfare and propaganda, which they agree to, even if it's needlessly extreme in its first iteration, which gets approved
 		country_event = solarreworked.341
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
 	ai_will_do = { factor = 80 }
 }
 
@@ -3015,6 +3107,7 @@ shared_focus = {
 			category = construction_tech
 		}
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 50 }
 }
 
@@ -3099,6 +3192,7 @@ shared_focus = {
 			show_ideas_tooltip = SOL_bitterbury_ballistics
 		}
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_BONUS }
 	ai_will_do = { factor = 80 }
 }
 
@@ -3121,6 +3215,7 @@ shared_focus = {
 		add_ideas = SOL_noponys_equal
 		#Loc should speak about how there has been improvement, but government is needlessly slow, and simply getting out of Daybreaker's way will be the best course of action for improving ponies' lives; let her live as a benevolent dictator
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_BONUS }
 	ai_will_do = { factor = 150 }
 }
 
@@ -3142,6 +3237,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_honest_cabinet"
 		add_ideas = SOL_balancing_cabinet
 	}
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_RESISTANCE }
 	ai_will_do = { factor = 100 }
 }
 
@@ -3165,6 +3261,7 @@ shared_focus = {
 		###Perhaps an event of Daybreaker first meeting the M6, and promising that they'll be having more talks, and that they will soon accept her forgiveness soon enough
 		country_event = solarreworked.343
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 	ai_will_do = { factor = 40 }
 }
 
@@ -3211,6 +3308,7 @@ shared_focus = {
 		###Event of some solarist propaganda about how it is the best duty that one can do to protect others, including laying down one's life in following after Celestia's example of surrendering to Daybreaker so that what needed to be done was done, which others need to mimic to achieve victory against the threats to ponykind
 		country_event = solarreworked.344
 	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
 	ai_will_do = { factor = 80 }
 }
 
@@ -3239,6 +3337,7 @@ shared_focus = {
 		###Series of events for corrupting the other Element bearers, or at least making them work for Daybreaker, with specific promises for each bearer, that either plays to their fears, egos, or lusts
 		country_event = solarreworked.345 #Maybe? Corruption events
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_AIRFORCE_BONUS }
 	ai_will_do = { factor = 50 }
 }
 
@@ -3261,6 +3360,7 @@ shared_focus = {
 		###Event of Daybreaker going before a crowd of ponies, as she claims she has reclaimed the Elements of Harmony for herself, and will use them to defend ponies in the face of danger the world over, although they are merely well-crafted forgeries, since she was actually injured when she tried to take the Elements, and has left some faint scarring on her, which they don't notice; she uses her magic to make it appear she is using them by casting a rainbow laser ala S1/S2
 		country_event = solarreworked.346
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_BONUS }
 	ai_will_do = { factor = 100 }
 }
 
@@ -3306,6 +3406,7 @@ shared_focus = {
 		###Event of a soldier or two being pinned down by enemy fire, and there is a bit of radio chatter that "she" is gone, and shortly Daybreaker breaks through a barricade or the like to blast most of the attackers, since she was nearby to begin with, and is doing all that she can to protect her ponies
 		country_event = solarreworked.347
 	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
 	ai_will_do = { factor = 100 }
 }
 
@@ -3327,6 +3428,7 @@ shared_focus = {
 		###Event of a pony going about their rather drab day and then suddenly being pressed by some pressgangs that are going about his town to get more ponies to help defend the old and the weak and the sick, but he tries to get out of it by pretending to be lame or the like, but they still take him, since they can tell he's faking
 		country_event = solarreworked.348
 	}
+	search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_BONUS }
 	ai_will_do = { factor = 80 }
 }
 
@@ -3352,6 +3454,7 @@ shared_focus = {
 		###Alternately an event of Twilight working on a new magic experiment, with the effects being tested on some criminals, who she uses to see what the effects of a new spell designed for fusion with ponies' immune systems is like, as a way to bolster them; instead, it ends up fusing their bones together and they die horribly, which she just casually notes while thinking of ways to change the test next time
 		country_event = solarreworked.349 #Will be a decision, otherwise
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_BONUS }
 	ai_will_do = { factor = 50 }
 }
 
@@ -3379,6 +3482,7 @@ shared_focus = {
 		}
 		unlock_decision_category_tooltip = SOL_dealing_with_resistance
 	}
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 	ai_will_do = { factor = 150 }
 }
 
@@ -3401,6 +3505,7 @@ shared_focus = {
 		###Maybe event of somepony in a school wanting to go into one avenue of service, but they are dictated by a single test result difference to go into a completely opposite avenue, or the like, or otherwise the teachers determining where they go, instead of the pony
 		country_event = solarreworked.350
 	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_INDUSTRY }
 	ai_will_do = { factor = 100 }
 }
 
@@ -3423,6 +3528,7 @@ shared_focus = {
 		###Maybe event of a pony who is accused of not being orderly enough being grilled, then released, because they aren't clearly anti-order, but are warned to be careful, which makes them a bit perturbed, but they carry on anyway
 		country_event = solarreworked.351
 	}
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 	ai_will_do = { factor = 50 }
 }
 
@@ -3445,6 +3551,7 @@ shared_focus = {
 		add_ideas = SOL_unneeded_help
 		###Maybe have an event of a pony who is running low on cash or the like, or is homeless, going to a shelter, where he is helped, but at the same time, required to help others as he can do it as a way of improving himself, and eventually hopefully getting a job so he won't be a leech
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_WAR_SUPPORT }
 	ai_will_do = { factor = 100 }
 }
 
@@ -3581,6 +3688,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_pan_pony_empire"
 		add_ideas = SOL_all_ponies
 	}
+	search_filters = { FOCUS_FILTER_RESISTANCE FOCUS_FILTER_ANNEXATION }
 	ai_will_do = { factor = 60 }
 }
 
@@ -3611,6 +3719,7 @@ shared_focus = {
 		custom_effect_tooltip = SOL_secrets_of_the_pony_tt
 		set_country_flag = SOL_wunderwaffen_unlocked
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 50 }
 }
 
@@ -3847,6 +3956,7 @@ shared_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = { factor = 60 }
 }
 
@@ -3909,6 +4019,7 @@ shared_focus = {
 		###Event of some Solar troops going into the dragon islands, where Ember has managed to hole up in one area with some dragons, and them fighting through the dragons to get them out of the isles, or kill them in the process, and there is one combat with Ember, which eventually overpowers her, since she's only one dragon
 		country_event = solarreworked.370
 	}
+	search_filters = { FOCUS_FILTER_ANNEXATION }
 	ai_will_do = { factor = 50 }
 }
 
@@ -3934,6 +4045,7 @@ shared_focus = {
 		###Event of a dragon trying to escape their prison camp, where they are being used to mine crystals for Daybreaker's forces, and ultimately being captured and executed, since they're clearly of no use any longer
 		country_event = solarreworked.371
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = { factor = 35 }
 }
 
@@ -4020,6 +4132,7 @@ shared_focus = {
 		###Event of some changelings being rounded up or the like to be tabulated, then put to work as different chattel slaves, as punishment for their plans for ever toppling the Solar Empire, and they are also deprived of any and all emotions, which means they must subsist off normal food, which is even worse for them
 		country_event = solarreworked.373
 	}
+	search_filters = { FOCUS_FILTER_RESISTANCE }
 	ai_will_do = { factor = 50 }
 }
 
@@ -4047,6 +4160,7 @@ shared_focus = {
 		###Daybreaker gathers the various queens of the main hives of the Changeling Lands, to give them a short, mocking speech about how they threw in their lot with the wrong changeling, and that she will see all that they held dear destroyed, as she uses magic to showcase what is happening to each the different hives as punishment, which involves much destruction
 		country_event = solarreworked.374
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESISTANCE }
 	ai_will_do = { factor = 50 }
 }
 
@@ -4071,6 +4185,7 @@ shared_focus = {
 		###Daybreaker meets with Chrysalis, who is imprisoned like an animal, which Daybreaker claims she is, and Daybreaker has a one-sided, and incredibly furious and aggressive conversation about how Chrysalis will be treated, and what her punishment will be for defying her, although she at the same time thanks Chrysalis for helping motivate her ponies to follow her, as an ironic twist
 		country_event = solarreworked.375
 	}
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
 	ai_will_do = { factor = 70 }
 }
 
@@ -4094,6 +4209,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_establish_worker_hives"
 		add_ideas = SOL_changeling_solarists
 	}
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY }
 	ai_will_do = { factor = 70 }
 }
 
@@ -4119,6 +4235,7 @@ shared_focus = {
 		###Perhaps an event of Daybreaker having a conversation with the captured changeling queens, regarding the state of the hive, and offers them a chance of survival, in exchange for complete submission to her
 		country_event = solarreworked.376
 	}
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 	ai_will_do = {
 		factor = 40
 		modifier = {
@@ -4158,6 +4275,7 @@ shared_focus = {
 		custom_effect_tooltip = SOL_how_edgy_of_you_tt
 		set_country_flag = SOL_can_core_CHN_states
 	}
+	search_filters = { FOCUS_FILTER_ANNEXATION }
 	ai_will_do = { factor = 65 }
 }
 
@@ -4224,6 +4342,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_deer_shipwrights"
 		add_ideas = SOL_solar_vikings
 	}
+	search_filters = { FOCUS_FILTER_NAVY_BONUS FOCUS_FILTER_INDUSTRY }
 	ai_will_do = { factor = 40 }
 }
 
@@ -4248,6 +4367,7 @@ shared_focus = {
 		224 = { add_core_of = ROOT }
 		add_stability = 0.1
 	}
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_ANNEXATION }
 	ai_will_do = { factor = 70 }
 }
 
@@ -4275,6 +4395,7 @@ shared_focus = {
 		custom_effect_tooltip = SOL_viking_no_more_tt
 		set_country_flag = SOL_can_core_OLE_states
 	}
+	search_filters = { FOCUS_FILTER_ANNEXATION }
 	ai_will_do = { factor = 40 }
 }
 
@@ -4314,6 +4435,7 @@ shared_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = { factor = 50 }
 }
 
@@ -4337,6 +4459,7 @@ shared_focus = {
 		###Event of Daybreaker of meeting with a bound Velvet to let her know that her lucky day has arrived, and that she will be set free, so long as she does exactly what Daybreaker wants, as she will be the figurehead of the Empire to the deer, so they can stay in line; and she will make sure that it happens, since she will have a garrison stationed in Hjortland at all times, and Velvet sees no way she can resist
 		country_event = solarreworked.377
 	}
+	search_filters = { FOCUS_FILTER_ANNEXATION }
 	ai_will_do = { factor = 60 }
 }
 
@@ -4358,6 +4481,7 @@ shared_focus = {
 		###Event of Velvet living her new normal life, as a simple deer in Hjortland, and she has a rather drab job in the pony administration to help with some of the transitions, and it pains her to no end to see how her great nation has fallen under the iron hoof of Daybreaker
 		country_event = solarreworked.378
 	}
+	search_filters = { FOCUS_FILTER_RESISTANCE }
 	ai_will_do = { factor = 80 }
 }
 
@@ -4447,6 +4571,7 @@ shared_focus = {
 		custom_effect_tooltip = SOL_catbirbs_integrated_tt
 		set_country_flag = SOL_can_core_GRF_states
 	}
+	search_filters = { FOCUS_FILTER_ANNEXATION }
 	ai_will_do = { factor = 70 }
 }
 
@@ -4474,6 +4599,7 @@ shared_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = { factor = 60 }
 }
 
@@ -4536,6 +4662,7 @@ shared_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = { factor = 80 }
 }
 
@@ -4573,6 +4700,7 @@ shared_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_ANNEXATION }
 	ai_will_do = { factor = 30 }
 }
 
@@ -4597,6 +4725,7 @@ shared_focus = {
 		###Event of Daybreaker on a bit of a vacation from the war, although she is still doing some government stuff or the like, and she finds the entire thing quite relaxing, especially as she uses the sun as her personal sunbathing device, which is making the country overly hot, to the point of harming other ponies
 		country_event = solarreworked.372
 	}
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 	ai_will_do = { factor = 50 }
 }
 
@@ -4683,6 +4812,7 @@ shared_focus = {
 		###Rutherford is forced with the rest of his yak brethren to start serving in the factories for the Solar Empire, as they are seen as little more than backwards and uncouth, and he tries to smash one of his overseers, but it soon gets retribution from the rest in charge
 		country_event = solarreworked.379
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = { factor = 70 }
 }
 
@@ -4821,6 +4951,7 @@ shared_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = { factor = 60 }
 }
 
@@ -4889,6 +5020,7 @@ shared_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_ANNEXATION }
 }
 
 shared_focus = {
@@ -7040,6 +7172,7 @@ shared_focus = {
 		custom_effect_tooltip = SOL_nice_empress_tt
 		#Possibly show off decisions or the like
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
 	ai_will_do = {
 		factor = 40
 		modifier = {
@@ -7099,6 +7232,7 @@ shared_focus = {
 		custom_effect_tooltip = SOL_shim_sham_sent_tt
 		show_ideas_tooltip = SOL_dragon_laborers_shim_sham
 	}
+	search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
 	ai_will_do = {
 		factor = 20
 		modifier = {
@@ -7177,6 +7311,7 @@ shared_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
 	ai_will_do = {
 		factor = 20
 		modifier = {
@@ -7268,6 +7403,7 @@ shared_focus = {
 			PNG = { show_ideas_tooltip = SOL_native_oil_shim_sham }
 		}
 	}
+	search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
 	ai_will_do = {
 		factor = 20
 		modifier = {
@@ -7501,6 +7637,7 @@ shared_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
 	ai_will_do = {
 		factor = 20
 		modifier = {
@@ -7549,6 +7686,7 @@ shared_focus = {
 		show_ideas_tooltip = SOL_solar_griffon_attache_SOL
 		custom_effect_tooltip = SOL_no_war_mmkay_tt
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
 	ai_will_do = {
 		factor = 30
 		modifier = {
@@ -7640,6 +7778,7 @@ shared_focus = {
 		add_ideas = SOL_winter_preparations
 		###Three events from old focus are solarempire.27, solarempiresparkles.1, solarempiresparkles.131
 	}
+	search_filters = { FOCUS_FILTER_ANNEXATION }
 	ai_will_do = { factor = 100 }
 }
 
@@ -7676,6 +7815,7 @@ shared_focus = {
 		#Have her do vanilla infiltration mission
 		country_event = solarempiresparkles.1 #This will have to be rewritten to more closely match the length of the new event that gives the grand display event trigger. Will only reference two options, as Sunrise has thoroughly dismissed anything other than guile
 	}
+	search_filters = { FOCUS_FILTER_ANNEXATION }
 	ai_will_do = { factor = 40 }
 }
 
@@ -7711,6 +7851,7 @@ shared_focus = {
 		###Event of Daybreaker speaking with Twilight about how she must use the strength of the Empire to intimidate Cadance, not just use her guile, and Twilight takes that to heart before the vanilla grand display event
 		country_event = solarreworked.237
 	}
+	search_filters = { FOCUS_FILTER_ANNEXATION }
 	ai_will_do = {
 		factor = 30
 		modifier = {
@@ -7762,6 +7903,7 @@ shared_focus = {
 		###Event of Daybreaker arriving in the Solar Empire and speaking with either Cadance or Sunrise on how quaint the Crystal Empire is, and her plans for it, with Sunrise at least being eager to help spread the plan of Daybreaker
 		country_event = solarreworked.238
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
 	ai_will_do = { factor = 40 }
 }
 
@@ -7824,6 +7966,7 @@ shared_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
 	ai_will_do = { factor = 50 }
 }
 
@@ -7904,6 +8047,7 @@ joint_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = { factor = 35 }
 }
 
@@ -8003,6 +8147,7 @@ joint_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = { factor = 45 }
 }
 
@@ -8027,6 +8172,7 @@ shared_focus = {
 		###Event of Daybreaker going to visit Cadance and family, and they are under house arrest, with magic inhibitors put on them, and Daybreaker basically makes fun of it, and also makes a few intimidating remarks around Flurry and her health, as she acts like Cadance is hurting her by being so cold to her (as in Daybreaker)
 		country_event = solarreworked.240
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 	ai_will_do = { factor = 50 }
 }
 
@@ -8096,6 +8242,7 @@ joint_focus = {
 			army_experience = 30
 		}
 	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 50 }
 }
 
@@ -8197,6 +8344,7 @@ joint_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER }
 	ai_will_do = { factor = 40 }
 }
 
@@ -8244,6 +8392,7 @@ shared_focus = {
 		###Daybreaker meets again with Cadance, who is still under house arrest, and speaks further about some of her plans for the Crystal Empire, which upsets Cadance, especially since she is perturbed about how much Celestia has changed and Daybreaker makes one final mention of what would happen if Cadance disobeys her or her representatives as a threat
 		country_event = solarreworked.213
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
 	ai_will_do = { factor = 60 }
 }
 
@@ -8296,6 +8445,7 @@ joint_focus = {
 			country_event = solarreworked.241
 		}
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = { factor = 70 }
 }
 
@@ -8359,6 +8509,7 @@ joint_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
 	ai_will_do = { factor = 80 }
 }
 
@@ -8411,6 +8562,7 @@ shared_focus = {
 		###Event summarizing Flurry's ascendance
 		country_event = solarreworked.203
 	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
 	ai_will_do = { factor = 75 }
 }
 
@@ -8461,6 +8613,7 @@ joint_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 70 }
 }
 
@@ -8532,6 +8685,7 @@ joint_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_BONUS }
 	ai_will_do = { factor = 80 }
 }
 
@@ -8580,6 +8734,7 @@ joint_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 80 }
 }
 
@@ -8628,6 +8783,7 @@ joint_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_BONUS }
 	ai_will_do = { factor = 80 }
 }
 
@@ -8681,6 +8837,7 @@ shared_focus = {
 		#	country_event = solarempire.42
 		#}
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_BONUS }
 }
 
 shared_focus = {
@@ -8733,8 +8890,17 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_bat_problems"
 		add_war_support = 0.03
 		add_political_power = 75
-		mark_focus_tree_layout_dirty = yes
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+			mark_focus_tree_layout_dirty = yes
+		}
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
 	ai_will_do = {
 		factor = 30
 		modifier = {
@@ -8760,6 +8926,7 @@ shared_focus = {
 		###Event of soldiers going in to seize land that the thestrals currently occupy, which leads to conflict and a number of dead thestrals; should give also 1 building slot in a couple of places or compliance
 		country_event = solarreworked.41
 	}
+	search_filters = { FOCUS_FILTER_STABILITY }
 	ai_will_do = { factor = 70 }
 }
 
@@ -8779,6 +8946,7 @@ shared_focus = {
 		###Event of some thestrals being kicked out or locked out of their old place of work, including ones that they actually owned, and them fighting with some of the guard to try and in, and failing; should be alos a couple of factories provided as well as the pp
 		country_event = solarreworked.42
 	}
+	search_filters = { FOCUS_FILTER_STABILITY }
 	ai_will_do = { factor = 70 }
 }
 
@@ -8819,6 +8987,7 @@ shared_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
 	ai_will_do = { factor = 150 }
 }
 
@@ -8871,8 +9040,17 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_enlighten_darkness"
 		add_stability = -0.05
 		add_political_power = -50
-		mark_focus_tree_layout_dirty = yes
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+			mark_focus_tree_layout_dirty = yes
+		}
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 	ai_will_do = { factor = 120 }
 }
 
@@ -8891,6 +9069,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_second_class_employers"
 		country_event = solarreworked.44
 	}
+	search_filters = { FOCUS_FILTER_STABILITY }
 	ai_will_do = { factor = 70 }
 }
 
@@ -8909,6 +9088,8 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_mandatory_education"
 		country_event = solarreworked.45
 	}
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_RESEARCH }
+	ai_will_do = { focus = 60 }
 }
 
 shared_focus = {
@@ -8938,6 +9119,7 @@ shared_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
 	ai_will_do = { factor = 150 }
 }
 
@@ -9005,6 +9187,7 @@ shared_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_STABILITY }
 	ai_will_do = { factor = 80 }
 }
 
@@ -9035,8 +9218,12 @@ shared_focus = {
 				amount = 4
 			}
 			#Add modifier +15% local resources
+			add_state_modifier = {
+				modifier = { local_resources = 0.15 }
+			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = { factor = 80 }
 }
 
@@ -9063,6 +9250,7 @@ shared_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = { factor = 100 }
 }
 
@@ -9154,6 +9342,7 @@ shared_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = { factor = 70 }
 }
 
@@ -9179,6 +9368,7 @@ shared_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = { factor = 65 }
 }
 
@@ -9256,6 +9446,7 @@ shared_focus = {
 			increase_state_category = yes
 		}
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = { factor = 75 }
 }
 
@@ -9284,6 +9475,7 @@ shared_focus = {
 		###Event of a soldier going around getting more taxes from the Moonspeakers, and his general distaste of the city of the thestrals, especially since the Moonspeakers are incredibly strange to him, and also because they like to hex whoever taxes them, which they try to do again, but he does get the taxes for basically allowing them to exist and not be fully allied with Daybreaker
 		country_event = solarreworked.47
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 120 }
 }
 
@@ -9326,6 +9518,7 @@ shared_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = { factor = 50 }
 }
 
@@ -9334,6 +9527,7 @@ shared_focus = {
 	id = SOL_change_management
 	x = 13
 	y = 1
+	icon = GFX_goal_change_management
 	relative_position_id = examine_the_situation
 
 	cost = 5
@@ -9368,6 +9562,7 @@ shared_focus = {
 		###Event of PCB getting a letter from SOL about how they have one chance to return to their faction as a dominion if they submit then and there, since they could easily be wiped out if Daybreaker wished, which they have an option to accept or reject
 		country_event = solarreworked.400
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
 	ai_will_do = { factor = 50 }
 }
 
@@ -9375,6 +9570,7 @@ shared_focus = {
 	id = SOL_communist_examples
 	x = -1
 	y = 1
+	icon = GFX_goal_communist_examples
 	relative_position_id = SOL_change_management
 
 	cost = 5
@@ -9405,6 +9601,7 @@ shared_focus = {
 		###Event of some soldiers from SOL coming into PCB to effectively purge every single communist supporter that is in the capital city as well as elsewhere in the country, and it leads to hundreds of thousands dead to eliminate that threat forever
 		country_event = solarreworked.404
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
 	ai_will_do = { factor = 80 }
 }
 
@@ -9412,6 +9609,7 @@ shared_focus = {
 	id = SOL_coercion_campaign
 	x = 1
 	y = 1
+	icon = GFX_goal_coercion_campaign
 	relative_position_id = SOL_change_management
 
 	cost = 5
@@ -9442,6 +9640,7 @@ shared_focus = {
 		###Event of propaganda about how the communist dream is nothing more than suffering, exaggerating what happened in Stalliongrad, and further making it appear like the Castro expy will only kill them all, but if they serve the Empress they will be prosperous and safe
 		country_event = solarreworked.403
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
 	ai_will_do = { factor = 60 }
 }
 
@@ -9449,6 +9648,7 @@ shared_focus = {
 	id = SOL_naval_staging_grounds
 	x = 0
 	y = 1
+	icon = GFX_goal_naval_staging_grounds
 	relative_position_id = SOL_coercion_campaign
 
 	cost = 6
@@ -9501,6 +9701,7 @@ shared_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = { factor = 50 }
 }
 
@@ -9508,6 +9709,7 @@ shared_focus = {
 	id = SOL_plumb_mountain_depths
 	x = -1
 	y = 1
+	icon = GFX_goal_plumb_mountain_depths
 	relative_position_id = SOL_naval_staging_grounds
 
 	cost = 8
@@ -9535,6 +9737,7 @@ shared_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = { factor = 50 }
 }
 
@@ -9542,6 +9745,7 @@ shared_focus = {
 	id = SOL_isle_of_sun
 	x = 0
 	y = 1
+	icon = GFX_goal_isle_of_sun
 	relative_position_id = SOL_plumb_mountain_depths
 
 	cost = 10
@@ -9563,6 +9767,7 @@ shared_focus = {
 			add_core_of = ROOT
 		}
 	}
+	search_filters = { FOCUS_FILTER_ANNEXATION }
 	ai_will_do = { factor = 90 }
 }
 
@@ -9605,6 +9810,7 @@ shared_focus = {
 		###Event of EQC receiving a notice from the Empire that it is now the crown colony of the Imperium of the Sun, and will be expected to follow, which will prompt whether to leave or stay, since they are rather far away
 		country_event = solarreworked.430
 	}
+	search_filters = { FOCUS_FILTER_ANNEXATION }
 	ai_will_do = { factor = 80 }
 }
 
@@ -9650,6 +9856,7 @@ joint_focus = {
 		###Event of Arcane Nova arriving in EQC, on a ship and a small procession of Imperial soldiers, to meet with Jet Set and explain that she is going to be ensuring loyalty and providing the Empress with information of every decision made, to ensure that the colony remains part of the Empire, and that he will have to watch his moves, since he was tied to the old regime
 		country_event = solarreworked.433
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
 	ai_will_do = { factor = 70 }
 }
 
@@ -9731,6 +9938,7 @@ joint_focus = {
 			mark_focus_tree_layout_dirty = yes
 		}
 	}
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 	ai_will_do = {
 		factor = 100
 	}
@@ -9814,6 +10022,7 @@ joint_focus = {
 			mark_focus_tree_layout_dirty = yes
 		}
 	}
+	search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
 	ai_will_do = {
 		factor = 100
 	}
@@ -9866,6 +10075,7 @@ joint_focus = {
 			add_political_power = -50
 		}
 	}
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 	ai_will_do = {
 		factor = 40
 		modifier = {
@@ -9955,6 +10165,7 @@ joint_focus = {
 			EQC = { add_political_power = 150 }
 		}
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = {
 		factor = 70
 		modifier = {
@@ -9996,6 +10207,7 @@ joint_focus = {
 		###Maybe a short event of EQC receiving the new generals with Arcane Nova meeting them with speaking on the state of the country and how they will need to enforce law
 		country_event = solarreworked.442
 	}
+	search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT }
 	ai_will_do = {
 		factor = 70
 		modifier = {
@@ -10047,6 +10259,7 @@ joint_focus = {
 			add_ideas = SOL_marelandian_deal
 		}
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = {
 		factor = 50
 		modifier = {
@@ -10098,6 +10311,7 @@ joint_focus = {
 			add_ideas = SOL_managed_debt_repayments
 		}
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = {
 		factor = 80
 		modifier = {
@@ -10172,6 +10386,7 @@ joint_focus = {
 			add_ideas = SOL_patriotic_plays
 		}
 	}
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_POLITICAL }
 	ai_will_do = {
 		factor = 60
 		modifier = {
@@ -10246,6 +10461,7 @@ joint_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = {
 		factor = 40
 		modifier = {
@@ -10310,6 +10526,7 @@ joint_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = {
 		factor = 50
 		modifier = {
@@ -10362,6 +10579,7 @@ joint_focus = {
 			add_ideas = SOL_mandatory_worship
 		}
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER }
 	ai_will_do = {
 		factor = 40
 		modifier = {
@@ -10418,6 +10636,7 @@ joint_focus = {
 			add_ideas = SOL_united_in_purpose
 		}
 	}
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 	ai_will_do = {
 		factor = 60
 		modifier = {
@@ -10478,6 +10697,7 @@ joint_focus = {
 			add_stability = 0.05
 		}
 	}
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 	ai_will_do = {
 		factor = 60
 		modifier = {
@@ -10545,6 +10765,7 @@ joint_focus = {
 			add_ideas = SOL_international_student_transfers
 		}
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	ai_will_do = {
 		factor = 90
 		modifier = {
@@ -10588,6 +10809,7 @@ joint_focus = {
 		###Event of a political prisoner who is currently laboring in a work gang as pennance for his transgressions finds an opening to escape and tries to do so, leading to a small chase before he is trapped and forced to surrender, and his workload becomes even worse because of it
 		country_event = solarreworked.443
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = {
 		factor = 70
 		modifier = {
@@ -10698,6 +10920,7 @@ joint_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = {
 		factor = 30
 		modifier = {
@@ -10825,6 +11048,7 @@ joint_focus = {
             }
 		}
 	}
+	search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT }
 	ai_will_do = {
 		factor = 60
 		modifier = {
@@ -10885,6 +11109,7 @@ joint_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_BONUS }
 	ai_will_do = {
 		factor = 50
 		modifier = {
@@ -10927,6 +11152,7 @@ joint_focus = {
 		###Maybe event of some colonists from SOL arriving to then force some of the griffon minorities so they can use their land instead, forcing them to be destitute
 		country_event = solarreworked.444
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
 	ai_will_do = {
 		factor = 40
 		modifier = {
@@ -10970,6 +11196,7 @@ joint_focus = {
 		###Event of number of megacorps moving their headquarters to the lands of EQC, since they have found multiple ways to abuse the tax code to make more money, so that they do not have to give back as much to Daybreaker, since they still chafe under her
 		country_event = solarreworked.445
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = {
 		factor = 40
 		modifier = {
@@ -11013,6 +11240,7 @@ joint_focus = {
 		###Event of some sailors finally getting shore leave and causing a bit of havoc on the mainland of EQC, probably as some kind of report, or of the CO of the sailors coming in to get them out of lockup
 		country_event = solarreworked.446
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = {
 		factor =  50
 		modifier = {
@@ -11057,6 +11285,7 @@ joint_focus = {
 		###Maybe event of some imperial and EQC soldiers getting into a bit of a competition on a training exercise, which ends up getting into a proper skirmish with some of the griffons nearby, and they both end up promising to keep it even in score
 		country_event = solarreworked.447
 	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_INDUSTRY }
 	ai_will_do = {
 		factor = 80
 		modifier = {
@@ -11293,6 +11522,7 @@ shared_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = { factor = 55 }
 }
 
@@ -11364,6 +11594,7 @@ shared_focus = {
 			 }
 		}
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = {
 		factor = 60
 		modifier = {
@@ -11436,7 +11667,7 @@ shared_focus = {
 		}
 	}
 	ai_will_do = { factor = 150 }
-	search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+	search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_BONUS }
 }
 
 shared_focus = {
@@ -11464,6 +11695,7 @@ shared_focus = {
 			days = 500
 		}
 	}
+	search_filters = { FOCUS_FILTER_NAVY_BONUS }
 	ai_will_do = {
 		base = 50
 		modifier = {
@@ -11507,6 +11739,7 @@ shared_focus = {
 		navy_experience = 25
 		###Maybe event of the operation going underway, to practice naval invasions, and the ponies involved having some kind of miscommunication, which leads to one of the battleships inflicting serious friendly fire, which some are more concerned about than others
 	}
+	search_filters = { FOCUS_FILTER_NAVY_BONUS FOCUS_FILTER_ARMY_BONUS }
 	ai_will_do = {
 		base = 60
 		modifier = {
@@ -11548,6 +11781,7 @@ shared_focus = {
 			days = 180
 		}
 	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	ai_will_do = {
 		base = 70
 		modifier = {
@@ -11645,6 +11879,7 @@ shared_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY }
 	ai_will_do = {
 		base = 60
 		modifier = {
@@ -11681,6 +11916,7 @@ shared_focus = {
 		}
 		###Maybe event of a group of soldiers following in a combined arms exercise for how to deal with breaching a changeling city, and they go a bit overboard in the amount of destruction they do
 	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	ai_will_do = {
 		factor = 50
 		modifier = {
@@ -11704,6 +11940,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_defense_in_order"
 		add_ideas = SOL_planning_in_order
 	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	ai_will_do = { factor = 75 }
 }
 
@@ -11721,6 +11958,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_tactics_of_destruction"
 		add_ideas = SOL_professional_guerillas
 	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	ai_will_do = { factor = 90 }
 }
 
@@ -11789,6 +12027,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_modernize_relic"
 		army_experience = 30
 	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	ai_will_do = { factor = 150 }
 }
 
@@ -11807,6 +12046,7 @@ shared_focus = {
 		country_event = solarreworked.70
 		###Event maybe of a military police officer inspecting or raiding an officer's quarters and finding supposedly damning evidence for anti-Daybreaker activities or working with the harmonic resistance
 	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
 	ai_will_do = { factor = 100 }
 }
 
@@ -11825,6 +12065,7 @@ shared_focus = {
 		country_event = solarreworked.71
 		###Event maybe of Daybreaker personally visiting some of the suspected disloyal troops, and using a couple as an example of what happens to traitors, since there is one that she knows is working with harmonists, who she uses as an example, which she first shows by an item or two from his barracks, and how it also affects the rest of his fellow soldiers, too
 	}
+	search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_BONUS }
 	ai_will_do = { factor = 100 }
 }
 
@@ -11847,6 +12088,7 @@ shared_focus = {
 			category = armor
 		}
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 75 }
 }
 
@@ -11864,6 +12106,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_rearrange_command"
 		add_ideas = SOL_efficient_command_structure
 	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	ai_will_do = { factor = 100 }
 }
 
@@ -11886,6 +12129,7 @@ shared_focus = {
 			category = infantry_weapons
 		}
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 75 }
 }
 
@@ -11908,6 +12152,7 @@ shared_focus = {
 			category = support_tech
 		}
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 100 }
 }
 
@@ -11928,6 +12173,7 @@ shared_focus = {
 		###Event of one of the generals who would be affected by the purge route being shown to his new office or the like, with some rather demeaning and simple work that will keep him busy, and out of the eye of the public, while still be somewhat useful
 		country_event = solarreworked.72
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER }
 	ai_will_do = { factor = 150 }
 }
 
@@ -11959,6 +12205,7 @@ shared_focus = {
 			set_country_flag = SOL_incomplete_purge
 		}
 	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
 	ai_will_do = { factor = 250 }
 }
 
@@ -11985,6 +12232,7 @@ shared_focus = {
 		###Event of a general being brought forth in front of Daybreaker, who lists off a list of supposed crimes committed by them, and how she could easily have them executed and be done with it, but she is merciful, and she will overlook them for complete loyalty, and if they ever betray that mercy, she will see them suffer before their death, which gets them to agree
 		country_event = solarreworked.74
 	}
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
 	ai_will_do = { factor = 150 }
 }
 
@@ -12009,6 +12257,7 @@ shared_focus = {
 		custom_effect_tooltip = equestria_advisors
 		custom_effect_tooltip = equestria_generals
 	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
 }
 
 ###Grand Battleplan###
@@ -12059,6 +12308,7 @@ shared_focus = {
 		###An event of a soldier's request for some kind of field supply kit being approved, but with statements on how long it will take, after filling out additional forms a through h, in triplicate, and also ensuring that his CO also signs, in triplicate, and then promises delivery in a matter of moments, through magic
 		country_event = solarreworked.75
 	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	ai_will_do = { factor = 50 }
 }
 
@@ -12080,6 +12330,7 @@ shared_focus = {
 			category = engineers_tech
 		}
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 40 }
 }
 
@@ -12108,6 +12359,7 @@ shared_focus = {
 			category = motorized_equipment
 		}
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 60 }
 }
 
@@ -12130,6 +12382,7 @@ shared_focus = {
 		###Event of a pony going in with a flamethrower into the trenches of the enemy, and being spotted very quickly, having a panicked moment, and then starting their flamethrower, and watching in horror, since they didn't want to use such a clearly barbaric weapon, as it cleans effectively the entire trench in front of them
 		country_event = solarreworked.76
 	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	ai_will_do = { factor = 80 }
 }
 
@@ -12148,6 +12401,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_generational_leaps"
 		add_ideas = SOL_iterative_planning
 	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	ai_will_do = { factor = 50 }
 }
 
@@ -12260,6 +12514,7 @@ shared_focus = {
 		###Maybe event of some of the first napalm shell strike tests, and how they are incredibly effective, and also completely and utterly mentally scarring for the operators as they see their handiwork, which has left swaths of a battlefield completely aflame, and later reports indicate how burnt the soldiers were that were killed, which horrifies them
 		country_event = solarreworked.77
 	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	ai_will_do = { factor = 60 }
 }
 
@@ -12415,6 +12670,7 @@ shared_focus = {
 		###Maybe event of reports of how many have been killed in some of the latest conflicts, but how there are so many more which can be taken from their families to happily serve the God-Empress and die keeping her safe and the hope of Order and Harmony alive; the ponies aren't even acknowledged as sentient beings, merely tools
 		country_event = solarreworked.78
 	}
+	search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_BONUS }
 	ai_will_do = { factor = 75 }
 }
 
@@ -12437,6 +12693,7 @@ shared_focus = {
 		###Maybe event of some soldiers going along with a flame tank division through an urban area, and being ambushed but soon dispatching of the ambushers with the help of the tanks, after the killed operator is taken out to then be driven by somepony else and melt all those that oppose them
 		country_event = solarreworked.79
 	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	ai_will_do = { factor = 75 }
 }
 
@@ -12456,6 +12713,7 @@ shared_focus = {
 		###Event of a soldier on the battlefield after his gun jammed, and he manages to find another gun that is on a dead comrade, but that breaks after firing once, and then soon finding another, and another, each with their own problems, which may lead to a few dead foes, but still leaves him defenseless in the end
 		add_ideas = SOL_no_standards
 	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	ai_will_do = { factor = 50 }
 }
 
@@ -12535,6 +12793,7 @@ shared_focus = {
 		###Event of a unicorn learning fire magic at one of Daybreaker's new schools, which leads to both awe and fear, as they test some of their skills on some test dummies, which are utterly consumed; they are quite good at fire magic, which worries their teachers, since they almost seem to be enjoying it
 		country_event = solarreworked.80
 	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	ai_will_do = { factor = 75 }
 }
 
@@ -12555,6 +12814,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_magitech_integration"
 		add_ideas = SOL_pb_magic_idea
 	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS }
 }
 
 shared_focus = {
@@ -12602,6 +12862,7 @@ shared_focus = {
 		###Event of a scientist or two recording their thoughts on the new spell crystals being used in the prototype MEWs, which they record coldly on how it affects flesh, bone, and other aspects of a pony's body, and also how there's only a slight chance of explosion in the operator's face, but can give some nice scars to talk about with the mares (or stallions if a mare)
 		country_event = solarreworked.81
 	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	ai_will_do = { factor = 70 }
 }
 
@@ -12627,6 +12888,7 @@ shared_focus = {
 			category = electronics
 		}
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 50 }
 }
 
@@ -12652,6 +12914,7 @@ shared_focus = {
 			value = 0.6
 		}
 	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	ai_will_do = { factor = 60 }
 }
 
@@ -12672,6 +12935,7 @@ shared_focus = {
 		add_ideas = SOL_artillery_safety_removals
 		###Possibly event of some of the dangers of how much the artillery corps is pushed to inflict more damage upon the enemy, in a specific series of field tests or the like, which ends up injuring a couple of the crew, although the end results of the impacts of the weapons is undeniably impressive
 	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	ai_will_do = { factor = 50 }
 }
 
@@ -12700,6 +12964,7 @@ shared_focus = {
 			category = artillery
 		}
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 50 }
 }
 
@@ -12727,6 +12992,7 @@ shared_focus = {
 		}
 		###Possibly event of some weapons tests with the new anti-tank weaponry, and a pony or two nearly getting sawn in half when the AP rounds go farather than expected through the armor
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 40 }
 }
 
@@ -12751,6 +13017,7 @@ shared_focus = {
 			category = cat_heavy_armor
 		}
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 40 }
 }
 
@@ -12775,6 +13042,7 @@ shared_focus = {
 			category = motorized_equipment
 		}
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 40 }
 }
 
@@ -12794,6 +13062,7 @@ shared_focus = {
 		add_ideas = SOL_armored_hoofs
 		###Possibly event of following a tank commander as he prepares to storm a city, without a care for the civilians or buildings he'll destroy, as they have sealed their fate already by working with the enemy
 	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	ai_will_do = { factor = 60 }
 }
 
@@ -12821,6 +13090,7 @@ shared_focus = {
 			category = cat_medium_armor
 		}
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 40 }
 }
 
@@ -12846,6 +13116,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_mighty_hoofs"
 		air_experience = 50
 	}
+	search_filters = { FOCUS_FILTER_AIRFORCE_BONUS }
 	ai_will_do = { factor = 50 }
 }
 
@@ -12885,6 +13156,7 @@ shared_focus = {
 			category = cat_battlefield_support
 		}
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	ai_will_do = {
 		factor = 50
 		modifier = {
@@ -12913,6 +13185,7 @@ shared_focus = {
 			category = cat_strategic_destruction
 		}
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 60 }
 }
 
@@ -12934,6 +13207,7 @@ shared_focus = {
 			category = cas_bomber
 		}
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 50 }
 }
 
@@ -12952,6 +13226,7 @@ shared_focus = {
 		###Event of some test subjects about the effects of attaching air horns to the bottom of planes as they go about a normal day, but then suddenly hear the test dive bombers, and begin to panic, and gives a couple even early signs of PTSD, since the bombers are testing everything, included dud bombs to mimic the dive bomb
 		country_event = solarreworked.84
 	}
+	search_filters = { FOCUS_FILTER_AIRFORCE_BONUS }
 	ai_will_do = { factor = 75 }
 }
 
@@ -12991,6 +13266,7 @@ shared_focus = {
 			category = air_doctrine
 		}
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 50 }
 }
 
@@ -13007,6 +13283,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_streamline_expenses"
 		add_ideas = SOL_streamlined_bombers
 	}
+	search_filters = { FOCUS_FILTER_AIRFORCE_BONUS }
 	ai_will_do = { factor = 50 }
 }
 
@@ -13045,6 +13322,7 @@ shared_focus = {
 			category = cat_battlefield_support
 		}
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 40 }
 }
 
@@ -13062,6 +13340,7 @@ shared_focus = {
 		###Event of Spitfire being strapped into another test for a prototype fighter, as part of her punishment for being tied to the Harmonists, and the experiment goes well at first, with testing early g-suits, but she soon blacks out and almost perishes in a crash, only saved by the suits durability itself
 		country_event = solarreworked.85
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIRFORCE_BONUS }
 	ai_will_do = { factor = 55 }
 }
 
@@ -13106,6 +13385,7 @@ shared_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_AIRFORCE_BONUS }
 	ai_will_do = { factor = 35 }
 }
 
@@ -13136,6 +13416,7 @@ shared_focus = {
 			category = cat_heavy_fighter
 		}
 	}
+	search_filters = { FOCUS_FILTER_AIRFORCE_BONUS }
 	ai_will_do = { factor = 50 }
 }
 
@@ -13152,6 +13433,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_bat_vision"
 		add_ideas = SOL_thestral_vision_scopes
 	}
+	search_filters = { FOCUS_FILTER_AIRFORCE_BONUS }
 	ai_will_do = { factor = 40 }
 }
 
@@ -13170,6 +13452,7 @@ shared_focus = {
 		#country_event = solarreworked.86
 		add_ideas = SOL_pegasi_planes
 	}
+	search_filters = { FOCUS_FILTER_AIRFORCE_BONUS }
 	ai_will_do = { factor = 50 }
 }
 
@@ -13210,6 +13493,7 @@ shared_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 40 }
 }
 
@@ -13228,6 +13512,7 @@ shared_focus = {
 		###Event of a propaganda piece that uses knock-off Wonderbolts, now the Solarbeams, to entice ponies to join the air force, and how they'll totally not be shot down in five seconds in war and that they will be an ace like them, and otherwise feed into the fantasy that Ace Combat taps into
 		country_event = solarreworked.87
 	}
+	search_filters = { FOCUS_FILTER_AIRFORCE_BONUS }
 	ai_will_do = { factor = 50 }
 }
 
@@ -13251,6 +13536,7 @@ shared_focus = {
 			category = cat_strategic_destruction
 		}
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIRFORCE_BONUS }
 	ai_will_do = { factor = 60 }
 }
 
@@ -13268,6 +13554,7 @@ shared_focus = {
 		###Maybe event of peforming napalm strikes on a suspected rebel encampment in the middle of the Empire, and the pilot grows nervous at just how effectively the new payload system has improved the craft's deadliness, which makes him hesitate before almost being shot from a pony on the ground, which motivates him to continue the bombing
 		add_ideas = SOL_napalm_strikes
 	}
+	search_filters = { FOCUS_FILTER_AIRFORCE_BONUS }
 	ai_will_do = { factor = 70 }
 }
 
@@ -13312,6 +13599,7 @@ shared_focus = {
 			category = cat_heavy_fighter
 		}
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 30 }
 }
 
@@ -13336,6 +13624,7 @@ shared_focus = {
 		###Alternate event would be instead some bombers preparing to hit a target practice facility, and after unleashing the payloads of bombs, seeing how it caused more destruction than implied, and has destroyed an entire village, which was the true target
 		add_ideas = SOL_napalm_carpeting
 	}
+	search_filters = { FOCUS_FILTER_AIRFORCE_BONUS }
 	ai_will_do = { factor = 60 }
 }
 
@@ -13364,6 +13653,7 @@ shared_focus = {
 			category = cat_battlefield_support
 		}
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 50 }
 }
 
@@ -13396,6 +13686,7 @@ shared_focus = {
 			category = tactical_bomber
 		}
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 30 }
 }
 
@@ -13422,6 +13713,7 @@ shared_focus = {
 			category = cat_strategic_destruction
 		}
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 50 }
 }
 
@@ -13480,6 +13772,7 @@ shared_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 50 }
 }
 
@@ -13539,6 +13832,7 @@ shared_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 50 }
 }
 
@@ -13560,6 +13854,7 @@ shared_focus = {
 		#country_event = solarreworked.88
 		add_ideas = SOL_dive_bombers_justice
 	}
+	search_filters = { FOCUS_FILTER_AIRFORCE_BONUS }
 	ai_will_do = { factor = 75 }
 }
 
@@ -13584,6 +13879,7 @@ shared_focus = {
 		#country_event = solarreworked.89
 		add_ideas = SOL_balanced_air_powers
 	}
+	search_filters = { FOCUS_FILTER_AIRFORCE_BONUS }
 	ai_will_do = { factor = 60 }
 }
 
@@ -13605,6 +13901,7 @@ shared_focus = {
 		#country_event = solarreworked.90
 		add_ideas = SOL_limitless_bombing
 	}
+	search_filters = { FOCUS_FILTER_AIRFORCE_BONUS }
 	ai_will_do = { factor = 75 }
 }
 
@@ -13636,6 +13933,7 @@ shared_focus = {
 			category = rocketry
 		}
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 30 }
 }
 
@@ -13707,6 +14005,7 @@ shared_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 30 }
 }
 
@@ -13727,6 +14026,8 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_skyborn"
 		add_ideas = SOL_ponies_to_sky
 	}
+	search_filters = { FOCUS_FILTER_AIRFORCE_BONUS }
+	ai_will_do = { factor = 70 }
 }
 
 ###Navy###
@@ -13750,6 +14051,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_skyborn"
 		navy_experience = 50
 	}
+	search_filters = { FOCUS_FILTER_NAVY_BONUS }
 	ai_will_do = { factor = 40 }
 }
 
@@ -13914,6 +14216,7 @@ shared_focus = {
             }
         }
 	}
+	search_filters = { FOCUS_FILTER_NAVY_BONUS }
 	ai_will_do = { factor = 40 }
 }
 
@@ -13931,6 +14234,7 @@ shared_focus = {
 		###Event of an eager new captain being met by Daybreaker, who grills them to see if they are truly ready for any of the dangers of the sea, including going down with the ship, which scares them, but she does agree in the end; alternately a live fire drill with Daybreaker watching some of the new captains handle the situation
 		country_event = solarreworked.92
 	}
+	search_filters = { FOCUS_FILTER_NAVY_BONUS }
 	ai_will_do = { factor = 50 }
 }
 
@@ -13952,6 +14256,7 @@ shared_focus = {
 			category = dd_tech
 		}
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 60 }
 }
 
@@ -13979,6 +14284,7 @@ shared_focus = {
 			category = ca_tech
 		}
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 50 }
 }
 
@@ -14004,6 +14310,7 @@ shared_focus = {
 			category = cat_base_strike
 		}
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	ai_will_do = {
 		factor = 60
 		modifier = {
@@ -14035,6 +14342,7 @@ shared_focus = {
 			category = cat_fleet_in_being
 		}
 	}
+	search_filters = { FOCUS_FILTER_AIRFORCE_BONUS }
 	ai_will_do = { factor = 80 }
 }
 
@@ -14057,6 +14365,7 @@ shared_focus = {
 			category = cv_tech
 		}
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 50 }
 }
 
@@ -14087,6 +14396,7 @@ shared_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = { factor = 70 }
 }
 
@@ -14108,6 +14418,7 @@ shared_focus = {
 			category = marine_tech
 		}
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 50 }
 }
 
@@ -14138,6 +14449,7 @@ shared_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = { factor = 70 }
 }
 
@@ -14159,6 +14471,7 @@ shared_focus = {
 			category = bb_tech
 		}
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 50 }
 }
 
@@ -14198,6 +14511,7 @@ shared_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 40 }
 }
 
@@ -14214,6 +14528,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_modern_sea"
 		add_ideas = SOL_coordinated_carrier_classes
 	}
+	search_filters = { FOCUS_FILTER_NAVY_BONUS }
 	ai_will_do = { factor = 50 }
 }
 
@@ -14235,6 +14550,7 @@ shared_focus = {
 			category = tp_tech
 		}
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 50 }
 }
 
@@ -14252,6 +14568,7 @@ shared_focus = {
 		###Event of a new battleship captain, who is still a bit eager to prove his worth, finding the base of some pirates, promising them amnesty, just so he could get them out on the field, and then begins to shower them with shells, which he enjoys to a perturbing degree, since he feels invincible in his battleship
 		country_event = solarreworked.93
 	}
+	search_filters = { FOCUS_FILTER_NAVY_BONUS }
 	ai_will_do = { factor = 60 }
 }
 
@@ -14276,6 +14593,7 @@ shared_focus = {
 			category = cv_tech
 		}
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_BONUS }
 	ai_will_do = { factor = 50 }
 }
 
@@ -14299,6 +14617,7 @@ shared_focus = {
 			category = cv_tech
 		}
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_BONUS }
 	ai_will_do = { factor = 45 }
 }
 
@@ -14322,6 +14641,7 @@ shared_focus = {
 			category = naval_doctrine
 		}
 	}
+	search_filters = { FOCUS_FILTER_RESISTANCE FOCUS_FILTER_NAVY_BONUS }
 	ai_will_do = { factor = 40 }
 }
 
@@ -14345,6 +14665,7 @@ shared_focus = {
 		}
 		add_ideas = SOL_magic_bonded_plating
 	}
+	search_filters = { FOCUS_FILTER_RESISTANCE FOCUS_FILTER_NAVY_BONUS }
 	ai_will_do = { factor = 80 }
 }
 
@@ -14372,6 +14693,7 @@ shared_focus = {
 			category = cat_base_strike
 		}
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 50 }
 }
 
@@ -14403,6 +14725,7 @@ shared_focus = {
 			category = cat_fleet_in_being
 		}
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 60 }
 }
 
@@ -14420,6 +14743,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_practical_reductions"
 		add_ideas = SOL_cut_ship_hull_heavy_corners
 	}
+	search_filters = { FOCUS_FILTER_NAVY_BONUS }
 	ai_will_do = { factor = 30 }
 }
 
@@ -14438,6 +14762,7 @@ shared_focus = {
 		###Perhaps event of Daybreaker being given a blueprint presentation of the Daybreak-class superheavy, as a way to impress her, and also gain her good graces by a designer from Manehattan, who had been accused of anti-Order activities, and she is indeed suitably impressed, although asks if it can come in orange as a joke
 		country_event = solarreworked.94
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_BONUS }
 	ai_will_do = { factor = 100 }
 }
 
@@ -14458,6 +14783,7 @@ shared_focus = {
 		}
 		add_ideas = SOL_combined_naval_arms
 	}
+	search_filters = { FOCUS_FILTER_NAVY_BONUS }
 	ai_will_do = { factor = 50 }
 }
 
@@ -14478,6 +14804,7 @@ shared_focus = {
 		}
 		add_ideas = SOL_status_quo_superiority
 	}
+	search_filters = { FOCUS_FILTER_NAVY_BONUS }
 	ai_will_do = { factor = 50 }
 }
 
@@ -14499,6 +14826,7 @@ shared_focus = {
 		#country_event = solarreworked.95
 		add_ideas = SOL_high_seas_empire
 	}
+	search_filters = { FOCUS_FILTER_NAVY_BONUS }
 	ai_will_do = { factor = 70 }
 }
 
@@ -14519,6 +14847,7 @@ shared_focus = {
 		add_political_power = 100
 		add_stability = 0.05
 	}
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 	ai_will_do = { factor = 70 }
 }
 
@@ -14725,7 +15054,7 @@ shared_focus = {
 			}
 		}
 	}
-	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 }
 
 shared_focus = {
@@ -14990,6 +15319,7 @@ shared_focus = {
 		add_ideas = SOL_unions_of_the_empress
 		###Maybe event of workers of the Empire organizing in a way that is acceptable to Daybreaker, which means they really can't do that much with what they have, but they will work to do what they can; also maybe just being a busybody union worker to make trouble with factory owners
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = { factor = 50 }
 }
 
@@ -15009,6 +15339,7 @@ shared_focus = {
 		add_ideas = SOL_committee_design
 		###Maybe an inspector from the committee having a long chat with a bunch of workers, and using one as an example (of being fired, despite being a hard worker), of what happens when ponies fail meeting the Empress's quotas
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
 	ai_will_do = { factor = 80 }
 }
 
@@ -15143,6 +15474,7 @@ shared_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = { factor = 60 }
 }
 
@@ -15203,6 +15535,7 @@ shared_focus = {
 			category = electronics
 		}
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 90 }
 }
 
@@ -15287,6 +15620,7 @@ shared_focus = {
 			category = dispersed_industry_category
 		}
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 50 }
 }
 
@@ -15306,6 +15640,7 @@ shared_focus = {
 		#country_event = solarreworked.260
 		add_ideas = SOL_micromanaged_industry
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = { factor = 40 }
 }
 
@@ -15325,6 +15660,7 @@ shared_focus = {
 		#country_event = solarreworked.261
 		add_ideas = SOL_motivated_workers
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = { factor = 50 }
 }
 
@@ -15386,6 +15722,7 @@ shared_focus = {
 			custom_effect_tooltip = SOL_retake_yo_country_boi_tt
 		}
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = { factor = 50 }
 }
 
@@ -15449,6 +15786,7 @@ shared_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 50 }
 }
 
@@ -15491,6 +15829,7 @@ shared_focus = {
 			add_research_slot = 1
 		}
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 50 }
 }
 
@@ -15543,6 +15882,7 @@ shared_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 80 }
 }
 
@@ -15563,6 +15903,7 @@ shared_focus = {
 		#country_event = solarreworked.262
 		add_ideas = SOL_crystal_robotics
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = { factor = 60 }
 }
 
@@ -15614,6 +15955,7 @@ shared_focus = {
         }
 		add_ideas = SOL_refined_metal_bodies
 	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_NAVY_BONUS }
 	ai_will_do = { factor = 80 }
 }
 
@@ -15632,6 +15974,7 @@ shared_focus = {
 		custom_effect_tooltip = SOL_more_industry_tt
 		set_country_flag = SOL_new_mining_decisions
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = { factor = 50 }
 }
 
@@ -15704,6 +16047,7 @@ shared_focus = {
 			category = magical_tech
 		}
 	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 70 }
 }
 
@@ -15799,6 +16143,7 @@ shared_focus = {
 			category = radar_tech
 		}
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_BONUS FOCUS_FILTER_AIRFORCE_BONUS }
 	ai_will_do = { factor = 60 }
 }
 
@@ -15818,6 +16163,7 @@ shared_focus = {
 		add_ideas = SOL_food_above_all
 		###Maybe event of a farmer trying to get some of his last fertilizer or seed for the season, which he is finding troublesome because of imperial bureaucracy and also a distrust that he might be secretly a rebel
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = { factor = 50 }
 }
 
@@ -15837,6 +16183,7 @@ shared_focus = {
 		add_ideas = SOL_unhindered_mining
 		###Maybe event of an earth pony farmer trying desperately to fight off or otherwise get rid of a bunch of miners or prosperctors, since he's had his land for generations, but he is informed that he is going to give it up anyway, since they bought it through the Empress's grants directly
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = { factor = 80 }
 }
 
@@ -15891,6 +16238,7 @@ shared_focus = {
 		#	swap_ideas = { remove_idea = unicorn_academy add_idea = unicorn_academy1 }
 		#}
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	ai_will_do = { factor = 80 }
 }
 
@@ -15912,6 +16260,7 @@ shared_focus = {
 		country_event = solarreworked.266
 		###Event of Flim and Flam meeting with Daybreaker again with another pitch for one of their new weapons, since they've gotten multiple grants before, and as they show it off to her, she's far from the most impressed, and promises they'll get money for it, if they don't mess up like the last one where it had multiple, strange problems maybe over a dinner or something
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = { factor = 80 }
 }
 
@@ -15938,6 +16287,7 @@ shared_focus = {
 		}
 		###Maybe an event of a scientist interacting with an early matrix computer, and basically having a HAL-9000 conversation with it, since it managed to gain some sentience
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL }
 }
 
 shared_focus = {
@@ -15966,7 +16316,7 @@ shared_focus = {
 		#	remove_idea = unicorn_academy2
 		#}
 	}
-	search_filters = { FOCUS_FILTER_RESEARCH }
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
 }
 
 shared_focus = {
@@ -16079,6 +16429,7 @@ shared_focus = {
 		###Event discussing the merits of each possible choice, now that the IIS/Solaris Speculatores has been established in SMILE's place; potentially it can also have a bit of the showcasing of each's personality, in a short meeting with Daybreaker
 		country_event = solarreworked.650
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
 	ai_will_do = { factor = 90 }
 }
 
@@ -16118,6 +16469,7 @@ shared_focus = {
 			add_to_variable = { foreign_subversive_activities_sol_var = -0.1 }
 		}
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
 	ai_will_do = {
 		factor = 50
 		modifier = {
@@ -16165,6 +16517,7 @@ shared_focus = {
 			add_to_variable = { drift_defence_factor_var = 0.15 }
 		}
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
 	ai_will_do = {
 		factor = 100
 		modifier = {
@@ -16188,6 +16541,7 @@ shared_focus = {
 		###Event of a presentation of what the material for demoralization of enemies will be, with extreme and liberal comparisons about how they cannot hope to defeat Daybreaker, as she is the inevitable empress of ponykind, the sun itself, and she will not be stopped
 		country_event = solarreworked.651
 	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	ai_will_do = { factor = 40 }
 }
 
@@ -16225,6 +16579,7 @@ shared_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
 	ai_will_do = { factor = 60 }
 }
 
@@ -16242,6 +16597,7 @@ shared_focus = {
 		###Event of one of the propaganda pieces that is used for patriotic effect within the Solar Empire, claiming how they are the last light of Harmony, they must all do their part, etc.; possibly make the message somewhat unique, depending on path
 		country_event = solarreworked.652
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 	ai_will_do = { factor = 40 }
 }
 
@@ -16259,6 +16615,7 @@ shared_focus = {
 		###Maybe an event of some agents going in on a known "terror" group that is spreading anti-Solarist/Order propaganda and also "planning" an attack against Daybreaker, and taking them out
 		country_event = solarreworked.653
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
 	ai_will_do = { factor = 50 }
 }
 
@@ -16283,6 +16640,7 @@ shared_focus = {
 			custom_effect_tooltip = SOL_imperial_intelligence_5
 		}
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
 	ai_will_do = { factor = 55 }
 }
 
@@ -16300,6 +16658,7 @@ shared_focus = {
 		###Maybe an event of ponies going through the process of becoming an agent for the Solar Empire, and how it is excrutiating, with Astrum being the one who leads it
 		country_event = solarreworked.654
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
 	ai_will_do = { factor = 70 }
 }
 
@@ -16317,6 +16676,7 @@ shared_focus = {
 		###Perhaps an event of some agents coming to arrest a pony who has, on the surface, been nothing but a perfect follower of Daybreaker, but they state that they have calculated through some of their previous activities and life that they could end up a threat to the Empress, and they are going to be held until they can prove their innocence, which is going to be unlikely
 		country_event = solarreworked.655
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESISTANCE }
 	ai_will_do = { factor = 50 }
 }
 
@@ -16358,6 +16718,7 @@ shared_focus = {
 			custom_effect_tooltip = SOL_hunt_for_mane_six_tt
 		}
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
 	ai_will_do = { factor = 120 }
 }
 
@@ -16398,6 +16759,7 @@ shared_focus = {
 		#Unlock operation if LR, decision if not
 		#Will have another event at end of decision/op of Daybreaker getting into combat with Luna to capture her
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
 	ai_will_do = { factor = 150 }
 }
 
@@ -16421,6 +16783,7 @@ shared_focus = {
 		custom_effect_tooltip = EQS_unlock_operation_infernis_tt
 		set_country_flag = SOL_extinguish_firelovers
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
 	ai_will_do = { factor = 70 }
 }
 
@@ -16451,6 +16814,7 @@ shared_focus = {
 		custom_effect_tooltip = EQS_unlock_operation_necromancer_tt
 		set_country_flag = SOL_edgy_black_metal
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
 	ai_will_do = { factor = 100 }
 }
 
@@ -16487,5 +16851,6 @@ shared_focus = {
 		custom_effect_tooltip = EQS_unlock_operation_donner_tt
 		set_country_flag = SOL_rated_e_for_empress
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
 	ai_will_do = { factor = 70 }
 }
