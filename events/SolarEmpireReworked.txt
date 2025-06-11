@@ -5424,13 +5424,13 @@ country_event = { #After the submission or conquest of CRY, Daybreaker has a tou
         trigger = {
             CRY = { has_country_leader = { character = CRY_princess_mi_amore_cadenza ruling_only = yes } }
         }
-        text = solarreworked.238.da
+        text = solarreworked.238.d_a
     }
     desc = {
         trigger = {
             CRY = { has_country_leader = { character = EQS_twilight_sparkle ruling_only = yes } }
         }
-        text = solarreworked.238.db
+        text = solarreworked.238.d_b
     }
     picture = GFX_event_crystal_city
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.238"}
@@ -5848,6 +5848,7 @@ country_event = { #Daybreaker is informed that Flim and Flam are once again havi
     id = solarreworked.266
     title = solarreworked.266.t
     desc = solarreworked.266.d
+    ###GFX of Flim and Flam, probably their portraits
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.266"}
 
     is_triggered_only = yes
@@ -7357,12 +7358,13 @@ country_event = { #In a prison, Chrysalis is languishing and Daybreaker soon vis
 
     option = { #Indefinite solitary should suffice.
         name = solarreworked.375.a
-        add_war_support = 0.1
+        add_war_support = 0.05
+        add_stability = 0.05
     }
-    option = { #There's only one fate for an animal like you.
-        name = solarreworked.375.b
-        add_stability = 0.1
-    }
+    #option = { #There's only one fate for an animal like you.
+    #    name = solarreworked.375.b
+    #    add_stability = 0.1
+    #}
 }
 
 country_event = { #The queens that supported Chrysalis are brought before Daybreaker, who soon speaks with them about how they will suffer a similar fate to what will happen to Chrysalis, but she's feeling merciful, and despite how she is at least insulted by a couple of the queens there, she offers them one chance to assist her with maintaining order in the hives, and that she will reward them with life
@@ -8293,6 +8295,7 @@ country_event = { #Ponse Cocktail is surprised in his home by his aide stating h
                     country_leader = {
                         expire = "1965.1.1"
                         ideology = nazism
+                        desc = POLITICS_PONSE_COCKTAIL_SOLARIST_DESC
                         traits = { cowed_governor }
                     }
                 }
@@ -8324,12 +8327,27 @@ country_event = { #Red Tide steps off her plane from the mainland and is instant
                 popularity = 0.25
             }
             EQS_red_tide = {
-                add_country_leader_role = {
-                    promote_leader = yes
-                    country_leader = {
-                        expire = "1965.1.1"
-                        ideology = falangism
-                        traits = { miffed_inquisitor }
+                if = {
+                    ROOT = { has_completed_focus = SOL_god_empress }
+                    add_country_leader_role = {
+                        promote_leader = yes
+                        country_leader = {
+                            expire = "1965.1.1"
+                            ideology = falangism
+                            desc = POLITICS_RED_TIDE_INQUISITOR_DESC
+                            traits = { miffed_inquisitor }
+                        }
+                    }
+                }
+                else = {
+                    add_country_leader_role = {
+                        promote_leader = yes
+                        country_leader = {
+                            expire = "1965.1.1"
+                            ideology = nazism
+                            desc = POLITICS_RED_TIDE_DESC
+                            traits = { miffed_inquisitor }
+                        }
                     }
                 }
             }
