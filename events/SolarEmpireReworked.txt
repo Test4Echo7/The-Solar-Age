@@ -13038,6 +13038,8 @@ country_event = { #Hidden effect to hopefully get FROM to work with promoting a 
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.529"}
     hidden = yes
 
+    is_triggered_only = yes
+
     option = {
         EQS = { country_event = solarreworked.530 }
     }
