@@ -1036,6 +1036,7 @@
   SOL_direct_solarian_administration:0 "Direct Imperial Administration"
   SOL_thestral_resistance:0 "Thestral Resistance"
   SOL_evaporated_state:0 "Slagged Infrastructure"
+  SOL_improved_river_architecture:0 "Imperial River Architecture"
 
   ###Military Industrial Organizations/MIOs###
   SOL_sanctum_infernal_corps:0 "Sanctum Infernal Corps"

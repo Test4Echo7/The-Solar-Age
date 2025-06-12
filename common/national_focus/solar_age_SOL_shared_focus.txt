@@ -4987,7 +4987,7 @@ shared_focus = {
 	will_lead_to_war_with = GRD
 	cost = 8
 	ai_will_do = {
-		factor = 10
+		factor = 30
 		modifier = {
 			factor = 0.1
 			has_war = yes
@@ -5175,7 +5175,14 @@ shared_focus = {
 			}
 		}
 	}
-	ai_will_do = { factor = 35 }
+	search_filters = { FOCUS_FILTER_ANNEXATION }
+	ai_will_do = {
+		factor = 30
+		modifier = {
+			has_war = yes
+			factor = 0.1
+		}
+	}
 }
 
 shared_focus = {
@@ -5197,6 +5204,7 @@ shared_focus = {
 		###Perhaps an event of Daybreaker going through River City with River Swirl, to see the new projects that have been put underway by RCT, as an act of submission to her, since it is basically forced upon them; River is defiant, even though she has her hooves tied
 		country_event = solarreworked.380
 	}
+	shared_focus = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER FOCUS_FILTER_RESISTANCE }
 	ai_will_do = { factor = 30 }
 }
 
@@ -5219,6 +5227,7 @@ shared_focus = {
 		###Event of a few RIV members and River Swirl attempting to flee the country, to try and find someplace safe in which they can carry on the mission of RIV, but they are soon captured by the military, who hold them for anti-Order activities, and to be used as a display for the rest of RIV
 		country_event = solarreworked.381
 	}
+	search_filters = { FOCUS_FILTER_RESISTANCE }
 	ai_will_do = { factor = 40 }
 }
 
@@ -5244,6 +5253,7 @@ shared_focus = {
 			add_ideas = SOL_OHS_integrated
 		}
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
 	ai_will_do = { factor = 50 }
 }
 
@@ -5267,6 +5277,7 @@ shared_focus = {
 		###Maybe event of Daybreaker having a bit of a session with trying to break the DMT leader, either the father or the daughter, and somewhat enjoying it for their inferiority and the trouble diamond dogs have caused elsewhere in the world
 		country_event = solarreworked.382
 	}
+	search_filters = { FOCUS_FILTER_ANNEXATION }
 	ai_will_do = { factor = 50 }
 }
 
@@ -5284,6 +5295,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_land_of_rising_sun"
 		add_ideas = SOL_dawn_star_elites
 	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	ai_will_do = { factor = 60 }
 }
 
@@ -5305,6 +5317,7 @@ shared_focus = {
 		###Event of an Imperial overseer making sure that the diamond dogs are doing all they can to dig out as many resources as possible to continue to feed the Imperial war machine now and forevermore, and is overly harsh to his subjects
 		country_event = solarreworked.383
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = { factor = 60 }
 }
 
@@ -5334,7 +5347,14 @@ shared_focus = {
 		}
 		add_ideas = SOL_river_brethren
 	}
-	ai_will_do = { factor = 100 }
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			NOT = { has_completed_focus = SOL_natural_state }
+			factor = 0.05
+		}
+	}
 }
 
 shared_focus = {
@@ -5412,7 +5432,14 @@ shared_focus = {
 			}
 		}
 	}
-	ai_will_do = { factor = 30 }
+	search_filters = { FOCUS_FILTER_ANNEXATION }
+	ai_will_do = {
+		factor = 30
+		modifier = {
+			has_war = yes
+			factor = 0.1
+		}
+	}
 }
 
 shared_focus = {
@@ -5444,7 +5471,14 @@ shared_focus = {
 			}
 		}
 	}
-	ai_will_do = { factor = 35 }
+	search_filters = { FOCUS_FILTER_ANNEXATION }
+	ai_will_do = {
+		factor = 30
+		modifier = {
+			has_war = yes
+			factor = 0.1
+		}
+	}
 }
 
 shared_focus = {
@@ -5529,6 +5563,7 @@ shared_focus = {
 		}
 		#Later gain a decision, with an event, to decide on the fate of Manedalusia, on whether they become an independent puppet, or they remain the territory of either MGY or SOL; if the latter, MGY cores them, whereas SOL gains 15% compliance
 	}
+	search_filters = { FOCUS_FILTER_ANNEXATION }
 	ai_will_do = { factor = 25 }
 }
 
@@ -5553,6 +5588,7 @@ shared_focus = {
 		#country_event = solarreworked.384
 		add_ideas = SOL_eastern_sun_goddess
 	}
+	search_filters = { FOCUS_FILTER_RESISTANCE FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_BONUS }
 	ai_will_do = { factor = 80 }
 }
 
@@ -5590,6 +5626,7 @@ shared_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY }
 	ai_will_do = { factor = 40 }
 }
 
@@ -5687,6 +5724,7 @@ shared_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_ANNEXATION }
 	ai_will_do = { factor = 60 }
 }
 
@@ -5752,7 +5790,14 @@ shared_focus = {
 			}
 		}
 	}
-	ai_will_do = { factor = 50 }
+	search_filters = { FOCUS_FILTER_ANNEXATION }
+	ai_will_do = {
+		factor = 50
+		modifier = {
+			has_war = yes
+			factor = 0.1
+		}
+	}
 }
 
 shared_focus = {
@@ -5899,6 +5944,7 @@ shared_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = { factor = 50 }
 }
 
@@ -5927,6 +5973,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_imperial_breadbasket"
 		add_ideas = SOL_food_for_the_empress
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
 	ai_will_do = { factor = 70 }
 }
 
@@ -6003,7 +6050,13 @@ shared_focus = {
 			}
 		}
 	}
-	ai_will_do = { factor = 50 }
+	ai_will_do = {
+		factor = 50
+		modifier = {
+			has_war = yes
+			factor = 0.1
+		}
+	}
 }
 
 shared_focus = {
@@ -6034,6 +6087,7 @@ shared_focus = {
 		add_ideas = SOL_kirin_artists
 		###Maybe event of Autumn or another kirin being required to do some propaganda art of Daybreaker so that they can be used to more effectively control the new lands of Kiria, or perhaps have her posing for a new sculpture or the like
 	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_STABILITY }
 	ai_will_do = { factor = 60 }
 }
 
@@ -6052,6 +6106,7 @@ shared_focus = {
 		###Event of some nirik soldiers (maybe led by Autumn) going in on some rebels or the like, who used to be their friends, and also leading Imperial soldiers, which just leaves them in awe, since they are basically miniature armies in and of themselves, since they can use their fire and magic much more effectively than a normal pony while enraged
 		country_event = solarreworked.385
 	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	ai_will_do = { factor = 90 }
 }
 
@@ -6070,6 +6125,8 @@ shared_focus = {
 		###Event of basically some Sun Tzu like statements and the like from kirin philosophers for Daybreaker and her military, revolving around flame, fire, and magic
 		country_event = solarreworked.386
 	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS }
+	ai_will_do = { factor = 60 }
 }
 
 shared_focus = {
@@ -6092,6 +6149,7 @@ shared_focus = {
 		###Daybreaker goes through Griffenheim, and she is clearly despised by every single griffon that she sees, but she doesn't care, as she meets the council of nobles in the city, to state that the Griffoniches Reich will forever be a client state of the Solar Empire, as they will ensure that GRI has a proper reverence to her, and that it would be best to comply
 		country_event = solarreworked.387
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 	ai_will_do = { factor = 75 }
 }
 
@@ -6109,6 +6167,7 @@ shared_focus = {
 		add_ideas = SOL_griffon_exchange_students
 		GRD = { add_ideas = SOL_GRI_griffon_exchange_students }
 	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	ai_will_do = { factor = 50 }
 }
 
@@ -6148,6 +6207,7 @@ shared_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = { factor = 70 }
 }
 
@@ -6184,6 +6244,7 @@ shared_focus = {
 		add_stability = -0.15
 		###Possibly event of running griffons out of Griffonstone and already turning some of its architecture into pony architecture, and erecting a statue of Daybreaker to point how she has conquered the griffons
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_ANNEXATION }
 	ai_will_do = {
 		factor = 60
 		modifier = {
@@ -6231,6 +6292,7 @@ shared_focus = {
 		show_ideas_tooltip = lieblingsruebe
 		###Possibly an event of Daybreaker watching as a monument to her is put up, and she is accosted by Gruff, but instead just shows him how the Grover statue is staying, and also that it is going to be a testament to how the two empires will accomplish great things together, although he thinks it a bunch of crap
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 	ai_will_do = {
 		factor = 40
 		modifier = {
@@ -6267,6 +6329,7 @@ shared_focus = {
 		###Will allow for him to be eventually made Kaiser like for either normal regents
 		country_event = solarreworked.120
 	}
+	search_filters = { FOCUS_FILTER_ANNEXATION }
 	ai_will_do = { factor = 70 }
 }
 
@@ -6292,6 +6355,7 @@ shared_focus = {
 		###Event of Grover, after his coronation, finding a gift from Daybreaker on his bed, which is a suit of armor, made from the most expertly trained pony smiths in the Empire, with a note speaking that she rarely admits to being pleased with creatures, let alone non-ponies, but he has impressed her, and that she has taught him enough to lead, and that he can consider it a gift for any battles he may have to lead
 		country_event = solarreworked.132
 	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	ai_will_do = { factor = 50 }
 }
 
@@ -6325,6 +6389,7 @@ shared_focus = {
 		###Will anger every other griffon nation that still exists on Griffonia
 		country_event = solarreworked.121
 	}
+	search_filters = { FOCUS_FILTER_ANNEXATION }
 	ai_will_do = { factor = 50 }
 }
 
@@ -6578,7 +6643,14 @@ shared_focus = {
 			}
 		}
 	}
-	ai_will_do = { factor = 30 }
+	search_filters = { FOCUS_FILTER_ANNEXATION }
+	ai_will_do = {
+		factor = 30
+		modifier = {
+			has_war = yes
+			factor = 0.1
+		}
+	}
 }
 
 shared_focus = {
@@ -6615,6 +6687,7 @@ shared_focus = {
 		###Event of Daybreaker meeting with the prince of Saddle Arabia, who is a bit of a nervous wreck after being held for so long by the civil war, and she acts condescending that he can rule again, but he'll have to do what she wants, and will have to cut out most of the spending, since she wants an actually useful puppet, which he barely agrees to, since he would rather live
 		country_event = solarreworked.388
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ANNEXATION }
 	ai_will_do = { factor = 50 }
 }
 
@@ -6665,6 +6738,7 @@ shared_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	ai_will_do = { factor = 70 }
 }
 
@@ -6706,6 +6780,7 @@ shared_focus = {
 			set_cosmetic_tag = YMN_SOL
 		}
 	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_ANNEXATION }
 	ai_will_do = { factor = 40 }
 }
 
@@ -6782,7 +6857,14 @@ shared_focus = {
 			}
 		}
 	}
-	ai_will_do = { factor = 30 }
+	search_filters = { FOCUS_FILTER_ANNEXATION }
+	ai_will_do = {
+		factor = 30
+		modifier = {
+			has_war = yes
+			factor = 0.1
+		}
+	}
 }
 
 shared_focus = {
@@ -6806,6 +6888,7 @@ shared_focus = {
 		###Event of somepony who has wronged Daybreaker, or perhaps one more rebel, is trying to run away after he had been almost killed by the hit squad, until he is stopped when some appear in a teleportation spell, and they let him have his last words as they use fire magic to consume him entirely
 		country_event = solarreworked.390
 	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	ai_will_do = { factor = 40 }
 }
 
@@ -6830,6 +6913,7 @@ shared_focus = {
 		###Event of Daybreaker leading an army to attack The Cave, where the artifacts of Maretonia are kept, and she gets into combat with the MTA leader, who is their most powerful mage, and she gets into a proper challenge with him, and almost loses out, aside from her playing dirty to get in, and she ultimately wins, and mocks him as he perishes
 		country_event = solarreworked.391
 	}
+	search_filters = { FOCUS_FILTER_ANNEXATION }
 	ai_will_do = { factor = 100 }
 }
 
@@ -6864,6 +6948,7 @@ shared_focus = {
 			}
 		}
 	}
+	search_filters = { FOCUS_FILTER_ANNEXATION }
 	ai_will_do = { factor = 100 }
 }
 
@@ -6887,7 +6972,11 @@ shared_focus = {
 	will_lead_to_war_with = BAT
 	cost = 5
 	ai_will_do = {
-		factor = 35
+		factor = 50
+		modifier = {
+			has_war = yes
+			factor = 0.1
+		}
 	}
 	relative_position_id = SOL_conquer_GRI
 	x = 10
@@ -6926,6 +7015,7 @@ shared_focus = {
 		###Event of either inquisitors or just radical followers of Daybreaker going into a town of thestrals, in a night condoned by the governing body of BAT, to scare, drive out, or kill the bats of Zebrica, as lessons for them rebelling for so long against Daybreaker, which leads to extensive loss of life for the thestrals
 		country_event = solarreworked.392
 	}
+	search_filters = { FOCUS_FILTER_RESISTANCE }
 	ai_will_do = { factor = 60 }
 }
 
@@ -6946,6 +7036,7 @@ shared_focus = {
 		###Event of a representative of Daybreaker, probably Sunrise Sparkle, leading a mass purge of the bats, starting with some of the BAT leaders, who are all defiant of her, and then by tearing down monuments and the like, which leads to large-scale destruction across BAT
 		country_event = solarreworked.393
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 	ai_will_do = { factor = 100 }
 }
 
@@ -6968,6 +7059,7 @@ shared_focus = {
 		###Follow a soldier as he prepares to go in on one of the larger cities in BAT, as orders have come down that they will finally inflict the last of the wounds necessary to inflict total retribution on BAT, and he grows more upset and sickened as it is clearly a thestralcide, and even if he despises them, he thinks that it would be wiser to just use them than execute them all
 		country_event = solarreworked.394
 	}
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ANNEXATION }
 	ai_will_do = { factor = 30 }
 }
 
@@ -6997,6 +7089,7 @@ shared_focus = {
 		#Create puppet here
 		###Maybe event speaking about how the thestrals can still be useful, and that they need to be monitored and can more easily be done so by the IIS/Solaris Speculatores, and that a client state will be erected in it to compensate for no longer having direct control
 	}
+	search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
 	ai_will_do = { factor = 70 }
 }
 
@@ -7015,6 +7108,7 @@ shared_focus = {
 		###Perhaps an event of book burnings and history burnings of all of the thestral race that BAT has, and killing any thestrals that resist
 		country_event = solarreworked.395
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_RESISTANCE }
 	ai_will_do = { factor = 50 }
 }
 
@@ -7039,6 +7133,7 @@ shared_focus = {
 			country_event = solarreworked.139
 		}
 	}
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
 	ai_will_do = { factor = 60 }
 }
 
@@ -7056,7 +7151,14 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_continue_research"
 		add_ideas = SOL_thestral_research
 	}
-	ai_will_do = { factor = 100 }
+	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_STABILITY }
+	ai_will_do = {
+		factor = 120
+		modifier = {
+			NOT = { has_completed_focus = SOL_river_brethren }
+			factor = 0.05
+		}
+	}
 }
 
 shared_focus = {
@@ -7139,6 +7241,7 @@ shared_focus = {
 		###Daybreaker finally has a day to herself, as the world is at peace at last, and she looks to a map of her empire, and how ponies from all walks of life had been made safe under her, and she believes that she has accomplished her goal, and she will lead all of ponykind into prosperity forever
 		country_event = solarreworked.399
 	}
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 	ai_will_do = { factor = 1000 }
 }
 

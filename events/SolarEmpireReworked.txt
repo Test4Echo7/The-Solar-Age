@@ -7924,10 +7924,12 @@ country_event = { #Follow a horse who is trying to flee from a city in MTA, and 
 
     option = { #Wait!
         name = solarreworked.390.a
-        set_technology = {
-			SOL_unicorn_hit_squads_tech = 1
-			popup = no
-		}
+        hidden_effect = {
+            set_technology = {
+                SOL_unicorn_hit_squads_tech = 1
+                popup = no
+            }
+        }
 		add_ideas = SOL_unicorn_hit_squads
     }
 }
