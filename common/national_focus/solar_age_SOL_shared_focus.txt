@@ -7975,6 +7975,17 @@ shared_focus = {
 		x = 46
 		y = -1
 	}
+	offset = {
+		x = 5
+		trigger = { NOT = { has_country_flag = SOL_bat_problems_flag } }
+	}
+	offset = {
+		x = 6
+		trigger = {
+			is_EQS_SOL = yes
+			NOT = { has_country_flag = SOL_unlock_political_focuses }
+		}
+	}
 	icon = GFX_goal_crystal_fair
 	#relative_position_id = SOL_follow_sunrise_plan
 
@@ -9925,6 +9936,13 @@ joint_focus = {
 		x = 37
 		y = -1
 		trigger = { tag = EQC }
+	}
+	offset = {
+		x = 6
+		trigger = {
+			is_EQS_SOL = yes
+			NOT = { has_country_flag = SOL_unlock_political_focuses }
+		}
 	}
 	#relative_position_id = SOL_force_jet_sets_hoof
 

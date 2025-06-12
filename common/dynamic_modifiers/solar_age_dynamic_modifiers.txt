@@ -72,7 +72,7 @@ SOL_better_improved_sanctum = {
 SOL_improved_river_architecture = {
     icon = GFX_idea_EQS_unicorn_academy
 
-    local_non_core_manpower = 0.05
+    local_non_core_manpower = 0.15
 }
 
 SOL_direct_solarian_administration = {
