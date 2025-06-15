@@ -4622,6 +4622,13 @@ country_event = { #Daybreaker observes Flurry as she is in some of her training,
                 custom_effect_tooltip = flurry_heart_stats_tp
             }
         }
+        hidden_effect = {
+            country_event = {
+                id = solarreworked.470
+                days = 300
+                random_days = 65
+            }
+        }
     }
 }
 
@@ -6253,6 +6260,12 @@ country_event = { #With herself established, Daybreaker hosts a grand ceremony i
         set_cosmetic_tag = EQS_SOL_romanophile
         custom_effect_tooltip = available_political_advisor
         show_ideas_tooltip = padlock
+        hidden_effect = {
+            news_event = {
+                id = news.solarage.6
+                hours = 6
+            }
+        }
     }
 }
 
@@ -6268,6 +6281,13 @@ country_event = { #Daybreaker holds a ceremony at night, so that the flames of t
     option = { #May you serve forever!
         name = solarreworked.301.a
         #add_ideas = SOL_solaris_adoratio_idea
+        hidden_effect = {
+            country_event = {
+                id = solarreworked.473
+                days = 30
+                random_days = 90
+            }
+        }
     }
 }
 
@@ -8206,6 +8226,11 @@ country_event = { #The leader of PCB is offered a choice of either annhilation o
                 days = 1825
                 random_days = 365
             }
+            country_event = {
+                id = solarreworked.476
+                days = 365
+                random_days = 60
+            }
         }
     }
     option = { #Don't they have bigger fish to fry? Ignore them.
@@ -9069,6 +9094,325 @@ country_event = {
 
     option = {
         name = solarreworked.465.a
+    }
+}
+
+country_event = { #EQS only Octavia performance instead of news event; only if decide to overwrite news events file
+    id = solarreworked.466
+    title = solarreworked.466.t
+    desc = solarreworked.466.d
+    ###GFX of Octavia performing
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.466"}
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.466.a
+    }
+}
+
+country_event = {
+    id = solarreworked.467
+    title = solarreworked.467.t
+    desc = solarreworked.467.d
+    ###GFX of tired Raven
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.467"}
+
+    fire_only_once = yes
+    trigger = {
+        tag = EQS
+        power_balance_value = {
+            id = EQS_sanity_bop
+            value < 0.5
+        }
+    }
+    mean_time_to_happen = {
+        days = 30
+    }
+
+    option = {
+        name = solarreworked.467.a
+    }
+}
+
+country_event = {
+    id = solarreworked.468
+    title = solarreworked.468.t
+    desc = solarreworked.468.d
+    ###GFX of flummoxed Raven
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.468"}
+
+    fire_only_once = yes
+    trigger = {
+        tag = EQS
+        power_balance_value = {
+            id = EQS_sanity_bop
+            value < 0.4
+        }
+        OR = {
+            has_idea = eqs_war_law
+            has_idea = eqs_war_law_extreme
+            has_idea = eqs_war_admin
+            has_idea = eqs_war_admin_extreme
+        }
+    }
+    mean_time_to_happen = {
+        days = 30
+    }
+
+    option = {
+        name = solarreworked.468.a
+    }
+}
+
+country_event = {
+    id = solarreworked.469
+    title = solarreworked.469.t
+    desc = solarreworked.469.d
+    picture = GFX_event_celestia_nuke
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.469"}
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.469.a
+        hidden_effect = {
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = -0.02
+                tooltip_side = EQS_angy
+            }
+        }
+    }
+}
+
+country_event = {
+    id = solarreworked.470
+    title = solarreworked.470.t
+    desc = solarreworked.470.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.470"}
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.470.a
+    }
+}
+
+country_event = {
+    id = solarreworked.471
+    title = solarreworked.471.t
+    desc = solarreworked.471.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.471"}
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.471.a
+    }
+}
+
+country_event = {
+    id = solarreworked.472
+    title = solarreworked.472.t
+    desc = {
+        text = solarreworked.472.d_a
+        trigger = { STG = { has_country_leader = { character = STG_vasiliy_wheatin ruling_only = yes } } }
+    }
+    desc = {
+        text = solarreworked.472.d_b
+        trigger = { STG = { has_country_leader = { character = STG_sinister_serov ruling_only = yes } } }
+    }
+    desc = {
+        text = solarreworked.473.d_c
+        trigger = { STG = { has_country_leader = { character = STG_dark_wing ruling_only = yes } } }
+    }
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.472"}
+
+    is_triggered_only = yes
+
+    option = {
+        trigger = { STG = { has_country_leader = { character = STG_vasiliy_wheatin ruling_only = yes } } }
+        name = solarreworked.472.a
+    }
+    option = {
+        trigger = { STG = { has_country_leader = { character = STG_sinister_serov ruling_only = yes } } }
+        name = solarreworked.472.b
+    }
+    option = {
+        trigger = { STG = { has_country_leader = { character = STG_dark_wing ruling_only = yes } } }
+        name = solarreworked.472.c
+    }
+}
+
+country_event = {
+    id = solarreworked.473
+    title = solarreworked.473.t
+    desc = solarreworked.473.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.473"}
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.473.a
+        hidden_effect = {
+            country_event = {
+                id = solarreworked.474
+                days = 1
+            }
+        }
+    }
+}
+
+country_event = {
+    id = solarreworked.474
+    title = solarreworked.474.t
+    desc = solarreworked.474.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.474"}
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.474.a
+        set_country_flag = SOL_caffeine_injection
+        custom_effect_tooltip = available_political_advisor
+        show_ideas_tooltip = stellar_breeze
+    }
+}
+
+country_event = {
+    id = solarreworked.475
+    title = solarreworked.475.t
+    desc = {
+        trigger = { EQC = { has_country_leader = { character = EQC_jet_set ruling_only = yes } } }
+        text = solarreworked.475.d_a
+    }
+    desc = {
+        trigger = { EQC = { has_country_leader = { character = EQS_SOL_arcane_nova = ruling_only = yes } } }
+        text = solarreworked.475.d_b
+    }
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.475"}
+
+    is_triggered_only = yes
+
+    option = {
+        trigger = { EQC = { has_country_leader = { character = EQC_jet_set ruling_only = yes } } }
+        name = solarreworked.475.a
+    }
+    option = {
+        trigger = { EQC = { has_country_leader = { character = EQS_SOL_arcane_nova = ruling_only = yes } } }
+        name = solarreworked.475.b
+    }
+}
+
+country_event = {
+    id = solarreworked.476
+    title = solarreworked.476.t
+    desc = {
+        trigger = { PCB = { has_country_leader = { character = PCB_ponse_cocktail ruling_only = yes } } }
+        text = solarreworked.476.d_a
+    }
+    desc = {
+        trigger = { PCB = { has_country_leader = { character = EQS_red_tide ruling_only = yes } } }
+        text = solarreworked.476.d_b
+    }
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.476"}
+
+    is_triggered_only = yes
+
+    option = {
+        trigger = { PCB = { has_country_leader = { character = PCB_ponse_cocktail ruling_only = yes } } }
+        name = solarreworked.476.a
+    }
+    option = {
+        trigger = { PCB = { has_country_leader = { character = EQS_red_tide ruling_only = yes } } }
+        name = solarreworked.476.b
+    }
+}
+
+country_event = {
+    id = solarreworked.477
+    title = solarreworked.477.t
+    desc = solarreworked.477.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.477"}
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.477.a
+    }
+}
+
+country_event = {
+    id = solarreworked.478
+    title = solarreworked.478.t
+    desc = solarreworked.478.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.478"}
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.478.a
+    }
+}
+
+country_event = {
+    id = solarreworked.479
+    title = solarreworked.479.t
+    desc = solarreworked.479.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.479"}
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.479.a
+    }
+}
+
+country_event = {
+    id = solarreworked.497
+    title = solarreworked.497.t
+    desc = solarreworked.497.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.497"}
+
+    trigger = {
+        tag = EQS
+        has_war_with = CHN
+        CHN = { surrender_progress > 0.25 }
+        has_country_flag = SOL_new_generals_flag
+    }
+    fire_only_once = yes
+    mean_time_to_happen = {
+        days = 90
+    }
+
+    option = {
+        name = solarreworked.497.a
+    }
+}
+
+country_event = {
+    id = solarreworked.498
+    title = solarreworked.498.t
+    desc = solarreworked.498.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.498"}
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.498.a
     }
 }
 
@@ -12734,7 +13078,7 @@ country_event = { #Short event of SOL demanding that the SRS territory which NTR
     title = solarreworked.521.t
     desc = solarreworked.521.d
     picture = GFX_event_solarempire
-    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.522"}
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.521"}
 
     is_triggered_only = yes
 
@@ -12811,7 +13155,12 @@ country_event = { #SOL receives GRD's response about their demands
 
     option = { #Good to see they're reasonable.
         name = solarreworked.522.a
-        trigger = { GRD = { has_country_flag = SOL_GRD_submitted_territory } }
+        trigger = {
+            GRD = {
+                has_country_flag = SOL_GRD_submitted_territory
+                NOT = { is_subject_of = ROOT }
+            }
+        }
         FROM = { clr_country_flag = SOL_GRD_submitted_territory }
         every_state = {
             limit = {
@@ -12827,6 +13176,24 @@ country_event = { #SOL receives GRD's response about their demands
         trigger = { GRD = { has_country_flag = SOL_GRD_refused_territory } }
         FROM = { clr_country_flag = SOL_GRD_refused_territory }
         add_political_power = -25
+    }
+    option = { #How could she refuse herself?
+        name = solarreworked.522.c
+        trigger = {
+            GRD = {
+                has_country_flag = SOL_GRD_submitted_territory
+                is_subject_of = ROOT
+            }
+        }
+        FROM = { clr_country_flag = SOL_GRD_submitted_territory }
+        every_state = {
+            limit = {
+                is_core_of = SRS
+                is_owned_and_controlled_by = FROM
+            }
+            add_core_of = NTR
+            NTR = { transfer_state = PREV.id }
+        }
     }
 }
 

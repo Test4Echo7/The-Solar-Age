@@ -51,18 +51,23 @@ shared_focus = {
         set_global_flag = SOL_sunset_converted
         set_country_flag = SOL_sunset_ascended
         country_event = solarreworked.208
-        if = {
-			limit = {
-				has_completed_focus = SOL_solaris_adoratio
-			}
-			hidden_effect = {
+        hidden_effect = {
+			if = {
+				limit = {
+					has_completed_focus = SOL_solaris_adoratio
+				}
 				country_event = {
 					id = solarreworked.301
 					days = 90
 					random_days = 45
 				}
 			}
-        }
+			country_event = {
+				id = solarreworked.479
+				days = 720
+				random_days = 90
+			}
+		}
     }
     ai_will_do = {
         base = 150
@@ -213,18 +218,23 @@ shared_focus = {
 			clear_variable = crysparkle
 		}
 		country_event = solarempire.13
-		if = {
-			limit = {
-				has_completed_focus = SOL_solaris_inquisitionis
-			}
-			hidden_effect = {
+		hidden_effect = {
+			if = {
+				limit = {
+					has_completed_focus = SOL_solaris_inquisitionis
+				}
 				country_event = {
 					id = solarreworked.302
 					days = 90
 					random_days = 45
 				}
 			}
-        }
+			country_event = {
+				id = solarreworked.453
+				days = 150
+				random_days = 60
+			}
+		}
 	}
 	search_filters = { FOCUS_FILTER_MANPOWER }
 }
@@ -1479,6 +1489,11 @@ shared_focus = {
 				random_days = 90
 			}
 			country_event = {
+				id = solarreworked.471
+				days = 200
+				random_days = 150
+			}
+			country_event = {
 				id = solarempire.45
 				days = 7
 			}
@@ -2111,6 +2126,11 @@ shared_focus = {
 				id = solarempire.45
 				days = 7
 			}
+			country_event = {
+				id = solarreworked.471
+				days = 200
+				random_days = 150
+			}
 			if = {
 				limit = {
 					has_game_rule = {
@@ -2204,22 +2224,25 @@ shared_focus = {
 		else = {
 			add_ideas = SOL_Imperial_Inquisition_idea
 		}
-		if = {
-			limit = { has_completed_focus = SOL_twilight_ascend }
-			hidden_effect = {
+		hidden_effect = {
+			if = {
+				limit = { has_completed_focus = SOL_twilight_ascend }
 				country_event = solarreworked.302
 			}
-		}
-		if = {
-			limit = {
-				has_country_flag = SOL_incomplete_purge
-			}
-			hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = SOL_incomplete_purge
+				}
 				country_event = {
 					id = solarreworked.504
 					days = 3
 					random_days = 7
 				}
+			}
+			country_event = { #Solaris Inquistionis flavour event chain
+				id = solarreworked.315
+				days = 120
+				random_days = 120
 			}
 		}
 		###Event of Twilight meeting privately with Daybreaker, who is pleased to offer Twilight an even better position than she had before, which will be the head inquisitor of the Solaris Inquisitionis, her holy inquisition, that will be used to keep Harmony and Order, which Twilight readily accepts, as she is worried that ponies don't understand Daybreaker's desires; it is close to a mother-daughter relationship kind of talk
@@ -3020,6 +3043,11 @@ shared_focus = {
 			country_event = {
 				id = solarempire.45
 				days = 7
+			}
+			country_event = {
+				id = solarreworked.471
+				days = 200
+				random_days = 150
 			}
 			country_event = {
 				id = solarreworked.354
@@ -10284,6 +10312,9 @@ joint_focus = {
 		}
 		else = {
 			EQC = { add_political_power = 150 }
+		}
+		hidden_effect = {
+			EQS = { country_event = { id = solarreworked.475 days = 7 } }
 		}
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY }

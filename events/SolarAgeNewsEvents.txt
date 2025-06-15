@@ -171,6 +171,46 @@ news_event = {
 	}
 }
 
+news_event = { #Daybreaker declares herself God-Empress, renames the Solar Empire and Canterlot, and promises all will bow
+	id = news.solarage.6
+	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.6"}
+	title = news.solarage.6.t
+	desc = news.solarage.6.d
+	picture = GFX_news_forever_sun
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		trigger = { tag = EQS }
+		name = news.solarage.6.a
+	}
+	option = {
+		trigger = {
+			OR = {
+				tag = CRY
+				tag = EQC
+				tag = PCB
+				tag = HIP
+			}
+		}
+		name = news.solarage.6.b
+	}
+	option = {
+		trigger = {
+			NOT = {
+				tag = EQS
+				tag = CRY
+				tag = PCB
+				tag = EQC
+				tag = HIP
+			}
+		}
+		name = news.solarage.6.c
+	}
+}
+
 news_event = {
 	id = news.solarage.10
 	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.10"}

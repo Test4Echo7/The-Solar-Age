@@ -590,6 +590,7 @@ on_actions = {
                 limit = {
                     ROOT = {
                         tag = EQS
+                        is_EQS_SOL = yes
                     }
                     FROM = {
                         tag = NLR
@@ -599,6 +600,43 @@ on_actions = {
                     country_event = {
                         id = solarreworked.258
                         days = 1
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    ROOT = {
+                        tag = EQS
+                        is_EQS_SOL = yes
+                    }
+                    FROM = {
+                        tag = CES
+                        has_character = CES_daring_do
+                    }
+                }
+                ROOT = {
+                    country_event = {
+                        id = solarreworked.477
+                        days = 14
+                        random_days = 7
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    ROOT = {
+                        tag = EQS
+                        is_EQS_SOL = yes
+                    }
+                    FROM = {
+                        tag = STG
+                    }
+                }
+                ROOT = {
+                    country_event = {
+                        id = solarreworked.472
+                        days = 30
+                        random_days = 15
                     }
                 }
             }

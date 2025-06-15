@@ -207,7 +207,7 @@ characters = {
 			allowed = {
 				original_tag = EQS
 			}
-			visible = { has_completed_focus = SOL_unveil_cultus }
+			visible = { has_country_flag = SOL_caffeine_injection }
 			traits = { friendly_priest }
 		}
 	}

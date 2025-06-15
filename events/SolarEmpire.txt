@@ -864,6 +864,17 @@ country_event = {
         custom_effect_tooltip = arcane_nova_stats_tp
 
         custom_effect_tooltip = sunsane_stats_tp
+
+        #hidden_effect = {
+		#	if = {
+		#		limit = { has_completed_focus = SOL_god_empress }
+		#		country_event = {
+		#			id = solarreworked.498
+		#			days = 180
+		#			random_days = 185
+		#		}
+		#	}
+        #}
 	}
 }
 
