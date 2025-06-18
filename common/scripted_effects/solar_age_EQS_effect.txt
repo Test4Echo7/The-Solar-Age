@@ -89,8 +89,8 @@ EQS_troll_chiropterra = {
     custom_effect_tooltip = BAR_viira_puppet_break
     custom_effect_tooltip = SOL_BAT_puppet_tt1
     713 = {
-        add_manpower = -343468
-        set_state_category = wasteland
+        add_manpower = -78932
+        set_state_category = rural
     }
     set_province_name = {
         id = 18601
@@ -101,8 +101,8 @@ EQS_troll_chiropterra = {
         remember_old_capital = no
     }
     712 = {
-        add_manpower = -620322
-        set_state_category = wasteland
+        add_manpower = -392831
+        set_state_category = pastoral
     }
     custom_effect_tooltip = BAR_viira_puppet_genocide2_5
     custom_effect_tooltip = EQS_SOL_BAT_GAMER1
@@ -115,8 +115,8 @@ EQS_troll_chiropterra = {
         name = EQS_SOL_batcityburnt
     }
     690 = {
-        add_manpower = -138034
-        set_state_category = wasteland
+        add_manpower = -63739
+        set_state_category = pastoral
     }
     custom_effect_tooltip = EQS_SOL_BAT_GAMER2
     add_victory_points = {
@@ -124,7 +124,7 @@ EQS_troll_chiropterra = {
         value = -3
     }
     689 = {
-        add_manpower = -356244
+        add_manpower = -125833
         set_state_category = wasteland
     }
     custom_effect_tooltip = EQS_SOL_BAT_GAMER3
@@ -133,7 +133,7 @@ EQS_troll_chiropterra = {
         value = -5
     }
     691 = {
-        add_manpower = -448210
+        add_manpower = -175823
         set_state_category = wasteland
     }
     custom_effect_tooltip = EQS_SOL_BAT_GAMER4
@@ -142,7 +142,7 @@ EQS_troll_chiropterra = {
         value = -3
     }
     815 = {
-        add_manpower = -204763
+        add_manpower = -58392
         set_state_category = wasteland
     }
     custom_effect_tooltip = EQS_SOL_BAT_GAMER5
@@ -154,42 +154,42 @@ EQS_troll_chiropterra = {
     custom_effect_tooltip = SOL_BAT_puppet_tt3
     show_ideas_tooltip = SOL_BAT_order
     hidden_effect = {
-    712 = {
-            remove_building = {
-                type = arms_factory
-                level = 100
-            }
-            remove_building = {
-                type = infrastructure
-                level = 5
-            }
-            remove_building = {
-                type = dockyard
-                level = 100
-            }
-            remove_building = {
-                type = industrial_complex
-                level = 100
-            }
-    }
-    712 = {
-            remove_building = {
-                type = arms_factory
-                level = 100
-            }
-            remove_building = {
-                type = infrastructure
-                level = 5
-            }
-            remove_building = {
-                type = dockyard
-                level = 100
-            }
-            remove_building = {
-                type = industrial_complex
-                level = 100
-            }
-    }
+    #712 = {
+    #        remove_building = {
+    #            type = arms_factory
+    #            level = 100
+    #        }
+    #        remove_building = {
+    #            type = infrastructure
+    #            level = 5
+    #        }
+    #        remove_building = {
+    #            type = dockyard
+    #            level = 100
+    #        }
+    #        remove_building = {
+    #            type = industrial_complex
+    #            level = 100
+    #        }
+    #}
+    #712 = {
+    #        remove_building = {
+    #            type = arms_factory
+    #            level = 100
+    #        }
+    #        remove_building = {
+    #            type = infrastructure
+    #            level = 5
+    #        }
+    #        remove_building = {
+    #            type = dockyard
+    #            level = 100
+    #        }
+    #        remove_building = {
+    #            type = industrial_complex
+    #            level = 100
+    #        }
+    #}
     create_dynamic_country = {
         original_tag = BAT
         set_country_flag = BAT_SOLAR

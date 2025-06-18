@@ -29,6 +29,9 @@
   news.solarage.6.a:0 "Our Goddess is unstoppable!"
   news.solarage.6.b:0 "Has Celestia gone mad?!" #CRY, EQC, PCB, and HIP
   news.solarage.6.c:0 "Power has gone to her head."
+  news.solarage.7.t:0 "Dissolution of the United Ponies Alliance"
+  news.solarage.8.t:0 "War of the Empires" #GRD vs SOL
+  news_solarage.9.t:0 "Erasure of Chiropterra"
   news.solarage.10.t:0 "Pony on the [GRD.GetAdjectiveCap] Throne!"
   news.solarage.10.d:0 "[This.GetNewspaperHeader]Today thousands were gathered in Griffenheim to witness an event unseen in the three hundred years of [GRD.GetNameDef]'s history. In the early morning, with the sun rising and illuminating the great works of art in the throne room of the Kaiserschloss, [EQS.GetLeader] accepted the scepter of the Grovers and presented Grover VI to the nobility. After a short speech about the struggles she had endured to liberate Grover from the misguided regents who reigned over him before, [EQS.GetLeader] declared that [EQS.GetLeader.GetSheHe] would educate Grover in what he would need to know about leading [GRD.GetNameDef].\n\n"This next chapter of [GRD.GetNameDef] shall be marked by peace and order. As long as I live, Grover will be trained in proper leadership. The embrace of the Sun will guide [GRD.GetNameDef] into an era of prosperity!" [EQS.GetLeader] declared to the assembly.\n\nThere were no applause, and disgruntled nobles have been seen doing what they can to leave [GRD.GetNameDef]. No further comment has been given since."
   news.solarage.10.a:0 "Our Empress will civilize the griffons yet!"
@@ -37,7 +40,7 @@
   news.solarage.20.d:0 "[This.GetNewspaperHeader]Today marks a new point in history across the world. Only a few hours ago, [ROOT.GetNameDef] was rocked with a blast that glassed the landscape for tens of miles in all directions. Witnesses from across the nation report that a blinding beam of light descended from the sky, cutting through any clouds, and vaporized anything caught within the blast.\n\nSettlements that were near the impact have been completely erased, with nothing left but ash and a smattering of the strongest buildings surviving as skeletons. So far it is unsafe to travel to the affected area, as temperatures are still lethal for anything living.\n\n[ROOT.GetLeader] proclaimed that it is because of their conflict with [EQS.GetLeader] and has vowed that [ROOT.GetNameDef] will fight to its last to resist [EQS.GetLeader.GetHerHis] tyranny."
   news.solarage.20.a:0 "They have tasted the fury of the Sun!"
   news.solarage.20.b:0 "What madmare would believe this acceptable?"
-  news.solarage.21.t:0 "Slagging of [251.GetCapitalVictoryPointName]"
+  news.solarage.21.t:0 "Incineration of [251.GetCapitalVictoryPointName]"
   news.solarage.21.d:0 "[This.GetNewspaperHeader]For changelings across [CHN.GetNameDef], their horizon was lit brighter than the noonday sun for minutes as a beam of light descended upon [251.GetCapitalVictoryPointName]. Those closest to the impact site that survived were knocked from their hooves or swatted from the sky and left scarred and deformed with third degree burns.\n\nWhere the city once stood there is nothing more than piles of ash, charred and skeletal buildings, and superheated dirt that has been completely turned to glass and obsidian. Across the stretch of the megalopolis, fires continue to rage. Reports indicate no survivors but [CHN.GetLeader] has been confirmed to have escaped.\n\nAs of yet [CHN.GetLeader.GetSheHe] has not made a statement, but the Wehrmacht has promised to continue their fight against [EQS.GetNameDef], now to the bitter end."
   news.solarage.21.a:0 "These abominations will soon be crushed!"
   news.solarage.21.b:0 "We will never surrender!"

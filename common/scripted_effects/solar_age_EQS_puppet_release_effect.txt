@@ -1458,6 +1458,10 @@ SOL_promote_local_governor = {
                     }
                 }
             }
+            country_event = {
+                id = solarreworked.478
+                days = 1
+            }
         }
     }
     else_if = {
