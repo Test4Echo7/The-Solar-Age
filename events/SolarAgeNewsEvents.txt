@@ -160,7 +160,7 @@ news_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.5"}
 	title = news.solarage.5.t
 	desc = news.solarage.5.d
-	picture = GFX_news_coloratura_performing
+	picture = GFX_news_coloratura_performs
 
 	#major = yes
 

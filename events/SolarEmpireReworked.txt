@@ -1632,7 +1632,7 @@ country_event = { #Celestia bursts into Luna's room, while Luna is working on pa
     id = solarreworked.55
     title = solarreworked.55.t
     desc = solarreworked.55.d
-    #GFX of Celestia looking rather worse for wear
+    ###GFX of Celestia looking rather worse for wear
     picture = GFX_event_celestia_theme
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.55"}
 
@@ -3254,7 +3254,7 @@ country_event = { #Daybreaker has one of her first longer meetings with Grover, 
     id = solarreworked.122
     title = solarreworked.122.t
     desc = solarreworked.122.d
-    picture = GFX_event_solarempire ###GFX - Change this perhaps to be a new portrait of Grover
+    picture = GFX_event_grover_and_daybreaker ###GFX - Change this perhaps to be a new portrait of Grover - For now use temp Grover & Daybreaker
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.122"}
 
     is_triggered_only = yes
@@ -3275,7 +3275,7 @@ country_event = {
     id = solarreworked.123
     title = solarreworked.123.t
     desc = solarreworked.123.d
-    picture = GFX_event_solarempire
+    picture = GFX_event_grover_vi
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.123"}
 
     is_triggered_only = yes
@@ -3322,7 +3322,7 @@ country_event = {
     id = solarreworked.125
     title = solarreworked.125.t
     desc = solarreworked.125.d
-    picture = GFX_event_solarempire
+    picture = GFX_event_grover_vi
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.125"}
 
     is_triggered_only = yes
@@ -3343,7 +3343,7 @@ country_event = {
     id = solarreworked.126
     title = solarreworked.126.t
     desc = solarreworked.126.d
-    picture = GFX_event_solarempire
+    picture = GFX_event_grover_vi
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.126"}
 
     is_triggered_only = yes
@@ -3364,7 +3364,7 @@ country_event = {
     id = solarreworked.127
     title = solarreworked.127.t
     desc = solarreworked.127.d
-    picture = GFX_event_solarempire
+    picture = GFX_event_grover_vi
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.127"}
 
     is_triggered_only = yes
@@ -3385,7 +3385,7 @@ country_event = {
     id = solarreworked.128
     title = solarreworked.128.t
     desc = solarreworked.128.d
-    picture = GFX_event_solarempire
+    picture = GFX_event_grover_vi
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.128"}
 
     is_triggered_only = yes
@@ -3406,7 +3406,7 @@ country_event = {
     id = solarreworked.129
     title = solarreworked.129.t
     desc = solarreworked.129.d
-    picture = GFX_event_solarempire
+    picture = GFX_event_grover_vi
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.129"}
 
     is_triggered_only = yes
@@ -3427,7 +3427,7 @@ country_event = {
     id = solarreworked.130
     title = solarreworked.130.t
     desc = solarreworked.130.d
-    picture = GFX_event_solarempire
+    picture = GFX_event_grover_vi
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.130"}
 
     is_triggered_only = yes
@@ -3441,7 +3441,7 @@ country_event = {
     id = solarreworked.131
     title = solarreworked.131.t
     desc = solarreworked.131.d
-    picture = GFX_event_solarempire
+    picture = GFX_event_grover_and_daybreaker
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.131"}
 
     is_triggered_only = yes
@@ -3459,7 +3459,7 @@ country_event = { #Grover is given a personal set of armor as a gift by Daybreak
     id = solarreworked.132
     title = solarreworked.132.t
     desc = solarreworked.132.d
-    picture = GFX_event_solarempire
+    picture = GFX_event_eclipsing_daybreaker
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.132"}
 
     is_triggered_only = yes
@@ -5855,7 +5855,7 @@ country_event = { #Daybreaker is informed that Flim and Flam are once again havi
     id = solarreworked.266
     title = solarreworked.266.t
     desc = solarreworked.266.d
-    ###GFX of Flim and Flam, probably their portraits
+    picture = GFX_event_flim_and_flam
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.266"}
 
     is_triggered_only = yes
@@ -6956,7 +6956,7 @@ country_event = { #Follow a noble as he attends a meeting regarding an economic 
     id = solarreworked.341
     title = solarreworked.341.t
     desc = solarreworked.341.d
-    #GFX of a clock
+    picture = GFX_event_alarm_clock
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.341"}
 
     is_triggered_only = yes
@@ -7391,7 +7391,7 @@ country_event = { #The queens that supported Chrysalis are brought before Daybre
     id = solarreworked.376
     title = solarreworked.376.t
     desc = solarreworked.376.d
-    ###Collage of changeling queen portraits
+    picture = GFX_event_four_queens
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.376"}
 
     is_triggered_only = yes
@@ -7548,7 +7548,7 @@ country_event = { #Pumpkin Swirl nervously waits for Daybreaker to arrive within
     id = solarreworked.380
     title = solarreworked.380.t
     desc = solarreworked.380.d
-    ###Portrait of Pumpkin Swirl
+    picture = GFX_event_pumpkin_swirl
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.380"}
 
     is_triggered_only = yes
@@ -9101,7 +9101,7 @@ country_event = { #EQS only Octavia performance instead of news event; only if d
     id = solarreworked.466
     title = solarreworked.466.t
     desc = solarreworked.466.d
-    ###GFX of Octavia performing
+    picture = GFX_event_octavia_performing
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.466"}
 
     is_triggered_only = yes
@@ -9115,7 +9115,7 @@ country_event = {
     id = solarreworked.467
     title = solarreworked.467.t
     desc = solarreworked.467.d
-    ###GFX of tired Raven
+    picture = GFX_event_tired_raven
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.467"}
 
     fire_only_once = yes
@@ -9139,7 +9139,7 @@ country_event = {
     id = solarreworked.468
     title = solarreworked.468.t
     desc = solarreworked.468.d
-    ###GFX of flummoxed Raven
+    picture = GFX_event_raven_inkwell
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.468"}
 
     fire_only_once = yes

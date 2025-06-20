@@ -1,127 +1,155 @@
-spriteTypes = {
+.p = {
     spriteType = {
         name = "GFX_event_angy_daybreaker"
-        texturefile = "gfx/event_pictures/event_angy_daybreaker.png"
+        texturefile = "gfx/event_pictures/event_angy_daybreaker.tga"
     }
     spriteType = {
         name = "GFX_event_admiral_daybreaker"
-        texturefile = "gfx/event_pictures/event_admiral_daybreaker.png"
+        texturefile = "gfx/event_pictures/event_admiral_daybreaker.tga"
     }
     spriteType = {
         name = "GFX_event_daybreaker_throne"
-        texturefile = "gfx/event_pictures/event_daybreaker_throne.png"
+        texturefile = "gfx/event_pictures/event_daybreaker_throne.tga"
     }
     spriteType = {
         name = "GFX_event_daybreaker_power"
-        texturefile = "gfx/event_pictures/event_daybreaker_power.png"
+        texturefile = "gfx/event_pictures/event_daybreaker_power.tga"
     }
     spriteType = {
         name = "GFX_event_celestia_ascension"
-        texturefile = "gfx/event_pictures/event_celestia_ascension.png"
+        texturefile = "gfx/event_pictures/event_celestia_ascension.tga"
     }
     spriteType = {
         name = "GFX_event_sunrise_sparkle"
-        texturefile = "gfx/event_pictures/event_sunrise_sparkle.png"
+        texturefile = "gfx/event_pictures/event_sunrise_sparkle.tga"
     }
     spriteType = {
         name = "GFX_event_spitfire"
-        texturefile = "gfx/event_pictures/event_spitfire_spitfiring.png"
+        texturefile = "gfx/event_pictures/event_spitfire_spitfiring.tga"
     }
     spriteType = {
         name = "GFX_event_vapor_trail_poster"
-        texturefile = "gfx/event_pictures/event_vapor_trail_poster.png"
+        texturefile = "gfx/event_pictures/event_vapor_trail_poster.tga"
     }
     spriteType = {
         name = "GFX_event_zephyr_snoozing"
-        texturefile = "gfx/event_pictures/event_zephyr_snoozing.png"
+        texturefile = "gfx/event_pictures/event_zephyr_snoozing.tga"
     }
     spriteType = {
         name = "GFX_event_celestia_nuke"
-        texturefile = "gfx/event_pictures/event_celestia_nuke.png"
+        texturefile = "gfx/event_pictures/event_celestia_nuke.tga"
     }
     spriteType = {
         name = "GFX_event_tempest_fighting"
-        texturefile = "gfx/event_pictures/event_tempest_fighting.png"
+        texturefile = "gfx/event_pictures/event_tempest_fighting.tga"
     }
     spriteType = {
         name = "GFX_event_twilight_vs_daybreaker"
-        texturefile = "gfx/event_pictures/event_twilight_vs_daybreaker.png"
+        texturefile = "gfx/event_pictures/event_twilight_vs_daybreaker.tga"
     }
     spriteType = {
         name = "GFX_event_punished_twilight"
-        texturefile = "gfx/event_pictures/event_punished_twilight.png"
+        texturefile = "gfx/event_pictures/event_punished_twilight.tga"
     }
     spriteType = {
         name = "GFX_event_many_inquisitors"
-        texturefile = "gfx/event_pictures/event_many_inquisitors.png"
+        texturefile = "gfx/event_pictures/event_many_inquisitors.tga"
     }
     spriteType = {
         name = "GFX_event_summer_sun_celebration"
-        texturefile = "gfx/event_pictures/event_summer_sun_celebration.png"
+        texturefile = "gfx/event_pictures/event_summer_sun_celebration.tga"
     }
     spriteType = {
         name = "GFX_event_summer_sun_celebration"
-        texturefile = "gfx/event_pictures/event_summer_sun_celebration.png"
+        texturefile = "gfx/event_pictures/event_summer_sun_celebration.tga"
     }
     spriteType = {
         name = "GFX_event_arcane_nova"
-        texturefile = "gfx/event_pictures/event_arcane_nova.png"
+        texturefile = "gfx/event_pictures/event_arcane_nova.tga"
     }
     spriteType = {
         name = "GFX_event_arcane_nova_and_jet_set"
-        texturefile = "gfx/event_pictures/event_arcane_nova_and_jet_set.png"
+        texturefile = "gfx/event_pictures/event_arcane_nova_and_jet_set.tga"
     }
     spriteType = {
         name = "GFX_event_chrysalis_hissing"
-        texturefile = "gfx/event_pictures/event_chrysalis_hissing.png"
+        texturefile = "gfx/event_pictures/event_chrysalis_hissing.tga"
     }
     spriteType = {
         name = "GFX_event_daybreaker_laughing"
-        texturefile = "gfx/event_pictures/event_daybreaker_laughing.png"
+        texturefile = "gfx/event_pictures/event_daybreaker_laughing.tga"
     }
     spriteType = {
         name = "GFX_event_daybreaker_triumphant"
-        texturefile = "gfx/event_pictures/event_daybreaker_triumphant.png"
+        texturefile = "gfx/event_pictures/event_daybreaker_triumphant.tga"
+    }
+    spriteType = {
+        name = "GFX_event_eclipsing_daybreaker"
+        texturefile = "gfx/event_pictures/event_eclipsing_daybreaker.tga"
     }
     spriteType = {
         name = "GFX_event_four_queens"
-        texturefile = "gfx/event_pictures/event_four_queens.png"
+        texturefile = "gfx/event_pictures/event_four_queens.tga"
     }
     spriteType = {
         name = "GFX_event_grover_vi"
-        texturefile = "gfx/event_pictures/event_grover_vi.png"
+        texturefile = "gfx/event_pictures/event_grover_vi.tga"
+    }
+    spriteType = {
+        name = "GFX_event_grover_and_daybreaker"
+        texturefile = "gfx/event_pictures/event_grover_and_daybreaker.tga"
     }
     spriteType = {
         name = "GFX_event_princess_snaplestia"
-        texturefile = "gfx/event_pictures/event_princess_snaplestia.png"
+        texturefile = "gfx/event_pictures/event_princess_snaplestia.tga"
     }
     spriteType = {
         name = "GFX_event_queen_argynnis"
-        texturefile = "gfx/event_pictures/event_queen_argynnis.png"
+        texturefile = "gfx/event_pictures/event_queen_argynnis.tga"
     }
     spriteType = {
         name = "GFX_event_sunset_throne_room"
-        texturefile = "gfx/event_pictures/event_sunset_throne_room.png"
+        texturefile = "gfx/event_pictures/event_sunset_throne_room.tga"
     }
     spriteType = {
         name = "GFX_event_twilight_reading"
-        texturefile = "gfx/event_pictures/event_twiggles_reading.png"
+        texturefile = "gfx/event_pictures/event_twiggles_reading.tga"
     }
     spriteType = {
         name = "GFX_event_verko"
-        texturefile = "gfx/event_pictures/event_verko.png"
+        texturefile = "gfx/event_pictures/event_verko.tga"
     }
     spriteType = {
         name = "GFX_event_yakyakistan_entrance"
-        texturefile = "gfx/event_pictures/event_yakyakistan_entrance.png"
+        texturefile = "gfx/event_pictures/event_yakyakistan_entrance.tga"
     }
     spriteType = {
         name = "GFX_event_rara"
-        texturefile = "gfx/event_pictures/event_rara.png"
+        texturefile = "gfx/event_pictures/event_rara.tga"
     }
     spriteType = {
         name = "GFX_event_octavia_performing"
-        texturefile = "gfx/event_pictures/event_octavia_performing.png"
+        texturefile = "gfx/event_pictures/event_octavia_performing.tga"
+    }
+    spriteType = {
+        name = "GFX_event_flim_and_flam"
+        texturefile = "gfx/event_pictures/event_flim_and_flam.tga"
+    }
+    spriteType = {
+        name = "GFX_event_alarm_clock"
+        texturefile = "gfx/event_pictures/event_alarm_clock.tga"
+    }
+    spriteType = {
+        name = "GFX_event_raven_inkwell"
+        texturefile = "gfx/event_pictures/event_raven_inkwell.tga"
+    }
+    spriteType = {
+        name = "GFX_event_tired_raven"
+        texturefile = "gfx/event_pictures/event_tired_raven.tga"
+    }
+    spriteType = {
+        name = "GFX_event_pumpkin_swirl"
+        texturefile = "gfx/event_pictures/event_pumpkin_swirl.tga"
     }
     ###News Events###
     spriteType = {
@@ -129,7 +157,7 @@ spriteTypes = {
         texturefile = "gfx/event_pictures/news_daybreaker_nmm_fight.tga"
     }
     spriteType = {
-        name = "GFX_news_coloratura_performing"
-        texturefile = "gfx/event_pictures/news_coloratura_performing.tga"
+        name = "GFX_news_coloratura_performs"
+        texturefile = "gfx/event_pictures/news_coloratura_performs.tga"
     }
 }
