@@ -13445,12 +13445,35 @@ country_event = { #Short event speaking of how with the advent of war, Equestria
 
     option = { #I'll keep my ponies safe, no matter what
         name = solarreworked.531.a
-        effect_tooltip = {
-            set_power_balance = {
-                id = EQS_sanity_bop
-                left_side = EQS_angy
-                right_side = EQS_kalm
-                set_value = 0.65
+        if = {
+            limit = { has_country_flag = EQS_great_war_experience }
+            effect_tooltip = {
+                set_power_balance = {
+                    id = EQS_sanity_bop
+                    set_default = true
+                }
+            }
+        }
+        else_if = {
+            limit = { has_country_flag = EQS_nmm_experience }
+            effect_tooltip = {
+                set_power_balance = {
+                    id = EQS_sanity_bop
+                    left_side = EQS_angy
+                    right_side = EQS_kalm
+                    set_value = 0.65
+                }
+            }
+        }
+        else_if = {
+            limit = { has_country_flag = EQS_why_you_so_mean }
+            effect_tooltip = {
+                set_power_balance = {
+                    id = EQS_sanity_bop
+                    left_side = EQS_angy
+                    right_side = EQS_kalm
+                    set_value = 0.25
+                }
             }
         }
         custom_effect_tooltip = EQS_save_or_suck_tt #Losing territory will reduce sanity, regaining it will restore it
