@@ -13436,6 +13436,27 @@ country_event = { #Choose a governor for a released nation
     }
 }
 
+country_event = { #Short event speaking of how with the advent of war, Equestria's idyllic life has been shattered, and that Celestia will try and shield the ponies from the worst of it, but it will tax her; perhaps be a flavour event of one or two paragraphs of Celestia determining that her ponies need protecting, even from the horrors of war, and that she will bear the burden
+    id = solarreworked.531
+    title = solarreworked.531.t
+    desc = solarreworked.531.d
+
+    is_triggered_only = yes
+
+    option = { #I'll keep my ponies safe, no matter what
+        name = solarreworked.531.a
+        effect_tooltip = {
+            set_power_balance = {
+                id = EQS_sanity_bop
+                left_side = EQS_angy
+                right_side = EQS_kalm
+                set_value = 0.65
+            }
+        }
+        custom_effect_tooltip = EQS_save_or_suck_tt #Losing territory will reduce sanity, regaining it will restore it
+    }
+}
+
 ###Operation Events###
 country_event = { #Luna is awoken in her new cell as Daybreaker enters the dungeons of the palace, and Daybreaker sees how pathetic Luna now is and how her defiance will end, and Luna is adamant that she will not beg nor plead for her life, and Daybreaker is pleased, since it'd be boring if she did; she can languish while she sees how her sister has always been the better, and will lead harmony into greatness alone
     id = solarreworked.600

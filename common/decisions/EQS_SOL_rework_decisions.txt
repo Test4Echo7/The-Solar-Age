@@ -260,6 +260,9 @@ EQS_BOP_sanity_category = {
                 days = 45
                 value = 1
             }
+            hidden_effect = {
+               add_war_support = -0.05
+            }
         }
     }
     EQS_visit_veterans_hospital = {
@@ -294,6 +297,9 @@ EQS_BOP_sanity_category = {
                 flag = EQS_bop_decision_taken
                 days = 45
                 value = 1
+            }
+            hidden_effect = {
+                add_command_power = -20
             }
         }
     }
@@ -423,6 +429,9 @@ EQS_BOP_sanity_category = {
                 days = 45
                 value = 1
             }
+            hidden_effect = {
+                army_experience = -5
+            }
         }
     }
     EQS_host_speech_of_fallen = {
@@ -459,6 +468,9 @@ EQS_BOP_sanity_category = {
                 days = 45
                 value = 1
             }
+            hidden_effect = {
+                add_command_power = -15
+            }
         }
     }
     EQS_oversee_military_trial = {
@@ -494,6 +506,9 @@ EQS_BOP_sanity_category = {
                 flag = EQS_bop_decision_taken
                 days = 45
                 value = 1
+            }
+            hidden_effect = {
+                add_manpower = -5000
             }
         }
     }
@@ -752,6 +767,7 @@ EQS_BOP_SOL_power_category = {
             }
             add_to_variable = { SOL_so_edgy = 1 }
             hidden_effect = {
+                army_experience = -15
                 if = {
                     limit = {
                         check_variable = { SOL_so_edgy > 2 }
@@ -794,6 +810,7 @@ EQS_BOP_SOL_power_category = {
             }
             add_to_variable = { SOL_so_edgy = 1 }
             hidden_effect = {
+                add_stability = -0.05
                 if = {
                     limit = {
                         check_variable = { SOL_so_edgy > 2 }
@@ -840,6 +857,10 @@ EQS_BOP_SOL_power_category = {
             }
             add_to_variable = { SOL_so_edgy = 1 }
             hidden_effect = {
+                add_popularity = {
+                    ideology = fascism
+                    popularity = -0.05
+                }
                 if = {
                     limit = {
                         check_variable = { SOL_so_edgy > 2 }
@@ -881,6 +902,7 @@ EQS_BOP_SOL_power_category = {
             }
             add_to_variable = { SOL_so_edgy = 1 }
             hidden_effect = {
+                add_command_power = -50
                 if = {
                     limit = {
                         check_variable = { SOL_so_edgy > 2 }
@@ -918,7 +940,7 @@ EQS_BOP_SOL_power_category = {
             log = "[GetDateText]: [Root.GetName]: Decision EQS_round_up_suspected_changelings"
             custom_effect_tooltip = SOL_dont_be_too_edgy_tt
             hidden_effect = {
-                add_war_support = -0.075
+                add_war_support = -0.1
             }
             add_manpower = -26371
             add_political_power = 100
