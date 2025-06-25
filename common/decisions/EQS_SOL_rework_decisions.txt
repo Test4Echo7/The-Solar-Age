@@ -4396,12 +4396,12 @@ EQS_pan_pony_empire_category = {
         }
         available = {
             is_EQS_SOL = yes
-            #EQS_owns_all_MIT_starting_states = yes
-            all_original_cores_owned_by_ROOT = yes
+            EQS_owns_all_MIT_starting_states = yes
+            #all_original_cores_owned_by_ROOT = yes
         }
         visible = {
-            #EQS_owns_all_MIT_starting_states = yes
-            all_original_cores_owned_by_ROOT = yes
+            EQS_owns_all_MIT_starting_states = yes
+            #all_original_cores_owned_by_ROOT = yes
             NOT = { has_country_flag = SOL_formed_super_griffonia }
         }
         highlight_states = {
@@ -4872,10 +4872,22 @@ EQS_pan_pony_empire_category = {
         }
         visible = {
             OR = {
-                STM = { all_cores_owned_by_ROOT_or_subject = yes }
-                GYZ = { all_cores_owned_by_ROOT_or_subject = yes }
-                SLC = { all_cores_owned_by_ROOT_or_subject = yes }
-                THU = { all_cores_owned_by_ROOT_or_subject = yes }
+                STM = {
+                    exists = yes
+                    all_cores_owned_by_ROOT_or_subject = yes
+                }
+                GYZ = {
+                    exists = yes
+                    all_cores_owned_by_ROOT_or_subject = yes
+                }
+                SLC = {
+                    exists = yes
+                    all_cores_owned_by_ROOT_or_subject = yes
+                }
+                THU = {
+                    exists = yes
+                    all_cores_owned_by_ROOT_or_subject = yes
+                }
             }
             NOT = { has_country_flag = SOL_formed_super_zebrica }
         }

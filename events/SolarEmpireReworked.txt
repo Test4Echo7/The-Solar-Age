@@ -7505,6 +7505,10 @@ country_event = { #Queen Velvet is brought forward to Daybreaker, who is rather 
 			transfer_state = 296
 			transfer_state = 217
 			if = {
+                limit = { has_completed_focus = SOL_reclaim_seaddle }
+                224 = { add_core_of = ROOT }
+			}
+			if = {
 				limit = { check_variable = { SOL_colonized_OLE_states = 1 } }
 				69 = { add_core_of = ROOT }
 				218 = { add_core_of = ROOT }
