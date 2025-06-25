@@ -6246,6 +6246,7 @@ country_event = { #Resistance broken
         }
         add_political_power = 40
         add_stability = 0.3
+        set_country_flag = SOL_destroyed_resistance
         remove_ideas = SOL_harmonic_resistance_idea
     }
 }
