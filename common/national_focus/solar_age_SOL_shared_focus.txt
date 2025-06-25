@@ -7875,6 +7875,14 @@ shared_focus = {
 			}
 		}
 	}
+	allow_branch = {
+		is_EQS_SOL = yes
+		OR = {
+			has_completed_focus = SOL_empress_protector
+			has_completed_focus = SOL_empress_mother
+			has_completed_focus = SOL_god_empress
+		}
+	}
 	bypass = {
 		OR = {
 			NOT = { country_exists = CRY }
@@ -7994,7 +8002,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_royal_province
-	x = -50
+	x = -44
 	y = 3
 	offset = {
 		trigger = {
@@ -8002,6 +8010,16 @@ shared_focus = {
 		}
 		x = 46
 		y = -1
+	}
+	offset = {
+		x = -6
+		trigger = {
+			is_EQS_SOL = yes
+			OR = {
+				has_global_flag = SOL_twilight_converted
+				has_global_flag = SOL_sunset_converted
+			}
+		}
 	}
 	offset = {
 		x = 5
@@ -8096,7 +8114,14 @@ shared_focus = {
 		}
 		country_exists = CRY
 	}
-	allow_branch = { is_EQS_SOL = yes }
+	allow_branch = {
+		is_EQS_SOL = yes
+		OR = {
+			has_completed_focus = SOL_empress_protector
+			has_completed_focus = SOL_empress_mother
+			has_completed_focus = SOL_god_empress
+		}
+	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_destroy_night_guard"
@@ -8504,7 +8529,14 @@ shared_focus = {
 			NOT = { has_country_leader = { character = CRY_princess_mi_amore_cadenza ruling_only = yes } }
 		}
 	}
-	allow_branch = { is_EQS_SOL = yes }
+	allow_branch = {
+		is_EQS_SOL = yes
+		OR = {
+			has_completed_focus = SOL_empress_protector
+			has_completed_focus = SOL_empress_mother
+			has_completed_focus = SOL_god_empress
+		}
+	}
 
 	select_effect = {
 		hidden_effect = {
@@ -9689,7 +9721,14 @@ shared_focus = {
 			}
 		}
 	}
-	allow_branch = { is_EQS_SOL = yes }
+	allow_branch = {
+		is_EQS_SOL = yes
+		OR = {
+			has_completed_focus = SOL_empress_protector
+			has_completed_focus = SOL_empress_mother
+			has_completed_focus = SOL_god_empress
+		}
+	}
 	bypass = {
 		OR = {
 			NOT = {
@@ -9939,7 +9978,14 @@ shared_focus = {
 			has_country_leader = { character = EQC_jet_set ruling_only = yes }
 		}
 	}
-	allow_branch = { is_EQS_SOL = yes }
+	allow_branch = {
+		is_EQS_SOL = yes
+		OR = {
+			has_completed_focus = SOL_empress_protector
+			has_completed_focus = SOL_empress_mother
+			has_completed_focus = SOL_god_empress
+		}
+	}
 	bypass = {
 		has_war_with = EQC
 		EQC = {
@@ -9958,12 +10004,22 @@ shared_focus = {
 
 joint_focus = {
 	id = SOL_ensuring_loyalty
-	x = -16
+	x = -10
 	y = 2
 	offset = {
 		x = 37
 		y = -1
 		trigger = { tag = EQC }
+	}
+	offset = {
+		x = -6
+		trigger = {
+			is_EQS_SOL = yes
+			OR = {
+				has_global_flag = SOL_twilight_converted
+				has_global_flag = SOL_sunset_converted
+			}
+		}
 	}
 	offset = {
 		x = 6
@@ -10059,7 +10115,14 @@ joint_focus = {
 				}
 			}
 			OR = {
-				is_EQS_SOL = yes
+				AND = {
+					is_EQS_SOL = yes
+					OR = {
+						has_completed_focus = SOL_empress_protector
+						has_completed_focus = SOL_empress_mother
+						has_completed_focus = SOL_god_empress
+					}
+				}
 				AND = {
 					tag = EQC
 					has_focus_tree = eqc_sol_focus
@@ -10069,7 +10132,14 @@ joint_focus = {
 		}
 		else = {
 			OR = {
-				is_EQS_SOL = yes
+				AND = {
+					is_EQS_SOL = yes
+					OR = {
+						has_completed_focus = SOL_empress_protector
+						has_completed_focus = SOL_empress_mother
+						has_completed_focus = SOL_god_empress
+					}
+				}
 				AND = {
 					tag = EQC
 					has_focus_tree = eqc_sol_focus
@@ -10143,7 +10213,14 @@ joint_focus = {
 				}
 			}
 			OR = {
-				is_EQS_SOL = yes
+				AND = {
+					is_EQS_SOL = yes
+					OR = {
+						has_completed_focus = SOL_empress_protector
+						has_completed_focus = SOL_empress_mother
+						has_completed_focus = SOL_god_empress
+					}
+				}
 				AND = {
 					tag = EQC
 					has_focus_tree = eqc_sol_focus
@@ -10153,7 +10230,14 @@ joint_focus = {
 		}
 		else = {
 			OR = {
-				is_EQS_SOL = yes
+				AND = {
+					is_EQS_SOL = yes
+					OR = {
+						has_completed_focus = SOL_empress_protector
+						has_completed_focus = SOL_empress_mother
+						has_completed_focus = SOL_god_empress
+					}
+				}
 				AND = {
 					tag = EQC
 					has_focus_tree = eqc_sol_focus

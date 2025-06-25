@@ -1,6 +1,12 @@
 characters = {
     EQS_zephyr_breeze = {
         name = EQS_zephyr_breeze
+        portraits = {
+			army = {
+				large = "gfx/leaders/EQS/Zephyre_Breeze.tga"
+				small = "gfx/interface/ideas/advisors/EQS/EQS_zephyr_breeze.tga"
+			}
+        }
 
         corps_commander = {
             traits = { pony_race_trait gifted }
@@ -388,7 +394,9 @@ characters = {
 			allowed = { has_dlc = "La Resistance" }
 			name = EQS_absconditus_lumen
 			portraits = {
-
+				civilian = {
+					small = "gfx/interface/ideas/generic_scientists_small/idea_pony_scientist_male_1.tga"
+				}
 			}
 			advisor = {
 				allowed = { original_tag = EQS }
@@ -415,7 +423,9 @@ characters = {
 			allowed = { NOT = { has_dlc = "La Resistance" } }
 			name = EQS_absconditus_lumen
 			portraits = {
-
+				civilian = {
+					small = "gfx/interface/ideas/generic_scientists_small/idea_pony_scientist_male_1.tga"
+				}
 			}
 			advisor = {
 				allowed = { original_tag = EQS }
@@ -518,6 +528,11 @@ characters = {
 	EQS_nightshift = {
 		name = EQS_nightshift
 		gender = female
+		portraits = {
+			civilian = {
+				small = "GFX_portrait_pony_generic_operative_female_3_small"
+			}
+		}
 
 		advisor = {
 			slot = political_advisor
@@ -530,6 +545,11 @@ characters = {
 	}
 	EQS_hard_sell = {
 		name = EQS_hard_sell
+		portraits = {
+			civilian = {
+				small = "GFX_portrait_pony_generic_operative_5_small"
+			}
+		}
 
 		advisor = {
 			slot = political_advisor
@@ -568,6 +588,12 @@ characters = {
 	}
 	EQS_riptide = {
 		name = EQS_riptide
+		portraits = {
+			army = {
+				large = "GFX_portrait_pony_generic_navy_15"
+				small = "GFX_portrait_pony_generic_navy_15_small"
+			}
+		}
 
 		navy_leader = {
 			skill = 2
@@ -583,6 +609,12 @@ characters = {
 	EQS_sky_high = {
 		name = EQS_sky_high
 		gender = female
+		portraits = {
+			army = {
+				large = "GFX_portrait_pony_generic_navy_11"
+				small = "GFX_portrait_pony_generic_navy_11_small"
+			}
+		}
 
 		navy_leader = {
 			skill = 2
@@ -597,6 +629,11 @@ characters = {
 	}
 	EQS_treadwell = {
 		name = EQS_treadwell
+		portraits = {
+			army = {
+				small = "GFX_portrait_eqs_pony_generic_1_small"
+			}
+		}
 
 		advisor = {
 			slot = high_command
@@ -611,6 +648,11 @@ characters = {
 	EQS_butter_knife = {
 		name = EQS_butter_knife
 		gender = female
+		portraits = {
+			army = {
+				small = "GFX_portrait_eqs_pony_generic_16_small"
+			}
+		}
 
 		advisor = {
 			slot = high_command
@@ -624,6 +666,12 @@ characters = {
 	}
 	EQS_High_Impact = {
 		name = EQS_High_Impact
+		portraits = {
+			army = {
+				large = "GFX_portrait_eqs_pony_generic_5"
+				small = "GFX_portrait_eqs_pony_generic_5_small"
+			}
+		}
 
 		corps_commander = {
 			traits = { pony_race_trait artillery_specialist trickster }
@@ -639,6 +687,12 @@ characters = {
 	EQS_crimson_line = {
 		name = EQS_crimson_line
 		gender = female
+		portraits = {
+			army = {
+				large = "GFX_portrait_eqs_pony_generic_4"
+				small = "GFX_portrait_eqs_pony_generic_4_small"
+			}
+		}
 
 		corps_commander = {
 			traits = { pony_race_trait infantry_leader infantry_expert }
@@ -654,6 +708,12 @@ characters = {
 	EQS_tangent = { #Can go off on tangents, too
 		name = EQS_tangent
 		gender = female
+		portraits = {
+			army = {
+				large = "GFX_portrait_eqs_pony_generic_3"
+				small = "GFX_portrait_eqs_pony_generic_3_small"
+			}
+		}
 
 		corps_commander = {
 			traits = { pony_race_trait trait_engineer skilled_staffer }
@@ -668,6 +728,12 @@ characters = {
 	}
 	EQS_rock_solid = {
 		name = EQS_rock_solid
+		portraits = {
+			army = {
+				large = "GFX_portrait_eqs_pony_generic_6"
+				small = "GFX_portrait_eqs_pony_generic_6_small"
+			}
+		}
 
 		corps_commander = {
 			traits = { pony_race_trait panzer_leader armor_officer organizer harsh_leader }
@@ -683,6 +749,12 @@ characters = {
 	EQS_morning_mulch = {
 		name = EQS_morning_mulch
 		gender = female
+		portraits = {
+			army = {
+				large = "GFX_portrait_eqs_pony_generic_23"
+				small = "GFX_portrait_eqs_pony_generic_23_small"
+			}
+		}
 
 		corps_commander = {
 			traits = { pony_race_trait ranger infantry_expert commando }
@@ -821,6 +893,11 @@ characters = {
 	GRI_sturmvogel = {
 		name = GRI_sturmvogel
 		gender = female
+		portraits = {
+			civilian = {
+				small = "GFX_portrait_FAT_generic_land_female_2_small"
+			}
+		}
 
 		advisor = {
 			slot = high_command
@@ -833,6 +910,11 @@ characters = {
 	}
 	GRI_lieblingsruebe = {
 		name = GRI_lieblingsruebe
+		portraits = {
+			civilian = {
+				small = "GFX_portrait_herzland_generic_10_small"
+			}
+		}
 
 		advisor = {
 			slot = political_advisor
@@ -846,6 +928,11 @@ characters = {
 	GRI_trinary_scribble = {
 		name = GRI_trinary_scribble
 		gender = female
+		portraits = {
+			civilian = {
+				small = "GFX_portrait_pony_generic_operative_female_3_small"
+			}
+		}
 
 		advisor = {
 			slot = political_advisor
@@ -866,6 +953,11 @@ characters = {
 	}
 	GRI_gratuity = {
 		name = GRI_gratuity
+		portraits = {
+			civilian = {
+				small = "GFX_portrait_pony_generic_operative_2_small"
+			}
+		}
 
 		advisor = {
 			slot = political_advisor
@@ -899,6 +991,11 @@ characters = {
 	}
 	CRY_evening_shower = {
 		name = CRY_evening_shower
+		portraits = {
+			civilian = {
+				small = "GFX_portrait_pony_generic_operative_female_2_small"
+			}
+		}
 
 		advisor = {
 			slot = political_advisor
@@ -912,6 +1009,11 @@ characters = {
 	CRY_triplicate = {
 		name = CRY_triplicate
 		gender = female
+		portraits = {
+			civilian = {
+				small = "GFX_portrait_pony_generic_operative_female_1_small"
+			}
+		}
 
 		advisor = {
 			slot = political_advisor
@@ -946,6 +1048,12 @@ characters = {
 	CRY_mercy = {
 		name = CRY_mercy
 		gender = female
+		portraits = {
+			army = {
+				large = "GFX_portrait_eqs_pony_generic_13"
+				small = "GFX_portrait_eqs_pony_generic_13_small"
+			}
+		}
 
 		corps_commander = {
 			traits = { pony_race_trait winter_specialist }
@@ -960,6 +1068,12 @@ characters = {
 	}
 	CRY_beryl_scabbard = {
 		name = CRY_beryl_scabbard
+		portraits = {
+			army = {
+				large = "GFX_portrait_cry_pony_generic_3"
+				small = "GFX_portrait_cry_pony_generic_3_small"
+			}
+		}
 
 		field_marshal = {
 			traits = { pony_race_trait offensive_doctrine fast_planner organizer }
@@ -1000,6 +1114,12 @@ characters = {
 	}
 	EQC_full_band = {
 		name = EQC_full_band
+		portraits = {
+			army = {
+				large = "GFX_portrait_eqs_pony_generic_7"
+				small = "GFX_portrait_eqs_pony_generic_7_small"
+			}
+		}
 
 		corps_commander = {
 			traits = { pony_race_trait air_force_commander career_officer }
@@ -1015,6 +1135,12 @@ characters = {
 	EQC_triple_strike = {
 		name = EQC_triple_strike
 		gender = female
+		portraits = {
+			army = {
+				large = "GFX_portrait_eqs_pony_generic_19"
+				small = "GFX_portrait_eqs_pony_generic_19_small"
+			}
+		}
 
 		corps_commander = {
 			traits = { pony_race_trait air_force_commander promising_general }
@@ -1029,6 +1155,11 @@ characters = {
 	}
 	EQC_long_cast = {
 		name = EQC_long_cast
+		portraits = {
+			army = {
+				small = "GFX_portrait_eqs_pony_generic_2_small"
+			}
+		}
 
 		advisor = {
 			slot = high_command

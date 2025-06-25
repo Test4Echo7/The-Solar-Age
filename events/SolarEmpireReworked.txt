@@ -19,6 +19,7 @@ country_event = {
         EQS = {
             casualties_k > 50
         }
+        is_EQS_SOL = no
     }
 
     mean_time_to_happen = { days = 60 }
@@ -135,6 +136,7 @@ country_event = {
             has_completed_focus = SOL_changeling_menace
         }
         has_war_support > 0.5
+        is_EQS_SOL = no
     }
 
     mean_time_to_happen = { days = 60 }
@@ -221,6 +223,7 @@ country_event = {
             has_tech = strategic_bomber2
         }
         surrender_progress > 0.05
+        is_EQS_SOL = no
     }
 
     mean_time_to_happen = { days = 60 }
@@ -286,6 +289,7 @@ country_event = {
             has_war_support < 0.75
             surrender_progress > 0.1
         }
+        is_EQS_SOL = no
     }
 
     mean_time_to_happen = { days = 90 }
@@ -357,6 +361,7 @@ country_event = {
         has_war_with = CHN
         has_idea = changeling_spies
         surrender_progress > 0.15
+        is_EQS_SOL = no
     }
 
     mean_time_to_happen = { days = 90 }
@@ -434,6 +439,7 @@ country_event = {
             has_idea = free_trade
             has_idea = export_focus
         }
+        is_EQS_SOL = no
     }
 
     fire_only_once = yes
@@ -1511,6 +1517,7 @@ country_event = {
             has_war_with = NLR
             has_war_with = CHN
         }
+        is_EQS_SOL = no
     }
 
     fire_only_once = yes
@@ -1594,6 +1601,7 @@ country_event = {
             has_war_with = CHN
             has_war_with = NLR
         }
+        is_EQS_SOL = no
     }
 
     fire_only_once = yes
@@ -1644,6 +1652,7 @@ country_event = { #Celestia bursts into Luna's room, while Luna is working on pa
         }
         has_war_with = CHN
         has_character = EQS_princess_luna
+        is_EQS_SOL = no
     }
 
     fire_only_once = yes
@@ -1691,6 +1700,7 @@ country_event = { #Celestia has a meeting with her high command, and after makin
             has_war_with = CHN
             has_war_with = NLR
         }
+        is_EQS_SOL = no
     }
 
     fire_only_once = yes
@@ -1740,6 +1750,7 @@ country_event = {
             has_war_with = BUF
         }
         has_country_flag = EQS_raven_cancelled_events
+        is_EQS_SOL = no
     }
 
     fire_only_once = yes
@@ -1784,6 +1795,7 @@ country_event = {
             value < 0.50
         }
         has_war_with = CHN
+        is_EQS_SOL = no
     }
 
     fire_only_once = yes
@@ -1843,6 +1855,7 @@ country_event = {
             value < 0.6
         }
         has_war_with = NLR
+        is_EQS_SOL = no
     }
 
     fire_only_once = yes
@@ -1890,6 +1903,7 @@ country_event = {
             has_war_with = CHN
             has_war_with = NLR
         }
+        is_EQS_SOL = no
     }
 
     fire_only_once = yes
@@ -5085,10 +5099,12 @@ country_event = {
     picture = GFX_event_solarempire
     immediate = {
         log = "[GetDateText]: [ROOT.GetName]: event solarreworked.228"
-        country_event = {
-            id = solarreworked.229
-            days = 180
-            random_days = 90
+        hidden_effect = {
+            country_event = {
+                id = solarreworked.229
+                days = 180
+                random_days = 90
+            }
         }
     }
 
@@ -13440,10 +13456,11 @@ country_event = { #Short event speaking of how with the advent of war, Equestria
     id = solarreworked.531
     title = solarreworked.531.t
     desc = solarreworked.531.d
+    picture = GFX_event_celestia_theme
 
     is_triggered_only = yes
 
-    option = { #I'll keep my ponies safe, no matter what
+    option = { #I'll keep my ponies safe, no matter what.
         name = solarreworked.531.a
         if = {
             limit = { has_country_flag = EQS_great_war_experience }
