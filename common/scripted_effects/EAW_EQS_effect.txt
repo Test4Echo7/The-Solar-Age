@@ -203,6 +203,18 @@ EQS_SOL_wartime_change = {
 		add_stability = -0.1
 		remove_ideas = alicorn_sisters
 	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = EQS_blueblood_allowed }
+		}
+		set_country_flag = EQS_blueblood_allowed
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = EQS_create_new_commanders_flag }
+		}
+		EQS_create_new_commanders = yes
+	}
 
 	set_global_flag = daybreaker_spawned
 	set_country_flag = sol_wartime_change
@@ -281,16 +293,22 @@ EQS_SOL_wartime_change = {
 	#	set_country_flag = EQS_had_luna
 	#}
 	if = {
-		limit = { EQS_NLR_tempest_wind = { is_unit_leader = yes } }
-		EQS_NLR_tempest_wind = { set_nationality = SOL }
-	}
-	if = {
-		limit = { EQS_NLR_bipen = { is_unit_leader = yes } }
-		EQS_NLR_bipen = { set_nationality = SOL }
-	}
-	if = {
-		limit = { EQS_NLR_midnight_oil = { is_unit_leader = yes } }
-		EQS_NLR_midnight_oil = { set_nationality = SOL }
+		limit = {
+			NOT = { country_exists = NLR }
+			has_character = EQS_princess_luna
+		}
+		if = {
+			limit = { EQS_NLR_tempest_wind = { is_unit_leader = yes } }
+			EQS_NLR_tempest_wind = { set_nationality = SOL }
+		}
+		if = {
+			limit = { EQS_NLR_bipen = { is_unit_leader = yes } }
+			EQS_NLR_bipen = { set_nationality = SOL }
+		}
+		if = {
+			limit = { EQS_NLR_midnight_oil = { is_unit_leader = yes } }
+			EQS_NLR_midnight_oil = { set_nationality = SOL }
+		}
 	}
 	every_country = {
 		limit = { original_tag = CRY is_subject_of = EQS }
@@ -375,6 +393,18 @@ EQS_pre_SOL_civil_war_setup = {
 	if = {
 		limit = { NOT = { has_completed_focus = worrisome_changelings } }
 		complete_national_focus = worrisome_changelings
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = EQS_blueblood_allowed }
+		}
+		set_country_flag = EQS_blueblood_allowed
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = EQS_create_new_commanders_flag }
+		}
+		EQS_create_new_commanders = yes
 	}
 	if = {
 		limit = { is_ai = no }
