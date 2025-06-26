@@ -13439,6 +13439,7 @@ country_event = { #Choose a governor for a released nation
     id = solarreworked.530
     title = solarreworked.530.t
     desc = solarreworked.530.d
+    picture = GFX_event_solarempire
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.530"}
 
     is_triggered_only = yes
@@ -13460,7 +13461,21 @@ country_event = { #Choose a governor for a released nation
 country_event = { #Short event speaking of how with the advent of war, Equestria's idyllic life has been shattered, and that Celestia will try and shield the ponies from the worst of it, but it will tax her; perhaps be a flavour event of one or two paragraphs of Celestia determining that her ponies need protecting, even from the horrors of war, and that she will bear the burden
     id = solarreworked.531
     title = solarreworked.531.t
-    desc = solarreworked.531.d
+    desc = {
+        trigger = { has_war_with = CHN }
+        text = solarreworked.531.d_a
+    }
+    desc = {
+        trigger = { has_war_with = NLR }
+        text = solarreworked.531.d_b
+    }
+    desc = {
+        trigger = {
+            NOT = { has_war_with = CHN }
+            NOT = { has_war_with = NLR }
+        }
+        text = solarreworked.531.d_c
+    }
     picture = GFX_event_celestia_theme
 
     is_triggered_only = yes
@@ -13495,6 +13510,16 @@ country_event = { #Short event speaking of how with the advent of war, Equestria
                     left_side = EQS_angy
                     right_side = EQS_kalm
                     set_value = 0.25
+                }
+            }
+        }
+        else = {
+            effect_tooltip = {
+                set_power_balance = {
+                    id = EQS_sanity_bop
+                    left_side = EQS_angy
+                    right_side = EQS_kalm
+                    set_value = 0.75
                 }
             }
         }

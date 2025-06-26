@@ -238,6 +238,61 @@ on_actions = {
                     }
                 }
             }
+            if = { #For if anything other than the three specified countries
+                limit = {
+                    OR = {
+                        AND = {
+                            ROOT = {
+                                NOT = {
+                                    tag = CHN
+                                    tag = NLR
+                                    tag = BUF
+                                }
+                            }
+                            FROM = {
+                                tag = EQS
+                                NOT = { is_EQS_SOL = yes }
+                                NOT = { has_power_balance = { id = EQS_vestments_of_power_bop } }
+                                NOT = { has_power_balance = { id = EQS_sanity_bop } }
+                            }
+                        }
+                        AND = {
+                            ROOT = {
+                                tag = EQS
+                                NOT = { is_EQS_SOL = yes }
+                                NOT = { has_power_balance = { id = EQS_vestments_of_power_bop } }
+                                NOT = { has_power_balance = { id = EQS_sanity_bop } }
+                            }
+                            FROM = {
+                                NOT = {
+                                    tag = CHN
+                                    tag = NLR
+                                    tag = BUF
+                                }
+                            }
+                        }
+                    }
+                }
+                EQS = {
+                    if = {
+                        limit = { has_country_flag = EQS_sanity_bop_initialized }
+                        set_power_balance = {
+                            id = EQS_sanity_bop
+                            left_side = EQS_angy
+                            right_side = EQS_kalm
+                        }
+                    }
+                    else = {
+                        set_country_flag = EQS_sanity_bop_initialized
+                        set_country_flag = EQS_great_war_experience
+                        set_power_balance = {
+                            id = EQS_sanity_bop
+                            left_side = EQS_angy
+                            right_side = EQS_kalm
+                            set_value = 0.75
+                        }
+                    }
+                }
             if = {
                 limit = {
                     ROOT = {
@@ -275,31 +330,23 @@ on_actions = {
                     EQS_anti_order_propaganda
                 }
             }
-        }
-        if = {
-            limit = {
-                ROOT = {
-                    OR = {
+            if = {
+                limit = {
+                    ROOT = {
                         tag = EQS
-                        tag = CHN
-                        tag = NLR
+                        NOT = { has_country_flag = EQS_sanity_warning }
                     }
-                    NOT = { has_country_flag = EQS_sanity_warning }
-                }
-                FROM = {
-                    OR = {
+                    FROM = {
                         tag = EQS
-                        tag = CHN
-                        tag = BUF
+                        NOT = { has_country_flag = EQS_sanity_warning }
                     }
-                    NOT = { has_country_flag = EQS_sanity_warning }
                 }
-            }
-            EQS = {
-                set_country_flag = EQS_sanity_warning
-                country_event = {
-                    id = solarreworked.531
-                    days = 2
+                EQS = {
+                    set_country_flag = EQS_sanity_warning
+                    country_event = {
+                        id = solarreworked.531
+                        days = 2
+                    }
                 }
             }
         }
