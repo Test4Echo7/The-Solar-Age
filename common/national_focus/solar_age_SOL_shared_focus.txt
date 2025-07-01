@@ -5232,7 +5232,7 @@ shared_focus = {
 		###Perhaps an event of Daybreaker going through River City with River Swirl, to see the new projects that have been put underway by RCT, as an act of submission to her, since it is basically forced upon them; River is defiant, even though she has her hooves tied
 		country_event = solarreworked.380
 	}
-	shared_focus = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER FOCUS_FILTER_RESISTANCE }
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER FOCUS_FILTER_RESISTANCE }
 	ai_will_do = { factor = 30 }
 }
 
@@ -7183,7 +7183,7 @@ shared_focus = {
 	ai_will_do = {
 		factor = 120
 		modifier = {
-			NOT = { has_completed_focus = SOL_river_brethren }
+			NOT = { has_completed_focus = SOL_wayward_foals }
 			factor = 0.05
 		}
 	}
@@ -9263,7 +9263,7 @@ shared_focus = {
 		country_event = solarreworked.45
 	}
 	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_RESEARCH }
-	ai_will_do = { focus = 60 }
+	ai_will_do = { factor = 60 }
 }
 
 shared_focus = {

@@ -151,7 +151,7 @@ characters={
 			}
 			army = {
 				large = "gfx/leaders/EQS/Starlight_Glimmer.tga"
-				small = "gfx/interface/ideas/Advisors/EQS/EQS_starlight_glimmer.tga"
+				small = "gfx/interface/ideas/advisors/EQS/EQS_starlight_glimmer.tga"
 			}
 		}
 		country_leader={

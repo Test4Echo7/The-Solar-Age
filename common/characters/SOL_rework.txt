@@ -3,7 +3,7 @@ characters = {
         name = EQS_zephyr_breeze
         portraits = {
 			army = {
-				large = "gfx/leaders/EQS/Zephyre_Breeze.tga"
+				large = "gfx/leaders/EQS/Zephyr_Breeze.tga"
 				small = "gfx/interface/ideas/advisors/EQS/EQS_zephyr_breeze.tga"
 			}
         }
@@ -795,7 +795,7 @@ characters = {
 		gender = female
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/EQS/Crespuscular_Ray.tga"
+				large = "gfx/leaders/EQS/Crepuscular_Ray.tga"
 			}
 		}
 	}

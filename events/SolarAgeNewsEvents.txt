@@ -305,7 +305,7 @@ news_event = { #
 		if = {
 			limit = { has_country_flag = nuked_griffonstone }
 			custom_effect_tooltip = despicable_action
-			add_country_flag = SOL_double_dipped
+			set_country_flag = SOL_double_dipped
 			add_political_power = -200
 			add_stability = -0.05
 			add_war_support = -0.05

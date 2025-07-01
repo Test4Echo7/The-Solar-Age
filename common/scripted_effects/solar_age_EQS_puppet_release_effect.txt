@@ -63,7 +63,6 @@ SOL_promote_SOL_governor = {
                 }
             }
             else = {
-                limit = { ROOT = { has_character = EQS_whiplash } }
                 EQS_whiplash = {
                     if = {
                         limit = {
@@ -365,7 +364,7 @@ SOL_promote_SOL_governor = {
             FROM = { tag = RCT }
         }
         hidden_effect = {
-            EQS_SOL_Caspaicin = {
+            EQS_SOL_Capsaicin = {
                 if = {
                     limit = {
                         ROOT = { has_completed_focus = SOL_god_empress }
@@ -717,7 +716,7 @@ SOL_promote_SOL_governor = {
             FROM = { tag = ZAR }
         }
         hidden_effect = {
-            EQS_SOL_fireflight = {
+            EQS_Fireflight = {
                 if = {
                     limit = {
                         ROOT = { has_completed_focus = SOL_god_empress }

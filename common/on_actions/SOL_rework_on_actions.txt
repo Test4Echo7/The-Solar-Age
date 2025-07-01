@@ -293,59 +293,60 @@ on_actions = {
                         }
                     }
                 }
-            if = {
-                limit = {
-                    ROOT = {
-                        OR = {
-                            tag = CHN
-                            tag = NLR
-                        }
-                    }
-                    FROM = {
-                        tag = EQS
-                        has_power_balance = { id = EQS_sanity_bop }
-                        NOT = { has_idea = EQS_mental_decline }
-                    }
-                }
-                FROM = {
-                    add_ideas = EQS_mental_decline
-                }
-            }
-            if = {
-                limit = {
-                    OR = {
+                if = {
+                    limit = {
                         ROOT = {
-                            tag = EQS
-                            has_idea = SOL_harmonic_resistance_idea
+                            OR = {
+                                tag = CHN
+                                tag = NLR
+                            }
                         }
                         FROM = {
                             tag = EQS
-                            has_idea = SOL_harmonic_resistance_idea
+                            has_power_balance = { id = EQS_sanity_bop }
+                            NOT = { has_idea = EQS_mental_decline }
                         }
                     }
-                }
-                add_ideas = {
-                    EQS_agitated_workers
-                    EQS_unwilling_bureaucrats
-                    EQS_anti_order_propaganda
-                }
-            }
-            if = {
-                limit = {
-                    ROOT = {
-                        tag = EQS
-                        NOT = { has_country_flag = EQS_sanity_warning }
-                    }
                     FROM = {
-                        tag = EQS
-                        NOT = { has_country_flag = EQS_sanity_warning }
+                        add_ideas = EQS_mental_decline
                     }
                 }
-                EQS = {
-                    set_country_flag = EQS_sanity_warning
-                    country_event = {
-                        id = solarreworked.531
-                        days = 2
+                if = {
+                    limit = {
+                        OR = {
+                            ROOT = {
+                                tag = EQS
+                                has_idea = SOL_harmonic_resistance_idea
+                            }
+                            FROM = {
+                                tag = EQS
+                                has_idea = SOL_harmonic_resistance_idea
+                            }
+                        }
+                    }
+                    add_ideas = {
+                        EQS_agitated_workers
+                        EQS_unwilling_bureaucrats
+                        EQS_anti_order_propaganda
+                    }
+                }
+                if = {
+                    limit = {
+                        ROOT = {
+                            tag = EQS
+                            NOT = { has_country_flag = EQS_sanity_warning }
+                        }
+                        FROM = {
+                            tag = EQS
+                            NOT = { has_country_flag = EQS_sanity_warning }
+                        }
+                    }
+                    EQS = {
+                        set_country_flag = EQS_sanity_warning
+                        country_event = {
+                            id = solarreworked.531
+                            days = 2
+                        }
                     }
                 }
             }
@@ -714,6 +715,25 @@ on_actions = {
                         id = solarreworked.472
                         days = 30
                         random_days = 15
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    ROOT = {
+                        tag = EQS
+                        is_EQS_SOL = yes
+                    }
+                    FROM = {
+                        tag = event_target:equestria
+                        has_country_flag = SOL_hosting_M6
+                    }
+                }
+                ROOT = {
+                    country_event = {
+                        id = solarreworked.532
+                        days = 7
+                        random_days = 3
                     }
                 }
             }
