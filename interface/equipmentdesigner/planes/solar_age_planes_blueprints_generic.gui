@@ -1,6 +1,18 @@
 guiTypes = {
     containerWindowType = {
-		name = "equipment_designer_super_cas_airframe_1"
+		name = "equipment_designer_small_plane_airframe_x"
+		position = { x=0 y=0 }
+		size = { width=508 height=248 }
+
+		iconType = {
+			name = "equipment_image_overlay"
+			spriteType = "GFX_TC_small_plane_airframe_5"
+			position = { x=0 y=0 }
+		}
+	}
+
+	containerWindowType = {
+		name = "equipment_designer_small_plane_cas_airframe_x"
 		position = { x=0 y=0 }
 		size = { width=508 height=248 }
 

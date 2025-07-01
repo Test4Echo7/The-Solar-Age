@@ -13704,7 +13704,7 @@ country_event = { #Hidden event for unlocking the Inferno CAS either for having 
             }
             create_equipment_variant = {
                 name = "Inferno Mk. IX"
-                type = super_cas_airframe_1
+                type = small_plane_airframe_x
                 modules = {
                     fixed_main_weapon_slot = aircraft_cannon_1_1x
                     fixed_auxiliary_weapon_slot_1 = magical_pyro_bombs
@@ -13725,7 +13725,7 @@ country_event = { #Hidden event for unlocking the Inferno CAS either for having 
             }
             create_equipment_variant = {
                 name = "Inferno Mk. IX"
-                type = super_cas_equipment_1
+                type = CAS_equipment_x
                 upgrades = {
                     plane_cas_upgrade = 3
                     plane_range_upgrade = 1

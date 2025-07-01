@@ -1104,8 +1104,16 @@ sp_inferno_cas_flight_problem = {
 
         iteration_output = {
             #+5% prod cost, +5% thrust
-            equipment_bonus = {
-                super_cas_equipment = { thrust = 0.05 build_cost_ic = 0.05 instant = yes }
+            if = {
+                limit = { has_dlc = "By Blood Alone" }
+                equipment_bonus = {
+                    small_frame_airframe_x = { thrust = 0.05 build_cost_ic = 0.05 instant = yes }
+                }
+            }
+            else = {
+                equipment_bonus = {
+                    CAS_equipment_x = { maximum_speed = 0.05 build_cost_ic = 0.05 instant = yes }
+                }
             }
         }
     }
@@ -1118,8 +1126,16 @@ sp_inferno_cas_flight_problem = {
 
         iteration_output = {
             #-10% reliability, -5% prod cost
-            equipment_bonus = {
-                super_cas_equipment = { reliability = -0.1 build_cost_ic = -0.05 instant = yes }
+            if = {
+                limit = { has_dlc = "By Blood Alone" }
+                equipment_bonus = {
+                    small_frame_airframe_x = { reliability = -0.1 build_cost_ic = -0.05 instant = yes }
+                }
+            }
+            else = {
+                equipment_bonus = {
+                    CAS_equipment_x = { reliability = -0.1 build_cost_ic = -0.05 instant = yes }
+                }
             }
         }
     }
@@ -1130,8 +1146,16 @@ sp_inferno_cas_flight_problem = {
 
         iteration_output = {
             #-5% progress, +2% prod cost, +3% reliability
-            equipment_bonus = {
-                super_cas_equipment = { reliability = 0.03 build_cost_ic = 0.03 instant = yes }
+            if = {
+                limit = { has_dlc = "By Blood Alone" }
+                equipment_bonus = {
+                    small_frame_airframe_x = { reliability = 0.03 build_cost_ic = 0.03 instant = yes }
+                }
+            }
+            else = {
+                equipment_bonus = {
+                    CAS_equipment_x = { reliability = 0.03 build_cost_ic = 0.03 instant = yes }
+                }
             }
             country_effects = {
                 sp:sp_EQS_inferno_cas = {
@@ -1166,8 +1190,16 @@ sp_inferno_cas_bobomb = {
 
         iteration_output = {
             #+5% ground attack, -3% agility
-            equipment_bonus = {
-                super_cas_equipment = { air_ground_attack = 0.05 air_agility = -0.03 instant = yes }
+            if = {
+                limit = { has_dlc = "By Blood Alone" }
+                equipment_bonus = {
+                    small_frame_airframe_x = { air_ground_attack = 0.05 air_agility = -0.03 instant = yes }
+                }
+            }
+            else = {
+                equipment_bonus = {
+                    CAS_equipment_x = { air_ground_attack = 0.05 air_agility = -0.03 instant = yes}
+                }
             }
         }
     }
@@ -1178,8 +1210,16 @@ sp_inferno_cas_bobomb = {
 
         iteration_output = {
             #+15% naval targeting, -5% ground attack
-            equipment_bonus = {
-                super_cas_equipment = { air_ground_attack = -0.05 naval_strike_targetting = 0.15 instant = yes }
+            if = {
+                limit = { has_dlc = "By Blood Alone" }
+                equipment_bonus = {
+                    small_frame_airframe_x = { air_ground_attack = -0.05 naval_strike_targetting = 0.15 instant = yes }
+                }
+            }
+            else = {
+                equipment_bonus = {
+                    CAS_equipment_x = { air_ground_attack = -0.05 naval_strike_targetting = 0.15 }
+                }
             }
         }
     }
@@ -1192,8 +1232,16 @@ sp_inferno_cas_bobomb = {
 
         iteration_output = {
             #+2% ground attack, +5% naval targeting
-            equipment_bonus = {
-                super_cas_equipment = { air_ground_attack = 0.02 naval_strike_targetting = 0.05 instant = yes }
+            if = {
+                limit = { has_dlc = "By Blood Alone" }
+                equipment_bonus = {
+                    small_frame_airframe_x = { air_ground_attack = 0.02 naval_strike_targetting = 0.05 instant = yes }
+                }
+            }
+            else = {
+                equipment_bonus = {
+                    CAS_equipment_x = { air_ground_attack = 0.02 naval_strike_targetting = 0.05 instant = yes}
+                }
             }
         }
     }
@@ -1225,8 +1273,16 @@ sp_inferno_cas_flimsy_wings = {
 
         iteration_output = {
             #-5% ground attack, -5% naval target, -3% prod cost, -5% progress
-            equipment_bonus = {
-                super_cas_equipment = { air_ground_attack = -0.05 naval_strike_targetting = -0.05 build_cost_ic = -0.03 instant = yes }
+            if = {
+                limit = { has_dlc = "By Blood Alone" }
+                equipment_bonus = {
+                    small_frame_airframe_x = { air_ground_attack = -0.05 naval_strike_targetting = -0.05 build_cost_ic = -0.03 instant = yes }
+                }
+            }
+            else = {
+                equipment_bonus = {
+                    CAS_equipment_x = { air_ground_attack = -0.05 naval_strike_targetting = -0.05 build_cost_ic = -0.03 instant = yes}
+                }
             }
             country_effects = {
                 sp:sp_EQS_inferno_cas = {
@@ -1242,8 +1298,16 @@ sp_inferno_cas_flimsy_wings = {
 
         iteration_output = {
             #-10% progress, +2% prod cost, +5% reliability
-            equipment_bonus = {
-                super_cas_equipment = { reliability = 0.05 build_cost_ic = 0.02 instant = yes }
+            if = {
+                limit = { has_dlc = "By Blood Alone" }
+                equipment_bonus = {
+                    small_frame_airframe_x = { reliability = 0.05 build_cost_ic = 0.02 instant = yes }
+                }
+            }
+            else = {
+                equipment_bonus = {
+                    CAS_equipment_x = { reliability = 0.05 build_cost_ic = 0.02 instant = yes}
+                }
             }
             country_effects = {
                 sp:sp_EQS_inferno_cas = {
@@ -1280,8 +1344,16 @@ sp_inferno_cas_taking_flight = {
 
         iteration_output = {
             #+15% defense, +4% prod cost, -5% progress
-            equipment_bonus = {
-                super_cas_equipment = { air_defence = 0.15 build_cost_ic = 0.03 instant = yes }
+            if = {
+                limit = { has_dlc = "By Blood Alone" }
+                equipment_bonus = {
+                    small_frame_airframe_x = { air_defence = 0.15 build_cost_ic = 0.03 instant = yes }
+                }
+            }
+            else = {
+                equipment_bonus = {
+                    CAS_equipment_x = { air_defence = 0.15 build_cost_ic = 0.03 instant = yes}
+                }
             }
             country_effects = {
                 sp:sp_EQS_inferno_cas = {
@@ -1297,8 +1369,16 @@ sp_inferno_cas_taking_flight = {
 
         iteration_output = {
             #+5% agility, +1% prod cost, -5% progress
-            equipment_bonus = {
-                super_cas_equipment = { air_agility = 0.05 build_cost_ic = 0.01 instant = yes }
+            if = {
+                limit = { has_dlc = "By Blood Alone" }
+                equipment_bonus = {
+                    small_frame_airframe_x = { air_agility = 0.05 build_cost_ic = 0.01 instant = yes }
+                }
+            }
+            else = {
+                equipment_bonus = {
+                    CAS_equipment_x = { air_agility = 0.05 build_cost_ic = 0.01 instant = yes}
+                }
             }
             country_effects = {
                 sp:sp_EQS_inferno_cas = {
@@ -1314,8 +1394,16 @@ sp_inferno_cas_taking_flight = {
 
         iteration_output = {
             #+15% agility, +5% prod cost, -10% progress
-            equipment_bonus = {
-                super_cas_equipment = { air_agility = 0.15 build_cost_ic = 0.05 instant = yes }
+            if = {
+                limit = { has_dlc = "By Blood Alone" }
+                equipment_bonus = {
+                    small_frame_airframe_x = { air_agility = 0.15 build_cost_ic = 0.05 instant = yes }
+                }
+            }
+            else = {
+                equipment_bonus = {
+                    CAS_equipment_x = { air_agility = 0.15 build_cost_ic = 0.05 instant = yes}
+                }
             }
             country_effects = {
                 sp:sp_EQS_inferno_cas = {
@@ -1352,8 +1440,16 @@ sp_inferno_cas_unstable_bombs = {
 
         iteration_output = {
             #-5% reliability, +5% progress
-            equipment_bonus = {
-                super_cas_equipment = { reliability = -0.05 instant = yes }
+            if = {
+                limit = { has_dlc = "By Blood Alone" }
+                equipment_bonus = {
+                    small_frame_airframe_x = { reliability = -0.05 instant = yes }
+                }
+            }
+            else = {
+                equipment_bonus = {
+                    CAS_equipment_x = { reliability = -0.05 instant = yes}
+                }
             }
             country_effects = {
                 sp:sp_EQS_inferno_cas = {
@@ -1369,8 +1465,16 @@ sp_inferno_cas_unstable_bombs = {
 
         iteration_output = {
             #-2% ground attack, +5% reliability, -5% progress
-            equipment_bonus = {
-                super_cas_equipment = { air_ground_attack = -0.02 reliability = 0.05 instant = yes }
+            if = {
+                limit = { has_dlc = "By Blood Alone" }
+                equipment_bonus = {
+                    small_frame_airframe_x = { air_ground_attack = -0.02 reliability = 0.05 instant = yes }
+                }
+            }
+            else = {
+                equipment_bonus = {
+                    CAS_equipment_x = { air_ground_attack = -0.02 reliability= 0.05 instant = yes}
+                }
             }
             country_effects = {
                 sp:sp_EQS_inferno_cas = {
@@ -1386,8 +1490,16 @@ sp_inferno_cas_unstable_bombs = {
 
         iteration_output = {
             #+3% ground attack, -10% progress
-            equipment_bonus = {
-                super_cas_equipment = { air_ground_attack = 0.03 instant = yes }
+            if = {
+                limit = { has_dlc = "By Blood Alone" }
+                equipment_bonus = {
+                    small_frame_airframe_x = { air_ground_attack = 0.03 instant = yes }
+                }
+            }
+            else = {
+                equipment_bonus = {
+                    CAS_equipment_x = { air_ground_attack = 0.03 instant = yes}
+                }
             }
             country_effects = {
                 sp:sp_EQS_inferno_cas = {

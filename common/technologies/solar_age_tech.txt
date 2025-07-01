@@ -69,8 +69,9 @@ technologies = {
 		allow = { always = no }
 
 		enable_equipments = {
-			super_cas_equipment
-			super_cas_airframe_1
+			#super_cas_equipment
+			#super_cas_airframe_1
+			small_plane_airframe_x
 		}
 		enable_equipment_modules = {
 			magical_pyro_bombs
@@ -81,8 +82,9 @@ technologies = {
 		allow = { always = no }
 
 		enable_equipments = {
-			super_cas_equipment
-			super_cas_equipment_1
+			#super_cas_equipment
+			#super_cas_equipment_1
+			CAS_equipment_x
 		}
 	}
 	EQS_esoteric_extractions_lar = {
