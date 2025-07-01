@@ -280,6 +280,9 @@ sp_EQS_inferno_cas = {
     project_output = {
         country_effects = {
             custom_effect_tooltip = SOL_inferno_cas_tt
+            hidden_effect = {
+                country_event = solarreworked.533
+            }
         }
     }
 

@@ -20,7 +20,7 @@ EQS_debug_category = {
             tag = EQS
         }
         complete_effect = {
-            set_technology = { EQS_debug_super_cas = 1 }
+            set_technology = { EQS_super_cas_bba = 1 }
         }
     }
     EQS_test_EQC_fix_decision = {

@@ -2694,7 +2694,7 @@ country_event = { #In curiosity, Daybreaker meets with a ship designer from Mane
 #}
 
 ###Flavour###
-country_event = { #Daybreaker visit's Fluttershy's family, as Zephyr Breeze has been drafted into the military, but he has been dodging it wherever he could, and after a bit of a tense meeting in the library, she basically forces him into the military, as he is an example because he's Fluttershy's brother, and she will not have herself be defied again
+country_event = { #Daybreaker visits Fluttershy's family, as Zephyr Breeze has been drafted into the military, but he has been dodging it wherever he could, and after a bit of a tense meeting in the library, she basically forces him into the military, as he is an example because he's Fluttershy's brother, and she will not have herself be defied again
     id = solarreworked.100
     title = solarreworked.100.t
     desc = solarreworked.100.d
@@ -4110,7 +4110,25 @@ country_event = { #Sunset hosts her friends in a field tent far from the front, 
 country_event = { #Report to Daybreaker that so far the hunt for the M6 and Sunset have been inconclusive, as where Sunset was stationed was about central to both the coast or the Crystal Empire, and because of the excessive costs of restructuring, there are not enough resources to intercept both along the most probable routes to either, and that she must choose who to go after
     id = solarreworked.159
     title = solarreworked.159.t
-    desc = solarreworked.159.d
+    desc = {
+        trigger = {
+            OR = {
+                has_country_flag = SOL_luna_twiggles_summit
+                AND = {
+                    has_war_with = NLR
+                    NOT = { has_country_flag = SOL_luna_twiggles_summit }
+                }
+            }
+        }
+        text = solarreworked.159.d_a
+    }
+    desc = {
+        trigger = {
+            eqs_has_civil_war = yes
+            NOT = { has_war_with = NLR }
+        }
+        text = solarreworked.159.d_b
+    }
     picture = GFX_event_solarempire
     immediate = {
         log = "[GetDateText]: [ROOT.GetName]: event solarreworked.159"
@@ -4126,6 +4144,15 @@ country_event = { #Report to Daybreaker that so far the hunt for the M6 and Suns
 
     option = { #The Crystal Empire is the closest and she has family there. That will be where she went.
         name = solarreworked.159.a
+        trigger = {
+            OR = {
+                has_country_flag = SOL_luna_twiggles_summit
+                AND = {
+                    has_war_with = NLR
+                    NOT = { has_country_flag = SOL_luna_twiggles_summit }
+                }
+            }
+        }
         hidden_effect = {
             random_list = {
                 60 = {
@@ -4169,6 +4196,15 @@ country_event = { #Report to Daybreaker that so far the hunt for the M6 and Suns
     }
     option = { #The Crystal Empire is too obvious a choice. Observe the ports. They will not flee the continent.
         name = solarreworked.159.b
+        trigger = {
+            OR = {
+                has_country_flag = SOL_luna_twiggles_summit
+                AND = {
+                    has_war_with = NLR
+                    NOT = { has_country_flag = SOL_luna_twiggles_summit }
+                }
+            }
+        }
         hidden_effect = {
             random_list = {
                 70 = {
@@ -4210,6 +4246,52 @@ country_event = { #Report to Daybreaker that so far the hunt for the M6 and Suns
             }
         }
     }
+    option = { #They will attempt to flee to these "freedom fighters." Capture them!
+        name = solarreworked.159.c
+        trigger = {
+            eqs_has_civil_war = yes
+            NOT = { has_war_with = NLR }
+        }
+        set_country_flag = SOL_fled_EQS
+        hidden_effect = {
+            random_list = {
+                60 = {
+                    hidden_effect = {
+                        country_event = {
+                            id = solarreworked.161
+                            days = 10
+                            random_days = 20
+                        }
+                    }
+                }
+                40 = {
+                    modifier = {
+                        check_variable = { SOL_lockdown_procedures > 0 }
+                        factor = 0.9
+                    }
+                    modifier = {
+                        check_variable = { SOL_lockdown_procedures > 1 }
+                        factor = 0.7
+                    }
+                    modifier = {
+                        check_variable = { SOL_lockdown_procedures > 2 }
+                        factor = 0.5
+                    }
+                    modifier = {
+                        check_variable = { SOL_lockdown_procedures > 3 }
+                        factor = 0
+                    }
+                    hidden_effect = {
+                        country_event = {
+                            id = solarreworked.160
+                            days = 10
+                            random_days = 20
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 country_event = { #A follow-up report to the dispatch from Daybreaker to go through the effort of capturing the M6 and Sunset, stating that they were never found, and they must have fled to the other country in question
@@ -4223,6 +4305,7 @@ country_event = { #A follow-up report to the dispatch from Daybreaker to go thro
 
     option = { #We will find them. One day.
         name = solarreworked.160.a
+        set_country_flag = SOL_M6_fled
         hidden_effect = {
             if = {
                 limit = { has_country_flag = SOL_fled_CRY }
@@ -4242,20 +4325,33 @@ country_event = { #A follow-up report to the dispatch from Daybreaker to go thro
                     }
                 }
             }
+            else_if = {
+                limit = { has_country_flag = SOL_fled_EQC }
+                event_target:equestria = {
+                    country_event = {
+                        id = solarreworked.162
+                        days = 7
+                    }
+                }
+            }
         }
     }
 }
 
 country_event = { #Twilight, Sunset, and the others attempt to keep low and unnoticed on a train station for a train which is heading toward the Crystal Empire, but a couple of agents for Daybreaker, plus some soldiers go through an inspection of the platform, since they are watching for them, and despite hiding, they are noticed, which leads to a magic shootout between Twilight and Sunset and Daybreaker's forces, and the rest of the M6 escaping, but not them
     id = solarreworked.161 #Alternate description is them again waiting for a ship this time to take them to New Mareland, which first leads to a snarky comment from Sunset on the capital's name, and them also getting spotted by an inspection patrol, leading again to a shoot-out, which ultimately leads to Twilight and Sunset getting apprehended as well
-    title = solarreworked.161.t #Goes through either Hedgewards or through San Manetonio
+    title = solarreworked.161.t #Third alternate is Twilight and Sunset leading through the foliage as it gets closer to the border with the Equestrian rebellion, and Twilight trying to make a bit of conversation wiht Sunset before they run across a patrol, which has been trying to keep the border locked down, and they have a long, drawn-out fight, that Twilight urges her friends to flee from, while she and stubbornly Sunset act as a distraction for
     desc = {
-        trigger = { EQS = { has_country_flag = SOL_fled_CRY } }
+        trigger = { has_country_flag = SOL_fled_CRY }
         text = solarreworked.161.d_a
     }
     desc = {
-        trigger = { EQS = { has_country_flag = SOL_fled_EQC } }
+        trigger = { has_country_flag = SOL_fled_EQC }
         text = solarreworked.161.d_b
+    }
+    desc = {
+        trigger = { has_country_flag = SOL_fled_EQS }
+        text = solarreworked.161.d_c
     }
     picture = GFX_event_twilight_vs_daybreaker
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.161"}
@@ -4293,11 +4389,11 @@ country_event = { #An event informing the leader of the country that Twilight, S
     id = solarreworked.162 #Alternate text is an event of the M6 minus Twilight arriving in a complete rush as they relate how they are all that's left and Twilight and Sunset stayed behind to keep them safe so they could try and find a way to topple the Solar Empire; although they are all upset, they also know their friends wouldn't want them to mourn for long, and they offer their services for the country
     title = solarreworked.162.t #Alternate to both of these would be for the former Twilight arriving to speak with whoever is in charge of the nation they're in, and Sunset providing further input; the alternate to that would be perhaps Rainbow and Applejack leading the rest, and all being glum about prospects, but offering to help either way
     desc = {
-        trigger = { EQS = { has_country_flag = SOL_fled_CRY } }
+        trigger = { EQS = { has_country_flag = SOL_has_twilight } }
         text = solarreworked.162.d_a
     }
     desc = {
-        trigger = { EQS = { has_country_flag = SOL_fled_EQC } }
+        trigger = { EQS = { NOT = { has_country_flag = SOL_has_twilight } } }
         text = solarreworked.162.d_b
     }
     picture = GFX_event_punished_twilight
@@ -8376,7 +8472,9 @@ country_event = { #Red Tide steps off her plane from the mainland and is instant
             }
             EQS_red_tide = {
                 if = {
-                    ROOT = { has_completed_focus = SOL_god_empress }
+                    limit = {
+                        ROOT = { has_completed_focus = SOL_god_empress }
+                    }
                     add_country_leader_role = {
                         promote_leader = yes
                         country_leader = {
@@ -9314,7 +9412,7 @@ country_event = {
         text = solarreworked.475.d_a
     }
     desc = {
-        trigger = { EQC = { has_country_leader = { character = EQS_SOL_arcane_nova = ruling_only = yes } } }
+        trigger = { EQC = { has_country_leader = { character = EQS_SOL_arcane_nova ruling_only = yes } } }
         text = solarreworked.475.d_b
     }
     picture = GFX_event_solarempire
@@ -9327,7 +9425,7 @@ country_event = {
         name = solarreworked.475.a
     }
     option = {
-        trigger = { EQC = { has_country_leader = { character = EQS_SOL_arcane_nova = ruling_only = yes } } }
+        trigger = { EQC = { has_country_leader = { character = EQS_SOL_arcane_nova ruling_only = yes } } }
         name = solarreworked.475.b
     }
 }
@@ -13477,6 +13575,7 @@ country_event = { #Short event speaking of how with the advent of war, Equestria
         text = solarreworked.531.d_c
     }
     picture = GFX_event_celestia_theme
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.531"}
 
     is_triggered_only = yes
 
@@ -13524,6 +13623,117 @@ country_event = { #Short event speaking of how with the advent of war, Equestria
             }
         }
         custom_effect_tooltip = EQS_save_or_suck_tt #Losing territory will reduce sanity, regaining it will restore it
+    }
+}
+
+country_event = { #Event of Twilight and Sunset fighting back to back as Manehattan falls, or another city, around them since the rebellion has been put down, and they were on the losing side, and Daybreaker personally gets into combat with both of them, subduing them both rather handidly, since she is done toying, and she states that they will have much to discuss in the coming months.
+    id = solarreworked.532
+    title = solarreworked.532.t
+    desc = {
+        trigger = {
+            any_country = {
+                has_country_flag = SOL_hosting_M6
+                has_character = EQS_twilight_sparkle
+            }
+        }
+        text = solarreworked.532.d_a
+    }
+    desc = {
+        trigger = {
+            any_country = {
+                has_country_flag = SOL_hosting_M6
+                NOT = { has_character = EQS_twilight_sparkle }
+            }
+        }
+        text = solarreworked.532.d_b
+    }
+    picture = GFX_event_angy_daybreaker
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.532"}
+
+    is_triggered_only = yes
+
+    option = { #We have much to discuss, Twilight.
+        name = solarreworked.532.a
+        custom_effect_tooltip = SOL_end_of_the_road_tt
+        hidden_effect = {
+            every_possible_country = {
+                limit = { has_character = EQS_twilight_sparkle }
+                EQS_twilight_sparkle = { set_nationality = ROOT }
+            }
+            every_possible_country = {
+                limit = { has_character = EQS_applejack }
+                EQS_applejack = { set_nationality = ROOT }
+            }
+            every_possible_country = {
+                limit = { has_character = EQS_rainbowdash }
+                EQS_rainbowdash = { set_nationality = ROOT }
+            }
+            every_possible_country = {
+                limit = { has_character = EQS_rarity }
+                EQS_rarity = { set_nationality = ROOT }
+            }
+            every_possible_country = {
+                limit = { has_character = EQS_fluttershy }
+                EQS_fluttershy = { set_nationality = ROOT }
+            }
+            every_possible_country = {
+                limit = { has_character = EQS_pinkie_pie }
+                EQS_pinkie_pie = { set_nationality = ROOT }
+            }
+            every_possible_country = {
+                limit = { has_character = EQS_sunset_shimmer }
+                EQS_twilight_sparkle = { set_nationality = ROOT }
+            }
+        }
+    }
+}
+
+country_event = { #Hidden event for unlocking the Inferno CAS either for having BBA or not having BBA
+    id = solarreworked.533
+    hidden = yes
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.533"}
+
+    is_triggered_only = yes
+
+    option = {
+        if = {
+            limit = { has_dlc = "By Blood Alone" }
+            set_technology = {
+                EQS_super_cas_bba = 1
+                popup = no
+            }
+            create_equipment_variant = {
+                name = "Inferno Mk. IX"
+                type = super_cas_airframe_1
+                modules = {
+                    fixed_main_weapon_slot = aircraft_cannon_1_1x
+                    fixed_auxiliary_weapon_slot_1 = magical_pyro_bombs
+                    fixed_auxiliary_weapon_slot_2 = magical_pyro_bombs
+                    fixed_auxiliary_weapon_slot_3 = magical_pyro_bombs
+                    engine_type_slot = engine_3_1x
+                    special_type_slot_1 = self_sealing_fuel_tanks_small
+                    special_type_slot_2 = empty
+                    special_type_slot_3 = empty
+                    special_type_slot_4 = empty
+                }
+            }
+        }
+        else = {
+            set_technology = {
+                EQS_super_cas = 1
+                popup = no
+            }
+            create_equipment_variant = {
+                name = "Inferno Mk. IX"
+                type = super_cas_equipment_1
+                upgrades = {
+                    plane_cas_upgrade = 3
+                    plane_range_upgrade = 1
+                    plane_engine_upgrade = 2
+                    plane_reliability_upgrade = 1
+                }
+            }
+        }
     }
 }
 

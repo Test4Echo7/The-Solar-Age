@@ -348,6 +348,13 @@ EQS_SOL_wartime_change = {
 			random_days = 7
 		}
 	}
+	else = {
+		country_event = {
+			id = solarreworked.156
+			days = 14
+			random_days = 7
+		}
+	}
 	if = {
 		limit = { country_exists = CES }
 		CES = {
@@ -596,14 +603,24 @@ EQS_SOL_civil_war = {
 			set_nationality = event_target:solar_empire
 		}
 	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = SOL_M6_fled }
+ 		}
+ 		country_event = {
+			id = solarreworked.156
+			days = 14
+			random_days = 7
+ 		}
+	}
 	every_character = {
 		limit = {
 			OR = {
-				is_character = EQS_applejack
+				#is_character = EQS_applejack
 				is_character = EQS_sergeant_reckless
 				is_character = EQS_big_macintosh
 				# is_character = 8
-				is_character = EQS_pinkie_pie
+				#is_character = EQS_pinkie_pie
 				is_character = EQS_caltrop_decay
 				is_character = EQS_braeburn
 				is_character = EQS_NLR_tempest_wind
