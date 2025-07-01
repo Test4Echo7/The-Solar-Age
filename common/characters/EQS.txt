@@ -594,7 +594,7 @@ characters={
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/EQS/Sunrise_Sparkle_new.tga"
-				small = "GFX_idea_evil_twilight_sparkle"
+				small = "gfx/interface/ideas/advisors/EQS/EQS_sunrise_sparkle_new.tga"
 			}
 		}
 		advisor = {

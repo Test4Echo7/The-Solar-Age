@@ -4814,8 +4814,8 @@ country_event = {
             set_character_name = SOL_sunset_shimmer_new_name
             set_portraits = {
                 army = {
-                    small = "gfx/interface/ideas/advisors/EQS/sunset_shimmer_newerer.tga"
-                    large = "gfx/leaders/EQS/Sunset_newerer.tga"
+                    small = "gfx/interface/ideas/advisors/EQS/sunset_shimmer_newerest.tga"
+                    large = "gfx/leaders/EQS/Sunset_newerest.tga"
                 }
             }
             add_advisor_role = {
