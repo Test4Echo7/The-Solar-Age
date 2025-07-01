@@ -954,12 +954,7 @@ script_enum_equipment_bonus_type = {
 	space_marine_bolt_gun_1
 	space_marine_armor
 	space_marine_armor_1
-	#super_cas_equipment
-	#super_cas_equipment_1
-	#super_cas_airframe_1
-	small_plane_airframe_x
-	small_plane_cas_airframe_x
-	small_plane_naval_bomber_airframe_x
-	small_plane_suicide_airframe_x
-	CAS_equipment_x
+	super_cas_equipment
+	super_cas_equipment_1
+	super_cas_airframe_1
 }
