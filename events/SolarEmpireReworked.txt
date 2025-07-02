@@ -9240,6 +9240,7 @@ country_event = {
     fire_only_once = yes
     trigger = {
         tag = EQS
+        has_war = yes
         power_balance_value = {
             id = EQS_sanity_bop
             value < 0.5
@@ -9264,6 +9265,7 @@ country_event = {
     fire_only_once = yes
     trigger = {
         tag = EQS
+        has_war = yes
         power_balance_value = {
             id = EQS_sanity_bop
             value < 0.4
@@ -13705,14 +13707,15 @@ country_event = { #Hidden event for unlocking the Inferno CAS either for having 
             create_equipment_variant = {
                 name = "Inferno Mk. IX"
                 type = super_cas_airframe_1
+                icon = "GFX_ENG_light_plane_2_medium"
                 modules = {
-                    fixed_main_weapon_slot = aircraft_cannon_1_1x
+                    fixed_main_weapon_slot = magical_pyro_bombs
                     fixed_auxiliary_weapon_slot_1 = magical_pyro_bombs
                     fixed_auxiliary_weapon_slot_2 = magical_pyro_bombs
-                    fixed_auxiliary_weapon_slot_3 = magical_pyro_bombs
+                    fixed_auxiliary_weapon_slot_3 = empty
                     engine_type_slot = engine_3_1x
                     special_type_slot_1 = self_sealing_fuel_tanks_small
-                    special_type_slot_2 = empty
+                    special_type_slot_2 = drop_tanks
                     special_type_slot_3 = empty
                     special_type_slot_4 = empty
                 }
@@ -13726,11 +13729,12 @@ country_event = { #Hidden event for unlocking the Inferno CAS either for having 
             create_equipment_variant = {
                 name = "Inferno Mk. IX"
                 type = super_cas_equipment_1
+                icon = "GFX_ENG_light_plane_2_medium"
                 upgrades = {
-                    plane_cas_upgrade = 3
+                    plane_cas_upgrade = 2
                     plane_range_upgrade = 1
                     plane_engine_upgrade = 2
-                    plane_reliability_upgrade = 1
+                    plane_reliability_upgrade = 2
                 }
             }
         }
