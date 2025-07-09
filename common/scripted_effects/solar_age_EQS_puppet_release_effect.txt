@@ -1220,12 +1220,21 @@ SOL_promote_SOL_governor = {
     }
 }
 SOL_promote_local_governor = {
-    custom_effect_tooltip = SOL_local_governor_chosen_tt
     if = {
         limit = {
             FROM = { tag = YAK }
         }
         hidden_effect = {
+            every_possible_country = {
+                limit = {
+                    has_character = YAK_khan_koletiv
+                    NOT = { tag = YAK }
+                }
+                YAK_khan_koletiv = {
+                    set_nationality = YAK
+                    promote_character = yes
+                }
+            }
             YAK = {
                 YAK_khan_koletiv = { add_trait = { trait = imperial_collaborator ideology = nazism } }
             }
