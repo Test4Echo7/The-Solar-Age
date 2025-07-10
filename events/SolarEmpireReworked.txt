@@ -3108,6 +3108,7 @@ country_event = { #Daybreaker marches and enters into the chambers of Grover, wh
 
     option = { #I shall watch the Empire in your stead.
         name = solarreworked.120.a
+        custom_effect_tooltip = SOL_go_watch_temple_runner_tt
 		GRD = {
             set_country_flag = is_solar_puppet
             set_country_flag = SOL_established_personal_union
@@ -3194,6 +3195,7 @@ country_event = { #Daybreaker smugly walks through Griffonstone, in a parade wit
 
     option = { #Kneel for your new Empress!
         name = solarreworked.121.a
+        custom_effect_tooltip = SOL_go_watch_temple_runner_tt
 		GRD = {
             set_country_flag = is_solar_puppet
             set_country_flag = SOL_established_personal_union
@@ -14496,7 +14498,21 @@ country_event = { #An event recapping that with the ascension of Daybreaker, SMI
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event equestriaexpanded.6"}
     picture = GFX_event_solarempire
 
-    is_triggered_only = yes
+    trigger = {
+        tag = EQS
+        is_EQS_SOL = yes
+        if = {
+            limit = {
+                has_dlc = "La Resistance"
+            }
+            has_intelligence_agency = yes
+        }
+    }
+    fire_only_once = yes
+
+    mean_time_to_happen = {
+        days = 365
+    }
 
     option = { #They can be trusted. We need all the agents we can get.
         name = equestriaexpanded.6.a
