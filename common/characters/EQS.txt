@@ -855,7 +855,7 @@ characters={
 					}
 					if = {
 						limit = { is_EQS_SOL = yes }
-						has_country_flag = SOL_kept_smile_agents
+						has_country_flag = SOL_trusted_sweetie
 						NOT = { has_idea = absconditus_lumen }
 						NOT = { has_idea = astrum_solus }
 					}
@@ -901,7 +901,7 @@ characters={
 					}
 					if = {
 						limit = { is_EQS_SOL = yes }
-						has_country_flag = SOL_kept_smile_agents
+						has_country_flag = SOL_trusted_sweetie
 						NOT = { has_idea = absconditus_lumen }
 						NOT = { has_idea = astrum_solus }
 					}

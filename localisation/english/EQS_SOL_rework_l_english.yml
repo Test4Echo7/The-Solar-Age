@@ -506,6 +506,7 @@
   SOL_arabian_nights_tt:0 "All of §Y[SDL.GetNameDef]'s§! cores are owned by us or our subjects."
   SOL_blueblood_kneeled:0 "Prince Blueblood has submitted himself to Daybreaker"
   SOL_kept_smile_agents:0 "Has permitted former S.M.I.L.E. agents to stay in the [SOLGetAgencyName]"
+  SOL_trusted_sweetie:0 "Has given Sweetie Drops command of [SOLGetAgencyName]"
   EQS_no_spam_for_u_tt:0 "§Y[ROOT.GetLeader]§! has not recently performed a political activity"
   SOL_slurp_them_resources_yak_tt:0 "As the bargain for our protection, §Y[YAK.GetNameDef]§! shall provide us total mining rights."
   SOL_slurp_them_resources_jak_tt:0 "As the bargain for our protection, §Y[JAK.GetNameDef]§! shall provide us total mining rights."
