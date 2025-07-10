@@ -14135,6 +14135,7 @@ country_event = { #The player is presented the options of what to exactly do wit
                 hidden_effect = { remove_trait = { trait = director_of_smile slot = political_advisor } }
             }
         }
+        set_country_flag = SOL_trusted_sweetie
         hidden_effect = {
             country_event = {
                 id = equestriaexpanded.6
