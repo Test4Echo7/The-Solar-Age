@@ -6419,6 +6419,11 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_last_grover"
 		###Daybreaker marches into the palace in Griffonstone, where the current regent, a representative from Griffonstone, and Grover VI are all waiting for her, and it is a clearly forced display, as there are only a few nobles here and there, and they all look furious, and after a short speech about how she will lead better than a bird ever could, she has Grover and the regent acknowledge their abdication, and passing the throne to her, and she is crowned with Grover's crown, which earns cries of despair
 		###Will anger every other griffon nation that still exists on Griffonia
+		if = {
+			limit = { 389 = { NOT = { is_owned_and_controlled_by = ROOT } } }
+			custom_effect_tooltip = SOL_legitimate_yoinking_tt
+		}
+		custom_effect_tooltip = SOL_angy_birbs_tt
 		country_event = solarreworked.121
 	}
 	search_filters = { FOCUS_FILTER_ANNEXATION }

@@ -591,6 +591,8 @@
   SOL_smack_the_puppets_tt:0 "Focuses for §Yinteracting§! with our §Rformer puppets§! will be unlocked."
   SOL_go_watch_temple_runner_tt:0 "§YDecisions§! will be unlocked for reclaiming former §Y[GRD.GetAdjectiveCap]§! territory."
   SOL_kaiserreich_reference_tt:0 "We can decide the §Ofate§! of §Y[GRD.GetNameDef]§! once we §Rdominate§! them."
+  SOL_legitimate_yoinking_tt:0 "If we control §Y[389.GetName]§! we can claim that the §OEmpress§! is the legitmate successor to the §YGrover dynasty§!."
+  SOL_angy_birbs_tt:0 "§RThis action will infuriate all former [GRI.GetNameDef] territories.§!"
   ###Last one in the chain. Remove comment later###
   SOL_conglaturation_a_winner_is_you_tt:0 "§GHarmony has been preserved and all of ponykind now bends the knee to Daybreaker. Thank you for playing the Solar Age! - Test4Echo§!"
 
@@ -839,6 +841,8 @@
   EQS_CHN_used_bioweapons:0 "Retaliated in Kind"
   EQS_GRI_working_together:0 "Pony-Griffon Attache"
   EQS_GRI_spurned:0 "Rejected Military Cooperation"
+  EQS_pony_blasphemer:0 "Pony Usurper"
+  EQS_pony_regent:0 "Pony Regent"
 
   ###Occupation Laws###
   EQS_inquisitionis_occupation:0 "Inquisition Administration"

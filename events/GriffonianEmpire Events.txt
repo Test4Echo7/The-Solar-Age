@@ -1112,7 +1112,13 @@ country_event = { #Archon Path
 	picture = GFX_event_griffenheim
 	fire_only_once = yes
 	trigger = {
-		tag = GRI
+		OR = {
+			tag = GRI
+			AND = {
+				tag = GRD
+				has_country_leader = { character = GRI_daybreaker ruling_only = yes }
+			}
+		}
 		date > 1021.5.21
 		OR = {
 			has_completed_focus = GRI_eros
@@ -1126,7 +1132,12 @@ country_event = { #Archon Path
 	}
 	option = {
 		name = imperial.44.a
-		trigger = { has_completed_focus = GRI_eros }
+		trigger = {
+			OR = {
+				has_completed_focus = GRI_eros
+				EQS = { has_completed_focus = SOL_educate_kaiser }
+			}
+		}
 		add_political_power = 200
 		add_stability = 0.05
 		remove_ideas = GRI_grover_vi
@@ -1157,6 +1168,15 @@ country_event = { #Archon Path
 			}
 		}
 		set_party_name = { ideology = fascism name = GRI_imperial_party_f long_name = GRI_imperial_party_f_long }
+		if = {
+			limit = {
+				EQS = { has_completed_focus = SOL_educate_kaiser }
+			}
+			EQS = {
+				target = ROOT
+				autonomous_state = autonomy_free
+			}
+		}
 	}
 	option = {
 		name = imperial.45.a

@@ -3,4 +3,6 @@ opinion_modifiers = {
     EQS_CHN_used_bioweapons = { value = -50 }
     EQS_GRI_working_together = { value = 35 }
     EQS_GRI_spurned = { value = -15 }
+    EQS_pony_blasphemer = { value = -200 }
+    EQS_pony_regent = { value = -50 }
 }
