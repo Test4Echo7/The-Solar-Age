@@ -5029,6 +5029,7 @@ shared_focus = {
 	y = 9
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_conquer_GRI"
+		custom_effect_tooltip = SOL_kaiserreich_reference_tt
 		if = {
 			limit = {
 				country_exists = GRD

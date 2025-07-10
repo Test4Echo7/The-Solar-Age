@@ -1637,6 +1637,13 @@ EQS_GRD_assistance = {
                     is_core_of = GRW
                     is_core_of = AET
                     is_core_of = HEL
+                    is_core_of = YAL
+                    is_core_of = JES
+                    is_core_of = ARA
+                    is_core_of = VIN
+                    is_core_of = JFT
+                    is_core_of = JRR
+                    is_core_of = JEB
                 }
                 is_owned_and_controlled_by = ROOT
             }
@@ -1644,7 +1651,8 @@ EQS_GRD_assistance = {
 
         highlight_states = {
             highlight_states_trigger = {
-                 OR = {
+                is_owned_and_controlled_by = ROOT
+                OR = {
                     is_core_of = FAT
                     is_core_of = JER
                     is_core_of = TRD
@@ -1689,6 +1697,13 @@ EQS_GRD_assistance = {
                     is_core_of = GRW
                     is_core_of = AET
                     is_core_of = HEL
+                    is_core_of = YAL
+                    is_core_of = JES
+                    is_core_of = ARA
+                    is_core_of = VIN
+                    is_core_of = JFT
+                    is_core_of = JRR
+                    is_core_of = JEB
                 }
             }
         }
@@ -1697,6 +1712,7 @@ EQS_GRD_assistance = {
             log = "[GetDateText]: [ROOT.GetName] Decision EQS_return_remaining_GRD_territory"
             every_state = {
                 limit = {
+                    is_owned_and_controlled_by = ROOT
                      OR = {
                         is_core_of = FAT
                         is_core_of = JER
@@ -1742,6 +1758,13 @@ EQS_GRD_assistance = {
                         is_core_of = GRW
                         is_core_of = AET
                         is_core_of = HEL
+                        is_core_of = YAL
+                        is_core_of = JES
+                        is_core_of = ARA
+                        is_core_of = VIN
+                        is_core_of = JFT
+                        is_core_of = JRR
+                        is_core_of = JEB
                     }
                 }
                 transfer_state_to = GRD

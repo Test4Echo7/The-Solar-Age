@@ -328,7 +328,7 @@
   EQS_return_remaining_GRD_territory_desc:0 "In our conquests of the Griffonian ponies, we have come into possession of territory that was once part of the Griffonian Empire. There are no ponies who live in these lands, nor do they have any reason to lay claim to it. Lest we burden the Empress with further administrative headaches, we shall transfer this territory to [GRD.GetNameDef], as it will be far easier for griffons to rule griffons than ponies over griffons."
   EQS_GRD_end_southern_autonomy:0 "End Southern Herzland Autonomy"
   EQS_GRD_reclaim_northern_herzland:0 "Reclaim the Northern Herzland"
-  EQS_GRD_shatter_northern_duchies:0 "Shatter the Northern Duchies"
+  EQS_GRD_shatter_northern_duchies:0 "Erase [FAT.GetNameDef]'s Influence"
   EQS_GRD_take_back_central_griffonia:0 "Reconquer Central Griffonia"
   EQS_GRD_burn_JER:0 "Burn Aquileia"
   EQS_GRD_humble_the_south:0 "Humble the South"
@@ -590,6 +590,7 @@
   SOL_hunt_for_twiggles_tt:0 "§PTwilight Sparkle§! and her §Yfriends§! will attempt to flee the Empire and rob §Othe Empress§! of her prized student. We can attempt to §Rlock down§! the nation to prevent them from escaping through new §Ydecisions§!."
   SOL_smack_the_puppets_tt:0 "Focuses for §Yinteracting§! with our §Rformer puppets§! will be unlocked."
   SOL_go_watch_temple_runner_tt:0 "§YDecisions§! will be unlocked for reclaiming former §Y[GRD.GetAdjectiveCap]§! territory."
+  SOL_kaiserreich_reference_tt:0 "We can decide the §Ofate§! of §Y[GRD.GetNameDef]§! once we §Rdominate§! them."
   ###Last one in the chain. Remove comment later###
   SOL_conglaturation_a_winner_is_you_tt:0 "§GHarmony has been preserved and all of ponykind now bends the knee to Daybreaker. Thank you for playing the Solar Age! - Test4Echo§!"
 
