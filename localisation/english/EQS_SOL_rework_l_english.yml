@@ -1759,6 +1759,10 @@
   SOL_offensive_propaganda:0 "Demoralizing Messaging"
   SOL_offensive_propaganda_desc:0 "Our airwaves are breached daily from [EQS.GetNameDef] with lies and falsehoods aimed to weaken our citizens' resolve in our fight against [EQS.GetLeader]. Despite the efforts of [ROOT.GetLeader] to sway public opinion in favor of us, the constant bombardments from [EQS.GetNameDef] have hindered our national pride and stability."
 
+  ###Puppet Spirit###
+  SOL_limited_military_allowance:0 "Limited Military Budgets"
+  SOL_limited_military_allowance_desc:0 "To ensure that the [THIS.GetAdjectiveCap] citizens never rise against us again, we have placed extensive sanctions on their military spending. [THIS.GetLeader]'s mandate does not have any exceptions. With this extra budget room that has been created, there is far more money free for investing into civilian industries and the economy for our future exploitation."
+
   ###Shhhhhhhh!###
   SOL_imperium_solaris_aeterna:0 "Imperium Solaris Aeterna"
   SOL_imperium_solaris_aeterna_desc:0 "The God-Empress has fully subdued this continent. From the coasts to the most remote inland town, they speak her praises and readily comply with her demands for sacrifice for the betterment of Harmony. Any heresy is repressed until there nothing remains but complete dedication to Her and to Order."
@@ -2308,9 +2312,9 @@
   SOL_new_radar:0 "Second-Generation RADAR Devices"
   SOL_new_radar_desc:0 "With the advent of RADAR, we have discovered a completely new way in which we can pre-emptively react to threats to Harmony and Order. However, it is just in its infancy, and while there are surely refinements, we can also brute force improvements by merging it with thaumaturgical aspects. Applying matrices and spells should greatly enhance our ability to see the unseen."
   SOL_bounties_of_earth:0 "Bounties of the Earth"
-  SOL_bounties_of_earth_desc:0 "[ROOT.GetNameDef] stretches across the only prairie and temperate lands on Equus, much of which still lies empty. Ponies have predominantly remained integrated with nature, with earth ponies frequently harmonizing with the landscapes and the beauty of the land. There is little reason to encourage them otherwise, but we shall require them to till more soil than before. More food means more bodies for the Empress's protection."
+  SOL_bounties_of_earth_desc:0 "[ROOT.GetNameDefCap] stretches across the only prairies on Equus, much of which still lies empty. Earth ponies have predominantly integrated with nature, and they have harmonized with the landscapes and the beauty of the land. There is little reason to encourage them otherwise, but we shall require them to till more soil than before. More food means more bodies for the Empress's protection."
   SOL_exploit_bosom:0 "Exploit Equestria's Heart"
-  SOL_exploit_bosom_desc:0 "[ROOT.GetNameDefCap] stretches across various ecosystems and biomes, many of which have remained untouched. However, with a fairly low population density, the concerns of many ponies, of a land that becomes shrouded in soot and grime, will never happen. While we will lose some potential farmland and perhaps some sensitive environments, it is a small price to pay for the mineral wealth we can acquire."
+  SOL_exploit_bosom_desc:0 "[ROOT.GetNameDefCap] stretches across various ecosystems and biomes, many of which have remained untouched. However, given the interior's low population density, ponies' concern of a land that becomes shrouded in soot and grime will never happen. While we will lose some potential farmland and some sensitive environments, it is a small price to pay for the mineral wealth we can acquire."
   SOL_sanctum_solar_directorate:0 "Directorate of [3.GetCapitalVictoryPointName] Science"
   SOL_sanctum_solar_directorate_desc:0 "Although the EEA technically is an education organization that oversees the state of the Empire's student and research body, it focuses on standards rather than direct guidance and overarching, scientific policy. Although we have brilliant researchers Empire-wide, they are uncoordinated and disorderly. By [ROOT.GetAdjectiveCap] decree, a central authority will be formed and thereby direct our scientific pursuits."
   SOL_expand_sol_invicta_academy:0 "Expand Sol Invicta Academy"

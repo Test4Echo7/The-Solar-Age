@@ -2149,6 +2149,16 @@ ideas = {
 				global_building_slots_factor = 0.1
 			}
 		}
+		SOL_limited_military_allowance = {
+			modifier = {
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+				local_resources_factor = 0.25
+				extra_trade_to_overlord_factor = 0.25
+				production_speed_buildings_factor = 0.1
+				conscription_factor = -0.66
+			}
+		}
 	}
 	###Research buffs
 	hidden_ideas = {

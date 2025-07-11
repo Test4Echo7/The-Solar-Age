@@ -13669,12 +13669,18 @@ country_event = { #Choose a governor for a released nation
         #Scripted effect here: this event should be triggered from the country being released, so FROM is a valid dynamic scope to use
         custom_effect_tooltip = SOL_other_duties_as_assigned_tt
         SOL_promote_SOL_governor = yes
+        FROM = {
+            add_ideas = SOL_limited_military_allowance
+        }
     }
     option = {
         name = solarreworked.530.b
         #Scripted effect for appointing governor from the released country. Same sort of deal as above.
         custom_effect_tooltip = SOL_lesser_choices_tt
         SOL_promote_local_governor = yes
+        FROM = {
+            add_ideas = SOL_limited_military_allowance
+        }
     }
 }
 
