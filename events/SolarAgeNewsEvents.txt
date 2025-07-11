@@ -212,6 +212,96 @@ news_event = { #Daybreaker declares herself God-Empress, renames the Solar Empir
 }
 
 news_event = {
+	id = news.solarage.7
+	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.7"}
+	title = news.solarage.7.t
+	desc = news.solarage.7.d
+	picture = GFX_news_event_galloping_gala
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = news.solarage.7.a
+		trigger = { tag = EQS }
+	}
+	option = {
+		name = news.solarage.7.b
+		trigger = { NOT = { tag = EQS } }
+	}
+}
+
+news_event = {
+	id = news.solarage.8
+	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.8"}
+	title = news.solarage.8.t
+	desc = news.solarage.8.d
+	picture = GFX_news_griffon_soldier
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = news.solarage.8.a
+		trigger = { tag = EQS }
+	}
+	option = {
+		name = news.solarage.8.b
+		trigger = { NOT = { tag = EQS } }
+	}
+}
+
+news_event = {
+	id = news.solarage.9
+	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.9"}
+	title = news.solarage.9.t
+	desc = {
+		trigger = { EQS = { has_country_flag = SOL_immolated_bats } }
+		text = news.solarage.9.d_a
+	}
+	desc = {
+		trigger = { EQS = { has_country_flag = SOL_manipulated_bats } }
+		text = news.solarage.9.d_b
+	}
+	picture = GFX_news_forever_sun
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = news.solarage.9.a
+		trigger = {
+			tag = EQS
+			has_country_flag = SOL_immolated_bats
+		}
+	}
+	option = {
+		name = news.solarage.9.b
+		trigger = {
+			NOT = { tag = EQS }
+			EQS = { has_country_flag = SOL_immolated_bats }
+		}
+	}
+	option = {
+		name = news.solarage.9.c
+		trigger = {
+			tag = EQS
+			has_country_flag = SOL_manipulated_bats
+		}
+	}
+	option = {
+		name = news.solarage.9.d
+		trigger = {
+			NOT = { tag = EQS }
+			EQS = { has_country_flag = SOL_manipulated_bats }
+		}
+	}
+}
+
+news_event = {
 	id = news.solarage.10
 	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.10"}
 	title = news.solarage.10.t
@@ -224,6 +314,70 @@ news_event = {
 
 	option = {
 		name = news.solarage.10.a
+		trigger = { tag = EQS }
+	}
+	option = {
+		name = news.solarage.10.b
+		trigger = { NOT = { tag = EQS } }
+	}
+}
+
+news_event = { #Daybreaker has gone and crowned herself Empress of Griffonkind, which was in a large and ostentatious ceremony that griffons the continent over were forced to attend; all are enraged
+	id = news.solarage.11
+	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.11"}
+	title = news.solarage.11.t
+	desc = news.solarage.11.d
+	picture = GFX_news_forever_sun
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = news.solarage.11.a
+		trigger = { tag = EQS }
+	}
+	option = {
+		name = news.solarage.11.b
+		trigger = { is_griffon_continent_griffon_country = yes }
+	}
+	option = {
+		name = news.solarage.11.c
+		trigger = {
+			NOT = {
+				tag = EQS
+			}
+		}
+	}
+}
+
+news_event = { #The Griffonian Liberation League has formed and promised that they will end Daybreaker's offensive rule of the Griffonian Empire and Griffenheim; she has united all of the griffon race against her
+	id = news.solarage.12
+	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.11"}
+	title = news.solarage.12.t
+	desc = news.solarage.12.d
+	picture = GFX_news_griffon_soldier
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = { #They can try!
+		name = news.solarage.12.a
+		trigger = { tag = EQS }
+	}
+	option = { #The pony usurper must be stopped!
+		name = news.solarage.12.b
+		trigger = { is_griffon_continent_griffon_country = yes }
+	}
+	option = { #Daybreaker has bitten off more than she can chew.
+		name = news.solarage.12.c
+		trigger = {
+			NOT = {
+				tag = EQS
+				is_griffon_continent_griffon_country = yes
+			}
+		}
 	}
 }
 

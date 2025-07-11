@@ -7123,6 +7123,13 @@ shared_focus = {
 			add_ideas = SOL_ordo_australis_archives
 		}
 		EQS_troll_chiropterra = yes
+		set_country_flag = SOL_manipulated_bats
+		hidden_effect = {
+			news_event = {
+				id = news.solarage.9
+				hours = 6
+			}
+		}
 		#Create puppet here
 		###Maybe event speaking about how the thestrals can still be useful, and that they need to be monitored and can more easily be done so by the IIS/Solaris Speculatores, and that a client state will be erected in it to compensate for no longer having direct control
 	}

@@ -3194,6 +3194,12 @@ country_event = { #Daybreaker marches and enters into the chambers of Grover, wh
                 modifier = EQS_pony_regent
             }
         }
+        hidden_effect = {
+            news_event = {
+                id = news.solarage.10
+                hours = 6
+            }
+        }
     }
 }
 
@@ -3306,12 +3312,64 @@ country_event = { #Daybreaker smugly walks through Griffonstone, in a parade wit
                 value = 300
             }
         }
-        every_country = {
-            limit = {
-                is_griffon_continent_griffon_country = yes
-                num_of_factories > 50
+        hidden_effect = {
+            news_event = {
+                id = news.solarage.11
+                hours = 6
             }
-            country_event = lakecity.90
+        }
+        if = {
+            limit = {
+                country_exists = FAT
+            }
+            hidden_effect = {
+                FAT = {
+                    country_event = {
+                        id = solarreworked.534
+                        days = 3
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                country_exists = JER
+            }
+            hidden_effect = {
+                JER = {
+                    country_event = {
+                        id = solarreworked.534
+                        days = 3
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                country_exists = WNG
+            }
+            hidden_effect = {
+                WNG = {
+                    country_event = {
+                        id = solarreworked.534
+                        days = 3
+                    }
+                }
+            }
+        }
+        else = {
+            hidden_effect = {
+                random_country = {
+                    limit = {
+                        exists = yes
+                        is_griffon_continent_griffon_country = yes
+                    }
+                    country_event = {
+                        id = solarreworked.534
+                        days = 3
+                    }
+                }
+            }
         }
     }
 }
@@ -8212,6 +8270,7 @@ country_event = { #A soldier learns that his squad has received final orders fro
     option = { #I will need to go to confessional after this.
         name = solarreworked.394.a
         set_country_flag = SOL_can_core_BAT_states
+        set_country_flag = SOL_immolated_bats
         save_current_manpower = yes
         custom_effect_tooltip = SOL_time_to_be_gamer_tt
         custom_effect_tooltip = BAR_viira_puppet_break
@@ -8281,6 +8340,12 @@ country_event = { #A soldier learns that his squad has received final orders fro
         restore_previous_manpower = yes
         add_stability = 0.1
         add_war_support = 0.1
+        hidden_effect = {
+            news_event = {
+                id = news.solarage.9
+                hours = 6
+            }
+        }
     }
 }
 
@@ -13792,6 +13857,111 @@ country_event = { #Hidden event for unlocking the Inferno CAS either for having 
                     plane_reliability_upgrade = 2
                 }
             }
+        }
+    }
+}
+
+country_event = { #Event telling the leader that Daybreaker has performed the greatest of insults to Griffonkind by crowning herself as their empress, and that the slight must be dealt with, but together, as one race, as the Solar Empire is incredibly strong on its own, but could be overwhelmed with enough support
+    id = solarreworked.534
+    title = solarreworked.534.t
+    desc = solarreworked.534.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.534"}
+    picture = GFX_event_daybreaker_throne
+
+    is_triggered_only = yes
+
+    option = { #Yes, form the federation.
+        name = solarreworked.534.a
+        create_faction = SOL_griffon_liberation_pact
+        add_political_power = 50
+        add_stability = 0.1
+        add_war_support = 0.1
+        every_other_country = {
+            limit = {
+                is_griffon_continent_griffon_country = yes
+                NOT = {
+                    tag = GRD
+                    tag = GRI
+                    has_country_flag = SOL_skipped_town
+                }
+                exists = yes
+                is_subject = no
+            }
+            country_event = solarreworked.535
+        }
+        create_wargoal = {
+			type = take_state_focus
+			target = 397.owner
+			generator = { 397 382 405 437 555 }
+		}
+		news_event = news.solarage.12
+    }
+    option = { #Who cares what happens to an old empire, anyway?
+        name = solarreworked.534.b
+        set_country_flag = SOL_skipped_town
+        if = {
+            limit = {
+                JER = {
+                    exists = yes
+                    NOT = { has_country_flag = SOL_skipped_town }
+                }
+            }
+            hidden_effect = {
+                JER = {
+                    country_event = solarreworked.534
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                WNG = {
+                    exists = yes
+                    NOT = { has_country_flag = SOL_skipped_town }
+                }
+            }
+            hidden_effect = {
+                WNG = {
+                    country_event = solarreworked.534
+                }
+            }
+        }
+        else = {
+            hidden_effect = {
+                random_country = {
+                    limit = {
+                        NOT = { has_country_flag = SOL_skipped_town }
+                        is_griffon_continent_griffon_country = yes
+                    }
+                    country_event = solarreworked.534
+                }
+            }
+        }
+        ai_chance = {
+            factor = 0
+        }
+    }
+}
+
+country_event = { #Event informing griffon country leader of the formation of the Griffonian Liberation League, and that they can join to liberate Griffenheim and the Griffonian Empire from Daybreaker if they wish to be remembered as loyalists to the throne.
+    id = solarreworked.535
+    title = solarreworked.535.t
+    desc = solarreworked.535.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.535"}
+    picture = GFX_event_griffon_shoot
+
+    is_triggered_only = yes
+
+    option = { #We must liberate Griffenheim!
+        name = solarreworked.535.a
+        FROM = {
+            add_to_faction = ROOT
+        }
+        #Continue event chain if deemed necessary so the leader has feedback.
+    }
+    option = { #We're not wasting our time with that!
+        name = solarreworked.535.b
+        ai_chance = {
+            factor = 0
         }
     }
 }

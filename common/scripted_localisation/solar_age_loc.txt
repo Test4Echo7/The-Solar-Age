@@ -388,3 +388,16 @@ defined_text = {
 		localization_key = EQS_it_be_a_mystery_m6
 	}
 }
+
+defined_text = {
+	name = GetCoronationState
+	text = {
+		trigger = {
+			389 = { is_owned_and_controlled_by = EQS }
+		}
+		localization_key = [389.GetCapitalVictoryPointName]
+	}
+	text = {
+		localization_key = [382.GetCapitalVictoryPointName]
+	}
+}
