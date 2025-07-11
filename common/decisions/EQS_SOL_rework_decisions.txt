@@ -1645,6 +1645,7 @@ EQS_GRD_assistance = {
                     is_core_of = JRR
                     is_core_of = JEB
                 }
+                NOT = { is_core_of = DRG }
                 is_owned_and_controlled_by = ROOT
             }
         }
@@ -1705,6 +1706,7 @@ EQS_GRD_assistance = {
                     is_core_of = JRR
                     is_core_of = JEB
                 }
+                NOT = { is_core_of = DRG }
             }
         }
 
@@ -1766,6 +1768,7 @@ EQS_GRD_assistance = {
                         is_core_of = JRR
                         is_core_of = JEB
                     }
+                    NOT = { is_core_of = DRG }
                 }
                 transfer_state_to = GRD
                 add_core_of = GRD
