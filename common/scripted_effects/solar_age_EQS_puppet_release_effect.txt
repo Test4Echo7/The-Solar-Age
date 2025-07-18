@@ -1265,27 +1265,29 @@ SOL_promote_local_governor = {
             FROM = { tag = NTR }
         }
         hidden_effect = {
-            NTR_princess_fiana_ii = {
-                if = {
-                    limit = {
-                        ROOT = { has_completed_focus = SOL_god_empress }
-                    }
-                    add_country_leader_role = {
-                        promote_leader = yes
-                        country_leader = {
-                            ideology = falangism
-                            expire = "1965.1.1"
-                            traits = { imperial_collaborator }
+            NTR = {
+                NTR_princess_fiana_ii = {
+                    if = {
+                        limit = {
+                            ROOT = { has_completed_focus = SOL_god_empress }
+                        }
+                        add_country_leader_role = {
+                            promote_leader = yes
+                            country_leader = {
+                                ideology = falangism
+                                expire = "1965.1.1"
+                                traits = { imperial_collaborator }
+                            }
                         }
                     }
-                }
-                else = {
-                    add_country_leader_role = {
-                        promote_leader = yes
-                        country_leader = {
-                            ideology = nazism
-                            expire = "1965.1.1"
-                            traits = { imperial_collaborator }
+                    else = {
+                        add_country_leader_role = {
+                            promote_leader = yes
+                            country_leader = {
+                                ideology = nazism
+                                expire = "1965.1.1"
+                                traits = { imperial_collaborator }
+                            }
                         }
                     }
                 }
