@@ -578,7 +578,7 @@ SOL_dealing_with_resistance = {
 			OR = {
 				has_completed_focus = SOL_Imperial_Investigative_Service
 				has_completed_focus = SOL_solaris_inquisitionis
-				has_completed_focus = SOL_Freedom_from_Fear
+				has_completed_focus = SOL_encourage_tattling
 			}
 			has_idea = SOL_harmonic_resistance_idea
 		}
