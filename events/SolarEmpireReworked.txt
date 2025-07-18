@@ -806,12 +806,14 @@ country_event = { #Daybreaker enters her personal armory, and takes a moment to 
 			EQS_princess_celestia = {
 				set_character_flag = SOL_daybreaker_boss
 			}
+			set_rule = { can_puppet = no }
 		}
 		add_power_balance_value = {
             id = EQS_vestments_of_power_bop
             value = -0.05
             tooltip_side = EQS_powa
         }
+        custom_effect_tooltip = SOL_border_gore_tt
 		custom_effect_tooltip = SOL_daybreaker_promotion_tt
 		custom_effect_tooltip = new_daybreaker_stats_tp
     }
@@ -7665,6 +7667,7 @@ country_event = { #Queen Velvet is brought forward to Daybreaker, who is rather 
 			OLE = {
                 set_country_flag = is_solar_puppet
                 set_cosmetic_tag = OLE_SOL
+                clear_variable = collaboration_formed_by
 			}
 			if = {
                 limit = {

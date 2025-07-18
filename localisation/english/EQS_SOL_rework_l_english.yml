@@ -593,6 +593,7 @@
   SOL_kaiserreich_reference_tt:0 "We can decide the §Ofate§! of §Y[GRD.GetNameDef]§! once we §Rdominate§! them."
   SOL_legitimate_yoinking_tt:0 "If we control §Y[389.GetName]§! we can claim that the §OEmpress§! is the legitmate successor to the §YGrover dynasty§!."
   SOL_angy_birbs_tt:0 "§RThis action will infuriate all former [GRI.GetNameDef] territories.§!"
+  SOL_border_gore_tt:0 "The §OEmpress§! will carve her §Rown§! borders onto this world. We will only be able to §Ypuppet§! other nations if we have the specific puppet §Owar goal§!."
   ###Last one in the chain. Remove comment later###
   SOL_conglaturation_a_winner_is_you_tt:0 "§GHarmony has been preserved and all of ponykind now bends the knee to Daybreaker. Thank you for playing the Solar Age! - Test4Echo§!"
 

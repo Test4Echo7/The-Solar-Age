@@ -414,7 +414,7 @@ handle_cosmetic_tag_and_puppet_change_weekly = {
 		}
 		else_if = {
 			limit = {
-				can_EQC_drop_NLR_SOL_EQS_cosmetic = yes
+				can_EQC_drop_NLR_SOL_EQS_cosmetic_solar_age = yes
 			}
 			log = "[GetDateText]: [Root.GetName]: drop_EQC_tag_on_weekly2"
 			drop_cosmetic_tag = yes
@@ -516,7 +516,7 @@ handle_cosmetic_tag_and_puppet_change_on_puppet = {
 			load_focus_tree = new_mareland_focus
 			if = {
 				limit = {
-					can_EQC_drop_NLR_SOL_EQS_cosmetic = yes
+					can_EQC_drop_NLR_SOL_EQS_cosmetic_solar_age = yes
 				}
 				log = "[GetDateText]: [Root.GetName]: drop_EQC_tag_on_puppet2"
 				drop_cosmetic_tag = yes
@@ -606,7 +606,7 @@ fire_EQC_tag_set_SOL_NLR_EQS = {
 fire_EQC_tag_drop_SOL_NLR_EQS = {
 	if = {
 		limit = {
-			can_EQC_drop_NLR_SOL_EQS_cosmetic = yes
+			can_EQC_drop_NLR_SOL_EQS_cosmetic_solar_age = yes
 		}
 		log = "[GetDateText]: [Root.GetName]: fire_EQC_tag_drop_SOL_NLR_EQS"
 		drop_cosmetic_tag = yes

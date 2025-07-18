@@ -1,3 +1,35 @@
+can_EQC_drop_NLR_SOL_EQS_cosmetic_solar_age = {
+	original_tag = EQC
+	NOT = { has_country_flag = is_maresoc }
+	NOT = { has_country_flag = equalist_eqc }
+	OR = {
+		AND = {
+			has_cosmetic_tag = EQC_EQS
+			NOT = { has_country_flag = EQC_govt_in_exile }
+			OR = {
+				is_subject = no
+				AND = {
+					overlord = {
+						is_original_EQS = yes
+						has_completed_focus = eqs_new_equestrian_republic
+					}
+				}
+			}
+		}
+		AND = {
+			has_cosmetic_tag = EQC_SOL
+			#NOT = { has_focus_tree = eqc_sol_focus }
+			NOT = { is_subject_of = EQS }
+		}
+		AND = {
+			OR = {
+				has_cosmetic_tag = EQC_NLR
+				has_cosmetic_tag = EQC_NLR_thestralia
+			}
+			NOT = { has_focus_tree = eqc_nlr_focus }
+		}
+	}
+}
 is_EQS_SOL = {
 	custom_trigger_tooltip = {
 		tooltip = is_EQS_SOL_tp

@@ -1246,7 +1246,7 @@ SOL_promote_local_governor = {
         }
         hidden_effect = {
             GRF = {
-                GRF_reyhard_ironclaw = { add_trait = { trait = imperial_collaborator ideology = nazism } }
+                GRF_skeiron = { add_trait = { trait = imperial_collaborator ideology = corporatocracy } }
             }
         }
     }

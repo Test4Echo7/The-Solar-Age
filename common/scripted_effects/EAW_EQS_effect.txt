@@ -3,6 +3,7 @@ EQS_remove_civil_war_ideas = {
 	hidden_effect = {
 		remove_ideas = SOL_civil_war
 		remove_ideas = communist_civil_war
+		remove_ideas = SOL_civil_war_measures_idea
 		if = {
 			limit = {
 				EQS_princess_celestia = {
@@ -506,15 +507,6 @@ EQS_SOL_civil_war = {
 		}
 		country_event = { id = solarempire.6 hours = 1 }
 	}
-	if = {
-		limit = {
-			NOT = { has_idea = alicorn_sisters }
-		}
-		add_popularity = {
-			ideology = fascism
-			popularity = 0.10
-		}
-	}
 	#set_cosmetic_tag = EQS_SOL
 	set_temp_variable = { var = civil_war_size value = 1 }
 	subtract_from_temp_variable = { var = civil_war_size value = party_popularity@fascism }
@@ -527,7 +519,6 @@ EQS_SOL_civil_war = {
 		size = civil_war_size
 		capital = 75
 	}
-	set_politics = { ruling_party = democratic }
 	if = {
 		limit = { is_faction_leader = no }
 		create_faction = "SOL_faction"
@@ -540,7 +531,7 @@ EQS_SOL_civil_war = {
 	add_ideas = SOL_civil_war
 	add_ideas = SOL_harmonic_resistance_idea
 	add_stability = -0.1
-	country_event = { id = solarempire.1018 }
+	hidden_effect = { country_event = { id = solarempire.1018 } }
 	#country_event = { id = solarempire.17 days = 4 }
 	#news_event = { id = news.sol.1 hours = 6 }
 	random_other_country = {
@@ -603,33 +594,35 @@ EQS_SOL_civil_war = {
 			set_nationality = event_target:solar_empire
 		}
 	}
-	if = {
-		limit = {
-			NOT = { has_country_flag = SOL_M6_fled }
- 		}
- 		country_event = {
-			id = solarreworked.156
-			days = 14
-			random_days = 7
- 		}
-	}
-	every_character = {
-		limit = {
-			OR = {
-				#is_character = EQS_applejack
-				is_character = EQS_sergeant_reckless
-				is_character = EQS_big_macintosh
-				# is_character = 8
-				#is_character = EQS_pinkie_pie
-				is_character = EQS_caltrop_decay
-				is_character = EQS_braeburn
-				is_character = EQS_NLR_tempest_wind
-				is_character = EQS_NLR_midnight_oil
-				is_character = EQS_oli_equites
-				is_character = EQS_NLR_bipen
+	hidden_effect = {
+		if = {
+			limit = {
+				NOT = { has_country_flag = SOL_M6_fled }
+			}
+			country_event = {
+				id = solarreworked.156
+				days = 14
+				random_days = 7
 			}
 		}
-		set_nationality = event_target:equestria
+		every_character = {
+			limit = {
+				OR = {
+					#is_character = EQS_applejack
+					is_character = EQS_sergeant_reckless
+					is_character = EQS_big_macintosh
+					# is_character = 8
+					#is_character = EQS_pinkie_pie
+					is_character = EQS_caltrop_decay
+					is_character = EQS_braeburn
+					is_character = EQS_NLR_tempest_wind
+					is_character = EQS_NLR_midnight_oil
+					is_character = EQS_oli_equites
+					is_character = EQS_NLR_bipen
+				}
+			}
+			set_nationality = event_target:equestria
+		}
 	}
 #	hidden_effect = {
 #		EQS_princess_celestia = {
@@ -668,8 +661,10 @@ EQS_SOL_civil_war = {
 		}
 	}
 	#EQS_SOL_show_advisors = yes
-	country_event = { id = solarreworked.219 days = 250 random_days = 100 }
-	country_event = { id = solarempire.44 days = 7 random_days = 35 }
+	hidden_effect = {
+		country_event = { id = solarreworked.219 days = 250 random_days = 100 }
+		country_event = { id = solarempire.44 days = 7 random_days = 35 }
+	}
 }
 
 #ROOT is EQS

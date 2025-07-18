@@ -8023,7 +8023,7 @@ shared_focus = {
 		trigger = {
 			tag = CRY
 		}
-		x = 46
+		x = 35
 		y = -1
 	}
 	offset = {
@@ -10022,7 +10022,7 @@ joint_focus = {
 	x = -10
 	y = 2
 	offset = {
-		x = 37
+		x = 31
 		y = -1
 		trigger = { tag = EQC }
 	}
