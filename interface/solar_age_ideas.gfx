@@ -23,4 +23,26 @@ SpriteTypes = {
         name = "GFX_idea_SOL_blueblood_regent"
         textureFile = "gfx/interface/ideas/SOL/SOL_blueblood_regent.tga"
     }
+
+    ###Civil War###
+    SpriteType = {
+        name = "GFX_idea_SOL_inflationary_spending"
+        textureFile = "gfx/interface/ideas/SOL/SOL_inflationary_spending_idea.png"
+    }
+    SpriteType = {
+        name = "GFX_idea_SOL_minimal_training_requirements"
+        textureFile = "gfx/interface/ideas/SOL/SOL_minimal_training_requirements_idea.png"
+    }
+    SpriteType = {
+        name = "GFX_idea_SOL_desperate_drafting"
+        textureFile = "gfx/interface/ideas/SOL/SOL_desperate_drafting_idea.png"
+    }
+    SpriteType = {
+        name = "GFX_idea_SOL_counter_insurgents"
+        textureFile = "gfx/interface/ideas/SOL/SOL_counter_insurgents_idea.png"
+    }
+    SpriteType = {
+        name = "GFX_idea_SOL_civil_war_measures_idea"
+        textureFile = "gfx/interface/ideas/SOL/SOL_imperial_emergencies_act_idea.png"
+    }
 }

@@ -242,7 +242,7 @@ shared_focus = {
 ###New civil war focuses###
 shared_focus = {
 	id = SOL_civil_war_measures
-	icon = GFX_goal_solar_military_factory
+	icon = GFX_goal_civil_war_measures_new
 	cost = 5
 	ai_will_do = {
 		factor = 300
@@ -294,6 +294,7 @@ shared_focus = {
     id = SOL_promise_swift_end
     x = -3
     y = 1
+    icon = GFX_goal_promise_swift_end
     relative_position_id = SOL_civil_war_measures
 
     cost = 2
@@ -341,6 +342,7 @@ shared_focus = {
     id = SOL_crisis_industrial_management
     x = 3
     y = 1
+    icon = GFX_goal_crisis_industrial_management
     relative_position_id = SOL_civil_war_measures
 
     cost = 3
@@ -389,6 +391,7 @@ shared_focus = {
     id = SOL_draw_upon_militia
     x = 0
     y = 1
+    icon = GFX_goal_draw_upon_militia
     relative_position_id = SOL_civil_war_measures
 
     cost = 4
@@ -439,6 +442,7 @@ shared_focus = {
     id = SOL_counter_terrorists
     x = 0
     y = 1
+    icon = GFX_goal_counter_terrorists
     relative_position_id = SOL_crisis_industrial_management
 
     cost = 4
@@ -487,6 +491,7 @@ shared_focus = {
     id = SOL_spending_money
     x = 2
     y = 1
+    icon =  GFX_goal_spending_money
     relative_position_id = SOL_crisis_industrial_management
 
     cost = 5
@@ -533,6 +538,7 @@ shared_focus = {
     id = SOL_herald_doom
     x = 1
     y = 1
+    icon = GFX_goal_herald_doom
     relative_position_id = SOL_promise_swift_end
 
     cost = 5
@@ -582,6 +588,7 @@ shared_focus = {
     id = SOL_take_everypony
     x = 0
     y = 1
+    icon = GFX_goal_take_everypony
     relative_position_id = SOL_draw_upon_militia
 
     cost = 5
@@ -629,7 +636,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_reconquer_equestria
-	icon = GFX_goal_solar_unite_equestria
+	icon = GFX_goal_reconquer_equestria_new
 	relative_position_id = SOL_take_everypony
 	prerequisite = {
 		focus = SOL_herald_doom

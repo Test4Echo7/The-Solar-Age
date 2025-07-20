@@ -168,6 +168,44 @@ SpriteTypes = {
         texturefile = "gfx/interface/goals/EQS/only_statistics.tga"
     }
 
+    ###Civil War###
+    SpriteType = {
+        name = GFX_goal_civil_war_measures_new
+        texturefile = "gfx/interface/goals/EQS/civil_war_measures_new.png"
+    }
+    SpriteType = {
+        name = GFX_goal_promise_swift_end
+        texturefile = "gfx/interface/goals/EQS/promise_swift_end.png"
+    }
+    SpriteType = {
+        name = GFX_goal_draw_upon_militia
+        texturefile = "gfx/interface/goals/EQS/draw_upon_militia.png"
+    }
+    SpriteType = {
+        name = GFX_goal_crisis_industrial_management
+        texturefile = "gfx/interface/goals/EQS/crisis_industrial_management.png"
+    }
+    SpriteType = {
+        name = GFX_goal_herald_doom
+        texturefile = "gfx/interface/goals/EQS/herald_doom.png"
+    }
+    SpriteType = {
+        name = GFX_goal_take_everypony
+        texturefile = "gfx/interface/goals/EQS/take_everypony.png"
+    }
+    SpriteType = {
+        name = GFX_goal_counter_terrorists
+        texturefile = "gfx/interface/goals/EQS/counter_terrorists.png"
+    }
+    SpriteType = {
+        name = GFX_goal_spending_money
+        texturefile = "gfx/interface/goals/EQS/spending_money.png"
+    }
+    SpriteType = {
+        name = GFX_goal_reconquer_equestria_new
+        texturefile = "gfx/interface/goals/EQS/reconquer_equestria_new.png"
+    }
+
     ###Diplomatic Corps###
     SpriteType = {
         name = GFX_goal_fealty_of_the_griffons
