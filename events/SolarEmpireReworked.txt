@@ -968,8 +968,24 @@ country_event = { #Daybreaker holds a speech in Sanctum Solar, which has just be
                 }
             }
             STG = {
-                if = { limit = { is_in_faction_with = ROOT } }
-                leave_faction = yes
+                if = {
+                    limit = { is_subject_of = ROOT }
+                    ROOT = { end_puppet = STG }
+                }
+                if = {
+                    limit = { is_in_faction_with = ROOT }
+                    leave_faction = yes
+                }
+            }
+            OLE = {
+                if = {
+                    limit = { is_subject_of = ROOT }
+                    ROOT = { end_puppet = OLE }
+                }
+                if = {
+                    limit = { is_in_faction_with = ROOT }
+                    leave_faction = yes
+                }
             }
         }
         if = {
@@ -12561,7 +12577,10 @@ country_event = { #Event quickly stating that now that the war is over, with EQC
                     remove_ideas = equestrian_overlord
                 }
             }
-            leave_faction = yes
+            if = {
+                limit = { is_in_faction_with = ROOT }
+                leave_faction = yes
+            }
             hidden_effect = {
                 drop_cosmetic_tag = yes
             }
@@ -12575,7 +12594,10 @@ country_event = { #Event quickly stating that now that the war is over, with EQC
                     remove_ideas = equestrian_overlord
                 }
             }
-            leave_faction = yes
+            if = {
+                limit = { is_in_faction_with = ROOT }
+                leave_faction = yes
+            }
             hidden_effect = {
                 drop_cosmetic_tag = yes
             }
@@ -12589,7 +12611,30 @@ country_event = { #Event quickly stating that now that the war is over, with EQC
                     remove_ideas = equestrian_overlord
                 }
             }
-            leave_faction = yes
+            if = {
+                limit = { is_in_faction_with = ROOT }
+                leave_faction = yes
+            }
+        }
+        STG = {
+            if = {
+                limit = { is_subject_of = ROOT }
+                ROOT = { end_puppet = STG }
+            }
+            if = {
+                limit = { is_in_faction_with = ROOT }
+                leave_faction = yes
+            }
+        }
+        OLE = {
+            if = {
+                limit = { is_subject_of = ROOT }
+                ROOT = { end_puppet = OLE }
+            }
+            if = {
+                limit = { is_in_faction_with = ROOT }
+                leave_faction = yes
+            }
         }
     }
 }
