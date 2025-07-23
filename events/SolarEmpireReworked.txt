@@ -987,6 +987,26 @@ country_event = { #Daybreaker holds a speech in Sanctum Solar, which has just be
                     leave_faction = yes
                 }
             }
+            HIP = {
+                if = {
+                    limit = { is_subject_of = ROOT }
+                    ROOT = { end_puppet = HIP }
+                }
+                if = {
+                    limit = { is_in_faction_with = ROOT }
+                    leave_faction = yes
+                }
+            }
+            ABY = {
+                if = {
+                    limit = { is_subject_of = ROOT }
+                    ROOT = { end_puppet = ABY }
+                }
+                if = {
+                    limit = { is_in_faction_with = ROOT }
+                    leave_faction = yes
+                }
+            }
         }
         if = {
             limit = {
@@ -12568,72 +12588,95 @@ country_event = { #Event quickly stating that now that the war is over, with EQC
 
     option = { #May the Sun incinerate them where they stand!
         name = solarreworked.502.a
-        CRY = {
-            if = {
-                limit = { is_subject_of = ROOT }
-                ROOT = { end_puppet = CRY }
+        custom_effect_tooltip = SOL_stabbed_again_tt
+        hidden_effect = {
+            CRY = {
                 if = {
-                    limit = { has_idea = equestrian_overlord }
-                    remove_ideas = equestrian_overlord
+                    limit = { is_subject_of = ROOT }
+                    ROOT = { end_puppet = CRY }
+                    if = {
+                        limit = { has_idea = equestrian_overlord }
+                        remove_ideas = equestrian_overlord
+                    }
+                }
+                if = {
+                    limit = { is_in_faction_with = ROOT }
+                    leave_faction = yes
+                }
+                hidden_effect = {
+                    drop_cosmetic_tag = yes
                 }
             }
-            if = {
-                limit = { is_in_faction_with = ROOT }
-                leave_faction = yes
-            }
-            hidden_effect = {
-                drop_cosmetic_tag = yes
-            }
-        }
-        EQC = {
-            if = {
-                limit = { is_subject_of = ROOT }
-                ROOT = { end_puppet = EQC }
+            EQC = {
                 if = {
-                    limit = { has_idea = equestrian_overlord }
-                    remove_ideas = equestrian_overlord
+                    limit = { is_subject_of = ROOT }
+                    ROOT = { end_puppet = EQC }
+                    if = {
+                        limit = { has_idea = equestrian_overlord }
+                        remove_ideas = equestrian_overlord
+                    }
+                }
+                if = {
+                    limit = { is_in_faction_with = ROOT }
+                    leave_faction = yes
+                }
+                hidden_effect = {
+                    drop_cosmetic_tag = yes
                 }
             }
-            if = {
-                limit = { is_in_faction_with = ROOT }
-                leave_faction = yes
-            }
-            hidden_effect = {
-                drop_cosmetic_tag = yes
-            }
-        }
-        PCB = {
-            if = {
-                limit = { is_subject_of = ROOT }
-                ROOT = { end_puppet = PCB }
+            PCB = {
                 if = {
-                    limit = { has_idea = equestrian_overlord }
-                    remove_ideas = equestrian_overlord
+                    limit = { is_subject_of = ROOT }
+                    ROOT = { end_puppet = PCB }
+                    if = {
+                        limit = { has_idea = equestrian_overlord }
+                        remove_ideas = equestrian_overlord
+                    }
+                }
+                if = {
+                    limit = { is_in_faction_with = ROOT }
+                    leave_faction = yes
                 }
             }
-            if = {
-                limit = { is_in_faction_with = ROOT }
-                leave_faction = yes
+            STG = {
+                if = {
+                    limit = { is_subject_of = ROOT }
+                    ROOT = { end_puppet = STG }
+                }
+                if = {
+                    limit = { is_in_faction_with = ROOT }
+                    leave_faction = yes
+                }
             }
-        }
-        STG = {
-            if = {
-                limit = { is_subject_of = ROOT }
-                ROOT = { end_puppet = STG }
+            OLE = {
+                if = {
+                    limit = { is_subject_of = ROOT }
+                    ROOT = { end_puppet = OLE }
+                }
+                if = {
+                    limit = { is_in_faction_with = ROOT }
+                    leave_faction = yes
+                }
             }
-            if = {
-                limit = { is_in_faction_with = ROOT }
-                leave_faction = yes
+            HIP = {
+                if = {
+                    limit = { is_subject_of = ROOT }
+                    ROOT = { end_puppet = HIP }
+                }
+                if = {
+                    limit = { is_in_faction_with = ROOT }
+                    leave_faction = yes
+                }
             }
-        }
-        OLE = {
-            if = {
-                limit = { is_subject_of = ROOT }
-                ROOT = { end_puppet = OLE }
-            }
-            if = {
-                limit = { is_in_faction_with = ROOT }
-                leave_faction = yes
+            ABY = {
+                if = {
+                    limit = { is_subject_of = ROOT }
+                    ROOT = { end_puppet = ABY }
+                }
+                if = {
+                    limit = { is_in_faction_with = ROOT }
+                    leave_faction = yes
+                }
             }
         }
     }

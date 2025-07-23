@@ -518,6 +518,7 @@
   EQS_is_solar_empire_tt:0 "Country is §Y[EQS.GetNameWithFlag]§!"
   SOL_done_screwed_up_tt:0 "Any country we will fight or that is fighting against us will receive:\n§YScorching Sun§!, which grants (Heat Attrition: §R+10.00%§!)."
   SOL_stabbed_tt:0 "Members of the §YUnited Ponies Alliance§! may §Rdesert§! us."
+  SOL_stabbed_again_tt:0 "The our fellow members of the §YUnited Ponies Alliance§! have §Rabandoned§! us!"
   SOL_become_based_tt:0 "§YDaybreaker§! will ascend to lead the new §OSolar Empire§! to unite Harmony against all those who oppose it!"
   SOL_no_fleeing_now_tt:0 "It will become more §Rdifficult§! for the §PElement Bearers§! to escape."
   SOL_hosting_M6:0 "Is currently harboring the §PElement Bearers§!"
