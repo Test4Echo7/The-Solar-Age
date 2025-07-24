@@ -36,8 +36,8 @@ EQS_add_GRD_cores = {
     FAL = { add_to_ROOT_potential_cores = yes }
     SIC = { add_to_ROOT_potential_cores = yes }
     CYA = { add_to_ROOT_potential_cores = yes }
-    HLQ = { add_to_ROOT_potential_cores = yes }
-    LNS = { add_to_ROOT_potential_cores = yes }
+    #HLQ = { add_to_ROOT_potential_cores = yes }
+    #LNS = { add_to_ROOT_potential_cores = yes }
     LUS = { add_to_ROOT_potential_cores = yes }
     GRW = { add_to_ROOT_potential_cores = yes }
     BRF = { add_to_ROOT_potential_cores = yes }

@@ -194,11 +194,11 @@ apply_SOL_cosmetic_tags_on_puppet = {
         country_event = solarempire.1034
     }
     else_if = {
-        limit = { original_tag = AES }
+        limit = { original_tag = MTO }
         country_event = solarempire.1035
     }
     else_if = {
-        limit = { original_tag = MTO }
+        limit = { original_tag = AES }
         country_event = solarempire.1036
     }
     else_if = {

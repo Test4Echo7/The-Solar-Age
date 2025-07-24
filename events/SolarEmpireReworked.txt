@@ -11449,7 +11449,7 @@ country_event = { #Country event speaking of either the yak's acceptance or reje
     is_triggered_only = yes
 
     option = { #So long as they don't stink up the place.
-        trigger = { YAK = { has_country_flag = SOL_YAK_accepted } }
+        trigger = { FROM = { has_country_flag = SOL_YAK_accepted } }
         name = solarreworked.485.a
         set_autonomy = {
             autonomous_state = autonomy_satellite
@@ -11570,7 +11570,7 @@ country_event = { #Country event speaking of either the yak's acceptance or reje
         }
     }
     option = { #Probably for the best to rid them of their stench.
-        trigger = { YAK = { has_country_flag = SOL_YAK_rejected } }
+        trigger = { FROM = { has_country_flag = SOL_YAK_rejected } }
         name = solarreworked.485.b
         if = {
             limit = { has_country_flag = SOL_twilight_away }
@@ -13419,14 +13419,59 @@ country_event = { #Short event of SOL demanding that the SRS territory which NTR
         ai_chance = {
             factor = 2
         }
-        effect_tooltip = {
-            every_state = {
-                limit = {
-                    is_core_of = SRS
-                    is_owned_and_controlled_by = ROOT
+        if = {
+            limit = {
+                SRS = { all_cores_owned_by_ROOT_or_subject = yes }
+            }
+            effect_tooltip = {
+                every_state = {
+                    limit = {
+                        is_core_of = SRS
+                        is_owned_and_controlled_by = ROOT
+                    }
+                    add_core_of = NTR
+                    NTR = { transfer_state = PREV.id }
                 }
-                add_core_of = NTR
-                NTR = { transfer_state = PREV.id }
+            }
+        }
+        if = {
+            limit = {
+                OR = {
+                    LNS = { all_cores_owned_by_ROOT_or_subject = yes }
+                    LSM = { all_cores_owned_by_ROOT_or_subject = yes }
+                    LSC = { all_cores_owned_by_ROOT_or_subject = yes }
+                }
+                RCT = { is_subject_of = FROM }
+            }
+            effect_tooltip = {
+                every_state = {
+                    limit = {
+                        OR = {
+                            is_core_of = LNS
+                            is_core_of = LMS
+                            is_core_of = LSC
+                        }
+                        is_owned_and_controlled_by = ROOT
+                    }
+                    add_core_of = RCT
+                    RCT = { transfer_state = PREV.id }
+                }
+            }
+        }
+        if = {
+            limit = {
+                HLQ = { all_cores_owned_by_ROOT_or_subject = yes }
+                RCT = { is_subject_of = FROM }
+            }
+            effect_tooltip = {
+                every_state = {
+                    limit = {
+                        is_core_of = HLQ
+                        is_owned_and_controlled_by = ROOT
+                    }
+                    add_core_of = RCT
+                    RCT = { transfer_state = PREV.id }
+                }
             }
         }
         set_country_flag = SOL_GRD_submitted_territory
@@ -13488,43 +13533,129 @@ country_event = { #SOL receives GRD's response about their demands
     option = { #Good to see they're reasonable.
         name = solarreworked.522.a
         trigger = {
-            GRD = {
+            FROM = {
                 has_country_flag = SOL_GRD_submitted_territory
                 NOT = { is_subject_of = ROOT }
             }
         }
         FROM = { clr_country_flag = SOL_GRD_submitted_territory }
-        every_state = {
+        if = {
             limit = {
-                is_core_of = SRS
-                is_owned_and_controlled_by = FROM
+                SRS = { all_cores_owned_by_ROOT_or_subject = yes }
             }
-            add_core_of = NTR
-            NTR = { transfer_state = PREV.id }
+            every_state = {
+                limit = {
+                    is_core_of = SRS
+                    is_owned_and_controlled_by = FROM
+                }
+                add_core_of = NTR
+                NTR = { transfer_state = PREV.id }
+            }
+        }
+        if = {
+            limit = {
+                OR = {
+                    LNS = { all_cores_owned_by_ROOT_or_subject = yes }
+                    LSM = { all_cores_owned_by_ROOT_or_subject = yes }
+                    LSC = { all_cores_owned_by_ROOT_or_subject = yes }
+                }
+            }
+            every_state = {
+                limit = {
+                    OR = {
+                        is_core_of = LNS
+                        is_core_of = LMS
+                        is_core_of = LSC
+                    }
+                    is_owned_and_controlled_by = FROM
+                }
+                add_core_of = RCT
+                RCT = { transfer_state = PREV.id }
+            }
+        }
+        if = {
+            limit = {
+                HLQ = {
+                    all_cores_owned_by_ROOT_or_subject = yes
+                    is_owned_and_controlled_by = FROM
+                }
+            }
+            every_state = {
+                limit = {
+                    is_core_of = HLQ
+                }
+                add_core_of = RCT
+                RCT = { transfer_state = PREV.id }
+            }
         }
     }
     option = { #We will have it back, one way or another...
         name = solarreworked.522.b
-        trigger = { GRD = { has_country_flag = SOL_GRD_refused_territory } }
+        trigger = { FROM = { has_country_flag = SOL_GRD_refused_territory } }
         FROM = { clr_country_flag = SOL_GRD_refused_territory }
         add_political_power = -25
     }
     option = { #How could she refuse herself?
         name = solarreworked.522.c
         trigger = {
-            GRD = {
+            FROM = {
                 has_country_flag = SOL_GRD_submitted_territory
                 is_subject_of = ROOT
             }
         }
         FROM = { clr_country_flag = SOL_GRD_submitted_territory }
-        every_state = {
+        if = {
             limit = {
-                is_core_of = SRS
-                is_owned_and_controlled_by = FROM
+                SRS = { all_cores_owned_by_ROOT_or_subject = yes }
             }
-            add_core_of = NTR
-            NTR = { transfer_state = PREV.id }
+            effect_tooltip = {
+                every_state = {
+                    limit = {
+                        is_core_of = SRS
+                        is_owned_and_controlled_by = FROM
+                    }
+                    add_core_of = NTR
+                    NTR = { transfer_state = PREV.id }
+                }
+            }
+        }
+        if = {
+            limit = {
+                OR = {
+                    LNS = { all_cores_owned_by_ROOT_or_subject = yes }
+                    LSM = { all_cores_owned_by_ROOT_or_subject = yes }
+                    LSC = { all_cores_owned_by_ROOT_or_subject = yes }
+                }
+            }
+            effect_tooltip = {
+                every_state = {
+                    limit = {
+                        OR = {
+                            is_core_of = LNS
+                            is_core_of = LMS
+                            is_core_of = LSC
+                        }
+                        is_owned_and_controlled_by = FROM
+                    }
+                    add_core_of = RCT
+                    RCT = { transfer_state = PREV.id }
+                }
+            }
+        }
+        if = {
+            limit = {
+                HLQ = { all_cores_owned_by_ROOT_or_subject = yes }
+            }
+            effect_tooltip = {
+                every_state = {
+                    limit = {
+                        is_core_of = HLQ
+                        is_owned_and_controlled_by = FROM
+                    }
+                    add_core_of = RCT
+                    RCT = { transfer_state = PREV.id }
+                }
+            }
         }
     }
 }
@@ -14250,6 +14381,7 @@ country_event = { #Daybreaker watches from her throne as the agents sent to the 
         set_technology = {
             SOL_solarist_necromancy = 1
         }
+        custom_effect_tooltip = SOL_solarist_zombinos_tt
     }
 }
 

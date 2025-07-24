@@ -1067,7 +1067,7 @@ SOL_promote_SOL_governor = {
     }
     else_if = {
         limit = {
-            FROM = { tag = MTO }
+            FROM = { tag = AES }
         }
         hidden_effect = {
             EQS_sweet_vale = {
@@ -1094,7 +1094,7 @@ SOL_promote_SOL_governor = {
                         }
                     }
                 }
-                set_nationality = MTO
+                set_nationality = AES
                 promote_character = yes
             }
             FROM = {
@@ -1614,11 +1614,11 @@ SOL_promote_local_governor = {
     }
     else_if = {
         limit = {
-            FROM = { tag = MTO }
+            FROM = { tag = AES }
         }
         hidden_effect = {
-            MTO = {
-                MTO_duke_kyrippos_ii = {
+            AES = {
+                AES_princess_zaida = {
                     if = {
                         limit = {
                             ROOT = { has_completed_focus = SOL_god_empress }
@@ -1775,15 +1775,18 @@ SOL_release_RIV = {
                     is_core_of = BAK
                     is_core_of = WIT
                     is_core_of = NIM
-                    is_core_of = BAR
                     is_core_of = FRE
                     is_core_of = LCT
                     is_core_of = DEP
+                    state = 625
+                    state = 626
+                    state = 624
                 }
                 NOT = { is_core_of = FIR }
                 NOT = { is_core_of = FBK }
                 NOT = { is_core_of = GRY }
                 NOT = { is_core_of = WAT }
+                NOT = { is_core_of = NCH }
             }
             add_core_of = RCT
             transfer_state_to = RCT
@@ -1822,6 +1825,7 @@ SOL_release_FBK = {
                 OR = {
                     is_core_of = WAT
                     is_core_of = FIR
+                    is_core_of = NCH
                 }
             }
             add_core_of = FBK
@@ -1848,7 +1852,6 @@ SOL_release_HLR = {
                     state = 418
                     state = 419
                     state = 420
-                    is_core_of = NCH
                 }
             }
             add_core_of = HLR
@@ -2099,6 +2102,7 @@ SOL_release_ZAR = {
                     is_core_of = CZR
                     is_core_of = ALO
                 }
+                NOT = is_core_of = TIM
             }
             add_core_of = ZAR
         }
@@ -2311,25 +2315,25 @@ SOL_release_KXN = {
         hidden_effect = { country_event = solarreworked.529 }
     }
 }
-SOL_release_MTO = {
+SOL_release_AES = {
     hidden_effect = {
         every_state = {
             limit = {
                 OR = {
                     is_core_of = KAR
-                    is_core_of = AES
+                    is_core_of = MTO
                     is_core_of = IDT
                 }
             }
-            add_core_of = MTO
+            add_core_of = AES
         }
     }
     release_autonomy = {
-        target = MTO
+        target = AES
         autonomous_state = autonomy_reichsprotectorate
     }
-    MTO = {
-        set_cosmetic_tag = MTO_SOL
+    AES = {
+        set_cosmetic_tag = AES_SOL
         set_country_flag = is_solar_puppet
         hidden_effect = { country_event = solarreworked.529 }
     }

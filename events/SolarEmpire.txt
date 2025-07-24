@@ -5590,7 +5590,7 @@ country_event = { # celestia Puppet
 
 	is_triggered_only = yes
 	option = {
-		set_cosmetic_tag = AES_SOL
+		set_cosmetic_tag = MTO_SOL
 
 		set_country_flag = is_solar_puppet
 	}
@@ -5603,19 +5603,19 @@ country_event = { # celestia Puppet
 
 	is_triggered_only = yes
 	option = {
-		set_cosmetic_tag = MTO_SOL
+		set_cosmetic_tag = AES_SOL
 		#One puppet only
 		if = {
 			limit = {
-				country_exists = AES
+				country_exists = MTO
 				is_subject_of = OVERLORD
 			}
 			annex_country = {
-				target = AES
+				target = MTO
 			}
 			every_state = {
 				limit = {
-					is_core_of = AES
+					is_core_of = MTO
 					is_owned_and_controlled_by = ROOT
 				}
 				add_core_of = ROOT

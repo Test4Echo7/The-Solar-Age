@@ -1631,8 +1631,8 @@ EQS_GRD_assistance = {
                     is_core_of = PYT
                     is_core_of = ANG
                     is_core_of = KAT
-                    is_core_of = HLQ
-                    is_core_of = LNS
+                    #is_core_of = HLQ
+                    #is_core_of = LNS
                     is_core_of = SRS
                     is_core_of = GRW
                     is_core_of = AET
@@ -1692,8 +1692,8 @@ EQS_GRD_assistance = {
                     is_core_of = PYT
                     is_core_of = ANG
                     is_core_of = KAT
-                    is_core_of = HLQ
-                    is_core_of = LNS
+                    #is_core_of = HLQ
+                    #is_core_of = LNS
                     is_core_of = SRS
                     is_core_of = GRW
                     is_core_of = AET
@@ -1754,8 +1754,8 @@ EQS_GRD_assistance = {
                         is_core_of = PYT
                         is_core_of = ANG
                         is_core_of = KAT
-                        is_core_of = HLQ
-                        is_core_of = LNS
+                        #is_core_of = HLQ
+                        #is_core_of = LNS
                         is_core_of = SRS
                         is_core_of = GRW
                         is_core_of = AET
@@ -1780,7 +1780,15 @@ EQS_GRD_assistance = {
         allowed = { tag = EQS }
         visible = {
             any_state = {
-                is_core_of = SRS
+                OR = {
+                    is_core_of = SRS
+                    OR = {
+                        is_core_of = LNS
+                        is_core_of = LSC
+                        is_core_of = LSM
+                    }
+                    is_core_of = HLQ
+                }
                 is_owned_and_controlled_by = GRD
             }
             #OR = {
@@ -1793,14 +1801,36 @@ EQS_GRD_assistance = {
                     is_in_faction_with = ROOT
                 }
             }
-            NTR = {
-                is_subject_of = ROOT
+            OR = {
+                NTR = {
+                    is_subject_of = ROOT
+                }
+                AND = {
+                    RCT = { is_subject_of = ROOT }
+                    any_state = {
+                        OR = {
+                            is_core_of = HLQ
+                            is_core_of = LNS
+                            is_core_of = LSC
+                            is_core_of = LSM
+                        }
+                        is_owned_and_controlled_by = GRD
+                    }
+                }
             }
         }
 
         highlight_states = {
             highlight_states_trigger = {
-                is_core_of = SRS
+                OR = {
+                    is_core_of = SRS
+                    is_core_of = HLQ
+                    OR = {
+                        is_core_of = LNS
+                        is_core_of = LSC
+                        is_core_of = LSM
+                    }
+                }
             }
         }
 
@@ -3730,7 +3760,24 @@ EQS_expand_imperial_territory_category = {
                 329 = { compliance > 40 }
             }
         }
-        visible = { has_country_flag = SOL_can_core_GRF_states }
+        visible = {
+            has_country_flag = SOL_can_core_GRF_states
+            NOT = {
+                any_state = {
+                    OR = {
+                        state = 58
+                        state = 338
+                        state = 222
+                        state = 239
+                        state = 242
+                        state = 329
+                    }
+                    OWNER = {
+                        is_subject_of = ROOT
+                    }
+                }
+            }
+        }
         highlight_states = {
             highlight_state_targets = {
                 state = 58
@@ -3745,6 +3792,7 @@ EQS_expand_imperial_territory_category = {
         days_remove = 30
         remove_effect = {
             log = "[GetDateText]: [Root.GetName]: Decision remove SOL_integrate_nouvelle_aquila_region"
+            custom_effect_tooltip = SOL_lets_be_greedy_tt
             58 = { add_core_of = ROOT }
             338 = { add_core_of = ROOT }
             222 = { add_core_of = ROOT }
@@ -3963,6 +4011,13 @@ EQS_expand_imperial_territory_category = {
         visible = {
             has_completed_focus = SOL_breach_zebrica
             NOT = { has_country_flag = SOL_formed_super_zebrica }
+            NOT = {
+                692 = {
+                    OWNER = {
+                        is_subject_of = ROOT
+                    }
+                }
+            }
         }
         highlight_states = {
             highlight_state_targets = {
@@ -3973,6 +4028,7 @@ EQS_expand_imperial_territory_category = {
         days_remove = 30
         remove_effect = {
             log = "[GetDateText]: [Root.GetName]: Decision remove SOL_integrate_manerba"
+            custom_effect_tooltip = SOL_lets_be_greedy_tt
             692 = { add_core_of = ROOT }
         }
     }
@@ -4254,12 +4310,14 @@ EQS_pan_pony_empire_category = {
             FBK = { all_original_cores_owned_by_ROOT = yes }
             FIR = { all_original_cores_owned_by_ROOT = yes }
             WAT = { all_original_cores_owned_by_ROOT = yes }
+            NCH = { all_original_cores_owned_by_ROOT = yes }
         }
         visible = {
             OR = {
                 FBK = { all_original_cores_owned_by_ROOT = yes }
                 FIR = { all_original_cores_owned_by_ROOT = yes }
                 WAT = { all_original_cores_owned_by_ROOT = yes }
+                NCH = { all_original_cores_owned_by_ROOT = yes }
             }
             NOT = { has_country_flag = SOL_formed_super_griffonia }
         }
@@ -4269,6 +4327,7 @@ EQS_pan_pony_empire_category = {
                     is_core_of = FBK
                     is_core_of = WAT
                     is_core_of = FIR
+                    is_core_of = NCH
                 }
             }
         }
@@ -4322,7 +4381,9 @@ EQS_pan_pony_empire_category = {
                         is_core_of = FRE
                         is_core_of = NIM
                         is_core_of = DEP
-                        is_core_of = BAR
+                        state = 625
+                        state = 626
+                        state = 624
                     }
                     NOT = {
                         is_core_of = FBK
@@ -4342,8 +4403,10 @@ EQS_pan_pony_empire_category = {
                         is_core_of = FRE
                         is_core_of = NIM
                         is_core_of = DEP
-                        is_core_of = BAR
                         is_core_of = DMT
+                        state = 625
+                        state = 626
+                        state = 624
                     }
                     NOT = {
                         is_core_of = FBK
@@ -4380,12 +4443,10 @@ EQS_pan_pony_empire_category = {
             #        owns_state = 420
             #    }
             #}
-            NCH = { all_original_cores_owned_by_ROOT = yes }
         }
         visible = {
             HLR = { all_original_cores_owned_by_ROOT = yes }
             DED = { all_original_cores_owned_by_ROOT = yes }
-            NCH = { all_original_cores_owned_by_ROOT = yes }
             NOT = { has_country_flag = SOL_formed_super_griffonia }
         }
         highlight_states = {
@@ -4406,7 +4467,6 @@ EQS_pan_pony_empire_category = {
                             state = 420
                         }
                     }
-                    is_core_of = NCH
                 }
             }
         }
@@ -4895,23 +4955,23 @@ EQS_pan_pony_empire_category = {
             GYZ = { all_cores_owned_by_ROOT_or_subject = yes }
             SLC = { all_cores_owned_by_ROOT_or_subject = yes }
             THU = { all_cores_owned_by_ROOT_or_subject = yes }
+            HYE = { all_cores_owned_by_ROOT_or_subject = yes }
         }
         visible = {
             OR = {
                 STM = {
-                    exists = yes
                     all_cores_owned_by_ROOT_or_subject = yes
                 }
                 GYZ = {
-                    exists = yes
                     all_cores_owned_by_ROOT_or_subject = yes
                 }
                 SLC = {
-                    exists = yes
                     all_cores_owned_by_ROOT_or_subject = yes
                 }
                 THU = {
-                    exists = yes
+                    all_cores_owned_by_ROOT_or_subject = yes
+                }
+                HYE = {
                     all_cores_owned_by_ROOT_or_subject = yes
                 }
             }
