@@ -12383,7 +12383,7 @@ country_event = {
         set_country_flag = SOL_GRI_rejected
         EQS = {
             country_event = {
-                id = solarreworked.494
+                id = solarreworked.496
                 days = 14
             }
         }
@@ -12417,7 +12417,7 @@ country_event = {
         set_country_flag = SOL_GRI_accepted
         EQS = {
             country_event = {
-                id = solarreworked.494
+                id = solarreworked.496
                 days = 14
             }
         }
