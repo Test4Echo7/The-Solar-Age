@@ -99,17 +99,23 @@ on_actions = {
                         OR = {
                             tag = EQS
                             tag = CHN
-                            tag = NLR
                         }
                     }
                     FROM = {
                         OR = {
                             tag = EQS
                             tag = CHN
-                            tag = NLR
                         }
                     }
-                    EQS = { NOT = { has_country_flag = EQS_tummies_be_rumbly } }
+                    EQS = {
+                        NOT = {
+                            OR = {
+                                has_country_flag = EQS_tummies_be_rumbly
+                                has_country_flag = SOL_harmonic_commanders_leave
+                                has_country_flag = SOL_purge_finished
+                            }
+                        }
+                    }
                 }
                 EQS = {
                     country_event = {

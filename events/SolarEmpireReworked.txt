@@ -9400,6 +9400,7 @@ country_event = {
     trigger = {
         tag = EQS
         has_war = yes
+        NOT = { has_war_with = NLR }
         power_balance_value = {
             id = EQS_sanity_bop
             value < 0.5
