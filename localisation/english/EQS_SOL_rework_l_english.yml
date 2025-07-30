@@ -440,7 +440,7 @@
   SOL_hunt_for_luna_lar_tt:0 "We can prepare §YOperation: Nightfall§! to capture §BLuna§! and let the Empress decide her §Rfate§!."
   SOL_hunt_for_luna_tt:0 "We can take a §Yspecial§! decision to capture §BLuna§! and let the Empress decide her §Rfate§!."
   EQS_unlock_operation_flyswatter_tt:0 "We can prepare §YOperation: Flyswatter§! to depose or eliminate §GChrysalis§! from §Y[CHN.GetNameDef]§!."
-  EQS_unlock_operation_mondwaffen_tt:0 "We can prepare §YOperation: Moonbeam§! to attempt to stop §BLuna's§! mad war."
+  EQS_unlock_operation_mondwaffen_tt:0 "We can prepare §YOperation: Moonbeam§! to attempt to hamper §BLuna's§! mad war."
   EQS_unlock_operation_infernis_tt:0 "We can prepare §YOperation: Infernis§! to "liberate" some kirin to determine their secrets of §Opyromancy§!."
   EQS_unlock_operation_necromancer_tt:0 "We can prepare §YOperation: Necromancer§! to pilfer the knowledge of the §Rdark arts§! from §Y[DED.GetNameDef]§!."
   EQS_unlock_operation_donner_tt:0 "We can prepare §YOperation: Donner§! to take the §YStaff of Sacanas§! from the §RStorm King's§! shattered kingdom."
