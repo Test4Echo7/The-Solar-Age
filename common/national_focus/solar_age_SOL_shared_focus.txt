@@ -1630,6 +1630,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_land_of_subjects"
 		add_ideas = SOL_holy_solar_empire
+		hidden_effect = { set_rule = { can_puppet = yes } }
 	}
 	search_filters = { FOCUS_FILTER_ANNEXATION }
 	ai_will_do = { factor = 80 }
