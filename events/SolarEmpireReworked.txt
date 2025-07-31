@@ -8956,7 +8956,7 @@ country_event = {
         name = solarreworked.419.a
         hidden_effect = {
             country_event = {
-                id = solarreworked.419
+                id = solarreworked.420
                 days = 3
             }
         }
