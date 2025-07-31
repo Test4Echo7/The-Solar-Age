@@ -424,11 +424,7 @@ DIPLOMACY_RELEASE_NATION_ENABLE_TRIGGER = { #Going to have to set this up for po
 		limit = {
 			original_tag = EQS
 			is_EQS_SOL = yes
-			OR = {
-				has_completed_focus = SOL_She_Who_Raises_the_Sun
-				has_completed_focus = SOL_Empress_knows_Best
-				has_completed_focus = SOL_Freedom_from_Fear
-			}
+			has_completed_focus = SOL_Imperium_Solis
 		}
 		custom_trigger_tooltip = {
 			tooltip = SOL_rebuilding_planet_please_stand_by
