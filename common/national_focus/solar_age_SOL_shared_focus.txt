@@ -2140,6 +2140,11 @@ shared_focus = {
 				days = 200
 				random_days = 150
 			}
+			country_event = {
+				id = solarreworked.419
+				days = 300
+				random_days = 65
+			}
 			if = {
 				limit = {
 					has_game_rule = {

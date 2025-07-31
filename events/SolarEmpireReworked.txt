@@ -4039,13 +4039,6 @@ country_event = { #A short follow-up event to the forces of the Solar Empire att
     picture = GFX_event_luna_hope
     immediate = {
         log = "[GetDateText]: [ROOT.GetName]: event solarreworked.153"
-        hidden_effect = {
-            country_event = {
-                id = solarreworked.420
-                days = 14
-                random_days = 63
-            }
-        }
     }
 
     is_triggered_only = yes
@@ -4067,6 +4060,11 @@ country_event = { #A short follow-up event to the forces of the Solar Empire att
                             days = 7
                             random_days = 5
                         }
+                    }
+                    country_event = {
+                        id = solarreworked.425
+                        days = 14
+                        random_days = 63
                     }
                 }
                 else_if = {
