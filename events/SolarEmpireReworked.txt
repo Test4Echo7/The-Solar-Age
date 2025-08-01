@@ -4619,7 +4619,7 @@ country_event = { #As Luna is having a meeting with some of her staff, somepony,
                     ROOT = {
                         EQS_princess_luna = {
                             set_character_flag = EQS_luna_leader_disabled
-                            set_nationality = THIS
+                            set_nationality = HIP
                         }
                     }
                 }
@@ -4637,7 +4637,7 @@ country_event = { #As Luna is having a meeting with some of her staff, somepony,
                     ROOT = {
                         EQS_princess_luna = {
                             set_character_flag = EQS_luna_leader_disabled
-                            set_nationality = THIS
+                            set_nationality = RCT
                         }
                     }
                 }
@@ -4652,7 +4652,7 @@ country_event = { #As Luna is having a meeting with some of her staff, somepony,
                     ROOT = {
                         EQS_princess_luna = {
                             set_character_flag = EQS_luna_leader_disabled
-                            set_nationality = THIS
+                            set_nationality = MGY
                         }
                     }
                 }
@@ -4667,8 +4667,8 @@ country_event = { #As Luna is having a meeting with some of her staff, somepony,
                 }
                 country_event = {
                     id = solarreworked.164
-                    days = 1
-                    random_days = 14
+                    days = 20
+                    random_days = 5
                 }
             }
         }
@@ -4724,12 +4724,13 @@ country_event = { #Luna arrives in Hippogriffia and is greeted by Novo, as one o
     option = { #Our flight is at an end.
         name = solarreworked.165.a
         custom_effect_tooltip = EQS_night_waifu_arrived_tt
-        every_possible_country = {
-            limit = { has_character = EQS_princess_luna }
-            EQS_princess_luna = {
-                clr_character_flag = EQS_luna_leader_disabled
+        hidden_effect = {
+            every_possible_country = {
+                limit = { has_character = EQS_princess_luna }
+                EQS_princess_luna = {
+                    clr_character_flag = EQS_luna_leader_disabled
+                }
             }
-            set_country_flag = EQS_hosted_luna
         }
     }
 }
