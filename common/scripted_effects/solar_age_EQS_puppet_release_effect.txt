@@ -1760,6 +1760,14 @@ SOL_release_PLB = {
         set_cosmetic_tag = ARC_SOL
         set_country_flag = is_solar_puppet
         hidden_effect = { country_event = solarreworked.529 }
+        if = {
+            limit = {
+                277 = { is_core_of = PLB }
+            }
+            hidden_effect = {
+                transfer_state_to = ROOT
+            }
+        }
     }
 }
 SOL_release_RIV = {
