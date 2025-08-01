@@ -6269,10 +6269,17 @@ country_event = { #Freeside restaurant
     }
 }
 
-country_event = { #Make fail chance later; Ponyville cottage
+country_event = { #Ponyville cottage
     id = solarreworked.286
     title = solarreworked.286.t
-    desc = solarreworked.286.d
+    desc = {
+        trigger = { has_country_flag = SOL_cottage_success }
+        text = solarreworked.286.d_a
+    }
+    desc = {
+        trigger = { has_country_flag = SOL_cottage_failure }
+        text = solarreworked.286.d_b
+    }
     picture = GFX_event_ponyville
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.286"}
 
@@ -6280,7 +6287,13 @@ country_event = { #Make fail chance later; Ponyville cottage
 
     option = {
         name = solarreworked.286.a
+        trigger = { has_country_flag = SOL_cottage_success }
         set_country_flag = SOL_unlocked_manehattan_only
+        add_manpower = -3
+    }
+    option = {
+        name = solarreworked.286.b
+        trigger = { has_country_flag = SOL_cottage_failure }
         add_manpower = -3
     }
 }
@@ -6350,10 +6363,17 @@ country_event = { #Manehattan opera house
     }
 }
 
-country_event = { #Dodge city post office; include fail chance later
+country_event = { #Dodge city post office
     id = solarreworked.291
     title = solarreworked.291.t
-    desc = solarreworked.291.d
+    desc = {
+        trigger = { has_country_flag = SOL_dodge_city_failure }
+        text = solarreworked.291.d_a
+    }
+    desc = {
+        trigger = { has_country_flag = SOL_dodge_city_success }
+        text = solarreworked.291.d_b
+    }
     picture = GFX_event_appleloosa
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.291"}
 
@@ -6361,6 +6381,11 @@ country_event = { #Dodge city post office; include fail chance later
 
     option = {
         name = solarreworked.291.a
+        trigger = { has_country_flag = SOL_dodge_city_failure }
+    }
+    option = {
+        name = solarreworked.291.b
+        trigger = { has_country_flag = SOL_dodge_city_success }
         set_country_flag = SOL_unlocked_sassy
     }
 }
@@ -6410,10 +6435,17 @@ country_event = { #Manehattan boutique
     }
 }
 
-country_event = { #Castle of Two Sisters search; include fail chance later
+country_event = { #Castle of Two Sisters search
     id = solarreworked.295
     title = solarreworked.295.t
-    desc = solarreworked.295.d
+    desc = {
+        trigger = { has_country_flag = SOL_castle_success }
+        text = solarreworked.295.d_a
+    }
+    desc = {
+        trigger = { has_country_flag = SOL_castle_failure }
+        text = solarreworked.295.d_b
+    }
     picture = GFX_event_luna_castle
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.295"}
 
@@ -6421,7 +6453,16 @@ country_event = { #Castle of Two Sisters search; include fail chance later
 
     option = {
         name = solarreworked.295.a
+        trigger = { has_country_flag = SOL_castle_success }
         set_country_flag = SOL_unlocked_canterlot_library
+        add_popularity = {
+            ideology = democratic
+            popularity = -0.02
+        }
+    }
+    option = {
+        name = solarreworked.295.b
+        trigger = { has_country_flag = SOL_castle_failure }
         add_popularity = {
             ideology = democratic
             popularity = -0.02
@@ -6462,7 +6503,18 @@ country_event = { #Canterlot boutique
 country_event = { #Sassy capture
     id = solarreworked.298
     title = solarreworked.298.t
-    desc = solarreworked.298.d
+    desc = {
+        trigger = { has_completed_focus = SOL_empress_protector }
+        text = solarreworked.298.d_a
+    }
+    desc = {
+        trigger = { has_completed_focus = SOL_empress_mother }
+        text = solarreworked.298.d_b
+    }
+    desc = {
+        trigger = { has_completed_focus = SOL_god_empress }
+        text = solarreworked.298.d_c
+    }
     picture = GFX_event_solarempire #Use Sassy portrait
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.298"}
 

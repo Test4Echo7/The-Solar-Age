@@ -6,9 +6,10 @@ tags={
 	"Events"
 	"National Focuses"
 }
-name="The Solar Age"
-dependencies = {
+name="Equestria at War: The Solar Age"
+dependencies={
 	"Equestria at War"
 }
 supported_version="1.16.*"
 path="/mod/SOL-Rework"
+remote_file_id="3539077570"
