@@ -295,9 +295,19 @@ handle_OLE_no_longer_CHN_puppet = {
 		}
 		drop_cosmetic_tag = yes
 	}
-	kill_ideology_leader = fascism
+	if = {
+		limit = {
+			OVERLORD = {
+				NOT = {
+					tag = EQS
+					is_EQS_SOL = yes
+				}
+			}
+		}
+		kill_ideology_leader = fascism
+		set_party_name = { ideology = fascism long_name = OLE_fascism_party_long name = OLE_fascism_party }
+	}
 	clr_country_flag = OLE_CHN_puppet
-	set_party_name = { ideology = fascism long_name = OLE_fascism_party_long name = OLE_fascism_party }
 }
 
 handle_CHN_fascist_overlord = {

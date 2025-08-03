@@ -1246,7 +1246,10 @@ SOL_promote_local_governor = {
         }
         hidden_effect = {
             GRF = {
-                GRF_skeiron = { add_trait = { trait = imperial_collaborator ideology = corporatocracy } }
+                GRF_skeiron = {
+                    add_trait = { trait = imperial_collaborator ideology = corporatocracy }
+                    promote_character = yes
+                }
             }
         }
     }
@@ -1715,12 +1718,30 @@ SOL_release_GRF = {
             limit = {
                 EQS = { has_country_flag = SOL_can_core_GRF_states }
             }
-            58 = { transfer_state_to = EQS }
-            338 = { transfer_state_to = EQS }
-            222 = { transfer_state_to = EQS }
-            239 = { transfer_state_to = EQS }
-            242 = { transfer_state_to = EQS }
-            329 = { transfer_state_to = EQS }
+            58 = {
+                transfer_state_to = EQS
+                add_core_of = EQS
+            }
+            338 = {
+                transfer_state_to = EQS
+                add_core_of = EQS
+            }
+            222 = {
+                transfer_state_to = EQS
+                add_core_of = EQS
+            }
+            239 = {
+                transfer_state_to = EQS
+                add_core_of = EQS
+            }
+            242 = {
+                transfer_state_to = EQS
+                add_core_of = EQS
+            }
+            329 = {
+                transfer_state_to = EQS
+                add_core_of = EQS
+            }
         }
     }
 }
