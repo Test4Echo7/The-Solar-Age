@@ -8018,13 +8018,33 @@ country_event = { #Daybreaker enters an interrogation or torture chamber, where 
     option = { #Then beg.
         name = solarreworked.382.a
         set_country_flag = SOL_doghouse_set_up
-        release_autonomy = {
-            target = DMT
-            autonomous_state = autonomy_reichskommissariat
+        hidden_effect = {
+            every_state = {
+                limit = {
+                    OR = {
+                        state = 638
+                        state = 647
+                        state = 637
+                        state = 635
+                    }
+                }
+                transfer_state_to = DMT
+            }
+            set_autonomy = {
+                target = DMT
+                autonomous_state = autonomy_reichskommissariat
+            }
+        }
+        effect_tooltip = {
+            release_autonomy = {
+                target = DMT
+                autonomous_state = autonomy_reichskommissariat
+            }
         }
         DMT = {
             set_country_flag = is_solar_puppet
             set_cosmetic_tag = DMT_SOL
+            add_ideas = SOL_limited_military_allowance
             hidden_effect = {
                 DMT_rover_diamondshield = { add_trait = { trait = imperial_governor ideology = kratokracy } }
             }
