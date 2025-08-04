@@ -3217,6 +3217,50 @@ country_event = { #Daybreaker marches and enters into the chambers of Grover, wh
                     days = 30
                     random_days = 30
                 }
+                every_state = {
+                    limit = {
+                        OR = {
+                            state = 358
+                            state = 357
+                            state = 354
+                            state = 356
+                            state = 359
+                            state = 355
+                            state = 362
+                            state = 363
+                            state = 364
+                            state = 365
+                            state = 361
+                            state = 360
+                            state = 675
+                            state = 676
+                        }
+                        is_owned_and_controlled_by = GRD
+                        EQC = {
+                            exists = yes
+                            is_subject_of = ROOT
+                        }
+                    }
+                    if = {
+                        limit = {
+                            EQC = {
+                                exists = yes
+                                is_subject_of = ROOT
+                            }
+                            transfer_state_to = EQC
+                        }
+                    }
+                    else_if = {
+                        limit = {
+                            EQC = { exists = no }
+                            any_state = {
+                                is_core_of = EQC
+                                is_owned_and_controlled_by = ROOT
+                            }
+                        }
+                        transfer_state_to = ROOT
+                    }
+                }
 			}
 		}
 		every_country = {
@@ -3354,6 +3398,50 @@ country_event = { #Daybreaker smugly walks through Griffonstone, in a parade wit
             news_event = {
                 id = news.solarage.11
                 hours = 6
+            }
+            every_state = {
+                limit = {
+                    OR = {
+                        state = 358
+                        state = 357
+                        state = 354
+                        state = 356
+                        state = 359
+                        state = 355
+                        state = 362
+                        state = 363
+                        state = 364
+                        state = 365
+                        state = 361
+                        state = 360
+                        state = 675
+                        state = 676
+                    }
+                    is_owned_and_controlled_by = GRD
+                    EQC = {
+                        exists = yes
+                        is_subject_of = ROOT
+                    }
+                }
+                if = {
+                    limit = {
+                        EQC = {
+                            exists = yes
+                            is_subject_of = ROOT
+                        }
+                        transfer_state_to = EQC
+                    }
+                }
+                else_if = {
+                    limit = {
+                        EQC = { exists = no }
+                        any_state = {
+                            is_core_of = EQC
+                            is_owned_and_controlled_by = ROOT
+                        }
+                    }
+                    transfer_state_to = ROOT
+                }
             }
         }
         if = {
@@ -13562,11 +13650,11 @@ country_event = { #SOL receives GRD's response about their demands
     title = solarreworked.522.t
     desc = {
         trigger = { FROM = { has_country_flag = SOL_GRD_submitted_territory } }
-        text = solarreworked.521.d_a
+        text = solarreworked.522.d_a
     }
     desc = {
         trigger = { FROM = { has_country_flag = SOL_GRD_refused_territory } }
-        text = solarreworked.521.d_b
+        text = solarreworked.522.d_b
     }
     desc = {
         trigger = {
@@ -13575,7 +13663,7 @@ country_event = { #SOL receives GRD's response about their demands
                 has_country_flag = SOL_GRD_submitted_territory
             }
         }
-        text = solarreworked.521.d_c
+        text = solarreworked.522.d_c
     }
     picture = GFX_event_solarempire
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.523"}
@@ -13601,7 +13689,7 @@ country_event = { #SOL receives GRD's response about their demands
                     is_owned_and_controlled_by = FROM
                 }
                 add_core_of = NTR
-                NTR = { transfer_state = PREV.id }
+                transfer_state_to = NTR
             }
         }
         if = {
@@ -13622,22 +13710,22 @@ country_event = { #SOL receives GRD's response about their demands
                     is_owned_and_controlled_by = FROM
                 }
                 add_core_of = RCT
-                RCT = { transfer_state = PREV.id }
+                transfer_state_to = RCT
             }
         }
         if = {
             limit = {
                 HLQ = {
                     all_cores_owned_by_ROOT_or_subject = yes
-                    is_owned_and_controlled_by = FROM
                 }
             }
             every_state = {
                 limit = {
                     is_core_of = HLQ
+                    #is_owned_and_controlled_by = FROM
                 }
                 add_core_of = RCT
-                RCT = { transfer_state = PREV.id }
+                transfer_state_to = RCT
             }
         }
     }
@@ -13660,15 +13748,13 @@ country_event = { #SOL receives GRD's response about their demands
             limit = {
                 SRS = { all_cores_owned_by_ROOT_or_subject = yes }
             }
-            effect_tooltip = {
-                every_state = {
-                    limit = {
-                        is_core_of = SRS
-                        is_owned_and_controlled_by = FROM
-                    }
-                    add_core_of = NTR
-                    NTR = { transfer_state = PREV.id }
+            every_state = {
+                limit = {
+                    is_core_of = SRS
+                    is_owned_and_controlled_by = FROM
                 }
+                add_core_of = NTR
+                transfer_state_to = NTR
             }
         }
         if = {
@@ -13679,34 +13765,32 @@ country_event = { #SOL receives GRD's response about their demands
                     LSC = { all_cores_owned_by_ROOT_or_subject = yes }
                 }
             }
-            effect_tooltip = {
-                every_state = {
-                    limit = {
-                        OR = {
-                            is_core_of = LNS
-                            is_core_of = LMS
-                            is_core_of = LSC
-                        }
-                        is_owned_and_controlled_by = FROM
+            every_state = {
+                limit = {
+                    OR = {
+                        is_core_of = LNS
+                        is_core_of = LMS
+                        is_core_of = LSC
                     }
-                    add_core_of = RCT
-                    RCT = { transfer_state = PREV.id }
+                    is_owned_and_controlled_by = FROM
                 }
+                add_core_of = RCT
+                transfer_state_to = RCT
             }
         }
         if = {
             limit = {
-                HLQ = { all_cores_owned_by_ROOT_or_subject = yes }
-            }
-            effect_tooltip = {
-                every_state = {
-                    limit = {
-                        is_core_of = HLQ
-                        is_owned_and_controlled_by = FROM
-                    }
-                    add_core_of = RCT
-                    RCT = { transfer_state = PREV.id }
+                HLQ = {
+                    all_cores_owned_by_ROOT_or_subject = yes
                 }
+            }
+            every_state = {
+                limit = {
+                    is_core_of = HLQ
+                    is_owned_and_controlled_by = FROM
+                }
+                add_core_of = RCT
+                transfer_state_to = RCT
             }
         }
     }

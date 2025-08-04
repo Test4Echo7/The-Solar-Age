@@ -1816,6 +1816,7 @@ SOL_release_RIV = {
                 NOT = { is_core_of = GRY }
                 NOT = { is_core_of = WAT }
                 NOT = { is_core_of = NCH }
+                NOT = { is_core_of = LUS }
             }
             add_core_of = RCT
             transfer_state_to = RCT
@@ -1825,6 +1826,38 @@ SOL_release_RIV = {
             every_state = {
                 limit = {
                     is_core_of = DMT
+                }
+                add_core_of = RCT
+                transfer_state_to = RCT
+            }
+        }
+        if = {
+            limit = { HLQ = { all_cores_owned_by_ROOT_or_subject = yes } }
+            every_state = {
+                limit = {
+                    is_core_of = HLQ
+                    NOT = { is_owned_by = GRD }
+                }
+                add_core_of = RCT
+                transfer_state_to = RCT
+            }
+        }
+        if = {
+            limit = {
+                OR = {
+                    LNS = { all_cores_owned_by_ROOT_or_subject = yes }
+                    LSC = { all_cores_owned_by_ROOT_or_subject = yes }
+                    LSM = { all_cores_owned_by_ROOT_or_subject = yes }
+                }
+            }
+            every_state = {
+                limit = {
+                    OR = {
+                        is_core_of = LNS
+                        is_core_of = LSC
+                        is_core_of = LSM
+                    }
+                    NOT = { is_owned_by = GRD }
                 }
                 add_core_of = RCT
                 transfer_state_to = RCT

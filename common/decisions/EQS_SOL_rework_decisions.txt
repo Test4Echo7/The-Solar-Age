@@ -1831,6 +1831,7 @@ EQS_GRD_assistance = {
                         is_core_of = LSM
                     }
                 }
+                is_owned_and_controlled_by = GRD
             }
         }
 
@@ -4424,6 +4425,68 @@ EQS_pan_pony_empire_category = {
 			SOL_release_RIV = yes
 		}
 	}
+	SOL_expand_RIV = {
+        allowed = {
+            original_tag = EQS
+        }
+        available = {
+            RIV = {
+                is_subject_of = ROOT
+                has_country_flag = is_solar_puppet
+            }
+            HLQ = {
+                all_cores_owned_by_ROOT = yes
+            }
+            OR = {
+                LNS = { all_cores_owned_by_ROOT = yes }
+                LSM = { all_cores_owned_by_ROOT = yes }
+                LSC = { all_cores_owned_by_ROOT = yes }
+            }
+        }
+        visible = {
+            RIV = {
+                is_subject_of = ROOT
+                has_country_flag = is_solar_puppet
+            }
+            HLQ = {
+                all_cores_owned_by_ROOT = yes
+            }
+            OR = {
+                LNS = { all_cores_owned_by_ROOT = yes }
+                LSM = { all_cores_owned_by_ROOT = yes }
+                LSC = { all_cores_owned_by_ROOT = yes }
+            }
+        }
+        highlight_states = {
+            highlight_states_trigger = {
+                OR = {
+                    is_core_of = LNS
+                    is_core_of = LSM
+                    is_core_of = LSC
+                    is_core_of = HLQ
+                }
+                is_owned_and_controlled_by = ROOT
+            }
+        }
+        fire_only_once = yes
+
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision SOL_expand_RIV"
+            every_state = {
+                limit = {
+                    OR = {
+                        is_core_of = LNS
+                        is_core_of = LSM
+                        is_core_of = LSC
+                        is_core_of = HLQ
+                    }
+                    is_owned_and_controlled_by = ROOT
+                }
+                add_core_of = RCT
+                transfer_state_to = RCT
+            }
+        }
+	}
 	SOL_release_HLR_super_puppet = {
         allowed = {
             original_tag = EQS
@@ -5291,9 +5354,41 @@ EQS_pan_pony_empire_category = {
                     limit = {
                         is_on_continent = europe
                         NOT = { is_owned_and_controlled_by = ROOT }
+                        NOT = {
+                            CRY = {
+                                exists = yes
+                                is_subject_of = ROOT
+                            }
+                            is_core_of = CRY
+                        }
                     }
                     transfer_state_to = ROOT
                     add_compliance = 25
+                }
+                if = {
+                    limit = {
+                        CRY = {
+                            exists = yes
+                            is_subject_of = ROOT
+                        }
+                    }
+                    annex_country = {
+                        target = CRY
+                        transfer_troops = yes
+                    }
+                }
+                every_state = {
+                    limit = {
+                        OR = {
+                            is_core_of = CRY
+                            is_core_of = STG
+                            is_core_of = STL
+                            is_core_of = PCB
+                            is_core_of = DRG
+                        }
+                        NOT = { is_core_of = ROOT }
+                    }
+                    add_core_of = ROOT
                 }
                 every_state = {
                     limit = {

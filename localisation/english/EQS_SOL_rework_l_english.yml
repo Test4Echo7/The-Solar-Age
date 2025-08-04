@@ -297,6 +297,8 @@
   SOL_release_FBK_super_puppet:0 "Unite the Northern Riverponies"
   SOL_release_NTR:0 "Agree to [NTR.GetNameDef]'s Limited Self-Governance"
   SOL_release_RIV:0 "Appoint a [RIV.GetAdjectiveCap] Governor"
+  SOL_expand_RIV:0 "Return Ancient River Pony Territory"
+  SOL_expand_RIV_desc:0 "Before the conquests of Grover II, the lands that were given to [LNS.GetNameDef] and [HLQ.GetNameDef] were claimed by the river ponies. In the aftermath of Grover II's death, the griffons still held onto the territory just east of the Crown's land. Since then they have touted themselves as masters of what rightfully belongs to ponies! With it now under our control, it is only right we return it to our citizens, so they may reunite with all those that have been trapped under a griffon claw for so long."
   SOL_release_MIT:0 "Establish [MIT.GetAdjectiveCap] Subject Dynasty"
   SOL_release_ZES_super_puppet:0 "Bring Order to the Griffonian Deer and Zebra"
   SOL_release_HLR_super_puppet:0 "Establish Necromancy Overwatch"

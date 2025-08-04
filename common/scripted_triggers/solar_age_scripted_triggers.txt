@@ -131,7 +131,23 @@ EQS_no_equus_nation_other_than_EQS = {
 		LSP = { all_cores_owned_by_ROOT_or_subject = yes }
 		MAN = { all_cores_owned_by_ROOT_or_subject = yes }
 		ELF = { all_cores_owned_by_ROOT_or_subject = yes }
-
+		PCB = { all_cores_owned_by_ROOT_or_subject = yes }
+		1196 = {
+			OWNER = {
+				OR = {
+					tag = ROOT
+					is_subject_of = ROOT
+				}
+			}
+		}
+		1197 = {
+			OWNER = {
+				OR = {
+					tag = ROOT
+					is_subject_of = ROOT
+				}
+			}
+		}
 	}
 }
 EQS_no_equus_nation_other_than_EQS_griffonia = {
