@@ -150,7 +150,7 @@ leader_traits = {
         operative_slot = 1
         agency_upgrade_time = -0.15
         operation_cost = -0.05
-        decryption_factor = 0.15
+        intel_from_operatives_factor = 0.1
 
         ai_will_do = {
 			factor = 1
@@ -253,7 +253,7 @@ leader_traits = {
         random = no
         agency_upgrade_time = -0.15
         operation_cost = -0.05
-        decryption_factor = 0.15
+        intel_from_operatives_factor = 0.15
         operative_slot = 3
         enemy_operative_detection_chance_factor = 0.1
         own_operative_detection_chance_factor = -0.05
