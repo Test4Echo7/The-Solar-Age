@@ -2,120 +2,120 @@ SpriteTypes = {
     ###Opening Section###
     SpriteType = {
         name = GFX_goal_waking_dawn_star
-        texturefile = "gfx/interface/goals/EQS/waking_dawn_star.png"
+        texturefile = "gfx/interface/goals/EQS/waking_dawn_star.tga"
     }
     ###God-Empress###
     SpriteType = {
         name = GFX_goal_god_empress
-        texturefile = "gfx/interface/goals/EQS/god_empress.png"
+        texturefile = "gfx/interface/goals/EQS/god_empress.tga"
     }
     SpriteType = {
         name = GFX_goal_unveil_cultus
-        texturefile = "gfx/interface/goals/EQS/unveil_cultus.png"
+        texturefile = "gfx/interface/goals/EQS/unveil_cultus.tga"
     }
     SpriteType = {
         name = GFX_goal_solaris_adoratio
-        texturefile = "gfx/interface/goals/EQS/solaris_adoratio.png"
+        texturefile = "gfx/interface/goals/EQS/solaris_adoratio.tga"
     }
     SpriteType = {
         name = GFX_goal_solaris_inquisitionis
-        texturefile = "gfx/interface/goals/EQS/solaris_inquisitionis.png"
+        texturefile = "gfx/interface/goals/EQS/solaris_inquisitionis.tga"
     }
     SpriteType = {
         name = GFX_goal_suffer_not_heresy
-        texturefile = "gfx/interface/goals/EQS/suffer_not_heresy.png"
+        texturefile = "gfx/interface/goals/EQS/suffer_not_heresy.tga"
     }
     SpriteType = {
         name = GFX_goal_mandatory_temple_attendance
-        texturefile = "gfx/interface/goals/EQS/mandatory_temple_attendance.png"
+        texturefile = "gfx/interface/goals/EQS/mandatory_temple_attendance.tga"
     }
     SpriteType = {
         name = GFX_goal_inquisitionis_primary_role
-        texturefile = "gfx/interface/goals/EQS/inquisitionis_primary_role.png"
+        texturefile = "gfx/interface/goals/EQS/inquisitionis_primary_role.tga"
     }
     SpriteType = {
         name = GFX_goal_inquisitionis_secondary_role
-        texturefile = "gfx/interface/goals/EQS/inquisitionis_secondary_role.png"
+        texturefile = "gfx/interface/goals/EQS/inquisitionis_secondary_role.tga"
     }
     SpriteType = {
         name = GFX_goal_solaris_speculatores
-        texturefile = "gfx/interface/goals/EQS/solaris_speculatores.png"
+        texturefile = "gfx/interface/goals/EQS/solaris_speculatores.tga"
     }
     SpriteType = {
         name = GFX_goal_Lux_et_Tenebris
-        texturefile = "gfx/interface/goals/EQS/Lux_et_Tenebris.png"
+        texturefile = "gfx/interface/goals/EQS/Lux_et_Tenebris.tga"
     }
     SpriteType = {
         name = GFX_goal_faith_honor_family
-        texturefile = "gfx/interface/goals/EQS/faith_honor_family.png"
+        texturefile = "gfx/interface/goals/EQS/faith_honor_family.tga"
     }
     SpriteType = {
         name = GFX_goal_faith_sacrifice_worship
-        texturefile = "gfx/interface/goals/EQS/faith_sacrifice_worship.png"
+        texturefile = "gfx/interface/goals/EQS/faith_sacrifice_worship.tga"
     }
     SpriteType = {
         name = GFX_goal_field_executions
-        texturefile = "gfx/interface/goals/EQS/field_executions.png"
+        texturefile = "gfx/interface/goals/EQS/field_executions.tga"
     }
     SpriteType = {
         name = GFX_goal_state_personified_new
-        texturefile = "gfx/interface/goals/EQS/state_personified.png"
+        texturefile = "gfx/interface/goals/EQS/state_personified.tga"
     }
     SpriteType = {
         name = GFX_goal_the_solar_games
-        texturefile = "gfx/interface/goals/EQS/the_solar_games.png"
+        texturefile = "gfx/interface/goals/EQS/the_solar_games.tga"
     }
     SpriteType = {
         name = GFX_goal_raising_generations
-        texturefile = "gfx/interface/goals/EQS/raising_generations.png"
+        texturefile = "gfx/interface/goals/EQS/raising_generations.tga"
     }
     SpriteType = {
         name = GFX_goal_sacrifices_from_birth
-        texturefile = "gfx/interface/goals/EQS/sacrifices_from_birth.png"
+        texturefile = "gfx/interface/goals/EQS/sacrifices_from_birth.tga"
     }
     SpriteType = {
         name = GFX_goal_annual_purges
-        texturefile = "gfx/interface/goals/EQS/annual_purges.png"
+        texturefile = "gfx/interface/goals/EQS/annual_purges.tga"
     }
     SpriteType = {
         name = GFX_goal_enlightened_education
-        texturefile = "gfx/interface/goals/EQS/enlightened_education.png"
+        texturefile = "gfx/interface/goals/EQS/enlightened_education.tga"
     }
     SpriteType = {
         name = GFX_goal_tradition_of_worship
-        texturefile = "gfx/interface/goals/EQS/tradition_of_worship.png"
+        texturefile = "gfx/interface/goals/EQS/tradition_of_worship.tga"
     }
     SpriteType = {
         name = GFX_goal_sacrifices_on_assembly_line
-        texturefile = "gfx/interface/goals/EQS/sacrifices_on_assembly_line.png"
+        texturefile = "gfx/interface/goals/EQS/sacrifices_on_assembly_line.tga"
     }
     SpriteType = {
         name = GFX_goal_generals_above_rest
-        texturefile = "gfx/interface/goals/EQS/generals_above_rest.png"
+        texturefile = "gfx/interface/goals/EQS/generals_above_rest.tga"
     }
     SpriteType = {
         name = GFX_goal_fodder_troops
-        texturefile = "gfx/interface/goals/EQS/fodder_troops.png"
+        texturefile = "gfx/interface/goals/EQS/fodder_troops.tga"
     }
     SpriteType = {
         name = GFX_goal_combine_church_and_state
-        texturefile = "gfx/interface/goals/EQS/combine_church_and_state.png"
+        texturefile = "gfx/interface/goals/EQS/combine_church_and_state.tga"
     }
     SpriteType = {
         name = GFX_goal_honorable_guards
-        texturefile = "gfx/interface/goals/EQS/honorable_guards.png"
+        texturefile = "gfx/interface/goals/EQS/honorable_guards.tga"
     }
     SpriteType = {
         name = GFX_goal_monsters_of_earth
-        texturefile = "gfx/interface/goals/EQS/monsters_of_earth.png"
+        texturefile = "gfx/interface/goals/EQS/monsters_of_earth.tga"
     }
     SpriteType = {
         name = GFX_goal_she_who_raises_the_sun_new
-        texturefile = "gfx/interface/goals/EQS/she_who_raises_the_sun.png"
+        texturefile = "gfx/interface/goals/EQS/she_who_raises_the_sun.tga"
     }
     SpriteType = {
         name = GFX_goal_better_than_best
-        texturefile = "gfx/interface/goals/EQS/better_than_best.png"
+        texturefile = "gfx/interface/goals/EQS/better_than_best.tga"
     }
 
     ###Army###
@@ -171,160 +171,160 @@ SpriteTypes = {
     ###Civil War###
     SpriteType = {
         name = GFX_goal_civil_war_measures_new
-        texturefile = "gfx/interface/goals/EQS/civil_war_measures_new.png"
+        texturefile = "gfx/interface/goals/EQS/civil_war_measures_new.tga"
     }
     SpriteType = {
         name = GFX_goal_promise_swift_end
-        texturefile = "gfx/interface/goals/EQS/promise_swift_end.png"
+        texturefile = "gfx/interface/goals/EQS/promise_swift_end.tga"
     }
     SpriteType = {
         name = GFX_goal_draw_upon_militia
-        texturefile = "gfx/interface/goals/EQS/draw_upon_militia.png"
+        texturefile = "gfx/interface/goals/EQS/draw_upon_militia.tga"
     }
     SpriteType = {
         name = GFX_goal_crisis_industrial_management
-        texturefile = "gfx/interface/goals/EQS/crisis_industrial_management.png"
+        texturefile = "gfx/interface/goals/EQS/crisis_industrial_management.tga"
     }
     SpriteType = {
         name = GFX_goal_herald_doom
-        texturefile = "gfx/interface/goals/EQS/herald_doom.png"
+        texturefile = "gfx/interface/goals/EQS/herald_doom.tga"
     }
     SpriteType = {
         name = GFX_goal_take_everypony
-        texturefile = "gfx/interface/goals/EQS/take_everypony.png"
+        texturefile = "gfx/interface/goals/EQS/take_everypony.tga"
     }
     SpriteType = {
         name = GFX_goal_counter_terrorists
-        texturefile = "gfx/interface/goals/EQS/counter_terrorists.png"
+        texturefile = "gfx/interface/goals/EQS/counter_terrorists.tga"
     }
     SpriteType = {
         name = GFX_goal_spending_money
-        texturefile = "gfx/interface/goals/EQS/spending_money.png"
+        texturefile = "gfx/interface/goals/EQS/spending_money.tga"
     }
     SpriteType = {
         name = GFX_goal_reconquer_equestria_new
-        texturefile = "gfx/interface/goals/EQS/reconquer_equestria_new.png"
+        texturefile = "gfx/interface/goals/EQS/reconquer_equestria_new.tga"
     }
 
     ###Diplomatic Corps###
     SpriteType = {
         name = GFX_goal_fealty_of_the_griffons
-        texturefile = "gfx/interface/goals/EQS/fealty_of_the_griffons.png"
+        texturefile = "gfx/interface/goals/EQS/fealty_of_the_griffons.tga"
     }
     SpriteType = {
         name = GFX_goal_imperial_diplomatic_corps
-        texturefile = "gfx/interface/goals/EQS/imperial_diplomatic_corps.png"
+        texturefile = "gfx/interface/goals/EQS/imperial_diplomatic_corps.tga"
     }
     SpriteType = {
         name = GFX_goal_insurance_policies
-        texturefile = "gfx/interface/goals/EQS/insurance_policies.png"
+        texturefile = "gfx/interface/goals/EQS/insurance_policies.tga"
     }
     SpriteType = {
         name = GFX_goal_workers_for_sustenance
-        texturefile = "gfx/interface/goals/EQS/workers_for_sustenance.png"
+        texturefile = "gfx/interface/goals/EQS/workers_for_sustenance.tga"
     }
     SpriteType = {
         name = GFX_goal_oil_for_existence
-        texturefile = "gfx/interface/goals/EQS/oil_for_existence.png"
+        texturefile = "gfx/interface/goals/EQS/oil_for_existence.tga"
     }
     SpriteType = {
         name = GFX_goal_the_empire_across_the_sea
-        texturefile = "gfx/interface/goals/EQS/the_empire_across_the_sea.png"
+        texturefile = "gfx/interface/goals/EQS/the_empire_across_the_sea.tga"
     }
 
     ###Bats###
     SpriteType = {
         name = GFX_goal_the_bat_problem
-        texturefile = "gfx/interface/goals/EQS/the_bat_problem.png"
+        texturefile = "gfx/interface/goals/EQS/the_bat_problem.tga"
     }
     SpriteType = {
         name = GFX_goal_fire_and_brimstone
-        texturefile = "gfx/interface/goals/EQS/fire_and_brimstone.png"
+        texturefile = "gfx/interface/goals/EQS/fire_and_brimstone.tga"
     }
     SpriteType = {
         name = GFX_goal_what_homes
-        texturefile = "gfx/interface/goals/EQS/what_homes.png"
+        texturefile = "gfx/interface/goals/EQS/what_homes.tga"
     }
     SpriteType = {
         name = GFX_goal_what_jobs
-        texturefile = "gfx/interface/goals/EQS/what_jobs.png"
+        texturefile = "gfx/interface/goals/EQS/what_jobs.tga"
     }
     SpriteType = {
         name = GFX_goal_burn_bats
-        texturefile = "gfx/interface/goals/EQS/burn_bats.png"
+        texturefile = "gfx/interface/goals/EQS/burn_bats.tga"
     }
     SpriteType = {
         name = GFX_goal_enlighten_darkness
-        texturefile = "gfx/interface/goals/EQS/enlighten_darkness.png"
+        texturefile = "gfx/interface/goals/EQS/enlighten_darkness.tga"
     }
     SpriteType = {
         name = GFX_goal_second_class_employers
-        texturefile = "gfx/interface/goals/EQS/second_class_employers.png"
+        texturefile = "gfx/interface/goals/EQS/second_class_employers.tga"
     }
     SpriteType = {
         name = GFX_goal_mandatory_education
-        texturefile = "gfx/interface/goals/EQS/mandatory_education.png"
+        texturefile = "gfx/interface/goals/EQS/mandatory_education.tga"
     }
     SpriteType = {
         name = GFX_goal_useful_servants
-        texturefile = "gfx/interface/goals/EQS/useful_servants.png"
+        texturefile = "gfx/interface/goals/EQS/useful_servants.tga"
     }
     SpriteType = {
         name = GFX_goal_peninsula_of_damned
-        texturefile = "gfx/interface/goals/EQS/peninsula_of_damned.png"
+        texturefile = "gfx/interface/goals/EQS/peninsula_of_damned.tga"
     }
     SpriteType = {
         name = GFX_goal_prison_of_fire
-        texturefile = "gfx/interface/goals/EQS/prison_of_fire.png"
+        texturefile = "gfx/interface/goals/EQS/prison_of_fire.tga"
     }
     SpriteType = {
         name = GFX_goal_peaks_of_wealth
-        texturefile = "gfx/interface/goals/EQS/peaks_of_wealth.png"
+        texturefile = "gfx/interface/goals/EQS/peaks_of_wealth.tga"
     }
     SpriteType = {
         name = GFX_goal_remote_no_more
-        texturefile = "gfx/interface/goals/EQS/remote_no_more.png"
+        texturefile = "gfx/interface/goals/EQS/remote_no_more.tga"
     }
     SpriteType = {
         name = GFX_goal_expand_oil_fields
-        texturefile = "gfx/interface/goals/EQS/expand_oil_fields.png"
+        texturefile = "gfx/interface/goals/EQS/expand_oil_fields.tga"
     }
     SpriteType = {
         name = GFX_goal_modern_south_east
-        texturefile = "gfx/interface/goals/EQS/modern_south_east.png"
+        texturefile = "gfx/interface/goals/EQS/modern_south_east.tga"
     }
     SpriteType = {
         name = GFX_goal_moonspeaker_tax
-        texturefile = "gfx/interface/goals/EQS/moonspeaker_tax.png"
+        texturefile = "gfx/interface/goals/EQS/moonspeaker_tax.tga"
     }
     SpriteType = {
         name = GFX_goal_replanting_jungle
-        texturefile = "gfx/interface/goals/EQS/replanting_jungle.png"
+        texturefile = "gfx/interface/goals/EQS/replanting_jungle.tga"
     }
 
     ###PCB###
     SpriteType = {
         name = GFX_goal_change_management
-        texturefile = "gfx/interface/goals/EQS/change_management.png"
+        texturefile = "gfx/interface/goals/EQS/change_management.tga"
     }
     SpriteType = {
         name = GFX_goal_communist_examples
-        texturefile = "gfx/interface/goals/EQS/communist_examples.png"
+        texturefile = "gfx/interface/goals/EQS/communist_examples.tga"
     }
     SpriteType = {
         name = GFX_goal_coercion_campaign
-        texturefile = "gfx/interface/goals/EQS/coercion_campaign.png"
+        texturefile = "gfx/interface/goals/EQS/coercion_campaign.tga"
     }
     SpriteType = {
         name = GFX_goal_naval_staging_grounds
-        texturefile = "gfx/interface/goals/EQS/naval_staging_grounds.png"
+        texturefile = "gfx/interface/goals/EQS/naval_staging_grounds.tga"
     }
     SpriteType = {
         name = GFX_goal_plumb_mountain_depths
-        texturefile = "gfx/interface/goals/EQS/plumb_mountain_depths.png"
+        texturefile = "gfx/interface/goals/EQS/plumb_mountain_depths.tga"
     }
     SpriteType = {
         name = GFX_goal_isle_of_sun
-        texturefile = "gfx/interface/goals/EQS/isle_of_sun.png"
+        texturefile = "gfx/interface/goals/EQS/isle_of_sun.tga"
     }
 }

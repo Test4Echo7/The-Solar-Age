@@ -2,10 +2,10 @@ SpriteTypes = {
 	###Opening Section###
 	SpriteType = {
 		name = "GFX_goal_waking_dawn_star_shine"
-		texturefile = "gfx/interface/goals/EQS/waking_dawn_star.png"
+		texturefile = "gfx/interface/goals/EQS/waking_dawn_star.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/waking_dawn_star.png"
+			animationmaskfile = "gfx/interface/goals/EQS/waking_dawn_star.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -18,7 +18,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/waking_dawn_star.png"
+			animationmaskfile = "gfx/interface/goals/EQS/waking_dawn_star.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -34,10 +34,10 @@ SpriteTypes = {
 	###God-Empress###
 	SpriteType = {
 		name = "GFX_goal_god_empress_shine"
-		texturefile = "gfx/interface/goals/EQS/god_empress.png"
+		texturefile = "gfx/interface/goals/EQS/god_empress.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/god_empress.png"
+			animationmaskfile = "gfx/interface/goals/EQS/god_empress.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -50,7 +50,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/god_empress.png"
+			animationmaskfile = "gfx/interface/goals/EQS/god_empress.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -65,10 +65,10 @@ SpriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_unveil_cultus_shine"
-		texturefile = "gfx/interface/goals/EQS/unveil_cultus.png"
+		texturefile = "gfx/interface/goals/EQS/unveil_cultus.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/unveil_cultus.png"
+			animationmaskfile = "gfx/interface/goals/EQS/unveil_cultus.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -81,7 +81,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/unveil_cultus.png"
+			animationmaskfile = "gfx/interface/goals/EQS/unveil_cultus.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -96,10 +96,10 @@ SpriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_solaris_adoratio_shine"
-		texturefile = "gfx/interface/goals/EQS/solaris_adoratio.png"
+		texturefile = "gfx/interface/goals/EQS/solaris_adoratio.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/solaris_adoratio.png"
+			animationmaskfile = "gfx/interface/goals/EQS/solaris_adoratio.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -112,7 +112,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/solaris_adoratio.png"
+			animationmaskfile = "gfx/interface/goals/EQS/solaris_adoratio.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -127,10 +127,10 @@ SpriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_solaris_inquisitionis_shine"
-		texturefile = "gfx/interface/goals/EQS/solaris_inquisitionis.png"
+		texturefile = "gfx/interface/goals/EQS/solaris_inquisitionis.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/solaris_inquisitionis.png"
+			animationmaskfile = "gfx/interface/goals/EQS/solaris_inquisitionis.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -143,7 +143,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/solaris_inquisitionis.png"
+			animationmaskfile = "gfx/interface/goals/EQS/solaris_inquisitionis.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -158,10 +158,10 @@ SpriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_suffer_not_heresy_shine"
-		texturefile = "gfx/interface/goals/EQS/suffer_not_heresy.png"
+		texturefile = "gfx/interface/goals/EQS/suffer_not_heresy.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/suffer_not_heresy.png"
+			animationmaskfile = "gfx/interface/goals/EQS/suffer_not_heresy.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -174,7 +174,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/suffer_not_heresy.png"
+			animationmaskfile = "gfx/interface/goals/EQS/suffer_not_heresy.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -189,10 +189,10 @@ SpriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_mandatory_temple_attendance_shine"
-		texturefile = "gfx/interface/goals/EQS/mandatory_temple_attendance.png"
+		texturefile = "gfx/interface/goals/EQS/mandatory_temple_attendance.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/mandatory_temple_attendance.png"
+			animationmaskfile = "gfx/interface/goals/EQS/mandatory_temple_attendance.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -205,7 +205,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/mandatory_temple_attendance.png"
+			animationmaskfile = "gfx/interface/goals/EQS/mandatory_temple_attendance.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -220,10 +220,10 @@ SpriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_inquisitionis_primary_role_shine"
-		texturefile = "gfx/interface/goals/EQS/inquisitionis_primary_role.png"
+		texturefile = "gfx/interface/goals/EQS/inquisitionis_primary_role.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/inquisitionis_primary_role.png"
+			animationmaskfile = "gfx/interface/goals/EQS/inquisitionis_primary_role.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -236,7 +236,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/inquisitionis_primary_role.png"
+			animationmaskfile = "gfx/interface/goals/EQS/inquisitionis_primary_role.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -251,10 +251,10 @@ SpriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_inquisitionis_secondary_role_shine"
-		texturefile = "gfx/interface/goals/EQS/inquisitionis_secondary_role.png"
+		texturefile = "gfx/interface/goals/EQS/inquisitionis_secondary_role.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/inquisitionis_secondary_role.png"
+			animationmaskfile = "gfx/interface/goals/EQS/inquisitionis_secondary_role.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -267,7 +267,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/inquisitionis_secondary_role.png"
+			animationmaskfile = "gfx/interface/goals/EQS/inquisitionis_secondary_role.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -282,10 +282,10 @@ SpriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_solaris_speculatores_shine"
-		texturefile = "gfx/interface/goals/EQS/solaris_speculatores.png"
+		texturefile = "gfx/interface/goals/EQS/solaris_speculatores.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/solaris_speculatores.png"
+			animationmaskfile = "gfx/interface/goals/EQS/solaris_speculatores.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -298,7 +298,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/solaris_speculatores.png"
+			animationmaskfile = "gfx/interface/goals/EQS/solaris_speculatores.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -313,10 +313,10 @@ SpriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_Lux_et_Tenebris_shine"
-		texturefile = "gfx/interface/goals/EQS/Lux_et_Tenebris.png"
+		texturefile = "gfx/interface/goals/EQS/Lux_et_Tenebris.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/Lux_et_Tenebris.png"
+			animationmaskfile = "gfx/interface/goals/EQS/Lux_et_Tenebris.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -329,7 +329,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/Lux_et_Tenebris.png"
+			animationmaskfile = "gfx/interface/goals/EQS/Lux_et_Tenebris.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -344,10 +344,10 @@ SpriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_faith_honor_family_shine"
-		texturefile = "gfx/interface/goals/EQS/faith_honor_family.png"
+		texturefile = "gfx/interface/goals/EQS/faith_honor_family.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/faith_honor_family.png"
+			animationmaskfile = "gfx/interface/goals/EQS/faith_honor_family.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -360,7 +360,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/faith_honor_family.png"
+			animationmaskfile = "gfx/interface/goals/EQS/faith_honor_family.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -375,10 +375,10 @@ SpriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_faith_sacrifice_worship_shine"
-		texturefile = "gfx/interface/goals/EQS/faith_sacrifice_worship.png"
+		texturefile = "gfx/interface/goals/EQS/faith_sacrifice_worship.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/faith_sacrifice_worship.png"
+			animationmaskfile = "gfx/interface/goals/EQS/faith_sacrifice_worship.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -391,7 +391,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/faith_sacrifice_worship.png"
+			animationmaskfile = "gfx/interface/goals/EQS/faith_sacrifice_worship.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -406,10 +406,10 @@ SpriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_field_executions_shine"
-		texturefile = "gfx/interface/goals/EQS/field_executions.png"
+		texturefile = "gfx/interface/goals/EQS/field_executions.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/field_executions.png"
+			animationmaskfile = "gfx/interface/goals/EQS/field_executions.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -422,7 +422,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/field_executions.png"
+			animationmaskfile = "gfx/interface/goals/EQS/field_executions.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -437,10 +437,10 @@ SpriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_state_personified_new_shine"
-		texturefile = "gfx/interface/goals/EQS/state_personified.png"
+		texturefile = "gfx/interface/goals/EQS/state_personified.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/state_personified.png"
+			animationmaskfile = "gfx/interface/goals/EQS/state_personified.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -453,7 +453,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/state_personified.png"
+			animationmaskfile = "gfx/interface/goals/EQS/state_personified.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -468,10 +468,10 @@ SpriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_the_solar_games_shine"
-		texturefile = "gfx/interface/goals/EQS/the_solar_games.png"
+		texturefile = "gfx/interface/goals/EQS/the_solar_games.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/the_solar_games.png"
+			animationmaskfile = "gfx/interface/goals/EQS/the_solar_games.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -484,7 +484,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/the_solar_games.png"
+			animationmaskfile = "gfx/interface/goals/EQS/the_solar_games.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -499,10 +499,10 @@ SpriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_raising_generations_shine"
-		texturefile = "gfx/interface/goals/EQS/raising_generations.png"
+		texturefile = "gfx/interface/goals/EQS/raising_generations.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/raising_generations.png"
+			animationmaskfile = "gfx/interface/goals/EQS/raising_generations.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -515,7 +515,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/raising_generations.png"
+			animationmaskfile = "gfx/interface/goals/EQS/raising_generations.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -530,10 +530,10 @@ SpriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_sacrifices_from_birth_shine"
-		texturefile = "gfx/interface/goals/EQS/sacrifices_from_birth.png"
+		texturefile = "gfx/interface/goals/EQS/sacrifices_from_birth.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/sacrifices_from_birth.png"
+			animationmaskfile = "gfx/interface/goals/EQS/sacrifices_from_birth.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -546,7 +546,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/sacrifices_from_birth.png"
+			animationmaskfile = "gfx/interface/goals/EQS/sacrifices_from_birth.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -561,10 +561,10 @@ SpriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_annual_purges_shine"
-		texturefile = "gfx/interface/goals/EQS/annual_purges.png"
+		texturefile = "gfx/interface/goals/EQS/annual_purges.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/annual_purges.png"
+			animationmaskfile = "gfx/interface/goals/EQS/annual_purges.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -577,7 +577,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/annual_purges.png"
+			animationmaskfile = "gfx/interface/goals/EQS/annual_purges.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -592,10 +592,10 @@ SpriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_enlightened_education_shine"
-		texturefile = "gfx/interface/goals/EQS/enlightened_education.png"
+		texturefile = "gfx/interface/goals/EQS/enlightened_education.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/enlightened_education.png"
+			animationmaskfile = "gfx/interface/goals/EQS/enlightened_education.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -608,7 +608,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/enlightened_education.png"
+			animationmaskfile = "gfx/interface/goals/EQS/enlightened_education.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -623,10 +623,10 @@ SpriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_tradition_of_worship_shine"
-		texturefile = "gfx/interface/goals/EQS/tradition_of_worship.png"
+		texturefile = "gfx/interface/goals/EQS/tradition_of_worship.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/tradition_of_worship.png"
+			animationmaskfile = "gfx/interface/goals/EQS/tradition_of_worship.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -639,7 +639,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/tradition_of_worship.png"
+			animationmaskfile = "gfx/interface/goals/EQS/tradition_of_worship.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -654,10 +654,10 @@ SpriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_sacrifices_on_assembly_line_shine"
-		texturefile = "gfx/interface/goals/EQS/sacrifices_on_assembly_line.png"
+		texturefile = "gfx/interface/goals/EQS/sacrifices_on_assembly_line.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/sacrifices_on_assembly_line.png"
+			animationmaskfile = "gfx/interface/goals/EQS/sacrifices_on_assembly_line.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -670,7 +670,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/sacrifices_on_assembly_line.png"
+			animationmaskfile = "gfx/interface/goals/EQS/sacrifices_on_assembly_line.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -685,10 +685,10 @@ SpriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_generals_above_rest_shine"
-		texturefile = "gfx/interface/goals/EQS/generals_above_rest.png"
+		texturefile = "gfx/interface/goals/EQS/generals_above_rest.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/generals_above_rest.png"
+			animationmaskfile = "gfx/interface/goals/EQS/generals_above_rest.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -701,7 +701,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/generals_above_rest.png"
+			animationmaskfile = "gfx/interface/goals/EQS/generals_above_rest.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -716,10 +716,10 @@ SpriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_fodder_troops_shine"
-		texturefile = "gfx/interface/goals/EQS/fodder_troops.png"
+		texturefile = "gfx/interface/goals/EQS/fodder_troops.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/fodder_troops.png"
+			animationmaskfile = "gfx/interface/goals/EQS/fodder_troops.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -732,7 +732,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/fodder_troops.png"
+			animationmaskfile = "gfx/interface/goals/EQS/fodder_troops.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -747,10 +747,10 @@ SpriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_combine_church_and_state_shine"
-		texturefile = "gfx/interface/goals/EQS/combine_church_and_state.png"
+		texturefile = "gfx/interface/goals/EQS/combine_church_and_state.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/combine_church_and_state.png"
+			animationmaskfile = "gfx/interface/goals/EQS/combine_church_and_state.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -763,7 +763,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/combine_church_and_state.png"
+			animationmaskfile = "gfx/interface/goals/EQS/combine_church_and_state.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -778,10 +778,10 @@ SpriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_honorable_guards_shine"
-		texturefile = "gfx/interface/goals/EQS/honorable_guards.png"
+		texturefile = "gfx/interface/goals/EQS/honorable_guards.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/honorable_guards.png"
+			animationmaskfile = "gfx/interface/goals/EQS/honorable_guards.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -794,7 +794,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/honorable_guards.png"
+			animationmaskfile = "gfx/interface/goals/EQS/honorable_guards.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -809,10 +809,10 @@ SpriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_monsters_of_earth_shine"
-		texturefile = "gfx/interface/goals/EQS/monsters_of_earth.png"
+		texturefile = "gfx/interface/goals/EQS/monsters_of_earth.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/monsters_of_earth.png"
+			animationmaskfile = "gfx/interface/goals/EQS/monsters_of_earth.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -825,7 +825,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/monsters_of_earth.png"
+			animationmaskfile = "gfx/interface/goals/EQS/monsters_of_earth.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -840,10 +840,10 @@ SpriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_she_who_raises_the_sun_new_shine"
-		texturefile = "gfx/interface/goals/EQS/she_who_raises_the_sun.png"
+		texturefile = "gfx/interface/goals/EQS/she_who_raises_the_sun.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/she_who_raises_the_sun.png"
+			animationmaskfile = "gfx/interface/goals/EQS/she_who_raises_the_sun.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -856,7 +856,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/she_who_raises_the_sun.png"
+			animationmaskfile = "gfx/interface/goals/EQS/she_who_raises_the_sun.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -871,10 +871,10 @@ SpriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_better_than_best_shine"
-		texturefile = "gfx/interface/goals/EQS/better_than_best.png"
+		texturefile = "gfx/interface/goals/EQS/better_than_best.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/better_than_best.png"
+			animationmaskfile = "gfx/interface/goals/EQS/better_than_best.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -887,7 +887,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/better_than_best.png"
+			animationmaskfile = "gfx/interface/goals/EQS/better_than_best.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1280,10 +1280,10 @@ SpriteTypes = {
 	###Civil War###
 	SpriteType = {
 		name = "GFX_goal_civil_war_measures_new_shine"
-		texturefile = "gfx/interface/goals/EQS/civil_war_measures_new.png"
+		texturefile = "gfx/interface/goals/EQS/civil_war_measures_new.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/civil_war_measures_new.png"
+			animationmaskfile = "gfx/interface/goals/EQS/civil_war_measures_new.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1296,7 +1296,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/civil_war_measures_new.png"
+			animationmaskfile = "gfx/interface/goals/EQS/civil_war_measures_new.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1313,10 +1313,10 @@ SpriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_promise_swift_end_shine"
-		texturefile = "gfx/interface/goals/EQS/promise_swift_end.png"
+		texturefile = "gfx/interface/goals/EQS/promise_swift_end.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/promise_swift_end.png"
+			animationmaskfile = "gfx/interface/goals/EQS/promise_swift_end.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1329,7 +1329,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/promise_swift_end.png"
+			animationmaskfile = "gfx/interface/goals/EQS/promise_swift_end.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1345,10 +1345,10 @@ SpriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_draw_upon_militia_shine"
-		texturefile = "gfx/interface/goals/EQS/draw_upon_militia.png"
+		texturefile = "gfx/interface/goals/EQS/draw_upon_militia.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/draw_upon_militia.png"
+			animationmaskfile = "gfx/interface/goals/EQS/draw_upon_militia.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1361,7 +1361,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/draw_upon_militia.png"
+			animationmaskfile = "gfx/interface/goals/EQS/draw_upon_militia.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1377,10 +1377,10 @@ SpriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_crisis_industrial_management_shine"
-		texturefile = "gfx/interface/goals/EQS/crisis_industrial_management.png"
+		texturefile = "gfx/interface/goals/EQS/crisis_industrial_management.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/crisis_industrial_management.png"
+			animationmaskfile = "gfx/interface/goals/EQS/crisis_industrial_management.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1393,7 +1393,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/crisis_industrial_management.png"
+			animationmaskfile = "gfx/interface/goals/EQS/crisis_industrial_management.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1409,10 +1409,10 @@ SpriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_herald_doom_shine"
-		texturefile = "gfx/interface/goals/EQS/herald_doom.png"
+		texturefile = "gfx/interface/goals/EQS/herald_doom.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/herald_doom.png"
+			animationmaskfile = "gfx/interface/goals/EQS/herald_doom.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1425,7 +1425,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/herald_doom.png"
+			animationmaskfile = "gfx/interface/goals/EQS/herald_doom.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1441,10 +1441,10 @@ SpriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_take_everypony_shine"
-		texturefile = "gfx/interface/goals/EQS/take_everypony.png"
+		texturefile = "gfx/interface/goals/EQS/take_everypony.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/take_everypony.png"
+			animationmaskfile = "gfx/interface/goals/EQS/take_everypony.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1457,7 +1457,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/take_everypony.png"
+			animationmaskfile = "gfx/interface/goals/EQS/take_everypony.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1473,10 +1473,10 @@ SpriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_counter_terrorists_shine"
-		texturefile = "gfx/interface/goals/EQS/counter_terrorists.png"
+		texturefile = "gfx/interface/goals/EQS/counter_terrorists.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/counter_terrorists.png"
+			animationmaskfile = "gfx/interface/goals/EQS/counter_terrorists.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1489,7 +1489,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/counter_terrorists.png"
+			animationmaskfile = "gfx/interface/goals/EQS/counter_terrorists.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1505,10 +1505,10 @@ SpriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_spending_money_shine"
-		texturefile = "gfx/interface/goals/EQS/spending_money.png"
+		texturefile = "gfx/interface/goals/EQS/spending_money.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/spending_money.png"
+			animationmaskfile = "gfx/interface/goals/EQS/spending_money.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1521,7 +1521,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/spending_money.png"
+			animationmaskfile = "gfx/interface/goals/EQS/spending_money.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1537,10 +1537,10 @@ SpriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_reconquer_equestria_new_shine"
-		texturefile = "gfx/interface/goals/EQS/reconquer_equestria_new.png"
+		texturefile = "gfx/interface/goals/EQS/reconquer_equestria_new.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/reconquer_equestria_new.png"
+			animationmaskfile = "gfx/interface/goals/EQS/reconquer_equestria_new.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1553,7 +1553,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/reconquer_equestria_new.png"
+			animationmaskfile = "gfx/interface/goals/EQS/reconquer_equestria_new.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1570,10 +1570,10 @@ SpriteTypes = {
 	###Diplmoatic Corps###
 	SpriteType = {
 		name = "GFX_goal_imperial_diplomatic_corps_shine"
-		texturefile = "gfx/interface/goals/EQS/imperial_diplomatic_corps.png"
+		texturefile = "gfx/interface/goals/EQS/imperial_diplomatic_corps.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/imperial_diplomatic_corps.png"
+			animationmaskfile = "gfx/interface/goals/EQS/imperial_diplomatic_corps.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1586,7 +1586,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/imperial_diplomatic_corps.png"
+			animationmaskfile = "gfx/interface/goals/EQS/imperial_diplomatic_corps.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1602,10 +1602,10 @@ SpriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_fealty_of_the_griffons_shine"
-		texturefile = "gfx/interface/goals/EQS/fealty_of_the_griffons.png"
+		texturefile = "gfx/interface/goals/EQS/fealty_of_the_griffons.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/fealty_of_the_griffons.png"
+			animationmaskfile = "gfx/interface/goals/EQS/fealty_of_the_griffons.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1618,7 +1618,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/fealty_of_the_griffons.png"
+			animationmaskfile = "gfx/interface/goals/EQS/fealty_of_the_griffons.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1634,10 +1634,10 @@ SpriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_insurance_policies_shine"
-		texturefile = "gfx/interface/goals/EQS/insurance_policies.png"
+		texturefile = "gfx/interface/goals/EQS/insurance_policies.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/insurance_policies.png"
+			animationmaskfile = "gfx/interface/goals/EQS/insurance_policies.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1650,7 +1650,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/insurance_policies.png"
+			animationmaskfile = "gfx/interface/goals/EQS/insurance_policies.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1666,10 +1666,10 @@ SpriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_oil_for_existence_shine"
-		texturefile = "gfx/interface/goals/EQS/oil_for_existence.png"
+		texturefile = "gfx/interface/goals/EQS/oil_for_existence.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/oil_for_existence.png"
+			animationmaskfile = "gfx/interface/goals/EQS/oil_for_existence.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1682,7 +1682,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/oil_for_existence.png"
+			animationmaskfile = "gfx/interface/goals/EQS/oil_for_existence.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1698,10 +1698,10 @@ SpriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_workers_for_sustenance_shine"
-		texturefile = "gfx/interface/goals/EQS/workers_for_sustenance.png"
+		texturefile = "gfx/interface/goals/EQS/workers_for_sustenance.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/workers_for_sustenance.png"
+			animationmaskfile = "gfx/interface/goals/EQS/workers_for_sustenance.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1714,7 +1714,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/workers_for_sustenance.png"
+			animationmaskfile = "gfx/interface/goals/EQS/workers_for_sustenance.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1730,10 +1730,10 @@ SpriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_the_empire_across_the_sea_shine"
-		texturefile = "gfx/interface/goals/EQS/the_empire_across_the_sea.png"
+		texturefile = "gfx/interface/goals/EQS/the_empire_across_the_sea.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/the_empire_across_the_sea.png"
+			animationmaskfile = "gfx/interface/goals/EQS/the_empire_across_the_sea.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1746,7 +1746,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/the_empire_across_the_sea.png"
+			animationmaskfile = "gfx/interface/goals/EQS/the_empire_across_the_sea.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1763,10 +1763,10 @@ SpriteTypes = {
 	###Bats###
 	SpriteType = {
 		name = "GFX_goal_the_bat_problem_shine"
-		texturefile = "gfx/interface/goals/EQS/the_bat_problem.png"
+		texturefile = "gfx/interface/goals/EQS/the_bat_problem.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/the_bat_problem.png"
+			animationmaskfile = "gfx/interface/goals/EQS/the_bat_problem.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1779,7 +1779,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/the_bat_problem.png"
+			animationmaskfile = "gfx/interface/goals/EQS/the_bat_problem.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1795,10 +1795,10 @@ SpriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_fire_and_brimstone_shine"
-		texturefile = "gfx/interface/goals/EQS/fire_and_brimstone.png"
+		texturefile = "gfx/interface/goals/EQS/fire_and_brimstone.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/fire_and_brimstone.png"
+			animationmaskfile = "gfx/interface/goals/EQS/fire_and_brimstone.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1811,7 +1811,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/fire_and_brimstone.png"
+			animationmaskfile = "gfx/interface/goals/EQS/fire_and_brimstone.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1827,10 +1827,10 @@ SpriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_what_homes_shine"
-		texturefile = "gfx/interface/goals/EQS/what_homes.png"
+		texturefile = "gfx/interface/goals/EQS/what_homes.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/what_homes.png"
+			animationmaskfile = "gfx/interface/goals/EQS/what_homes.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1843,7 +1843,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/what_homes.png"
+			animationmaskfile = "gfx/interface/goals/EQS/what_homes.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1859,10 +1859,10 @@ SpriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_what_jobs_shine"
-		texturefile = "gfx/interface/goals/EQS/what_jobs.png"
+		texturefile = "gfx/interface/goals/EQS/what_jobs.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/what_jobs.png"
+			animationmaskfile = "gfx/interface/goals/EQS/what_jobs.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1875,7 +1875,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/what_jobs.png"
+			animationmaskfile = "gfx/interface/goals/EQS/what_jobs.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1891,10 +1891,10 @@ SpriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_burn_bats_shine"
-		texturefile = "gfx/interface/goals/EQS/burn_bats.png"
+		texturefile = "gfx/interface/goals/EQS/burn_bats.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/burn_bats.png"
+			animationmaskfile = "gfx/interface/goals/EQS/burn_bats.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1907,7 +1907,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/burn_bats.png"
+			animationmaskfile = "gfx/interface/goals/EQS/burn_bats.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1923,10 +1923,10 @@ SpriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_enlighten_darkness_shine"
-		texturefile = "gfx/interface/goals/EQS/enlighten_darkness.png"
+		texturefile = "gfx/interface/goals/EQS/enlighten_darkness.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/enlighten_darkness.png"
+			animationmaskfile = "gfx/interface/goals/EQS/enlighten_darkness.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1939,7 +1939,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/enlighten_darkness.png"
+			animationmaskfile = "gfx/interface/goals/EQS/enlighten_darkness.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1955,10 +1955,10 @@ SpriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_second_class_employers_shine"
-		texturefile = "gfx/interface/goals/EQS/second_class_employers.png"
+		texturefile = "gfx/interface/goals/EQS/second_class_employers.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/second_class_employers.png"
+			animationmaskfile = "gfx/interface/goals/EQS/second_class_employers.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1971,7 +1971,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/second_class_employers.png"
+			animationmaskfile = "gfx/interface/goals/EQS/second_class_employers.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1987,10 +1987,10 @@ SpriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_mandatory_education_shine"
-		texturefile = "gfx/interface/goals/EQS/mandatory_education.png"
+		texturefile = "gfx/interface/goals/EQS/mandatory_education.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/mandatory_education.png"
+			animationmaskfile = "gfx/interface/goals/EQS/mandatory_education.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -2003,7 +2003,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/mandatory_education.png"
+			animationmaskfile = "gfx/interface/goals/EQS/mandatory_education.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -2019,10 +2019,10 @@ SpriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_useful_servants_shine"
-		texturefile = "gfx/interface/goals/EQS/useful_servants.png"
+		texturefile = "gfx/interface/goals/EQS/useful_servants.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/useful_servants.png"
+			animationmaskfile = "gfx/interface/goals/EQS/useful_servants.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -2035,7 +2035,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/useful_servants.png"
+			animationmaskfile = "gfx/interface/goals/EQS/useful_servants.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -2051,10 +2051,10 @@ SpriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_peninsula_of_damned_shine"
-		texturefile = "gfx/interface/goals/EQS/peninsula_of_damned.png"
+		texturefile = "gfx/interface/goals/EQS/peninsula_of_damned.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/peninsula_of_damned.png"
+			animationmaskfile = "gfx/interface/goals/EQS/peninsula_of_damned.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -2067,7 +2067,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/peninsula_of_damned.png"
+			animationmaskfile = "gfx/interface/goals/EQS/peninsula_of_damned.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -2083,10 +2083,10 @@ SpriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_prison_of_fire_shine"
-		texturefile = "gfx/interface/goals/EQS/prison_of_fire.png"
+		texturefile = "gfx/interface/goals/EQS/prison_of_fire.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/prison_of_fire.png"
+			animationmaskfile = "gfx/interface/goals/EQS/prison_of_fire.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -2099,7 +2099,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/prison_of_fire.png"
+			animationmaskfile = "gfx/interface/goals/EQS/prison_of_fire.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -2115,10 +2115,10 @@ SpriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_peaks_of_wealth_shine"
-		texturefile = "gfx/interface/goals/EQS/peaks_of_wealth.png"
+		texturefile = "gfx/interface/goals/EQS/peaks_of_wealth.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/peaks_of_wealth.png"
+			animationmaskfile = "gfx/interface/goals/EQS/peaks_of_wealth.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -2131,7 +2131,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/peaks_of_wealth.png"
+			animationmaskfile = "gfx/interface/goals/EQS/peaks_of_wealth.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -2147,10 +2147,10 @@ SpriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_remote_no_more_shine"
-		texturefile = "gfx/interface/goals/EQS/remote_no_more.png"
+		texturefile = "gfx/interface/goals/EQS/remote_no_more.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/remote_no_more.png"
+			animationmaskfile = "gfx/interface/goals/EQS/remote_no_more.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -2163,7 +2163,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/remote_no_more.png"
+			animationmaskfile = "gfx/interface/goals/EQS/remote_no_more.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -2179,10 +2179,10 @@ SpriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_expand_oil_fields_shine"
-		texturefile = "gfx/interface/goals/EQS/expand_oil_fields.png"
+		texturefile = "gfx/interface/goals/EQS/expand_oil_fields.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/expand_oil_fields.png"
+			animationmaskfile = "gfx/interface/goals/EQS/expand_oil_fields.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -2195,7 +2195,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/expand_oil_fields.png"
+			animationmaskfile = "gfx/interface/goals/EQS/expand_oil_fields.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -2211,10 +2211,10 @@ SpriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_modern_south_east_shine"
-		texturefile = "gfx/interface/goals/EQS/modern_south_east.png"
+		texturefile = "gfx/interface/goals/EQS/modern_south_east.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/modern_south_east.png"
+			animationmaskfile = "gfx/interface/goals/EQS/modern_south_east.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -2227,7 +2227,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/modern_south_east.png"
+			animationmaskfile = "gfx/interface/goals/EQS/modern_south_east.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -2243,10 +2243,10 @@ SpriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_moonspeaker_tax_shine"
-		texturefile = "gfx/interface/goals/EQS/moonspeaker_tax.png"
+		texturefile = "gfx/interface/goals/EQS/moonspeaker_tax.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/moonspeaker_tax.png"
+			animationmaskfile = "gfx/interface/goals/EQS/moonspeaker_tax.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -2259,7 +2259,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/moonspeaker_tax.png"
+			animationmaskfile = "gfx/interface/goals/EQS/moonspeaker_tax.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -2275,10 +2275,10 @@ SpriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_replanting_jungle_shine"
-		texturefile = "gfx/interface/goals/EQS/replanting_jungle.png"
+		texturefile = "gfx/interface/goals/EQS/replanting_jungle.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/replanting_jungle.png"
+			animationmaskfile = "gfx/interface/goals/EQS/replanting_jungle.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -2291,7 +2291,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/replanting_jungle.png"
+			animationmaskfile = "gfx/interface/goals/EQS/replanting_jungle.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -2308,10 +2308,10 @@ SpriteTypes = {
 	###PCB###
 	SpriteType = {
 		name = "GFX_goal_change_management_shine"
-		texturefile = "gfx/interface/goals/EQS/change_management.png"
+		texturefile = "gfx/interface/goals/EQS/change_management.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/change_management.png"
+			animationmaskfile = "gfx/interface/goals/EQS/change_management.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -2324,7 +2324,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/change_management.png"
+			animationmaskfile = "gfx/interface/goals/EQS/change_management.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -2339,10 +2339,10 @@ SpriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_communist_examples_shine"
-		texturefile = "gfx/interface/goals/EQS/communist_examples.png"
+		texturefile = "gfx/interface/goals/EQS/communist_examples.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/communist_examples.png"
+			animationmaskfile = "gfx/interface/goals/EQS/communist_examples.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -2355,7 +2355,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/communist_examples.png"
+			animationmaskfile = "gfx/interface/goals/EQS/communist_examples.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -2370,10 +2370,10 @@ SpriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_coercion_campaign_shine"
-		texturefile = "gfx/interface/goals/EQS/coercion_campaign.png"
+		texturefile = "gfx/interface/goals/EQS/coercion_campaign.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/coercion_campaign.png"
+			animationmaskfile = "gfx/interface/goals/EQS/coercion_campaign.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -2386,7 +2386,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/coercion_campaign.png"
+			animationmaskfile = "gfx/interface/goals/EQS/coercion_campaign.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -2401,10 +2401,10 @@ SpriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_naval_staging_grounds_shine"
-		texturefile = "gfx/interface/goals/EQS/naval_staging_grounds.png"
+		texturefile = "gfx/interface/goals/EQS/naval_staging_grounds.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/naval_staging_grounds.png"
+			animationmaskfile = "gfx/interface/goals/EQS/naval_staging_grounds.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -2417,7 +2417,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/naval_staging_grounds.png"
+			animationmaskfile = "gfx/interface/goals/EQS/naval_staging_grounds.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -2432,10 +2432,10 @@ SpriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_plumb_mountain_depths_shine"
-		texturefile = "gfx/interface/goals/EQS/plumb_mountain_depths.png"
+		texturefile = "gfx/interface/goals/EQS/plumb_mountain_depths.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/plumb_mountain_depths.png"
+			animationmaskfile = "gfx/interface/goals/EQS/plumb_mountain_depths.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -2448,7 +2448,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/plumb_mountain_depths.png"
+			animationmaskfile = "gfx/interface/goals/EQS/plumb_mountain_depths.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -2463,10 +2463,10 @@ SpriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_isle_of_sun_shine"
-		texturefile = "gfx/interface/goals/EQS/isle_of_sun.png"
+		texturefile = "gfx/interface/goals/EQS/isle_of_sun.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/isle_of_sun.png"
+			animationmaskfile = "gfx/interface/goals/EQS/isle_of_sun.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -2479,7 +2479,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/isle_of_sun.png"
+			animationmaskfile = "gfx/interface/goals/EQS/isle_of_sun.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
