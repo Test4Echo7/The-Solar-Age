@@ -7874,7 +7874,7 @@ shared_focus = {
 	id = SOL_mock_empire
 	x = -16
 	y = 1
-	icon = GFX_goal_crystal_empire_sub
+	icon = GFX_goal_mock_empire
 	relative_position_id = examine_the_situation
 	offset = {
 		x = 5
@@ -7954,6 +7954,7 @@ shared_focus = {
 	x = -1
 	y = 1
 	relative_position_id = SOL_mock_empire
+	icon = GFX_goal_follow_sunrise_plan
 
 	cost = 4
 	prerequisite = { focus = SOL_mock_empire }
@@ -7991,6 +7992,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	relative_position_id = SOL_mock_empire
+	icon = GFX_goal_gesture_of_strength
 
 	cost = 4
 	prerequisite = { focus = SOL_mock_empire }
@@ -8060,7 +8062,7 @@ shared_focus = {
 			NOT = { has_country_flag = SOL_unlock_political_focuses }
 		}
 	}
-	icon = GFX_goal_crystal_fair
+	icon = GFX_goal_royal_province
 	#relative_position_id = SOL_follow_sunrise_plan
 
 	cost = 5
@@ -9986,6 +9988,7 @@ shared_focus = {
 	x = 18
 	y = 1
 	relative_position_id = examine_the_situation
+	icon = GFX_goal_force_jet_sets_hoof
 
 	cost = 5
 	prerequisite = { focus = examine_the_situation }
@@ -10057,6 +10060,7 @@ joint_focus = {
 		}
 	}
 	#relative_position_id = SOL_force_jet_sets_hoof
+	icon = GFX_goal_ensuring_loyalty
 
 	cost = 3
 	prerequisite = {
@@ -10115,6 +10119,7 @@ joint_focus = {
 		}
 		x = 2
 	}
+	icon = GFX_goal_smooth_transitions
 
 	cost = 4
 	prerequisite = { focus = SOL_ensuring_loyalty }
@@ -10213,6 +10218,7 @@ joint_focus = {
 		}
 		x = -2
 	}
+	icon = GFX_goal_faiths_reward
 
 	cost = 4
 	prerequisite = { focus = SOL_ensuring_loyalty }
@@ -11879,7 +11885,7 @@ shared_focus = {
 	id = SOL_changeling_menace
 	x = 0
 	y = 3
-	icon = GFX_goal_generic_changeling
+	icon = GFX_goal_anti_changeling_tactics
 	relative_position_id = Ministry_of_defense
 
 	cost = 6

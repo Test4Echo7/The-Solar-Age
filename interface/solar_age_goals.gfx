@@ -232,6 +232,12 @@ SpriteTypes = {
         texturefile = "gfx/interface/goals/EQS/the_empire_across_the_sea.tga"
     }
 
+    ###Expanded Ministry of Defence###
+    SpriteType = {
+        name = GFX_goal_anti_changeling_tactics
+        texturefile = "gfx/interface/goals/EQS/anti_changeling_tactics.tga"
+    }
+
     ###Bats###
     SpriteType = {
         name = GFX_goal_the_bat_problem
@@ -300,6 +306,42 @@ SpriteTypes = {
     SpriteType = {
         name = GFX_goal_replanting_jungle
         texturefile = "gfx/interface/goals/EQS/replanting_jungle.tga"
+    }
+
+    ###CRY###
+    SpriteType = {
+        name = GFX_goal_mock_empire
+        texturefile = "gfx/interface/goals/EQS/mock_empire.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_follow_sunrise_plan
+        texturefile = "gfx/interface/goals/EQS/follow_sunrise_plan.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_gesture_of_strength
+        texturefile = "gfx/interface/goals/EQS/gesture_of_strength.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_royal_province
+        texturefile = "gfx/interface/goals/EQS/royal_province.tga"
+    }
+
+    ###EQC###
+    SpriteType = {
+        name = GFX_goal_force_jet_sets_hoof
+        texturefile = "gfx/interface/goals/EQS/force_jet_sets_hoof.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_ensuring_loyalty
+        texturefile = "gfx/interface/goals/EQS/ensuring_loyalty.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_smooth_transitions
+        texturefile = "gfx/interface/goals/EQS/smooth_transitions.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_faiths_reward
+        texturefile = "gfx/interface/goals/EQS/faiths_reward.tga"
     }
 
     ###PCB###
