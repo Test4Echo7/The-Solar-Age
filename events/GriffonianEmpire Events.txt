@@ -1173,8 +1173,10 @@ country_event = { #Archon Path
 				EQS = { has_completed_focus = SOL_educate_kaiser }
 			}
 			EQS = {
-				target = ROOT
-				autonomous_state = autonomy_free
+				set_autonomy = {
+					target = ROOT
+					autonomous_state = autonomy_free
+				}
 			}
 		}
 	}
