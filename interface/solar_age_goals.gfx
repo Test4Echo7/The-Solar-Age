@@ -118,6 +118,12 @@ SpriteTypes = {
         texturefile = "gfx/interface/goals/EQS/better_than_best.tga"
     }
 
+    ###Fallen Hero###
+    SpriteType = {
+        name = GFX_goal_utilize_element_bearers
+        texturefile = "gfx/interface/goals/EQS/utilize_element_bearers.tga"
+    }
+
     ###Army###
     SpriteType = {
         name = GFX_goal_solaris_militarium
@@ -343,6 +349,38 @@ SpriteTypes = {
         name = GFX_goal_faiths_reward
         texturefile = "gfx/interface/goals/EQS/faiths_reward.tga"
     }
+    SpriteType = {
+        name = GFX_goal_empresss_eyes
+        texturefile = "gfx/interface/goals/EQS/empresss_eyes.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_colonial_investments
+        texturefile = "gfx/interface/goals/EQS/colonial_investments.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_homegrown_plan
+        texturefile = "gfx/interface/goals/EQS/homegrown_plan.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_debt_council
+        texturefile = "gfx/interface/goals/EQS/debt_council.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_fund_sunset_plays
+        texturefile = "gfx/interface/goals/EQS/fund_sunset_plays.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_personnel_support
+        texturefile = "gfx/interface/goals/EQS/personnel_support.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_griffon_workers
+        texturefile = "gfx/interface/goals/EQS/grioffon_workers.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_church_of_day
+        texturefile = "gfx/interface/goals/EQS/church_of_day.tga"
+    }
 
     ###PCB###
     SpriteType = {
@@ -368,5 +406,11 @@ SpriteTypes = {
     SpriteType = {
         name = GFX_goal_isle_of_sun
         texturefile = "gfx/interface/goals/EQS/isle_of_sun.tga"
+    }
+
+    ###Industry###
+    SpriteType = {
+        name = GFX_goal_imperial_work_service
+        texturefile = "gfx/interface/goals/EQS/imperial_work_service.tga"
     }
 }

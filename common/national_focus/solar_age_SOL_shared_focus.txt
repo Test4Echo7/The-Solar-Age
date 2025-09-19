@@ -3361,6 +3361,7 @@ shared_focus = {
 	x = 0
 	y = 1
 	relative_position_id = SOL_forgiveness_available
+	icon = GFX_goal_utilize_element_bearers
 
 	cost = 15
 	prerequisite = { focus = SOL_forgiveness_available }
@@ -10300,6 +10301,7 @@ joint_focus = {
 	x = -1
 	y = 1
 	relative_position_id = SOL_smooth_transitions
+	icon = GFX_goal_empresss_eyes
 
 	cost = 3
 	prerequisite = { focus = SOL_smooth_transitions }
@@ -10374,6 +10376,7 @@ joint_focus = {
 		}
 		x = -2
 	}
+	icon = GFX_goal_colonial_investments
 
 	cost = 6
 	prerequisite = {
@@ -10450,6 +10453,7 @@ joint_focus = {
 	x = 2
 	y = 2
 	relative_position_id = SOL_faiths_reward
+	icon = GFX_goal_personnel_support
 
 	cost = 7
 	prerequisite = { focus = SOL_faiths_reward }
@@ -10492,6 +10496,7 @@ joint_focus = {
 	x = 0
 	y = 1
 	relative_position_id = SOL_empresss_eyes
+	icon = GFX_goal_homegrown_plan
 
 	cost = 6
 	prerequisite = { focus = SOL_empresss_eyes }
@@ -10544,6 +10549,7 @@ joint_focus = {
 	x = -1
 	y = 1
 	relative_position_id = SOL_colonial_investments
+	icon = GFX_goal_debt_council
 
 	cost = 6
 	prerequisite = { focus = SOL_colonial_investments }
@@ -10619,6 +10625,7 @@ joint_focus = {
 	x = 1
 	y = 1
 	relative_position_id = SOL_colonial_investments
+	icon = GFX_goal_fund_sunset_plays
 
 	cost = 5
 	prerequisite = { focus = SOL_colonial_investments }
@@ -10671,6 +10678,7 @@ joint_focus = {
 	x = 1
 	y = 1
 	relative_position_id = SOL_debt_council
+	icon = GFX_goal_griffon_workers
 
 	cost = 7
 	prerequisite = { focus = SOL_debt_council }
@@ -10811,6 +10819,7 @@ joint_focus = {
 	x = 1
 	y = 1
 	relative_position_id = SOL_personnel_support
+	icon = GFX_goal_church_of_day
 
 	cost = 5
 	prerequisite = { focus = SOL_personnel_support }
@@ -15196,7 +15205,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_imperial_work_service
-	icon = GFX_goal_industrial_pony
+	icon = GFX_goal_imperial_work_service
 	cost = 7
 	ai_will_do = { factor = 80 }
 	prerequisite = {
