@@ -1497,7 +1497,7 @@ SOL_promote_local_governor = {
         limit = {
             FROM = { tag = ROA }
         }
-        hidden_effect = { ROA = { ROA_kaiser_augustus_umqobi = { add_trait = { trait = imperial_collaborator_better ideology = nazism } } } }
+        hidden_effect = { ROA = { ROA_kaiser_augustus = { add_trait = { trait = imperial_collaborator_better ideology = nazism } } } }
     }
     else_if = {
         limit = {
@@ -1786,7 +1786,7 @@ SOL_release_PLB = {
                 277 = { is_core_of = PLB }
             }
             hidden_effect = {
-                transfer_state_to = ROOT
+                277 = { transfer_state_to = ROOT }
             }
         }
     }
@@ -1997,6 +1997,15 @@ SOL_release_HIP = {
                     is_core_of = ZUM
                     is_core_of = MER
                 }
+                if = {
+                    limit = {
+                        ROOT = { has_country_flag = SOL_formed_super_equus }
+                    }
+                    NOT = {
+                        state = 1196
+                        state = 1197
+                    }
+                }
             }
             add_core_of = HIP
         }
@@ -2164,7 +2173,7 @@ SOL_release_ZAR = {
                     is_core_of = CZR
                     is_core_of = ALO
                 }
-                NOT = is_core_of = TIM
+                NOT = { is_core_of = TIM }
             }
             add_core_of = ZAR
         }
@@ -2190,6 +2199,7 @@ SOL_release_ROA = {
                     is_core_of = GIF
                     is_core_of = TSV
                     is_core_of = ZLU
+                    is_core_of = IBZ
                 }
             }
             add_core_of = ROA
