@@ -10882,6 +10882,7 @@ joint_focus = {
 	x = 3
 	y = 1
 	relative_position_id = SOL_personnel_support
+	icon = GFX_goal_united_goal
 
 	cost = 5
 	prerequisite = { focus = SOL_personnel_support }
@@ -11066,6 +11067,7 @@ joint_focus = {
 	x = -1
 	y = 1
 	relative_position_id = SOL_united_goal
+	icon = GFX_goal_prisoner_restructoring
 
 	cost = 6
 	prerequisite = {
@@ -11222,6 +11224,7 @@ joint_focus = {
 	x = -1
 	y = 1
 	relative_position_id = SOL_strip_mine_bauxite
+	icon = GFX_goal_station_legions
 
 	cost = 5
 	prerequisite = { focus = SOL_strip_mine_bauxite }
@@ -11350,6 +11353,7 @@ joint_focus = {
 	x = -1
 	y = 2
 	relative_position_id = SOL_personnel_support
+	icon = GFX_goal_cadet_militarium
 
 	cost = 5
 	prerequisite = { focus = SOL_personnel_support }
@@ -11455,6 +11459,7 @@ joint_focus = {
 	x = 0
 	y = 2
 	relative_position_id = SOL_expand_sunset_university
+	icon = GFX_goal_economic_opportunity
 
 	cost = 6
 	prerequisite = { focus = SOL_expand_sunset_university }
@@ -11499,6 +11504,7 @@ joint_focus = {
 	x = 1
 	y = 1
 	relative_position_id = SOL_station_legions
+	icon = GFX_goal_world_station
 
 	cost = 6
 	prerequisite = { focus = SOL_station_legions }
@@ -11543,6 +11549,7 @@ joint_focus = {
 	x = 3
 	y = 2
 	relative_position_id = SOL_strip_mine_bauxite
+	icon = GFX_goal_joint_military_expeditions
 
 	cost = 6
 	prerequisite = { focus = SOL_strip_mine_bauxite }

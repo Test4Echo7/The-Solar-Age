@@ -401,6 +401,34 @@ SpriteTypes = {
         name = GFX_goal_refuge_in_sun
         texturefile = "gfx/interface/goals/EQS/refuge_in_sun.tga"
     }
+    SpriteType = {
+        name = GFX_goal_cadet_militarium
+        texturefile = "gfx/interface/goals/EQS/cadet_militarium.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_economic_opportunity
+        texturefile = "gfx/interface/goals/EQS/economic_opportunity.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_joint_military_expeditions
+        texturefile = "gfx/interface/goals/EQS/joint_military_expeditions.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_prisoner_restructoring
+        texturefile = "gfx/interface/goals/EQS/prisoner_restructoring.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_station_legions
+        texturefile = "gfx/interface/goals/EQS/station_legions.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_united_goal
+        texturefile = "gfx/interface/goals/EQS/united_goal.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_world_station
+        texturefile = "gfx/interface/goals/EQS/world_station.tga"
+    }
 
     ###PCB###
     SpriteType = {
