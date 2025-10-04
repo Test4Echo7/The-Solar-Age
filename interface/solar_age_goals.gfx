@@ -374,12 +374,32 @@ SpriteTypes = {
         texturefile = "gfx/interface/goals/EQS/personnel_support.tga"
     }
     SpriteType = {
+        name = GFX_goal_allies_in_high_places
+        texturefile = "gfx/interface/goals/EQS/allies_in_high_places.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_expand_sunset_university
+        texturefile = "gfx/interface/goals/EQS/expand_sunset_university.tga"
+    }
+    SpriteType = {
         name = GFX_goal_griffon_workers
-        texturefile = "gfx/interface/goals/EQS/grioffon_workers.tga"
+        texturefile = "gfx/interface/goals/EQS/griffon_workers.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_strip_mine_bauxite
+        texturefile = "gfx/interface/goals/EQS/strip_mine_bauxite.tga"
     }
     SpriteType = {
         name = GFX_goal_church_of_day
         texturefile = "gfx/interface/goals/EQS/church_of_day.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_homeland_investments
+        texturefile = "gfx/interface/goals/EQS/homeland_investments.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_refuge_in_sun
+        texturefile = "gfx/interface/goals/EQS/refuge_in_sun.tga"
     }
 
     ###PCB###
@@ -408,9 +428,49 @@ SpriteTypes = {
         texturefile = "gfx/interface/goals/EQS/isle_of_sun.tga"
     }
 
+    ###War Buff Tree###
+    SpriteType = {
+        name = GFX_goal_airfields
+        texturefile = "gfx/interface/goals/EQS/airfields.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_airfields2
+        texturefile = "gfx/interface/goals/EQS/airfields2.tga"
+    }
+
     ###Industry###
     SpriteType = {
         name = GFX_goal_imperial_work_service
         texturefile = "gfx/interface/goals/EQS/imperial_work_service.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_trains_across_empire
+        texturefile = "gfx/interface/goals/EQS/trains_across_empire.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_trawl_mountain_depths
+        texturefile = "gfx/interface/goals/EQS/trawl_mountain_depths.tga"
+    }
+
+    ###Conquest###
+    SpriteType = {
+        name = GFX_goal_conquer_GRI
+        texturefile = "gfx/interface/goals/EQS/conquer_GRI.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_educate_kaiser
+        texturefile = "gfx/interface/goals/EQS/educate_kaiser.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_last_grover
+        texturefile = "gfx/interface/goals/EQS/last_grover.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_almost_pony
+        texturefile = "gfx/interface/goals/EQS/almost_pony.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_griffon_birthplace
+        texturefile = "gfx/interface/goals/EQS/griffon_birthplace.tga"
     }
 }

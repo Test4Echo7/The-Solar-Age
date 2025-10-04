@@ -5002,7 +5002,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_conquer_GRI
-	icon = GFX_goal_solar_attack_griffonia
+	icon = GFX_goal_conquer_GRI
 	prerequisite = { focus = SOL_conquer_chn }
 	prerequisite = { focus = SOL_conquer_drg }
 	prerequisite = { focus = SOL_conquer_ole }
@@ -6221,6 +6221,7 @@ shared_focus = {
 	id = SOL_griffon_birthplace
 	x = 0
 	y = 2
+	icon = GFX_goal_griffon_birthplace
 	relative_position_id = SOL_conquer_GRI
 
 	cost = 8
@@ -6356,6 +6357,7 @@ shared_focus = {
 	id = SOL_educate_kaiser
 	x = 1
 	y = 1
+	icon = GFX_goal_educate_kaiser
 	relative_position_id = SOL_conquer_GRI
 
 	cost = 8
@@ -6409,6 +6411,7 @@ shared_focus = {
 	id = SOL_last_grover
 	x = 3
 	y = 1
+	icon = GFX_goal_last_grover
 	relative_position_id = SOL_conquer_GRI
 
 	cost = 5
@@ -6599,6 +6602,7 @@ shared_focus = {
 	id = SOL_almost_pony
 	x = 5
 	y = 1
+	icon = GFX_goal_almost_pony
 	relative_position_id = SOL_conquer_GRI
 
 	cost = 5
@@ -10752,7 +10756,8 @@ joint_focus = {
 joint_focus = {
 	id = SOL_strip_mine_bauxite
 	x = 2
-	y =2
+	y = 2
+	icon = GFX_goal_strip_mine_bauxite
 	relative_position_id = SOL_colonial_investments
 
 	cost = 6
@@ -10929,6 +10934,7 @@ joint_focus = {
 	id = SOL_allies_in_high_places
 	x = -2
 	y = 1
+	icon = GFX_goal_allies_in_high_places
 	relative_position_id = SOL_homegrown_plan
 
 	cost = 6
@@ -10990,6 +10996,7 @@ joint_focus = {
 	id = SOL_expand_sunset_university
 	x = -1
 	y = 1
+	icon = GFX_goal_expand_sunset_university
 	relative_position_id = SOL_debt_council
 
 	cost = 8
@@ -11102,6 +11109,7 @@ joint_focus = {
 	id = SOL_homeland_investments
 	x = 2
 	y = 1
+	icon = GFX_goal_homeland_investments
 	relative_position_id = SOL_allies_in_high_places
 
 	cost = 5
@@ -11402,6 +11410,7 @@ joint_focus = {
 	id = SOL_refuge_in_sun
 	x = 0
 	y = 2
+	icon = GFX_goal_refuge_in_sun
 	relative_position_id = SOL_allies_in_high_places
 
 	cost = 6
@@ -11577,7 +11586,7 @@ joint_focus = {
 ###Ministry of Defense Additions###
 shared_focus = {
 	id = SOL_airfields
-	icon = GFX_goal_eqs_airfields_central
+	icon = GFX_goal_airfields
 	cost = 5
 	ai_will_do = { factor = 70 }
 	prerequisite = {
@@ -11661,7 +11670,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_airfields2
-	icon = GFX_goal_eqs_airfields_south
+	icon = GFX_goal_airfields2
 	cost = 5
 	ai_will_do = { factor = 20 }
 	prerequisite = {
@@ -15132,7 +15141,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_trains_across_empire
-	icon = GFX_goal_rct_fancy_train
+	icon = GFX_goal_trains_across_empire
 	cost = 5
 	ai_will_do = { factor = 80 }
 	prerequisite = {
@@ -15706,6 +15715,7 @@ shared_focus = {
 	id = SOL_trawl_mountain_depths
 	x = -1
 	y = 2
+	icon = GFX_goal_trawl_mountain_depths
 	relative_position_id = SOL_invest_in_manehattan
 
 	cost = 8
