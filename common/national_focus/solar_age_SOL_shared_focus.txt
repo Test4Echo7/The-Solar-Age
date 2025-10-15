@@ -11751,6 +11751,7 @@ shared_focus = {
 	x = -2
 	y = 2
 	relative_position_id = Ministry_of_defense
+	icon = GFX_goal_canterbbean_grinder
 
 	cost = 5
 	prerequisite = { focus = Ministry_of_defense }
@@ -11826,6 +11827,7 @@ shared_focus = {
 	x = 2
 	y = 2
 	relative_position_id = Ministry_of_defense
+	icon = GFX_goal_vanhoover_stations
 
 	cost = 5
 	prerequisite = { focus = Ministry_of_defense }
@@ -11970,6 +11972,7 @@ shared_focus = {
 	x = 0
 	y = 2
 	relative_position_id = SOL_airfields2
+	icon = GFX_goal_north_naval_games
 
 	cost = 5
 	prerequisite = {
@@ -12011,6 +12014,7 @@ shared_focus = {
 	x = -1
 	y = 3
 	relative_position_id = SOL_airfields2
+	icon = GFX_goal_operation_wasserkoenigin
 
 	cost = 5
 	prerequisite = {
@@ -12056,6 +12060,7 @@ shared_focus = {
 	x = 1
 	y = 2
 	relative_position_id = SOL_vanhoover_stations
+	icon = GFX_goal_variegated_survival_training
 
 	cost = 5
 	prerequisite = {
@@ -12091,6 +12096,7 @@ shared_focus = {
 	x = -1
 	y = 2
 	relative_position_id = SOL_changeling_menace
+	icon = GFX_goal_canterlot_fort_line
 
 	cost = 5
 	prerequisite = { focus = SOL_changeling_menace }
@@ -12193,6 +12199,7 @@ shared_focus = {
 	x = 1
 	y = 4
 	relative_position_id = SOL_airfields
+	icon = GFX_goal_combined_arms_exercises
 
 	cost = 6
 	prerequisite = {
@@ -12226,6 +12233,7 @@ shared_focus = {
 	x = 0
 	y = 1
 	relative_position_id = SOL_canterlot_fort_line
+	icon = GFX_goal_defense_in_order
 
 	cost = 6
 	prerequisite = { focus = SOL_canterlot_fort_line }
@@ -12244,6 +12252,7 @@ shared_focus = {
 	x = -1
 	y = 2
 	relative_position_id = SOL_variegated_survival_training
+	icon = GFX_goal_tactics_of_destruction
 
 	cost = 6
 	prerequisite = { focus = SOL_variegated_survival_training }
@@ -13389,10 +13398,10 @@ shared_focus = {
 	ai_will_do = { factor = 40 }
 }
 
-###Air Force###
+###Airforce###
 shared_focus = {
 	id = SOL_sky_domain
-	icon = GFX_goal_generic_build_airforce
+	icon = GFX_goal_sky_domain
 	x = 0
 	y = 1
 	relative_position_id = SOL_modernize_relic
@@ -13420,6 +13429,7 @@ shared_focus = {
 	x = 0
 	y = 1
 	relative_position_id = SOL_sky_domain
+	icon = GFX_goal_abolish_wonderbolts
 
 	cost = 5
 	prerequisite = { focus = SOL_sky_domain }
@@ -13437,6 +13447,7 @@ shared_focus = {
 	x = -4
 	y = 1
 	relative_position_id = SOL_abolish_wonderbolts
+	icon = GFX_goal_striking_battlefield
 
 	cost = 5
 	prerequisite = { focus = SOL_abolish_wonderbolts }
@@ -13466,6 +13477,7 @@ shared_focus = {
 	x = 4
 	y = 1
 	relative_position_id = SOL_abolish_wonderbolts
+	icon = GFX_goal_punishing_world
 
 	cost = 5
 	prerequisite = { focus = SOL_abolish_wonderbolts }
@@ -13489,6 +13501,7 @@ shared_focus = {
 	x = 0
 	y = 1
 	relative_position_id = SOL_striking_battlefield
+	icon = GFX_goal_durable_frames
 
 	cost = 3
 	prerequisite = { focus = SOL_striking_battlefield }
@@ -13511,6 +13524,7 @@ shared_focus = {
 	x = 2
 	y = 1
 	relative_position_id = SOL_striking_battlefield
+	icon = GFX_goal_fear_tactics
 
 	cost = 5
 	prerequisite = { focus = SOL_striking_battlefield }
@@ -13530,6 +13544,7 @@ shared_focus = {
 	x = 0
 	y = 2
 	relative_position_id = SOL_abolish_wonderbolts
+	icon = GFX_goal_sky_flexibility
 
 	cost = 5
 	prerequisite = { focus = SOL_abolish_wonderbolts }
@@ -13570,6 +13585,7 @@ shared_focus = {
 	x = -1
 	y = 1
 	relative_position_id = SOL_punishing_world
+	icon = GFX_goal_streamline_expenses
 
 	cost = 5
 	prerequisite = { focus = SOL_punishing_world }
@@ -14331,6 +14347,7 @@ shared_focus = {
 	x = 14
 	y = 1
 	relative_position_id = SOL_modernize_relic
+	icon = GFX_goal_rebuild_admiralty
 
 	cost = 4
 	prerequisite = { focus = SOL_modernize_relic }
@@ -14355,6 +14372,7 @@ shared_focus = {
 	x = -2
 	y = 1
 	relative_position_id = SOL_rebuild_admiralty
+	icon = GFX_goal_scraping_barrels
 
 	cost = 7
 	prerequisite = { focus = SOL_rebuild_admiralty }
@@ -14520,6 +14538,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	relative_position_id = SOL_rebuild_admiralty
+	icon = GFX_goal_saltless_blood
 
 	cost = 6
 	prerequisite = { focus = SOL_rebuild_admiralty }
@@ -14538,6 +14557,7 @@ shared_focus = {
 	x = 0
 	y = 2
 	relative_position_id = SOL_rebuild_admiralty
+	icon = GFX_goal_practical_needs
 
 	cost = 4
 	prerequisite = { focus = SOL_rebuild_admiralty }
@@ -14560,6 +14580,7 @@ shared_focus = {
 	x = 2
 	y = 2
 	relative_position_id = SOL_rebuild_admiralty
+	icon = GFX_goal_strong_dissuasion
 
 	cost = 4
 	prerequisite = { focus = SOL_rebuild_admiralty }
@@ -14588,6 +14609,7 @@ shared_focus = {
 	x = -2
 	y = 1
 	relative_position_id = SOL_practical_needs
+	icon = GFX_goal_surrender_waves
 
 	cost = 5
 	prerequisite = {
@@ -14620,6 +14642,7 @@ shared_focus = {
 	x = 2
 	y = 1
 	relative_position_id = SOL_practical_needs
+	icon = GFX_goal_crushing_sea
 
 	cost = 5
 	prerequisite = {
@@ -14646,6 +14669,7 @@ shared_focus = {
 	x = -2
 	y = 1
 	relative_position_id = SOL_surrender_waves
+	icon = GFX_goal_mobile_airfields
 
 	cost = 4
 	prerequisite = { focus = SOL_surrender_waves }
@@ -14669,6 +14693,7 @@ shared_focus = {
 	x = 0
 	y = 1
 	relative_position_id = SOL_surrender_waves
+	icon = GFX_goal_fillydelphia_rivalry
 
 	cost = 5
 	prerequisite = { focus = SOL_surrender_waves }
@@ -14700,6 +14725,7 @@ shared_focus = {
 	x = 0
 	y = 2
 	relative_position_id = SOL_practical_needs
+	icon = GFX_goal_semper_fi
 
 	cost = 5
 	prerequisite = {
@@ -14725,6 +14751,7 @@ shared_focus = {
 	x = 0
 	y = 1
 	relative_position_id = SOL_crushing_sea
+	icon = GFX_goal_expand_manehattan_dockyards
 
 	cost = 5
 	prerequisite = { focus = SOL_crushing_sea }
@@ -14756,6 +14783,7 @@ shared_focus = {
 	x = 2
 	y = 1
 	relative_position_id = SOL_crushing_sea
+	icon = GFX_goal_first_rates
 
 	cost = 4
 	prerequisite = { focus = SOL_crushing_sea }
@@ -14778,6 +14806,7 @@ shared_focus = {
 	x = -2
 	y = 1
 	relative_position_id = SOL_mobile_airfields
+	icon = GFX_goal_birds_of_water
 
 	cost = 5
 	prerequisite = { focus = SOL_mobile_airfields }
@@ -14818,6 +14847,7 @@ shared_focus = {
 	x = 0
 	y = 1
 	relative_position_id = SOL_mobile_airfields
+	icon = GFX_goal_modern_sea
 
 	cost = 6
 	prerequisite = { focus = SOL_mobile_airfields }
@@ -14835,6 +14865,7 @@ shared_focus = {
 	x = 0
 	y = 1
 	relative_position_id = SOL_semper_fi
+	icon = GFX_goal_grand_expeditions
 
 	cost = 4
 	prerequisite = { focus = SOL_semper_fi }
@@ -14857,6 +14888,7 @@ shared_focus = {
 	x = 0
 	y = 2
 	relative_position_id = SOL_first_rates
+	icon = GFX_goal_imperial_dreadnoughts
 
 	cost = 5
 	prerequisite = { focus = SOL_first_rates }
@@ -14875,6 +14907,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	relative_position_id = SOL_birds_of_water
+	icon = GFX_goal_floating_cities
 
 	cost = 7
 	prerequisite = { focus = SOL_birds_of_water }
@@ -14900,6 +14933,7 @@ shared_focus = {
 	x = -1
 	y = 2
 	relative_position_id = SOL_fillydelphia_rivalry
+	icon = GFX_goal_long_range_strikers
 
 	cost = 7
 	prerequisite = { focus = SOL_fillydelphia_rivalry }
@@ -14924,6 +14958,7 @@ shared_focus = {
 	x = 0
 	y = 1
 	relative_position_id = SOL_grand_expeditions
+	icon = GFX_goal_roach_guards
 
 	cost = 7
 	prerequisite = { focus = SOL_grand_expeditions }
@@ -14948,6 +14983,7 @@ shared_focus = {
 	x = 0
 	y = 2
 	relative_position_id = SOL_expand_manehattan_dockyards
+	icon = GFX_goal_magisteel_plating
 
 	cost = 7
 	prerequisite = { focus = SOL_expand_manehattan_dockyards }
@@ -14972,6 +15008,7 @@ shared_focus = {
 	x = 0
 	y = 3
 	relative_position_id = SOL_fillydelphia_rivalry
+	icon = GFX_goal_swarms_upon_sea
 
 	cost = 5
 	prerequisite = { focus = SOL_fillydelphia_rivalry }
@@ -15000,6 +15037,7 @@ shared_focus = {
 	x = 0
 	y = 1
 	relative_position_id = SOL_magisteel_plating
+	icon = GFX_goal_old_guns
 
 	cost = 5
 	prerequisite = { focus = SOL_imperial_dreadnoughts }
@@ -15032,6 +15070,7 @@ shared_focus = {
 	x = 0
 	y = 2
 	relative_position_id = SOL_imperial_dreadnoughts
+	icon = GFX_goal_practical_reductions
 
 	cost = 5
 	prerequisite = { focus = SOL_imperial_dreadnoughts }
@@ -15050,6 +15089,7 @@ shared_focus = {
 	x = 2
 	y = 2
 	relative_position_id = SOL_imperial_dreadnoughts
+	icon = GFX_goal_sea_fortress
 
 	cost = 5
 	prerequisite = { focus = SOL_imperial_dreadnoughts }
@@ -15069,6 +15109,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	relative_position_id = SOL_swarms_upon_sea
+	icon = GFX_goal_adapt_tide
 
 	cost = 5
 	prerequisite = { focus = SOL_swarms_upon_sea }
@@ -15090,6 +15131,7 @@ shared_focus = {
 	x = -1
 	y = 1
 	relative_position_id = SOL_old_guns
+	icon = GFX_goal_steady_going
 
 	cost = 5
 	prerequisite = { focus = SOL_old_guns }
@@ -15111,6 +15153,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	relative_position_id = SOL_adapt_tide
+	icon = GFX_goal_sun_never_sets
 
 	cost = 6
 	prerequisite = {

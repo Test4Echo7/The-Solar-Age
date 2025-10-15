@@ -27,22 +27,60 @@ SpriteTypes = {
     ###Civil War###
     SpriteType = {
         name = "GFX_idea_SOL_inflationary_spending"
-        textureFile = "gfx/interface/ideas/SOL/SOL_inflationary_spending_idea.png"
+        textureFile = "gfx/interface/ideas/SOL/SOL_inflationary_spending_idea.tga"
     }
     SpriteType = {
         name = "GFX_idea_SOL_minimal_training_requirements"
-        textureFile = "gfx/interface/ideas/SOL/SOL_minimal_training_requirements_idea.png"
+        textureFile = "gfx/interface/ideas/SOL/SOL_minimal_training_requirements_idea.tga"
     }
     SpriteType = {
         name = "GFX_idea_SOL_desperate_drafting"
-        textureFile = "gfx/interface/ideas/SOL/SOL_desperate_drafting_idea.png"
+        textureFile = "gfx/interface/ideas/SOL/SOL_desperate_drafting_idea.tga"
     }
     SpriteType = {
         name = "GFX_idea_SOL_counter_insurgents"
-        textureFile = "gfx/interface/ideas/SOL/SOL_counter_insurgents_idea.png"
+        textureFile = "gfx/interface/ideas/SOL/SOL_counter_insurgents_idea.tga"
     }
     SpriteType = {
         name = "GFX_idea_SOL_civil_war_measures_idea"
-        textureFile = "gfx/interface/ideas/SOL/SOL_imperial_emergencies_act_idea.png"
+        textureFile = "gfx/interface/ideas/SOL/SOL_imperial_emergencies_act_idea.tga"
+    }
+
+    ###Navy###
+    SpriteType = {
+        name = "GFX_idea_SOL_coordinated_carrier_classes"
+        textureFile = "gfx/interface/ideas/SOL/SOL_coordinated_carrier_classes.tga"
+    }
+    SpriteType = {
+        name = "GFX_idea_SOL_expansive_carriers"
+        textureFile = "gfx/interface/ideas/SOL/SOL_expansive_carriers.tga"
+    }
+    SpriteType = {
+        name = "GFX_idea_SOL_unreachable_lengths"
+        textureFile = "gfx/interface/ideas/SOL/SOL_unreachable_lengths.tga"
+    }
+    SpriteType = {
+        name = "GFX_idea_SOL_combined_naval_arms"
+        textureFile = "gfx/interface/ideas/SOL/SOL_combined_naval_arms.tga"
+    }
+    SpriteType = {
+        name = "GFX_idea_SOL_sacrificial_light_ships"
+        textureFile = "gfx/interface/ideas/SOL/SOL_sacrificial_light_ships.tga"
+    }
+    SpriteType = {
+        name = "GFX_idea_SOL_magic_bonded_plating"
+        textureFile = "gfx/interface/ideas/SOL/SOL_magic_bonded_plating.tga"
+    }
+    SpriteType = {
+        name = "GFX_idea_SOL_status_quo_superiority"
+        textureFile = "gfx/interface/ideas/SOL/SOL_status_quo_superiority.tga"
+    }
+    SpriteType = {
+        name = "GFX_idea_SOL_cut_ship_hull_heavy_corners"
+        textureFile = "gfx/interface/ideas/SOL/SOL_cut_ship_hull_heavy_corners.tga"
+    }
+    SpriteType = {
+        name = "GFX_idea_SOL_high_seas_empire"
+        textureFile = "gfx/interface/ideas/SOL/SOL_high_seas_empire.tga"
     }
 }

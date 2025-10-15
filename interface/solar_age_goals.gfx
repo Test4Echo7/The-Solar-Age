@@ -174,6 +174,150 @@ SpriteTypes = {
         texturefile = "gfx/interface/goals/EQS/only_statistics.tga"
     }
 
+    ###Airforce###
+    SpriteType = {
+        name = GFX_goal_sky_domain
+        texturefile = "gfx/interface/goals/EQS/sky_domain.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_abolish_wonderbolts
+        texturefile = "gfx/interface/goals/EQS/abolish_wonderbolts.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_striking_battlefield
+        texturefile = "gfx/interface/goals/EQS/striking_battlefield.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_punishing_world
+        texturefile = "gfx/interface/goals/EQS/punishing_world.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_durable_frames
+        texturefile = "gfx/interface/goals/EQS/durable_frames.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_fear_tactics
+        texturefile = "gfx/interface/goals/EQS/fear_tactics.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_sky_flexibility
+        texturefile = "gfx/interface/goals/EQS/sky_flexibility.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_streamline_expenses
+        texturefile = "gfx/interface/goals/EQS/streamline_expenses.tga"
+    }
+
+    ###Navy###
+    SpriteType = {
+        name = GFX_goal_rebuild_admiralty
+        texturefile = "gfx/interface/goals/EQS/rebuild_admiralty.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_scraping_barrels
+        texturefile = "gfx/interface/goals/EQS/scraping_barrels.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_saltless_blood
+        texturefile = "gfx/interface/goals/EQS/saltless_blood.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_practical_needs
+        texturefile = "gfx/interface/goals/EQS/practical_needs.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_strong_dissuasion
+        texturefile = "gfx/interface/goals/EQS/strong_dissuasion.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_surrender_waves
+        texturefile = "gfx/interface/goals/EQS/surrender_waves.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_crushing_sea
+        texturefile = "gfx/interface/goals/EQS/crushing_sea.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_mobile_airfields
+        texturefile = "gfx/interface/goals/EQS/mobile_airfields.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_fillydelphia_rivalry
+        texturefile = "gfx/interface/goals/EQS/fillydelphia_rivalry.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_semper_fi
+        texturefile = "gfx/interface/goals/EQS/semper_fi.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_expand_manehattan_dockyards
+        texturefile = "gfx/interface/goals/EQS/expand_manehattan_dockyards.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_first_rates
+        texturefile = "gfx/interface/goals/EQS/first_rates.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_birds_of_water
+        texturefile = "gfx/interface/goals/EQS/birds_of_water.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_modern_sea
+        texturefile = "gfx/interface/goals/EQS/modern_sea.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_grand_expeditions
+        texturefile = "gfx/interface/goals/EQS/grand_expeditions.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_floating_cities
+        texturefile = "gfx/interface/goals/EQS/floating_cities.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_long_range_strikers
+        texturefile = "gfx/interface/goals/EQS/long_range_strikers.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_roach_guards
+        texturefile = "gfx/interface/goals/EQS/roach_guards.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_magisteel_plating
+        texturefile = "gfx/interface/goals/EQS/magisteel_plating.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_imperial_dreadnoughts
+        texturefile = "gfx/interface/goals/EQS/imperial_dreadnoughts.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_swarms_upon_sea
+        texturefile = "gfx/interface/goals/EQS/swarms_upon_sea.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_old_guns
+        texturefile = "gfx/interface/goals/EQS/old_guns.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_adapt_tide
+        texturefile = "gfx/interface/goals/EQS/adapt_tide.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_steady_going
+        texturefile = "gfx/interface/goals/EQS/steady_going.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_practical_reductions
+        texturefile = "gfx/interface/goals/EQS/practical_needs.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_sea_fortress
+        texturefile = "gfx/interface/goals/EQS/sea_fortress.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_sun_never_sets
+        texturefile = "gfx/interface/goals/EQS/sun_never_sets.tga"
+    }
+
     ###Civil War###
     SpriteType = {
         name = GFX_goal_civil_war_measures_new
@@ -242,6 +386,50 @@ SpriteTypes = {
     SpriteType = {
         name = GFX_goal_anti_changeling_tactics
         texturefile = "gfx/interface/goals/EQS/anti_changeling_tactics.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_airfields
+        texturefile = "gfx/interface/goals/EQS/airfields.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_airfields2
+        texturefile = "gfx/interface/goals/EQS/airfields2.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_canterbbean_grinder
+        texturefile = "gfx/interface/goals/EQS/canterbbean_grinder.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_vanhoover_stations
+        texturefile = "gfx/interface/goals/EQS/vanhoover_stations.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_north_naval_games
+        texturefile = "gfx/interface/goals/EQS/north_naval_games.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_operation_wasserkoenigin
+        texturefile = "gfx/interface/goals/EQS/operation_wasserkoenigin.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_variegated_survival_training
+        texturefile = "gfx/interface/goals/EQS/variegated_survival_training.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_combined_arms_exercises
+        texturefile = "gfx/interface/goals/EQS/combined_arms_exercises.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_canterlot_fort_line
+        texturefile = "gfx/interface/goals/EQS/canterlot_fort_line.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_defense_in_order
+        texturefile = "gfx/interface/goals/EQS/defense_in_order.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_tactics_of_destruction
+        texturefile = "gfx/interface/goals/EQS/tactics_of_destruction.tga"
     }
 
     ###Bats###
@@ -454,16 +642,6 @@ SpriteTypes = {
     SpriteType = {
         name = GFX_goal_isle_of_sun
         texturefile = "gfx/interface/goals/EQS/isle_of_sun.tga"
-    }
-
-    ###War Buff Tree###
-    SpriteType = {
-        name = GFX_goal_airfields
-        texturefile = "gfx/interface/goals/EQS/airfields.tga"
-    }
-    SpriteType = {
-        name = GFX_goal_airfields2
-        texturefile = "gfx/interface/goals/EQS/airfields2.tga"
     }
 
     ###Industry###
