@@ -333,6 +333,11 @@ EQS_BOP_sanity_category = {
                 value = 0.1
                 tooltip_side = EQS_kalm
             }
+            set_country_flag = {
+                flag = EQS_bop_decision_taken
+                days = 45
+                value = 1
+            }
         }
     }
     #One use
