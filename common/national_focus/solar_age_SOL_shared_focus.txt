@@ -14702,7 +14702,10 @@ shared_focus = {
 	relative_position_id = SOL_practical_needs
 
 	cost = 5
-	prerequisite = { focus = SOL_practical_needs }
+	prerequisite = {
+		focus = SOL_practical_needs
+		focus = SOL_strong_dissuasion
+	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_semper_fi"
