@@ -133,6 +133,7 @@ on_actions = {
             log = "[GetDateText]: [ROOT.GetName]: on_war_relation_added solar_age"
             if = {
                 limit = {
+                    NOT = { has_global_flag = celestia_and_luna_fused }
                     OR = {
                         AND = {
                             ROOT = {
@@ -179,6 +180,7 @@ on_actions = {
             }
             if = {
                 limit = {
+                    NOT = { has_global_flag = celestia_and_luna_fused }
                     ROOT = {
                         tag = NLR
                     }
@@ -212,6 +214,7 @@ on_actions = {
             }
             if = {
                 limit = {
+                    NOT = { has_global_flag = celestia_and_luna_fused }
                     ROOT = {
                         tag = EQS
                         NOT = { is_EQS_SOL = yes }
@@ -246,6 +249,7 @@ on_actions = {
             }
             if = { #For if anything other than the three specified countries
                 limit = {
+                    NOT = { has_global_flag = celestia_and_luna_fused }
                     OR = {
                         AND = {
                             ROOT = {
@@ -335,6 +339,7 @@ on_actions = {
                         EQS_unwilling_bureaucrats
                         EQS_anti_order_propaganda
                     }
+                    #Should have a short event talking about this
                 }
                 if = {
                     limit = {
