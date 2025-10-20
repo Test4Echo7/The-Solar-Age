@@ -80,13 +80,6 @@ shared_focus = {
 			}
 		}
 	}
-	offset = {
-		x = 6
-		trigger = {
-			is_EQS_SOL = yes
-			NOT = { has_country_flag = SOL_unlock_political_focuses }
-		}
-	}
 	ai_will_do = { factor = 100 }
 	bypass = {
 		hidden_trigger = { is_EQS_SOL = yes }
