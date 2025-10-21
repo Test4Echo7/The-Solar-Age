@@ -207,6 +207,22 @@ SpriteTypes = {
         name = GFX_goal_streamline_expenses
         texturefile = "gfx/interface/goals/EQS/streamline_expenses.tga"
     }
+    SpriteType = {
+        name = GFX_goal_bat_vision
+        texturefile = "gfx/interface/goals/EQS/bat_vision.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_reinforced_bomb_struts
+        texturefile = "gfx/interface/goals/EQS/reinforced_bomb_struts.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_field_tests
+        texturefile = "gfx/interface/goals/EQS/field_tests.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_mimic_pegasi
+        texturefile = "gfx/interface/goals/EQS/mimic_pegasi.tga"
+    }
 
     ###Navy###
     SpriteType = {
