@@ -446,6 +446,59 @@ EQS_is_a_starting_MIT_state = {
 		state = 466
 	}
 }
+EQS_SOL_subject_or_ally_in_faction_at_peace = {
+	OR = {
+		CRY = {
+			OR = {
+				is_subject_of = ROOT
+				is_in_faction_with = ROOT
+			}
+			NOT = { has_war_together_with = ROOT }
+		}
+		EQC = {
+			OR = {
+				is_subject_of = ROOT
+				is_in_faction_with = ROOT
+			}
+			NOT = { has_war_together_with = ROOT }
+		}
+		PCB = {
+			OR = {
+				is_subject_of = ROOT
+				is_in_faction_with = ROOT
+			}
+			NOT = { has_war_together_with = ROOT }
+		}
+		STG = {
+			OR = {
+				is_subject_of = ROOT
+				is_in_faction_with = ROOT
+			}
+			NOT = { has_war_together_with = ROOT }
+		}
+		OLE = {
+			OR = {
+				is_subject_of = ROOT
+				is_in_faction_with = ROOT
+			}
+			NOT = { has_war_together_with = ROOT }
+		}
+		HIP = {
+			OR = {
+				is_subject_of = ROOT
+				is_in_faction_with = ROOT
+			}
+			NOT = { has_war_together_with = ROOT }
+		}
+		ABY = {
+			OR = {
+				is_subject_of = ROOT
+				is_in_faction_with = ROOT
+			}
+			NOT = { has_war_together_with = ROOT }
+		}
+	}
+}
 #EQS_is_core_riverlands = {
 #	OR = {
 #		#Add all RIV cores and make sure not FBK, WAT, or FIR cores

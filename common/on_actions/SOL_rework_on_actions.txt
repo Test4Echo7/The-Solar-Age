@@ -333,13 +333,14 @@ on_actions = {
                                 has_idea = SOL_harmonic_resistance_idea
                             }
                         }
+                        NOT = { has_country_flag = SOL_harmonic_resistance_stymying }
                     }
-                    add_ideas = {
-                        EQS_agitated_workers
-                        EQS_unwilling_bureaucrats
-                        EQS_anti_order_propaganda
+                    country_event = {
+                        id = solarreworked.537
+                        days = 7
+                        random_days = 14
                     }
-                    #Should have a short event talking about this
+                    set_country_flag = SOL_harmonic_resistance_stymying
                 }
                 if = {
                     limit = {

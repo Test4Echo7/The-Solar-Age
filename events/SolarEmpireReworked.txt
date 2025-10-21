@@ -904,123 +904,74 @@ country_event = { #Daybreaker holds a speech in Sanctum Solar, which has just be
 		}
 		if = {
             limit = {
-                OR = {
-                    CRY = {
-                        OR = {
-                            is_subject_of = ROOT
-                            is_in_faction_with = ROOT
-                        }
-                        NOT = { has_war_together_with = ROOT }
-                    }
-                    EQC = {
-                        OR = {
-                            is_subject_of = ROOT
-                            is_in_faction_with = ROOT
-                        }
-                        NOT = { has_war_together_with = ROOT }
-                    }
-                    PCB = {
-                        OR = {
-                            is_subject_of = ROOT
-                            is_in_faction_with = ROOT
-                        }
-                        NOT = { has_war_together_with = ROOT }
-                    }
-                }
+                EQS_SOL_subject_or_ally_in_faction_at_peace = yes
             }
             custom_effect_tooltip = SOL_stabbed_tt
-		}
-		hidden_effect = {
-            CRY = {
-                if = {
-                    limit = {
-                        is_in_faction_with = ROOT
-                        NOT = { has_war_together_with = ROOT }
-                    }
+            hidden_effect = {
+                CRY = {
                     if = {
-                        limit = { is_subject_of = ROOT  }
-                        ROOT = { end_puppet = CRY }
+                        limit = {
+                            is_in_faction_with = EQS
+                            NOT = { has_war_together_with = EQS }
+                        }
+                        country_event = solarreworked.536
                     }
-                    leave_faction = yes
                 }
-            }
-            EQC = {
-                if = {
-                    limit = {
-                        is_in_faction_with = ROOT
-                        NOT = { has_war_together_with = ROOT }
-                    }
+                EQC = {
                     if = {
-                        limit = { is_subject_of = ROOT }
-                        ROOT = { end_puppet = EQC }
-                    }
-                    leave_faction = yes
-                    hidden_effect = {
-                        drop_cosmetic_tag = yes
+                        limit = {
+                            is_in_faction_with = EQS
+                            NOT = { has_war_together_with = EQS }
+                        }
+                        country_event = solarreworked.536
                     }
                 }
-            }
-            PCB = {
-                if = {
-                    limit = {
-                        is_in_faction_with = ROOT
-                        NOT = { has_war_together_with = ROOT }
-                    }
+                PCB = {
                     if = {
-                        limit = { is_subject_of = ROOT }
-                        ROOT = { end_puppet = PCB }
+                        limit = {
+                            is_in_faction_with = EQS
+                            NOT = { has_war_together_with = EQS }
+                        }
+                        country_event = solarreworked.536
                     }
-                    leave_faction = yes
+                }
+                STG = {
+                    if = {
+                        limit = {
+                            is_in_faction_with = EQS
+                            NOT = { has_war_together_with = EQS }
+                        }
+                        country_event = solarreworked.536
+                    }
+                }
+                OLE = {
+                    if = {
+                        limit = {
+                            is_in_faction_with = EQS
+                            NOT = { has_war_together_with = EQS }
+                        }
+                        country_event = solarreworked.536
+                    }
+                }
+                HIP = {
+                    if = {
+                        limit = {
+                            is_in_faction_with = EQS
+                            NOT = { has_war_together_with = EQS }
+                        }
+                        country_event = solarreworked.536
+                    }
+                }
+                ABY = {
+                    if = {
+                        limit = {
+                            is_in_faction_with = EQS
+                            NOT = { has_war_together_with = EQS }
+                        }
+                        country_event = solarreworked.536
+                    }
                 }
             }
-            STG = {
-                if = {
-                    limit = { is_subject_of = ROOT }
-                    ROOT = { end_puppet = STG }
-                }
-                if = {
-                    limit = { is_in_faction_with = ROOT }
-                    leave_faction = yes
-                }
-            }
-            OLE = {
-                if = {
-                    limit = { is_subject_of = ROOT }
-                    ROOT = { end_puppet = OLE }
-                }
-                if = {
-                    limit = { is_in_faction_with = ROOT }
-                    leave_faction = yes
-                }
-            }
-            HIP = {
-                if = {
-                    limit = { is_subject_of = ROOT }
-                    ROOT = { end_puppet = HIP }
-                }
-                if = {
-                    limit = { is_in_faction_with = ROOT }
-                    leave_faction = yes
-                }
-            }
-            ABY = {
-                if = {
-                    limit = { is_subject_of = ROOT }
-                    ROOT = { end_puppet = ABY }
-                }
-                if = {
-                    limit = { is_in_faction_with = ROOT }
-                    leave_faction = yes
-                }
-            }
-        }
-        if = {
-            limit = {
-                NOT = { is_in_faction_with = PCB }
-                NOT = { is_in_faction_with = CRY }
-                NOT = { is_in_faction_with = EQC }
-            }
-            set_country_flag = SOL_puppets_left
         }
         set_country_flag = SOL_unlock_political_focuses
         hidden_effect = {
@@ -12766,90 +12717,65 @@ country_event = { #Event quickly stating that now that the war is over, with EQC
         hidden_effect = {
             CRY = {
                 if = {
-                    limit = { is_subject_of = ROOT }
-                    ROOT = { end_puppet = CRY }
-                    if = {
-                        limit = { has_idea = equestrian_overlord }
-                        remove_ideas = equestrian_overlord
+                    limit = {
+                        is_in_faction_with = EQS
+                        NOT = { has_war_together_with = EQS }
                     }
-                }
-                if = {
-                    limit = { is_in_faction_with = ROOT }
-                    leave_faction = yes
-                }
-                hidden_effect = {
-                    drop_cosmetic_tag = yes
+                    country_event = solarreworked.536
                 }
             }
             EQC = {
                 if = {
-                    limit = { is_subject_of = ROOT }
-                    ROOT = { end_puppet = EQC }
-                    if = {
-                        limit = { has_idea = equestrian_overlord }
-                        remove_ideas = equestrian_overlord
+                    limit = {
+                        is_in_faction_with = EQS
+                        NOT = { has_war_together_with = EQS }
                     }
-                }
-                if = {
-                    limit = { is_in_faction_with = ROOT }
-                    leave_faction = yes
-                }
-                hidden_effect = {
-                    drop_cosmetic_tag = yes
+                    country_event = solarreworked.536
                 }
             }
             PCB = {
                 if = {
-                    limit = { is_subject_of = ROOT }
-                    ROOT = { end_puppet = PCB }
-                    if = {
-                        limit = { has_idea = equestrian_overlord }
-                        remove_ideas = equestrian_overlord
+                    limit = {
+                        is_in_faction_with = EQS
+                        NOT = { has_war_together_with = EQS }
                     }
-                }
-                if = {
-                    limit = { is_in_faction_with = ROOT }
-                    leave_faction = yes
+                    country_event = solarreworked.536
                 }
             }
             STG = {
                 if = {
-                    limit = { is_subject_of = ROOT }
-                    ROOT = { end_puppet = STG }
-                }
-                if = {
-                    limit = { is_in_faction_with = ROOT }
-                    leave_faction = yes
+                    limit = {
+                        is_in_faction_with = EQS
+                        NOT = { has_war_together_with = EQS }
+                    }
+                    country_event = solarreworked.536
                 }
             }
             OLE = {
                 if = {
-                    limit = { is_subject_of = ROOT }
-                    ROOT = { end_puppet = OLE }
-                }
-                if = {
-                    limit = { is_in_faction_with = ROOT }
-                    leave_faction = yes
+                    limit = {
+                        is_in_faction_with = EQS
+                        NOT = { has_war_together_with = EQS }
+                    }
+                    country_event = solarreworked.536
                 }
             }
             HIP = {
                 if = {
-                    limit = { is_subject_of = ROOT }
-                    ROOT = { end_puppet = HIP }
-                }
-                if = {
-                    limit = { is_in_faction_with = ROOT }
-                    leave_faction = yes
+                    limit = {
+                        is_in_faction_with = EQS
+                        NOT = { has_war_together_with = EQS }
+                    }
+                    country_event = solarreworked.536
                 }
             }
             ABY = {
                 if = {
-                    limit = { is_subject_of = ROOT }
-                    ROOT = { end_puppet = ABY }
-                }
-                if = {
-                    limit = { is_in_faction_with = ROOT }
-                    leave_faction = yes
+                    limit = {
+                        is_in_faction_with = EQS
+                        NOT = { has_war_together_with = EQS }
+                    }
+                    country_event = solarreworked.536
                 }
             }
         }
@@ -14361,6 +14287,61 @@ country_event = { #Event informing griffon country leader of the formation of th
         ai_chance = {
             factor = 0
         }
+    }
+}
+
+country_event = { #Event informing the UPA members that it is best to leave the UPA/Harmony Pact before Daybreaker becomes worse, now that they have survived the worst part of the war.
+    id = solarreworked.536
+    title = solarreworked.536.t
+    desc = {
+        trigger = { NOT = { FROM = { has_country_flag = SOL_puppets_left} } }
+        text = solarreworked.536.d_a
+    }
+    desc = {
+        trigger = { FROM = { has_country_flag = SOL_puppets_left } }
+        text = solarreworked.536.d_a
+    }
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.536"}
+    picture = GFX_event_solarempire
+
+    is_triggered_only = yes
+
+    option = { #We can't stand with a tyrant!
+        name = solarreworked.536.a
+        FROM = { set_country_flag = SOL_puppets_left }
+        custom_effect_tooltip = SOL_vamoose_tt
+        hidden_effect = {
+            if = {
+                limit = { is_subject_of = FROM }
+                FROM = { end_puppet = ROOT }
+            }
+            if = {
+                limit = {
+                    has_idea = equestrian_overlord
+                }
+                remove_ideas = equestrian_overlord
+            }
+            leave_faction = yes
+            drop_cosmetic_tag = yes
+        }
+    }
+}
+
+country_event = { #Event about how the planted harmonic agents within the government have managed to take advantage of the chaos of being at war again to make it even harder for Daybreaker to lead.
+    id = solarreworked.537
+    title = solarreworked.537.t
+    desc = solarreworked.537.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.537"}
+    picture = GFX_event_solarempire
+
+    is_triggered_only = yes
+
+    option = { #Damn them!
+        name = solarreworked.537.a
+        custom_effect_tooltip = SOL_you_done_messed_up_tt
+        add_ideas = EQS_agitated_workers
+        add_ideas = EQS_unwilling_bureaucrats
+        add_ideas = EQS_anti_order_propaganda
     }
 }
 
