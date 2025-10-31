@@ -220,8 +220,32 @@ SpriteTypes = {
         texturefile = "gfx/interface/goals/EQS/field_tests.tga"
     }
     SpriteType = {
+        name = GFX_goal_invisible_eyes
+        texturefile = "gfx/interface/goals/EQS/invisible_eyes.tga"
+    }
+    SpriteType = {
         name = GFX_goal_mimic_pegasi
         texturefile = "gfx/interface/goals/EQS/mimic_pegasi.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_adequate_defense
+        texturefile = "gfx/interface/goals/EQS/adequate_defense.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_high_yield_explosives
+        texturefile = "gfx/interface/goals/EQS/high_yield_explosives.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_hero_program
+        texturefile = "gfx/interface/goals/EQS/hero_program.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_flying_castles
+        texturefile = "gfx/interface/goals/EQS/flying_castles.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_fire_from_sky
+        texturefile = "gfx/interface/goals/EQS/fire_from_sky.tga"
     }
 
     ###Navy###
@@ -672,6 +696,10 @@ SpriteTypes = {
     SpriteType = {
         name = GFX_goal_trawl_mountain_depths
         texturefile = "gfx/interface/goals/EQS/trawl_mountain_depths.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_south_eastern_investment
+        texturefile = "gfx/interface/goals/EQS/south_eastern_investment.tga"
     }
 
     ###Conquest###

@@ -13662,6 +13662,7 @@ shared_focus = {
 	x = -1
 	y = 1
 	relative_position_id = SOL_streamline_expenses
+	icon = GFX_goal_invisible_eyes
 
 	cost = 4
 	prerequisite = {
@@ -13707,6 +13708,7 @@ shared_focus = {
 	x = 0
 	y = 2
 	relative_position_id = SOL_punishing_world
+	icon = GFX_goal_adequate_defense
 
 	cost = 5
 	prerequisite = { focus = SOL_punishing_world }
@@ -13776,6 +13778,7 @@ shared_focus = {
 	x = 0
 	y = 2
 	relative_position_id = SOL_fear_tactics
+	icon = GFX_goal_high_yield_explosives
 
 	cost = 4
 	prerequisite = { focus = SOL_fear_tactics }
@@ -13817,6 +13820,7 @@ shared_focus = {
 	x = 0
 	y = 1
 	relative_position_id = SOL_invisible_eyes
+	icon = GFX_goal_hero_program
 
 	cost = 6
 	prerequisite = { focus = SOL_invisible_eyes }
@@ -13836,6 +13840,7 @@ shared_focus = {
 	x = 0
 	y = 1
 	relative_position_id = SOL_adequate_defense
+	icon = GFX_goal_flying_castles
 
 	cost = 6
 	prerequisite = { focus = SOL_adequate_defense }
@@ -13923,6 +13928,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	relative_position_id = SOL_hero_program
+	icon = GFX_goal_fire_from_sky
 
 	cost = 5
 	available = {
@@ -15346,7 +15352,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_south_eastern_investment
-	icon = GFX_goal_generic_consumer_goods
+	icon = GFX_goal_south_eastern_investment
 	cost = 7
 	ai_will_do = { factor = 75 }
 	prerequisite = { focus = SOL_tabulate_ponies }
