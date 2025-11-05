@@ -247,6 +247,22 @@ SpriteTypes = {
         name = GFX_goal_fire_from_sky
         texturefile = "gfx/interface/goals/EQS/fire_from_sky.tga"
     }
+    SpriteType = {
+        name = GFX_goal_additional_prototypes
+        texturefile = "gfx/interface/goals/EQS/additional_prototypes.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_targeted_destruction
+        texturefile = "gfx/interface/goals/EQS/targeted_destruction.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_modern_bombers
+        texturefile = "gfx/interface/goals/EQS/modern_bombers.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_area_bombardment
+        texturefile = "gfx/interface/goals/EQS/area_bombardment.tga"
+    }
 
     ###Navy###
     SpriteType = {

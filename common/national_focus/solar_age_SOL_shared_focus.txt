@@ -13883,6 +13883,7 @@ shared_focus = {
 	x = -2
 	y = 1
 	relative_position_id = SOL_hero_program
+	icon = GFX_goal_additional_prototypes
 
 	cost = 4
 	prerequisite = { focus = SOL_hero_program }
@@ -13954,6 +13955,7 @@ shared_focus = {
 	x = -1
 	y = 2
 	relative_position_id = SOL_high_yield_explosives
+	icon = GFX_goal_targeted_destruction
 
 	cost = 3
 	prerequisite = {
@@ -13983,6 +13985,7 @@ shared_focus = {
 	x = -1
 	y = 2
 	relative_position_id = SOL_hero_program
+	icon = GFX_goal_modern_bombers
 
 	cost = 4
 	prerequisite = { focus = SOL_hero_program }
@@ -14013,7 +14016,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_area_bombardment
-	icon = GFX_goal_generic_air_doctrine
+	icon = GFX_goal_area_bombardment
 	x = 2
 	y = 1
 	relative_position_id = SOL_fire_from_sky
