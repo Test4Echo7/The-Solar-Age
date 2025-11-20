@@ -1838,6 +1838,37 @@ SpriteTypes = {
 		legacy_lazy_load = no
 	}
 	SpriteType = {
+		name = "GFX_goal_holy_deliverance_shine"
+		texturefile = "gfx/interface/goals/EQS/holy_deliverance.tga"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EQS/holy_deliverance.tga"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EQS/holy_deliverance.tga"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
 		name = "GFX_goal_fire_from_sky_shine"
 		texturefile = "gfx/interface/goals/EQS/fire_from_sky.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
@@ -1980,6 +2011,68 @@ SpriteTypes = {
 
 		animation = {
 			animationmaskfile = "gfx/interface/goals/EQS/area_bombardment.tga"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_goal_deliver_death_shine"
+		texturefile = "gfx/interface/goals/EQS/deliver_death.tga"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EQS/deliver_death.tga"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EQS/deliver_death.tga"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_goal_desolation_engines_shine"
+		texturefile = "gfx/interface/goals/EQS/desolation_engines.tga"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EQS/desolation_engines.tga"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EQS/desolation_engines.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)

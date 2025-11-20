@@ -13865,6 +13865,7 @@ shared_focus = {
 	x = 0
 	y = 2
 	relative_position_id = SOL_reinforced_bomb_struts
+	icon = GFX_goal_holy_deliverance
 
 	cost = 5
 	prerequisite = { focus = SOL_reinforced_bomb_struts }
@@ -14046,6 +14047,7 @@ shared_focus = {
 	x = 2
 	y = 1
 	relative_position_id = SOL_targeted_destruction
+	icon = GFX_goal_deliver_death
 
 	cost = 8
 	prerequisite = { focus = SOL_targeted_destruction }
@@ -14105,6 +14107,7 @@ shared_focus = {
 	x = -2
 	y = 1
 	relative_position_id = SOL_area_bombardment
+	icon = GFX_goal_desolation_engines
 
 	cost = 8
 	prerequisite = { focus = SOL_area_bombardment }

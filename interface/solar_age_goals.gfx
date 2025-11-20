@@ -244,6 +244,10 @@ SpriteTypes = {
         texturefile = "gfx/interface/goals/EQS/flying_castles.tga"
     }
     SpriteType = {
+        name = GFX_goal_holy_deliverance
+        texturefile = "gfx/interface/goals/EQS/holy_deliverance.tga"
+    }
+    SpriteType = {
         name = GFX_goal_fire_from_sky
         texturefile = "gfx/interface/goals/EQS/fire_from_sky.tga"
     }
@@ -262,6 +266,14 @@ SpriteTypes = {
     SpriteType = {
         name = GFX_goal_area_bombardment
         texturefile = "gfx/interface/goals/EQS/area_bombardment.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_deliver_death
+        texturefile = "gfx/interface/goals/EQS/deliver_death.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_desolation_engines
+        texturefile = "gfx/interface/goals/EQS/desolation_engines.tga"
     }
 
     ###Navy###
