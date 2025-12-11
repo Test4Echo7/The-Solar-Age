@@ -49,7 +49,7 @@ leader_traits = {
         stability_factor = -0.05
         research_speed_factor = 0.1
         political_power_gain = -0.15
-        fascism_drift = 0.01
+        fascism_drift = 0.02
 
         ai_will_do = { factor = 1 }
     }
