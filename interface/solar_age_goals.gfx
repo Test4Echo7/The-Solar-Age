@@ -275,6 +275,30 @@ SpriteTypes = {
         name = GFX_goal_desolation_engines
         texturefile = "gfx/interface/goals/EQS/desolation_engines.tga"
     }
+    SpriteType = {
+        name = GFX_goal_breyns_dream
+        texturefile = "gfx/interface/goals/EQS/breyns_dream.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_heavenly_backdrop
+        texturefile = "gfx/interface/goals/EQS/heavenly_backdrop.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_judge_ground
+        texturefile = "gfx/interface/goals/EQS/judge_ground.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_order_skies
+        texturefile = "gfx/interface/goals/EQS/order_skies.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_project_solar_flare
+        texturefile = "gfx/interface/goals/EQS/project_solar_flare.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_skyborn
+        texturefile = "gfx/interface/goals/EQS/skyborn.tga"
+    }
 
     ###Navy###
     SpriteType = {
