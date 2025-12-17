@@ -399,6 +399,30 @@ EQS_debug_category = {
             set_country_flag = EQS_sunset_shimmer_arrived
         }
     }
+    EQS_create_harmony_pact_gw = {
+        allowed = {
+            tag = EQS
+        }
+        complete_effect = {
+            create_faction_from_template = faction_template_harmony_pact_gw_faction
+        }
+    }
+    EQS_create_harmony_pact_cw = {
+        allowed = {
+            tag = EQS
+        }
+        complete_effect = {
+            create_faction_from_template = faction_template_harmony_pact_cw_faction
+        }
+    }
+    EQS_create_harmony_pact_other = {
+        allowed = {
+            tag = EQS
+        }
+        complete_effect = {
+            create_faction_from_template = faction_template_harmony_pact_other_war_faction
+        }
+    }
     #EQS_space_marines = {
     #    allowed = {
     #        tag = EQS

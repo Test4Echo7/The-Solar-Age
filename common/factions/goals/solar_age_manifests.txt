@@ -13,7 +13,7 @@ faction_manifest_pony_dominance = {
     }
     ratio_progress = {
         total_amount_collection = collection:non_capitulated_equus_countries
-        completed_amount_collection = collection:non_capitulated_subjugated_equus_countries
+        completed_amount_collection = collection:subjugated_equus_countries
 
         scale = {
             war_stability_factor = 0.1
@@ -44,7 +44,7 @@ faction_manifest_age_of_pony = {
     }
     ratio_progress = {
         total_amount_collection = collection:non_capitulated_pony_and_adjacent_countries
-        completed_amount_collection = collection:non_capitulated_subjugated_pony_and_adjacent_countries
+        completed_amount_collection = collection:subjugated_pony_and_adjacent_countries
 
         scale = {
             compliance_growth = 0.15

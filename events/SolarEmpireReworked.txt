@@ -510,6 +510,107 @@ country_event = {
     }
 }
 
+country_event = { #How should the supremacist elements in the military be handled? Some have inklings of wanting to push Celestia to do more, and may also be hidden Solarists. Can either remove spirit, adapt spirit, or embrace spirit.
+    id = solarreworked.7
+    title = solarreworked.7.t
+    desc = solarreworked.7.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.7"}
+    picture = GFX_event_celestia_poster
+
+    is_triggered_only = yes
+
+    option = { #We must not allow extremists any say in our military.
+        name = solarreworked.7.a
+        ai_chance = {
+            factor = 1
+            modifier = {
+                OR = {
+                    has_country_flag = EQS_AI_SOLAR_EMPIRE
+                    has_game_rule = {
+                        rule = EQS_ai_behavior
+                        option = SOLAR_EMPIRE
+                    }
+                }
+                factor = 0
+            }
+        }
+        add_political_power = 50
+        add_command_power = -50
+        add_war_support = -0.035
+        add_manpower = -1500
+        remove_ideas = EQS_military_overtures
+        hidden_effect = {
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = 0.02
+                tooltip_side = EQS_kalm
+            }
+        }
+    }
+    option = { #Everypony is allowed a say.
+        name = solarreworked.7.b
+        ai_chance = {
+            factor = 1
+            modifier = {
+                OR = {
+                    has_country_flag = EQS_AI_SOLAR_EMPIRE
+                    has_country_flag = EQS_AI_HISTORICAL
+                    has_game_rule = {
+                        rule = EQS_ai_behavior
+                        option = SOLAR_EMPIRE
+                    }
+                    has_game_rule = {
+                        rule = EQS_ai_behavior
+                        option = HISTORICAL
+                    }
+                    is_historical_focus_on = yes
+                }
+                factor = 0
+            }
+        }
+        add_command_power = 25
+        add_war_support = 0.03
+        swap_ideas = {
+            remove_idea = EQS_military_overtures
+            add_idea = EQS_military_entertained
+        }
+    }
+    option = { #They care about Equestria and want to see it survive. They are true patriots.
+        name = solarreworked.7.c
+        ai_chance = {
+            factor = 1
+            modifier = {
+                OR = {
+                    has_country_flag = EQS_AI_HISTORICAL
+                    has_game_rule = {
+                        rule = EQS_ai_behavior
+                        option = HISTORICAL
+                    }
+                }
+                factor = 0
+            }
+        }
+        add_popularity = {
+            ideology = fascism
+            popularity = 0.01
+        }
+        add_command_power = 50
+        add_political_power = -50
+        add_war_support = 0.06
+        swap_ideas = {
+            remove_idea = EQS_military_overtures
+            add_idea = EQS_military_embraced
+        }
+        hidden_effect = {
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = -0.02
+                tooltip_side = EQS_angy
+            }
+        }
+    }
+}
+
 ###Opening Events###
 country_event = { #A soldier is on a patrol outside the palace and thinks about how his job is rather boring, and that he could be better serving elsewhere, but is surprised when Daybreaker breaks out of the castle to proclaim her ascension, and ponies' salvation is at hoof
     id = solarreworked.20
@@ -3212,8 +3313,8 @@ country_event = { #Daybreaker marches and enters into the chambers of Grover, wh
                                 exists = yes
                                 is_subject_of = ROOT
                             }
-                            transfer_state_to = EQC
                         }
+                        transfer_state_to = EQC
                     }
                     else_if = {
                         limit = {
@@ -3394,8 +3495,8 @@ country_event = { #Daybreaker smugly walks through Griffonstone, in a parade wit
                             exists = yes
                             is_subject_of = ROOT
                         }
-                        transfer_state_to = EQC
                     }
+                    transfer_state_to = EQC
                 }
                 else_if = {
                     limit = {

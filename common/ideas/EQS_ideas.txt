@@ -2268,6 +2268,24 @@ ideas = {
 	}
 
 	###Solar Age###
+	###New starting idea###
+	country = {
+		EQS_military_overtures = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				fascism_drift = 0.02
+				training_time_army_factor = 0.075
+				conscription_factor = -0.05
+				max_command_power = -10
+				heat_attrition_factor = -0.1
+			}
+		}
+	}
 	###Ideas for enemies##
 	country = {
 		EQS_high_attrition = {
@@ -2482,6 +2500,32 @@ ideas = {
 			modifier = {
 				production_lack_of_resource_penalty_factor = -0.05
 				stability_factor = -0.05
+			}
+		}
+		EQS_military_entertained = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				fascism_drift = 0.01
+				max_command_power = 5
+				heat_attrition_factor = -0.05
+				army_core_defence_factor = 0.03
+			}
+		}
+		EQS_military_embraced = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				fascism_drift = 0.02
+				training_time_army_factor = -0.05
+				conscription_factor = -0.05
+				max_command_power = 20
+				army_core_defence_factor = 0.05
+				heat_attrition_factor = -0.1
+				surrender_limit = 0.05
+				war_support_factor = 0.1
 			}
 		}
 	}

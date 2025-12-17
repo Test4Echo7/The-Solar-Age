@@ -1,0 +1,56 @@
+non_capitulated_equus_countries = {
+    input = constant:solar_age_country_groups.all_equus_countries_except_EQS
+    name = COLLECTION_NON_CAPITULATED_EQUUS_COUNTRIES
+    operators = {
+        limit = {
+            exists = yes
+            has_capitulated = no
+        }
+    }
+}
+
+subjugated_equus_countries = {
+    input = collection:non_capitulated_equus_countries
+    name = COLLECTION_SUBJUGATED_EQUUS_COUNTRIES
+    operators = {
+        limit = {
+            is_subject_of = EQS
+        }
+    }
+}
+
+griffonian_pony_countries = {
+    input = constant:solar_age_country_groups.all_griffonian_pony_countries
+    name = COLLECTION_GRIFFONIAN_PONY_COUNTRIES
+}
+
+zebrican_pony_and_adjacent_countries = {
+    input = constant:solar_age_country_groups.all_zebrican_pony_and_adjacent_countries
+    name = COLLECTION_ZEBRICAN_PONY_AND_ADJACENT_COUNTRIES
+}
+
+non_capitulated_pony_and_adjacent_countries = {
+    input = game:all_countries
+    name = COLLECTION_NON_CAPITULATED_PONY_AND_ADJACENT_COUNTRIES
+    operators = {
+        limit = {
+            exists = yes
+            has_capitulated = no
+            OR = {
+                has_idea = pony_race
+                has_idea = kirin_race
+                has_idea = horse_race
+            }
+        }
+    }
+}
+
+subjugated_pony_and_adjacent_countries = {
+    input = collection:non_capitulated_pony_and_adjacent_countries
+    name = COLLECTION_SUBJUGATED_PONY_AND_ADJACENT_COUNTRIES
+    operators = {
+        limit = {
+            is_subject_of = EQS
+        }
+    }
+}

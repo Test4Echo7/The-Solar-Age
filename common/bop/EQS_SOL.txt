@@ -72,6 +72,7 @@ EQS_sanity_bop = {
                 political_power_gain = 0.1
                 mobilization_speed = -0.15
                 army_defence_factor = 0.03
+                democratic_drift = 0.01
             }
             on_activate = {
                 log = "EQS_uneasy_sanity"
@@ -89,6 +90,7 @@ EQS_sanity_bop = {
                 army_defence_factor = 0.05
                 production_speed_buildings_factor = 0.1
                 consumer_goods_factor = 0.15
+                democratic_drift = 0.02
             }
             on_activate = {
                 log = "EQS_calm_sanity"
@@ -140,6 +142,7 @@ EQS_sanity_bop = {
                 surrender_limit = -0.05
                 industrial_capacity_factory = 0.05
                 industrial_capacity_dockyard = 0.05
+                fascism_drift = 0.01
             }
             on_activate = {
                 log = "EQS_paranoid_insanity"
@@ -173,6 +176,7 @@ EQS_sanity_bop = {
                 industrial_capacity_factory = 0.1
                 industrial_capacity_dockyard = 0.1
                 consumer_goods_factor = -0.1
+                fascism_drift = 0.02
             }
             on_activate = {
                 log = "EQS_schizophrenic_insanity"

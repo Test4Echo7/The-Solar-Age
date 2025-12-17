@@ -1,0 +1,63 @@
+solar_age_country_groups = {
+    schema = {
+        any_key = yes
+        array = country
+    }
+
+    all_equus_countries_except_EQS = {
+        CHN
+        CRY
+        NLR
+        CCN
+        PCB
+        DRG
+        OLE
+        YAK
+        JAK
+        GRF
+        GFF
+        PLB
+        BUF
+        PNG
+        STG
+        STL
+    }
+
+    all_griffonian_pony_countries = {
+        LSC
+        NTR
+        EQC
+        RCT
+        BAR
+        FBK
+        WAT
+        FIR
+        WIT
+        LCT
+        NIM
+        BAK
+        DEP
+        FRE
+        BAR
+    }
+
+    all_zebrican_pony_and_adjacent_countries = {
+        BAT
+        TBK
+        MGY
+        AES
+        MTA
+        KAR
+        EMR
+        MTO
+        OSQ
+        HMR
+        REE
+        YMN
+        SD1 #To only look for the owner of Trotgiers
+        KR1 #Because there are an insane number of KIR spawn, apparently
+        NVA
+        KHM
+        KXN
+    }
+}

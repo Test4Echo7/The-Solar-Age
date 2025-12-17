@@ -178,6 +178,7 @@ add_ideas = {
 	friendly_harmony
 	harmonic_stagnation
 	EQS_bat_pony_divide_1
+	EQS_military_overtures
 }
 if = {
 	limit = {

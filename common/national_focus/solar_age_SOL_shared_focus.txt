@@ -3732,6 +3732,10 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_pan_pony_empire"
 		add_ideas = SOL_all_ponies
+		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = SOL_flip_flopping_tt
+		custom_effect_tooltip = generic_skip_one_line_tt
+		set_faction_manifest = faction_manifest_age_of_pony
 	}
 	search_filters = { FOCUS_FILTER_RESISTANCE FOCUS_FILTER_ANNEXATION }
 	ai_will_do = { factor = 60 }
@@ -11621,6 +11625,8 @@ shared_focus = {
 	cancel_if_invalid = yes
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_airfields"
+		air_experience = 25
+		add_manpower = 10000
 		132 = {
 			add_building_construction = {
 				type = air_base
@@ -11700,6 +11706,8 @@ shared_focus = {
 	cancel_if_invalid = yes
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_airfields2"
+		air_experience = 25
+		add_manpower = 10000
 		38 = {
 			add_building_construction = {
 				type = air_base
@@ -14168,6 +14176,7 @@ shared_focus = {
 	x = 0
 	y = 2
 	relative_position_id = SOL_targeted_destruction
+	icon = GFX_goal_judge_ground
 
 	cost = 5
 	prerequisite = { focus = SOL_targeted_destruction }
@@ -14190,6 +14199,7 @@ shared_focus = {
 	x = 2
 	y = 1
 	relative_position_id = SOL_deliver_death
+	icon = GFX_goal_order_skies
 
 	cost = 5
 	prerequisite = {
@@ -14215,6 +14225,7 @@ shared_focus = {
 	x = 0
 	y = 2
 	relative_position_id = SOL_area_bombardment
+	icon = GFX_goal_heavenly_backdrop
 
 	cost = 5
 	prerequisite = { focus = SOL_area_bombardment }
@@ -14237,6 +14248,7 @@ shared_focus = {
 	x = 0
 	y = 2
 	relative_position_id = SOL_deliver_death
+	icon = GFX_goal_breyns_dream
 
 	cost = 5
 	prerequisite = {
@@ -14266,10 +14278,10 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_project_solar_flare
-	icon = GFX_focus_wonderweapons
 	x = 0
 	y = 2
 	relative_position_id = SOL_desolation_engines
+	icon = GFX_goal_project_solar_flare
 
 	cost = 5
 	prerequisite = {
@@ -14341,6 +14353,7 @@ shared_focus = {
 	x = 0
 	y = 2
 	relative_position_id = SOL_order_skies
+	icon = GFX_goal_skyborn
 
 	cost = 7
 	prerequisite = {

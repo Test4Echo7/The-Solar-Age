@@ -1,0 +1,229 @@
+faction_goal_push_out_the_bugs = {
+    name = faction_goal_push_out_the_bugs_name
+    description = faction_goal_push_out_the_bugs_desc
+    category = short_term
+    group = FOCUS_FILTER_ANNEXATION
+
+    allowed = {
+        tag = EQS
+    }
+    visible = {
+        is_EQS_SOL = yes
+        has_war_with = CHN
+        NOT = {
+            controls_state = 136
+            controls_state = 14
+        }
+    }
+
+    completed = {
+        controls_state = 136
+        controls_state = 14
+    }
+    complete_effect = {
+        add_faction_power_projection = 150
+        custom_effect_tooltip = THE_FACTION_LEADER
+        add_manpower = 35000
+        add_party_popularity = {
+            ideology = fascism
+            popularity = 0.015
+        }
+        add_faction_initiative = 1
+    }
+}
+
+faction_goal_unleash_suns_fury = {
+    name = faction_goal_unleash_suns_fury_name
+    description = faction_goal_unleash_suns_fury_desc
+    category = short_term
+    group = FOCUS_FILTER_WAR_SUPPORT
+
+    allowed = {
+        tag = EQS
+    }
+    visible = {
+        is_EQS_SOL = yes
+        OR = {
+            has_war_with = CHN
+            has_war_with = NLR
+        }
+    }
+
+    completed = {
+        count_in_collection = {
+			collection = {
+				input = game:scope
+				operators = { faction_members }
+				name = FACTION
+			}
+			buildings = { air_base }
+			size > 29
+		}
+		count_in_collection = {
+			collection = {
+				input = game:scope
+				operators = { faction_members }
+				name = FACTION
+			}
+			unit = armor
+			size > 49
+		}
+    }
+    complete_effect = {
+        add_faction_power_projection = 125
+        custom_effect_tooltip = THE_FACTION_LEADER
+        add_war_support = 0.03
+    }
+}
+
+faction_goal_crush_the_night = {
+    name = faction_goal_crush_the_night_name
+    description = faction_goal_crush_the_night_desc
+    category = short_term
+    group = FOCUS_FILTER_ANNEXATION
+
+    allowed = {
+        tag = EQS
+    }
+    visible = {
+        is_EQS_SOL = yes
+        has_war_with = NLR
+        NOT = { controls_state = 75 }
+    }
+
+    completed = {
+        controls_state = 3
+    }
+    complete_effect = {
+        add_faction_power_projection = 150
+        custom_effect_tooltip = THE_FACTION_LEADER
+        add_war_support = 0.02
+        add_party_popularity = {
+            ideology = fascism
+            popularity = 0.015
+        }
+        add_faction_initiative = 1
+    }
+}
+
+faction_goal_battlefield_teachers = {
+    name = faction_goal_battlefield_teachers_name
+    description = faction_goal_battlefield_teachers_desc
+    category = short_term
+    group = FOCUS_FILTER_ARMY_XP
+
+    allowed = {
+        tag = EQS
+    }
+    visible = {
+        is_EQS_SOL = yes
+    }
+
+    completed = {
+        OR = {
+            has_completed_track = infantry
+            has_completed_track = armor
+            has_completed_track = operations
+            has_completed_track = combat_support
+        }
+    }
+    complete_effect = {
+        add_faction_power_projection = 100
+        custom_effect_tooltip = ALL_FACTION_MEMBERS
+        every_faction_member = {
+            add_mastery_bonus = {
+                bonus = 0.15
+                days = 120
+                name = faction_goal_battlefield_teachers_name
+                folder = land
+            }
+        }
+        custom_effect_tooltip = THE_FACTION_LEADER
+        random_character = {
+            tooltip = ONE_GENERAL
+            visible_when_empty = yes
+            limit = {
+                is_leading_army = yes
+                is_field_marshal = no
+            }
+            gain_xp = 600
+            add_planning = 1
+        }
+    }
+}
+
+faction_goal_prepare_for_resource_droughts = {
+    name = faction_goal_prepare_for_resource_droughts_name
+    description = faction_goal_prepare_for_resource_droughts_desc
+    category = short_term
+    group = FOCUS_FILTER_INDUSTRY
+
+    allowed = {
+        tag = EQS
+    }
+    visible = {
+        is_EQS_SOL = yes
+    }
+
+    completed = {
+        count_in_collection = {
+            collection = {
+                input = game:scope
+                operators = { faction_members }
+                name = FACTION
+            }
+            buildings = { synthetic_refinery }
+            size > 25
+        }
+    }
+    complete_effect = {
+        add_faction_power_projection = 100
+        custom_effect_tooltip = generic_skip_one_line_tt
+        custom_effect_tooltip = ALL_FACTION_MEMBERS
+        every_faction_member = {
+            visible_when_empty = yes
+            add_tech_bonus = {
+                name = faction_goal_prepare_for_resource_droughts_name
+                bonus = 0.25
+                category = excavation_tech
+            }
+        }
+        custom_effect_tooltip = generic_skip_one_line_tt
+        custom_effect_tooltip = EVERY_FACTION_MEMBER_WITH_MORE_THAN_5_REFINERIES
+        every_faction_member = {
+            visible_when_empty = yes
+            limit = {
+                has_built {
+                    type = synthetic_refinery
+                    value > 5
+                }
+            }
+            random_state = {
+                visible_when_empty = yes
+                limit = {
+                    is_owned_and_controlled_by = PREV
+                }
+                add_resource = {
+                    type = oil
+                    amount = 4
+                }
+            }
+        }
+        custom_effect_tooltip = generic_skip_one_line_tt
+        custom_effect_tooltip = THE_FACTION_LEADER
+        random_state = {
+            visible_when_empty = yes
+            limit = {
+                is_owned_and_controlled_by = ROOT
+            }
+            add_resource = {
+                type = oil
+                amount = 6
+            }
+            add_resource = {
+                type = rubber
+                amount = 3
+            }
+        }
+    }
+}

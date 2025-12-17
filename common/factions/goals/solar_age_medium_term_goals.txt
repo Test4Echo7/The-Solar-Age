@@ -1,0 +1,196 @@
+faction_goal_advance_science = {
+    name = faction_goal_advance_science_name
+    description = faction_goal_advance_science_desc
+    category = medium_term
+    group = FOCUS_FILTER_RESEARCH
+
+    allowed = {
+        tag = EQS
+    }
+    visible = {
+        has_completed_focus = SOL_alicorn_weapons
+    }
+
+    complete = {
+        count_triggers = {
+            amount = 3
+            is_special_project_completed = sp:sp_EQS_sun_laser
+            is_special_project_completed = sp:sp_EQS_adeptus_astartes
+            is_special_project_completed = sp:sp_EQS_enhanced_matrices
+            is_special_project_completed = sp:sp_EQS_inferno_cas
+            is_special_project_completed = sp:sp_EQS_portable_solar_panels
+            is_special_project_completed = sp:sp_EQS_hot_fusion
+            is_special_project_completed = sp:sp_EQS_super_flamers
+            is_special_project_completed = sp:sp_EQS_plasma_cannons
+            is_special_project_completed = sp:sp_EQS_pilot_drug_programs
+        }
+    }
+    complete_effect = {
+        add_faction_power_projection = 200
+        custom_effect_tooltip = generic_one_line_skip_tt
+        custom_effect_tooltip = ALL_FACTION_MEMBERS
+        every_faction_member = {
+            add_breakthrough_progress = {
+                specialization = all
+                value = 0.2
+            }
+        }
+        custom_effect_tooltip = generic_one_line_skip_tt
+        custom_effect_tooltip = THE_FACTION_LEADER
+        add_faction_initiative = 1
+        add_breakthrough_points = {
+            specialization = specialization_magical
+            value = 1
+        }
+        random_scientist = {
+            limit = {
+                has_scientist_specialization = specialization_magical
+            }
+            add_scientist_xp = {
+                experience = 150
+                specialization = specialization_magical
+            }
+        }
+    }
+}
+
+faction_goal_reassert_control = {
+    name = faction_goal_reassert_control_name
+    description = faction_goal_reassert_control_desc
+    category = medium_term
+    group = FOCUS_FILTER_ANNEXATION
+
+    allowed = {
+        tag = EQS
+    }
+    visible = {
+        OR = {
+            PCB = {
+                exists = yes
+                NOT = { is_subject_of = ROOT }
+            }
+            CRY = {
+                exists = yes
+                NOT = { is_subject_of = ROOT }
+            }
+            EQC = {
+                exists = yes
+                NOT = { is_subject_of = ROOT }
+            }
+        }
+    }
+
+    complete = {
+        344 = { is_owned_by_ROOT_or_subject = yes }
+        356 = { is_owned_by_ROOT_or_subject = yes }
+        1193 = { is_owned_by_ROOT_or_subject = yes }
+    }
+    complete_effect = {
+        add_faction_power_projection = 250
+        custom_effect_tooltip = generic_one_line_skip_tt
+        custom_effect_tooltip = ALL_OTHER_FACTION_MEMBERS
+        every_faction_member = {
+            add_popularity = {
+                ideology = fascism
+                popularity = 0.05
+            }
+            add_manpower = 25000
+        }
+        custom_effect_tooltip = generic_one_line_skip_tt
+        custom_effect_tooltip = THE_FACTION_LEADER
+        add_faction_initiative = 1
+        add_stability = 0.05
+        add_political_power = 100
+    }
+}
+
+faction_goal_expand_matrice_supply = {
+    name = faction_goal_expand_matrice_supply_name
+    description = faction_goal_expand_matrice_supply_desc
+    category = medium_term
+    group = resources_to_market_icon
+
+    allowed = {
+        tag = EQS
+    }
+    visible = {
+        is_EQS_SOL = yes
+    }
+
+    complete = {
+        count_in_collection = {
+            collection = {
+                input = game:scope
+                operators = { faction_members }
+                name = FACTION
+            }
+            resource = crystals
+            amount > 249
+        }
+    }
+    complete_effect = {
+        every_faction_member = {
+			tooltip = AT_LEAST_80_CRYSTALS
+			visible_when_empty = yes
+			limit = {
+				has_resources_in_country = {
+					resource = crystals
+					amount > 79
+				}
+			}
+			add_faction_initiative = 1
+			add_faction_influence_ratio = 0.15
+			add_tech_bonus = {
+				name = secure_the_oil_supply_tech_bonus
+				bonus = 0.75
+				uses = 1
+				category = excavation_tech
+			}
+		}
+    }
+}
+
+faction_goal_army_with_an_empire = {
+    name = faction_goal_army_with_an_empire_name
+    description = faction_goal_army_with_an_empire_desc
+    category = medium_term
+    group = FOCUS_FILTER_ARMY_XP
+
+    allowed = {
+        tag = EQS
+    }
+    visible = {
+        is_EQS_SOL = yes
+    }
+
+    complete = {
+        count_in_collection = {
+            collection = {
+                input = game:scope
+                operators = { faction_members }
+                name = FACTION
+            }
+            manpower = yes
+            amount > 1250000
+        }
+    }
+    complete_effect = {
+        every_faction_member = {
+            tooltip = AT_LEAST_250K_PONYPOWER
+            visible_when_empty = yes
+            limit = {
+                has_army_manpower > 249999
+            }
+            army_experience = 50
+            add_faction_initiative = 1
+            add_faction_influence_ratio = 0.05
+            add_tech_bonus = {
+                name = faction_goal_army_with_an_empire_name
+                bonus = 1
+                uses = 1
+                category = infantry
+                category = armor
+            }
+        }
+    }
+}
