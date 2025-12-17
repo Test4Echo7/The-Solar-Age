@@ -222,4 +222,24 @@ leader_traits = {
         }
         new_commander_weight = { factor = 0 }
     }
+
+    ###SHHHHHHHH###
+    chaotic_spawn = {
+        type = all
+        trait_type = personality_trait
+        allowed = { always = no }
+
+        attack_skill = 1
+        modifier = {
+            heat_attrition_factor = -0.1
+            army_morale_factor = -0.15
+            army_org_factor = -0.05
+            army_speed_factor = 0.05
+            breakthrough_factor = 0.075
+            max_planning_factor = -0.15
+        }
+        non_shared_modifier = {
+            experience_gain_factor = 0.05
+        }
+    }
 }

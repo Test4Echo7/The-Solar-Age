@@ -65,6 +65,7 @@
   EQS_smoke_signal:0 "Smoke Signal"
   EQS_silver_bullet:0 "Silver Bullet"
   EQS_SOL_aurora_shinespark:0 "Aurora Shinespark"
+  EQS_dyx:0 "Dyx"
 
   ###BoP###
   EQS_sanity_bop:0 "The Princess's Burden"
@@ -712,6 +713,8 @@
   excitable_pone_desc:0 "§L"Oh. My. Celestia! Is that a super snazzy uniform or what?! I mean, look at this crest. Those shoulders! Wow! This is like, totally amazing! I can't believe that I'm—Is that a SPITFIRE?! They're all like, "zoom" and "woosh" and—Is that a TIMBERWOLF?! Oh. My. Celestia!"§!"
   sonic_rainboomer:0 "Untouchable"
   sonic_rainboomer_desc:0 "§LThe top Wonderbolt, Rainbow Dash is outwardly confident and brash and gets along well with the troops. While her skill in the sky is unrivaled, every successful battle has only further inflated her ego and in downtime she spins to the soldiers tales of her exploits, true and fabricated. Since she takes an active role at the front, the constant danger she puts herself in may one day catch up with her.§!"
+  chaotic_spawn:0 "Chaotic Alicorn"
+  chaotic_spawn_desc:0 "§L"Psst, hey you. Feel like shanking that bitch, Rose Petal? She drank the last beer."§!"
 
   ###Country Leader Traits###
   aussenseiter_regentin:0 "Foreign Regent"

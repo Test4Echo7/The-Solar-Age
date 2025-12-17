@@ -358,6 +358,80 @@ sp_sun_laser_exhaustive_casting = {
     }
 }
 
+sp_sun_laser_incorrect_casting = {
+    narrative = {
+        #After bringing the Empress in for some practice with amplifying and focusing her magic as a locus for channeling a beam of energy to become the start of the laser, except it absorbs instead of amplifies, creating a being of pure fire energy, Dyx
+        name = EQS_evil_filly
+        desc = EQS_evil_filly_desc
+    }
+
+    threshold = {
+        min = 0
+        max = 100
+    }
+
+    fire_only_once = yes
+
+    weight = {
+        base = 0.25
+    }
+
+    #She must be put down at any cost!
+    option = {
+        token = sp_EQS_mean_mother
+
+        iteration_output = {
+            country_effects = {
+                custom_effect_tooltip = SOL_no_filly_abuse_tt
+                custom_effect_tooltip = generic_skip_one_line_tt
+                EQS_princess_celestia = {
+                    add_timed_unit_leader_trait = {
+                        trait = magic_drained
+                        days = 60
+                    }
+                }
+                custom_effect_tooltip = generic_skip_one_line_tt
+                add_stability = 0.04
+                add_political_power = 50
+                custom_effect_tooltip = generic_skip_one_line_tt
+                sp:sp_EQS_sun_laser = {
+                    add_project_progress_ratio = -0.06
+                }
+            }
+        }
+    }
+
+    #This filly may be of use
+    option = {
+        token = sp_EQS_accepting_mother
+
+        default = yes
+
+        iteration_output = {
+            country_effects = {
+                custom_effect_tooltip = SOL_danger_filly_tt
+                custom_effect_tooltip = generic_skip_one_line_tt
+                EQS_princess_celestia = {
+                    add_timed_unit_leader_trait = {
+                        trait = magic_drained
+                        days = 60
+                    }
+                }
+                custom_effect_tooltip = generic_skip_one_line_tt
+                add_stability = -0.05
+                add_political_power = -100
+                add_manpower = 1
+                custom_effect_tooltip = generic_skip_one_line_tt
+                set_country_flag = SOL_easter_egg_time
+                custom_effect_tooltip = dyx_stats_tp
+                sp:sp_EQS_sun_laser = {
+                    add_project_progress_ratio = -0.12
+                }
+            }
+        }
+    }
+}
+
 sp_adeptus_astartes_initial_perfection = {
     narrative = {
         #Daybreaker has agreed to donate a portion of her DNA and genetic structure to be used in enhancing ponies, and it is a taxing process; decide which part must be used to enhance the super soldiers
@@ -697,6 +771,69 @@ sp_adeptus_astartes_magical_abilities = {
     }
 }
 
+sp_adeptus_astartes_fission_mailed = {
+    narrative = {
+        #With using magic to try and create higher-quality genetic material from the Empress's DNA, the scientist attempts to enhance it further with some of their own magic, which leads to a runaway reaction with some of the Empress's magic and the scientist, which is injected into a test subject, which dies in a burst of flame, but leaves behind a filly, Dyx; already causes problems
+        name = EQS_immaculate_destruction
+        desc = EQS_immaculate_destruction_desc
+    }
+
+    threshold = {
+        min = 0
+        max = 100
+    }
+
+    fire_only_once = yes
+
+    weight = {
+        base = 0.25
+    }
+
+    #It is a failed test subject, and should be put down before it causes problems
+    option = {
+        token = sp_EQS_reject_knockoff
+
+        iteration_output = {
+            country_effects = {
+                custom_effect_tooltip = SOL_you_monster_tt
+                custom_effect_tooltip = generic_skip_one_line_tt
+                add_tech_bonus = {
+                    name = race_bonus
+                    bonus = 0.5
+                    uses = 1
+                    category = race_tech
+                }
+                custom_effect_tooltip = generic_skip_one_line_tt
+                sp:sp_EQS_adeptus_astartes = {
+                    add_project_progress_ratio = -0.03
+                }
+            }
+        }
+    }
+
+    #She is special and can be the Empress's greatest warrior
+    option = {
+        token = sp_EQS_high_quality_mimicry
+
+        default = yes
+
+        iteration_output = {
+            country_effects = {
+                custom_effect_tooltip = SOL_the_jewelry_mare_tt
+                custom_effect_tooltip = generic_skip_one_line_tt
+                add_political_power = -150
+                add_manpower = 1
+                set_country_flag = SOL_easter_egg_time
+                custom_effect_tooltip = generic_skip_one_line_tt
+                custom_effect_tooltip = dyx_stats_tp
+                sp:sp_EQS_adeptus_astartes = {
+                    add_project_progress_ratio = -0.08
+                }
+            }
+        }
+    }
+}
+
 sp_enhanced_matrices_crystal_decisions = {
     narrative = {
         #Matrices are comprised of a specific kind of crystal, but it is possible to modify them to be made of multiple types, or of a rarer, more powerful crystal
@@ -818,6 +955,88 @@ sp_enhanced_matrices_unstable_matrices = {
             country_effects = {
                 sp:sp_EQS_enhanced_matrices = {
                     add_project_progress_ratio = -0.1
+                }
+            }
+        }
+    }
+}
+
+sp_enhanced_matrices_magical_oopsie = {
+    narrative = {
+        #After visiting the current research project to see its progress, the Empress is shown some of the promising results by the current scientist, who displays one of the prototypes that they are working on, which was not properly stabilized, and becomes effectively a black hole of magical absorbtion, which takes some from Daybreaker and the scientist, before imploding to create a filly of pure magic, Dyx, who starts to cause problems instantly
+        name = EQS_spawn_of_chaos
+        desc = EQS_spawn_of_chaos_desc
+    }
+
+    threshold = {
+        min = 0
+        max = 100
+    }
+
+    fire_only_once = yes
+
+    weight = {
+        base = 0.25
+        modifier = {
+            factor = 0
+            OR = {
+                has_completed_focus = SOL_god_empress
+                has_completed_focus = SOL_empress_protector
+            }
+        }
+    }
+
+    #This is an aberration!
+    option = {
+        token = sp_EQS_heartless_parent
+
+        iteration_output = {
+            country_effects = {
+                custom_effect_tooltip = SOL_how_could_you_tt
+                custom_effect_tooltip = generic_skip_one_line_tt
+                EQS_princess_celestia = {
+                    add_timed_unit_leader_trait = {
+                        trait = magic_drained
+                        days = 60
+                    }
+                    gain_xp = 500
+                }
+                custom_effect_tooltip = generic_skip_one_line_tt
+                sp:sp_EQS_sun_laser = {
+                    add_project_progress_ratio = -0.04
+                }
+            }
+        }
+    }
+
+    #She is spawn of the Empress and must be respected
+    option = {
+        token = sp_EQS_wholesome_empress_moment
+
+        default = yes
+
+        iteration_output = {
+            country_effects = {
+                custom_effect_tooltip = SOL_not_monstrous_tt
+                custom_effect_tooltip = generic_skip_one_line_tt
+                EQS_princess_celestia = {
+                    add_timed_unit_leader_trait = {
+                        trait = magic_drained
+                        days = 90
+                    }
+                    add_timed_unit_leader_trait = {
+                        trait = wounded
+                        days = 120
+                    }
+                }
+                custom_effect_tooltip = generic_skip_one_line_tt
+                add_war_support = -0.1
+                add_manpower = 1
+                set_country_flag = SOL_easter_egg_time
+                custom_effect_tooltip = generic_skip_one_line_tt
+                custom_effect_tooltip = dyx_stats_tp
+                sp:sp_EQS_sun_laser = {
+                    add_project_progress_ratio = -0.09
                 }
             }
         }

@@ -68,6 +68,7 @@ sp_EQS_sun_laser = {
 		sp_sun_laser_solar_concentration_application
 		sp_sun_laser_faulty_concentration_spell
 		sp_sun_laser_exhaustive_casting
+		sp_sun_laser_incorrect_casting
 	}
 }
 
@@ -152,6 +153,7 @@ sp_EQS_adeptus_astartes = {
 		sp_adeptus_astartes_armor_applications
 		sp_adeptus_astartes_weapon_applications
 		sp_adeptus_astartes_magical_abilities
+		sp_adeptus_astartes_fission_mailed
 	}
 }
 
@@ -234,6 +236,7 @@ sp_EQS_enhanced_matrices = {
 		sp_magical_generic_reward_critical_failure
 		sp_enhanced_matrices_crystal_decisions
 		sp_enhanced_matrices_unstable_matrices
+		sp_enhanced_matrices_magical_oopsie
 	}
 }
 

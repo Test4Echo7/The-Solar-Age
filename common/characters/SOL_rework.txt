@@ -1171,4 +1171,27 @@ characters = {
 			traits = { air_air_superiority_3 } #Maybe change it to be AWACS, +10% air superiority, +10% fighter detection, costs the same as genius
 		}
 	}
+
+	###SHHHHHHHHHHHHHHHHHH###
+	EQS_dyx = {
+		name = EQS_dyx
+		gender = female
+		portraits = {
+			army = {
+				large = "gfx/leaders/EQS/Dyx.tga"
+				small = "gfx/interface/ideas/advisors/EQS/EQS_dyx.tga"
+			}
+		}
+
+		corps_commander = {
+			traits = { pony_race_trait chaotic_spawn promising_general }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			desc = EQS_dyx_desc
+			visible = { has_country_flag = SOL_easter_egg_time }
+		}
+	}
 }
