@@ -4329,6 +4329,12 @@ country_event = { #Luna arrives in CRY to speak with Cadance about at least gett
             }
             set_country_flag = EQS_had_luna
         }
+        every_possible_country = {
+            limit = { has_character = EQS_magpie }
+            EQS_magpie = {
+                set_nationality = ROOT
+            }
+        }
     }
 }
 
@@ -4883,6 +4889,12 @@ country_event = { #Luna arrives in Hippogriffia and is greeted by Novo, as one o
                 limit = { has_character = EQS_princess_luna }
                 EQS_princess_luna = {
                     clr_character_flag = EQS_luna_leader_disabled
+                }
+            }
+            every_possible_country = {
+                limit = { has_character = EQS_magpie }
+                EQS_magpie = {
+                    set_nationality = ROOT
                 }
             }
         }

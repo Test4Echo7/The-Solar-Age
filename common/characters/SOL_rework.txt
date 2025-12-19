@@ -788,6 +788,56 @@ characters = {
 			visible = { has_country_flag = SOL_bugs_in_the_belfry }
 		}
 	}
+	EQS_magpie = {
+		name = EQS_magpie
+		gender = female
+		portraits = {
+
+		}
+
+		advisor = {
+			slot = political_advisor
+			allowed = {
+				OR = {
+					original_tag = EQS
+					original_tag = NLR
+				}
+			}
+			available = {
+				if = {
+					limit = {
+						tag = EQS
+					}
+					OR = {
+						has_country_leader = { character = EQS_princess_celestia ruling_only = yes }
+						has_country_leader = { character = EQS_princess_luna ruling_only = yes }
+						if = {
+							limit = {
+								has_global_flag = celestia_and_luna_fused
+							}
+							has_global_flag = celestia_and_luna_fused
+						}
+					}
+				}
+				if = {
+					limit = {
+						tag = NLR
+					}
+					has_country_leader = { character = NLR_nightmare_moon ruling_only = yes }
+				}
+			}
+			visible = {
+				if = {
+					limit = {
+						tag = EQS
+						has_country_leader = { character = EQS_princess_celestia ruling_only = yes }
+					}
+					is_EQS_SOL = no
+				}
+			}
+			traits = { silent_workbat }
+		}
+	}
 
 	###Imperial Governors###
 	EQS_crepuscular_ray = {

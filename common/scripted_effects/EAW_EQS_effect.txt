@@ -569,6 +569,14 @@ EQS_SOL_civil_war = {
 					set_nationality = PREV.PREV
 				}
 			}
+			every_possible_country = {
+				limit = {
+					has_character = EQS_magpie
+				}
+				EQS_magpie = {
+					set_nationality = PREV.PREV
+				}
+			}
 			EQS_princess_luna = {
 				promote_character = alicornrule
 			}
