@@ -160,6 +160,7 @@ on_actions = {
                     }
                 }
                 EQS = {
+                    add_ideas = EQS_mental_decline
                     if = {
                         limit = { has_country_flag = EQS_sanity_bop_initialized }
                         set_power_balance = {
@@ -192,6 +193,7 @@ on_actions = {
                     }
                 }
                 FROM = {
+                    add_ideas = EQS_mental_decline
                     if = {
                         limit = { has_country_flag = EQS_sanity_bop_initialized }
                         set_power_balance = {
@@ -284,6 +286,7 @@ on_actions = {
                     }
                 }
                 EQS = {
+                    add_ideas = EQS_mental_decline
                     if = {
                         limit = { has_country_flag = EQS_sanity_bop_initialized }
                         set_power_balance = {
@@ -511,6 +514,36 @@ on_actions = {
                 }
                 ROOT = {
                     country_event = solarreworked.511
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = {
+                        has_state_flag = EQS_guaranteed_bat_state
+                        NOT = { has_dynamic_modifier = { modifier = SOL_thestral_resistance } }
+                    }
+                    ROOT = {
+                        tag = EQS
+                        has_country_flag = SOL_bat_resistance_add_flag
+                    }
+                }
+                FROM.FROM = {
+                    add_dynamic_modifier = { modifier = SOL_thestral_resistance }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = {
+                        has_state_flag = EQS_guaranteed_bat_state
+                        NOT = { has_dynamic_modifier = { modifier = SOL_thestral_resistance } }
+                    }
+                    FROM = {
+                        tag = EQS
+                        has_country_flag = SOL_bat_resistance_add_flag
+                    }
+                }
+                FROM.FROM = {
+                    remove_dynamic_modifier = { modifier = SOL_thestral_resistance }
                 }
             }
         }
@@ -2312,6 +2345,38 @@ on_actions = {
                             idea_token = somnambula
                             traits = { pillar_of_hope_solar }
                         }
+                    }
+                }
+            }
+            every_possible_country = {
+                limit = { has_character = EQS_SOL_aurora_shinespark }
+                random_list = {
+                    1 = {
+                        EQS_SOL_aurora_shinespark = {
+                            set_portraits = {
+                                army = {
+                                    large = "gfx/leaders/EQS/Aurora_Shinespark_easter_egg.tga"
+                                    small = "gfx/interface/ideas/advisors/EQS/EQS_aurora_shinespark_easter_egg.tga"
+                                }
+                            }
+                            remove_unit_leader_role = yes
+                            add_corps_commander_role = {
+                                traits = { harsh_leader pony_race_trait promising_general }
+                                skill = 2
+                                attack_skill = 3
+                                defense_skill = 1
+                                planning_skill = 1
+                                logistics_skill = 2
+                                desc = EQS_SOL_aurora_shinespark_prototype_desc
+                                visible = {
+                                    is_EQS_SOL = yes
+                                    has_country_flag = SOL_inquisitor_generals
+                                }
+                            }
+                        }
+                    }
+                    99 = {
+
                     }
                 }
             }

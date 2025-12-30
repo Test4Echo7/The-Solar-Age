@@ -41,6 +41,12 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQC_legacy_of_the_cockatrice_war"
 		army_experience = 25
+		add_mastery_bonus = {
+			bonus = 0.2
+			days = 180
+			folder = land
+			name = EQC_legacy_of_the_cockatrice_war
+		}
 		add_doctrine_cost_reduction = {
 			name = land_doc_bonus
 			cost_reduction = 0.5
@@ -327,6 +333,12 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQC_marine_assault_tactics"
+		add_mastery_bonus = {
+			bonus = 0.2
+			days = 180
+			folder = land
+			name = EQC_marine_assault_tactics
+		}
 		add_doctrine_cost_reduction = {
 			name = land_doc_bonus
 			cost_reduction = 0.5
@@ -424,6 +436,12 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQC_unconventional_warfare"
+		add_mastery_bonus = {
+			bonus = 0.2
+			days = 180
+			folder = land
+			name = EQC_unconventional_warfare
+		}
 		add_doctrine_cost_reduction = {
 			name = land_doc_bonus
 			cost_reduction = 0.5
@@ -603,6 +621,12 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQC_commerce_protection"
+		add_mastery_bonus = {
+			bonus = 0.2
+			days = 180
+			folder = naval
+			name = EQC_commerce_protection
+		}
 		add_doctrine_cost_reduction = {
 			name = EQC_commerce_protection
 			cost_reduction = 0.5
@@ -643,6 +667,12 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQC_seawolves"
+		add_mastery_bonus = {
+			bonus = 0.2
+			days = 180
+			folder = naval
+			name = EQC_seawolves
+		}
 		add_doctrine_cost_reduction = {
 			name = submarine_doctrine
 			cost_reduction = 0.5
@@ -1000,6 +1030,12 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQC_secure_the_centeral_sea"
+		add_mastery_bonus = {
+			bonus = 0.2
+			days = 180
+			folder = naval
+			name = EQC_secure_the_centeral_sea
+		}
 		add_doctrine_cost_reduction = {
 			name = navdoc_bonus
 			cost_reduction = 0.5
@@ -1055,26 +1091,6 @@ shared_focus = {
 	continue_if_invalid = no
 	available_if_capitulated = yes
 
-	complete_tooltip = {
-		air_experience = 25
-		random_state = {
-			limit = {
-				has_state_flag = EQC_rnmaf_stratus_springs_AB
-			}
-			add_building_construction = {
-				type = air_base
-				level = 2
-				instant_build = yes
-			}
-		}
-		add_doctrine_cost_reduction = {
-			name = air_doc_bonus
-			cost_reduction = 0.5
-			uses = 1
-			category = air_doctrine
-		}
-	}
-
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQC_rnmaf_stratus_springs"
 		air_experience = 25
@@ -1091,7 +1107,12 @@ shared_focus = {
 				level = 3
 				instant_build = yes
 			}
-			set_state_flag = EQC_rnmaf_stratus_springs_AB
+		}
+		add_mastery_bonus = {
+			bonus = 0.2
+			days = 180
+			folder = air
+			name = EQC_rnmaf_stratus_springs
 		}
 		add_doctrine_cost_reduction = {
 			name = air_doc_bonus
@@ -1647,6 +1668,12 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQC_advanced_air_tactics"
 		air_experience = 25
+		add_mastery_bonus = {
+			bonus = 0.2
+			days = 180
+			folder = air
+			name = EQC_advanced_air_tactics
+		}
 		add_doctrine_cost_reduction = {
 			name = air_doc_bonus
 			cost_reduction = 0.5

@@ -1479,6 +1479,7 @@ shared_focus = {
 					}
 					army = {
 						large = "gfx/leaders/EQS/Daybreaker_canon.tga"
+						small = "gfx/interface/ideas/advisors/EQS/EQS_daybreaker_mother.tga"
 					}
 				}
 			}
@@ -3044,6 +3045,7 @@ shared_focus = {
 					}
 					army = {
 						large = "gfx/leaders/EQS/Daybreaker_savior.tga"
+						small = "gfx/interface/ideas/advisors/EQS_EQS_daybreaker_protector.tga"
 					}
 				}
 			}
@@ -12308,7 +12310,7 @@ shared_focus = {
 		}
 	}
 
-	cost = 3
+	cost = 2
 	available = { has_completed_focus = SOL_Imperium_Solis }
 	allow_branch = {
 		is_EQS_SOL = yes
@@ -12332,7 +12334,7 @@ shared_focus = {
 	icon = GFX_goal_solaris_militarium
 	relative_position_id = SOL_modernize_relic
 
-	cost = 3
+	cost = 2
 	prerequisite = { focus = SOL_modernize_relic }
 
 	completion_reward = {
@@ -12596,6 +12598,12 @@ shared_focus = {
 	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_safest_methods"
+		add_mastery_bonus = {
+			bonus = 0.2
+			days = 180
+			folder = land
+			name = SOL_safest_methods
+		}
 		add_doctrine_cost_reduction = {
 			name = cat_grand_battle_plan
 			cost_reduction = 0.5
@@ -12693,6 +12701,12 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_efficient_clearing"
 		###Event of a pony going in with a flamethrower into the trenches of the enemy, and being spotted very quickly, having a panicked moment, and then starting their flamethrower, and watching in horror, since they didn't want to use such a clearly barbaric weapon, as it cleans effectively the entire trench in front of them
 		country_event = solarreworked.76
+		add_mastery_bonus = {
+			bonus = 0.2
+			days = 180
+			folder = land
+			name = SOL_efficient_clearing
+		}
 	}
 	search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	ai_will_do = { factor = 80 }
@@ -12741,10 +12755,16 @@ shared_focus = {
 	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_hoof_of_empress"
+		add_mastery_bonus = {
+			bonus = 0.2
+			days = 180
+			folder = land
+			name = SOL_hoof_of_empress
+		}
 		add_doctrine_cost_reduction = {
 			name = cat_superior_firepower
 			cost_reduction = 0.5
-			uses = 2
+			uses = 1
 			category = cat_superior_firepower
 		}
 	}
@@ -12795,13 +12815,13 @@ shared_focus = {
 		add_tech_bonus = {
 			name = infantry_bonus
 			bonus = 1
-			uses = 1
+			uses = 2
 			category = infantry_weapons
 		}
 		add_tech_bonus = {
 			name = motorized_bonus
 			bonus = 1
-			uses = 2
+			uses = 1
 			category = cat_mechanized_equipment
 			category = motorized_equipment
 			ahead_reduction = 0.5
@@ -12882,10 +12902,16 @@ shared_focus = {
 	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_imperial_workhorses"
+		add_mastery_bonus = {
+			bonus = 0.2
+			days = 180
+			folder = land
+			name = SOL_imperial_work_service
+		}
 		add_doctrine_cost_reduction = {
 			name = cat_mass_assault
 			cost_reduction = 0.5
-			uses = 2
+			uses = 1
 			category = cat_mass_assault
 		}
 	}
@@ -12933,6 +12959,12 @@ shared_focus = {
 	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_operational_art"
+		add_mastery_bonus = {
+			bonus = 0.2
+			days = 180
+			folder = land
+			name = SOL_operational_art
+		}
 		add_doctrine_cost_reduction = {
 			name = cat_mass_assault
 			cost_reduction = 0.5
@@ -12960,6 +12992,12 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_streamlined_firearms"
 		###Potentially an event of how much has been gutted from what to include in a gun, although it's nothing essential, so that the guns are basically just nothing more than sticks with some basic parts and the like to throw bullets at the enemy
+		add_mastery_bonus = {
+			bonus = 0.2
+			days = 180
+			folder = land
+			name = SOL_streamlined_firearms
+		}
 		add_ideas = SOL_pb_inf_idea
 	}
 	search_filters = { FOCUS_FILTER_ARMY_BONUS }
@@ -13050,10 +13088,16 @@ shared_focus = {
 	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_mage_army"
+		add_mastery_bonus = {
+			bonus = 0.1
+			days = 270
+			folder = land
+			name = SOL_mage_army
+		}
 		add_doctrine_cost_reduction = {
 			name = land_doc_bonus
 			cost_reduction = 0.33
-			uses = 2
+			uses = 1
 			category = land_doctrine
 		}
 	}
@@ -13147,10 +13191,16 @@ shared_focus = {
 	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_magical_adaptations"
+		add_mastery_bonus = {
+			bonus = 0.1
+			days = 270
+			folder = land
+			name = SOL_magical_adaptations
+		}
 		add_doctrine_cost_reduction = {
 			name = land_doc_bonus
 			cost_reduction = 0.33
-			uses = 2
+			uses = 1
 			category = land_doctrine
 		}
 	}
@@ -13225,6 +13275,12 @@ shared_focus = {
 			specialization = specialization_land
 			value = 0.6
 		}
+		add_mastery_bonus = {
+			bonus = 0.2
+			days = 180
+			folder = land
+			name = SOL_strike_iron
+		}
 	}
 	search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	ai_will_do = { factor = 60 }
@@ -13296,6 +13352,12 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_mundane_magic"
+		add_mastery_bonus = {
+			bonus = 0.2
+			days = 180
+			folder = land
+			name = SOL_mundane_and_magic
+		}
 		add_tech_bonus = {
 			name = anti_tank_bonus
 			uses = 2
@@ -13371,6 +13433,12 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_mighty_hoofs"
+		add_mastery_bonus = {
+			bonus = 0.2
+			days = 180
+			folder = land
+			name = SOL_mighty_hoofs
+		}
 		add_ideas = SOL_armored_hoofs
 		###Possibly event of following a tank commander as he prepares to storm a city, without a care for the civilians or buildings he'll destroy, as they have sealed their fate already by working with the enemy
 	}
@@ -13414,7 +13482,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_modernize_relic
 
-	cost = 4
+	cost = 2
 	prerequisite = { focus = SOL_modernize_relic }
 	available = {
 		OR = {
@@ -13439,7 +13507,7 @@ shared_focus = {
 	relative_position_id = SOL_sky_domain
 	icon = GFX_goal_abolish_wonderbolts
 
-	cost = 5
+	cost = 3
 	prerequisite = { focus = SOL_sky_domain }
 
 	completion_reward = {
@@ -13463,9 +13531,15 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_striking_battlefield"
+		add_mastery_bonus = {
+			bonus = 0.2
+			days = 180
+			folder = air
+			name = SOL_striking_battlefield
+		}
 		add_doctrine_cost_reduction = {
 			name = battlefield_support_bonus
-			uses = 2
+			uses = 1
 			cost_reduction = 0.5
 			category = cat_battlefield_support
 		}
@@ -13493,9 +13567,15 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_punishing_world"
+		add_mastery_bonus = {
+			bonus = 0.2
+			days = 180
+			folder = air
+			name = SOL_punishing_world
+		}
 		add_doctrine_cost_reduction = {
 			name = strategic_destruction_bonus
-			uses = 2
+			uses = 1
 			cost_reduction = 0.5
 			category = cat_strategic_destruction
 		}
@@ -13576,6 +13656,12 @@ shared_focus = {
 				bonus = 1
 				category = light_fighter
 			}
+		}
+		add_mastery_bonus = {
+			bonus = 0.2
+			days = 180
+			folder = air
+			name = SOL_sky_flexibility
 		}
 		add_doctrine_cost_reduction = {
 			name = air_doctrine_bonus

@@ -7721,16 +7721,20 @@ country_event = { #Sunset Shimmer-Twilight Convo
 	}
 }
 
-country_event = { #Post-Civil War Convo
+country_event = { #Post-Civil War Convo; hidden to avoid modifying more files
 	id = equestria.186
 	immediate = {log = "[GetDateText]: [Root.GetName]: event equestria.186"}
-	title = equestria.186.t
-	desc = equestria.186.d
 	picture = GFX_event_canterlot
 	is_triggered_only = yes
-	fire_only_once = yes
 	option = {
-		name = equestria.186.a
+		if = {
+			limit = {
+				NOT = { is_EQS_SOL = yes }
+			}
+			country_event = equestria.191
+		}
+		else = {
+		}
 	}
 }
 
@@ -7763,10 +7767,10 @@ country_event = { #Starlight joins the Equestrian Army; hidden to avoid modifyin
 			}
 			country_event = equestria.190
 		}
-		else_if = {
-			limit = { is_EQS_SOL = yes }
-			set_country_flag = EQS_starlight_glimmer_arrived
-		}
+		#else_if = {
+		#	limit = { is_EQS_SOL = yes }
+		#	set_country_flag = EQS_starlight_glimmer_arrived
+		#}
 		else = {
 		}
 	}
@@ -7815,5 +7819,18 @@ country_event = { #Starlight joins the Equestrian Army
 				desc = EQS_starlight_glimmer_desc
 			}
 		}
+	}
+}
+
+country_event = { #Post-Civil War Convo
+	id = equestria.191
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestria.191"}
+	title = equestria.186.t
+	desc = equestria.186.d
+	picture = GFX_event_canterlot
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria.186.a
 	}
 }

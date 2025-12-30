@@ -1090,7 +1090,7 @@ country_event = { #Daybreaker holds a speech in Sanctum Solar, which has just be
                         }
                         army = {
                             large = GFX_DaybreakerPortraitNew
-                            small = GFX_idea_EQS_SOL_daybreaker
+                            small = "gfx/interfaces/ideas/advisors/EQS/EQS_daybreaker_goddess.tga"
                         }
                     }
                 }
@@ -1174,6 +1174,7 @@ country_event = { #A short event of speaking about how that although the backs o
     }
 }
 
+###Bats! Bats?! Baaaaaats!###
 country_event = { #A number of soldiers return from putting down another uprising by the thestrals, and after recounting the casualties, learn news that the Empress will finally be dealing with them, and they eagerly hope it leads to some sort of purge, since it's been a pain in the butt for months
     id = solarreworked.40
     title = solarreworked.40.t
@@ -1244,6 +1245,7 @@ country_event = { #Follow a group of fanatical followers of Daybreaker, who have
         name = solarreworked.43.a
         add_political_power = 100
         set_country_flag = SOL_burned_them_bats
+        clr_country_flag = SOL_bat_resistance_add_flag
 		if = {
 			limit = {
 				EQS_SOL_comet_trail = { is_unit_leader = yes }
@@ -1288,7 +1290,7 @@ country_event = { #Follow a group of fanatical followers of Daybreaker, who have
 					state = 30
 				}
 			}
-			add_core_of = ROOT
+			remove_dynamic_modifier = { modifier = SOL_thestral_resistance }
 			#clr_state_flag = eqs_bat_state
 		}
 		if = {
@@ -1435,6 +1437,7 @@ country_event = { #Event of a thestral officer being pushed to her limit, after 
         name = solarreworked.46.a
         add_political_power = -100
 		add_war_support = -0.05
+		clr_country_flag = SOL_bat_resistance_add_flag
 		if = {
 			limit = {
 				EQS_SOL_ksen_autumn = { is_unit_leader = no }
@@ -1487,7 +1490,7 @@ country_event = { #Event of a thestral officer being pushed to her limit, after 
 					state = 30
 				}
 			}
-			add_core_of = ROOT
+			remove_dynamic_modifier = { modifier = SOL_thestral_resistance }
 			#clr_state_flag = eqs_bat_state
 		}
     }
@@ -4456,10 +4459,7 @@ country_event = { #Report to Daybreaker that so far the hunt for the M6 and Suns
         trigger = {
             OR = {
                 has_country_flag = SOL_luna_twiggles_summit
-                AND = {
-                    has_war_with = NLR
-                    NOT = { has_country_flag = SOL_luna_twiggles_summit }
-                }
+                has_global_flag = NLR_spawned
             }
         }
         hidden_effect = {
@@ -4508,10 +4508,7 @@ country_event = { #Report to Daybreaker that so far the hunt for the M6 and Suns
         trigger = {
             OR = {
                 has_country_flag = SOL_luna_twiggles_summit
-                AND = {
-                    has_war_with = NLR
-                    NOT = { has_country_flag = SOL_luna_twiggles_summit }
-                }
+                has_global_flag = NLR_spawned
             }
         }
         hidden_effect = {
@@ -14412,7 +14409,7 @@ country_event = { #Event informing the UPA members that it is best to leave the 
     }
     desc = {
         trigger = { FROM = { has_country_flag = SOL_puppets_left } }
-        text = solarreworked.536.d_a
+        text = solarreworked.536.d_b
     }
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.536"}
     picture = GFX_event_solarempire
@@ -14421,7 +14418,15 @@ country_event = { #Event informing the UPA members that it is best to leave the 
 
     option = { #We can't stand with a tyrant!
         name = solarreworked.536.a
-        FROM = { set_country_flag = SOL_puppets_left }
+        ai_chance = {
+            factor = 5
+        }
+        if = {
+            limit = {
+                FROM = { NOT = { has_country_flag = SOL_puppets_left } }
+            }
+            FROM = { set_country_flag = SOL_puppets_left }
+        }
         custom_effect_tooltip = SOL_vamoose_tt
         hidden_effect = {
             if = {
@@ -14437,6 +14442,22 @@ country_event = { #Event informing the UPA members that it is best to leave the 
             leave_faction = yes
             drop_cosmetic_tag = yes
         }
+    }
+    option = { #Maybe she's not so bad after all.
+        name = solarreworked.536.b
+        ai_chance = {
+            modifier = {
+                is_historical_focus_on = yes
+                factor = 0
+            }
+        }
+        custom_effect_tooltip = SOL_simps_tt
+        add_stability = -0.075
+        add_popularity = {
+            ideology = democratic
+            popularity = -0.1
+        }
+        #Stay with faction
     }
 }
 
