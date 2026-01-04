@@ -7,11 +7,11 @@ faction_template_harmony_pact_gw_faction = {
 
 	goals = {
 		# Short term goals
-		faction_goal_growing_the_faction
+		faction_goal_unleash_suns_fury
 		#faction_goal_military_infrastructure
 
 		# Medium term goals
-		faction_goal_control_stalliongrad
+		faction_goal_army_with_an_empire
 
 		# Long terms
 		faction_goal_topple_the_hegemony
@@ -36,11 +36,11 @@ faction_template_harmony_pact_cw_faction = {
 
 	goals = {
 		# Short term goals
-		faction_goal_growing_the_faction
+		faction_goal_unleash_suns_fury
 		#faction_goal_military_infrastructure
 
 		# Medium term goals
-		faction_goal_control_stalliongrad
+		faction_goal_army_with_an_empire
 
 		# Long terms
 		faction_goal_topple_the_hegemony
@@ -66,11 +66,11 @@ faction_template_harmony_pact_other_war_faction = {
 
 	goals = {
 		# Short term goals
-		faction_goal_growing_the_faction
+		faction_goal_unleash_suns_fury
 		#faction_goal_military_infrastructure
 
 		# Medium term goals
-		faction_goal_control_stalliongrad
+		faction_goal_army_with_an_empire
 
 		# Long terms
 		faction_goal_topple_the_hegemony

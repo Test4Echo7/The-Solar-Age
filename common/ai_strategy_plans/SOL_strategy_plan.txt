@@ -178,6 +178,30 @@ SOL_solar_empire_historical_conquest_phase_2 = {
     }
 
     ai_national_focuses = {
+        SOL_breach_zebrica
+        SOL_last_scatterings
+        SOL_misguided_solarists
+        SOL_ports_of_zebrica
+        SOL_spaying_the_cat
+        SOL_lost_southern_souls
+        SOL_wayward_foals
+        SOL_harmonys_last_gasp
+        SOL_imperial_breadbasket
+        SOL_land_of_fiery_sun
+        SOL_almost_pony
+        SOL_decadence_shattered
+        SOL_imperial_art_project
+        SOL_doghouse
+        SOL_integrate_OHS
+        SOL_gold_of_sands
+        SOL_mutant_lake
+        SOL_eastern_calipha
+        SOL_attack_bat
+        SOL_no_sinner_alive
+        SOL_natural_state
+        SOL_light_into_darkness
+        SOL_continue_research
+        SOL_pax_solaris
     }
     focus_factors = {
     }
@@ -222,30 +246,20 @@ SOL_solar_empire_civil_war = {
     }
 
     ai_national_focuses = {
-        SOL_breach_zebrica
-        SOL_last_scatterings
-        SOL_misguided_solarists
-        SOL_ports_of_zebrica
-        SOL_spaying_the_cat
-        SOL_lost_southern_souls
-        SOL_wayward_foals
-        SOL_harmonys_last_gasp
-        SOL_imperial_breadbasket
-        SOL_land_of_fiery_sun
-        SOL_almost_pony
-        SOL_decadence_shattered
-        SOL_imperial_art_project
-        SOL_doghouse
-        SOL_integrate_OHS
-        SOL_gold_of_sands
-        SOL_mutant_lake
-        SOL_eastern_calipha
-        SOL_attack_bat
-        SOL_no_sinner_alive
-        SOL_natural_state
-        SOL_light_into_darkness
-        SOL_continue_research
-        SOL_pax_solaris
+        SOL_civil_war_measures
+        SOL_draw_upon_militia
+        SOL_promise_swift_end
+        SOL_crisis_industrial_management
+        SOL_take_everypony
+        SOL_modernize_relic
+        SOL_establish_solaris_militarium
+        SOL_encourage_troops
+        SOL_inspect_officers
+        SOL_rearrange_command
+        SOL_imperial_factory_tour
+        SOL_traitors_reward
+        SOL_new_officers
+        SOL_spending_money
     }
     focus_factors = {
     }

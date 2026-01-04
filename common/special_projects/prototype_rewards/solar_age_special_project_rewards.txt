@@ -979,9 +979,11 @@ sp_enhanced_matrices_magical_oopsie = {
         base = 0.25
         modifier = {
             factor = 0
-            OR = {
-                has_completed_focus = SOL_god_empress
-                has_completed_focus = SOL_empress_protector
+            FROM = {
+                OR = {
+                    has_completed_focus = SOL_god_empress
+                    has_completed_focus = SOL_empress_protector
+                }
             }
         }
     }

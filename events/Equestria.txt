@@ -6028,10 +6028,13 @@ country_event = { ## Defeatists
 		add_timed_idea = { idea = eqs_defeatists days = 180 }
 		ai_chance = {
 			factor = 50
-			NOT = { has_global_flag = EQS_nice_celestia }
 			modifier = {
 				factor = 0
-				surrender_progress > 0.3
+				NOT = { has_global_flag = EQS_nice_celestia }
+				OR = {
+					has_country_flag = EQS_evil_celestia
+					surrender_progress > 0.3
+				}
 			}
 		}
 	}
@@ -7726,6 +7729,7 @@ country_event = { #Post-Civil War Convo; hidden to avoid modifying more files
 	immediate = {log = "[GetDateText]: [Root.GetName]: event equestria.186"}
 	picture = GFX_event_canterlot
 	is_triggered_only = yes
+	hidden = yes
 	option = {
 		if = {
 			limit = {

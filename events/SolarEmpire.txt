@@ -2318,15 +2318,15 @@ country_event = {
 	title = solarempire.30.t
 	desc = {
 		text = solarempire.30.d_pro
-		trigger = { has_completed_focus = SOL_Protect_the_Weak }
+		trigger = { has_completed_focus = SOL_empress_protector }
 	}
 	desc = {
 		text = solarempire.30.d_mot
-		trigger = { has_completed_focus = SOL_Harmony_through_Order }
+		trigger = { has_completed_focus = SOL_empress_mother }
 	}
 	desc = {
 		text = solarempire.30.d_god
-		trigger = { has_completed_focus = SOL_Solar_Cult }
+		trigger = { has_completed_focus = SOL_god_empress }
 	}
 	picture = GFX_event_solarempire
 
@@ -2334,17 +2334,17 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = solarempire.30.a
-		trigger = { has_completed_focus = SOL_Protect_the_Weak }
+		trigger = { has_completed_focus = SOL_empress_protector }
 		add_political_power = 20
 	}
 	option = {
 		name = solarempire.30.b
-		trigger = { has_completed_focus = SOL_Harmony_through_Order }
+		trigger = { has_completed_focus = SOL_empress_mother }
 		add_political_power = 20
 	}
 	option = {
 		name = solarempire.30.c
-		trigger = { has_completed_focus = SOL_Solar_Cult }
+		trigger = { has_completed_focus = SOL_god_empress }
 		add_political_power = 20
 	}
 }

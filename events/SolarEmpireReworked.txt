@@ -1090,7 +1090,7 @@ country_event = { #Daybreaker holds a speech in Sanctum Solar, which has just be
                         }
                         army = {
                             large = GFX_DaybreakerPortraitNew
-                            small = "gfx/interfaces/ideas/advisors/EQS/EQS_daybreaker_goddess.tga"
+                            small = "gfx/interface/ideas/advisors/EQS/EQS_daybreaker_goddess.tga"
                         }
                     }
                 }

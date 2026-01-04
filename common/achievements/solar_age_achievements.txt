@@ -242,9 +242,17 @@ there_is_only_war = {
         has_army_manpower = { size > 1500000 }
         has_completed_focus = SOL_god_empress
         EQS = {
-            OR = {
-                has_tech = human_wave_offensive
-                has_tech = vast_offensives
+            custom_trigger_tooltip = {
+                tooltip = EQS_completed_large_unit_tactics_tt
+                has_completed_subdoctrine = SUBDOCTRINE_LARGE_UNIT_TACTICS
+            }
+            custom_trigger_tooltip = {
+                tooltip = EQS_more_boiz_tt
+                OR = {
+                    has_idea = service_by_requirement
+                    has_idea = all_adults_serve
+                    has_idea = scraping_the_barrel
+                }
             }
             custom_trigger_tooltip = {
                 tooltip = EQS_WAAAGH_tt

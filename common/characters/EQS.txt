@@ -1953,7 +1953,7 @@ characters={
 					limit = { is_EQS_SOL = yes }
 					OR = {
 						has_global_flag = EQS_completed_EQS_WMD
-						has_completed_focus = SOL_WMD
+						has_completed_focus = SOL_breyns_dream
 					}
 				}
 				if = {
@@ -1985,7 +1985,7 @@ characters={
 						limit = { is_original_EQS = yes }
 						OR = {
 							has_global_flag = EQS_completed_EQS_WMD
-							has_completed_focus = SOL_WMD
+							has_completed_focus = SOL_breyns_dream
 						}
 					}
 					if = {
@@ -2267,7 +2267,7 @@ characters={
 			planning_skill = 1
 			logistics_skill = 3
 			legacy_id = 34
-			desc = EQS_sunset_shimmer_new_desc
+			desc = EQS_sunset_shimmer_alt_desc
 			visible = {
 				NOT = { has_character_flag = SOL_helping_twilight }
 				OR = {
@@ -2868,7 +2868,7 @@ characters={
 				factor = 1
 				modifier = {
 					factor = 100
-					has_completed_focus = SOL_strategic_destruction
+					has_completed_focus = SOL_punishing_world
 				}
 			}
 		}
@@ -2902,7 +2902,7 @@ characters={
 				factor = 1
 				modifier = {
 					factor = 100
-					has_completed_focus = SOL_operational_integrity
+					has_completed_focus = SOL_striking_battlefield
 				}
 			}
 		}

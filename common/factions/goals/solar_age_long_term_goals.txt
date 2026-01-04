@@ -15,7 +15,7 @@ faction_goal_secure_griffonian_ponykind = {
         }
     }
 
-    complete = {
+    completed = {
         all_collection_elements = {
             collection = {
                 input = collection:griffonian_pony_countries
@@ -27,17 +27,17 @@ faction_goal_secure_griffonian_ponykind = {
         }
     }
     complete_effect = {
-        add_faction_projection_power = 350
-        custom_effect_tooltip = generic_one_line_skip_tt
+        add_faction_power_projection = 350
+        custom_effect_tooltip = generic_skip_one_line_tt
         custom_effect_tooltip = ALL_FACTION_MEMBERS
         every_faction_member = {
             add_political_power = 150
             add_stability = 0.075
         }
-        custom_effect_tooltip = generic_one_line_skip_tt
+        custom_effect_tooltip = generic_skip_one_line_tt
         custom_effect_tooltip = THE_FACTION_LEADER
         add_faction_initiative = 1
-        add_faction_influence = 0.05
+        add_faction_influence_ratio = 0.05
         add_war_support = 0.1
     }
 }
@@ -59,7 +59,7 @@ faction_goal_secure_zebrican_ponykind = {
         }
     }
 
-    complete = {
+    completed = {
         all_collection_elements = {
             collection = {
                 input = collection:zebrican_pony_and_adjacent_countries
@@ -71,17 +71,17 @@ faction_goal_secure_zebrican_ponykind = {
         }
     }
     complete_effect = {
-        add_faction_projection_power = 350
-        custom_effect_tooltip = generic_one_line_skip_tt
+        add_faction_power_projection = 350
+        custom_effect_tooltip = generic_skip_one_line_tt
         custom_effect_tooltip = ALL_FACTION_MEMBERS
         every_faction_member = {
             add_political_power = 150
             add_stability = 0.075
         }
-        custom_effect_tooltip = generic_one_line_skip_tt
+        custom_effect_tooltip = generic_skip_one_line_tt
         custom_effect_tooltip = THE_FACTION_LEADER
         add_faction_initiative = 1
-        add_faction_influence = 0.05
+        add_faction_influence_ratio = 0.05
         add_war_support = 0.1
     }
 }
@@ -100,7 +100,7 @@ faction_goal_establish_perfect_order = {
         has_completed_focus = SOL_She_Who_Raises_the_Sun
     }
 
-    complete = {
+    completed = {
         all_state = {
             OWNER = {
                 OR = {
@@ -112,15 +112,15 @@ faction_goal_establish_perfect_order = {
     }
     complete_effect = {
         custom_effect_tooltip = SOL_the_empress_protects_tt
-        add_faction_projection_power = 1000
-        custom_effect_tooltip = generic_one_line_skip_tt
+        add_faction_power_projection = 1000
+        custom_effect_tooltip = generic_skip_one_line_tt
         custom_effect_tooltip = ALL_FACTION_MEMBERS
         every_faction_member = {
             add_stability = 0.1
         }
-        custom_effect_tooltip = generic_one_line_skip_tt
+        custom_effect_tooltip = generic_skip_one_line_tt
         custom_effect_tooltip = THE_FACTION_LEADER
-        add_faction_influence = 1
+        add_faction_influence_ratio = 1
         add_stability = 0.2
         add_war_support = 0.2
     }

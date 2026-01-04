@@ -645,6 +645,7 @@ shared_focus = {
 	}
 	available = {
 		is_subject = no
+		eqs_has_civil_war = no
 	}
 	bypass = {
 		all_of = {
@@ -1499,7 +1500,7 @@ shared_focus = {
 			}
 			country_event = {
 				id = solarreworked.471
-				days = 200
+				days = 250
 				random_days = 150
 			}
 			country_event = {
@@ -2144,7 +2145,7 @@ shared_focus = {
 			}
 			country_event = {
 				id = solarreworked.419
-				days = 300
+				days = 400
 				random_days = 65
 			}
 			if = {
@@ -3045,7 +3046,7 @@ shared_focus = {
 					}
 					army = {
 						large = "gfx/leaders/EQS/Daybreaker_savior.tga"
-						small = "gfx/interface/ideas/advisors/EQS_EQS_daybreaker_protector.tga"
+						small = "gfx/interface/ideas/advisors/EQS/EQS_daybreaker_protector.tga"
 					}
 				}
 			}
@@ -3069,7 +3070,7 @@ shared_focus = {
 			}
 			country_event = {
 				id = solarreworked.354
-				days = 300
+				days = 400
 				random_days = 65
 			}
 		}
@@ -14703,14 +14704,8 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_strong_dissuasion"
 		add_tech_bonus = {
-			name = cl_bonus
-			uses = 1
-			bonus = 1
-			category = cl_tech
-		}
-		add_tech_bonus = {
 			name = ca_bonus
-			uses = 1
+			uses = 2
 			bonus = 1
 			category = ca_tech
 		}

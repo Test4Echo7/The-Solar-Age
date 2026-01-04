@@ -11,7 +11,7 @@ faction_goal_advance_science = {
         has_completed_focus = SOL_alicorn_weapons
     }
 
-    complete = {
+    completed = {
         count_triggers = {
             amount = 3
             is_special_project_completed = sp:sp_EQS_sun_laser
@@ -26,16 +26,16 @@ faction_goal_advance_science = {
         }
     }
     complete_effect = {
-        add_faction_power_projection = 200
-        custom_effect_tooltip = generic_one_line_skip_tt
+        add_faction_power_projection = 250
+        custom_effect_tooltip = generic_skip_one_line_tt
         custom_effect_tooltip = ALL_FACTION_MEMBERS
         every_faction_member = {
             add_breakthrough_progress = {
                 specialization = all
-                value = 0.2
+                value = 0.25
             }
         }
-        custom_effect_tooltip = generic_one_line_skip_tt
+        custom_effect_tooltip = generic_skip_one_line_tt
         custom_effect_tooltip = THE_FACTION_LEADER
         add_faction_initiative = 1
         add_breakthrough_points = {
@@ -44,7 +44,10 @@ faction_goal_advance_science = {
         }
         random_scientist = {
             limit = {
-                has_scientist_specialization = specialization_magical
+                has_scientist_level = {
+                    level > 0
+                    specialization = specialization_magical
+                }
             }
             add_scientist_xp = {
                 experience = 150
@@ -80,23 +83,27 @@ faction_goal_reassert_control = {
         }
     }
 
-    complete = {
-        344 = { is_owned_by_ROOT_or_subject = yes }
-        356 = { is_owned_by_ROOT_or_subject = yes }
-        1193 = { is_owned_by_ROOT_or_subject = yes }
+    completed = {
+        344 = { is_owned_by_ROOT_or_ally = yes }
+        356 = { is_owned_by_ROOT_or_ally = yes }
+        1193 = { is_owned_by_ROOT_or_ally = yes }
     }
     complete_effect = {
         add_faction_power_projection = 250
-        custom_effect_tooltip = generic_one_line_skip_tt
+        custom_effect_tooltip = generic_skip_one_line_tt
         custom_effect_tooltip = ALL_OTHER_FACTION_MEMBERS
         every_faction_member = {
+            visible_when_empty = yes
+            limit = {
+                NOT = { tag = ROOT }
+            }
             add_popularity = {
                 ideology = fascism
                 popularity = 0.05
             }
             add_manpower = 25000
         }
-        custom_effect_tooltip = generic_one_line_skip_tt
+        custom_effect_tooltip = generic_skip_one_line_tt
         custom_effect_tooltip = THE_FACTION_LEADER
         add_faction_initiative = 1
         add_stability = 0.05
@@ -115,10 +122,11 @@ faction_goal_expand_matrice_supply = {
     }
     visible = {
         is_EQS_SOL = yes
+        has_tech = magical_weapons
     }
 
-    complete = {
-        count_in_collection = {
+    completed = {
+        has_resources_in_collection = {
             collection = {
                 input = game:scope
                 operators = { faction_members }
@@ -163,7 +171,7 @@ faction_goal_army_with_an_empire = {
         is_EQS_SOL = yes
     }
 
-    complete = {
+    completed = {
         count_in_collection = {
             collection = {
                 input = game:scope
@@ -171,7 +179,7 @@ faction_goal_army_with_an_empire = {
                 name = FACTION
             }
             manpower = yes
-            amount > 1250000
+            size > 1250000
         }
     }
     complete_effect = {
@@ -179,7 +187,9 @@ faction_goal_army_with_an_empire = {
             tooltip = AT_LEAST_250K_PONYPOWER
             visible_when_empty = yes
             limit = {
-                has_army_manpower > 249999
+                has_army_manpower = {
+                    size > 249999
+                }
             }
             army_experience = 50
             add_faction_initiative = 1
@@ -188,7 +198,7 @@ faction_goal_army_with_an_empire = {
                 name = faction_goal_army_with_an_empire_name
                 bonus = 1
                 uses = 1
-                category = infantry
+                category = infantry_tech
                 category = armor
             }
         }

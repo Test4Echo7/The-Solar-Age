@@ -54,8 +54,14 @@ solar_age_country_groups = {
         HMR
         REE
         YMN
-        SD1 #To only look for the owner of Trotgiers
-        KR1 #Because there are an insane number of KIR spawn, apparently
+        SDL
+        SDS
+        SDC
+        SDF
+        EMR
+        KIR
+        KIC
+        KIS
         NVA
         KHM
         KXN

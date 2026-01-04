@@ -22,9 +22,10 @@ faction_goal_push_out_the_bugs = {
     }
     complete_effect = {
         add_faction_power_projection = 150
+        custom_effect_tooltip = generic_skip_one_line_tt
         custom_effect_tooltip = THE_FACTION_LEADER
         add_manpower = 35000
-        add_party_popularity = {
+        add_popularity = {
             ideology = fascism
             popularity = 0.015
         }
@@ -57,7 +58,7 @@ faction_goal_unleash_suns_fury = {
 				name = FACTION
 			}
 			buildings = { air_base }
-			size > 29
+			size > 49
 		}
 		count_in_collection = {
 			collection = {
@@ -66,11 +67,12 @@ faction_goal_unleash_suns_fury = {
 				name = FACTION
 			}
 			unit = armor
-			size > 49
+			size > 149
 		}
     }
     complete_effect = {
         add_faction_power_projection = 125
+        custom_effect_tooltip = generic_skip_one_line_tt
         custom_effect_tooltip = THE_FACTION_LEADER
         add_war_support = 0.03
     }
@@ -96,9 +98,10 @@ faction_goal_crush_the_night = {
     }
     complete_effect = {
         add_faction_power_projection = 150
+        custom_effect_tooltip = generic_skip_one_line_tt
         custom_effect_tooltip = THE_FACTION_LEADER
         add_war_support = 0.02
-        add_party_popularity = {
+        add_popularity = {
             ideology = fascism
             popularity = 0.015
         }
@@ -128,7 +131,8 @@ faction_goal_battlefield_teachers = {
         }
     }
     complete_effect = {
-        add_faction_power_projection = 100
+        add_faction_power_projection = 150
+        custom_effect_tooltip = generic_skip_one_line_tt
         custom_effect_tooltip = ALL_FACTION_MEMBERS
         every_faction_member = {
             add_mastery_bonus = {
@@ -138,6 +142,7 @@ faction_goal_battlefield_teachers = {
                 folder = land
             }
         }
+        custom_effect_tooltip = generic_skip_one_line_tt
         custom_effect_tooltip = THE_FACTION_LEADER
         random_character = {
             tooltip = ONE_GENERAL
@@ -193,7 +198,7 @@ faction_goal_prepare_for_resource_droughts = {
         every_faction_member = {
             visible_when_empty = yes
             limit = {
-                has_built {
+                has_built = {
                     type = synthetic_refinery
                     value > 5
                 }

@@ -75,7 +75,7 @@ EQS_not_most_advanced_ships = {
 	NOT = { has_tech = advanced_heavy_battery }
 	NOT = { has_tech = monopulse_radar }
 	NOT = { has_tech = semi_modern_fire_control_system }
-	NOT = { has_tech = improved_airplane_launcher }
+	NOT = { has_tech = basic_ship_hull_cruiser }
 }
 can_host_M6 = {
 	OR = {

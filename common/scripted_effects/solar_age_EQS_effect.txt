@@ -260,7 +260,7 @@ EQS_get_flagship_bb = {
                 has_tech = advanced_heavy_battery
                 has_tech = monopulse_radar
                 has_tech = semi_modern_fire_control_system
-                has_tech = improved_airplane_launcher
+                has_tech = basic_ship_hull_cruiser
             }
             create_equipment_variant = {
                 name = "Daybreak Class"
@@ -291,7 +291,7 @@ EQS_get_flagship_bb = {
                 has_tech = antiair4
                 has_tech = phased_array
                 has_tech = advanced_fire_control_system
-                has_tech = improved_airplane_launcher
+                has_tech = basic_ship_hull_cruiser
             }
             create_equipment_variant = {
                 name = "Daybreak Class"
@@ -370,7 +370,7 @@ EQS_get_flagship_bb = {
                 has_tech = antiair4
                 has_tech = phased_array
                 has_tech = advanced_fire_control_system
-                has_tech = improved_airplane_launcher
+                has_tech = basic_ship_hull_cruiser
             }
             create_equipment_variant = {
                 name = "Daybreak Class"
@@ -401,7 +401,7 @@ EQS_get_flagship_bb = {
                 has_tech = antiair2
                 has_tech = cavity_magnatron
                 has_tech = improved_fire_control_system
-                has_tech = improved_airplane_launcher
+                has_tech = basic_ship_hull_cruiser
             }
             create_equipment_variant = {
                 name = "Daybreak Class"
@@ -485,7 +485,7 @@ EQS_get_flagship_bc = {
                 has_tech = advanced_heavy_battery
                 has_tech = monopulse_radar
                 has_tech = semi_modern_fire_control_system
-                has_tech = improved_airplane_launcher
+                has_tech = basic_ship_hull_cruiser
             }
             create_equipment_variant = {
                 name = "Daybreak Class"
@@ -514,7 +514,7 @@ EQS_get_flagship_bc = {
                 has_tech = antiair4
                 has_tech = phased_array
                 has_tech = advanced_fire_control_system
-                has_tech = improved_airplane_launcher
+                has_tech = basic_ship_hull_cruiser
                 has_tech = improved_heavy_battery
             }
             create_equipment_variant = {
@@ -592,7 +592,7 @@ EQS_get_flagship_bc = {
                 has_tech = advanced_heavy_battery
                 has_tech = monopulse_radar
                 has_tech = semi_modern_fire_control_system
-                has_tech = improved_airplane_launcher
+                has_tech = basic_ship_hull_cruiser
             }
             create_equipment_variant = {
                 name = "Daybreak Class"
@@ -621,7 +621,7 @@ EQS_get_flagship_bc = {
                 has_tech = antiair4
                 has_tech = phased_array
                 has_tech = advanced_fire_control_system
-                has_tech = improved_airplane_launcher
+                has_tech = basic_ship_hull_cruiser
                 has_tech = improved_heavy_battery
             }
             create_equipment_variant = {
@@ -695,7 +695,7 @@ EQS_get_flagship_bc = {
                 has_tech = antiair4
                 has_tech = phased_array
                 has_tech = advanced_fire_control_system
-                has_tech = improved_airplane_launcher
+                has_tech = basic_ship_hull_cruiser
                 has_tech = improved_heavy_battery
             }
             create_equipment_variant = {

@@ -138,7 +138,6 @@ shared_focus = {
 	continue_if_invalid = no
 	ai_will_do = { factor = 40 }
 	prerequisite = {
-		focus = SOL_increase_presense_inCRY
 		focus = increase_presense_inCRY
 	}
 	available = {
@@ -1220,7 +1219,7 @@ shared_focus = {
 					suspension_type_slot = tank_bogie_suspension
 					armor_type_slot = tank_riveted_armor
 					engine_type_slot = tank_gasoline_engine
-					special_type_slot_1 = rank_radio_1
+					special_type_slot_1 = tank_radio_1
 					special_type_slot_2 = secondary_turret_hmg
 					special_type_slot_3 = secondary_turret_hmg
 					special_type_slot_4 = wet_ammo_storage
@@ -5260,7 +5259,7 @@ shared_focus = {
 		y = -7
 		trigger = { is_EQS_SOL = yes }
 	}
-	cost = 8
+	cost = 6
 
 	available = {
 		if = {
@@ -5315,7 +5314,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = EQS_agents_of_SMILE
 
-	cost = 5
+	cost = 4
 	prerequisite = { focus = EQS_agents_of_SMILE }
 
 	completion_reward = {
@@ -5353,7 +5352,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = EQS_agents_of_SMILE
 
-	cost = 7
+	cost = 5
 	prerequisite = { focus = EQS_agents_of_SMILE }
 	available = {
 		eqs_has_civil_war = yes
@@ -5386,7 +5385,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = EQS_further_deep_cover_training
 
-	cost = 8
+	cost = 7
 	prerequisite = { focus = EQS_further_deep_cover_training }
 	mutually_exclusive = { focus = EQS_keep_down_low }
 
@@ -5414,7 +5413,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = EQS_further_deep_cover_training
 
-	cost = 8
+	cost = 7
 	prerequisite = { focus = EQS_further_deep_cover_training }
 	mutually_exclusive = { focus = EQS_harmony_abroad }
 
@@ -5441,7 +5440,7 @@ shared_focus = {
 	y = 2
 	relative_position_id = EQS_agents_of_SMILE
 
-	cost = 9
+	cost = 5
 	prerequisite = { focus = EQS_agents_of_SMILE }
 	available = {
 		CHN = {
@@ -5465,7 +5464,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = EQS_anti_changeling_training
 
-	cost = 10
+	cost = 7
 	prerequisite = { focus = EQS_anti_changeling_training }
 	available = {
 		CHN = { has_country_leader = { character = CHN_queen_chrysalis ruling_only = yes } }
