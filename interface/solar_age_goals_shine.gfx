@@ -5230,11 +5230,11 @@ SpriteTypes = {
 		legacy_lazy_load = no
 	}
 	SpriteType = {
-		name = "GFX_goal_econoimc_opportunities_shine"
-		texturefile = "gfx/interface/goals/EQS/economic_opportunities.tga"
+		name = "GFX_goal_economic_opportunity_shine"
+		texturefile = "gfx/interface/goals/EQS/economic_opportunity.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/economic_opportunities.tga"
+			animationmaskfile = "gfx/interface/goals/EQS/economic_opportunity.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -5247,7 +5247,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/economic_opportunities.tga"
+			animationmaskfile = "gfx/interface/goals/EQS/economic_opportunity.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)

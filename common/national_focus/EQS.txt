@@ -1299,7 +1299,7 @@ shared_focus = {
 shared_focus = {
 	id = EQS_airfields
 	icon = GFX_goal_eqs_airfields_central
-	cost = 5
+	cost = 3
 	ai_will_do = { factor = 70 }
 	prerequisite = {
 		focus = Ministry_of_defense
@@ -1388,7 +1388,7 @@ shared_focus = {
 shared_focus = {
 	id = EQS_airfields2
 	icon = GFX_goal_eqs_airfields_south
-	cost = 5
+	cost = 3
 	ai_will_do = { factor = 20 }
 	prerequisite = {
 		focus = Ministry_of_defense

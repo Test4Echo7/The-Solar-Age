@@ -4,14 +4,16 @@ SOL_imperial_science = {
     research_speed_factor = research_speed_var
     political_power_gain = political_power_gain_var
     party_popularity_stability_factor = stability_factor_var
-    land_doctrine_cost_factor = doctrine_cost_factor_var
-    naval_doctrine_cost_factor = doctrine_cost_factor_var
-    air_doctrine_cost_factor = doctrine_cost_factor_var
+    land_mastery_gain_factor = doctrine_cost_factor_var
+    naval_mastery_gain_factor = doctrine_cost_factor_var
+    air_mastery_gain_factor = doctrine_cost_factor_var
     fascism_drift = fascism_drift_var
     custom_modifier_tooltip = EQS_hidden_idea_stats_tt
 }
 
 EQS_smile_upgrades = {
+    icon = GFX_idea_EQS_unicorn_academy
+
     encryption = encryption_var
     foreign_subversive_activites = foreign_subversive_activities_var
     subversive_activites_upkeep = subversive_activities_upkeep_var
@@ -32,6 +34,8 @@ EQS_smile_upgrades_lar = {
 }
 
 SOL_imperial_intelligence = {
+    icon = GFX_idea_EQS_unicorn_academy
+
     decryption = decryption_sol_var
     foreign_subversive_activites = foreign_subversive_activities_sol_var
     subversive_activites_upkeep = subversive_activities_upkeep_sol_var
@@ -47,7 +51,10 @@ SOL_imperial_intelligence_lar = {
     agency_upgrade_time = agency_upgrade_sol_var
     own_operative_detection_chance_factor = own_operative_detection_sol_var
     enemy_operative_detection_chance_factor = enemy_operative_detection_sol_var
-    crypto_strength = crypto_strength_var
+    hidden_modifier = {
+        crypto_strength = crypto_strength_var
+    }
+    custom_modifier_tooltip = SOL_crypto_defense_tt
     operation_cost = operation_cost_sol_var
     operation_risk = operation_risk_sol_var
     resistance_damage_to_garrison = resistance_damage_to_garrison_var
@@ -57,12 +64,16 @@ SOL_imperial_intelligence_lar = {
 }
 
 SOL_basic_improved_sanctum = {
+    icon = GFX_idea_EQS_unicorn_academy
+
     state_production_speed_buildings_factor = 0.1
     local_manpower = 0.1
     local_org_regain = 0.5
 }
 
 SOL_better_improved_sanctum = {
+    icon = GFX_idea_EQS_unicorn_academy
+
     state_production_speed_buildings_factor = 0.2
     local_manpower = 0.25
     local_org_regain = 0.75

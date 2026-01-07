@@ -7321,7 +7321,7 @@ shared_focus = {
 	x = 0
 	y = -1
 
-	cost = 5
+	cost = 2
 	available = {
 		is_subject = no
 		has_DB_ruler = yes
@@ -7346,18 +7346,18 @@ shared_focus = {
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
 	ai_will_do = {
-		factor = 40
+		factor = 20
 		modifier = {
 			has_completed_focus = SOL_empress_protector
-			factor = 2
+			factor = 3
 		}
 		modifier = {
 			has_completed_focus = SOL_god_empress
-			factor = 1.5
+			factor = 1.75
 		}
 		modifier = {
 			has_completed_focus = SOL_empress_mother
-			factor = 2.5
+			factor = 3.5
 		}
 	}
 }
@@ -7369,7 +7369,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_imperial_diplomatic_corps
 
-	cost = 6
+	cost = 4
 	prerequisite = { focus = SOL_imperial_diplomatic_corps }
 	available = {
 		is_subject = no
@@ -7421,7 +7421,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_imperial_diplomatic_corps
 
-	cost = 6
+	cost = 4
 	prerequisite = { focus = SOL_imperial_diplomatic_corps }
 	available = {
 		is_subject = no
@@ -7500,7 +7500,7 @@ shared_focus = {
 	y = 2
 	relative_position_id = SOL_imperial_diplomatic_corps
 
-	cost = 6
+	cost = 4
 	prerequisite = { focus = SOL_imperial_diplomatic_corps }
 	available = {
 		is_subject = no
@@ -7592,7 +7592,7 @@ shared_focus = {
 	y = 2
 	relative_position_id = SOL_imperial_diplomatic_corps
 
-	cost = 6
+	cost = 4
 	prerequisite = { focus = SOL_imperial_diplomatic_corps }
 	available = {
 		is_subject = no
@@ -7826,7 +7826,7 @@ shared_focus = {
 	y = 3
 	relative_position_id = SOL_imperial_diplomatic_corps
 
-	cost = 10
+	cost = 6
 	prerequisite = { focus = SOL_imperial_diplomatic_corps }
 	continue_if_invalid = yes
 	available = {
@@ -7893,7 +7893,7 @@ shared_focus = {
 		trigger = { NOT = { has_country_flag = SOL_bat_problems_flag } }
 	}
 
-	cost = 4
+	cost = 1
 	prerequisite = { focus = examine_the_situation }
 	available = {
 		is_subject = no
@@ -7968,7 +7968,7 @@ shared_focus = {
 	relative_position_id = SOL_mock_empire
 	icon = GFX_goal_follow_sunrise_plan
 
-	cost = 4
+	cost = 1
 	prerequisite = { focus = SOL_mock_empire }
 	mutually_exclusive = { focus = SOL_gesture_of_strength }
 	available = {
@@ -7980,6 +7980,7 @@ shared_focus = {
 				is_subject = no
 				NOT = { is_subject_of = ROOT }
 			}
+			has_government = democratic
 		}
 	}
 	bypass = {
@@ -8006,7 +8007,7 @@ shared_focus = {
 	relative_position_id = SOL_mock_empire
 	icon = GFX_goal_gesture_of_strength
 
-	cost = 4
+	cost = 1
 	prerequisite = { focus = SOL_mock_empire }
 	mutually_exclusive = { focus = SOL_follow_sunrise_plan }
 	available = {
@@ -8077,7 +8078,7 @@ shared_focus = {
 	icon = GFX_goal_royal_province
 	#relative_position_id = SOL_follow_sunrise_plan
 
-	cost = 5
+	cost = 2
 	prerequisite = {
 		focus = SOL_follow_sunrise_plan
 		focus = SOL_gesture_of_strength
@@ -8095,8 +8096,10 @@ shared_focus = {
 	}
 	bypass = {
 		CRY = {
-			has_focus_tree = crystal_empire_solar_focus
-			has_focus_tree = crystal_empire_lunar_focus
+			OR = {
+				has_focus_tree = crystal_empire_solar_focus
+				has_focus_tree = crystal_empire_lunar_focus
+			}
 		}
 	}
 
@@ -8418,9 +8421,16 @@ joint_focus = {
 			limit = {
 				tag = CRY
 			}
+			army_experience = 30
+			add_mastery_bonus = {
+				bonus = 0.20
+				days = 180
+				folder = land
+				name = SOL_update_northern_tactics
+			}
 			add_doctrine_cost_reduction = {
-				name = land_doc_bonus
-				uses = 3
+				name = SOL_update_northern_tactics
+				uses = 1
 				cost_reduction = 0.5
 				category = land_doctrine
 			}
@@ -8429,7 +8439,7 @@ joint_focus = {
 			limit = {
 				tag = EQS
 			}
-			army_experience = 30
+			army_experience = 20
 		}
 	}
 	completion_reward_joint_member = {
@@ -8437,9 +8447,16 @@ joint_focus = {
 			limit = {
 				tag = CRY
 			}
+			army_experience = 30
+			add_mastery_bonus = {
+				bonus = 0.20
+				days = 180
+				folder = land
+				name = SOL_update_northern_tactics
+			}
 			add_doctrine_cost_reduction = {
-				name = land_doc_bonus
-				uses = 3
+				name = SOL_update_northern_tactics
+				uses = 1
 				cost_reduction = 0.5
 				category = land_doctrine
 			}
@@ -8448,7 +8465,7 @@ joint_focus = {
 			limit = {
 				tag = EQS
 			}
-			army_experience = 30
+			army_experience = 20
 		}
 	}
 	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }
@@ -9007,7 +9024,7 @@ joint_focus = {
 shared_focus = {
 	id = SOL_bat_problems
 	icon = GFX_goal_the_bat_problem
-	cost = 3
+	cost = 2
 	ai_will_do = {
 		factor = 150
 	}
@@ -9133,7 +9150,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_fire_and_brimstone
 
-	cost = 5
+	cost = 4
 	prerequisite = { focus = SOL_fire_and_brimstone }
 	available = { has_war = no }
 
@@ -9153,7 +9170,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_fire_and_brimstone
 
-	cost = 5
+	cost = 4
 	prerequisite = { focus = SOL_fire_and_brimstone }
 	available = { has_war = no }
 
@@ -9173,7 +9190,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_what_homes
 
-	cost = 7
+	cost = 5
 	prerequisite = { focus = SOL_what_homes }
 	prerequisite = { focus = SOL_what_jobs }
 	available = { has_war = no }
@@ -9277,7 +9294,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_enlighten_darkness
 
-	cost = 5
+	cost = 4
 	prerequisite = { focus = SOL_enlighten_darkness }
 	available = { has_war = no }
 
@@ -9296,7 +9313,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_enlighten_darkness
 
-	cost = 5
+	cost = 4
 	prerequisite = { focus = SOL_enlighten_darkness }
 	available = { has_war = no }
 
@@ -9315,7 +9332,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_second_class_employers
 
-	cost = 7
+	cost = 5
 	prerequisite = { focus = SOL_second_class_employers }
 	prerequisite = { focus = SOL_mandatory_education }
 	available = { has_war = no }
@@ -9360,7 +9377,7 @@ shared_focus = {
 		x = -2
 	}
 
-	cost = 5
+	cost = 3
 	prerequisite = {
 		focus = SOL_burn_bats
 		focus = SOL_useful_servants
@@ -9569,7 +9586,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_peaks_of_wealth
 
-	cost = 7
+	cost = 6
 	prerequisite = {
 		focus = SOL_prison_of_fire
 		focus = SOL_peaks_of_wealth
@@ -9595,7 +9612,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_remote_no_more
 
-	cost = 8
+	cost = 7
 	prerequisite = { focus = SOL_remote_no_more }
 	mutually_exclusive = { focus = SOL_moonspeaker_tax }
 	mutually_exclusive = { focus = SOL_replanting_jungle }
@@ -9673,7 +9690,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_remote_no_more
 
-	cost = 8
+	cost = 7
 	prerequisite = { focus = SOL_remote_no_more }
 	prerequisite = { focus = SOL_prison_of_fire }
 	mutually_exclusive = { focus = SOL_modern_south_east }
@@ -9702,7 +9719,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_expand_oil_fields
 
-	cost = 8
+	cost = 7
 	prerequisite = { focus = SOL_expand_oil_fields }
 	mutually_exclusive = { focus = SOL_modern_south_east }
 	mutually_exclusive = { focus = SOL_moonspeaker_tax }
@@ -9746,7 +9763,7 @@ shared_focus = {
 	icon = GFX_goal_change_management
 	relative_position_id = examine_the_situation
 
-	cost = 5
+	cost = 1
 	prerequisite = { focus = examine_the_situation }
 	available = {
 		eqs_not_has_civil_war = yes
@@ -9796,7 +9813,7 @@ shared_focus = {
 	icon = GFX_goal_communist_examples
 	relative_position_id = SOL_change_management
 
-	cost = 5
+	cost = 3
 	prerequisite = { focus = SOL_change_management }
 	mutually_exclusive = { focus = SOL_coercion_campaign }
 	available = {
@@ -9835,7 +9852,7 @@ shared_focus = {
 	icon = GFX_goal_coercion_campaign
 	relative_position_id = SOL_change_management
 
-	cost = 5
+	cost = 3
 	prerequisite = { focus = SOL_change_management }
 	mutually_exclusive = { focus = SOL_communist_examples }
 	available = {
@@ -9874,7 +9891,7 @@ shared_focus = {
 	icon = GFX_goal_naval_staging_grounds
 	relative_position_id = SOL_coercion_campaign
 
-	cost = 6
+	cost = 5
 	prerequisite = {
 		focus = SOL_communist_examples
 		focus = SOL_coercion_campaign
@@ -9935,7 +9952,7 @@ shared_focus = {
 	icon = GFX_goal_plumb_mountain_depths
 	relative_position_id = SOL_naval_staging_grounds
 
-	cost = 8
+	cost = 5
 	prerequisite = { focus = SOL_naval_staging_grounds }
 	available = {
 		PCB = {
@@ -9971,7 +9988,7 @@ shared_focus = {
 	icon = GFX_goal_isle_of_sun
 	relative_position_id = SOL_plumb_mountain_depths
 
-	cost = 10
+	cost = 8
 	prerequisite = { focus = SOL_plumb_mountain_depths }
 	available = {
 		PCB = {
@@ -10002,7 +10019,7 @@ shared_focus = {
 	relative_position_id = examine_the_situation
 	icon = GFX_goal_force_jet_sets_hoof
 
-	cost = 5
+	cost = 1
 	prerequisite = { focus = examine_the_situation }
 	available = {
 		eqs_not_has_civil_war = yes
@@ -10074,7 +10091,7 @@ joint_focus = {
 	#relative_position_id = SOL_force_jet_sets_hoof
 	icon = GFX_goal_ensuring_loyalty
 
-	cost = 3
+	cost = 2
 	prerequisite = {
 		focus = SOL_force_jet_sets_hoof
 		focus = EQC_SOL_reorganise_the_government
@@ -10133,7 +10150,7 @@ joint_focus = {
 	}
 	icon = GFX_goal_smooth_transitions
 
-	cost = 4
+	cost = 2
 	prerequisite = { focus = SOL_ensuring_loyalty }
 	mutually_exclusive = { focus = SOL_faiths_reward }
 	joint_trigger = {
@@ -10232,7 +10249,7 @@ joint_focus = {
 	}
 	icon = GFX_goal_faiths_reward
 
-	cost = 4
+	cost = 2
 	prerequisite = { focus = SOL_ensuring_loyalty }
 	mutually_exclusive = { focus = SOL_smooth_transitions }
 	available = {
@@ -11601,7 +11618,7 @@ joint_focus = {
 shared_focus = {
 	id = SOL_airfields
 	icon = GFX_goal_airfields
-	cost = 5
+	cost = 3
 	ai_will_do = { factor = 70 }
 	prerequisite = {
 		focus = Ministry_of_defense
@@ -11687,7 +11704,7 @@ shared_focus = {
 shared_focus = {
 	id = SOL_airfields2
 	icon = GFX_goal_airfields2
-	cost = 5
+	cost = 3
 	ai_will_do = { factor = 20 }
 	prerequisite = {
 		focus = Ministry_of_defense
@@ -11764,7 +11781,7 @@ shared_focus = {
 	relative_position_id = Ministry_of_defense
 	icon = GFX_goal_canterbbean_grinder
 
-	cost = 5
+	cost = 4
 	prerequisite = { focus = Ministry_of_defense }
 	available = {
 		4 = {
@@ -11840,7 +11857,7 @@ shared_focus = {
 	relative_position_id = Ministry_of_defense
 	icon = GFX_goal_vanhoover_stations
 
-	cost = 5
+	cost = 4
 	prerequisite = { focus = Ministry_of_defense }
 	allow_branch = { is_EQS_SOL = yes }
 	available = {
@@ -11926,7 +11943,7 @@ shared_focus = {
 	icon = GFX_goal_anti_changeling_tactics
 	relative_position_id = Ministry_of_defense
 
-	cost = 6
+	cost = 4
 	prerequisite = { focus = Ministry_of_defense }
 	available = { has_war_with = CHN }
 	allow_branch = { is_EQS_SOL = yes }
@@ -11943,8 +11960,8 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_changeling_menace"
-		add_political_power = 100
-		add_war_support = 0.05
+		add_political_power = 50
+		add_war_support = 0.025
 		if = {
 			limit = {
 				172 = { is_controlled_by = ROOT }
@@ -11971,7 +11988,7 @@ shared_focus = {
 		}
 		add_timed_idea = {
 			idea = SOL_bug_spray
-			days = 250
+			days = 200
 		}
 	}
 	ai_will_do = { factor = 150 }
@@ -11985,7 +12002,7 @@ shared_focus = {
 	relative_position_id = SOL_airfields2
 	icon = GFX_goal_north_naval_games
 
-	cost = 5
+	cost = 4
 	prerequisite = {
 		focus = SOL_airfields2
 		focus = SOL_canterbbean_grinder
@@ -12073,7 +12090,7 @@ shared_focus = {
 	relative_position_id = SOL_vanhoover_stations
 	icon = GFX_goal_variegated_survival_training
 
-	cost = 5
+	cost = 4
 	prerequisite = {
 		focus = SOL_vanhoover_stations
 		focus = SOL_airfields
@@ -12109,7 +12126,7 @@ shared_focus = {
 	relative_position_id = SOL_changeling_menace
 	icon = GFX_goal_canterlot_fort_line
 
-	cost = 5
+	cost = 2
 	prerequisite = { focus = SOL_changeling_menace }
 	available = {
 		3 = { is_fully_controlled_by = ROOT }
@@ -12129,6 +12146,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_canterlot_fort_line"
+		add_stability = -0.1
 		add_war_support = -0.075
 		3 = {
 			add_building_construction = {
@@ -12212,7 +12230,7 @@ shared_focus = {
 	relative_position_id = SOL_airfields
 	icon = GFX_goal_combined_arms_exercises
 
-	cost = 6
+	cost = 5
 	prerequisite = {
 		focus = SOL_vanhoover_stations
 		focus = SOL_airfields
@@ -12554,7 +12572,7 @@ shared_focus = {
 shared_focus = {
 	id = SOL_new_officers
 	icon = GFX_goal_new_officers
-	cost = 7
+	cost = 6
 	ai_will_do = {
 		factor = 150
 	}
@@ -15288,7 +15306,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = examine_the_situation
 
-	cost = 4
+	cost = 3
 	prerequisite = { focus = examine_the_situation }
 	available = { eqs_not_has_civil_war = yes }
 	allow_branch = { is_EQS_SOL = yes }
@@ -15315,8 +15333,40 @@ shared_focus = {
 		3 = { is_owned_and_controlled_by = ROOT }
 		75 = { is_owned_and_controlled_by = ROOT }
 		12 = { is_owned_and_controlled_by = ROOT }
-		15 = { is_owned_and_controlled_by = ROOT }
-		13 = { is_owned_and_controlled_by = ROOT }
+		15 = {
+			if = {
+				limit = {
+					CES = {
+						exists = yes
+						is_subject_of = ROOT
+					}
+				}
+				OR = {
+					is_owned_and_controlled_by = ROOT
+					is_owned_and_controlled_by = CES
+				}
+			}
+			else = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+		13 = {
+			if = {
+				limit = {
+					CES = {
+						exists = yes
+						is_subject_of = ROOT
+					}
+				}
+				OR = {
+					is_owned_and_controlled_by = ROOT
+					is_owned_and_controlled_by = CES
+				}
+			}
+			else = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
 		22 = { is_owned_and_controlled_by = ROOT }
 		66 = { is_owned_and_controlled_by = ROOT }
 		14 = { is_owned_and_controlled_by = ROOT }
@@ -15378,7 +15428,7 @@ shared_focus = {
 shared_focus = {
 	id = SOL_imperial_work_service
 	icon = GFX_goal_imperial_work_service
-	cost = 7
+	cost = 5
 	ai_will_do = { factor = 80 }
 	prerequisite = {
 		focus = examine_the_situation
@@ -15407,7 +15457,7 @@ shared_focus = {
 shared_focus = {
 	id = SOL_invest_in_manehattan
 	icon = GFX_goal_generic_construct_civ_factory
-	cost = 7
+	cost = 5
 	ai_will_do = { factor = 100 }
 	prerequisite = {
 		focus = SOL_tabulate_ponies
@@ -15453,13 +15503,45 @@ shared_focus = {
 shared_focus = {
 	id = SOL_south_eastern_investment
 	icon = GFX_goal_south_eastern_investment
-	cost = 7
+	cost = 5
 	ai_will_do = { factor = 75 }
 	prerequisite = { focus = SOL_tabulate_ponies }
 	available = {
 		eqs_not_has_civil_war = yes
-		13 = { is_owned_and_controlled_by = ROOT }
-		15 = { is_owned_and_controlled_by = ROOT }
+		13 = {
+			if = {
+				limit = {
+					CES = {
+						exists = yes
+						is_subject_of = ROOT
+					}
+				}
+				OR = {
+					is_owned_and_controlled_by = ROOT
+					is_owned_and_controlled_by = CES
+				}
+			}
+			else = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+		15 = {
+			if = {
+				limit = {
+					CES = {
+						exists = yes
+						is_subject_of = ROOT
+					}
+				}
+				OR = {
+					is_owned_and_controlled_by = ROOT
+					is_owned_and_controlled_by = CES
+				}
+			}
+			else = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
 	}
 	cancel_if_invalid = yes
 	continue_if_invalid = no
@@ -15511,7 +15593,7 @@ shared_focus = {
 shared_focus = {
 	id = SOL_imperial_transport_ministry
 	icon = GFX_goal_generic_construct_infrastructure
-	cost = 7
+	cost = 5
 	ai_will_do = { factor = 70 }
 	prerequisite = { focus = SOL_trains_across_empire }
 	available = {
@@ -16860,7 +16942,7 @@ shared_focus = {
 	x = 29
 	y = -1
 
-	cost = 8
+	cost = 3
 	available = {
 		if = {
 			limit = { has_dlc = "La Resistance" }
@@ -16891,7 +16973,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_new_imperial_chapter
 
-	cost = 6
+	cost = 4
 	prerequisite = { focus = SOL_new_imperial_chapter }
 	mutually_exclusive = { focus = SOL_threats_within }
 
@@ -16937,7 +17019,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_new_imperial_chapter
 
-	cost = 6
+	cost = 4
 	prerequisite = { focus = SOL_new_imperial_chapter }
 	mutually_exclusive = { focus = SOL_threats_without }
 
@@ -16985,7 +17067,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_threats_without
 
-	cost = 5
+	cost = 4
 	prerequisite = { focus = SOL_threats_without }
 
 	completion_reward = {
@@ -17003,7 +17085,7 @@ shared_focus = {
 	y = 2
 	relative_position_id = SOL_new_imperial_chapter
 
-	cost = 7
+	cost = 5
 	prerequisite = { focus = SOL_new_imperial_chapter }
 
 	completion_reward = {
@@ -17041,7 +17123,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_threats_within
 
-	cost = 5
+	cost = 4
 	prerequisite = { focus = SOL_threats_within }
 
 	completion_reward = {
@@ -17059,7 +17141,7 @@ shared_focus = {
 	y = 2
 	relative_position_id = SOL_threats_without
 
-	cost = 6
+	cost = 5
 	prerequisite = { focus = SOL_threats_without }
 
 	completion_reward = {
@@ -17120,7 +17202,7 @@ shared_focus = {
 	y = 2
 	relative_position_id = SOL_threats_within
 
-	cost = 6
+	cost = 5
 	prerequisite = { focus = SOL_threats_within }
 
 	completion_reward = {
@@ -17138,7 +17220,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_double_encryption
 
-	cost = 5
+	cost = 3
 	prerequisite = {
 		focus = SOL_double_encryption
 		focus = SOL_spy_nation
@@ -17180,7 +17262,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_spy_nation
 
-	cost = 5
+	cost = 3
 	prerequisite = {
 		focus = SOL_double_encryption
 		focus = SOL_spy_nation
@@ -17221,7 +17303,7 @@ shared_focus = {
 	y = 2
 	relative_position_id = SOL_double_encryption
 
-	cost = 5
+	cost = 6
 	prerequisite = { focus = SOL_double_encryption }
 	available = {
 		KIR = {
@@ -17245,7 +17327,7 @@ shared_focus = {
 	y = 3
 	relative_position_id = SOL_funding_safety
 
-	cost = 5
+	cost = 6
 	prerequisite = {
 		focus = SOL_double_encryption
 		focus = SOL_spy_nation
@@ -17276,7 +17358,7 @@ shared_focus = {
 	y = 2
 	relative_position_id = SOL_spy_nation
 
-	cost = 5
+	cost = 6
 	prerequisite = { focus = SOL_spy_nation }
 	available = {
 		custom_trigger_tooltip = {

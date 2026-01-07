@@ -1845,10 +1845,6 @@ political_actions = {
 		cost = 50
 		days_remove = 35
 		fire_only_once = yes
-		modifier = {
-			political_power_gain = -0.25
-			stability_weekly = -0.002
-		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SOL_remove_civil_war_ideas"
 			EQS_remove_civil_war_ideas = yes
@@ -1875,7 +1871,7 @@ political_actions = {
 			}
 		}
 		fire_only_once = yes
-		cost = 100
+		cost = 50
 		complete_effect = {
 			add_stability = -0.1
 			country_event = solarreworked.233
@@ -1900,8 +1896,8 @@ political_actions = {
 			date < 1022.1.1
 			has_completed_focus = SOL_rouse_godhood
 		}
-		cost = 100
-		days_remove = 150
+		cost = 125
+		days_remove = 120
 		fire_only_once = yes
 		modifier = {
 			political_power_gain = -0.15
@@ -1937,8 +1933,8 @@ political_actions = {
 			date < 1022.1.1
 			has_country_flag = SOL_flurry_training_tier_1
 		}
-		cost = 100
-		days_remove = 150
+		cost = 125
+		days_remove = 120
 		fire_only_once = yes
 		modifier = {
 			political_power_gain = -0.25
@@ -1974,8 +1970,8 @@ political_actions = {
 			date < 1022.1.1
 			has_country_flag = SOL_flurry_training_tier_2
 		}
-		cost = 100
-		days_remove = 150
+		cost = 125
+		days_remove = 120
 		fire_only_once = yes
 		modifier = {
 			political_power_gain = -0.25
@@ -2012,8 +2008,8 @@ political_actions = {
 			date < 1022.1.1
 			has_country_flag = SOL_flurry_training_tier_3
 		}
-		cost = 100
-		days_remove = 150
+		cost = 125
+		days_remove = 120
 		fire_only_once = yes
 		modifier = {
 			political_power_gain = -0.35

@@ -1260,9 +1260,12 @@ ideas = {
 			picture = generic_pp_unity_bonus
 			modifier = {
 				fascism_drift = 0.03
+				party_popularity_stability_factor = 0.05
 				war_support_factor = 0.07
-				drift_defence_factor = 0.1
-				foreign_subversive_activites = -0.1
+				drift_defence_factor = 0.15
+				foreign_subversive_activites = -0.15
+				political_power_gain = -0.05
+				stability_weekly = -0.001
 			}
 		}
 	}

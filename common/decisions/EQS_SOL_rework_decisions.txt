@@ -4202,9 +4202,24 @@ EQS_pan_pony_empire_category = {
             GFF = { all_original_cores_owned_by_ROOT = yes }
         }
         visible = {
+            #Should resolve seeing it when it shouldn't be seen or vice versa
+            243 = {
+                OWNER = {
+                    OR = {
+                        tag = ROOT
+                        is_subject_of = ROOT
+                    }
+                }
+                CONTROLLER = {
+                    OR = {
+                        tag = ROOT
+                        is_subject_of = ROOT
+                    }
+                }
+            }
             OR = {
-                GRF = { all_original_cores_owned_by_ROOT = yes }
-                GFF = { all_original_cores_owned_by_ROOT = yes }
+                GRF = { all_original_cores_owned_by_ROOT_or_subject = yes }
+                GFF = { all_original_cores_owned_by_ROOT_or_subject = yes }
             }
             NOT = { has_country_flag = SOL_formed_super_equus }
         }
@@ -5041,15 +5056,16 @@ EQS_pan_pony_empire_category = {
                 STM = {
                     all_cores_owned_by_ROOT_or_subject = yes
                 }
-                GYZ = {
-                    all_cores_owned_by_ROOT_or_subject = yes
-                }
-                SLC = {
-                    all_cores_owned_by_ROOT_or_subject = yes
-                }
-                THU = {
-                    all_cores_owned_by_ROOT_or_subject = yes
-                }
+                #Shoul work. Don't believe STM or any other civil war faction removes cores
+                #GYZ = {
+                #    all_cores_owned_by_ROOT_or_subject = yes
+                #}
+                #SLC = {
+                #    all_cores_owned_by_ROOT_or_subject = yes
+                #}
+                #THU = {
+                #    all_cores_owned_by_ROOT_or_subject = yes
+                #}
                 HYE = {
                     all_cores_owned_by_ROOT_or_subject = yes
                 }

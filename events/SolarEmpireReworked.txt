@@ -1966,7 +1966,7 @@ country_event = {
 
     fire_only_once = yes
 
-    mean_time_to_happen = { days = 90 }
+    mean_time_to_happen = { days = 180 }
 
     option = {
         name = solarreworked.59.a
@@ -2015,7 +2015,7 @@ country_event = {
 
     fire_only_once = yes
 
-    mean_time_to_happen = { days = 60 }
+    mean_time_to_happen = { days = 180 }
 
     option = {
         name = solarreworked.60.a
@@ -4032,6 +4032,8 @@ country_event = {
 
     fire_only_once = yes
 
+    mean_time_to_happen = { days = 90 }
+
     option = {
         name = solarreworked.141.a
     }
@@ -4048,6 +4050,11 @@ country_event = {
 
     option = {
         name = solarreworked.142.a
+        add_political_power = 30
+        add_popularity = {
+            popularity = 0.015
+            ideology = fascism
+        }
     }
 }
 
@@ -4461,6 +4468,9 @@ country_event = { #Report to Daybreaker that so far the hunt for the M6 and Suns
                 has_country_flag = SOL_luna_twiggles_summit
                 has_global_flag = NLR_spawned
             }
+            CRY = {
+                has_government = democratic
+            }
         }
         hidden_effect = {
             random_list = {
@@ -4509,6 +4519,9 @@ country_event = { #Report to Daybreaker that so far the hunt for the M6 and Suns
             OR = {
                 has_country_flag = SOL_luna_twiggles_summit
                 has_global_flag = NLR_spawned
+            }
+            EQC = {
+                has_government = democratic
             }
         }
         hidden_effect = {
@@ -4598,6 +4611,53 @@ country_event = { #Report to Daybreaker that so far the hunt for the M6 and Suns
             }
         }
     }
+    option = { #They will seek to flee the continent. Find them!
+        name = solarreworked.159.d
+        trigger = {
+            eqs_has_civil_war = no
+            CRY = {
+                NOT = { has_government = democratic }
+            }
+            EQC = {
+                NOT = { has_government = democratic }
+            }
+        }
+        set_country_flag = SOL_fled_continent #Generic event for if EQC and CRY are not democratic, and there is no civil war.
+        hidden_effect = {
+            random_list = {
+                60 = {
+                    country_event = {
+                        id = solarreworked.161
+                        days = 10
+                        random_days = 20
+                    }
+                }
+                40 = {
+                    modifier = {
+                        check_variable = { SOL_lockdown_procedures > 0 }
+                        factor = 0.9
+                    }
+                    modifier = {
+                        check_variable = { SOL_lockdown_procedures > 1 }
+                        factor = 0.7
+                    }
+                    modifier = {
+                        check_variable = { SOL_lockdown_procedures > 2 }
+                        factor = 0.5
+                    }
+                    modifier = {
+                        check_variable = { SOL_lockdown_procedures > 3 }
+                        factor = 0
+                    }
+                    country_event = {
+                        id = solarreworked.160
+                        days = 10
+                        random_days = 20
+                    }
+                }
+            }
+        }
+    }
 }
 
 country_event = { #A follow-up report to the dispatch from Daybreaker to go through the effort of capturing the M6 and Sunset, stating that they were never found, and they must have fled to the other country in question
@@ -4632,8 +4692,26 @@ country_event = { #A follow-up report to the dispatch from Daybreaker to go thro
                 }
             }
             else_if = {
-                limit = { has_country_flag = SOL_fled_EQC }
+                limit = { has_country_flag = SOL_fled_EQS }
                 event_target:equestria = {
+                    country_event = {
+                        id = solarreworked.162
+                        days = 7
+                    }
+                }
+            }
+            else_if = {
+                limit = { has_country_flag = SOL_fled_continent }
+                random_country = {
+                    limit = {
+                        exists = yes
+                        has_government = democratic
+                        OR = {
+                            tag = RCT
+                            tag = HIP
+                            tag = MGY
+                        }
+                    }
                     country_event = {
                         id = solarreworked.162
                         days = 7
@@ -6267,7 +6345,7 @@ country_event = { #As the administrator of Sol Invicta University is going about
     option = { #Oh my Daybreaker!
         name = solarreworked.265.a
         add_to_variable = { research_speed_var = 0.03 }
-		add_to_variable = { doctrine_cost_factor_var = -0.05 }
+		add_to_variable = { doctrine_cost_factor_var = 0.05 }
 		if = {
 			limit = { amount_research_slots < 5 }
 			add_research_slot = 1
