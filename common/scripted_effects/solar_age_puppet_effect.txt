@@ -1,4 +1,42 @@
+SOL_apply_generic_focus_tree_to_puppets = {
+    hidden_effect = {
+        if = {
+            limit = {
+                NOT = {
+                    tag = CRY
+                    tag = EQC
+                }
+            }
+            if = {
+                limit = {
+                    is_equestrian_continent_country = yes
+                    NOT = { has_focus_tree = generic_focus }
+                }
+                load_focus_tree = generic_focus
+            }
+            else_if = {
+                limit = {
+                    is_griffon_continent_country = yes
+                    NOT = {
+                        tag = GRI
+                        tag = RCT
+                    }
+                    NOT = { has_focus_tree = generic_griffon_focus }
+                }
+                load_focus_tree = generic_griffon_focus
+            }
+            else_if = {
+                limit = {
+                    is_zebrican_continent_country = yes
+                    NOT = { has_focus_tree = generic_zebra_focus }
+                }
+                load_focus_tree = generic_zebra_focus
+            }
+        }
+    }
+}
 apply_SOL_cosmetic_tags_on_puppet = {
+    SOL_apply_generic_focus_tree_to_puppets = yes
     if = {
         limit = {
             original_tag = CRY

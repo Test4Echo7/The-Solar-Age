@@ -256,24 +256,24 @@ EQS_debug_category = {
 			}
 		}
     }
-    EQS_test_swap_advisor_trait = {
-        allowed = {
-            tag = EQS
-        }
-        complete_effect = {
-            EQS_astrum_solus = {
-                add_trait = { trait = director_of_imperial_intelligence_astrum_lar slot = political_advisor }
-                hidden_effect = { remove_trait = { trait = master_of_disguise_lar slot = political_advisor } }
-            }
-            EQS_absconditus_lumen = {
-                add_trait = { trait = director_of_imperial_intelligence_lar slot = political_advisor }
-                hidden_effect = { remove_trait = { trait = ambitious_planner_lar slot = political_advisor } }
-            }
-            EQS_sweetie_drops = {
-                add_trait = { trait = director_of_smile_defunct_lar slot = political_advisor }
-            }
-        }
-    }
+    #EQS_test_swap_advisor_trait = {
+    #    allowed = {
+    #        tag = EQS
+    #    }
+    #    complete_effect = {
+    #        EQS_astrum_solus = {
+    #            add_trait = { trait = director_of_imperial_intelligence_astrum_lar slot = political_advisor }
+    #            hidden_effect = { remove_trait = { trait = master_of_disguise_lar slot = political_advisor } }
+    #        }
+    #        EQS_absconditus_lumen = {
+    #            add_trait = { trait = director_of_imperial_intelligence_lar slot = political_advisor }
+    #            hidden_effect = { remove_trait = { trait = ambitious_planner_lar slot = political_advisor } }
+    #        }
+    #        EQS_sweetie_drops = {
+    #            add_trait = { trait = director_of_smile_defunct_lar slot = political_advisor }
+    #        }
+    #    }
+    #}
     EQS_start_SOL = {
         allowed = {
             tag = EQS
@@ -359,70 +359,90 @@ EQS_debug_category = {
             }
         }
     }
-    EQS_based_name = {
+    EQS_right_left = {
         allowed = {
             tag = EQS
         }
-        complete_effect = {
-            set_party_name = {
-                ideology = fascism
-                long_name = EQS_solaris_cultus
-                name = EQS_solaris_cultus
-            }
-        }
-    }
-    EQS_canterlot_based_name = {
-        allowed = {
-            tag = EQS
+        visible = {
+            has_any_power_balance = yes
         }
         complete_effect = {
-            set_province_name = {
-                id = 179
-                name = "EQS_sanctum_solar"
-            }
-        }
-    }
-    EQS_based_shimmer = {
-        allowed = {
-            tag = EQS
-        }
-        complete_effect = {
-            EQS_sunset_shimmer = {
-                set_character_name = SOL_sunset_shimmer_new_name
-                set_portraits = {
-                    army = {
-                        small = "gfx/interface/ideas/advisors/EQS/sunset_shimmer_new.tga"
-                        large = "gfx/leaders/EQS/Sunset_new.tga"
-                    }
+            if = {
+                limit = {
+                    has_power_balance = { id = EQS_sanity_bop }
+                }
+                add_power_balance_value = {
+                    id = EQS_sanity_bop
+                    value = 2
+                    tooltip_side = EQS_kalm
                 }
             }
-            set_country_flag = EQS_sunset_shimmer_arrived
         }
     }
-    EQS_create_harmony_pact_gw = {
-        allowed = {
-            tag = EQS
-        }
-        complete_effect = {
-            create_faction_from_template = faction_template_harmony_pact_gw_faction
-        }
-    }
-    EQS_create_harmony_pact_cw = {
-        allowed = {
-            tag = EQS
-        }
-        complete_effect = {
-            create_faction_from_template = faction_template_harmony_pact_cw_faction
-        }
-    }
-    EQS_create_harmony_pact_other = {
-        allowed = {
-            tag = EQS
-        }
-        complete_effect = {
-            create_faction_from_template = faction_template_harmony_pact_other_war_faction
-        }
-    }
+    #EQS_based_name = {
+    #    allowed = {
+    #        tag = EQS
+    #    }
+    #    complete_effect = {
+    #        set_party_name = {
+    #            ideology = fascism
+    #            long_name = EQS_solaris_cultus
+    #            name = EQS_solaris_cultus
+    #        }
+    #    }
+    #}
+    #EQS_canterlot_based_name = {
+    #    allowed = {
+    #        tag = EQS
+    #    }
+    #    complete_effect = {
+    #        set_province_name = {
+    #            id = 179
+    #            name = "EQS_sanctum_solar"
+    #        }
+    #    }
+    #}
+    #EQS_based_shimmer = {
+    #    allowed = {
+    #        tag = EQS
+    #    }
+    #    complete_effect = {
+    #        EQS_sunset_shimmer = {
+    #            set_character_name = SOL_sunset_shimmer_new_name
+    #            set_portraits = {
+    #                army = {
+    #                    small = "gfx/interface/ideas/advisors/EQS/sunset_shimmer_new.tga"
+    #                    large = "gfx/leaders/EQS/Sunset_new.tga"
+    #                }
+    #            }
+    #        }
+    #        set_country_flag = EQS_sunset_shimmer_arrived
+    #    }
+    #}
+    #EQS_create_harmony_pact_gw = {
+    #    allowed = {
+    #        tag = EQS
+    #    }
+    #    complete_effect = {
+    #        create_faction_from_template = faction_template_harmony_pact_gw_faction
+    #    }
+    #}
+    #EQS_create_harmony_pact_cw = {
+    #    allowed = {
+    #        tag = EQS
+    #    }
+    #    complete_effect = {
+    #        create_faction_from_template = faction_template_harmony_pact_cw_faction
+    #    }
+    #}
+    #EQS_create_harmony_pact_other = {
+    #    allowed = {
+    #        tag = EQS
+    #    }
+    #    complete_effect = {
+    #        create_faction_from_template = faction_template_harmony_pact_other_war_faction
+    #    }
+    #}
     #EQS_space_marines = {
     #    allowed = {
     #        tag = EQS

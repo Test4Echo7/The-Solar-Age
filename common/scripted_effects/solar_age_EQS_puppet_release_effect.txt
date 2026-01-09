@@ -1684,22 +1684,226 @@ SOL_release_CHN = {
     }
     CHN = {
         restore_previous_government_type = yes
+        SOL_apply_generic_focus_tree_to_puppets = yes
         set_cosmetic_tag = CHN_SOL
         set_country_flag = is_solar_puppet
+        if = {
+            limit = {
+                NOT = { has_country_flag = demilitarized }
+            }
+            set_country_flag = demilitarized
+            hidden_effect = {
+                add_ideas = disarmed_nation
+            }
+        }
+        add_ideas = SOL_CHN_puppet_benefits
+    }
+    if = {
+        limit = {
+            has_country_flag = SOL_can_core_CHN_states
+        }
+        hidden_effect = {
+            transfer_state = 291
+            transfer_state = 246
+            transfer_state = 247
+            transfer_state = 319
+            transfer_state = 316
+            if = {
+                limit = { check_variable = { SOL_colonized_CHN_states = 1 } }
+                291 = { add_core_of = ROOT }
+                246 = { add_core_of = ROOT }
+                247 = { add_core_of = ROOT }
+                319 = { add_core_of = ROOT }
+                316 = { add_core_of = ROOT }
+            }
+        }
+    }
+    ###Keep as possibility. See if adding the generic tree is sufficient
+    #create_dynamic_country = {
+    #    original_tag = CHN
+    #    set_variable = { SOL_skreeeeeeee = 1 }
+    #    reserve_dynamic_country = yes
+    #}
+    #every_possible_country = {
+    #    limit = {
+    #        is_dynamic_country = yes
+    #        check_variable = { SOL_skreeeeeeee = 1 }
+    #    }
+    #    every_state = {
+    #        limit = {
+    #            is_in_array = { CHN.original_cores = THIS.id }
+    #        }
+    #        transfer_state_to = PREV
+    #    }
+    #}
+}
+SOL_release_OLE = {
+    if = {
+        limit = {
+            69 = { is_core_of = ROOT }
+            218 = { is_core_of = ROOT }
+            296 = { is_core_of = ROOT }
+            217 = { is_core_of = ROOT }
+        }
+        set_temp_variable = { SOL_colonized_OLE_states = 1 }
+    }
+    if = {
+        limit = {
+            NOT = { country_exists = OLE }
+        }
+        release_autonomy = {
+            target = OLE
+            autonomy_state = autonomy_reichsprotectorate
+        }
+        OLE = {
+            SOL_apply_generic_focus_tree_to_puppets = yes
+            set_country_flag = is_solar_puppet
+            set_cosmetic_tag = OLE_SOL
+            clear_variable = collaboration_formed_by
+        }
     }
     hidden_effect = {
-        transfer_state = 291
-        transfer_state = 246
-        transfer_state = 247
-        transfer_state = 319
-        transfer_state = 316
         if = {
-            limit = { check_variable = { SOL_colonized_CHN_states = 1 } }
-            291 = { add_core_of = ROOT }
-            246 = { add_core_of = ROOT }
-            247 = { add_core_of = ROOT }
-            319 = { add_core_of = ROOT }
-            316 = { add_core_of = ROOT }
+            limit = {
+                has_country_flag = SOL_deet_release
+            }
+            if = {
+                limit = {
+                    OLE = {
+                        NOT = { has_character = OLE_queen_velvet }
+                    }
+                }
+                every_possible_country = {
+                    limit = { has_character = OLE_queen_velvet }
+                    OLE_queen_velvet = {
+                        set_nationality = OLE
+                    }
+                }
+            }
+            every_possible_country = {
+                limit = { has_character = OLE_queen_velvet }
+                if = {
+                    limit = { ROOT = { has_completed_focus = SOL_god_empress } }
+                    OLE_queen_velvet = {
+                        add_country_leader_role = {
+                            promote_leader = yes
+                            country_leader = {
+                                ideology = falangism
+                                expire = "1965.1.1"
+                                traits = { imperial_governess_alt }
+                            }
+                        }
+                    }
+                }
+                else = {
+                    OLE_queen_velvet = {
+                        add_country_leader_role = {
+                            promote_leader = yes
+                            country_leader = {
+                                ideology = nazism
+                                expire = "1965.1.1"
+                                traits = { imperial_governess_alt }
+                            }
+                        }
+                    }
+                }
+                add_ideas = SOL_OLE_civilian_focus
+            }
+            clr_country_flag = SOL_deet_release
+        }
+        else_if = {
+            limit = {
+                has_country_flag = SOL_defunct_floof_factory
+            }
+            every_possible_country = {
+                limit = { has_character = OLE_Vidkun_Hjortsling }
+                OLE_Vidkun_Hjortsling = {
+                    if = {
+                        limit = {
+                            OLE = {
+                                NOT = { can_be_country_leader = OLE_Vidkun_Hjortsling }
+                            }
+                        }
+                        add_country_leader_role = {
+                            promote_leader = yes
+                            country_leader = {
+                                ideology = ultranationalism
+                                expire = "1965.1.1"
+                            }
+                        }
+                    }
+                    else_if = {
+                        limit = {
+                            is_country_leader = no
+                        }
+                        promote_character = yes
+                    }
+                    add_country_leader_trait = temporary_governor
+                }
+            }
+            clr_country_flag = SOL_defunct_floof_factory
+        }
+        else = {
+            every_possible_country = {
+                limit = { has_character = EQS_luminous_blade }
+                EQS_luminous_blade = {
+                    set_nationality = OLE
+                }
+            }
+            every_possible_country = {
+                limit = { has_character = EQS_luminous_blade }
+                ###Sees Daybreaker as a goddess either way.
+                EQS_luminous_blade = {
+                    add_country_leader_role = {
+                        promote_leader = yes
+                        country_leader = {
+                            ideology = falangism
+                            expire = "1965.1.1"
+                            traits = { imperial_governess_alt }
+                        }
+                    }
+                }
+                add_ideas = SOL_OLE_military_focus
+            }
+        }
+        transfer_state = 76
+        transfer_state = 189
+        if = {
+            limit = {
+                has_completed_focus = SOL_reclaim_seaddle
+            }
+            transfer_state = 224
+            224 = { add_core_of = ROOT }
+        }
+        if = {
+            limit = {
+                has_country_flag = SOL_can_core_OLE_states
+            }
+            transfer_state = 69
+            transfer_state = 218
+            transfer_state = 296
+            transfer_state = 217
+            if = {
+                limit = { check_variable = { SOL_colonized_OLE_states = 1 } }
+                69 = { add_core_of = ROOT }
+                218 = { add_core_of = ROOT }
+                296 = { add_core_of = ROOT }
+                217 = { add_core_of = ROOT }
+            }
+        }
+        every_state = {
+            limit = {
+                is_core_of = OLE
+                is_owned_by = ROOT
+                NOT = { is_core_of = ROOT }
+                ROOT = {
+                    OR = {
+                        has_completed_focus = SOL_figurehead_monarch
+                        has_completed_focus = SOL_destroy_deer_monarchy
+                    }
+                }
+            }
+            add_dynamic_modifier = { modifier = SOL_figurehead_compliance }
         }
     }
 }
@@ -1709,6 +1913,7 @@ SOL_release_GRF = {
         autonomous_state = autonomy_reichsprotectorate
     }
     GRF = {
+        SOL_apply_generic_focus_tree_to_puppets = yes
         set_cosmetic_tag = GRF_SOL
         set_country_flag = is_solar_puppet
         hidden_effect = { country_event = solarreworked.529 }
@@ -1759,6 +1964,7 @@ SOL_release_YAK = {
         autonomous_state = autonomy_reichsprotectorate
     }
     YAK = {
+        SOL_apply_generic_focus_tree_to_puppets = yes
         set_cosmetic_tag = YAK_SOL
         set_country_flag = is_solar_puppet
         hidden_effect = { country_event = solarreworked.529 }
@@ -1778,6 +1984,7 @@ SOL_release_PLB = {
         autonomous_state = autonomy_reichsprotectorate
     }
     PLB = {
+        SOL_apply_generic_focus_tree_to_puppets = yes
         set_cosmetic_tag = ARC_SOL
         set_country_flag = is_solar_puppet
         hidden_effect = { country_event = solarreworked.529 }
@@ -1875,6 +2082,7 @@ SOL_release_RIV = {
         }
     }
     RCT = {
+        SOL_apply_generic_focus_tree_to_puppets = yes
         set_cosmetic_tag = RIV_SOL
         set_country_flag = is_solar_puppet
         hidden_effect = { country_event = solarreworked.529 }
@@ -1898,6 +2106,7 @@ SOL_release_FBK = {
         autonomous_state = autonomy_reichsprotectorate
     }
     FBK = {
+        SOL_apply_generic_focus_tree_to_puppets = yes
         set_cosmetic_tag = FBK_SOL
         set_country_flag = is_solar_puppet
         hidden_effect = { country_event = solarreworked.529 }
@@ -1924,6 +2133,7 @@ SOL_release_HLR = {
         autonomous_state = autonomy_reichsprotectorate
     }
     HLR = {
+        SOL_apply_generic_focus_tree_to_puppets = yes
         set_cosmetic_tag = HLR_SOL
         set_country_flag = is_solar_puppet
         hidden_effect = { country_event = solarreworked.529 }
@@ -1947,6 +2157,7 @@ SOL_release_MIT = {
         }
     }
     MIT = {
+        SOL_apply_generic_focus_tree_to_puppets = yes
         set_cosmetic_tag = MIT_SOL
         set_country_flag = is_solar_puppet
         hidden_effect = { country_event = solarreworked.529 }
@@ -1982,6 +2193,7 @@ SOL_release_ZES = {
         }
     }
     ZES = {
+        SOL_apply_generic_focus_tree_to_puppets = yes
         set_cosmetic_tag = ZES_SOL
         set_country_flag = is_solar_puppet
         hidden_effect = { country_event = solarreworked.529 }
@@ -2019,6 +2231,7 @@ SOL_release_HIP = {
         autonomy_state = autonomy_reichsprotectorate
     }
     HIP = {
+        SOL_apply_generic_focus_tree_to_puppets = yes
         set_cosmetic_tag = HIP_SOL
         set_country_flag = is_solar_puppet
         hidden_effect = { country_event = solarreworked.529 }
@@ -2079,6 +2292,7 @@ SOL_release_CTH = {
         autonomy_state = autonomy_reichsprotectorate
     }
     CTH = {
+        SOL_apply_generic_focus_tree_to_puppets = yes
         set_cosmetic_tag = CTH_SOL
         set_country_flag = is_solar_puppet
         hidden_effect = { country_event = solarreworked.529 }
@@ -2102,6 +2316,7 @@ SOL_release_CTL = {
         }
     }
     CTL = {
+        SOL_apply_generic_focus_tree_to_puppets = yes
         set_cosmetic_tag = CTL_SOL
         set_country_flag = is_solar_puppet
         hidden_effect = { country_event = solarreworked.529 }
@@ -2128,6 +2343,7 @@ SOL_release_ABY = {
         autonomy_state = autonomy_reichsprotectorate
     }
     ABY = {
+        SOL_apply_generic_focus_tree_to_puppets = yes
         set_cosmetic_tag = ABY_SOL
         set_country_flag = is_solar_puppet
         hidden_effect = { country_event = solarreworked.529 }
@@ -2183,6 +2399,7 @@ SOL_release_ZAR = {
         autonomy_state = autonomy_reichsprotectorate
     }
     ZAR = {
+        SOL_apply_generic_focus_tree_to_puppets = yes
         set_cosmetic_tag = ZAR_SOL
         set_country_flag = is_solar_puppet
         hidden_effect = { country_event = solarreworked.529 }
@@ -2210,6 +2427,7 @@ SOL_release_ROA = {
         autonomy_state = autonomy_reichsprotectorate
     }
     ROA = {
+        SOL_apply_generic_focus_tree_to_puppets = yes
         set_cosmetic_tag = ROA_SOL
         set_country_flag = is_solar_puppet
         hidden_effect = { country_event = solarreworked.529 }
@@ -2237,6 +2455,7 @@ SOL_release_STM = {
         autonomy_state = autonomy_reichsprotectorate
     }
     STM = {
+        SOL_apply_generic_focus_tree_to_puppets = yes
         set_cosmetic_tag = STM_SOL
         set_country_flag = is_solar_puppet
         hidden_effect = { country_event = solarreworked.529 }
@@ -2264,6 +2483,7 @@ SOL_release_ZOO = {
         autonomy_state = autonomy_reichsprotectorate
     }
     ZOO = {
+        SOL_apply_generic_focus_tree_to_puppets = yes
         set_cosmetic_tag = ZOO_SOL
         set_country_flag = is_solar_puppet
         hidden_effect = { country_event = solarreworked.529 }
@@ -2287,6 +2507,7 @@ SOL_release_MTA = {
         autonomous_state = autonomy_reichsprotectorate
     }
     MTA = {
+        SOL_apply_generic_focus_tree_to_puppets = yes
         set_cosmetic_tag = MTA_SOL
         set_country_flag = is_solar_puppet
         hidden_effect = { country_event = solarreworked.529 }
@@ -2334,6 +2555,7 @@ SOL_release_MAZ = {
         autonomy_state = autonomy_reichsprotectorate
     }
     MAZ = {
+        SOL_apply_generic_focus_tree_to_puppets = yes
         set_cosmetic_tag = MAZ_SOL
         set_country_flag = is_solar_puppet
         hidden_effect = { country_event = solarreworked.529 }
@@ -2360,6 +2582,7 @@ SOL_release_GAR = {
         autonomy_state = autonomy_reichsprotectorate
     }
     GAR = {
+        SOL_apply_generic_focus_tree_to_puppets = yes
         set_cosmetic_tag = GAR_SOL
         set_country_flag = is_solar_puppet
         hidden_effect = { country_event = solarreworked.529 }
@@ -2382,6 +2605,7 @@ SOL_release_KXN = {
         autonomous_state = autonomy_reichsprotectorate
     }
     KXN = {
+        SOL_apply_generic_focus_tree_to_puppets = yes
         set_cosmetic_tag = KXN_SOL
         set_country_flag = is_solar_puppet
         hidden_effect = { country_event = solarreworked.529 }
@@ -2405,18 +2629,28 @@ SOL_release_AES = {
         autonomous_state = autonomy_reichsprotectorate
     }
     AES = {
+        SOL_apply_generic_focus_tree_to_puppets = yes
         set_cosmetic_tag = AES_SOL
         set_country_flag = is_solar_puppet
         hidden_effect = { country_event = solarreworked.529 }
     }
 }
 SOL_release_KIR = {
-    ###Depending on how the KIR civil war treats core states, may have to manually tell it to use all starting KIR cores
+    hidden_effect = {
+        every_state = {
+            limit = {
+                is_in_array = { KIR.original_cores = THIS.id }
+                NOT = { is_core_of = KIR }
+            }
+            add_core_of = KIR
+        }
+    }
     release_autonomy = {
         target = KIR
         autonomous_state = autonomy_reichsprotectorate
     }
     KIR = {
+        SOL_apply_generic_focus_tree_to_puppets = yes
         set_cosmetic_tag = KIR_SOL
         set_country_flag = is_solar_puppet
         hidden_effect = { country_event = solarreworked.529 }
@@ -2428,6 +2662,7 @@ SOL_release_TBK = {
         autonomous_state = autonomy_reichsprotectorate
     }
     TBK = {
+        SOL_apply_generic_focus_tree_to_puppets = yes
         set_cosmetic_tag = TBK_SOL
         set_country_flag = is_solar_puppet
     }

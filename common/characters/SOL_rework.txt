@@ -840,6 +840,13 @@ characters = {
 	}
 
 	###Imperial Governors###
+	EQS_luminous_blade = {
+		name = EQS_luminous_blade
+		gender = female
+		portraits = {
+			civilian = "gfx/leaders/EQS/Luminous_Blade.tga"
+		}
+	}
 	EQS_crepuscular_ray = {
 		name = EQS_crepuscular_ray
 		gender = female

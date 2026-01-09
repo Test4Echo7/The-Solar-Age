@@ -337,11 +337,12 @@ leader_traits = {
     imperial_governor = {
         random = no
 
-        political_power_factor = -0.1
-        conscription_factor = 0.03
-        party_popularity_stability_factor = 0.05
-        war_support_factor = 0.1
-        fascism_drift = 0.03
+        political_power_factor = -0.15
+        conscription_factor = 0.25
+        stability_factor = -0.1
+        political_advisor_cost_factor = -0.33
+        surrender_limit = -0.075
+        fascism_drift = 0.01
 
         ai_will_do = { factor = 1 }
     }
@@ -349,11 +350,12 @@ leader_traits = {
     imperial_governess = {
         random = no
 
-        political_power_factor = -0.1
-        conscription_factor = 0.03
-        party_popularity_stability_factor = 0.05
-        war_support_factor = 0.1
-        fascism_drift = 0.03
+        political_power_factor = -0.15
+        conscription_factor = 0.25
+        stability_factor = -0.1
+        political_advisor_cost_factor = -0.33
+        surrender_limit = -0.075
+        fascism_drift = 0.01
 
         ai_will_do = { factor = 1 }
     }
@@ -361,12 +363,12 @@ leader_traits = {
     imperial_collaborator = {
         random = no
 
-        political_power_factor = -0.2
-        stability_factor = 0.05
-        conscription_factor = -0.15
+        political_power_factor = -0.15
+        stability_factor = 0.1
         army_core_defence_factor = 0.05
         army_core_attack_factor = 0.05
-        fascism_drift = 0.01
+        surrender_limit = 0.05
+        fascism_drift = 0.02
 
         ai_will_do = { factor = 1 }
     }
@@ -374,12 +376,23 @@ leader_traits = {
     imperial_collaborator_better = {
         random = no
 
-        political_power_factor = -0.15
-        stability_factor = 0.075
-        conscription_factor = -0.05
-        army_core_attack_factor = 0.05
-        army_core_defence_factor = 0.05
+        political_power_factor = -0.1
+        stability_factor = 0.15
+        army_core_attack_factor = 0.075
+        army_core_defence_factor = 0.075
         consumer_goods_factor = -0.05
+        surrender_limit = 0.1
+        fascism_drift = 0.03
+
+        ai_will_do = { factor = 1 }
+    }
+
+    #Only for OLE and CHN
+    imperial_governess_alt = {
+        random = no
+
+        political_power_factor = 0.05
+        party_popularity_stability_factor = 0.1
         fascism_drift = 0.02
 
         ai_will_do = { factor = 1 }
@@ -544,6 +557,16 @@ leader_traits = {
         political_power_factor = 0.05
         stability_factor = 0.1
         army_morale_factor = 0.05
+
+        ai_will_do = { factor = 1 }
+    }
+
+    ###OLE/CHN gimp trait###
+    temporary_governor = {
+        random = no
+        political_power_factor = -0.25
+        stability_factor = -0.1
+        conscription_factor = -0.5
 
         ai_will_do = { factor = 1 }
     }

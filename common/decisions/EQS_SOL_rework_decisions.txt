@@ -3690,6 +3690,67 @@ EQS_covert_ops_category = {
 }
 
 EQS_expand_imperial_territory_category = {
+    SOL_take_vaverfront_region = {
+        available = {
+            is_EQS_SOL = yes
+            has_country_flag = SOL_can_core_OLE_states
+            69 = { is_owned_and_controlled_by = OLE }
+            218 = { is_owned_and_controlled_by = OLE }
+            296 = { is_owned_and_controlled_by = OLE }
+            217 = { is_owned_and_controlled_by = OLE }
+        }
+        visible = {
+            is_EQS_SOL = yes
+            has_country_flag = SOL_can_core_OLE_states
+            OLE = {
+                is_subject_of = ROOT
+            }
+            OR = {
+                NOT = { 69 = { is_owned_and_controlled_by = ROOT } }
+                NOT = { 218 = { is_owned_and_controlled_by = ROOT } }
+                NOT = { 296 = { is_owned_and_controlled_by = ROOT } }
+                NOT = { 217 = { is_owned_and_controlled_by = ROOT } }
+            }
+        }
+        highlight_states = {
+            highlight_state_targets = {
+                state = 69
+                state = 218
+                state = 217
+                state = 296
+            }
+        }
+        fire_only_once = yes
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision SOL_take_vaverfront_region"
+            69 = { transfer_state_to = ROOT }
+            218 = { transfer_state_to = ROOT }
+            296 = { transfer_state_to = ROOT }
+            217 = { transfer_state_to = ROOT }
+            hidden_effect = {
+                if = {
+                    limit = {
+                        OLE = {
+                            OR = {
+                                has_country_leader = { character = OLE_queen_velvet ruling_only = yes }
+                                has_country_leader = { character = EQS_luminous_blade ruling_only = yes }
+                            }
+                        }
+                    }
+                    69 = { add_dynamic_modifier = { modifier = SOL_figurehead_compliance } }
+                    218 = { add_dynamic_modifier = { modifier = SOL_figurehead_compliance } }
+                    296 = { add_dynamic_modifier = { modifier = SOL_figurehead_compliance } }
+                    217 = { add_dynamic_modifier = { modifier = SOL_figurehead_compliance } }
+                }
+            }
+        }
+        ai_will_do = {
+            modifier = {
+                OLE = { is_ai = no }
+                factor = 0
+            }
+        }
+    }
     SOL_integrate_vaverfront_region = {
         allowed = { tag = EQS }
         available = {
@@ -3718,6 +3779,55 @@ EQS_expand_imperial_territory_category = {
             218 = { add_core_of = ROOT }
             217 = { add_core_of = ROOT }
             69 = { add_core_of = ROOT }
+        }
+    }
+    SOL_yoink_borderlands = {
+        available = {
+            is_EQS_SOL = yes
+            has_country_flag = SOL_can_core_CHN_states
+            291 = { is_owned_and_controlled_by = CHN }
+            246 = { is_owned_and_controlled_by = CHN }
+            247 = { is_owned_and_controlled_by = CHN }
+            319 = { is_owned_and_controlled_by = CHN }
+            316 = { is_owned_and_controlled_by = CHN }
+        }
+        visible = {
+            is_EQS_SOL = yes
+            has_country_flag = SOL_can_core_CHN_states
+            CHN = {
+                is_subject_of = ROOT
+            }
+            OR = {
+                NOT = { 291 = { is_owned_and_controlled_by = ROOT } }
+                NOT = { 246 = { is_owned_and_controlled_by = ROOT } }
+                NOT = { 247 = { is_owned_and_controlled_by = ROOT } }
+                NOT = { 319 = { is_owned_and_controlled_by = ROOT } }
+                NOT = { 316 = { is_owned_and_controlled_by = ROOT } }
+            }
+        }
+        highlight_states = {
+            highlight_state_targets = {
+                state = 291
+                state = 246
+                state = 247
+                state = 319
+                state = 316
+            }
+        }
+        fire_only_once = yes
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision SOL_take_vaverfront_region"
+            291 = { transfer_state_to = ROOT }
+            246 = { transfer_state_to = ROOT }
+            247 = { transfer_state_to = ROOT }
+            319 = { transfer_state_to = ROOT }
+            316 = { transfer_state_to = ROOT }
+        }
+        ai_will_do = {
+            modifier = {
+                CHN = { is_ai = no }
+                factor = 0
+            }
         }
     }
     SOL_integrate_changeling_borderlands = {
@@ -4064,7 +4174,7 @@ EQS_pan_pony_empire_category = {
                     has_country_flag = CES_vindictive_god_ending
                     has_country_flag = CES_zealous_mother_ending
                     has_country_flag = CES_reverent_protector_ending
-                    has_country_flag = CES_faced_divine_judgement
+                    has_country_flag = CES_faced_divine_judgment
                 }
             }
         }
@@ -4105,25 +4215,31 @@ EQS_pan_pony_empire_category = {
 			}
 		}
 		visible = {
-			has_country_flag = SOL_can_core_CHN_states
+			is_EQS_SOL = yes
+			CHN = {
+                all_original_cores_owned_by_ROOT = yes
+			}
 			NOT = { has_country_flag = SOL_formed_super_equus }
 		}
 		highlight_states = {
             highlight_states_trigger = {
                 is_core_of = CHN
-                NOT = {
-                    state = 291
-                    state = 246
-                    state = 247
-                    state = 319
-                    state = 316
+                if = {
+                    limit = { ROOT = { has_country_flag = SOL_can_core_CHN_states } }
+                    NOT = {
+                        state = 291
+                        state = 246
+                        state = 247
+                        state = 319
+                        state = 316
+                    }
                 }
             }
 		}
 		fire_only_once = yes
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision SOL_spawn_CHN_puppet"
-			custom_effect_tooltip = SOL_local_governor_chosen_tt
+			custom_effect_tooltip = SOL_buggy_choices_tt
 			hidden_effect = {
                 CHN = {
                     CHN_queen_aurantia = {
@@ -4139,7 +4255,7 @@ EQS_pan_pony_empire_category = {
                                 country_leader = {
                                     ideology = falangism
                                     expire = "1965.1.1"
-                                    traits = { imperial_governess }
+                                    traits = { imperial_governess_alt }
                                 }
                             }
                         }
@@ -4149,15 +4265,73 @@ EQS_pan_pony_empire_category = {
                                 country_leader = {
                                     ideology = nazism
                                     expire = "1965.1.1"
-                                    traits = { imperial_governess }
+                                    traits = { imperial_governess_alt }
                                 }
                             }
                         }
+                    }
+                    if = {
+                        limit = {
+                            has_idea = continous_war_plan_CHN
+                        }
+                        remove_ideas = continous_war_plan_CHN
                     }
                 }
 			}
             SOL_release_CHN = yes
 		}
+	}
+	SOL_release_OLE = {
+        available = {
+            is_EQS_SOL = yes
+            OLE = {
+                all_original_cores_owned_by_ROOT = yes
+            }
+        }
+        visible = {
+            is_EQS_SOL = yes
+            OLE = {
+                all_original_cores_owned_by_ROOT = yes
+            }
+            NOT = { has_country_flag = SOL_formed_super_equus }
+        }
+        highlight_states = {
+            highlight_states_trigger = {
+                is_core_of = OLE
+                if = {
+                    limit = {
+                        224 = {
+                            is_core_of = ROOT
+                        }
+                    }
+                    NOT = {
+                        state = 224
+                    }
+                }
+                if = {
+                    limit = {
+                        ROOT = { has_country_flag = SOL_can_core_OLE_states }
+                    }
+                    NOT = {
+                        state = 217
+                        state = 69
+                        state = 218
+                        state = 296
+                    }
+                }
+                NOT = {
+                    state = 76
+                    state = 189
+                }
+            }
+        }
+        fire_only_once = yes
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision SOL_release_OLE"
+            custom_effect_tooltip = SOL_pat_deer_floof_tt
+            set_country_flag = SOL_defunct_floof_factory
+            SOL_release_OLE = yes
+        }
 	}
 	SOL_release_YAK = {
         allowed = {

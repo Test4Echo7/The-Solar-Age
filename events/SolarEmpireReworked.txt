@@ -1002,6 +1002,13 @@ country_event = { #Daybreaker holds a speech in Sanctum Solar, which has just be
 			remove_ideas = EQS_harmonist_pushback
 			news_event = { id = news.solarage.2 hours = 6 }
 			country_event = { id = solarreworked.35 days = 21 random_days = 14 }
+			set_faction_name = SOL_faction
+			set_faction_manifest = faction_manifest_pony_dominance
+			set_faction_rule = joining_rule_puppets_only
+            set_faction_rule = faction_peace_rule_conquest_focus
+            set_faction_rule = call_to_war_rule_faction_leader_only
+            set_faction_rule = war_declaration_rule_faction_leader_only
+            set_faction_rule = change_leader_rule_never
 		}
 		if = {
             limit = {
@@ -4028,6 +4035,7 @@ country_event = {
             id = EQS_sanity_bop
             value < 0.8
         }
+        is_EQS_SOL = no
     }
 
     fire_only_once = yes
@@ -7977,94 +7985,20 @@ country_event = { #Queen Velvet is brought forward to Daybreaker, who is rather 
 
     option = { #Now, there is work to be done.
         name = solarreworked.377.a
-        custom_effect_tooltip = SOL_floofy_deer_puppet_tt
-		if = {
-			limit = {
-				69 = { is_core_of = ROOT }
-				218 = { is_core_of = ROOT }
-				296 = { is_core_of = ROOT }
-				217 = { is_core_of = ROOT }
-			}
-			set_temp_variable = { SOL_colonized_OLE_states = 1 }
-		}
-		hidden_effect = {
-			release_autonomy = {
-				target = OLE
-				autonomy_state = autonomy_reichsprotectorate
-			}
-			OLE = {
-                set_country_flag = is_solar_puppet
-                set_cosmetic_tag = OLE_SOL
-                clear_variable = collaboration_formed_by
-			}
-			if = {
-                limit = {
-                    OLE = {
-                        NOT = { has_character = OLE_queen_velvet }
-                    }
+        if = {
+            limit = {
+                OLE = {
+                    is_subject_of = ROOT
                 }
-                every_possible_country = {
-                    limit = { has_character = OLE_queen_velvet }
-                    OLE_queen_velvet = {
-                        set_nationality = OLE
-                    }
-                }
-			}
-			every_possible_country = {
-                limit = { has_character = OLE_queen_velvet }
-                if = {
-                    limit = { ROOT = { has_completed_focus = SOL_god_empress } }
-                    OLE_queen_velvet = {
-                        add_country_leader_role = {
-                            promote_leader = yes
-                            country_leader = {
-                                ideology = falangism
-                                expire = "1965.1.1"
-                                traits = { imperial_governess }
-                            }
-                        }
-                    }
-                }
-                else = {
-                    OLE_queen_velvet = {
-                        add_country_leader_role = {
-                            promote_leader = yes
-                            country_leader = {
-                                ideology = nazism
-                                expire = "1965.1.1"
-                                traits = { imperial_governess }
-                            }
-                        }
-                    }
-                }
-			}
-			transfer_state = 76
-			transfer_state = 189
-			transfer_state = 224
-			transfer_state = 69
-			transfer_state = 218
-			transfer_state = 296
-			transfer_state = 217
-			if = {
-                limit = { has_completed_focus = SOL_reclaim_seaddle }
-                224 = { add_core_of = ROOT }
-			}
-			if = {
-				limit = { check_variable = { SOL_colonized_OLE_states = 1 } }
-				69 = { add_core_of = ROOT }
-				218 = { add_core_of = ROOT }
-				296 = { add_core_of = ROOT }
-				217 = { add_core_of = ROOT }
-			}
-			every_state = {
-                limit = {
-                    is_core_of = OLE
-                    is_owned_by = ROOT
-                    NOT = { is_core_of = ROOT }
-                }
-                add_dynamic_modifier = { modifier = SOL_figurehead_compliance }
-			}
-		}
+            }
+            custom_effect_tooltip = SOL_floofy_deer_puppet_refloofed_tt
+        }
+        else = {
+            custom_effect_tooltip = SOL_floofy_deer_puppet_tt
+        }
+		set_country_flag = SOL_deet_release
+		SOL_release_OLE = yes
+		###Should also have a negative spirit for military and give a massive buff to civilian, separate from the other ones the regular releasable puppets get
     }
 }
 
@@ -8079,14 +8013,27 @@ country_event = { #Follow Velvet as she enters a meeting within the pony adminis
 
     option = { #Please forgive me, my deer.
         name = solarreworked.378.a
-        every_state = {
+        if = {
             limit = {
-                is_core_of = OLE
-                is_owned_by = ROOT
-                NOT = { is_core_of = ROOT }
+                OLE = {
+                    is_subject_of = ROOT
+                }
             }
-            add_dynamic_modifier = { modifier = SOL_crushed_deer_dreams }
+            custom_effect_tooltip = SOL_floofy_poner_puppet_refloofed_tt
         }
+        else = {
+            custom_effect_tooltip = SOL_floofy_poner_puppet_tt
+        }
+        SOL_release_OLE = yes
+        #every_state = {
+        #    limit = {
+        #        is_core_of = OLE
+        #        is_owned_by = ROOT
+        #        NOT = { is_core_of = ROOT }
+        #    }
+        #    add_dynamic_modifier = { modifier = SOL_crushed_deer_dreams }
+        #}
+        ###Should get a spirit for military buffs but civilian debuffs
     }
 }
 
@@ -8195,6 +8142,7 @@ country_event = { #Daybreaker enters an interrogation or torture chamber, where 
             }
         }
         DMT = {
+            SOL_apply_generic_focus_tree_to_puppets = yes
             set_country_flag = is_solar_puppet
             set_cosmetic_tag = DMT_SOL
             add_ideas = SOL_limited_military_allowance
@@ -12811,7 +12759,7 @@ country_event = {
         name = solarreworked.500.c
         EQS_get_flagship_cv = yes
     }
-    option = { #Perhaps we can delay things a bit longer
+    option = { #Perhaps we can delay things a bit longer.
         trigger = {
             EQS_not_most_advanced_ships = yes
         }
@@ -12890,7 +12838,23 @@ country_event = {
 country_event = { #Event quickly stating that now that the war is over, with EQC and CRY no longer in the same kind of existential danger, they have both turned their backs on the Solar Empire, and abandoned their duties, and must be dealt with
     id = solarreworked.502
     title = solarreworked.502.t
-    desc = solarreworked.502.d
+    desc = {
+        trigger = { has_country_flag = EQS_gross_krieg }
+        text = solarreworked.502.d_a
+    }
+    desc = {
+        trigger = { has_country_flag = EQS_sisterly_catfight }
+        text = solarreworked.502.d_b
+    }
+    desc = {
+        trigger = {
+            NOT = {
+                has_country_flag = EQS_gross_krieg
+                has_country_flag = EQS_sisterly_catfight
+            }
+        }
+        text = solarreworked.502.d_c
+    }
     picture = GFX_event_equestria_fail
     immediate = {
         log = "[GetDateText]: [ROOT.GetName]: event solarreworked.502"
@@ -12902,6 +12866,18 @@ country_event = { #Event quickly stating that now that the war is over, with EQC
     option = { #May the Sun incinerate them where they stand!
         name = solarreworked.502.a
         custom_effect_tooltip = SOL_stabbed_again_tt
+        if = {
+            limit = {
+                has_country_flag = EQS_gross_krieg
+            }
+            clr_country_flag = EQS_gross_krieg
+        }
+        else_if = {
+            limit = {
+                has_country_flag = EQS_sisterly_catfight
+            }
+            clr_country_flag = EQS_sisterly_catfight
+        }
         hidden_effect = {
             CRY = {
                 if = {
@@ -14128,11 +14104,18 @@ country_event = { #SOL gets CES's response
             target = FROM
             transfer_troops = yes
         }
+        every_state = {
+            limit = {
+                is_core_of = FROM
+            }
+            add_core_of = ROOT
+        }
+        set_country_flag = SOL_integrated_CES_no_battos
         custom_effect_tooltip = SOL_CES_generals_arrive_tt
         hidden_effect = {
             every_character = {
                 limit = {
-                    has_nationality = CES
+                    has_nationality = FROM
                     is_unit_leader = yes
                 }
                 set_nationality = ROOT
@@ -14142,6 +14125,10 @@ country_event = { #SOL gets CES's response
     option = { #So he shows his true colors.
         name = solarreworked.528.b
         trigger = { FROM = { has_country_flag = SOL_CES_rejected } }
+        end_puppet = FROM
+        FROM = {
+            leave_faction = yes
+        }
         create_wargoal = {
             target = FROM
             type = annex_everything

@@ -384,6 +384,7 @@ recruit_character = EQS_silver_bullet
 recruit_character = EQS_burnt_comet
 recruit_character = EQS_sweet_vale
 recruit_character = EQS_smoke_signal
+recruit_character = EQS_luminous_blade
 recruit_character = EQS_magpie
 recruit_character = EQS_dyx
 #Foreign characters

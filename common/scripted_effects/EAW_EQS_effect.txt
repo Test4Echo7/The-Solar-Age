@@ -221,21 +221,22 @@ EQS_SOL_wartime_change = {
 	set_country_flag = sol_wartime_change
 	#set_cosmetic_tag = EQS_SOL
 	#set_faction_name = SOL_faction
-	if = {
-		limit = {
-			has_war_with = CHN
-		}
-		create_faction_from_template = faction_template_harmony_pact_gw_faction
-	}
-	else_if = {
-		limit = {
-			has_war_with = NLR
-		}
-		create_faction_from_template = faction_template_harmony_pact_cw_faction
-	}
-	else = {
-		create_faction_from_template = faction_template_harmony_pact_other_war_faction
-	}
+	#Should be set when the Solar Empire is declared
+	#if = {
+	#	limit = {
+	#		has_war_with = CHN
+	#	}
+	#	create_faction_from_template = faction_template_harmony_pact_gw_faction
+	#}
+	#else_if = {
+	#	limit = {
+	#		has_war_with = NLR
+	#	}
+	#	create_faction_from_template = faction_template_harmony_pact_cw_faction
+	#}
+	#else = {
+	#	create_faction_from_template = faction_template_harmony_pact_other_war_faction
+	#}
 
 	#set_country_flag = SOL_new_generals_flag
 	#set_party_name = { ideology = democratic long_name = EQS_republic_long name = EQS_republic }
@@ -534,7 +535,7 @@ EQS_SOL_civil_war = {
 		size = civil_war_size
 		capital = 75
 	}
-	create_faction_from_template = faction_template_harmony_pact_other_war_faction
+	#create_faction_from_template = faction_template_harmony_pact_other_war_faction
 	save_global_event_target_as = solar_empire
 	clear_global_event_target = equestria
 	add_ideas = SOL_civil_war
