@@ -360,7 +360,7 @@ sp_sun_laser_exhaustive_casting = {
 
 sp_sun_laser_incorrect_casting = {
     narrative = {
-        #After bringing the Empress in for some practice with amplifying and focusing her magic as a locus for channeling a beam of energy to become the start of the laser, except it absorbs instead of amplifies, creating a being of pure fire energy, Dyx
+        #The Empress is brought in in for some practice with amplifying and focusing her magic as a locus for channeling a beam of energy to become the start of the laser, except it absorbs instead of amplifies, creating a being of pure fire energy, Dyx
         name = EQS_evil_filly
         desc = EQS_evil_filly_desc
     }

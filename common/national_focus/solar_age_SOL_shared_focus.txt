@@ -5733,8 +5733,10 @@ shared_focus = {
 			every_state = {
 				limit = {
 					OR = {
-						is_core_of = MGY
-						is_claimed_by = MGY
+						is_in_array = { MGY.original_cores = THIS.id }
+						is_in_array = { MKS.original_cores = THIS.id }
+						is_in_array = { MDL.original_cores = THIS.id }
+						state = 1208
 					}
 					is_owned_by = ROOT
 				}
@@ -5766,9 +5768,22 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_ports_of_zebrica"
-		#Effect here
 		custom_effect_tooltip = SOL_when_in_maregypt_do_as_maregyptians_tt
 		hidden_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						is_in_array = { MGY.original_cores = THIS.id }
+						is_in_array = { MKS.original_cores = THIS.id }
+					}
+					NOT = {
+						state = 737
+						state = 734
+					}
+				}
+				add_core_of = MGY
+				transfer_state_to = MGY
+			}
 			release_autonomy = {
 				target = MGY
 				autonomy_state = autonomy_reichsprotectorate
@@ -5779,9 +5794,15 @@ shared_focus = {
 						all_cores_owned_by_ROOT = yes
 					}
 				}
-				release_autonomy = {
+				every_state = {
+					limit = {
+						is_in_array = { MDL.original_cores = THIS.id }
+					}
+					transfer_state_to = MDL
+				}
+				set_autonomy = {
 					target = MDL
-					autonomy_state = autonomy_reichsprotectorate
+					autonomous_state = autonomy_reichsprotectorate
 				}
 				MDL = {
 					set_country_flag = is_solar_puppet
@@ -5813,19 +5834,11 @@ shared_focus = {
 					}
 				}
 			}
-			transfer_state = 737
-			transfer_state = 734
 			set_country_flag = SOL_can_core_MGY_port_states
 			MGY = {
 				SOL_apply_generic_focus_tree_to_puppets = yes
 				set_cosmetic_tag = MGY_SOL
 				set_country_flag = is_solar_puppet
-				transfer_state = 763
-				transfer_state = 770
-				transfer_state = 766
-				add_state_core = 763
-				add_state_core = 770
-				add_state_core = 766
 				hidden_effect = {
 					MGY_far_hook = {
 						add_trait = { trait = imperial_governor ideology = falangism }
@@ -6892,10 +6905,30 @@ shared_focus = {
 		}
 		if = {
 			limit = { YMN = { exists = no } }
-			release_autonomy = {
-				target = YMN
-				autonomy_state = autonomy_reichsprotectorate
-				freedom_level = 0.33
+			hidden_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							is_in_array = { YMN.original_cores = THIS.id }
+							AND = {
+								state = 788
+								is_owned_by = ROOT
+							}
+						}
+					}
+					add_core_of = YMN
+					transfer_state_to = YMN
+				}
+				set_autonomy = {
+					target = YMN
+					autonomous_state = autonomy_reichsprotectorate
+				}
+			}
+			effect_tooltip = {
+				release_autonomy = {
+					target = YMN
+					autonomy_state = autonomy_reichsprotectorate
+				}
 			}
 		}
 		YMN = {
@@ -6904,6 +6937,7 @@ shared_focus = {
             }
 			restore_previous_government_type = yes
 			set_cosmetic_tag = YMN_SOL
+			set_country_flag = is_solar_puppet
 		}
 	}
 	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_ANNEXATION }

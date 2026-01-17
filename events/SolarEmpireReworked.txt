@@ -8293,128 +8293,36 @@ country_event = { #Daybreaker meets with Prince Faisal of Saddle Arabia, who was
 			limit = {
 				SDL = {
 					exists = yes
-					all_cores_owned_by_ROOT_or_subject = yes
+					all_original_cores_owned_by_ROOT_or_subject = yes
 					is_subject_of = EQS
 				}
 			}
-			if = {
-				limit = {
-					SDC = {
-						exists = yes
-						is_subject_of = ROOT
-					}
-				}
-				SDL = {
-					annex_country = {
-						target = SDC
-					}
-				}
-			}
-			if = {
-				limit = {
-					SDF = {
-						exists = yes
-						is_subject_of = ROOT
-					}
-				}
-				SDL = {
-					annex_country = {
-						target = SDF
-					}
-				}
-			}
-			if = {
-				limit = {
-					SDS = {
-						exists = yes
-						is_subject_of = ROOT
-					}
-				}
-				SDL = {
-					annex_country = {
-						target = SDS
-					}
-				}
-			}
-			if = {
-				limit = {
-					EMR = {
-						exists = yes
-						is_subject_of = EQS
-					}
-				}
-				SDL = {
-					annex_country = {
-						target = EMR
-					}
-				}
+			every_state = {
+                limit = {
+                    is_in_array = { SDL.original_cores = THIS.id }
+                    NOT = { is_owned_and_controlled_by = SDL }
+                }
+                transfer_state_to = SDL
 			}
 		}
 		else = {
-			release_autonomy = {
-				target = SDL
-				autonomy_state = autonomy_reichsprotectorate
-				freedom_level = 0.5
-			}
-			if = {
-				limit = {
-					SDL = {
-						exists = yes
-						is_subject_of = ROOT
-					}
-				}
-				if = {
-					limit = {
-						SDC = {
-							exists = yes
-							is_subject_of = ROOT
-						}
-					}
-					SDL = {
-						annex_country = {
-							target = SDC
-						}
-					}
-				}
-				if = {
-					limit = {
-						SDF = {
-							exists = yes
-							is_subject_of = ROOT
-						}
-					}
-					SDL = {
-						annex_country = {
-							target = SDF
-						}
-					}
-				}
-				if = {
-					limit = {
-						SDS = {
-							exists = yes
-							is_subject_of = ROOT
-						}
-					}
-					SDL = {
-						annex_country = {
-							target = SDS
-						}
-					}
-				}
-				if = {
-					limit = {
-						EMR = {
-							exists = yes
-							is_subject_of = ROOT
-						}
-					}
-					SDL = {
-						annex_country = {
-							target = EMR
-						}
-					}
-				}
+            effect_tooltip = {
+                release_autonomy = {
+                    target = SDL
+                    autonomy_state = autonomy_reichsprotectorate
+                }
+            }
+			hidden_effect = {
+                every_state = {
+                    limit = {
+                        is_in_array = { SDL.original_cores = THIS.id }
+                    }
+                    transfer_state_to = SDL
+                }
+                set_autonomy = {
+                    target = SDL
+                    autonomous_state = autonomy_reichsprotectorate
+                }
 			}
 		}
 		SDL = {
@@ -8424,6 +8332,7 @@ country_event = { #Daybreaker meets with Prince Faisal of Saddle Arabia, who was
                 }
             }
 			set_cosmetic_tag = SDL_SOL
+			set_country_flag = is_solar_puppet
 			restore_previous_government_type = yes
 		}
     }
@@ -13159,9 +13068,24 @@ country_event = { #Event for deciding the fate of MDL, and whether it is held by
     }
     option = { #They are their own unique culture. Mandalusian ponies shall administer it themselves.
         name = solarreworked.507.c
-        release_autonomy = {
-            target = MDL
-            autonomous_state = autonomy_reichsprotectorate
+        hidden_effect = {
+            every_state = {
+                limit = {
+                    is_in_array = { MDL.original_cores = THIS.id }
+                }
+                add_core_of = MDL
+                transfer_state_to = MDL
+            }
+            set_autonomy = {
+                target = MDL
+                autonomous_state = autonomy_reichsprotectorate
+            }
+        }
+        effect_tooltip = {
+            release_autonomy = {
+                target = MDL
+                autonomous_state = autonomy_reichsprotectorate
+            }
         }
         MDL = {
             set_cosmetic_tag = MDL_SOL
@@ -13685,12 +13609,15 @@ country_event = { #Short event of SOL demanding that the SRS territory which NTR
         }
         if = {
             limit = {
-                SRS = { all_cores_owned_by_ROOT_or_subject = yes }
+                any_state = {
+                    is_in_array = { SRS.original_cores = THIS.id }
+                    is_owned_and_controlled_by = ROOT
+                }
             }
             effect_tooltip = {
                 every_state = {
                     limit = {
-                        is_core_of = SRS
+                        is_in_array = { SRS.original_cores = THIS.id }
                         is_owned_and_controlled_by = ROOT
                     }
                     add_core_of = NTR
@@ -13700,21 +13627,16 @@ country_event = { #Short event of SOL demanding that the SRS territory which NTR
         }
         if = {
             limit = {
-                OR = {
-                    LNS = { all_cores_owned_by_ROOT_or_subject = yes }
-                    LSM = { all_cores_owned_by_ROOT_or_subject = yes }
-                    LSC = { all_cores_owned_by_ROOT_or_subject = yes }
+                any_state = {
+                    is_in_array = { LNS.original_cores = THIS.id }
+                    is_owned_and_controlled_by = ROOT
                 }
                 RCT = { is_subject_of = FROM }
             }
             effect_tooltip = {
                 every_state = {
                     limit = {
-                        OR = {
-                            is_core_of = LNS
-                            is_core_of = LMS
-                            is_core_of = LSC
-                        }
+                        is_in_array = { LNS.original_cores = THIS.id }
                         is_owned_and_controlled_by = ROOT
                     }
                     add_core_of = RCT
@@ -13724,13 +13646,16 @@ country_event = { #Short event of SOL demanding that the SRS territory which NTR
         }
         if = {
             limit = {
-                HLQ = { all_cores_owned_by_ROOT_or_subject = yes }
+                any_state = {
+                    is_in_array = { HLQ.original_cores = THIS.id }
+                    is_owned_and_controlled_by = ROOT
+                }
                 RCT = { is_subject_of = FROM }
             }
             effect_tooltip = {
                 every_state = {
                     limit = {
-                        is_core_of = HLQ
+                        is_in_array = { HLQ.original_cores = THIS.id }
                         is_owned_and_controlled_by = ROOT
                     }
                     add_core_of = RCT
@@ -13805,11 +13730,14 @@ country_event = { #SOL receives GRD's response about their demands
         FROM = { clr_country_flag = SOL_GRD_submitted_territory }
         if = {
             limit = {
-                SRS = { all_cores_owned_by_ROOT_or_subject = yes }
+                any_state = {
+                    is_in_array = { SRS.original_cores = THIS.id }
+                    is_owned_and_controlled_by = FROM
+                }
             }
             every_state = {
                 limit = {
-                    is_core_of = SRS
+                    is_in_array = { SRS.original_cores = THIS.id }
                     is_owned_and_controlled_by = FROM
                 }
                 add_core_of = NTR
@@ -13818,19 +13746,14 @@ country_event = { #SOL receives GRD's response about their demands
         }
         if = {
             limit = {
-                OR = {
-                    LNS = { all_cores_owned_by_ROOT_or_subject = yes }
-                    LSM = { all_cores_owned_by_ROOT_or_subject = yes }
-                    LSC = { all_cores_owned_by_ROOT_or_subject = yes }
+                any_state = {
+                    is_in_array = { LNS.original_cores = THIS.id }
+                    is_owned_and_controlled_by = FROM
                 }
             }
             every_state = {
                 limit = {
-                    OR = {
-                        is_core_of = LNS
-                        is_core_of = LMS
-                        is_core_of = LSC
-                    }
+                    is_in_array = { LNS.original_cores = THIS.id }
                     is_owned_and_controlled_by = FROM
                 }
                 add_core_of = RCT
@@ -13839,14 +13762,15 @@ country_event = { #SOL receives GRD's response about their demands
         }
         if = {
             limit = {
-                HLQ = {
-                    all_cores_owned_by_ROOT_or_subject = yes
+                any_state = {
+                    is_in_array = { HLQ.original_cores = THIS.id }
+                    is_owned_and_controlled_by = FROM
                 }
             }
             every_state = {
                 limit = {
-                    is_core_of = HLQ
-                    #is_owned_and_controlled_by = FROM
+                    is_in_array = { HLQ.original_cores = THIS.id }
+                    is_owned_and_controlled_by = FROM
                 }
                 add_core_of = RCT
                 transfer_state_to = RCT
@@ -13870,11 +13794,14 @@ country_event = { #SOL receives GRD's response about their demands
         FROM = { clr_country_flag = SOL_GRD_submitted_territory }
         if = {
             limit = {
-                SRS = { all_cores_owned_by_ROOT_or_subject = yes }
+                any_state = {
+                    is_in_array = { SRS.original_cores = THIS.id }
+                    is_owned_and_controlled_by = FROM
+                }
             }
             every_state = {
                 limit = {
-                    is_core_of = SRS
+                    is_in_array = { SRS.original_cores = THIS.id }
                     is_owned_and_controlled_by = FROM
                 }
                 add_core_of = NTR
@@ -13883,19 +13810,14 @@ country_event = { #SOL receives GRD's response about their demands
         }
         if = {
             limit = {
-                OR = {
-                    LNS = { all_cores_owned_by_ROOT_or_subject = yes }
-                    LSM = { all_cores_owned_by_ROOT_or_subject = yes }
-                    LSC = { all_cores_owned_by_ROOT_or_subject = yes }
+                any_state = {
+                    is_in_array = { LNS.original_cores = THIS.id }
+                    is_owned_and_controlled_by = FROM
                 }
             }
             every_state = {
                 limit = {
-                    OR = {
-                        is_core_of = LNS
-                        is_core_of = LMS
-                        is_core_of = LSC
-                    }
+                    is_in_array = { LNS.original_cores = THIS.id }
                     is_owned_and_controlled_by = FROM
                 }
                 add_core_of = RCT
@@ -13904,13 +13826,14 @@ country_event = { #SOL receives GRD's response about their demands
         }
         if = {
             limit = {
-                HLQ = {
-                    all_cores_owned_by_ROOT_or_subject = yes
+                any_state = {
+                    is_in_array = { HLQ.original_cores = THIS.id }
+                    is_owned_and_controlled_by = FROM
                 }
             }
             every_state = {
                 limit = {
-                    is_core_of = HLQ
+                    is_in_array = { HLQ.original_cores = THIS.id }
                     is_owned_and_controlled_by = FROM
                 }
                 add_core_of = RCT
@@ -14173,6 +14096,28 @@ country_event = { #Choose a governor for a released nation
         SOL_promote_local_governor = yes
         FROM = {
             add_ideas = SOL_limited_military_allowance
+        }
+    }
+
+    after = {
+        hidden_effect = {
+            FROM = {
+                if = {
+                    limit = { ROOT = { has_completed_focus = SOL_god_empress } }
+                    set_party_name = {
+                        ideology = fascism
+                        long_name = EQS_solaris_cultus
+                        name = EQS_solaris_cultus
+                    }
+                }
+                else = {
+                    set_party_name = {
+                        ideology = fascism
+                        long_name = EQS_fascism_party
+                        name = EQS_fascism_party
+                    }
+                }
+            }
         }
     }
 }

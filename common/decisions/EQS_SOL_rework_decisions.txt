@@ -1598,59 +1598,56 @@ EQS_GRD_assistance = {
             GRD = { is_subject_of = ROOT }
             any_state = { #Etc.
                 OR = {
-                    is_core_of = FAT
-                    is_core_of = JER
-                    is_core_of = TRD
+                    is_in_array = { FAT.original_cores = THIS.id }
+                    is_in_array = { JER.original_cores = THIS.id }
+                    is_in_array = { TRD.original_cores = THIS.id }
                     AND = {
-                        is_core_of = WNG
+                        is_in_array = { WNG.original_cores = THIS.id }
                         NOT = { is_core_of = ROOT }
                     }
-                    is_core_of = BRD
-                    is_core_of = VED
+                    is_in_array = { BRD.original_cores = THIS.id }
+                    is_in_array = { VED.original_cores = THIS.id }
                     AND = {
-                        is_core_of = BOI
+                        is_in_array = { BOI.original_cores = THIS.id }
                         NOT = { is_core_of = ROOT }
                     }
-                    is_core_of = TAL
-                    is_core_of = FRN
-                    is_core_of = FAL
-                    is_core_of = SIC
-                    is_core_of = CYA
-                    is_core_of = BAN
-                    is_core_of = LAK
-                    is_core_of = ERI
-                    is_core_of = EYR
-                    is_core_of = AVI
-                    is_core_of = POM
-                    is_core_of = FLO
-                    is_core_of = FEZ
-                    is_core_of = HAU
-                    is_core_of = LUS
-                    is_core_of = GRU
-                    is_core_of = GRY
-                    is_core_of = MNC
-                    is_core_of = STW
-                    is_core_of = FEA
-                    is_core_of = BRZ
-                    is_core_of = ROU
-                    is_core_of = PYT
-                    is_core_of = ANG
-                    is_core_of = KAT
-                    #is_core_of = HLQ
-                    #is_core_of = LNS
-                    is_core_of = SRS
-                    is_core_of = GRW
-                    is_core_of = AET
-                    is_core_of = HEL
-                    is_core_of = YAL
-                    is_core_of = JES
-                    is_core_of = ARA
-                    is_core_of = VIN
-                    is_core_of = JFT
-                    is_core_of = JRR
-                    is_core_of = JEB
+                    is_in_array = { TAL.original_cores = THIS.id }
+                    is_in_array = { FRN.original_cores = THIS.id }
+                    is_in_array = { FAL.original_cores = THIS.id }
+                    is_in_array = { SIC.original_cores = THIS.id }
+                    is_in_array = { CYA.original_cores = THIS.id }
+                    is_in_array = { BAN.original_cores = THIS.id }
+                    is_in_array = { LAK.original_cores = THIS.id }
+                    is_in_array = { ERI.original_cores = THIS.id }
+                    is_in_array = { EYR.original_cores = THIS.id }
+                    is_in_array = { AVI.original_cores = THIS.id }
+                    is_in_array = { POM.original_cores = THIS.id }
+                    is_in_array = { FLO.original_cores = THIS.id }
+                    is_in_array = { FEZ.original_cores = THIS.id }
+                    is_in_array = { HAU.original_cores = THIS.id }
+                    is_in_array = { LUS.original_cores = THIS.id }
+                    is_in_array = { GRU.original_cores = THIS.id }
+                    is_in_array = { GRY.original_cores = THIS.id }
+                    is_in_array = { MNC.original_cores = THIS.id }
+                    is_in_array = { STW.original_cores = THIS.id }
+                    is_in_array = { FEA.original_cores = THIS.id }
+                    is_in_array = { BRZ.original_cores = THIS.id }
+                    is_in_array = { ROU.original_cores = THIS.id }
+                    is_in_array = { PYT.original_cores = THIS.id }
+                    is_in_array = { ANG.original_cores = THIS.id }
+                    is_in_array = { KAT.original_cores = THIS.id }
+                    is_in_array = { SRS.original_cores = THIS.id }
+                    is_in_array = { GRW.original_cores = THIS.id }
+                    is_in_array = { AET.original_cores = THIS.id }
+                    is_in_array = { HEL.original_cores = THIS.id }
+                    is_in_array = { YAL.original_cores = THIS.id }
+                    is_in_array = { JES.original_cores = THIS.id }
+                    is_in_array = { ARA.original_cores = THIS.id }
+                    is_in_array = { VIN.original_cores = THIS.id }
+                    is_in_array = { JFT.original_cores = THIS.id }
+                    is_in_array = { JRR.original_cores = THIS.id }
+                    is_in_array = { JEB.original_cores = THIS.id }
                 }
-                NOT = { is_core_of = DRG }
                 is_owned_and_controlled_by = ROOT
             }
         }
@@ -1659,59 +1656,56 @@ EQS_GRD_assistance = {
             highlight_states_trigger = {
                 is_owned_and_controlled_by = ROOT
                 OR = {
-                    is_core_of = FAT
-                    is_core_of = JER
-                    is_core_of = TRD
+                    is_in_array = { FAT.original_cores = THIS.id }
+                    is_in_array = { JER.original_cores = THIS.id }
+                    is_in_array = { TRD.original_cores = THIS.id }
                     AND = {
-                        is_core_of = WNG
+                        is_in_array = { WNG.original_cores = THIS.id }
                         NOT = { is_core_of = ROOT }
                     }
-                    is_core_of = BRD
-                    is_core_of = VED
+                    is_in_array = { BRD.original_cores = THIS.id }
+                    is_in_array = { VED.original_cores = THIS.id }
                     AND = {
-                        is_core_of = BOI
+                        is_in_array = { BOI.original_cores = THIS.id }
                         NOT = { is_core_of = ROOT }
                     }
-                    is_core_of = TAL
-                    is_core_of = FRN
-                    is_core_of = FAL
-                    is_core_of = SIC
-                    is_core_of = CYA
-                    is_core_of = BAN
-                    is_core_of = LAK
-                    is_core_of = ERI
-                    is_core_of = EYR
-                    is_core_of = AVI
-                    is_core_of = POM
-                    is_core_of = FLO
-                    is_core_of = FEZ
-                    is_core_of = HAU
-                    is_core_of = LUS
-                    is_core_of = GRU
-                    is_core_of = GRY
-                    is_core_of = MNC
-                    is_core_of = STW
-                    is_core_of = FEA
-                    is_core_of = BRZ
-                    is_core_of = ROU
-                    is_core_of = PYT
-                    is_core_of = ANG
-                    is_core_of = KAT
-                    #is_core_of = HLQ
-                    #is_core_of = LNS
-                    is_core_of = SRS
-                    is_core_of = GRW
-                    is_core_of = AET
-                    is_core_of = HEL
-                    is_core_of = YAL
-                    is_core_of = JES
-                    is_core_of = ARA
-                    is_core_of = VIN
-                    is_core_of = JFT
-                    is_core_of = JRR
-                    is_core_of = JEB
+                    is_in_array = { TAL.original_cores = THIS.id }
+                    is_in_array = { FRN.original_cores = THIS.id }
+                    is_in_array = { FAL.original_cores = THIS.id }
+                    is_in_array = { SIC.original_cores = THIS.id }
+                    is_in_array = { CYA.original_cores = THIS.id }
+                    is_in_array = { BAN.original_cores = THIS.id }
+                    is_in_array = { LAK.original_cores = THIS.id }
+                    is_in_array = { ERI.original_cores = THIS.id }
+                    is_in_array = { EYR.original_cores = THIS.id }
+                    is_in_array = { AVI.original_cores = THIS.id }
+                    is_in_array = { POM.original_cores = THIS.id }
+                    is_in_array = { FLO.original_cores = THIS.id }
+                    is_in_array = { FEZ.original_cores = THIS.id }
+                    is_in_array = { HAU.original_cores = THIS.id }
+                    is_in_array = { LUS.original_cores = THIS.id }
+                    is_in_array = { GRU.original_cores = THIS.id }
+                    is_in_array = { GRY.original_cores = THIS.id }
+                    is_in_array = { MNC.original_cores = THIS.id }
+                    is_in_array = { STW.original_cores = THIS.id }
+                    is_in_array = { FEA.original_cores = THIS.id }
+                    is_in_array = { BRZ.original_cores = THIS.id }
+                    is_in_array = { ROU.original_cores = THIS.id }
+                    is_in_array = { PYT.original_cores = THIS.id }
+                    is_in_array = { ANG.original_cores = THIS.id }
+                    is_in_array = { KAT.original_cores = THIS.id }
+                    is_in_array = { SRS.original_cores = THIS.id }
+                    is_in_array = { GRW.original_cores = THIS.id }
+                    is_in_array = { AET.original_cores = THIS.id }
+                    is_in_array = { HEL.original_cores = THIS.id }
+                    is_in_array = { YAL.original_cores = THIS.id }
+                    is_in_array = { JES.original_cores = THIS.id }
+                    is_in_array = { ARA.original_cores = THIS.id }
+                    is_in_array = { VIN.original_cores = THIS.id }
+                    is_in_array = { JFT.original_cores = THIS.id }
+                    is_in_array = { JRR.original_cores = THIS.id }
+                    is_in_array = { JEB.original_cores = THIS.id }
                 }
-                NOT = { is_core_of = DRG }
             }
         }
 
@@ -1720,60 +1714,57 @@ EQS_GRD_assistance = {
             every_state = {
                 limit = {
                     is_owned_and_controlled_by = ROOT
-                     OR = {
-                        is_core_of = FAT
-                        is_core_of = JER
-                        is_core_of = TRD
+                    OR = {
+                        is_in_array = { FAT.original_cores = THIS.id }
+                        is_in_array = { JER.original_cores = THIS.id }
+                        is_in_array = { TRD.original_cores = THIS.id }
                         AND = {
-                            is_core_of = WNG
+                            is_in_array = { WNG.original_cores = THIS.id }
                             NOT = { is_core_of = ROOT }
                         }
-                        is_core_of = BRD
-                        is_core_of = VED
+                        is_in_array = { BRD.original_cores = THIS.id }
+                        is_in_array = { VED.original_cores = THIS.id }
                         AND = {
-                            is_core_of = BOI
+                            is_in_array = { BOI.original_cores = THIS.id }
                             NOT = { is_core_of = ROOT }
                         }
-                        is_core_of = TAL
-                        is_core_of = FRN
-                        is_core_of = FAL
-                        is_core_of = SIC
-                        is_core_of = CYA
-                        is_core_of = BAN
-                        is_core_of = LAK
-                        is_core_of = ERI
-                        is_core_of = EYR
-                        is_core_of = AVI
-                        is_core_of = POM
-                        is_core_of = FLO
-                        is_core_of = FEZ
-                        is_core_of = HAU
-                        is_core_of = LUS
-                        is_core_of = GRU
-                        is_core_of = GRY
-                        is_core_of = MNC
-                        is_core_of = STW
-                        is_core_of = FEA
-                        is_core_of = BRZ
-                        is_core_of = ROU
-                        is_core_of = PYT
-                        is_core_of = ANG
-                        is_core_of = KAT
-                        #is_core_of = HLQ
-                        #is_core_of = LNS
-                        is_core_of = SRS
-                        is_core_of = GRW
-                        is_core_of = AET
-                        is_core_of = HEL
-                        is_core_of = YAL
-                        is_core_of = JES
-                        is_core_of = ARA
-                        is_core_of = VIN
-                        is_core_of = JFT
-                        is_core_of = JRR
-                        is_core_of = JEB
+                        is_in_array = { TAL.original_cores = THIS.id }
+                        is_in_array = { FRN.original_cores = THIS.id }
+                        is_in_array = { FAL.original_cores = THIS.id }
+                        is_in_array = { SIC.original_cores = THIS.id }
+                        is_in_array = { CYA.original_cores = THIS.id }
+                        is_in_array = { BAN.original_cores = THIS.id }
+                        is_in_array = { LAK.original_cores = THIS.id }
+                        is_in_array = { ERI.original_cores = THIS.id }
+                        is_in_array = { EYR.original_cores = THIS.id }
+                        is_in_array = { AVI.original_cores = THIS.id }
+                        is_in_array = { POM.original_cores = THIS.id }
+                        is_in_array = { FLO.original_cores = THIS.id }
+                        is_in_array = { FEZ.original_cores = THIS.id }
+                        is_in_array = { HAU.original_cores = THIS.id }
+                        is_in_array = { LUS.original_cores = THIS.id }
+                        is_in_array = { GRU.original_cores = THIS.id }
+                        is_in_array = { GRY.original_cores = THIS.id }
+                        is_in_array = { MNC.original_cores = THIS.id }
+                        is_in_array = { STW.original_cores = THIS.id }
+                        is_in_array = { FEA.original_cores = THIS.id }
+                        is_in_array = { BRZ.original_cores = THIS.id }
+                        is_in_array = { ROU.original_cores = THIS.id }
+                        is_in_array = { PYT.original_cores = THIS.id }
+                        is_in_array = { ANG.original_cores = THIS.id }
+                        is_in_array = { KAT.original_cores = THIS.id }
+                        is_in_array = { SRS.original_cores = THIS.id }
+                        is_in_array = { GRW.original_cores = THIS.id }
+                        is_in_array = { AET.original_cores = THIS.id }
+                        is_in_array = { HEL.original_cores = THIS.id }
+                        is_in_array = { YAL.original_cores = THIS.id }
+                        is_in_array = { JES.original_cores = THIS.id }
+                        is_in_array = { ARA.original_cores = THIS.id }
+                        is_in_array = { VIN.original_cores = THIS.id }
+                        is_in_array = { JFT.original_cores = THIS.id }
+                        is_in_array = { JRR.original_cores = THIS.id }
+                        is_in_array = { JEB.original_cores = THIS.id }
                     }
-                    NOT = { is_core_of = DRG }
                 }
                 transfer_state_to = GRD
                 add_core_of = GRD
@@ -1786,13 +1777,9 @@ EQS_GRD_assistance = {
         visible = {
             any_state = {
                 OR = {
-                    is_core_of = SRS
-                    OR = {
-                        is_core_of = LNS
-                        is_core_of = LSC
-                        is_core_of = LSM
-                    }
-                    is_core_of = HLQ
+                    is_in_array = { SRS.original_cores = THIS.id }
+                    is_in_array = { LNS.original_cores = THIS.id }
+                    is_in_array = { HLQ.original_cores = THIS.id }
                 }
                 is_owned_and_controlled_by = GRD
             }
@@ -1810,17 +1797,8 @@ EQS_GRD_assistance = {
                 NTR = {
                     is_subject_of = ROOT
                 }
-                AND = {
-                    RCT = { is_subject_of = ROOT }
-                    any_state = {
-                        OR = {
-                            is_core_of = HLQ
-                            is_core_of = LNS
-                            is_core_of = LSC
-                            is_core_of = LSM
-                        }
-                        is_owned_and_controlled_by = GRD
-                    }
+                RCT = {
+                    is_subject_of = ROOT
                 }
             }
         }
@@ -1828,13 +1806,9 @@ EQS_GRD_assistance = {
         highlight_states = {
             highlight_states_trigger = {
                 OR = {
-                    is_core_of = SRS
-                    is_core_of = HLQ
-                    OR = {
-                        is_core_of = LNS
-                        is_core_of = LSC
-                        is_core_of = LSM
-                    }
+                    is_in_array = { SRS.original_cores = THIS.id }
+                    is_in_array = { LNS.original_cores = THIS.id }
+                    is_in_array = { HLQ.original_cores = THIS.id }
                 }
                 is_owned_and_controlled_by = GRD
             }
@@ -4355,8 +4329,8 @@ EQS_pan_pony_empire_category = {
         highlight_states = {
             highlight_states_trigger = {
                 OR = {
-                    is_core_of = YAK
-                    is_core_of = JAK
+                    is_in_array = { YAK.original_cores = THIS.id }
+                    is_in_array = { JAK.original_cores = THIS.id }
                 }
             }
         }
@@ -4404,10 +4378,10 @@ EQS_pan_pony_empire_category = {
                     limit = {
                         OWNER = { NOT = { has_country_flag = SOL_can_core_GRF_states } }
                     }
-                    is_core_of = GRF
+                    is_in_array = { GRF.original_cores = THIS.id }
                 }
                 else = {
-                    is_core_of = GRF
+                    is_in_array = { GRF.original_cores = THIS.id }
                     NOT = {
                         state = 58
                         state = 338
@@ -4445,8 +4419,8 @@ EQS_pan_pony_empire_category = {
         highlight_states = {
             highlight_states_trigger = {
                 OR = {
-                    is_core_of = PNG
-                    is_core_of = PLB
+                    is_in_array = { PNG.original_cores = THIS.id }
+                    is_in_array = { PLB.original_cores = THIS.id }
                 }
             }
         }
@@ -4470,29 +4444,47 @@ EQS_pan_pony_empire_category = {
         }
         highlight_states = {
             highlight_states_trigger = {
-                is_core_of = NTR
+                OR = {
+                    is_in_array = { NTR.original_cores = THIS.id }
+                    AND = {
+                        is_owned_and_controlled_by = ROOT
+                        is_in_array = { SRS.original_cores = THIS.id }
+                    }
+                }
             }
         }
         fire_only_once = yes
         complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision SOL_release_NTR"
-			release_autonomy = {
-                target = NTR
-                autonomous_state = autonomy_reichsprotectorate
-			}
+			effect_tooltip = {
+                release_autonomy = {
+                    target = NTR
+                    autonomous_state = autonomy_reichsprotectorate
+                }
+            }
 			hidden_effect = {
                 every_state = {
                     limit = {
-                        is_core_of = SRS
-                        is_controlled_by = ROOT
+                        OR = {
+                            AND = {
+                                is_in_array = { SRS.original_cores = THIS.id }
+                                is_owned_and_controlled_by = ROOT
+                            }
+                            is_in_array = { NTR.original_cores = THIS.id }
+                        }
                     }
                     transfer_state_to = NTR
                     add_core_of = NTR
+                }
+                set_autonomy = {
+                    target = NTR
+                    autonomous_state = autonomy_reichsprotectorate
                 }
 			}
 			NTR = {
                 set_cosmetic_tag = NTR_SOL
                 set_country_flag = is_solar_puppet
+                hidden_effect = { country_event = solarreworked.529 }
             }
 		}
 	}
@@ -4519,10 +4511,10 @@ EQS_pan_pony_empire_category = {
         highlight_states = {
             highlight_states_trigger = {
                 OR = {
-                    is_core_of = FBK
-                    is_core_of = WAT
-                    is_core_of = FIR
-                    is_core_of = NCH
+                    is_in_array = { FBK.original_cores = THIS.id }
+                    is_in_array = { WAT.original_cores = THIS.id }
+                    is_in_array = { FIR.original_cores = THIS.id }
+                    is_in_array = { NCH.original_cores = THIS.id }
                 }
             }
         }
@@ -4569,45 +4561,32 @@ EQS_pan_pony_empire_category = {
                         637 = { OWNER = { tag = DMT } }
                     }
                     OR = {
-                        is_core_of = RCT
-                        is_core_of = LCT
-                        is_core_of = BAK
-                        is_core_of = WIT
-                        is_core_of = FRE
-                        is_core_of = NIM
-                        is_core_of = DEP
-                        state = 625
-                        state = 626
-                        state = 624
+                        is_in_array = { RCT.original_cores = THIS.id }
+                        is_in_array = { LCT.original_cores = THIS.id }
+                        is_in_array = { BAK.original_cores = THIS.id }
+                        is_in_array = { WIT.original_cores = THIS.id }
+                        is_in_array = { FRE.original_cores = THIS.id }
+                        is_in_array = { NIM.original_cores = THIS.id }
+                        is_in_array = { DEP.original_cores = THIS.id }
+                        is_in_array = { BAR.original_cores = THIS.id }
                     }
                     NOT = {
-                        is_core_of = FBK
-                        is_core_of = FIR
-                        is_core_of = WAT
-                        is_core_of = GRY
-                        is_core_of = DMT
                         is_core_of = ROOT
                     }
                 }
                 else = {
                     OR = {
-                        is_core_of = RCT
-                        is_core_of = LCT
-                        is_core_of = BAK
-                        is_core_of = WIT
-                        is_core_of = FRE
-                        is_core_of = NIM
-                        is_core_of = DEP
-                        is_core_of = DMT
-                        state = 625
-                        state = 626
-                        state = 624
+                        is_in_array = { RCT.original_cores = THIS.id }
+                        is_in_array = { LCT.original_cores = THIS.id }
+                        is_in_array = { BAK.original_cores = THIS.id }
+                        is_in_array = { WIT.original_cores = THIS.id }
+                        is_in_array = { FRE.original_cores = THIS.id }
+                        is_in_array = { NIM.original_cores = THIS.id }
+                        is_in_array = { DEP.original_cores = THIS.id }
+                        is_in_array = { DMT.original_cores = THIS.id }
+                        is_in_array = { BAR.original_cores = THIS.id }
                     }
                     NOT = {
-                        is_core_of = FBK
-                        is_core_of = FIR
-                        is_core_of = WAT
-                        is_core_of = GRY
                         is_core_of = ROOT
                     }
                 }
@@ -4629,12 +4608,12 @@ EQS_pan_pony_empire_category = {
                 has_country_flag = is_solar_puppet
             }
             HLQ = {
-                all_cores_owned_by_ROOT = yes
+                all_original_cores_owned_by_ROOT = yes
             }
             OR = {
-                LNS = { all_cores_owned_by_ROOT = yes }
-                LSM = { all_cores_owned_by_ROOT = yes }
-                LSC = { all_cores_owned_by_ROOT = yes }
+                LNS = { all_original_cores_owned_by_ROOT = yes }
+                LSM = { all_original_cores_owned_by_ROOT = yes }
+                LSC = { all_original_cores_owned_by_ROOT = yes }
             }
         }
         visible = {
@@ -4643,36 +4622,35 @@ EQS_pan_pony_empire_category = {
                 has_country_flag = is_solar_puppet
             }
             HLQ = {
-                all_cores_owned_by_ROOT = yes
+                all_original_cores_owned_by_ROOT = yes
             }
             OR = {
-                LNS = { all_cores_owned_by_ROOT = yes }
-                LSM = { all_cores_owned_by_ROOT = yes }
-                LSC = { all_cores_owned_by_ROOT = yes }
+                LNS = { all_original_cores_owned_by_ROOT = yes }
+                LSM = { all_original_cores_owned_by_ROOT = yes }
+                LSC = { all_original_cores_owned_by_ROOT = yes }
             }
         }
         highlight_states = {
             highlight_states_trigger = {
                 OR = {
-                    is_core_of = LNS
-                    is_core_of = LSM
-                    is_core_of = LSC
-                    is_core_of = HLQ
+                    is_in_array = { LNS.original_cores = THIS.id }
+                    is_in_array = { LSM.original_cores = THIS.id }
+                    is_in_array = { LSC.original_cores = THIS.id }
+                    is_in_array = { HLQ.original_cores = THIS.id }
                 }
                 is_owned_and_controlled_by = ROOT
             }
         }
-        fire_only_once = yes
 
         complete_effect = {
             log = "[GetDateText]: [Root.GetName]: Decision SOL_expand_RIV"
             every_state = {
                 limit = {
                     OR = {
-                        is_core_of = LNS
-                        is_core_of = LSM
-                        is_core_of = LSC
-                        is_core_of = HLQ
+                        is_in_array = { LNS.original_cores = THIS.id }
+                        is_in_array = { LSM.original_cores = THIS.id }
+                        is_in_array = { LSC.original_cores = THIS.id }
+                        is_in_array = { HLQ.original_cores = THIS.id }
                     }
                     is_owned_and_controlled_by = ROOT
                 }
@@ -4709,21 +4687,8 @@ EQS_pan_pony_empire_category = {
         highlight_states = {
             highlight_states_trigger = {
                 OR = {
-                    is_core_of = HLR
-                    if = {
-                        limit = { 415 = { is_core_of = DED } }
-                        is_core_of = DED
-                    }
-                    else = {
-                        OR = {
-                            state = 415
-                            state = 416
-                            state = 417
-                            state = 418
-                            state = 419
-                            state = 420
-                        }
-                    }
+                    is_in_array = { HLR.original_cores = THIS.id }
+                    is_in_array = { DED.original_cores = THIS.id }
                 }
             }
         }
@@ -4739,17 +4704,17 @@ EQS_pan_pony_empire_category = {
         }
         available = {
             is_EQS_SOL = yes
-            EQS_owns_all_MIT_starting_states = yes
-            #all_original_cores_owned_by_ROOT = yes
+            #EQS_owns_all_MIT_starting_states = yes
+            all_original_cores_owned_by_ROOT = yes
         }
         visible = {
-            EQS_owns_all_MIT_starting_states = yes
-            #all_original_cores_owned_by_ROOT = yes
+            #EQS_owns_all_MIT_starting_states = yes
+            all_original_cores_owned_by_ROOT = yes
             NOT = { has_country_flag = SOL_formed_super_griffonia }
         }
         highlight_states = {
             highlight_states_trigger = {
-               EQS_is_a_starting_MIT_state = yes
+               is_in_array = { MIT.original_cores = THIS.id }
             }
         }
         fire_only_once = yes
@@ -4777,10 +4742,9 @@ EQS_pan_pony_empire_category = {
         highlight_states = {
             highlight_states_trigger = {
                 OR = {
-                    is_core_of = ZES
-                    is_core_of = OLV
+                    is_in_array = { ZES.original_cores = THIS.id }
+                    is_in_array = { OLV.original_cores = THIS.id }
                 }
-                NOT = { is_core_of = BAR }
             }
         }
         fire_only_once = yes
@@ -4802,7 +4766,9 @@ EQS_pan_pony_empire_category = {
     #        NOT = { has_country_flag = SOL_formed_super_zebrica }
     #    }
     #    highlight_states = {
-    #        highlight_states_trigger = { is_core_of = TBK }
+    #        highlight_states_trigger = {
+    #            is_in_array = { TBK.original_cores = THIS.id }
+    #        }
     #    }
     #    fire_only_once = yes
     #    complete_effect = {
@@ -4885,7 +4851,7 @@ EQS_pan_pony_empire_category = {
 		}
 		highlight_states = {
             highlight_states_trigger = {
-                is_core_of = MDL
+                is_in_array = { MDL.original_cores = THIS.id }
             }
         }
 		fire_only_once = yes
@@ -4919,11 +4885,11 @@ EQS_pan_pony_empire_category = {
         highlight_states = {
             highlight_states_trigger = {
                 OR = {
-                    is_core_of = HIP
-                    is_core_of = TBK
-                    is_core_of = WAR
-                    is_core_of = ZUM
-                    is_core_of = MER
+                    is_in_array = { HIP.original_cores = THIS.id }
+                    is_in_array = { TBK.original_cores = THIS.id }
+                    is_in_array = { WAR.original_cores = THIS.id }
+                    is_in_array = { ZUM.original_cores = THIS.id }
+                    is_in_array = { MER.original_cores = THIS.id }
                 }
                 if = {
                     limit = {
@@ -4973,14 +4939,12 @@ EQS_pan_pony_empire_category = {
         highlight_states = {
             highlight_states_trigger = {
                 OR = {
-                    is_core_of = CTH
-                    is_core_of = CGI
-                    is_core_of = MCW
-                    is_core_of = CVA
-                    is_core_of = CDR
+                    is_in_array = { CTH.original_cores = THIS.id }
+                    is_in_array = { CGI.original_cores = THIS.id }
+                    is_in_array = { MCW.original_cores = THIS.id }
+                    is_in_array = { CVA.original_cores = THIS.id }
+                    is_in_array = { CDR.original_cores = THIS.id }
                 }
-                NOT = { is_core_of = ZUM }
-                NOT = { is_core_of = ZAR }
                 if = {
                     limit = { CTL = { has_country_flag = is_solar_puppet } }
                     NOT = { state = 1092 }
@@ -5024,14 +4988,14 @@ EQS_pan_pony_empire_category = {
         highlight_states = {
             highlight_states_trigger = {
                 OR = {
-                    is_core_of = CTL
-                    is_core_of = HRV
-                    is_core_of = LMB
-                    is_core_of = SPL
-                    is_core_of = HIN
-                    is_core_of = SAM
-                    is_core_of = BRS
-                    is_core_of = GAZ
+                    is_in_array = { CTL.original_cores = THIS.id }
+                    is_in_array = { HRV.original_cores = THIS.id }
+                    is_in_array = { LMB.original_cores = THIS.id }
+                    is_in_array = { SPL.original_cores = THIS.id }
+                    is_in_array = { HIN.original_cores = THIS.id }
+                    is_in_array = { SAM.original_cores = THIS.id }
+                    is_in_array = { BRS.original_cores = THIS.id }
+                    is_in_array = { GAZ.original_cores = THIS.id }
                 }
                 if = {
                     limit = { CTH = { has_country_flag = is_solar_puppet } }
@@ -5100,12 +5064,12 @@ EQS_pan_pony_empire_category = {
             highlight_states_trigger = {
                 OR = {
                     AND = {
-                        is_core_of = ABY
+                        is_in_array = { ABY.original_cores = THIS.id }
                         is_owned_by = ROOT
                     }
-                    is_core_of = ASS
+                    is_in_array = { ASS.original_cores = THIS.id }
                     AND = {
-                        is_core_of = ANS
+                        is_in_array = { ANS.original_cores = THIS.id }
                         is_owned_by = ROOT
                     }
                 }
@@ -5127,7 +5091,6 @@ EQS_pan_pony_empire_category = {
             ZAI = { all_original_cores_owned_by_ROOT = yes }
             CZR = { all_original_cores_owned_by_ROOT = yes }
             ALO = { all_original_cores_owned_by_ROOT = yes }
-            #TIM = { all_cores_owned_by_ROOT = yes }
         }
         visible = {
             OR = {
@@ -5135,18 +5098,16 @@ EQS_pan_pony_empire_category = {
                 ZAI = { all_original_cores_owned_by_ROOT = yes }
                 CZR = { all_original_cores_owned_by_ROOT = yes }
                 ALO = { all_original_cores_owned_by_ROOT = yes }
-                #TIM = { all_cores_owned_by_ROOT = yes }
             }
             NOT = { has_country_flag = SOL_formed_super_zebrica }
         }
         highlight_states = {
             highlight_states_trigger = {
                 OR = {
-                    is_core_of = ZAR
-                    is_core_of = ZAI
-                    is_core_of = CZR
-                    is_core_of = ALO
-                    #is_core_of = TIM
+                    is_in_array = { ZAR.original_cores = THIS.id }
+                    is_in_array = { ZAI.original_cores = THIS.id }
+                    is_in_array = { CZR.original_cores = THIS.id }
+                    is_in_array = { ALO.original_cores = THIS.id }
                 }
             }
         }
@@ -5168,7 +5129,24 @@ EQS_pan_pony_empire_category = {
             GFS = { all_original_cores_owned_by_ROOT = yes }
             GIF = { all_original_cores_owned_by_ROOT = yes }
             TSV = { all_original_cores_owned_by_ROOT = yes }
-            ZLU = { all_original_cores_owned_by_ROOT = yes }
+            ZLU = {
+                custom_trigger_tooltip = {
+                    tooltip = owns_all_cores_original_tt
+                    hidden_trigger = {
+                        1128 = { is_owned_by = ROOT }
+                        1127 = { is_owned_by = ROOT }
+                        1132 = { is_owned_by = ROOT }
+                        1129 = { is_owned_by = ROOT }
+                        1131 = { is_owned_by = ROOT }
+                        if = {
+                            limit = {
+                                NOT = { ZOO = { has_country_flag = is_solar_puppet } }
+                            }
+                            1130 = { is_owned_by = ROOT }
+                        }
+                    }
+                }
+            }
             IBZ = { all_original_cores_owned_by_ROOT = yes }
         }
         visible = {
@@ -5187,23 +5165,13 @@ EQS_pan_pony_empire_category = {
         highlight_states = {
             highlight_states_trigger = {
                 OR = {
-                    AND = {
-                        is_core_of = ROA
-                        NOT = { is_core_of = ZOO }
-                        NOT = { is_core_of = TAI }
-                        NOT = { is_core_of = MEL }
-                        NOT = { is_core_of = MQA }
-                        NOT = { is_core_of = YAN }
-                        NOT = { is_core_of = DEL }
-                        NOT = { is_core_of = IDO }
-                        NOT = { is_core_of = IST }
-                    }
-                    is_core_of = BLT
-                    is_core_of = CME
-                    is_core_of = GFS
-                    is_core_of = GIF
-                    is_core_of = TSV
-                    is_core_of = ZLU
+                    is_in_array = { ROA.original_cores = THIS.id }
+                    is_in_array = { BLT.original_cores = THIS.id }
+                    is_in_array = { CME.original_cores = THIS.id }
+                    is_in_array = { GFS.original_cores = THIS.id }
+                    is_in_array = { GIF.original_cores = THIS.id }
+                    is_in_array = { TSV.original_cores = THIS.id }
+                    is_in_array = { ZLU.original_cores = THIS.id }
                 }
             }
         }
@@ -5219,16 +5187,16 @@ EQS_pan_pony_empire_category = {
         }
         available = {
             is_EQS_SOL = yes
-            STM = { all_cores_owned_by_ROOT_or_subject = yes }
-            GYZ = { all_cores_owned_by_ROOT_or_subject = yes }
-            SLC = { all_cores_owned_by_ROOT_or_subject = yes }
-            THU = { all_cores_owned_by_ROOT_or_subject = yes }
-            HYE = { all_cores_owned_by_ROOT_or_subject = yes }
+            STM = { all_original_cores_owned_by_ROOT_or_subject = yes }
+            GYZ = { all_original_cores_owned_by_ROOT_or_subject = yes }
+            SLC = { all_original_cores_owned_by_ROOT_or_subject = yes }
+            THU = { all_original_cores_owned_by_ROOT_or_subject = yes }
+            HYE = { all_original_cores_owned_by_ROOT_or_subject = yes }
         }
         visible = {
             OR = {
                 STM = {
-                    all_cores_owned_by_ROOT_or_subject = yes
+                    all_original_cores_owned_by_ROOT_or_subject = yes
                 }
                 #Shoul work. Don't believe STM or any other civil war faction removes cores
                 #GYZ = {
@@ -5241,7 +5209,7 @@ EQS_pan_pony_empire_category = {
                 #    all_cores_owned_by_ROOT_or_subject = yes
                 #}
                 HYE = {
-                    all_cores_owned_by_ROOT_or_subject = yes
+                    all_original_cores_owned_by_ROOT_or_subject = yes
                 }
             }
             NOT = { has_country_flag = SOL_formed_super_zebrica }
@@ -5249,14 +5217,16 @@ EQS_pan_pony_empire_category = {
         highlight_states = {
             highlight_states_trigger = {
                 OR = {
-                    is_core_of = STM
-                    is_core_of = GYZ
-                    is_core_of = SLC
-                    is_core_of = THU
+                    is_in_array = { STM.original_cores = THIS.id }
+                    is_in_array = { GYZ.original_cores = THIS.id }
+                    is_in_array = { SLC.original_cores = THIS.id }
+                    is_in_array = { THU.original_cores = THIS.id }
                 }
                 if = {
                     limit = { GAR = { has_country_flag = is_solar_puppet } }
-                    NOT = { is_core_of = HYE }
+                    NOT = {
+                        is_in_array = { HYE.original_cores = THIS.id }
+                    }
                 }
             }
         }
@@ -5272,7 +5242,24 @@ EQS_pan_pony_empire_category = {
         }
         available = {
             is_EQS_SOL = yes
-            ZOO = { all_original_cores_owned_by_ROOT = yes }
+            ZOO = {
+                custom_trigger_tooltip = {
+                    tooltip = owns_all_cores_original_tt
+                    hidden_trigger = {
+                        1126 = { is_owned_by = ROOT }
+                        1151 = { is_owned_by = ROOT }
+                        1134 = { is_owned_by = ROOT }
+                        1135 = { is_owned_by = ROOT }
+                        1133 = { is_owned_by = ROOT }
+                        if = {
+                            limit = {
+                                NOT = { ROA = { has_country_flag = is_solar_puppet } }
+                            }
+                            1130 = { is_owned_by = ROOT }
+                        }
+                    }
+                }
+            }
             TAI = { all_original_cores_owned_by_ROOT = yes }
             MEL = { all_original_cores_owned_by_ROOT = yes }
             MQA = { all_original_cores_owned_by_ROOT = yes }
@@ -5297,14 +5284,14 @@ EQS_pan_pony_empire_category = {
         highlight_states = {
             highlight_states_trigger = {
                 OR = {
-                    is_core_of = ZOO
-                    is_core_of = TAI
-                    is_core_of = MEL
-                    is_core_of = MQA
-                    is_core_of = YAN
-                    is_core_of = DEL
-                    is_core_of = IDO
-                    is_core_of = IST
+                    is_in_array = { ZOO.original_cores = THIS.id }
+                    is_in_array = { TAI.original_cores = THIS.id }
+                    is_in_array = { MEL.original_cores = THIS.id }
+                    is_in_array = { MQA.original_cores = THIS.id }
+                    is_in_array = { YAN.original_cores = THIS.id }
+                    is_in_array = { DEL.original_cores = THIS.id }
+                    is_in_array = { IDO.original_cores = THIS.id }
+                    is_in_array = { IST.original_cores = THIS.id }
                 }
             }
         }
@@ -5337,10 +5324,10 @@ EQS_pan_pony_empire_category = {
         highlight_states = {
             highlight_states_trigger = {
                 OR = {
-                    is_core_of = HMR
-                    is_core_of = OSQ
-                    is_core_of = REE
-                    is_core_of = MTA
+                    is_in_array = { HMR.original_cores = THIS.id }
+                    is_in_array = { OSQ.original_cores = THIS.id }
+                    is_in_array = { REE.original_cores = THIS.id }
+                    is_in_array = { MTA.original_cores = THIS.id }
                 }
             }
         }
@@ -5383,17 +5370,16 @@ EQS_pan_pony_empire_category = {
         highlight_states = {
             highlight_states_trigger = {
                 OR = {
-                    is_core_of = MAZ
-                    is_core_of = MSS
-                    is_core_of = SON
-                    is_core_of = MSH
-                    is_core_of = ZWA
-                    is_core_of = ZUG
-                    is_core_of = ZEL
-                    is_core_of = HAY
-                    is_core_of = TIM
+                    is_in_array = { MAZ.original_cores = THIS.id }
+                    is_in_array = { MSS.original_cores = THIS.id }
+                    is_in_array = { SON.original_cores = THIS.id }
+                    is_in_array = { MSH.original_cores = THIS.id }
+                    is_in_array = { ZWA.original_cores = THIS.id }
+                    is_in_array = { ZUG.original_cores = THIS.id }
+                    is_in_array = { ZEL.original_cores = THIS.id }
+                    is_in_array = { HAY.original_cores = THIS.id }
+                    is_in_array = { TIM.original_cores = THIS.id }
                 }
-                NOT = { is_core_of = ZAI }
             }
         }
         fire_only_once = yes
@@ -5423,13 +5409,15 @@ EQS_pan_pony_empire_category = {
         highlight_states = {
             highlight_states_trigger = {
                 OR = {
-                    is_core_of = HYE
-                    is_core_of = CNT
-                    is_core_of = GAR
+                    is_in_array = { HYE.original_cores = THIS.id }
+                    is_in_array = { CNT.original_cores = THIS.id }
+                    is_in_array = { GAR.original_cores = THIS.id }
                 }
                 if = {
                     limit = { STM = { has_country_flag = is_solar_puppet } }
-                    NOT = { is_core_of = STM }
+                    NOT = {
+                        is_in_array = { STM.original_cores = THIS.id }
+                    }
                 }
             }
         }
@@ -5462,10 +5450,10 @@ EQS_pan_pony_empire_category = {
         highlight_states = {
             highlight_states_trigger = {
                 OR = {
-                    is_core_of = MTO
-                    is_core_of = AES
-                    is_core_of = KAR
-                    is_core_of = IDT
+                    is_in_array = { MTO.original_cores = THIS.id }
+                    is_in_array = { AES.original_cores = THIS.id }
+                    is_in_array = { KAR.original_cores = THIS.id }
+                    is_in_array = { IDT.original_cores = THIS.id }
                 }
             }
         }
@@ -5496,9 +5484,9 @@ EQS_pan_pony_empire_category = {
         highlight_states = {
             highlight_states_trigger = {
                 OR = {
-                    is_core_of = NVA
-                    is_core_of = KXN
-                    is_core_of = KHM
+                    is_in_array = { NVA.original_cores = THIS.id }
+                    is_in_array = { KXN.original_cores = THIS.id }
+                    is_in_array = { KHM.original_cores = THIS.id }
                 }
             }
         }
@@ -5522,7 +5510,7 @@ EQS_pan_pony_empire_category = {
         }
         highlight_states = {
             highlight_states_trigger = {
-                is_core_of = KIR
+                is_in_array = { KIR.original_cores = THIS.id }
             }
         }
         fire_only_once = yes
