@@ -1421,6 +1421,9 @@
   SOL_streng_geheim_6_1:0 "Flame of Science"
   SOL_streng_geheim_6_2:0 "Flame of Science"
   SOL_streng_geheim_6_3:0 "Flame of Science"
+  SOL_streng_geheim_7:0 "Hidden Lights"
+  SOL_streng_geheim_7_1:0 "Hidden Lights"
+  SOL_streng_geheim_7_2:0 "Hidden Lights"
 
   ###Harmonic Resistance###
   EQS_agitated_workers:0 "Unwilling Workers"

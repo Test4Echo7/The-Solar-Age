@@ -994,9 +994,9 @@ ideas = {
 		}
 		SOL_coordinated_arms = {
 			modifier = {
-				land_doctrine_cost_factor = -0.1
-				naval_doctrine_cost_factor = -0.1
-				air_doctrine_cost_factor = -0.1
+				land_mastery_gain_factor = 0.075
+				naval_mastery_gain_factor = 0.075
+				air_mastery_gain_factor = 0.075
 				coordination_bonus = 0.05
 			}
 		}
@@ -1197,9 +1197,9 @@ ideas = {
 		}
 		SOL_correct_warfare = {
 			modifier = {
-				land_doctrine_cost_factor = -0.1
-				naval_doctrine_cost_factor = -0.05
-				air_doctrine_cost_factor = -0.05
+				land_mastery_gain_factor = 0.05
+				naval_mastery_gain_factor = 0.025
+				air_mastery_gain_factor = 0.025
 				army_leader_start_planning_level = 1
 				army_leader_start_defense_level = 1
 			}
@@ -2022,7 +2022,7 @@ ideas = {
 		}
 		SOL_relegated_embarrassments = {
 			modifier = {
-				land_doctrine_cost_factor = -0.1
+				land_mastery_gain_factor = 0.025
 				research_speed_factor = 0.05
 			}
 		}
@@ -2305,6 +2305,22 @@ ideas = {
 				magical_tech = 0.15
 				industry = 0.05
 				race_tech = 0.175
+			}
+		}
+		###I love PDX spaghetti code that can't handle having hidden_modifier inside a dynamic modifier!###
+		SOL_streng_geheim_7 = {
+			modifier = {
+				crypto_strength = 0.75
+			}
+		}
+		SOL_streng_geheim_7_1 = {
+			modifier = {
+				crypto_strength = 0.25
+			}
+		}
+		SOL_streng_geheim_7_2 = {
+			modifier = {
+				crypto_strength = 1
 			}
 		}
 		###Projects###

@@ -11121,9 +11121,15 @@ country_event = { #Follow an EQS officer as he gets into a bit of a competition 
             }
             EQC = {
                 army_experience = 30
+                add_mastery_bonus = {
+                    bonus = 0.2
+                    days = 180
+                    folder = land
+                    name = SOL_joint_military_expeditions
+                }
                 add_doctrine_cost_reduction = {
                     name = land_doctrine_bonus
-                    uses = 2
+                    uses = 1
                     cost_reduction = 0.5
                     category = land_doctrine
                 }
@@ -11167,9 +11173,15 @@ country_event = { #Follow an EQS officer as he gets into a bit of a competition 
                     }
                 }
                 army_experience = 30
+                add_mastery_bonus = {
+                    bonus = 0.2
+                    days = 180
+                    folder = land
+                    name = SOL_joint_military_expeditions
+                }
                 add_doctrine_cost_reduction = {
                     name = land_doctrine_bonus
-                    uses = 2
+                    uses = 1
                     cost_reduction = 0.5
                     category = land_doctrine
                 }
@@ -14630,6 +14642,13 @@ country_event = { #Event for the response of the griffon countries that were pro
             set_cosmetic_tag = GRIF_EMPIRE
             set_faction_name = reichspakt
             set_faction_manifest = faction_manifest_unite_the_griffons
+            set_country_flag = SOL_GRI_formed_by_league
+            hidden_effect = {
+                news_event = {
+                    id = news.solarage.39
+                    hours = 6
+                }
+            }
         }
     }
 }
@@ -15204,6 +15223,20 @@ country_event = { #A citizen in their home is awoken suddenly as it's barged int
 			limit = { has_dlc = "La Resistance" }
 			add_to_variable = { crypto_strength_var = 0.25 }
 			custom_effect_tooltip = SOL_imperial_intelligence_lar_7
+			hidden_effect = {
+				if = {
+					limit = {
+						has_idea = SOL_streng_geheim_7
+					}
+					swap_ideas = {
+						remove_idea = SOL_streng_geheim_7
+						add_idea = SOL_streng_geheim_7_2
+					}
+				}
+				else = {
+					add_ideas = SOL_streng_geheim_7_1
+				}
+			}
 		}
 		else = {
 			add_to_variable = { encryption_sol_var = 0.25 }

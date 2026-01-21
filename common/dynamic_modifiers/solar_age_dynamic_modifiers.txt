@@ -51,9 +51,6 @@ SOL_imperial_intelligence_lar = {
     agency_upgrade_time = agency_upgrade_sol_var
     own_operative_detection_chance_factor = own_operative_detection_sol_var
     enemy_operative_detection_chance_factor = enemy_operative_detection_sol_var
-    hidden_modifier = {
-        crypto_strength = crypto_strength_var
-    }
     custom_modifier_tooltip = SOL_crypto_defense_tt
     operation_cost = operation_cost_sol_var
     operation_risk = operation_risk_sol_var
