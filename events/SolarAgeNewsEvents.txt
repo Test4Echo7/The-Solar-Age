@@ -917,6 +917,37 @@ news_event = { #
 	}
 }
 
+news_event = { #The Griffon Liberation League has overcome Daybreaker and the leader has reformed the Griffonian Empire, promising a new era of stability that the Grovers never could
+	id = news.solarage.39
+	immediate = {log = "[GetDateText]: [Root.GetName]: event news.solarage.39"}
+	title = news.solarage.39.t
+	desc = news.solarage.39.d
+	picture = GFX_news_griffon_soldier
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = { #Merely a setback!
+		name = news.solarage.39.a
+		trigger = {
+			tag = event_target:solar_empire
+		}
+	}
+	option = { #Our resolve has never been stronger!
+		name = news.solarage.39.b
+		trigger = {
+			has_country_flag = SOL_GRI_formed_by_league
+		}
+	}
+	option = { #Seems she's not as strong as she thought.
+		name = news.solarage.39.c
+		trigger = {
+			NOT = { tag = event_target:solar_empire }
+		}
+	}
+}
+
 news_event = { #BAT liberates NMM from her captivity
 	id = news.solarage.40
 	immediate = {
