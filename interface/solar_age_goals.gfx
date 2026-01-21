@@ -118,6 +118,12 @@ SpriteTypes = {
         texturefile = "gfx/interface/goals/EQS/better_than_best.tga"
     }
 
+    ###Canon Daybreaker###
+    SpriteType = {
+        name = GFX_goal_empress_mother_new
+        texturefile = "gfx/interface/goals/EQS/empress_mother.tga"
+    }
+
     ###Fallen Hero###
     SpriteType = {
         name = GFX_goal_utilize_element_bearers

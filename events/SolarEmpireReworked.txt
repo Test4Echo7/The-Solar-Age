@@ -14316,7 +14316,8 @@ country_event = { #Event telling the leader that Daybreaker has performed the gr
 
     option = { #Yes, form the federation.
         name = solarreworked.534.a
-        create_faction = SOL_griffon_liberation_pact
+        create_faction_from_template = faction_template_griffon_liberation_pact
+        set_country_flag = SOL_can_see_birb_goals
         add_political_power = 50
         add_stability = 0.1
         add_war_support = 0.1
@@ -14338,7 +14339,12 @@ country_event = { #Event telling the leader that Daybreaker has performed the gr
 			target = 397.owner
 			generator = { 397 382 405 437 555 }
 		}
-		news_event = news.solarage.12
+		hidden_effect = {
+            news_event = {
+                id = news.solarage.12
+                hours = 6
+            }
+        }
     }
     option = { #Who cares what happens to an old empire, anyway?
         name = solarreworked.534.b
@@ -14486,6 +14492,145 @@ country_event = { #Event about how the planted harmonic agents within the govern
         add_ideas = EQS_agitated_workers
         add_ideas = EQS_unwilling_bureaucrats
         add_ideas = EQS_anti_order_propaganda
+    }
+}
+
+country_event = { #Event for the griffon liberation faction leader to propose reforming the Griffonian Empire with them at the helm.
+    id = solarreworked.538
+    title = solarreworked.538.t
+    desc = solarreworked.538.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.538"}
+    picture = GFX_event_griffenheim
+
+    is_triggered_only = yes
+
+    option = { #We will carry Grover I's mantle!
+        name = solarreworked.538.a
+        custom_effect_tooltip = SOL_GRI_reborn_tt
+        every_faction_member = {
+            limit = {
+                NOT = { tag = ROOT }
+            }
+            country_event = {
+                id = solarreworked.539
+                hours = 12
+            }
+        }
+    }
+    option = { #It was destroyed for a reason.
+        name = solarreworked.538.a
+        ai_chance = {
+            factor = 0
+        }
+        custom_effect_tooltip = SOL_no_fun_tt
+        add_political_power = 100
+        add_stability = 0.05
+    }
+}
+
+country_event = { #Event for the other griffon countries to accept or reject the proposal of the most influential faction member to become part of a new GRI or not
+    id = solarreworked.539
+    title = solarreworked.539.t
+    desc = solarreworked.539.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.539"}
+    picture = GFX_event_gothic_interior
+
+    is_triggered_only = yes
+
+    option = { #We must work together.
+        name = solarreworked.539.a
+        ai_chance = {
+            factor = 3
+        }
+        custom_effect_tooltip = SOL_RIP_tho_tt
+        set_country_flag = SOL_accepted_GRI_integration
+        FROM = {
+            country_event = {
+                id = solarreworked.540
+                hours = 12
+            }
+        }
+    }
+    option = { #It died for a reason. Let it rot.
+        name = solarreworked.539.b
+        ai_chance = {
+            modifier = {
+                FROM = {
+                    is_ai = yes
+                }
+                factor = 0
+            }
+        }
+        custom_effect_tooltip = SOL_angy_birbs_tt
+        set_country_flag = SOL_rejected_GRI_integration
+        FROM = {
+            country_event = {
+                id = solarreworked.540
+                hours = 12
+            }
+        }
+    }
+}
+
+country_event = { #Event for the response of the griffon countries that were proposed to.
+    id = solarreworked.540
+    title = solarreworked.540.t
+    desc = {
+        trigger = {
+            FROM = { has_country_flag = SOL_accepted_GRI_integration }
+        }
+        text = solarreworked.540.d_a
+    }
+    desc = {
+        trigger = {
+            FROM = { has_country_flag = SOL_rejected_GRI_integration }
+        }
+        text = solarreworked.540.d_b
+    }
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.540"}
+    picture = GFX_event_griffenheim
+
+    is_triggered_only = yes
+
+    option = { #Who's the Kaiser now?!
+        name = solarreworked.540.a
+        trigger = {
+            FROM = { has_country_flag = SOL_accepted_GRI_integration }
+        }
+        annex_country = {
+            target = FROM
+            transfer_troops = yes
+        }
+        every_state = {
+            limit = {
+                is_core_of = FROM
+            }
+            add_core_of = ROOT
+        }
+    }
+    option = { #They thought they could refuse?
+        name = solarreworked.540.b
+        trigger = {
+            FROM = { has_country_flag = SOL_rejected_GRI_integration }
+        }
+        create_wargoal = {
+            type = annex_everything
+            target = FROM
+        }
+        FROM = {
+            add_to_ROOT_potential_cores = yes
+        }
+    }
+
+    after = {
+        if = {
+            limit = {
+                NOT = { has_cosmetic_tag = GRIF_EMPIRE }
+            }
+            set_cosmetic_tag = GRIF_EMPIRE
+            set_faction_name = reichspakt
+            set_faction_manifest = faction_manifest_unite_the_griffons
+        }
     }
 }
 

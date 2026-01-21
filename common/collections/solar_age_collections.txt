@@ -54,3 +54,38 @@ subjugated_pony_and_adjacent_countries = {
         }
     }
 }
+
+unoccupied_GRI_territories = {
+    input = collection:former_imperial_territories
+    name = COLLECTION_UNOCCUPIED_GRI_TERRITORIES
+    operators = {
+        limit = {
+            OWNER = {
+                NOT = {
+                    OR = {
+                        tag = EQS
+                        AND = {
+                            tag = GRD
+                            has_country_leader = { character = GRI_daybreaker ruling_only = yes }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+griffonian_trained_griffon_countries = {
+    input = game:all_countries
+    name = COLLECTION_GRIFFONIAN_TRAINED_GRIFFON_COUNTRIES
+    operators = {
+        limit = {
+            is_griffon_continent_griffon_country = yes
+            is_in_faction_with = ROOT
+            has_mastery = {
+                amount = 600
+                track = infantry
+            }
+        }
+    }
+}

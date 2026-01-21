@@ -183,6 +183,7 @@ faction_goal_army_with_an_empire = {
         }
     }
     complete_effect = {
+        add_faction_power_projection = 300
         every_faction_member = {
             tooltip = AT_LEAST_250K_PONYPOWER
             visible_when_empty = yes
@@ -200,6 +201,62 @@ faction_goal_army_with_an_empire = {
                 uses = 1
                 category = infantry_tech
                 category = armor
+            }
+        }
+    }
+}
+
+#Griffon
+faction_goal_retake_griffenheim = {
+    name = faction_goal_retake_griffenheim_name
+    description = faction_goal_retake_griffenheim_desc
+    category = medium_term
+    group = FOCUS_FILTER_ANNEXATION
+
+    allowed = {
+        is_griffon_continent_griffon_country = yes
+        NOT = {
+            tag = GRD
+            tag = GRI
+        }
+    }
+    visible = {
+        is_griffon_continent_griffon_country = yes
+        NOT = {
+            tag = GRD
+            tag = GRI
+        }
+        has_country_flag = SOL_can_see_birb_goals
+    }
+    completed = {
+        382 = {
+            CONTROLLER = {
+                OR = {
+                    tag = ROOT
+                    is_in_faction_with = ROOT
+                }
+            }
+        }
+    }
+    complete_effect = {
+        add_faction_power_projection = 350
+        custom_effect_tooltip = generic_skip_one_line_tt
+        custom_effect_tooltip = ALL_FACTION_MEMBERS
+        every_faction_member = {
+            add_stability = 0.05
+            add_political_power = 30
+        }
+        custom_effect_tooltip = generic_skip_one_line_tt
+        random_state = {
+            visible_when_empty = yes
+            limit = {
+                state = 382
+            }
+            CONTROLLER = {
+                add_stability = 0.075
+                add_political_power = 70
+                add_faction_influence_ratio = 0.1
+                add_faction_initiative = 1
             }
         }
     }

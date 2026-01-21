@@ -65,3 +65,34 @@ faction_manifest_age_of_pony = {
         }
     }
 }
+
+faction_manifest_griffon_purity = {
+    name = griffon_purity_name
+    description = griffon_purity_desc
+    is_manifest = yes
+    available = {
+        always = no
+    }
+    visible = {
+        always = no
+    }
+    ratio_progress = {
+        total_amount_collection = collection:former_imperial_territories
+        completed_amount_collection = collection:unoccupied_GRI_territories
+
+        scale = {
+            stability_factor = 0.1
+            army_morale_factor = 0.1
+            compliance_growth = 0.05
+        }
+
+        progress_sections = {
+            manifest_fulfilled = {
+                min = @manifest_fulfilled_value
+                modifier = {
+                    conscription_factor = 0.05
+                }
+            }
+        }
+    }
+}

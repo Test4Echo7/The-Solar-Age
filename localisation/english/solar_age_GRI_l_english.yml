@@ -13,3 +13,23 @@
   ###Traits###
   aerial_expert:0 "Aerial Expert"
   professional_scrounger:0 "Professional Scounger"
+
+  ###Collections###
+  COLLECTION_UNOCCUPIED_GRI_TERRITORIES:0 "Former Imperial states not occupied by [EQS.GetNameDef]"
+  COLLECTION_GRIFFONIAN_TRAINED_GRIFFON_COUNTRIES:0 "Other allied countries with at least 600 mastery in the infantry track"
+
+  ###Factions###
+  griffon_purity_name:0 "Griffonian Purity"
+  griffon_purity_desc:0 "Daybreaker has sent the ultimate insult by declaring herself the new Kaiserin of all Griffons. We will never stand to see her, or any other pony rule over us, and we will drive her and her arrogant flank into the sea!"
+  faction_goal_coordinate_armed_forces_name:0 "Coordinate [ROOT.GetFactionName] Armed Forces"
+  faction_goal_coordinate_armed_forces_desc:0 "If we are to have even a glimpse of hope to take the fight to Daybreaker, we must focus on working together like griffons have never before and present a united front against the pony defiler."
+  faction_goal_retake_griffenheim_name:0 "Retake Griffenheim"
+  faction_goal_retake_griffenheim_desc:0 "Griffenheim is the heart of the Empire and one of the two most important cities of all of griffonkind. If we can succeed at retaking the old capital, then we can surely motivate everygriff to push on until the very end."
+  faction_goal_oust_pony_invaders_name:0 "Oust the Pony Usurpers"
+  faction_goal_oust_pony_invaders_desc:0 "Daybreaker must never think of returning to Griffonia. Only through savage and brutal assaults, inflicting serious losses on her forces, can we hope to wound her enough that she will fall back and never come back. Not tomorrow, not in a thousand years."
+
+  ###Custom Tooltips###
+  FACTION_MEMBER_WITH_MOST_INFLUENCE:0 "§YFaction Member with the Most Influence§!:"
+  SOL_GRI_reborn_tt:0 "We shall demand that all other members of §Y[ROOT.GetFactionName]§! §Rsubmit§! to us, that we may form a new, stronger §OGriffonian Empire§!!"
+  SOL_no_fun_tt:0 "The §OGriffonian Empire§! is a §Rrelic§! of the past. We shall continue working together to ensure that griffons remain §Yfree§! of pony influence."
+  SOL_angy_birbs_tt:0 "§RRejecting [FROM.GetNameDef]'s demand could have grave consequences.§!"

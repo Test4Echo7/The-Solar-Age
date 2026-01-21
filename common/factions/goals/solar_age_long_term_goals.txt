@@ -125,3 +125,64 @@ faction_goal_establish_perfect_order = {
         add_war_support = 0.2
     }
 }
+
+#Griffon
+faction_goal_oust_pony_invaders = {
+    name = faction_goal_oust_pony_invaders_name
+    description = faction_goal_oust_pony_invaders_desc
+    category = long_term
+    group = FOCUS_FILTER_ANNEXATION
+
+    allowed = {
+        is_griffon_continent_griffon_country = yes
+        NOT = {
+            tag = GRD
+            tag = GRI
+        }
+    }
+    visible = {
+        is_griffon_continent_griffon_country = yes
+        NOT = {
+            tag = GRD
+            tag = GRI
+        }
+        has_country_flag = SOL_can_see_birb_goals
+    }
+    completed = {
+        all_collection_elements = {
+            collection = {
+                input = collection:former_imperial_territories
+            }
+            CONTROLLER = {
+                OR = {
+                    tag = ROOT
+                    is_in_faction_with = ROOT
+                }
+            }
+        }
+    }
+    complete_effect = {
+        add_faction_power_projection = 500
+        custom_effect_tooltip = generic_skip_one_line_tt
+        custom_effect_tooltip = ALL_FACTION_MEMBERS
+        every_faction_member = {
+            tooltip = ALL_FACTION_MEMBERS_INFLICTED_250K_CASUALTIES
+            visible_when_empty = yes
+            limit = {
+                EQS = {
+                    casualties_inflicted_by = {
+					    opponent = PREV
+					    thousands > 250
+					}
+                }
+            }
+            add_faction_influence_ratio = 0.1
+        }
+        custom_effect_tooltip = generic_skip_one_line_tt
+        custom_effect_tooltip = THE_FACTION_LEADER
+        add_faction_initiative = 1
+        add_political_power = 200
+        add_war_support = 0.1
+        country_event = solarreworked.538
+    }
+}

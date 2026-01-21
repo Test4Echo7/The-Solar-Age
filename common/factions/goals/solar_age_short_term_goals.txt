@@ -232,3 +232,56 @@ faction_goal_prepare_for_resource_droughts = {
         }
     }
 }
+
+#Griffon
+faction_goal_coordinate_armed_forces = {
+    name = faction_goal_coordinate_armed_forces_name
+    description = faction_goal_coordinate_armed_forces_desc
+    category = short_term
+    group = FOCUS_FILTER_ARMY_XP
+
+    allowed = {
+        is_griffon_continent_griffon_country = yes
+        NOT = {
+            tag = GRD
+            tag = GRI
+        }
+    }
+    visible = {
+        is_griffon_continent_griffon_country = yes
+        NOT = {
+            tag = GRD
+            tag = GRI
+        }
+        has_country_flag = SOL_can_see_birb_goals
+    }
+    completed = {
+        has_mastery = {
+            amount = 600
+            track = infantry
+        }
+        collection_size = {
+            input = collection:griffonian_trained_griffon_countries
+            value > 2
+        }
+    }
+    complete_effect = {
+        add_faction_power_projection = 125
+        custom_effect_tooltip = generic_skip_one_line_tt
+        custom_effect_tooltip = ALL_FACTION_MEMBERS
+        every_faction_member = {
+            visible_when_empty = yes
+            army_experience = 25
+            random_character = {
+                tooltip = ONE_GENERAL
+                visible_when_empty = yes
+                limit = {
+                    is_leading_army = yes
+                }
+                gain_xp = 350
+                add_logistics = 1
+                add_planning = 1
+            }
+        }
+    }
+}

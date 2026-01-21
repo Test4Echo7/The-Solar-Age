@@ -1404,7 +1404,7 @@ shared_focus = {
 ###Revamped Paths###
 shared_focus = {
 	id = SOL_empress_mother
-	icon = GFX_goal_daybreaker_mother
+	icon = GFX_goal_empress_mother_new
 	prerequisite = {
 		focus = SOL_Imperium_Solis
 	}
