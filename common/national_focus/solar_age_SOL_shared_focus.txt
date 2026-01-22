@@ -14849,7 +14849,7 @@ shared_focus = {
 		add_mastery_bonus = {
 			bonus = 0.2
 			days = 180
-			folder = navy
+			folder = naval
 			name = SOL_surrender_waves
 		}
 		add_doctrine_cost_reduction ={
@@ -14888,7 +14888,7 @@ shared_focus = {
 		add_mastery_bonus = {
 			bonus = 0.2
 			days = 180
-			folder = navy
+			folder = naval
 			name = SOL_crushing_sea
 		}
 		add_doctrine_cost_reduction = {
@@ -15208,7 +15208,7 @@ shared_focus = {
 		add_mastery_bonus = {
 			bonus = 0.2
 			days = 180
-			folder = navy
+			folder = naval
 			name = SOL_roach_guards
 		}
 	}
@@ -15232,7 +15232,7 @@ shared_focus = {
 		add_mastery_bonus = {
 			bonus = 0.2
 			days = 180
-			folder = navy
+			folder = naval
 			name = SOL_magisteel_plating
 		}
 		add_ideas = SOL_magic_bonded_plating
@@ -15262,7 +15262,7 @@ shared_focus = {
 		add_mastery_bonus = {
 			bonus = 0.2
 			days = 180
-			folder = navy
+			folder = naval
 			name = SOL_swarms_upon_sea
 		}
 	}
@@ -15295,7 +15295,7 @@ shared_focus = {
 		add_mastery_bonus = {
 			bonus = 0.2
 			days = 180
-			folder = navy
+			folder = naval
 			name = SOL_old_guns
 		}
 	}
@@ -15433,7 +15433,7 @@ shared_focus = {
 shared_focus = {
 	id = SOL_trains_across_empire
 	icon = GFX_goal_trains_across_empire
-	cost = 5
+	cost = 4
 	ai_will_do = { factor = 80 }
 	prerequisite = {
 		focus = examine_the_situation
@@ -15703,7 +15703,7 @@ shared_focus = {
 shared_focus = {
 	id = SOL_imperial_transport_ministry
 	icon = GFX_goal_generic_construct_infrastructure
-	cost = 5
+	cost = 4
 	ai_will_do = { factor = 70 }
 	prerequisite = { focus = SOL_trains_across_empire }
 	available = {
@@ -15740,7 +15740,7 @@ shared_focus = {
 shared_focus = {
 	id = SOL_dodge_city_oil
 	icon = GFX_goal_eqs_fillydelphia_cars
-	cost = 8
+	cost = 6
 	ai_will_do = { factor = 70 }
 	prerequisite = {
 		focus = SOL_imperial_work_service
@@ -15781,7 +15781,7 @@ shared_focus = {
 shared_focus = {
 	id = SOL_project_firestorm
 	icon = GFX_goal_generic_air_fighter2
-	cost = 7
+	cost = 5
 	ai_will_do = { factor = 80 }
 	prerequisite = {
 		focus = SOL_imperial_work_service
@@ -15797,66 +15797,59 @@ shared_focus = {
 			value = 0.33
 		}
 		525 = {
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = arms_factory
-				level = 1
-				instant_build = yes
-			}
 			add_resource = {
 				type = aluminium
-				amount = 6
+				amount = 10
 			}
 		}
-		###Change fighters as necessary
-		if = {
-            limit = {
-                has_dlc = "By Blood Alone"
-            }
-			add_tech_bonus = {
-				name = fighter_bonus
-				bonus = 0.75
-				uses = 1
-				ahead_reduction = 2
-				category = light_air
-				category = medium_air
-			}
-			add_tech_bonus = {
-				name = cat_air_guns
-				bonus = 0.75
-				uses = 1
-				category = cat_air_guns
-			}
+		custom_effect_tooltip = {
+			localization_key = air_facility_construction_tt
+			temp_facility_state_loc = "[525.GetName]"
+			temp_facility_province_loc = "[525.GetCapitalVictoryPointName]"
 		}
-		else = {
-			add_tech_bonus = {
-				name = fighter_bonus
-				bonus = 1.0
-				uses = 1
-				ahead_reduction = 2
-				category = light_fighter
-				category = cat_heavy_fighter
+		hidden_effect = {
+			if = {
+				limit = {
+					525 = {
+						is_fully_controlled_by = ROOT
+						can_construct_building = air_facility
+					}
+				}
+				525 = {
+					add_building_construction = {
+						type = air_facility
+						level = 1
+						instant_build = yes
+						province = 10359
+					}
+				}
 			}
 		}
 		if = {
 			limit = {
 				has_dlc = "By Blood Alone"
 			}
-			if = {
-				limit = {
-					has_tech = basic_small_airframe
-				}
-				EQS_add_hawker_hurricane_template = yes
-				EQS_add_hawker_sea_hurricane_template = yes
-				EQS_add_blackburn_skua_template = yes
+			add_tech_bonus = {
+				name = SOL_project_firestorm
+				uses = 1
+				ahead_reduction = 0.5
+				bonus = 0.75
+				category = cat_air_bombs
 			}
-			else = {
-				custom_effect_tooltip = once_basic_small_airframe_researched_tt
-				effect_tooltip = {
-					EQS_add_hawker_hurricane_template = yes
-					EQS_add_hawker_sea_hurricane_template = yes
-					EQS_add_blackburn_skua_template = yes
-				}
+		}
+		else = {
+			add_tech_bonus = {
+				name = SOL_project_firestorm
+				uses = 1
+				ahead_reduction = 0.5
+				bonus = 0.75
+				category = cas_bomber
+			}
+		}
+		if = {
+			limit = {
+				has_dlc = "By Blood Alone"
+				NOT = { has_completed_focus = Spitfire_research }
 			}
 			if = {
 				limit = {
@@ -15914,7 +15907,7 @@ shared_focus = {
 shared_focus = { #Imperial Collegiate of Blessed Unicorns
 	id = SOL_blessed_unicorn_academy
 	icon = GFX_goal_unicorn_academy
-	cost = 7
+	cost = 5
 	ai_will_do = { factor = 85 }
 	prerequisite = {
 		focus = SOL_invest_in_manehattan
@@ -15952,7 +15945,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_south_eastern_investment
 
-	cost = 5
+	cost = 4
 	prerequisite = { focus = SOL_south_eastern_investment }
 	mutually_exclusive = { focus = SOL_imperial_production_committee }
 	available = { eqs_not_has_civil_war = yes }
@@ -15972,7 +15965,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_dodge_city_oil
 
-	cost = 5
+	cost = 4
 	prerequisite = { focus = SOL_dodge_city_oil }
 	mutually_exclusive = { focus = SOL_imperial_unions }
 	available = { eqs_not_has_civil_war = yes }
@@ -15989,7 +15982,7 @@ shared_focus = {
 shared_focus = {
 	id = SOL_mining_company_poaching
 	icon = GFX_goal_Timberwolf_research
-	cost = 8
+	cost = 6
 	ai_will_do = { factor = 60 }
 	prerequisite = {
 		focus = SOL_project_firestorm
@@ -16029,33 +16022,37 @@ shared_focus = {
 			category = cat_anti_tank
 		}
 		add_ideas = SOL_timberwolf_research
-		custom_effect_tooltip = EQS_Timberwolf_tooltip
-		#Adjust as necessary
 		if = {
 			limit = {
-				AND = {
-					has_tech = basic_medium_tank_chassis
-					has_dlc = "No Step Back"
-				}
+				NOT = { has_completed_focus = Matilda_research }
 			}
-			create_equipment_variant = {
-				name = "Timberwolf Mk I"
-				type = medium_tank_chassis_1
-				parent_version = 0
-				modules = {
-					main_armament_slot = tank_high_velocity_cannon
-					turret_type_slot = tank_medium_three_man_tank_turret
-					suspension_type_slot = tank_bogie_suspension
-					armor_type_slot = tank_riveted_armor
-					engine_type_slot = tank_gasoline_engine
-					special_type_slot_1 = tank_radio_1
-					special_type_slot_2 = smoke_launchers
+			custom_effect_tooltip = EQS_Timberwolf_tooltip
+			if = {
+				limit = {
+					AND = {
+						has_tech = basic_medium_tank_chassis
+						has_dlc = "No Step Back"
+					}
 				}
-				upgrades = {
-					tank_nsb_engine_upgrade = 4
-					tank_nsb_armor_upgrade = 9
+				create_equipment_variant = {
+					name = "Timberwolf Mk I"
+					type = medium_tank_chassis_1
+					parent_version = 0
+					modules = {
+						main_armament_slot = tank_high_velocity_cannon
+						turret_type_slot = tank_medium_three_man_tank_turret
+						suspension_type_slot = tank_bogie_suspension
+						armor_type_slot = tank_riveted_armor
+						engine_type_slot = tank_gasoline_engine
+						special_type_slot_1 = tank_radio_1
+						special_type_slot_2 = smoke_launchers
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 4
+						tank_nsb_armor_upgrade = 9
+					}
+					icon = "gfx/interface/technologies/armour_folder/commonwealth_2d/EQS_timberwolf.dds"
 				}
-				icon = "gfx/interface/technologies/armour_folder/commonwealth_2d/EQS_timberwolf.dds"
 			}
 		}
 	}
@@ -16073,7 +16070,7 @@ shared_focus = {
 	icon = GFX_goal_trawl_mountain_depths
 	relative_position_id = SOL_invest_in_manehattan
 
-	cost = 8
+	cost = 6
 	prerequisite = { focus = SOL_invest_in_manehattan }
 	available = {
 		eqs_not_has_civil_war = yes
@@ -16128,7 +16125,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_blessed_unicorn_academy
 
-	cost = 6
+	cost = 5
 	available = { eqs_has_civil_war = no }
 	prerequisite = { focus = SOL_blessed_unicorn_academy }
 
@@ -16186,7 +16183,7 @@ shared_focus = {
 shared_focus = {
 	id = SOL_magical_primacy
 	icon = GFX_goal_generic_magic
-	cost = 6
+	cost = 5
 	ai_will_do = { factor = 80 }
 	available = { eqs_has_civil_war = no }
 	prerequisite = { focus = SOL_blessed_unicorn_academy }
@@ -16243,7 +16240,7 @@ shared_focus = {
 	y = 2
 	relative_position_id = SOL_south_eastern_investment
 
-	cost = 5
+	cost = 3
 	prerequisite = { focus = SOL_south_eastern_investment }
 	available = { eqs_not_has_civil_war = yes }
 
@@ -16274,7 +16271,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_imperial_unions
 
-	cost = 6
+	cost = 5
 	prerequisite = { focus = SOL_imperial_unions }
 	available = { eqs_not_has_civil_war = yes }
 
@@ -16294,7 +16291,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_imperial_production_committee
 
-	cost = 6
+	cost = 5
 	prerequisite = { focus = SOL_imperial_production_committee }
 	available = { eqs_not_has_civil_war = yes }
 
@@ -16314,7 +16311,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_imperial_production_committee
 
-	cost = 7
+	cost = 6
 	prerequisite = { focus = SOL_imperial_production_committee }
 	available = {
 		eqs_not_has_civil_war = yes
@@ -16376,7 +16373,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_mining_company_poaching
 
-	cost = 7
+	cost = 6
 	prerequisite = { focus = SOL_mining_company_poaching }
 	available = { eqs_not_has_civil_war = yes }
 
@@ -16384,14 +16381,18 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_project_starscream"
 		add_breakthrough_progress = {
 			specialization = specialization_land
-			value = 0.33
+			value = 0.5
 		}
 		75 = {
-			add_extra_state_shared_building_slots = 1
+			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
 				type = arms_factory
-				level = 1
+				level = 2
 				instant_build = yes
+			}
+			add_resource = {
+				type = steel
+				amount = 6
 			}
 		}
 		if = {
@@ -16440,7 +16441,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_mundane_and_arcane
 
-	cost = 8
+	cost = 6
 	prerequisite = { focus = SOL_mundane_and_arcane }
 	mutually_exclusive = { focus = SOL_establish_sol_victoria }
 	available = {
@@ -16483,7 +16484,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_magical_primacy
 
-	cost = 8
+	cost = 6
 	prerequisite = { focus = SOL_magical_primacy }
 	mutually_exclusive = { focus = SOL_promote_mit }
 	available = {
@@ -16536,7 +16537,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_tools_of_empire
 
-	cost = 7
+	cost = 6
 	prerequisite = { focus = SOL_tools_of_empire }
 	prerequisite = { focus = SOL_imperial_hoofbooks }
 	available = { eqs_not_has_civil_war = yes }
@@ -16554,7 +16555,7 @@ shared_focus = {
 shared_focus = {
 	id = SOL_bunsen_beaker_research
 	icon = GFX_focus_Computer_2
-	cost = 7
+	cost = 6
 	ai_will_do = { factor = 75 }
 	prerequisite = {
 		focus = SOL_imperial_hoofbooks
@@ -16582,7 +16583,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_revitalize_imperial_shipyards
 
-	cost = 6
+	cost = 5
 	prerequisite = { focus = SOL_revitalize_imperial_shipyards }
 	prerequisite = { focus = SOL_project_starscream }
 	available = { eqs_not_has_civil_war = yes }
@@ -16625,7 +16626,7 @@ shared_focus = {
 shared_focus = {
 	id = SOL_practical_magic_applications
 	icon = GFX_goal_eqs_magic_horn
-	cost = 6
+	cost = 5
 	ai_will_do = { factor = 84 }
 	prerequisite = {
 		focus = SOL_promote_mit
@@ -16665,7 +16666,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_establish_sol_victoria
 
-	cost = 6
+	cost = 5
 	prerequisite = { focus = SOL_establish_sol_victoria }
 	available = { eqs_not_has_civil_war = yes }
 
@@ -16698,7 +16699,7 @@ shared_focus = {
 shared_focus = {
 	id = SOL_annex_star_energy
 	icon = GFX_goal_eqs_star_energy
-	cost = 7
+	cost = 6
 	ai_will_do = { factor = 80 }
 	prerequisite = {
 		focus = SOL_imperial_hoofbooks
@@ -16761,7 +16762,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_bunsen_beaker_research
 
-	cost = 6
+	cost = 5
 	prerequisite = {
 		focus = SOL_bunsen_beaker_research
 		focus = SOL_practical_metal_applications
@@ -16797,7 +16798,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_grants_for_tithes
 
-	cost = 6
+	cost = 5
 	prerequisite = { focus = SOL_grants_for_tithes }
 	mutually_exclusive = { focus = SOL_exploit_bosom }
 	available = { eqs_not_has_civil_war = yes }
@@ -16817,7 +16818,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_grants_for_tithes
 
-	cost = 6
+	cost = 5
 	prerequisite = { focus = SOL_grants_for_tithes }
 	mutually_exclusive = { focus = SOL_bounties_of_earth }
 	available = { eqs_not_has_civil_war = yes }
@@ -16834,7 +16835,7 @@ shared_focus = {
 shared_focus = {
 	id = SOL_sanctum_solar_directorate
 	icon = GFX_goal_eqs_canterlot
-	cost = 9
+	cost = 7
 	dynamic = yes
 	ai_will_do = { factor = 200 }
 	prerequisite = {
@@ -16860,7 +16861,7 @@ shared_focus = {
 	id = SOL_expand_sol_invicta_academy
 	icon = GFX_goal_luna_nova
 	dynamic = yes
-	cost = 7
+	cost = 6
 	ai_will_do = { factor = 80 }
 	prerequisite = {
 		focus = SOL_practical_magic_applications
@@ -16892,7 +16893,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_annex_star_energy
 
-	cost = 7
+	cost = 6
 	prerequisite = {
 		focus = SOL_annex_star_energy
 		focus = SOL_new_radar
@@ -16914,7 +16915,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_new_radar
 
-	cost = 10
+	cost = 7
 	prerequisite = { focus = SOL_new_radar }
 	available = { eqs_not_has_civil_war = yes }
 
@@ -16937,7 +16938,7 @@ shared_focus = {
 shared_focus = {
 	id = SOL_ingrain_eea_authority
 	icon = GFX_goal_EEA
-	cost = 9
+	cost = 6
 	ai_will_do = { factor = 75 }
 	prerequisite = {
 		focus = SOL_sanctum_solar_directorate
@@ -16966,7 +16967,7 @@ shared_focus = {
 shared_focus = {
 	id = SOL_rewrite_eea_rules
 	icon = GFX_goal_ease_EEA
-	cost = 9
+	cost = 6
 	ai_will_do = { factor = 75 }
 	prerequisite = {
 		focus = SOL_sanctum_solar_directorate
