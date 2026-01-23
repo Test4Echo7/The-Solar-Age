@@ -14573,7 +14573,7 @@ country_event = { #Event for the other griffon countries to accept or reject the
                 factor = 0
             }
         }
-        custom_effect_tooltip = SOL_angy_birbs_tt
+        custom_effect_tooltip = SOL_furios_birbs_tt
         set_country_flag = SOL_rejected_GRI_integration
         FROM = {
             country_event = {

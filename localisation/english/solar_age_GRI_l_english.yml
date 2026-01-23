@@ -32,4 +32,4 @@
   FACTION_MEMBER_WITH_MOST_INFLUENCE:0 "§YFaction Member with the Most Influence§!:"
   SOL_GRI_reborn_tt:0 "We shall demand that all other members of §Y[ROOT.GetFactionName]§! §Rsubmit§! to us, that we may form a new, stronger §OGriffonian Empire§!!"
   SOL_no_fun_tt:0 "The §OGriffonian Empire§! is a §Rrelic§! of the past. We shall continue working together to ensure that griffons remain §Yfree§! of pony influence."
-  SOL_angy_birbs_tt:0 "§RRejecting [FROM.GetNameDef]'s demand could have grave consequences.§!"
+  SOL_furios_birbs_tt:0 "§RRejecting [FROM.GetNameDef]'s demand could have grave consequences.§!"
