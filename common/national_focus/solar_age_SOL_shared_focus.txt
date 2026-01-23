@@ -12428,7 +12428,7 @@ shared_focus = {
 		}
 	}
 
-	cost = 2
+	cost = 1
 	available = { has_completed_focus = SOL_Imperium_Solis }
 	allow_branch = {
 		is_EQS_SOL = yes
@@ -12437,9 +12437,9 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_modernize_relic"
-		army_experience = 20
-		air_experience = 10
-		navy_experience = 10
+		army_experience = 10
+		air_experience = 5
+		navy_experience = 5
 	}
 	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_AIRFORCE_BONUS FOCUS_FILTER_NAVY_BONUS }
 	ai_will_do = { factor = 100 }
@@ -12457,7 +12457,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_modernize_relic"
-		army_experience = 30
+		army_experience = 20
 	}
 	search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	ai_will_do = { factor = 150 }
@@ -12470,7 +12470,7 @@ shared_focus = {
 	icon = GFX_goal_inspect_officers
 	relative_position_id = SOL_establish_solaris_militarium
 
-	cost = 3
+	cost = 2
 	prerequisite = { focus = SOL_establish_solaris_militarium }
 
 	completion_reward = {
@@ -12489,7 +12489,7 @@ shared_focus = {
 	icon = GFX_goal_encourage_troops
 	relative_position_id = SOL_establish_solaris_militarium
 
-	cost = 3
+	cost = 2
 	prerequisite = { focus = SOL_establish_solaris_militarium }
 
 	completion_reward = {
@@ -12508,7 +12508,7 @@ shared_focus = {
 	icon = GFX_goal_break_out_blueprints
 	relative_position_id = SOL_inspect_officers
 
-	cost = 3
+	cost = 2
 	prerequisite = { focus = SOL_inspect_officers }
 
 	completion_reward = {
@@ -12516,7 +12516,7 @@ shared_focus = {
 		add_tech_bonus = {
 			name = armor_bonus
 			uses = 1
-			bonus = 1
+			bonus = 0.65
 			category = armor
 		}
 	}
@@ -12549,7 +12549,7 @@ shared_focus = {
 	icon = GFX_goal_imperial_factory_tour
 	relative_position_id = SOL_encourage_troops
 
-	cost = 3
+	cost = 2
 	prerequisite = { focus = SOL_encourage_troops }
 
 	completion_reward = {
@@ -12557,7 +12557,7 @@ shared_focus = {
 		add_tech_bonus = {
 			name = infantry_bonus
 			uses = 1
-			bonus = 1
+			bonus = 0.65
 			category = infantry_weapons
 		}
 	}
@@ -12572,7 +12572,7 @@ shared_focus = {
 	icon = GFX_goal_motivate_engineers
 	relative_position_id = SOL_encourage_troops
 
-	cost = 3
+	cost = 2
 	prerequisite = { focus = SOL_encourage_troops }
 
 	completion_reward = {
@@ -12580,7 +12580,7 @@ shared_focus = {
 		add_tech_bonus = {
 			name = support_bonus
 			uses = 1
-			bonus = 1
+			bonus = 0.65
 			category = support_tech
 		}
 	}
@@ -12595,7 +12595,7 @@ shared_focus = {
 	icon = GFX_goal_prevent_embarrassments
 	relative_position_id = SOL_break_out_blueprints
 
-	cost = 4
+	cost = 3
 	prerequisite = { focus = SOL_break_out_blueprints }
 	mutually_exclusive = { focus = SOL_traitors_reward }
 	mutually_exclusive = { focus = SOL_sun_shines }
@@ -12616,7 +12616,7 @@ shared_focus = {
 	icon = GFX_goal_traitors_reward
 	relative_position_id = SOL_rearrange_command
 
-	cost = 4
+	cost = 3
 	prerequisite = { focus = SOL_rearrange_command }
 	prerequisite = { focus = SOL_imperial_factory_tour }
 	mutually_exclusive = { focus = SOL_prevent_embarrassments }
@@ -12648,7 +12648,7 @@ shared_focus = {
 	icon = GFX_goal_sun_shines
 	relative_position_id = SOL_imperial_factory_tour
 
-	cost = 4
+	cost = 3
 	prerequisite = { focus = SOL_motivate_engineers }
 	mutually_exclusive = { focus = SOL_prevent_embarrassments }
 	mutually_exclusive = { focus = SOL_traitors_reward }
@@ -12671,7 +12671,7 @@ shared_focus = {
 shared_focus = {
 	id = SOL_new_officers
 	icon = GFX_goal_new_officers
-	cost = 6
+	cost = 5
 	ai_will_do = {
 		factor = 150
 	}
@@ -12739,7 +12739,7 @@ shared_focus = {
 	relative_position_id = SOL_safest_methods
 	icon = GFX_goal_byzantine_supply
 
-	cost = 5
+	cost = 4
 	prerequisite = { focus = SOL_safest_methods }
 
 	completion_reward = {
@@ -12781,7 +12781,7 @@ shared_focus = {
 	relative_position_id = SOL_byzantine_supply
 	icon = GFX_goal_combined_defenses
 
-	cost = 6
+	cost = 5
 	prerequisite = { focus = SOL_byzantine_supply }
 	prerequisite = { focus = SOL_digging_earth }
 
@@ -12789,13 +12789,13 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_combined_defenses"
 		add_tech_bonus = {
 			name = infantry_bonus
-			bonus = 1
+			bonus = 0.75
 			uses = 2
 			category = infantry_weapons
 		}
 		add_tech_bonus = {
 			name = motorized_bonus
-			bonus = 3
+			bonus = 2.5
 			uses = 1
 			category = motorized_equipment
 		}
@@ -12811,7 +12811,7 @@ shared_focus = {
 	relative_position_id = SOL_combined_defenses
 	icon = GFX_goal_efficient_clearing
 
-	cost = 7
+	cost = 5
 	prerequisite = { focus = SOL_combined_defenses }
 	mutually_exclusive = { focus = SOL_strike_iron }
 	available = {
@@ -12841,7 +12841,7 @@ shared_focus = {
 	relative_position_id = SOL_efficient_clearing
 	icon = GFX_goal_generational_leaps
 
-	cost = 5
+	cost = 6
 	prerequisite = { focus = SOL_efficient_clearing }
 	available = { has_war = yes }
 	continue_if_invalid = yes
@@ -12922,7 +12922,7 @@ shared_focus = {
 shared_focus = {
 	id = SOL_combined_assaults
 	icon = GFX_goal_generic_army_motorized
-	cost = 6
+	cost = 4
 	ai_will_do = {
 		factor = 40
 	}
@@ -12937,13 +12937,13 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_combined_assaults"
 		add_tech_bonus = {
 			name = infantry_bonus
-			bonus = 1
+			bonus = 0.75
 			uses = 2
 			category = infantry_weapons
 		}
 		add_tech_bonus = {
 			name = motorized_bonus
-			bonus = 1
+			bonus = 0.65
 			uses = 1
 			category = cat_mechanized_equipment
 			category = motorized_equipment
@@ -12959,7 +12959,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_combined_assaults
 
-	cost = 5
+	cost = 4
 	prerequisite = { focus = SOL_combined_assaults }
 	available = { has_war = yes }
 	continue_if_invalid = yes
@@ -12976,7 +12976,7 @@ shared_focus = {
 shared_focus = {
 	id = SOL_war_games
 	icon = GFX_goal_generic_army_doctrines
-	cost = 7
+	cost = 6
 	ai_will_do = {
 		factor = 45
 	}
@@ -13044,7 +13044,7 @@ shared_focus = {
 shared_focus = {
 	id = SOL_accept_truth
 	icon = GFX_goal_generic_army_tanks
-	cost = 4
+	cost = 3
 	ai_will_do = {
 		factor = 60
 	}
@@ -13069,7 +13069,7 @@ shared_focus = {
 shared_focus = {
 	id = SOL_operational_art
 	icon = GFX_goal_generic_army_doctrines
-	cost = 3
+	cost = 4
 	ai_will_do = {
 		factor = 30
 	}
@@ -13101,7 +13101,7 @@ shared_focus = {
 shared_focus = {
 	id = SOL_streamlined_firearms
 	icon = GFX_goal_continuous_reduce_training_time
-	cost = 5
+	cost = 4
 	ai_will_do = {
 		factor = 60
 	}
@@ -13133,7 +13133,7 @@ shared_focus = {
 	icon = GFX_goal_only_statistics
 	relative_position_id = SOL_operational_art
 
-	cost = 5
+	cost = 6
 	prerequisite = { focus = SOL_operational_art }
 	available = { has_war = yes }
 	continue_if_invalid = yes
@@ -13153,7 +13153,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_operational_art
 
-	cost = 6
+	cost = 4
 	prerequisite = {
 		focus = SOL_operational_art
 		focus = SOL_streamlined_firearms
@@ -13176,7 +13176,7 @@ shared_focus = {
 	y = 2
 	relative_position_id = SOL_streamlined_firearms
 
-	cost = 5
+	cost = 6
 	prerequisite = { focus = SOL_streamlined_firearms }
 	available = { has_war = yes }
 	continue_if_invalid = yes
@@ -13194,7 +13194,7 @@ shared_focus = {
 shared_focus = {
 	id = SOL_mage_army
 	icon = GFX_goal_generic_special_forces
-	cost = 4
+	cost = 3
 	ai_will_do = {
 		factor = 60
 	}
@@ -13230,7 +13230,7 @@ shared_focus = {
 shared_focus = {
 	id = SOL_mysterious_magic
 	icon = GFX_goal_continuous_research
-	cost = 6
+	cost = 5
 	ai_will_do = {
 		factor = 50
 	}
@@ -13264,7 +13264,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_mysterious_magic
 
-	cost = 6
+	cost = 5
 	prerequisite = { focus = SOL_mysterious_magic }
 
 	completion_reward = {
@@ -13279,7 +13279,7 @@ shared_focus = {
 shared_focus = {
 	id = SOL_magitech_integration
 	icon = GFX_focus_secret_rearmament
-	cost = 5
+	cost = 4
 	ai_will_do = {
 		factor = 70
 	}
@@ -13299,7 +13299,7 @@ shared_focus = {
 shared_focus = {
 	id = SOL_magical_adaptations
 	icon = GFX_goal_generic_army_doctrines
-	cost = 7
+	cost = 5
 	ai_will_do = {
 		factor = 30
 	}
@@ -13385,7 +13385,7 @@ shared_focus = {
 	relative_position_id = SOL_communication_key
 	icon = GFX_goal_strike_iron
 
-	cost = 6
+	cost = 5
 	prerequisite = { focus = SOL_communication_key }
 	mutually_exclusive = { focus = SOL_efficient_clearing }
 	available = { has_war = yes }
@@ -13417,7 +13417,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_hoof_of_empress
 
-	cost = 5
+	cost = 4
 	prerequisite = {
 		focus = SOL_hoof_of_empress
 		focus = SOL_imperial_workhorses
@@ -13501,7 +13501,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_imperial_workhorses
 
-	cost = 5
+	cost = 4
 	prerequisite = {
 		focus = SOL_imperial_workhorses
 		focus = SOL_mage_army
@@ -13511,9 +13511,10 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_mobile_cannons"
 		add_tech_bonus = {
 			name = heavy_tank_bonus
-			uses = 2
+			uses = 1
 			bonus = 1
 			category = cat_heavy_armor
+			ahead_reduction = 0.5
 		}
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH }
@@ -13526,7 +13527,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_mage_army
 
-	cost = 4
+	cost = 3
 	prerequisite = {
 		focus = SOL_imperial_workhorses
 		focus = SOL_mage_army
@@ -13537,7 +13538,7 @@ shared_focus = {
 		add_tech_bonus = {
 			name = motorized_bonus
 			uses = 1
-			bonus = 3
+			bonus = 2.5
 			category = motorized_equipment
 		}
 	}
@@ -13619,7 +13620,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_mighty_hoofs"
-		air_experience = 50
+		air_experience = 35
 	}
 	search_filters = { FOCUS_FILTER_AIRFORCE_BONUS }
 	ai_will_do = { factor = 50 }
@@ -13650,7 +13651,7 @@ shared_focus = {
 	relative_position_id = SOL_abolish_wonderbolts
 	icon = GFX_goal_striking_battlefield
 
-	cost = 5
+	cost = 3
 	prerequisite = { focus = SOL_abolish_wonderbolts }
 	mutually_exclusive = { focus = SOL_punishing_world }
 
@@ -13686,7 +13687,7 @@ shared_focus = {
 	relative_position_id = SOL_abolish_wonderbolts
 	icon = GFX_goal_punishing_world
 
-	cost = 5
+	cost = 3
 	prerequisite = { focus = SOL_abolish_wonderbolts }
 	mutually_exclusive = { focus = SOL_striking_battlefield }
 
@@ -13739,7 +13740,7 @@ shared_focus = {
 	relative_position_id = SOL_striking_battlefield
 	icon = GFX_goal_fear_tactics
 
-	cost = 5
+	cost = 4
 	prerequisite = { focus = SOL_striking_battlefield }
 	mutually_exclusive = { focus = SOL_sky_flexibility }
 
@@ -13759,7 +13760,7 @@ shared_focus = {
 	relative_position_id = SOL_abolish_wonderbolts
 	icon = GFX_goal_sky_flexibility
 
-	cost = 5
+	cost = 4
 	prerequisite = { focus = SOL_abolish_wonderbolts }
 	mutually_exclusive = { focus = SOL_fear_tactics }
 
@@ -13806,7 +13807,7 @@ shared_focus = {
 	relative_position_id = SOL_punishing_world
 	icon = GFX_goal_streamline_expenses
 
-	cost = 5
+	cost = 4
 	prerequisite = { focus = SOL_punishing_world }
 
 	completion_reward = {
@@ -13824,7 +13825,7 @@ shared_focus = {
 	relative_position_id = SOL_durable_frames
 	icon = GFX_goal_reinforced_bomb_struts
 
-	cost = 5
+	cost = 4
 	prerequisite = { focus = SOL_durable_frames }
 
 	completion_reward = {
@@ -13864,7 +13865,7 @@ shared_focus = {
 	relative_position_id = SOL_sky_flexibility
 	icon = GFX_goal_field_tests
 
-	cost = 5
+	cost = 4
 	prerequisite = { focus = SOL_sky_flexibility }
 
 	completion_reward = {
@@ -13883,7 +13884,7 @@ shared_focus = {
 	relative_position_id = SOL_streamline_expenses
 	icon = GFX_goal_invisible_eyes
 
-	cost = 4
+	cost = 3
 	prerequisite = {
 		focus = SOL_sky_flexibility
 		focus = SOL_streamline_expenses
@@ -13895,7 +13896,7 @@ shared_focus = {
 			limit = { has_dlc = "By Blood Alone" }
 			add_tech_bonus = {
 				name = engine_bonus
-				bonus = 1
+				bonus = 0.65
 				uses = 1
 				category = cat_air_engine
 			}
@@ -13913,7 +13914,7 @@ shared_focus = {
 				add_tech_bonus = {
 				name = scout_plane_bonus
 				uses = 1
-				bonus = 3
+				bonus = 2.5
 				category = cat_scout_plane
 			}
 		}
@@ -13937,7 +13938,7 @@ shared_focus = {
 	relative_position_id = SOL_punishing_world
 	icon = GFX_goal_adequate_defense
 
-	cost = 5
+	cost = 4
 	prerequisite = { focus = SOL_punishing_world }
 
 	completion_reward = {
@@ -13947,7 +13948,7 @@ shared_focus = {
 			add_tech_bonus = {
 				name = cat_air_guns
 				uses = 1
-				bonus = 1
+				bonus = 0.75
 				category = cat_air_guns
 			}
 		}
@@ -14018,13 +14019,13 @@ shared_focus = {
 			add_tech_bonus = {
 				name = cas_bonus
 				uses = 1
-				bonus = 0.75
+				bonus = 1
 				category = cas_bomber
 			}
 			add_tech_bonus = {
 				name = cat_air_bombs
 				uses = 1
-				bonus = 1
+				bonus = 0.75
 				category = cat_air_bombs
 			}
 		}
@@ -14049,7 +14050,7 @@ shared_focus = {
 	relative_position_id = SOL_invisible_eyes
 	icon = GFX_goal_hero_program
 
-	cost = 6
+	cost = 5
 	prerequisite = { focus = SOL_invisible_eyes }
 	mutually_exclusive = { focus = SOL_flying_castles }
 
@@ -14069,7 +14070,7 @@ shared_focus = {
 	relative_position_id = SOL_adequate_defense
 	icon = GFX_goal_flying_castles
 
-	cost = 6
+	cost = 5
 	prerequisite = { focus = SOL_adequate_defense }
 	mutually_exclusive = { focus = SOL_hero_program }
 
@@ -14094,7 +14095,7 @@ shared_focus = {
 	relative_position_id = SOL_reinforced_bomb_struts
 	icon = GFX_goal_holy_deliverance
 
-	cost = 5
+	cost = 4
 	prerequisite = { focus = SOL_reinforced_bomb_struts }
 
 	completion_reward = {
@@ -14113,7 +14114,7 @@ shared_focus = {
 	relative_position_id = SOL_hero_program
 	icon = GFX_goal_additional_prototypes
 
-	cost = 4
+	cost = 3
 	prerequisite = { focus = SOL_hero_program }
 
 	completion_reward = {
@@ -14129,7 +14130,7 @@ shared_focus = {
 			add_tech_bonus = {
 				name = fighter_bonus
 				uses = 1
-				bonus = 1
+				bonus = 0.65
 				category = light_air
 			}
 		}
@@ -14137,14 +14138,14 @@ shared_focus = {
 			add_tech_bonus = {
 				name = fighter_bonus
 				uses = 1
-				bonus = 1
+				bonus = 0.65
 				category = light_fighter
 			}
 		}
 		add_tech_bonus = {
 			name = heavy_fighter_bonus
 			uses = 1
-			bonus = 1
+			bonus = 0.65
 			category = cat_heavy_fighter
 		}
 	}
@@ -14159,7 +14160,7 @@ shared_focus = {
 	relative_position_id = SOL_hero_program
 	icon = GFX_goal_fire_from_sky
 
-	cost = 5
+	cost = 4
 	available = {
 		has_completed_focus = SOL_punishing_world
 	}
@@ -14215,7 +14216,7 @@ shared_focus = {
 	relative_position_id = SOL_hero_program
 	icon = GFX_goal_modern_bombers
 
-	cost = 4
+	cost = 3
 	prerequisite = { focus = SOL_hero_program }
 
 	completion_reward = {
@@ -14226,7 +14227,7 @@ shared_focus = {
 			}
 			add_tech_bonus = {
 				name = air_modules_bonus
-				bonus = 0.66
+				bonus = 0.65
 				uses = 1
 				category = plane_modules_tech
 			}
@@ -14234,7 +14235,7 @@ shared_focus = {
 		add_tech_bonus = {
 			name = bomber_bonus
 			uses = 1
-			bonus = 1.25
+			bonus = 1
 			category = tactical_bomber
 		}
 	}
@@ -14276,7 +14277,7 @@ shared_focus = {
 	relative_position_id = SOL_targeted_destruction
 	icon = GFX_goal_deliver_death
 
-	cost = 8
+	cost = 6
 	prerequisite = { focus = SOL_targeted_destruction }
 
 	completion_reward = {
@@ -14336,7 +14337,7 @@ shared_focus = {
 	relative_position_id = SOL_area_bombardment
 	icon = GFX_goal_desolation_engines
 
-	cost = 8
+	cost = 6
 	prerequisite = { focus = SOL_area_bombardment }
 
 	completion_reward = {
@@ -14397,7 +14398,7 @@ shared_focus = {
 	relative_position_id = SOL_targeted_destruction
 	icon = GFX_goal_judge_ground
 
-	cost = 5
+	cost = 6
 	prerequisite = { focus = SOL_targeted_destruction }
 	mutually_exclusive = { focus = SOL_order_skies }
 	mutually_exclusive = { focus = SOL_heavenly_backdrop }
@@ -14420,7 +14421,7 @@ shared_focus = {
 	relative_position_id = SOL_deliver_death
 	icon = GFX_goal_order_skies
 
-	cost = 5
+	cost = 6
 	prerequisite = {
 		focus = SOL_deliver_death
 		focus = SOL_desolation_engines
@@ -14446,7 +14447,7 @@ shared_focus = {
 	relative_position_id = SOL_area_bombardment
 	icon = GFX_goal_heavenly_backdrop
 
-	cost = 5
+	cost = 6
 	prerequisite = { focus = SOL_area_bombardment }
 	mutually_exclusive = { focus = SOL_judge_ground }
 	mutually_exclusive = { focus = SOL_order_skies }
@@ -14574,7 +14575,7 @@ shared_focus = {
 	relative_position_id = SOL_order_skies
 	icon = GFX_goal_skyborn
 
-	cost = 7
+	cost = 6
 	prerequisite = {
 		focus = SOL_judge_ground
 		focus = SOL_order_skies
@@ -14597,7 +14598,7 @@ shared_focus = {
 	relative_position_id = SOL_modernize_relic
 	icon = GFX_goal_rebuild_admiralty
 
-	cost = 4
+	cost = 2
 	prerequisite = { focus = SOL_modernize_relic }
 	available = {
 		OR = {
@@ -14622,7 +14623,7 @@ shared_focus = {
 	relative_position_id = SOL_rebuild_admiralty
 	icon = GFX_goal_scraping_barrels
 
-	cost = 7
+	cost = 5
 	prerequisite = { focus = SOL_rebuild_admiralty }
 
 	completion_reward = {
@@ -14723,7 +14724,7 @@ shared_focus = {
 	relative_position_id = SOL_rebuild_admiralty
 	icon = GFX_goal_saltless_blood
 
-	cost = 6
+	cost = 5
 	prerequisite = { focus = SOL_rebuild_admiralty }
 
 	completion_reward = {
@@ -14742,7 +14743,7 @@ shared_focus = {
 	relative_position_id = SOL_rebuild_admiralty
 	icon = GFX_goal_practical_needs
 
-	cost = 4
+	cost = 3
 	prerequisite = { focus = SOL_rebuild_admiralty }
 
 	completion_reward = {
@@ -14750,7 +14751,7 @@ shared_focus = {
 		add_tech_bonus = {
 			name = dd_bonus
 			uses = 2
-			bonus = 1
+			bonus = 0.75
 			category = dd_tech
 		}
 	}
@@ -14765,7 +14766,7 @@ shared_focus = {
 	relative_position_id = SOL_rebuild_admiralty
 	icon = GFX_goal_strong_dissuasion
 
-	cost = 4
+	cost = 3
 	prerequisite = { focus = SOL_rebuild_admiralty }
 
 	completion_reward = {
@@ -14773,7 +14774,7 @@ shared_focus = {
 		add_tech_bonus = {
 			name = ca_bonus
 			uses = 2
-			bonus = 1
+			bonus = 0.75
 			category = ca_tech
 		}
 	}
@@ -14788,7 +14789,7 @@ shared_focus = {
 	relative_position_id = SOL_practical_needs
 	icon = GFX_goal_surrender_waves
 
-	cost = 5
+	cost = 3
 	prerequisite = {
 		focus = SOL_practical_needs
 		focus = SOL_strong_dissuasion
@@ -14827,7 +14828,7 @@ shared_focus = {
 	relative_position_id = SOL_practical_needs
 	icon = GFX_goal_crushing_sea
 
-	cost = 5
+	cost = 3
 	prerequisite = {
 		focus = SOL_practical_needs
 		focus = SOL_strong_dissuasion
@@ -14916,7 +14917,7 @@ shared_focus = {
 	relative_position_id = SOL_practical_needs
 	icon = GFX_goal_semper_fi
 
-	cost = 5
+	cost = 4
 	prerequisite = {
 		focus = SOL_practical_needs
 		focus = SOL_strong_dissuasion
@@ -14997,7 +14998,7 @@ shared_focus = {
 	relative_position_id = SOL_mobile_airfields
 	icon = GFX_goal_birds_of_water
 
-	cost = 5
+	cost = 4
 	prerequisite = { focus = SOL_mobile_airfields }
 
 	completion_reward = {
@@ -15008,13 +15009,13 @@ shared_focus = {
 			add_tech_bonus = {
 				name = naval_air
 				uses = 1
-				bonus = 1
+				bonus = 0.75
 				category = naval_air
 			}
 			add_tech_bonus = {
 				name = plane_modules_tech
 				uses = 1
-				bonus = 1
+				bonus = 0.5
 				category = plane_modules_tech
 			}
 		}
@@ -15022,7 +15023,7 @@ shared_focus = {
 			add_tech_bonus = {
 				name = naval_bomber
 				uses = 1
-				bonus = 1
+				bonus = 0.75
 				category = naval_bomber
 			}
 		}
@@ -15038,7 +15039,7 @@ shared_focus = {
 	relative_position_id = SOL_mobile_airfields
 	icon = GFX_goal_modern_sea
 
-	cost = 6
+	cost = 5
 	prerequisite = { focus = SOL_mobile_airfields }
 
 	completion_reward = {
@@ -15056,16 +15057,17 @@ shared_focus = {
 	relative_position_id = SOL_semper_fi
 	icon = GFX_goal_grand_expeditions
 
-	cost = 4
+	cost = 3
 	prerequisite = { focus = SOL_semper_fi }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_grand_expeditions"
 		add_tech_bonus = {
 			name = tp_bonus
-			uses = 2
+			uses = 1
 			bonus = 1
 			category = tp_tech
+			ahead_reduction = 0.5
 		}
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH }
@@ -15098,7 +15100,7 @@ shared_focus = {
 	relative_position_id = SOL_birds_of_water
 	icon = GFX_goal_floating_cities
 
-	cost = 7
+	cost = 5
 	prerequisite = { focus = SOL_birds_of_water }
 	prerequisite = { focus = SOL_modern_sea }
 	mutually_exclusive = { focus = SOL_long_range_strikers }
@@ -15124,7 +15126,7 @@ shared_focus = {
 	relative_position_id = SOL_fillydelphia_rivalry
 	icon = GFX_goal_long_range_strikers
 
-	cost = 7
+	cost = 5
 	prerequisite = { focus = SOL_fillydelphia_rivalry }
 	mutually_exclusive = { focus = SOL_floating_cities }
 
@@ -15149,7 +15151,7 @@ shared_focus = {
 	relative_position_id = SOL_grand_expeditions
 	icon = GFX_goal_roach_guards
 
-	cost = 7
+	cost = 5
 	prerequisite = { focus = SOL_grand_expeditions }
 	mutually_exclusive = { focus = SOL_magisteel_plating }
 
@@ -15174,7 +15176,7 @@ shared_focus = {
 	relative_position_id = SOL_expand_manehattan_dockyards
 	icon = GFX_goal_magisteel_plating
 
-	cost = 7
+	cost = 5
 	prerequisite = { focus = SOL_expand_manehattan_dockyards }
 	mutually_exclusive = { focus = SOL_roach_guards }
 
@@ -15261,7 +15263,7 @@ shared_focus = {
 	relative_position_id = SOL_imperial_dreadnoughts
 	icon = GFX_goal_practical_reductions
 
-	cost = 5
+	cost = 4
 	prerequisite = { focus = SOL_imperial_dreadnoughts }
 	mutually_exclusive = { focus = SOL_sea_fortress }
 
@@ -15280,7 +15282,7 @@ shared_focus = {
 	relative_position_id = SOL_imperial_dreadnoughts
 	icon = GFX_goal_sea_fortress
 
-	cost = 5
+	cost = 4
 	prerequisite = { focus = SOL_imperial_dreadnoughts }
 	mutually_exclusive = { focus = SOL_practical_reductions }
 
@@ -15300,7 +15302,7 @@ shared_focus = {
 	relative_position_id = SOL_swarms_upon_sea
 	icon = GFX_goal_adapt_tide
 
-	cost = 5
+	cost = 6
 	prerequisite = { focus = SOL_swarms_upon_sea }
 
 	completion_reward = {
@@ -15322,7 +15324,7 @@ shared_focus = {
 	relative_position_id = SOL_old_guns
 	icon = GFX_goal_steady_going
 
-	cost = 5
+	cost = 6
 	prerequisite = { focus = SOL_old_guns }
 
 	completion_reward = {
