@@ -4817,7 +4817,13 @@ shared_focus = {
 		}
 	}
 	search_filters = { FOCUS_FILTER_ANNEXATION }
-	ai_will_do = { factor = 30 }
+	ai_will_do = {
+		factor = 30
+		modifier = {
+			factor = 0.1
+			has_war = yes
+		}
+	}
 }
 
 shared_focus = {
@@ -4876,6 +4882,10 @@ shared_focus = {
 	cost = 5
 	ai_will_do = {
 		factor = 35
+		modifier = {
+			factor = 0.1
+			has_war = yes
+		}
 	}
 	relative_position_id = SOL_reconquer_cry
 	x = 0
@@ -4963,6 +4973,10 @@ shared_focus = {
 	cost = 5
 	ai_will_do = {
 		factor = 35
+		modifier = {
+			factor = 0.1
+			has_war = yes
+		}
 	}
 	relative_position_id = SOL_reconquer_stg
 	x = 0
@@ -5681,7 +5695,13 @@ shared_focus = {
 		#Later gain a decision, with an event, to decide on the fate of Manedalusia, on whether they become an independent puppet, or they remain the territory of either MGY or SOL; if the latter, MGY cores them, whereas SOL gains 15% compliance
 	}
 	search_filters = { FOCUS_FILTER_ANNEXATION }
-	ai_will_do = { factor = 25 }
+	ai_will_do = {
+		factor = 25
+		modifier = {
+			factor = 0.1
+			has_war = yes
+		}
+	}
 }
 
 shared_focus = {
@@ -5746,7 +5766,13 @@ shared_focus = {
 		}
 	}
 	search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY }
-	ai_will_do = { factor = 40 }
+	ai_will_do = {
+		factor = 40
+		modifier = {
+			has_completed_focus = SOL_god_empress
+			factor = 2
+		}
+	}
 }
 
 shared_focus = {
@@ -5856,7 +5882,13 @@ shared_focus = {
 		}
 	}
 	search_filters = { FOCUS_FILTER_ANNEXATION }
-	ai_will_do = { factor = 60 }
+	ai_will_do = {
+		factor = 60
+		modifier = {
+			has_completed_focus = SOL_empress_mother
+			factor = 1.5
+		}
+	}
 }
 
 shared_focus = {
@@ -7074,7 +7106,7 @@ shared_focus = {
 		###Event of Daybreaker leading an army to attack The Cave, where the artifacts of Maretonia are kept, and she gets into combat with the MTA leader, who is their most powerful mage, and she gets into a proper challenge with him, and almost loses out, aside from her playing dirty to get in, and she ultimately wins, and mocks him as he perishes
 		country_event = solarreworked.391
 	}
-	search_filters = { FOCUS_FILTER_ANNEXATION }
+	search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	ai_will_do = { factor = 100 }
 }
 
