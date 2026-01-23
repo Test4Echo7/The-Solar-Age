@@ -23,54 +23,54 @@ EQS_debug_category = {
     #        set_technology = { EQS_super_cas_bba = 1 }
     #    }
     #}
-    EQS_test_EQC_fix_decision = {
-        allowed = {
-            tag = EQS
-        }
-        available = {
-            EQC = {
-                exists = no
-                all_cores_owned_by_ROOT = yes
-            }
-        }
-        complete_effect = {
-            release = EQC
-            set_autonomy = {
-                target = EQC
-                autonomous_state = autonomy_reichsprotectorate
-            }
-            EQS_SOL_arcane_nova = {
-                set_nationality = EQC
-            }
-            EQC = {
-                set_cosmetic_tag = EQC_SOL
-                set_party_name = { ideology = fascism long_name = EQC_SOL_fascism_party_long name = EQC_SOL_fascism_party }
-                if = {
-                    limit = {
-                        has_country_flag = EQC_destined_to_be_an_RK
-                    }
-                    PREV = { set_autonomy = { target = ROOT autonomy_state = autonomy_reichskommissariat } }
-                }
-                load_focus_tree = eqc_sol_focus
-                set_global_flag = SOL_chose_EQC_leader
-                hidden_effect = { set_province_name = { id = 10005 name = "Sunset" } }
-            }
-            every_possible_country = {
-                limit = { has_character = EQS_SOL_arcane_nova }
-                EQS_SOL_arcane_nova = {
-                    add_country_leader_role = {
-                        promote_leader = yes
-                        country_leader = {
-                            desc = "fancy_albino_sunhorse_desc"
-                            expire = "1965.1.1"
-                            ideology = falangism
-                            traits = { empresss_representative }
-                        }
-                    }
-                }
-            }
-        }
-    }
+    #EQS_test_EQC_fix_decision = {
+    #    allowed = {
+    #        tag = EQS
+    #    }
+    #    available = {
+    #        EQC = {
+    #            exists = no
+    #            all_cores_owned_by_ROOT = yes
+    #        }
+    #    }
+    #    complete_effect = {
+    #        release = EQC
+    #        set_autonomy = {
+    #            target = EQC
+    #            autonomous_state = autonomy_reichsprotectorate
+    #        }
+    #        EQS_SOL_arcane_nova = {
+    #            set_nationality = EQC
+    #        }
+    #        EQC = {
+    #            set_cosmetic_tag = EQC_SOL
+    #            set_party_name = { ideology = fascism long_name = EQC_SOL_fascism_party_long name = EQC_SOL_fascism_party }
+    #            if = {
+    #                limit = {
+    #                    has_country_flag = EQC_destined_to_be_an_RK
+    #                }
+    #                PREV = { set_autonomy = { target = ROOT autonomy_state = autonomy_reichskommissariat } }
+    #            }
+    #            load_focus_tree = eqc_sol_focus
+    #            set_global_flag = SOL_chose_EQC_leader
+    #            hidden_effect = { set_province_name = { id = 10005 name = "Sunset" } }
+    #        }
+    #        every_possible_country = {
+    #            limit = { has_character = EQS_SOL_arcane_nova }
+    #            EQS_SOL_arcane_nova = {
+    #                add_country_leader_role = {
+    #                    promote_leader = yes
+    #                    country_leader = {
+    #                        desc = "fancy_albino_sunhorse_desc"
+    #                        expire = "1965.1.1"
+    #                        ideology = falangism
+    #                        traits = { empresss_representative }
+    #                    }
+    #                }
+    #            }
+    #        }
+    #    }
+    #}
     #EQS_test_swap_advisor_trait = {
     #    allowed = {
     #        tag = EQS
