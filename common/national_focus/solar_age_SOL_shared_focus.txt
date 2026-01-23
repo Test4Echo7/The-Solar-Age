@@ -13917,6 +13917,14 @@ shared_focus = {
 				category = cat_scout_plane
 			}
 		}
+		else = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 0.33
+				uses = 1
+				category = light_fighter
+			}
+		}
 	}
 	search_filters = { FOCUS_FILTER_AIRFORCE_BONUS }
 	ai_will_do = { factor = 35 }
@@ -14600,8 +14608,8 @@ shared_focus = {
 	}
 
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_skyborn"
-		navy_experience = 50
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_rebuild_admiralty"
+		navy_experience = 35
 	}
 	search_filters = { FOCUS_FILTER_NAVY_BONUS }
 	ai_will_do = { factor = 40 }
@@ -14627,146 +14635,81 @@ shared_focus = {
 		}
         custom_effect_tooltip = SOL_who_called_in_the_fleet_tt
         hidden_effect = {
-            if = {
-                limit = { has_dlc = "Man the Guns" }
-                create_ship = {
-                    type = ship_hull_light_1
-                    equipment_variant = "Ardent Class"
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = ship_hull_light_1
-                    equipment_variant = "Ardent Class"
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = ship_hull_light_1
-                    equipment_variant = "Ardent Class"
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = ship_hull_light_1
-                    equipment_variant = "Ardent Class"
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = ship_hull_light_1
-                    equipment_variant = "Ardent Class"
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = ship_hull_light_1
-                    equipment_variant = "Ardent Class"
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = ship_hull_light_1
-                    equipment_variant = "Ardent Class"
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = ship_hull_light_1
-                    equipment_variant = "Ardent Class"
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = ship_hull_light_1
-                    equipment_variant = "Ardent Class"
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = ship_hull_light_1
-                    equipment_variant = "Ardent Class"
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = ship_hull_cruiser_1
-                    equipment_variant = "Emerald Class"
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = ship_hull_cruiser_1
-                    equipment_variant = "Emerald Class"
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = ship_hull_cruiser_1
-                    equipment_variant = "Emerald Class"
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = ship_hull_cruiser_1
-                    equipment_variant = "Canterlot Class"
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = ship_hull_cruiser_1
-                    equipment_variant = "Canterlot Class"
-                    creator = ROOT
-                }
-            }
-            else = {
-                create_ship = {
-                    type = destroyer_1
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = destroyer_1
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = destroyer_1
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = destroyer_1
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = destroyer_1
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = destroyer_1
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = destroyer_1
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = destroyer_1
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = destroyer_1
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = destroyer_1
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = light_cruiser_1
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = light_cruiser_1
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = light_cruiser_1
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = heavy_cruiser_1
-                    creator = ROOT
-                }
-                create_ship = {
-                    type = heavy_cruiser_1
-                    creator = ROOT
-                }
-            }
+			create_ship = {
+				type = ship_hull_light_1
+				equipment_variant = "Ardent Class"
+				creator = ROOT
+			}
+			create_ship = {
+				type = ship_hull_light_1
+				equipment_variant = "Ardent Class"
+				creator = ROOT
+			}
+			create_ship = {
+				type = ship_hull_light_1
+				equipment_variant = "Ardent Class"
+				creator = ROOT
+			}
+			create_ship = {
+				type = ship_hull_light_1
+				equipment_variant = "Ardent Class"
+				creator = ROOT
+			}
+			create_ship = {
+				type = ship_hull_light_1
+				equipment_variant = "Ardent Class"
+				creator = ROOT
+			}
+			create_ship = {
+				type = ship_hull_light_1
+				equipment_variant = "Ardent Class"
+				creator = ROOT
+			}
+			create_ship = {
+				type = ship_hull_light_1
+				equipment_variant = "Ardent Class"
+				creator = ROOT
+			}
+			create_ship = {
+				type = ship_hull_light_1
+				equipment_variant = "Ardent Class"
+				creator = ROOT
+			}
+			create_ship = {
+				type = ship_hull_light_1
+				equipment_variant = "Ardent Class"
+				creator = ROOT
+			}
+			create_ship = {
+				type = ship_hull_light_1
+				equipment_variant = "Ardent Class"
+				creator = ROOT
+			}
+			create_ship = {
+				type = ship_hull_cruiser_1
+				equipment_variant = "Emerald Class"
+				creator = ROOT
+			}
+			create_ship = {
+				type = ship_hull_cruiser_1
+				equipment_variant = "Emerald Class"
+				creator = ROOT
+			}
+			create_ship = {
+				type = ship_hull_cruiser_1
+				equipment_variant = "Emerald Class"
+				creator = ROOT
+			}
+			create_ship = {
+				type = ship_hull_cruiser_1
+				equipment_variant = "Canterlot Class"
+				creator = ROOT
+			}
+			create_ship = {
+				type = ship_hull_cruiser_1
+				equipment_variant = "Canterlot Class"
+				creator = ROOT
+			}
         }
 	}
 	search_filters = { FOCUS_FILTER_NAVY_BONUS }
