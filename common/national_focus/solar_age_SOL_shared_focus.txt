@@ -1517,6 +1517,7 @@ shared_focus = {
 	x = -2
 	y = 1
 	relative_position_id = SOL_empress_mother
+	icon = GFX_goal_harmonys_exemplar
 
 	cost = 5
 	prerequisite = { focus = SOL_empress_mother }
@@ -12694,7 +12695,7 @@ shared_focus = {
 ###Grand Battleplan###
 shared_focus = {
 	id = SOL_safest_methods
-	icon = GFX_goal_generic_position_armies
+	icon = GFX_goal_safest_methods
 	cost = 3
 	ai_will_do = {
 		factor = 80
@@ -12736,6 +12737,7 @@ shared_focus = {
 	x = -2
 	y = 1
 	relative_position_id = SOL_safest_methods
+	icon = GFX_goal_byzantine_supply
 
 	cost = 5
 	prerequisite = { focus = SOL_safest_methods }
@@ -12754,6 +12756,7 @@ shared_focus = {
 	x = 0
 	y = 1
 	relative_position_id = SOL_safest_methods
+	icon = GFX_goal_digging_earth
 
 	cost = 4
 	prerequisite = { focus = SOL_safest_methods }
@@ -12776,6 +12779,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	relative_position_id = SOL_byzantine_supply
+	icon = GFX_goal_combined_defenses
 
 	cost = 6
 	prerequisite = { focus = SOL_byzantine_supply }
@@ -12805,6 +12809,7 @@ shared_focus = {
 	x = 0
 	y = 1
 	relative_position_id = SOL_combined_defenses
+	icon = GFX_goal_efficient_clearing
 
 	cost = 7
 	prerequisite = { focus = SOL_combined_defenses }
@@ -12834,6 +12839,7 @@ shared_focus = {
 	x = 0
 	y = 1
 	relative_position_id = SOL_efficient_clearing
+	icon = GFX_goal_generational_leaps
 
 	cost = 5
 	prerequisite = { focus = SOL_efficient_clearing }
@@ -13351,6 +13357,7 @@ shared_focus = {
 	x = 2
 	y = 1
 	relative_position_id = SOL_digging_earth
+	icon = GFX_goal_communication_key
 
 	cost = 4
 	prerequisite = {
@@ -13376,6 +13383,7 @@ shared_focus = {
 	x = -1
 	y = 1
 	relative_position_id = SOL_communication_key
+	icon = GFX_goal_strike_iron
 
 	cost = 6
 	prerequisite = { focus = SOL_communication_key }

@@ -123,6 +123,10 @@ SpriteTypes = {
         name = GFX_goal_empress_mother_new
         texturefile = "gfx/interface/goals/EQS/empress_mother.tga"
     }
+    SpriteType = {
+        name = GFX_goal_harmonys_exemplar
+        texturefile = "gfx/interface/goals/EQS/harmonys_exemplar.tga"
+    }
 
     ###Fallen Hero###
     SpriteType = {
@@ -175,6 +179,39 @@ SpriteTypes = {
         name = GFX_goal_new_officers
         texturefile = "gfx/interface/goals/EQS/new_officers.tga"
     }
+    SpriteType = {
+        name = GFX_goal_safest_methods
+        texturefile = "gfx/interface/goals/EQS/safest_methods.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_byzantine_supply
+        texturefile = "gfx/interface/goals/EQS/byzantine_supply.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_digging_earth
+        texturefile = "gfx/interface/goals/EQS/digging_earth.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_combined_defenses
+        texturefile = "gfx/interface/goals/EQS/combined_defenses.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_efficient_clearing
+        texturefile = "gfx/interface/goals/EQS/efficient_clearing.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_generational_leaps
+        texturefile = "gfx/interface/goals/EQS/generational_leaps.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_communication_key
+        texturefile = "gfx/interface/goals/EQS/communication_key.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_strike_iron
+        texturefile = "gfx/interface/goals/EQS/strike_iron.tga"
+    }
+
     SpriteType = {
         name = GFX_goal_only_statistics
         texturefile = "gfx/interface/goals/EQS/only_statistics.tga"

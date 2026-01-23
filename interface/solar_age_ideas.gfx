@@ -46,6 +46,16 @@ SpriteTypes = {
         textureFile = "gfx/interface/ideas/SOL/SOL_imperial_emergencies_act_idea.tga"
     }
 
+    ###Army###
+    SpriteType = {
+        name = "GFX_idea_SOL_iterative_planning"
+        textureFile = "gfx/interface/ideas/SOL/SOL_iterative_planning.tga"
+    }
+    SpriteType = {
+        name = "GFX_idea_SOL_motorized_spearheads"
+        textureFile = "gfx/interface/ideas/SOL/SOL_motorized_spearheads.tga"
+    }
+
     ###Navy###
     SpriteType = {
         name = "GFX_idea_SOL_coordinated_carrier_classes"
