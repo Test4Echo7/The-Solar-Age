@@ -14653,6 +14653,18 @@ country_event = { #Event for the response of the griffon countries that were pro
     }
 }
 
+country_event = { #Remove STG and STL as original cores from EQS, since that makes the two coring focuses pointless
+    id = solarreworked.541
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.541"}
+    hidden = yes
+
+    is_triggered_only = yes
+
+    option = { #Fix yo' mod, EaW.
+        clear_array = ROOT.potential_original_cores
+    }
+}
+
 ###Operation Events###
 country_event = { #Luna is awoken in her new cell as Daybreaker enters the dungeons of the palace, and Daybreaker sees how pathetic Luna now is and how her defiance will end, and Luna is adamant that she will not beg nor plead for her life, and Daybreaker is pleased, since it'd be boring if she did; she can languish while she sees how her sister has always been the better, and will lead harmony into greatness alone
     id = solarreworked.600

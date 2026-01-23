@@ -214,8 +214,15 @@ set_autonomy = {
 	autonomous_state = autonomy_dominion
 }
 
+#Transfer characters meant for other nations to the needed countries
 country_event = {
 	id = solarreworked.520
+	days = 1
+}
+
+#Remove STL and STG from potential cores
+country_event = {
+	id = solarreworked.541
 	days = 1
 }
 
