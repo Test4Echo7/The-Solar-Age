@@ -5704,13 +5704,14 @@ country_event = {
     id = solarreworked.250
     title = solarreworked.250.t
     desc = solarreworked.250.d
-    picture = GFX_event_solarempire
+    picture = GFX_event_foggy_forest
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.250"}
 
     is_triggered_only = yes
 
     option = {
         name = solarreworked.250.a
+        add_ideas = SOL_showcased_element_bearers
     }
 }
 
@@ -14528,6 +14529,15 @@ country_event = { #Event for the griffon liberation faction leader to propose re
                 hours = 12
             }
         }
+        if = {
+            limit = {
+                NOT = { has_cosmetic_tag = GRIF_EMPIRE }
+            }
+            set_cosmetic_tag = GRIF_EMPIRE
+            set_faction_name = reichspakt
+            set_faction_manifest = faction_manifest_unite_the_griffons
+            set_country_flag = SOL_GRI_formed_by_league
+        }
     }
     option = { #It was destroyed for a reason.
         name = solarreworked.538.a
@@ -14538,6 +14548,7 @@ country_event = { #Event for the griffon liberation faction leader to propose re
         add_political_power = 100
         add_stability = 0.05
     }
+
 }
 
 country_event = { #Event for the other griffon countries to accept or reject the proposal of the most influential faction member to become part of a new GRI or not
@@ -14631,23 +14642,19 @@ country_event = { #Event for the response of the griffon countries that were pro
         }
         FROM = {
             add_to_ROOT_potential_cores = yes
+            leave_faction = yes
         }
     }
 
     after = {
-        if = {
-            limit = {
-                NOT = { has_cosmetic_tag = GRIF_EMPIRE }
-            }
-            set_cosmetic_tag = GRIF_EMPIRE
-            set_faction_name = reichspakt
-            set_faction_manifest = faction_manifest_unite_the_griffons
-            set_country_flag = SOL_GRI_formed_by_league
-            hidden_effect = {
+        hidden_effect = {
+            if = {
+                limit = { NOT = { has_country_flag = SOL_triggered_GRI_news } }
                 news_event = {
                     id = news.solarage.39
                     hours = 6
                 }
+                set_country_flag = SOL_triggered_GRI_news
             }
         }
     }

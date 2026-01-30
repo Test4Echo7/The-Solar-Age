@@ -3381,11 +3381,35 @@ shared_focus = {
 		#Temp variable fun
 		set_temp_variable = { eee = 1 }
 		#Have hidden effects for each event
+		hidden_effect = {
+			country_event = {
+				id = solarreworked.245
+				days = 18
+			}
+			country_event = {
+				id = solarreworked.246
+				days = 39
+			}
+			country_event = {
+				id = solarreworked.247
+				days = 60
+			}
+			country_event = {
+				id = solarreworked.248
+				days = 81
+			}
+			country_event = {
+				id = solarreworked.249
+				days = 102
+			}
+		}
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_utilize_element_bearers"
 		###Series of events for corrupting the other Element bearers, or at least making them work for Daybreaker, with specific promises for each bearer, that either plays to their fears, egos, or lusts
-		country_event = solarreworked.345 #Maybe? Corruption events
+		#Change below to maybe being a return to Canterlot, with Daybreaker fuming and the Elements trying to placate her, while she thinks of another way to use them to at least keep the populace pacified
+		#country_event = solarreworked.345 #Maybe? Corruption events
+		country_event = solarreworked.250
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_AIRFORCE_BONUS }
 	ai_will_do = { factor = 50 }

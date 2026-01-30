@@ -943,7 +943,10 @@ news_event = { #The Griffon Liberation League has overcome Daybreaker and the le
 	option = { #Seems she's not as strong as she thought.
 		name = news.solarage.39.c
 		trigger = {
-			NOT = { tag = event_target:solar_empire }
+			NOT = {
+				tag = event_target:solar_empire
+				has_country_flag = SOL_GRI_formed_by_league
+			}
 		}
 	}
 }
