@@ -12913,7 +12913,7 @@ shared_focus = {
 ###Superior Firepower###
 shared_focus = {
 	id = SOL_hoof_of_empress
-	icon = GFX_goal_generic_army_artillery
+	icon = GFX_goal_hoof_of_empress
 	cost = 3
 	ai_will_do = {
 		factor = 80
@@ -12952,7 +12952,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_showering_battlefield
-	icon = GFX_goal_generic_army_artillery2
+	icon = GFX_goal_showering_battlefield
 	cost = 4
 	ai_will_do = {
 		factor = 30
@@ -12977,7 +12977,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_combined_assaults
-	icon = GFX_goal_generic_army_motorized
+	icon = GFX_goal_combined_assaults
 	cost = 4
 	ai_will_do = {
 		factor = 40
@@ -13014,6 +13014,7 @@ shared_focus = {
 	x = -1
 	y = 1
 	relative_position_id = SOL_combined_assaults
+	icon = GFX_goal_holy_napalm_applications
 
 	cost = 4
 	prerequisite = { focus = SOL_combined_assaults }
@@ -13031,7 +13032,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_war_games
-	icon = GFX_goal_generic_army_doctrines
+	icon = GFX_goal_war_games
 	cost = 6
 	ai_will_do = {
 		factor = 45
@@ -13060,7 +13061,7 @@ shared_focus = {
 ###Mass Assault###
 shared_focus = {
 	id = SOL_imperial_workhorses
-	icon = GFX_goal_generic_more_territorial_claims
+	icon = GFX_goal_imperial_workhorses
 	cost = 3
 	ai_will_do = {
 		factor = 80
@@ -13472,6 +13473,7 @@ shared_focus = {
 	x = 3
 	y = 1
 	relative_position_id = SOL_hoof_of_empress
+	icon = GFX_goal_rapid_reloads
 
 	cost = 4
 	prerequisite = {
@@ -13493,6 +13495,7 @@ shared_focus = {
 	x = 0
 	y = 1
 	relative_position_id = SOL_rapid_reloads
+	icon = GFX_goal_invincible_spotlights
 
 	cost = 4
 	prerequisite = { focus = SOL_rapid_reloads }
@@ -13522,6 +13525,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	relative_position_id = SOL_combined_assaults
+	icon = GFX_goal_mundane_magic
 
 	cost = 4
 	prerequisite = {

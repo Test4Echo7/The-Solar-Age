@@ -55,6 +55,14 @@ SpriteTypes = {
         name = "GFX_idea_SOL_motorized_spearheads"
         textureFile = "gfx/interface/ideas/SOL/SOL_motorized_spearheads.tga"
     }
+    SpriteType = {
+        name = "GFX_idea_SOL_practice_combat"
+        textureFile = "gfx/interface/ideas/SOL/SOL_practice_combat.tga"
+    }
+    SpriteType = {
+        name = "GFX_idea_SOL_artillery_safety_removals"
+        textureFile = "gfx/interface/ideas/SOL/SOL_artillery_safety_removals.tga"
+    }
 
     ###Navy###
     SpriteType = {

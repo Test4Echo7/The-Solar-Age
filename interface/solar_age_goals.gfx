@@ -211,6 +211,42 @@ SpriteTypes = {
         name = GFX_goal_strike_iron
         texturefile = "gfx/interface/goals/EQS/strike_iron.tga"
     }
+    SpriteType = {
+        name = GFX_goal_hoof_of_empress
+        texturefile = "gfx/interface/goals/EQS/hoof_of_empress.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_showering_battlefield
+        texturefile = "gfx/interface/goals/EQS/showering_battlefield.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_combined_assaults
+        texturefile = "gfx/interface/goals/EQS/combined_assaults.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_holy_napalm_applications
+        texturefile = "gfx/interface/goals/EQS/holy_napalm_applications.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_mundane_magic
+        texturefile = "gfx/interface/goals/EQS/mundane_magic.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_war_games
+        texturefile = "gfx/interface/goals/EQS/war_games.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_rapid_reloads
+        texturefile = "gfx/interface/goals/EQS/rapid_reloads.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_invincible_spotlights
+        texturefile = "gfx/interface/goals/EQS/invincible_spotlights.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_imperial_workhorses
+        texturefile = "gfx/interface/goals/EQS/imperial_workhorses.tga"
+    }
 
     SpriteType = {
         name = GFX_goal_only_statistics
