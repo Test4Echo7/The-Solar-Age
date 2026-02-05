@@ -127,6 +127,10 @@ SpriteTypes = {
         name = GFX_goal_harmonys_exemplar
         texturefile = "gfx/interface/goals/EQS/harmonys_exemplar.tga"
     }
+    SpriteType = {
+        name = GFX_goal_world_opportunity
+        texturefile = "gfx/interface/goals/EQS/world_opportunity.tga"
+    }
 
     ###Fallen Hero###
     SpriteType = {
@@ -247,10 +251,33 @@ SpriteTypes = {
         name = GFX_goal_imperial_workhorses
         texturefile = "gfx/interface/goals/EQS/imperial_workhorses.tga"
     }
-
+    SpriteType = {
+        name = GFX_goal_accept_truth
+        texturefile = "gfx/interface/goals/EQS/accept_truth.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_operational_art
+        texturefile = "gfx/interface/goals/EQS/operational_art.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_streamlined_firearms
+        texturefile = "gfx/interface/goals/EQS/streamlined_firearms.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_melt_shroud
+        texturefile = "gfx/interface/goals/EQS/melt_shroud.tga"
+    }
     SpriteType = {
         name = GFX_goal_only_statistics
         texturefile = "gfx/interface/goals/EQS/only_statistics.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_reduced_standards
+        texturefile = "gfx/interface/goals/EQS/reduced_standards.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_mobile_cannons
+        texturefile = "gfx/interface/goals/EQS/mobile_cannons.tga"
     }
 
     ###Airforce###

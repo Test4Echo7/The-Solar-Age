@@ -1599,6 +1599,7 @@ shared_focus = {
 	x = -2
 	y = 1
 	relative_position_id = SOL_harmonys_exemplar
+	icon = GFX_goal_world_opportunity
 
 	cost = 5
 	prerequisite = { focus = SOL_harmonys_exemplar }
@@ -13100,7 +13101,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_accept_truth
-	icon = GFX_goal_generic_army_tanks
+	icon = GFX_goal_accept_truth
 	cost = 3
 	ai_will_do = {
 		factor = 60
@@ -13125,7 +13126,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_operational_art
-	icon = GFX_goal_generic_army_doctrines
+	icon = GFX_goal_operational_art
 	cost = 4
 	ai_will_do = {
 		factor = 30
@@ -13157,7 +13158,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_streamlined_firearms
-	icon = GFX_goal_continuous_reduce_training_time
+	icon = GFX_goal_streamlined_firearms
 	cost = 4
 	ai_will_do = {
 		factor = 60
@@ -13209,6 +13210,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	relative_position_id = SOL_operational_art
+	icon = GFX_goal_melt_shroud
 
 	cost = 4
 	prerequisite = {
@@ -13232,6 +13234,7 @@ shared_focus = {
 	x = 1
 	y = 2
 	relative_position_id = SOL_streamlined_firearms
+	icon = GFX_goal_reduced_standards
 
 	cost = 6
 	prerequisite = { focus = SOL_streamlined_firearms }
@@ -13560,6 +13563,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	relative_position_id = SOL_imperial_workhorses
+	icon = GFX_goal_mobile_cannons
 
 	cost = 4
 	prerequisite = {
