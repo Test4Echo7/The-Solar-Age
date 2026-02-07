@@ -660,7 +660,7 @@ ideas = {
 			research_bonus = {
 				magical_tech = 0.05
 			}
-			picture = jap_supremacy_of_will
+			picture = GFX_idea_SOL_magitech_integration
 		}
 	}
 	country = {

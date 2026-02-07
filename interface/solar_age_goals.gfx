@@ -279,6 +279,43 @@ SpriteTypes = {
         name = GFX_goal_mobile_cannons
         texturefile = "gfx/interface/goals/EQS/mobile_cannons.tga"
     }
+    SpriteType = {
+        name = GFX_goal_mage_army
+        texturefile = "gfx/interface/goals/EQS/mage_army.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_speedy_fields
+        texturefile = "gfx/interface/goals/EQS/speedy_fields.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_mysterious_magic
+        texturefile = "gfx/interface/goals/EQS/mysterious_magic.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_mighty_hoofs
+        texturefile = "gfx/interface/goals/EQS/mighty_hoofs.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_evocation_schools
+        texturefile = "gfx/interface/goals/EQS/evocation_schools.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_magitech_integration
+        texturefile = "gfx/interface/goals/EQS/magitech_integration.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_magical_adaptations
+        texturefile = "gfx/interface/goals/EQS/magical_adaptations.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_modernized_knights
+        texturefile = "gfx/interface/goals/EQS/modernized_knights.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_next_gen_spells
+        texturefile = "gfx/interface/goals/EQS/next_gen_spells.tga"
+    }
+
 
     ###Airforce###
     SpriteType = {

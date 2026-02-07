@@ -13253,7 +13253,7 @@ shared_focus = {
 ###Mage Army###
 shared_focus = {
 	id = SOL_mage_army
-	icon = GFX_goal_generic_special_forces
+	icon = GFX_goal_mage_army
 	cost = 3
 	ai_will_do = {
 		factor = 60
@@ -13289,7 +13289,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_mysterious_magic
-	icon = GFX_goal_continuous_research
+	icon = GFX_goal_mysterious_magic
 	cost = 5
 	ai_will_do = {
 		factor = 50
@@ -13323,6 +13323,7 @@ shared_focus = {
 	x = 0
 	y = 1
 	relative_position_id = SOL_mysterious_magic
+	icon = GFX_goal_evocation_schools
 
 	cost = 5
 	prerequisite = { focus = SOL_mysterious_magic }
@@ -13338,7 +13339,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_magitech_integration
-	icon = GFX_focus_secret_rearmament
+	icon = GFX_goal_magitech_integration
 	cost = 4
 	ai_will_do = {
 		factor = 70
@@ -13358,7 +13359,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_magical_adaptations
-	icon = GFX_goal_generic_army_doctrines
+	icon = GFX_goal_magical_adaptations
 	cost = 5
 	ai_will_do = {
 		factor = 30
@@ -13395,6 +13396,7 @@ shared_focus = {
 	x = 0
 	y = 2
 	relative_position_id = SOL_magitech_integration
+	icon = GFX_goal_next_gen_spells
 
 	cost = 6
 	prerequisite = { focus = SOL_magical_adaptations }
@@ -13590,6 +13592,7 @@ shared_focus = {
 	x = -1
 	y = 1
 	relative_position_id = SOL_mage_army
+	icon = GFX_goal_speedy_fields
 
 	cost = 3
 	prerequisite = {
@@ -13615,6 +13618,7 @@ shared_focus = {
 	x = 0
 	y = 2
 	relative_position_id = SOL_speedy_fields
+	icon = GFX_goal_mighty_hoofs
 
 	cost = 5
 	prerequisite = { focus = SOL_speedy_fields }
@@ -13641,6 +13645,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	relative_position_id = SOL_mighty_hoofs
+	icon = GFX_goal_modernized_knights
 
 	cost = 6
 	prerequisite = { focus = SOL_mighty_hoofs }
