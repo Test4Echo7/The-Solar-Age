@@ -12454,8 +12454,8 @@ shared_focus = {
 ###Military Focuses###
 shared_focus = {
 	id = SOL_modernize_relic
-	icon = GFX_focus_generic_little_entente
-	x = 54
+	icon = GFX_goal_modernize_relic
+	x = 84
 	y = -1
 	offset = {
 		x = -3

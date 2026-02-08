@@ -138,6 +138,11 @@ SpriteTypes = {
         texturefile = "gfx/interface/goals/EQS/utilize_element_bearers.tga"
     }
 
+    ###Military###
+    SpriteType = {
+        name = GFX_goal_modernize_relic
+        texturefile = "gfx/interface/goals/EQS/modernize_relic.tga"
+    }
     ###Army###
     SpriteType = {
         name = GFX_goal_solaris_militarium
