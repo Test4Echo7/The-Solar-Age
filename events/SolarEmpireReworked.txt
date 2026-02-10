@@ -7126,9 +7126,9 @@ country_event = { #A shorter event of Daybreaker's thoughts as she surveys her p
 			add = daybreaker_god2
 			remove = daybreaker_god
 		}
-		set_country_flag = SOL_solaris_bellum_time
-		custom_effect_tooltip = SOL_solaris_bellum_tt
-		mark_focus_tree_layout_dirty = yes
+		#set_country_flag = SOL_solaris_bellum_time
+		#custom_effect_tooltip = SOL_solaris_bellum_tt
+		#mark_focus_tree_layout_dirty = yes
     }
 }
 
@@ -7434,9 +7434,9 @@ country_event = { #Follow a citizen as they are brought before Daybreaker to ask
     option = { #N-No! It's excellent advice! I shall chew on it.
         name = solarreworked.332.a
         add_ideas = SOL_mother_knows_best
-        set_country_flag = SOL_solaris_bellum_time
-        custom_effect_tooltip = SOL_solaris_bellum_tt
-        mark_focus_tree_layout_dirty = yes
+        #set_country_flag = SOL_solaris_bellum_time
+        #custom_effect_tooltip = SOL_solaris_bellum_tt
+        #mark_focus_tree_layout_dirty = yes
     }
 }
 
@@ -7722,9 +7722,9 @@ country_event = { #Follow Daybreaker as she personally breaks into the home of s
         add_political_power = 70
         add_stability = 0.1
         add_ideas = SOL_Freedom_from_Fear_idea
-        set_country_flag = SOL_solaris_bellum_time
-        custom_effect_tooltip = SOL_solaris_bellum_tt
-        mark_focus_tree_layout_dirty = yes
+        #set_country_flag = SOL_solaris_bellum_time
+        #custom_effect_tooltip = SOL_solaris_bellum_tt
+        #mark_focus_tree_layout_dirty = yes
     }
 }
 
@@ -7822,6 +7822,42 @@ country_event = {
 
     option = {
         name = solarreworked.358.a
+    }
+}
+
+country_event = {
+    id = solarreworked.369
+    title = solarreworked.369.t
+    desc = {
+        trigger = {
+            has_completed_focus = SOL_She_Who_Raises_the_Sun
+        }
+        text = solarreworked.369.d_god_empress
+    }
+    desc = {
+        trigger = {
+            has_completed_focus = SOL_Empress_knows_Best
+        }
+        text = solarreworked.369.d_canon_daybreaker
+    }
+    desc = {
+        trigger = {
+            has_completed_focus = SOL_Freedom_from_Fear
+        }
+        text = solarreworked.369.d_fallen_hero
+    }
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.369"}
+
+    option = {
+        name = solarreworked.369.a
+        set_country_flag = SOL_solaris_bellum_time
+        custom_effect_tooltip = SOL_solaris_bellum_tt
+        mark_focus_tree_layout_dirty = yes
+        custom_effect_tooltip = generic_skip_one_line_tt
+        custom_effect_tooltip = SOL_flip_flopping_tt
+		custom_effect_tooltip = generic_skip_one_line_tt
+		set_faction_manifest = faction_manifest_age_of_pony
     }
 }
 

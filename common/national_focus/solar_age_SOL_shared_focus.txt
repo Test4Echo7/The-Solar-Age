@@ -2081,6 +2081,13 @@ shared_focus = {
 		###Event again speaking from Daybreaker's perspective about how she will lead the ponies where they couldn't, because they are simply too simple-minded, stupid, or ignorant to know the truth of life, and that truth is that she is their light, their breath, and nothing can come of their lives except because she guides them; they are simple, but she is not, and she will make sure they are led, as an alicorn should do, and in return, she requires complete loyalty
 		###Alternately an event of a pony coming before the Empress, seeking attention on an issue they've been having trouble with and she is incredibly condescending in her tone and implies that it's a waste of her time, and basically only helps once they genuflect enough upon her, and otherwise feed her ego
 		country_event = solarreworked.332
+		hidden_effect = {
+			country_event = {
+				id = solarreworked.369
+				days = 35
+				random_days = 35
+			}
+		}
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 }
@@ -2967,6 +2974,13 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_She_Who_Raises_the_Sun"
 		###Possibly event of speaking how everypony is nothing but dust compared to Daybreaker, as she is the being that raises the sun and is untouchable, and how the only service is that of death and honor for her
 		country_event = solarreworked.314
+		hidden_effect = {
+			country_event = {
+				id = solarreworked.369
+				days = 35
+				random_days = 35
+			}
+		}
 	}
 	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_ARMY_BONUS }
 }
@@ -3679,6 +3693,13 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_Freedom_from_Fear"
 		###Event of Daybreaker learning from her officials of a murder in the nobility or the like, and she goes on a small hunt for who she believes to be the murderer, and takes justice into her own hooves as the protector of all ponies
 		country_event = solarreworked.353
+		hidden_effect = {
+			country_event = {
+				id = solarreworked.369
+				days = 35
+				random_days = 35
+			}
+		}
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESISTANCE FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 }
@@ -3762,10 +3783,10 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_pan_pony_empire"
 		add_ideas = SOL_all_ponies
-		custom_effect_tooltip = generic_skip_one_line_tt
-		custom_effect_tooltip = SOL_flip_flopping_tt
-		custom_effect_tooltip = generic_skip_one_line_tt
-		set_faction_manifest = faction_manifest_age_of_pony
+		#custom_effect_tooltip = generic_skip_one_line_tt
+		#custom_effect_tooltip = SOL_flip_flopping_tt
+		#custom_effect_tooltip = generic_skip_one_line_tt
+		#set_faction_manifest = faction_manifest_age_of_pony
 	}
 	search_filters = { FOCUS_FILTER_RESISTANCE FOCUS_FILTER_ANNEXATION }
 	ai_will_do = { factor = 60 }
