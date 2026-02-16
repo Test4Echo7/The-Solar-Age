@@ -1537,7 +1537,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_Imperial_Corporation_Council
-	icon = GFX_goal_solar_corporate_council
+	icon = GFX_goal_imperial_corporation_council
 	prerequisite = {
 		focus = SOL_empress_mother
 	}
@@ -1645,6 +1645,7 @@ shared_focus = {
 	x = -1
 	y = 1
 	relative_position_id = SOL_Imperial_Corporation_Council
+	icon = GFX_goal_bed_companies
 
 	cost = 5
 	prerequisite = { focus = SOL_Imperial_Corporation_Council }

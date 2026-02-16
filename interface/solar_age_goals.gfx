@@ -131,6 +131,14 @@ SpriteTypes = {
         name = GFX_goal_world_opportunity
         texturefile = "gfx/interface/goals/EQS/world_opportunity.tga"
     }
+    SpriteType = {
+        name = GFX_goal_imperial_corporation_council
+        texturefile = "gfx/interface/goals/EQS/imperial_corporation_council.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_bed_companies
+        texturefile = "gfx/interface/goals/EQS/bed_companies.tga"
+    }
 
     ###Fallen Hero###
     SpriteType = {
