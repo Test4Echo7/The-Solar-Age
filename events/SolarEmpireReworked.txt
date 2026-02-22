@@ -7849,6 +7849,8 @@ country_event = {
     picture = GFX_event_solarempire
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.369"}
 
+    is_triggered_only = yes
+
     option = {
         name = solarreworked.369.a
         set_country_flag = SOL_solaris_bellum_time
