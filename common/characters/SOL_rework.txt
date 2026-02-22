@@ -773,7 +773,7 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/EQS/Queen_Argynnis.tga"
-				small = "gfx/interface/ideas/advisors/EQS_queen_argynnis.dds"
+				small = "gfx/interface/ideas/advisors/EQS/EQS_queen_argynnis.dds"
 			}
 		}
 

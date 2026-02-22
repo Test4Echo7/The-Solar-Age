@@ -244,7 +244,7 @@ there_is_only_war = {
         EQS = {
             custom_trigger_tooltip = {
                 tooltip = EQS_completed_large_unit_tactics_tt
-                has_completed_subdoctrine = SUBDOCTRINE_LARGE_UNIT_TACTICS
+                has_completed_subdoctrine = large_unit_tactics
             }
             custom_trigger_tooltip = {
                 tooltip = EQS_more_boiz_tt
