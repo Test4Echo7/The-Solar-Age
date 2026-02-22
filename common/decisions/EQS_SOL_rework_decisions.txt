@@ -4705,11 +4705,11 @@ EQS_pan_pony_empire_category = {
         available = {
             is_EQS_SOL = yes
             #EQS_owns_all_MIT_starting_states = yes
-            all_original_cores_owned_by_ROOT = yes
+            MIT = { all_original_cores_owned_by_ROOT = yes }
         }
         visible = {
             #EQS_owns_all_MIT_starting_states = yes
-            all_original_cores_owned_by_ROOT = yes
+            MIT = { all_original_cores_owned_by_ROOT = yes }
             NOT = { has_country_flag = SOL_formed_super_griffonia }
         }
         highlight_states = {
