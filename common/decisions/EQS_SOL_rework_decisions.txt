@@ -1797,9 +1797,7 @@ EQS_GRD_assistance = {
                 NTR = {
                     is_subject_of = ROOT
                 }
-                RCT = {
-                    is_subject_of = ROOT
-                }
+                has_country_flag = SOL_released_RIV
             }
         }
 
@@ -4214,44 +4212,6 @@ EQS_pan_pony_empire_category = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision SOL_spawn_CHN_puppet"
 			custom_effect_tooltip = SOL_buggy_choices_tt
-			hidden_effect = {
-                CHN = {
-                    CHN_queen_aurantia = {
-                        set_portraits = {
-                            civilian = {
-                                large = "gfx/leaders/EQS/Queen_Aurantia.tga"
-                            }
-                        }
-                        if = {
-                            limit = { ROOT = { has_completed_focus = SOL_god_empress } }
-                            add_country_leader_role = {
-                                promote_leader = yes
-                                country_leader = {
-                                    ideology = falangism
-                                    expire = "1965.1.1"
-                                    traits = { imperial_governess_alt }
-                                }
-                            }
-                        }
-                        else = {
-                            add_country_leader_role = {
-                                promote_leader = yes
-                                country_leader = {
-                                    ideology = nazism
-                                    expire = "1965.1.1"
-                                    traits = { imperial_governess_alt }
-                                }
-                            }
-                        }
-                    }
-                    if = {
-                        limit = {
-                            has_idea = continous_war_plan_CHN
-                        }
-                        remove_ideas = continous_war_plan_CHN
-                    }
-                }
-			}
             SOL_release_CHN = yes
 		}
 	}
@@ -4602,25 +4562,8 @@ EQS_pan_pony_empire_category = {
         allowed = {
             original_tag = EQS
         }
-        available = {
-            RIV = {
-                is_subject_of = ROOT
-                has_country_flag = is_solar_puppet
-            }
-            HLQ = {
-                all_original_cores_owned_by_ROOT = yes
-            }
-            OR = {
-                LNS = { all_original_cores_owned_by_ROOT = yes }
-                LSM = { all_original_cores_owned_by_ROOT = yes }
-                LSC = { all_original_cores_owned_by_ROOT = yes }
-            }
-        }
         visible = {
-            RIV = {
-                is_subject_of = ROOT
-                has_country_flag = is_solar_puppet
-            }
+            has_country_flag = SOL_released_RIV
             HLQ = {
                 all_original_cores_owned_by_ROOT = yes
             }
@@ -4654,8 +4597,8 @@ EQS_pan_pony_empire_category = {
                     }
                     is_owned_and_controlled_by = ROOT
                 }
-                add_core_of = RCT
-                transfer_state_to = RCT
+                add_core_of = event_target:RIV_dynamic_puppet
+                transfer_state_to = event_target:RIV_dynamic_puppet
             }
         }
 	}
@@ -5623,108 +5566,83 @@ EQS_pan_pony_empire_category = {
         complete_effect = {
             log = "[GetDateText]: [Root.GetName]: Decision SOL_establish_imperium_griffonia"
             custom_effect_tooltip = SOL_griffonian_union_tt
-            hidden_effect = {
-                if = {
-                    limit = {
-                        GRD = {
-                            OR = {
-                                AND = {
-                                    is_subject_of = ROOT
-                                    has_country_leader = { character = GRI_daybreaker ruling_only = yes }
-                                }
-                                AND = {
-                                    is_in_faction_with = ROOT
-                                    has_country_leader = { character = GRI_emperor_grover_vi ruling_only = yes }
-                                    has_cosmetic_tag = GRI_SOL
-                                }
-                            }
-                        }
-                    }
-                    if = {
+            create_dynamic_country = {
+                original_tag = GRI
+                reserve_dynamic_country = yes
+                hidden_effect = {
+                    every_state = {
                         limit = {
-                            NOT = { has_country_leader = { character = GRI_daybreaker ruling_only = yes } }
+                            is_on_continent = asia
                         }
-                        GRD = { promote_character = GRI_daybreaker }
+                        transfer_state_to = PREV
+                        add_compliance = 25
+                    }
+                    ROOT = {
                         set_autonomy = {
-                            target = GRD
+                            target = PREV
                             autonomous_state = autonomy_personal_union_eaw
                         }
                     }
-                    every_state = {
-                        limit = {
-                            is_core_of = GRD
+                    GRI = {
+                        PREV = {
+                            transfer_technology = yes
+                            transfer_society_ideas = yes
+                            transfer_science_ideas = yes
+                            transfer_poverty_ideas = yes
+                            transfer_illiteracy_ideas = yes
                         }
-                        remove_core_of = GRD
-                        add_compliance = 25
                     }
-                    every_state = {
+                    add_ideas = griffon_race
+                    every_possible_country = {
                         limit = {
-                            NOT = { is_owned_and_controlled_by = GRD }
-                            is_on_continent = asia
+                            has_character = GRI_daybreaker
                         }
-                        transfer_state_to = GRD
-                        add_compliance = 25
-                    }
-                }
-                else = {
-                    hidden_effect = { every_possible_country = { limit = { has_character = GRI_daybreaker } } GRI_daybreaker = { set_nationality = GRD } }
-                    release_autonomy = {
-                        target = GRD
-                        autonomy_state = autonomy_personal_union_eaw
+                        GRI_daybreaker = {
+                            set_nationality = PREV
+                        }
                     }
                     if = {
-                        limit = {
-                            GRD = { NOT = { can_be_country_leader = GRI_daybreaker } }
-                        }
-                        GRD = {
-                            GRI_daybreaker = {
-                                add_country_leader_role = {
-                                    promote_leader = yes
-                                    country_leader = {
-                                        expire = "1965.1.1"
-                                        ideology = falangism
-                                        traits = { daybreaker_god2 }
-                                    }
+                        limit = { can_be_country_leader = GRI_daybreaker }
+                        GRI_daybreaker = {
+                            promote_character = yes
+                            if = {
+                                limit = {
+                                    has_trait = aussenseiter_regentin
                                 }
+                                remove_trait = { trait = aussenseiter_regentin ideology = falangism }
                             }
-                            set_party_name = {
-                                ideology = fascism
-                                name = EQS_solaris_cultus
-                                long_name = EQS_solaris_cultus
+                            else_if = {
+                                limit = {
+                                    has_trait = die_kaiserin_der_greifen
+                                }
+                                remove_trait = { trait = die_kaiserin_der_greifen ideology = falangism }
                             }
+                            add_trait = { trait = daybreaker_god2 ideology = falangism }
                         }
                     }
                     else = {
-                        GRD = {
-                            promote_character = GRI_daybreaker
-                            hidden_effect = {
-                                GRI_daybreaker = {
-                                    remove_trait = { trait = aussenseiter_regentin ideology = falangism }
-                                    add_trait = { trait = daybreaker_god2 ideology = falangism }
+                        GRI_daybreaker = {
+                            add_country_leader_role = {
+                                promote_leader = yes
+                                country_leader = {
+                                    expire = "1965.1.1"
+                                    ideology = falangism
+                                    traits = { daybreaker_god2 }
                                 }
                             }
                         }
                     }
-                    every_state = {
-                        limit = {
-                            is_core_of = GRD
-                        }
-                        remove_core_of = GRD
-                        add_compliance = 25
-                    }
-                    every_state = {
-                        limit = {
-                            NOT = { is_owned_and_controlled_by = GRD }
-                            is_on_continent = asia
-                        }
-                        transfer_state_to = GRD
-                        add_compliance = 25
+                    set_party_name = {
+                        ideology = fascism
+                        name = EQS_solaris_cultus
+                        long_name = EQS_solaris_cultus
                     }
                 }
-                GRD = {
-                    set_cosmetic_tag = SOL_imperium_griffonia
-                    add_ideas = SOL_imperium_solaris_aeterna
-                }
+                set_country_flag = is_solar_puppet
+                set_cosmetic_tag = SOL_imperium_griffonia
+                add_ideas = SOL_imperium_solaris_aeterna
+            }
+            hidden_effect = {
                 set_province_name = {
                     id = 10537
                     name = SOL_griffonia_super_capital
@@ -5756,98 +5674,65 @@ EQS_pan_pony_empire_category = {
         complete_effect = {
             log = "[GetDateText]: [Root.GetName]: Decision SOL_establish_imperium_zebrica"
             custom_effect_tooltip = SOL_zebrican_union_tt
-            hidden_effect = {
-                every_possible_country = { limit = { has_character = KIR_daybreaker } KIR_daybreaker = { set_nationality = KIR } }
-                if = {
+            create_dynamic_country = {
+                original_tag = GRI
+                reserve_dynamic_country = yes
+                every_possible_country = {
                     limit = {
-                        KIR = {
-                            is_subject_of = ROOT
-                            has_cosmetic_tag = KIR_SOL
-                        }
+                        has_character = KIR_daybreaker
                     }
-                    set_autonomy = {
-                        target = KIR
-                        autonomous_state = autonomy_personal_union_eaw
-                    }
-                    KIR = {
-                        KIR_daybreaker = {
-                            add_country_leader_role = {
-                                promote_leader = yes
-                                country_leader = {
-                                    expire = "1965.1.1"
-                                    ideology = falangism
-                                    traits = { daybreaker_god2 }
-                                }
-                            }
-                        }
-                        set_party_name = {
-                            ideology = fascism
-                            name = EQS_solaris_cultus
-                            long_name = EQS_solaris_cultus
-                        }
-                    }
-                    every_state = {
-                        limit = {
-                            NOT = { is_owned_and_controlled_by = KIR }
-                            is_on_continent = africa
-                        }
-                        transfer_state_to = KIR
-                        add_core_of = KIR
-                    }
+                    KIR_daybreaker = { set_nationality = PREV }
                 }
-                else = {
-                    release_autonomy = {
-                        target = KIR
-                        autonomy_state = autonomy_personal_union_eaw
-                    }
-                    KIR = {
-                        KIR_daybreaker = {
-                            add_country_leader_role = {
-                                promote_leader = yes
-                                country_leader = {
-                                    expire = "1965.1.1"
-                                    ideology = falangism
-                                    traits = { daybreaker_god2 }
-                                }
-                            }
-                        }
-                        set_party_name = {
-                            ideology = fascism
-                            name = EQS_solaris_cultus
-                            long_name = EQS_solaris_cultus
-                        }
-                    }
-                    every_state = {
-                        limit = { is_core_of = KIR }
-                        remove_core_of = KIR
-                        add_compliance = 25
-                    }
-                    every_state = {
-                        limit = {
-                            NOT = { is_owned_and_controlled_by = KIR }
-                            is_on_continent = africa
-                        }
-                        transfer_state_to = KIR
-                        add_compliance = 25
-                    }
-                }
-                KIR = {
-                    set_cosmetic_tag = SOL_imperium_zebrica
-                    add_ideas = SOL_imperium_solaris_aeterna
-                }
-                set_province_name = {
-                    id = 5679
-                    name = SOL_zebrica_super_capital
-                }
-                set_country_flag = SOL_formed_super_zebrica
                 hidden_effect = {
                     every_state = {
                         limit = {
                             is_on_continent = africa
                         }
-                        remove_core_of = KIR
+                        transfer_state_to = PREV
+                        add_compliance = 25
+                    }
+                    ROOT = {
+                        set_autonomy = {
+                            target = PREV
+                            autonomous_state = autonomy_personal_union_eaw
+                        }
+                    }
+                    KIR = {
+                        PREV = {
+                            transfer_technology = yes
+                            transfer_society_ideas = yes
+                            transfer_science_ideas = yes
+                            transfer_poverty_ideas = yes
+                            transfer_illiteracy_ideas = yes
+                        }
+                    }
+                    add_ideas = zebra_race
+                    KIR_daybreaker = {
+                        add_country_leader_role = {
+                            promote_leader = yes
+                            country_leader = {
+                                expire = "1965.1.1"
+                                ideology = falangism
+                                traits = { daybreaker_god2 }
+                            }
+                        }
+                    }
+                    set_party_name = {
+                        ideology = fascism
+                        name = EQS_solaris_cultus
+                        long_name = EQS_solaris_cultus
                     }
                 }
+                set_country_flag = is_solar_puppet
+                set_cosmetic_tag = SOL_imperium_zebrica
+                add_ideas = SOL_imperium_solaris_aeterna
+            }
+            hidden_effect = {
+                set_province_name = {
+                    id = 5679
+                    name = SOL_zebrica_super_capital
+                }
+                set_country_flag = SOL_formed_super_zebrica
             }
         }
         ai_will_do = { factor = 1000 }

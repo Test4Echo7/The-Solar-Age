@@ -8157,21 +8157,47 @@ country_event = { #Daybreaker enters an interrogation or torture chamber, where 
     option = { #Then beg.
         name = solarreworked.382.a
         set_country_flag = SOL_doghouse_set_up
-        hidden_effect = {
-            every_state = {
-                limit = {
-                    OR = {
-                        state = 638
-                        state = 647
-                        state = 637
-                        state = 635
+        create_dynamic_country = {
+            original_tag = DMT
+            reserve_dynamic_country = yes
+            add_ideas = diamond_dog_race
+            hidden_effect = {
+                every_state = {
+                    limit = {
+                        is_in_array = { DMT.original_cores = THIS.id }
+                    }
+                    transfer_state_to = PREV
+                    add_core_of = PREV
+                }
+                ROOT = {
+                    set_autonomy = {
+                        target = PREV
+                        autonomous_state = autonomy_reichsprotectorate
                     }
                 }
-                transfer_state_to = DMT
+                DMT = {
+                    PREV = {
+                        transfer_technology = yes
+                        transfer_society_ideas = yes
+                        transfer_science_ideas = yes
+                        transfer_poverty_ideas = yes
+                        transfer_illiteracy_ideas = yes
+                    }
+                }
             }
-            set_autonomy = {
-                target = DMT
-                autonomous_state = autonomy_reichskommissariat
+            set_cosmetic_tag = DMT_SOL
+            set_country_flag = is_solar_puppet
+            load_focus_tree = generic_griffon_focus
+            add_ideas = SOL_limited_military_allowance
+            every_possible_country = {
+                limit = {
+                    has_character = DMT_rover_diamondshield
+                }
+                DMT_rover_diamondshield = {
+                    set_nationality = ROOT
+                    add_trait = { trait = imperial_governor ideology = kratokracy }
+                    promote_character = yes
+                }
             }
         }
         effect_tooltip = {
@@ -8179,14 +8205,9 @@ country_event = { #Daybreaker enters an interrogation or torture chamber, where 
                 target = DMT
                 autonomous_state = autonomy_reichskommissariat
             }
-        }
-        DMT = {
-            SOL_apply_generic_focus_tree_to_puppets = yes
-            set_country_flag = is_solar_puppet
-            set_cosmetic_tag = DMT_SOL
-            add_ideas = SOL_limited_military_allowance
-            hidden_effect = {
-                DMT_rover_diamondshield = { add_trait = { trait = imperial_governor ideology = kratokracy } }
+            DMT = {
+                set_cosmetic_tag = DMT_SOL
+                add_ideas = SOL_limited_military_allowance
             }
         }
     }
@@ -13682,7 +13703,7 @@ country_event = { #Short event of SOL demanding that the SRS territory which NTR
                     is_in_array = { LNS.original_cores = THIS.id }
                     is_owned_and_controlled_by = ROOT
                 }
-                RCT = { is_subject_of = FROM }
+                event_target:RIV_dynamic_subject = { is_subject_of = FROM }
             }
             effect_tooltip = {
                 every_state = {
@@ -13690,8 +13711,8 @@ country_event = { #Short event of SOL demanding that the SRS territory which NTR
                         is_in_array = { LNS.original_cores = THIS.id }
                         is_owned_and_controlled_by = ROOT
                     }
-                    add_core_of = RCT
-                    RCT = { transfer_state = PREV.id }
+                    add_core_of = event_target:RIV_dynamic_subject
+                    event_target:RIV_dynamic_subject = { transfer_state = PREV.id }
                 }
             }
         }
@@ -13701,7 +13722,7 @@ country_event = { #Short event of SOL demanding that the SRS territory which NTR
                     is_in_array = { HLQ.original_cores = THIS.id }
                     is_owned_and_controlled_by = ROOT
                 }
-                RCT = { is_subject_of = FROM }
+                event_target:RIV_dynamic_subject = { is_subject_of = FROM }
             }
             effect_tooltip = {
                 every_state = {
@@ -13709,8 +13730,8 @@ country_event = { #Short event of SOL demanding that the SRS territory which NTR
                         is_in_array = { HLQ.original_cores = THIS.id }
                         is_owned_and_controlled_by = ROOT
                     }
-                    add_core_of = RCT
-                    RCT = { transfer_state = PREV.id }
+                    add_core_of = event_target:RIV_dynamic_subject
+                    event_target:RIV_dynamic_subject = { transfer_state = PREV.id }
                 }
             }
         }
@@ -13807,8 +13828,8 @@ country_event = { #SOL receives GRD's response about their demands
                     is_in_array = { LNS.original_cores = THIS.id }
                     is_owned_and_controlled_by = FROM
                 }
-                add_core_of = RCT
-                transfer_state_to = RCT
+                add_core_of = event_target:RIV_dynamic_subject
+                transfer_state_to = event_target:RIV_dynamic_subject
             }
         }
         if = {
@@ -13823,8 +13844,8 @@ country_event = { #SOL receives GRD's response about their demands
                     is_in_array = { HLQ.original_cores = THIS.id }
                     is_owned_and_controlled_by = FROM
                 }
-                add_core_of = RCT
-                transfer_state_to = RCT
+                add_core_of = event_target:RIV_dynamic_subject
+                transfer_state_to = event_target:RIV_dynamic_subject
             }
         }
     }
@@ -13871,8 +13892,8 @@ country_event = { #SOL receives GRD's response about their demands
                     is_in_array = { LNS.original_cores = THIS.id }
                     is_owned_and_controlled_by = FROM
                 }
-                add_core_of = RCT
-                transfer_state_to = RCT
+                add_core_of = event_target:RIV_dynamic_subject
+                transfer_state_to = event_target:RIV_dynamic_subject
             }
         }
         if = {
@@ -13887,8 +13908,8 @@ country_event = { #SOL receives GRD's response about their demands
                     is_in_array = { HLQ.original_cores = THIS.id }
                     is_owned_and_controlled_by = FROM
                 }
-                add_core_of = RCT
-                transfer_state_to = RCT
+                add_core_of = event_target:RIV_dynamic_subject
+                transfer_state_to = event_target:RIV_dynamic_subject
             }
         }
     }

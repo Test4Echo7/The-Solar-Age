@@ -1,7 +1,7 @@
 SOL_promote_SOL_governor = {
     if = {
         limit = {
-            FROM = { tag = YAK }
+            FROM = { original_tag = YAK }
         }
         hidden_effect = {
             if = {
@@ -94,7 +94,7 @@ SOL_promote_SOL_governor = {
     }
     else_if = {
         limit = {
-            FROM = { tag = GRF }
+            FROM = { original_tag = GRF }
         }
         hidden_effect = {
             EQS_SOL_shining_star = {
@@ -127,7 +127,7 @@ SOL_promote_SOL_governor = {
     }
     else_if = {
         limit = {
-            FROM = { tag = PLB }
+            FROM = { original_tag = PLB }
         }
         hidden_effect = {
             EQS_scorched_earth = {
@@ -160,7 +160,7 @@ SOL_promote_SOL_governor = {
     }
     else_if = {
         limit = {
-            FROM = { tag = NTR }
+            FROM = { original_tag = NTR }
         }
         hidden_effect = {
             EQS_SOL_comm_rush = {
@@ -193,7 +193,7 @@ SOL_promote_SOL_governor = {
     }
     else_if = {
         limit = {
-            FROM = { tag = HLR }
+            FROM = { original_tag = HLR }
         }
         hidden_effect = {
             EQS_bernard_hoofgonery = {
@@ -226,7 +226,7 @@ SOL_promote_SOL_governor = {
     }
     else_if = {
         limit = {
-            FROM = { tag = FBK }
+            FROM = { original_tag = FBK }
         }
         hidden_effect = {
         EQS_sergeant_reckless = {
@@ -259,7 +259,7 @@ SOL_promote_SOL_governor = {
     }
     else_if = {
         limit = {
-            FROM = { tag = RCT }
+            FROM = { original_tag = RCT }
         }
         hidden_effect = {
             EQS_SOL_Capsaicin = {
@@ -292,7 +292,7 @@ SOL_promote_SOL_governor = {
     }
     else_if = {
         limit = {
-            FROM = { tag = ZES }
+            FROM = { original_tag = ZES }
         }
         hidden_effect = {
             EQS_orion_star = {
@@ -325,7 +325,7 @@ SOL_promote_SOL_governor = {
     }
     else_if = {
         limit = {
-            FROM = { tag = MIT }
+            FROM = { original_tag = MIT }
         }
         hidden_effect = {
             EQS_sun_marble = {
@@ -358,7 +358,7 @@ SOL_promote_SOL_governor = {
     }
     else_if = {
         limit = {
-            FROM = { tag = HIP }
+            FROM = { original_tag = HIP }
         }
         hidden_effect = {
             EQS_sunsane = {
@@ -391,7 +391,7 @@ SOL_promote_SOL_governor = {
     }
     else_if = {
         limit = {
-            FROM = { tag = CTH }
+            FROM = { original_tag = CTH }
         }
         hidden_effect = {
             EQS_SOL_scroup_whitemares = {
@@ -424,7 +424,7 @@ SOL_promote_SOL_governor = {
     }
     else_if = {
         limit = {
-            FROM = { tag = CTL }
+            FROM = { original_tag = CTL }
         }
         hidden_effect = {
             EQS_silverfoot = {
@@ -458,7 +458,7 @@ SOL_promote_SOL_governor = {
     }
     else_if = {
         limit = {
-            FROM = { tag = ABY }
+            FROM = { original_tag = ABY }
         }
         hidden_effect = {
             EQS_sunny_chill = {
@@ -492,7 +492,7 @@ SOL_promote_SOL_governor = {
     }
     else_if = {
         limit = {
-            FROM = { tag = ZAR }
+            FROM = { original_tag = ZAR }
         }
         hidden_effect = {
             EQS_Fireflight = {
@@ -525,7 +525,7 @@ SOL_promote_SOL_governor = {
     }
     else_if = {
         limit = {
-            FROM = { tag = ROA }
+            FROM = { original_tag = ROA }
         }
         hidden_effect = {
             EQS_SOL_stormchaser = {
@@ -558,7 +558,7 @@ SOL_promote_SOL_governor = {
     }
     else_if = {
         limit = {
-            FROM = { tag = STM }
+            FROM = { original_tag = STM }
         }
         hidden_effect = {
             EQS_winter_white = {
@@ -585,14 +585,14 @@ SOL_promote_SOL_governor = {
                         }
                     }
                 }
-                set_nationality = STM
+                set_nationality = FROM
                 promote_character = yes
             }
         }
     }
     else_if = {
         limit = {
-            FROM = { tag = ZOO }
+            FROM = { original_tag = ZOO }
         }
         hidden_effect = {
             EQS_smoke_signal = {
@@ -619,14 +619,14 @@ SOL_promote_SOL_governor = {
                         }
                     }
                 }
-                set_nationality = ZOO
+                set_nationality = FROM
                 promote_character = yes
             }
         }
     }
     else_if = {
         limit = {
-            FROM = { tag = MTA }
+            FROM = { original_tag = MTA }
         }
         hidden_effect = {
             EQS_silver_bullet = {
@@ -653,14 +653,14 @@ SOL_promote_SOL_governor = {
                         }
                     }
                 }
-                set_nationality = MTA
+                set_nationality = FROM
                 promote_character = yes
             }
         }
     }
     else_if = {
         limit = {
-            FROM = { tag = MAZ }
+            FROM = { original_tag = MAZ }
         }
         hidden_effect = {
             EQS_kertz_schmane = {
@@ -687,14 +687,14 @@ SOL_promote_SOL_governor = {
                         }
                     }
                 }
-                set_nationality = MAZ
+                set_nationality = FROM
                 promote_character = yes
             }
         }
     }
     else_if = {
         limit = {
-            FROM = { tag = GAR }
+            FROM = { original_tag = GAR }
         }
         hidden_effect = {
             EQS_SOL_red_rocket = {
@@ -727,7 +727,7 @@ SOL_promote_SOL_governor = {
     }
     else_if = {
         limit = {
-            FROM = { tag = AES }
+            FROM = { original_tag = AES }
         }
         hidden_effect = {
             EQS_sweet_vale = {
@@ -754,14 +754,14 @@ SOL_promote_SOL_governor = {
                         }
                     }
                 }
-                set_nationality = AES
+                set_nationality = FROM
                 promote_character = yes
             }
         }
     }
     else_if = {
         limit = {
-            FROM = { tag = KXN }
+            FROM = { original_tag = KXN }
         }
         hidden_effect = {
             EQS_burnt_comet = {
@@ -788,14 +788,14 @@ SOL_promote_SOL_governor = {
                         }
                     }
                 }
-                set_nationality = KXN
+                set_nationality = FROM
                 promote_character = yes
             }
         }
     }
     else_if = {
         limit = {
-            FROM = { tag = KIR }
+            FROM = { original_tag = KIR }
         }
         hidden_effect = {
             EQS_crepuscular_ray = {
@@ -822,7 +822,7 @@ SOL_promote_SOL_governor = {
                         }
                     }
                 }
-                set_nationality = KIR
+                set_nationality = FROM
                 promote_character = yes
             }
         }
@@ -831,30 +831,40 @@ SOL_promote_SOL_governor = {
 SOL_promote_local_governor = {
     if = {
         limit = {
-            FROM = { tag = YAK }
+            FROM = { original_tag = YAK }
         }
+        ###Might need to change this to generating characters of the same name and portrait, if it causes problems
         hidden_effect = {
             every_possible_country = {
                 limit = {
                     has_character = YAK_khan_koletiv
-                    NOT = { tag = YAK }
                 }
                 YAK_khan_koletiv = {
-                    set_nationality = YAK
-                    promote_character = yes
+                    set_nationality = FROM
                 }
             }
-            YAK = {
-                YAK_khan_koletiv = { add_trait = { trait = imperial_collaborator ideology = nazism } }
+            FROM = {
+                YAK_khan_koletiv = {
+                    promote_character = yes
+                    add_trait = { trait = imperial_collaborator ideology = nazism }
+                }
             }
         }
     }
     else_if = {
         limit = {
-            FROM = { tag = GRF }
+            FROM = { original_tag = GRF }
         }
         hidden_effect = {
-            GRF = {
+            every_possible_country = {
+                limit = {
+                    has_character = GRF_skeiron
+                }
+                GRF_skeiron = {
+                    set_nationality = FROM
+                }
+            }
+            FROM = {
                 GRF_skeiron = {
                     add_trait = { trait = imperial_collaborator ideology = corporatocracy }
                     promote_character = yes
@@ -864,20 +874,39 @@ SOL_promote_local_governor = {
     }
     else_if = {
         limit = {
-            FROM = { tag = PLB }
+            FROM = { original_tag = PLB }
         }
         hidden_effect = {
-            PLB = {
-                PLB_torben_of_clan_svartpels = { add_trait = { trait = imperial_collaborator ideology = kratokracy } }
+            every_possible_country = {
+                limit = {
+                    has_character = PLB_torben_of_clan_svartpels
+                }
+                PLB_torben_of_clan_svartpels = {
+                    set_nationality = FROM
+                }
+            }
+            FROM = {
+                PLB_torben_of_clan_svartpels = {
+                    add_trait = { trait = imperial_collaborator ideology = kratokracy }
+                    promote_character = yes
+                }
             }
         }
     }
     else_if = {
         limit = {
-            FROM = { tag = NTR }
+            FROM = { original_tag = NTR }
         }
         hidden_effect = {
-            NTR = {
+            every_possible_country = {
+                limit = {
+                    has_character = NTR_princess_fiana_ii
+                }
+                NTR_princess_fiana_ii = {
+                    set_nationality = FROM
+                }
+            }
+            FROM = {
                 NTR_princess_fiana_ii = {
                     if = {
                         limit = {
@@ -908,10 +937,18 @@ SOL_promote_local_governor = {
     }
     else_if = {
         limit = {
-            FROM = { tag = HLR }
+            FROM = { original_tag = HLR }
         }
         hidden_effect = {
-            HLR = {
+            every_possible_country = {
+                limit = {
+                    has_character = HLR_ostwald_vind
+                }
+                HLR_ostwald_vind = {
+                    set_nationality = FROM
+                }
+            }
+            FROM = {
                 HLR_ostwald_vind = {
                     if = {
                         limit = {
@@ -942,22 +979,39 @@ SOL_promote_local_governor = {
     }
     else_if = {
         limit = {
-            FROM = { tag = FBK }
+            FROM = { original_tag = FBK }
         }
         hidden_effect = {
-            FBK = {
+            every_possible_country = {
+                limit = {
+                    has_character = FBK_hermane_gering
+                }
+                FBK_hermane_gering = {
+                    set_nationality = FROM
+                }
+            }
+            FROM = {
                 FBK_hermane_gering = {
                     add_trait = { trait = imperial_collaborator ideology = kratokracy }
+                    promote_character = yes
                 }
             }
         }
     }
     else_if = {
         limit = {
-            FROM = { tag = RCT }
+            FROM = { original_tag = RCT }
         }
         hidden_effect = {
-            RCT = {
+            every_possible_country = {
+                limit = {
+                    has_character = RCT_pumpkin_swirl
+                }
+                RCT_pumpkin_swirl = {
+                    set_nationality = FROM
+                }
+            }
+            FROM = {
                 RCT_pumpkin_swirl = {
                     if = {
                         limit = { ROOT = { has_completed_focus = SOL_god_empress } }
@@ -988,30 +1042,60 @@ SOL_promote_local_governor = {
     }
     else_if = {
         limit = {
-            FROM = { tag = ZES }
+            FROM = { original_tag = ZES }
         }
         hidden_effect = {
-            ZES = {
-                ZES_rocha_salgada = { add_trait = { trait = imperial_collaborator ideology = nazism } }
+            every_possible_country = {
+                limit = {
+                    has_character = ZES_rocha_salgada
+                }
+                ZES_rocha_salgada = {
+                    set_nationality = FROM
+                }
+            }
+            FROM = {
+                ZES_rocha_salgada = {
+                    add_trait = { trait = imperial_collaborator ideology = nazism }
+                    promote_character = yes
+                }
             }
         }
     }
     else_if = {
         limit = {
-            FROM = { tag = MIT }
+            FROM = { original_tag = MIT }
         }
         hidden_effect = {
-            MIT = {
-                MIT_andris_dory = { add_trait = { trait = imperial_collaborator ideology = fascism_ideology } }
+            every_possible_country = {
+                limit = {
+                    has_character = MIT_andris_dory
+                }
+                MIT_andris_dory = {
+                    set_nationality = FROM
+                }
+            }
+            FROM = {
+                MIT_andris_dory = {
+                    add_trait = { trait = imperial_collaborator ideology = fascism_ideology }
+                    promote_character = yes
+                }
             }
         }
     }
     else_if = {
         limit = {
-            FROM = { tag = HIP }
+            FROM = { original_tag = HIP }
         }
         hidden_effect = {
-            HIP = {
+            every_possible_country = {
+                limit = {
+                    has_character = HIP_queen_novo
+                }
+                HIP_queen_novo = {
+                    set_nationality = FROM
+                }
+            }
+            FROM = {
                 HIP_queen_novo = {
                     if = {
                         limit = {
@@ -1042,18 +1126,39 @@ SOL_promote_local_governor = {
     }
     else_if = {
         limit = {
-            FROM = { tag = CTH }
+            FROM = { original_tag = CTH }
         }
         hidden_effect = {
-            CTH = { CTH_zalathel_zarca = { add_trait = { trait = imperial_collaborator ideology = plutocracy } } }
+            every_possible_country = {
+                limit = {
+                    has_character = CTH_zalathel_zarca
+                }
+                CTH_zalathel_zarca = {
+                    set_nationality = FROM
+                }
+            }
+            FROM = {
+                CTH_zalathel_zarca = {
+                    add_trait = { trait = imperial_collaborator ideology = plutocracy }
+                    promote_character = yes
+                }
+            }
         }
     }
     else_if = {
         limit = {
-            FROM = { tag = CTL }
+            FROM = { original_tag = CTL }
         }
         hidden_effect = {
-            CTL = {
+            every_possible_country = {
+                limit = {
+                    has_character = CTL_hira_ramachan
+                }
+                CTL_hira_ramachan = {
+                    set_nationality = FROM
+                }
+            }
+            FROM = {
                 CTL_hira_ramachan = {
                     if = {
                         limit = {
@@ -1088,72 +1193,122 @@ SOL_promote_local_governor = {
     }
     else_if = {
         limit = {
-            FROM = { tag = ABY }
+            FROM = { original_tag = ABY }
         }
         hidden_effect = {
-            ABY = { ABY_catrina_catwe = { add_trait = { trait = imperial_collaborator_better ideology = neofeudalism } } }
-        }
-    }
-    else_if = {
-        limit = {
-            FROM = { tag = ZAR }
-        }
-        hidden_effect = {
-            ZAR = { ZAR_zawgha = { add_trait = { trait = imperial_collaborator ideology = kratokracy } } }
-        }
-    }
-    else_if = {
-        limit = {
-            FROM = { tag = ROA }
-        }
-        hidden_effect = { ROA = { ROA_kaiser_augustus = { add_trait = { trait = imperial_collaborator_better ideology = nazism } } } }
-    }
-    else_if = {
-        limit = {
-            FROM = { tag = STM }
-        }
-        hidden_effect = { STM = { STM_ikvus_hailstorm = { add_trait = { trait = imperial_collaborator ideology = plutocracy } } } }
-    }
-    else_if = {
-        limit = {
-            FROM = { tag = ZOO }
-        }
-        hidden_effect = {
-            ZOO = {
-                ZOO_akida_bomboko = {
-                    if = {
-                        limit = {
-                            ROOT = { has_completed_focus = SOL_god_empress }
-                        }
-                        add_country_leader_role = {
-                            promote_leader = yes
-                            country_leader = {
-                                ideology = falangism
-                                expire = "1965.1.1"
-                                traits = { imperial_collaborator }
-                            }
-                        }
-                    }
-                    else = {
-                        add_country_leader_role = {
-                            promote_leader = yes
-                            country_leader = {
-                                ideology = nazism
-                                expire = "1965.1.1"
-                                traits = { imperial_collaborator }
-                            }
-                        }
-                    }
+            every_possible_country = {
+                limit = {
+                    has_character = ABY_catrina_catwe
+                }
+                ABY_catrina_catwe = {
+                    set_nationality = FROM
+                }
+            }
+            FROM = {
+                ABY_catrina_catwe = {
+                    add_trait = { trait = imperial_collaborator_better ideology = neofeudalism }
+                    promote_character = yes
                 }
             }
         }
     }
     else_if = {
         limit = {
-            FROM = { tag = MTA }
+            FROM = { original_tag = ZAR }
         }
         hidden_effect = {
-            MTA = {
+            every_possible_country = {
+                limit = {
+                    has_character = ZAR_zawgha
+                }
+                ZAR_zawgha = {
+                    set_nationality = FROM
+                }
+            }
+            FROM = {
+                ZAR_zawgha = {
+                    add_trait = { trait = imperial_collaborator ideology = kratokracy }
+                    promote_character = yes
+                }
+            }
+        }
+    }
+    else_if = {
+        limit = {
+            FROM = { original_tag = ROA }
+        }
+        hidden_effect = {
+            every_possible_country = {
+                limit = {
+                    has_character = ROA_kaiser_augustus
+                }
+                ROA_kaiser_augustus = {
+                    set_nationality = FROM
+                }
+            }
+            FROM = {
+                ROA_kaiser_augustus = {
+                    add_trait = { trait = imperial_collaborator_better ideology = nazism }
+                    promote_character = yes
+                }
+            }
+        }
+    }
+    else_if = {
+        limit = {
+            FROM = { original_tag = STM }
+        }
+        hidden_effect = {
+            every_possible_country = {
+                limit = {
+                    has_character = STM_ikvus_hailstorm
+                }
+                STM_ikvus_hailstorm = {
+                    set_nationality = FROM
+                }
+            }
+            FROM = {
+                STM_ikvus_hailstorm = {
+                    add_trait = { trait = imperial_collaborator ideology = plutocracy }
+                }
+            }
+        }
+    }
+    else_if = {
+        limit = {
+            FROM = { original_tag = ZOO }
+        }
+        hidden_effect = {
+            every_possible_country = {
+                limit = {
+                    has_character = ZOO_mani_zuba
+                }
+                ZOO_mani_zuba = {
+                    set_nationality = FROM
+                }
+            }
+            FROM = {
+                ZOO_mani_zuba = {
+                    promote_character = yes
+                    add_trait = { trait = imperial_collaborator ideology = nazism }
+                }
+            }
+        }
+    }
+    else_if = {
+        limit = {
+            FROM = { original_tag = MTA }
+        }
+        hidden_effect = {
+            every_possible_country = {
+                limit = {
+                    has_character = MTA_taous_bin_hanbal
+                }
+                MTA_taous_bin_hanbal = {
+                    set_nationality = FROM
+                }
+            }
+            FROM = {
                 MTA_taous_bin_hanbal = {
                     if = {
                         limit = {
@@ -1184,10 +1339,18 @@ SOL_promote_local_governor = {
     }
     else_if = {
         limit = {
-            FROM = { tag = MAZ }
+            FROM = { original_tag = MAZ }
         }
         hidden_effect = {
-            MAZ = {
+            every_possible_country = {
+                limit = {
+                    has_character = MAZ_manza_mahud
+                }
+                MAZ_manza_mahud = {
+                    set_nationality = FROM
+                }
+            }
+            FROM = {
                 MAZ_manza_mahud = {
                     if = {
                         limit = {
@@ -1218,18 +1381,34 @@ SOL_promote_local_governor = {
     }
     else_if = {
         limit = {
-            FROM = { tag = GAR }
+            FROM = { original_tag = GAR }
         }
         hidden_effect = {
-            GAR = { GAR_queen_demonia = { add_trait = { trait = imperial_collaborator_better ideology = fascism_ideology } } }
+            every_possible_country = {
+                limit = {
+                    has_character = GAR_queen_demonia
+                }
+                GAR_queen_demonia = {
+                    set_nationality = FROM
+                }
+            }
+            FROM = { GAR_queen_demonia = { add_trait = { trait = imperial_collaborator_better ideology = fascism_ideology } } }
         }
     }
     else_if = {
         limit = {
-            FROM = { tag = AES }
+            FROM = { original_tag = AES }
         }
         hidden_effect = {
-            AES = {
+            every_possible_country = {
+                limit = {
+                    has_character = AES_princess_zaida
+                }
+                AES_princess_zaida = {
+                    set_nationality = FROM
+                }
+            }
+            FROM = {
                 AES_princess_zaida = {
                     if = {
                         limit = {
@@ -1260,18 +1439,44 @@ SOL_promote_local_governor = {
     }
     else_if = {
         limit = {
-            FROM = { tag = KXN }
+            FROM = { original_tag = KXN }
         }
         hidden_effect = {
-            KXN = { KXN_wildfire_flourish = { add_trait = { trait = imperial_collaborator ideology = stratocracy } } }
+            every_possible_country = {
+                limit = {
+                    has_character = KXN_Long_Dusk
+                }
+                KXN_Long_Dusk = {
+                    set_nationality = FROM
+                }
+            }
+            FROM = {
+                KXN_Long_Dusk = {
+                    add_trait = { trait = imperial_collaborator ideology = stratocracy }
+                    promote_character = yes
+                }
+            }
         }
     }
     else_if = {
         limit = {
-            FROM = { tag = KIR }
+            FROM = { original_tag = KIR }
         }
         hidden_effect = {
-            KIR = { KIR_fickle_current = { add_trait = { trait = imperial_collaborator_better ideology = corporatocracy } } }
+            every_possible_country = {
+                limit = {
+                    has_character = KIR_fickle_current
+                }
+                KIR_fickle_current = {
+                    set_nationality = FROM
+                }
+            }
+            FROM = {
+                KIR_fickle_current = {
+                    add_trait = { trait = imperial_collaborator_better ideology = corporatocracy }
+                    promote_character = yes
+                }
+            }
         }
     }
 }
@@ -1286,55 +1491,95 @@ SOL_release_CHN = {
         }
         set_temp_variable = { SOL_colonized_CHN_states = 1 }
     }
-    CHN = { get_current_government_type = yes }
+    create_dynamic_country = {
+        original_tag = CHN
+        reserve_dynamic_country = yes
+        hidden_effect = {
+            every_state = {
+                limit = {
+                    is_in_array = { CHN.original_cores = THIS.id }
+                }
+                transfer_state_to = PREV
+                add_core_of = PREV
+            }
+            ROOT = {
+                set_autonomy = {
+                    target = PREV
+                    autonomous_state = autonomy_reichsprotectorate
+                }
+            }
+            CHN = {
+                PREV = {
+                    transfer_technology = yes
+                    transfer_society_ideas = yes
+                    transfer_science_ideas = yes
+                    transfer_poverty_ideas = yes
+                    transfer_illiteracy_ideas = yes
+                }
+            }
+        }
+        set_cosmetic_tag = CHN_SOL
+        set_country_flag = is_solar_puppet
+        hidden_effect = {
+            set_country_flag = demilitarized
+            add_ideas = disarmed_nation
+            add_ideas = SOL_CHN_puppet_benefits
+            add_ideas = changeling_race
+            if = {
+                limit = { ROOT = { has_completed_focus = SOL_god_empress } }
+                set_party_name = {
+                    ideology = fascism
+                    long_name = EQS_solaris_cultus
+                    name = EQS_solaris_cultus
+                }
+            }
+            else = {
+                set_party_name = {
+                    ideology = fascism
+                    long_name = EQS_fascism_party
+                    name = EQS_fascism_party
+                }
+            }
+            CHN = {
+                CHN_queen_aurantia = {
+                    set_portraits = {
+                        civilian = {
+                            large = "gfx/leaders/EQS/Queen_Aurantia.tga"
+                        }
+                    }
+                    if = {
+                        limit = { ROOT = { has_completed_focus = SOL_god_empress } }
+                        add_country_leader_role = {
+                            country_leader = {
+                                ideology = falangism
+                                expire = "1965.1.1"
+                                traits = { imperial_governess_alt }
+                            }
+                        }
+                    }
+                    else = {
+                        add_country_leader_role = {
+                            country_leader = {
+                                ideology = nazism
+                                expire = "1965.1.1"
+                                traits = { imperial_governess_alt }
+                            }
+                        }
+                    }
+                    set_nationality = PREV
+                    promote_character = yes
+                }
+            }
+        }
+    }
     effect_tooltip = {
         release_autonomy = {
             target = CHN
             autonomous_state = autonomy_reichsprotectorate
         }
-    }
-    hidden_effect = {
-        every_state = {
-            limit = {
-                is_in_array = { CHN.original_cores = THIS.id }
-            }
-            transfer_state_to = CHN
+        CHN = {
+            set_cosmetic_tag = CHN_SOL
         }
-        set_autonomy = {
-            target = CHN
-            autonomous_state = autonomy_reichsprotectorate
-        }
-        if = {
-            limit = { ROOT = { has_completed_focus = SOL_god_empress } }
-            set_party_name = {
-                ideology = fascism
-                long_name = EQS_solaris_cultus
-                name = EQS_solaris_cultus
-            }
-        }
-        else = {
-            set_party_name = {
-                ideology = fascism
-                long_name = EQS_fascism_party
-                name = EQS_fascism_party
-            }
-        }
-    }
-    CHN = {
-        restore_previous_government_type = yes
-        SOL_apply_generic_focus_tree_to_puppets = yes
-        set_cosmetic_tag = CHN_SOL
-        set_country_flag = is_solar_puppet
-        if = {
-            limit = {
-                NOT = { has_country_flag = demilitarized }
-            }
-            set_country_flag = demilitarized
-            hidden_effect = {
-                add_ideas = disarmed_nation
-            }
-        }
-        add_ideas = SOL_CHN_puppet_benefits
     }
     if = {
         limit = {
@@ -1356,24 +1601,6 @@ SOL_release_CHN = {
             }
         }
     }
-    ###Keep as possibility. See if adding the generic tree is sufficient
-    #create_dynamic_country = {
-    #    original_tag = CHN
-    #    set_variable = { SOL_skreeeeeeee = 1 }
-    #    reserve_dynamic_country = yes
-    #}
-    #every_possible_country = {
-    #    limit = {
-    #        is_dynamic_country = yes
-    #        check_variable = { SOL_skreeeeeeee = 1 }
-    #    }
-    #    every_state = {
-    #        limit = {
-    #            is_in_array = { CHN.original_cores = THIS.id }
-    #        }
-    #        transfer_state_to = PREV
-    #    }
-    #}
 }
 SOL_release_OLE = {
     if = {
@@ -1387,46 +1614,64 @@ SOL_release_OLE = {
     }
     if = {
         limit = {
-            NOT = { country_exists = OLE }
+            NOT = { has_country_flag = OLE_dynamic_puppet_set }
         }
         effect_tooltip = {
             release_autonomy = {
                 target = OLE
                 autonomy_state = autonomy_reichsprotectorate
             }
-        }
-        hidden_effect = {
-            every_state = {
-                limit = {
-                    is_in_array = { OLE.original_cores = THIS.id }
-                }
-                transfer_state_to = OLE
-            }
-            set_autonomy = {
-                target = OLE
-                autonomous_state = autonomy_reichsprotectorate
-            }
-            if = {
-                limit = { ROOT = { has_completed_focus = SOL_god_empress } }
-                set_party_name = {
-                    ideology = fascism
-                    long_name = EQS_solaris_cultus
-                    name = EQS_solaris_cultus
-                }
-            }
-            else = {
-                set_party_name = {
-                    ideology = fascism
-                    long_name = EQS_fascism_party
-                    name = EQS_fascism_party
-                }
+            OLE = {
+                set_cosmetic_tag = OLE_SOL
             }
         }
-        OLE = {
-            SOL_apply_generic_focus_tree_to_puppets = yes
-            set_country_flag = is_solar_puppet
+        create_dynamic_country = {
+            original_tag = OLE
+            reserve_dynamic_country = yes
+            ROOT = { set_country_flag = OLE_dynamic_puppet_set }
+            save_global_event_target_as = OLE_dynamic_puppet
+            add_ideas = deer_race
+            hidden_effect = {
+                every_state = {
+                    limit = {
+                        is_in_array = { OLE.original_cores = THIS.id }
+                    }
+                    transfer_state_to = PREV
+                    add_core_of = PREV
+                }
+                ROOT = {
+                    set_autonomy = {
+                        target = PREV
+                        autonomous_state = autonomy_reichsprotectorate
+                    }
+                }
+                OLE = {
+                    PREV = {
+                        transfer_technology = yes
+                        transfer_society_ideas = yes
+                        transfer_science_ideas = yes
+                        transfer_poverty_ideas = yes
+                        transfer_illiteracy_ideas = yes
+                    }
+                }
+                if = {
+                    limit = { ROOT = { has_completed_focus = SOL_god_empress } }
+                    set_party_name = {
+                        ideology = fascism
+                        long_name = EQS_solaris_cultus
+                        name = EQS_solaris_cultus
+                    }
+                }
+                else = {
+                    set_party_name = {
+                        ideology = fascism
+                        long_name = EQS_fascism_party
+                        name = EQS_fascism_party
+                    }
+                }
+            }
             set_cosmetic_tag = OLE_SOL
-            clear_variable = collaboration_formed_by
+            set_country_flag = is_solar_puppet
         }
     }
     hidden_effect = {
@@ -1436,14 +1681,14 @@ SOL_release_OLE = {
             }
             if = {
                 limit = {
-                    OLE = {
+                    event_target:OLE_dynamic_puppet = {
                         NOT = { has_character = OLE_queen_velvet }
                     }
                 }
                 every_possible_country = {
                     limit = { has_character = OLE_queen_velvet }
                     OLE_queen_velvet = {
-                        set_nationality = OLE
+                        set_nationality = event_target:OLE_dynamic_puppet
                     }
                 }
             }
@@ -1492,20 +1737,15 @@ SOL_release_OLE = {
                             }
                         }
                         add_country_leader_role = {
-                            promote_leader = yes
                             country_leader = {
                                 ideology = ultranationalism
                                 expire = "1965.1.1"
                             }
                         }
                     }
-                    else_if = {
-                        limit = {
-                            is_country_leader = no
-                        }
-                        promote_character = yes
-                    }
+                    set_nationality = event_target:OLE_dynamic_puppet
                     add_country_leader_trait = temporary_governor
+                    promote_character = yes
                 }
             }
             clr_country_flag = SOL_defunct_floof_factory
@@ -1514,7 +1754,7 @@ SOL_release_OLE = {
             every_possible_country = {
                 limit = { has_character = EQS_luminous_blade }
                 EQS_luminous_blade = {
-                    set_nationality = OLE
+                    set_nationality = event_target:OLE_dynamic_puppet
                 }
             }
             every_possible_country = {
@@ -1533,8 +1773,16 @@ SOL_release_OLE = {
                 add_ideas = SOL_OLE_military_focus
             }
         }
-        transfer_state = 76
-        transfer_state = 189
+        if = {
+            limit = {
+                NOT = {
+                    owns_state = 76
+                    owns_state = 189
+                }
+            }
+            transfer_state = 76
+            transfer_state = 189
+        }
         if = {
             limit = {
                 has_completed_focus = SOL_reclaim_seaddle
@@ -1580,24 +1828,41 @@ SOL_release_GRF = {
             target = GRF
             autonomous_state = autonomy_reichsprotectorate
         }
+        GRF = {
+            set_cosmetic_tag = GRF_SOL
+        }
     }
-    hidden_effect = {
-        every_state = {
-            limit = {
-                OR = {
-                    is_in_array = { GFF.original_cores = THIS.id }
-                    is_in_array = { GRF.original_cores = THIS.id }
+    create_dynamic_country = {
+        original_tag = GRF
+        reserve_dynamic_country = yes
+        add_ideas = griffon_race
+        hidden_effect = {
+            every_state = {
+                limit = {
+                    OR = {
+                        is_in_array = { GRF.original_cores = THIS.id }
+                        is_in_array = { GFF.original_cores = THIS.id }
+                    }
+                }
+                transfer_state_to = PREV
+                add_core_of = PREV
+            }
+            ROOT = {
+                set_autonomy = {
+                    target = PREV
+                    autonomous_state = autonomy_reichsprotectorate
                 }
             }
-            transfer_state_to = GRF
+            GRF = {
+                PREV = {
+                    transfer_technology = yes
+                    transfer_society_ideas = yes
+                    transfer_science_ideas = yes
+                    transfer_poverty_ideas = yes
+                    transfer_illiteracy_ideas = yes
+                }
+            }
         }
-        set_autonomy = {
-            target = GRF
-            autonomous_state = autonomy_reichsprotectorate
-        }
-    }
-    GRF = {
-        SOL_apply_generic_focus_tree_to_puppets = yes
         set_cosmetic_tag = GRF_SOL
         set_country_flag = is_solar_puppet
         hidden_effect = { country_event = solarreworked.529 }
@@ -1640,25 +1905,41 @@ SOL_release_YAK = {
             target = YAK
             autonomous_state = autonomy_reichsprotectorate
         }
+        YAK = {
+            set_cosmetic_tag = YAK_SOL
+        }
     }
-    hidden_effect = {
-        every_state = {
-            limit = {
-                OR = {
-                    is_in_array = { YAK.original_cores = THIS.id }
-                    is_in_array = { JAK.original_cores = THIS.id }
+    create_dynamic_country = {
+        original_tag = YAK
+        reserve_dynamic_country = yes
+        add_ideas = yak_race
+        hidden_effect = {
+            every_state = {
+                limit = {
+                    OR = {
+                        is_in_array = { YAK.original_cores = THIS.id }
+                        is_in_array = { JAK.original_cores = THIS.id }
+                    }
+                }
+                transfer_state_to = PREV
+                add_core_of = PREV
+            }
+            ROOT = {
+                set_autonomy = {
+                    target = PREV
+                    autonomous_state = autonomy_reichsprotectorate
                 }
             }
-            transfer_state_to = YAK
-            add_core_of = YAK
+            YAK = {
+                PREV = {
+                    transfer_technology = yes
+                    transfer_society_ideas = yes
+                    transfer_science_ideas = yes
+                    transfer_poverty_ideas = yes
+                    transfer_illiteracy_ideas = yes
+                }
+            }
         }
-        set_autonomy = {
-            target = YAK
-            autonomous_state = autonomy_reichsprotectorate
-        }
-    }
-    YAK = {
-        SOL_apply_generic_focus_tree_to_puppets = yes
         set_cosmetic_tag = YAK_SOL
         set_country_flag = is_solar_puppet
         hidden_effect = { country_event = solarreworked.529 }
@@ -1670,167 +1951,233 @@ SOL_release_PLB = {
             target = PLB
             autonomous_state = autonomy_reichsprotectorate
         }
+        PLB = {
+            set_cosmetic_tag = PLB_SOL
+        }
     }
-    hidden_effect = {
-        every_state = {
-            limit = {
-                OR = {
-                    is_in_array = { PLB.original_cores = THIS.id }
-                    is_in_array = { PNG.original_cores = THIS.id }
+    create_dynamic_country = {
+        original_tag = PLB
+        reserve_dynamic_country = yes
+        add_ideas = polar_race
+        hidden_effect = {
+            every_state = {
+                limit = {
+                    OR = {
+                        is_in_array = { PLB.original_cores = THIS.id }
+                        is_in_array = { PNG.original_cores = THIS.id }
+                    }
+                }
+                transfer_state_to = PREV
+                add_core_of = PREV
+            }
+            ROOT = {
+                set_autonomy = {
+                    target = PREV
+                    autonomous_state = autonomy_reichsprotectorate
                 }
             }
-            transfer_state_to = PLB
-            add_core_of = PLB
+            PLB = {
+                PREV = {
+                    transfer_technology = yes
+                    transfer_society_ideas = yes
+                    transfer_science_ideas = yes
+                    transfer_poverty_ideas = yes
+                    transfer_illiteracy_ideas = yes
+                }
+            }
         }
-        set_autonomy = {
-            target = PLB
-            autonomous_state = autonomy_reichsprotectorate
-        }
-    }
-    PLB = {
-        SOL_apply_generic_focus_tree_to_puppets = yes
         set_cosmetic_tag = ARC_SOL
         set_country_flag = is_solar_puppet
         hidden_effect = { country_event = solarreworked.529 }
     }
 }
 SOL_release_RIV = {
-    hidden_effect = {
-        every_state = {
-            limit = {
-                OR = {
+    set_country_flag = SOL_released_RIV
+    create_dynamic_country = {
+        original_tag = RCT
+        reserve_dynamic_country = yes
+        save_global_event_target_as = RIV_dynamic_puppet
+        add_ideas = pony_race
+        hidden_effect = {
+            every_state = {
+                limit = {
+                    OR = {
+                        is_in_array = { RCT.original_cores = THIS.id }
+                        is_in_array = { BAK.original_cores = THIS.id }
+                        is_in_array = { WIT.original_cores = THIS.id }
+                        is_in_array = { NIM.original_cores = THIS.id }
+                        is_in_array = { FRE.original_cores = THIS.id }
+                        is_in_array = { LCT.original_cores = THIS.id }
+                        is_in_array = { DEP.original_cores = THIS.id }
+                        is_in_array = { BAR.original_cores = THIS.id }
+                    }
+                }
+                transfer_state_to = PREV
+                add_core_of = PREV
+            }
+            if = {
+                limit = { NOT = { ROOT = { has_country_flag = SOL_doghouse_set_up } } }
+                every_state = {
+                    limit = {
+                        is_in_array = { DMT.original_cores = THIS.id }
+                    }
+                    add_core_of = PREV
+                    transfer_state_to = PREV
+                }
+            }
+            if = {
+                limit = { HLQ = { all_cores_owned_by_ROOT_or_subject = yes } }
+                every_state = {
+                    limit = {
+                        is_core_of = HLQ
+                        NOT = { is_owned_by = GRD }
+                    }
+                    add_core_of = PREV
+                    transfer_state_to = PREV
+                }
+            }
+            if = {
+                limit = {
+                    LNS = { all_original_cores_owned_by_ROOT_or_subject = yes }
+                }
+                every_state = {
+                    limit = {
+                        is_in_array = { LNS.original_cores = THIS.id }
+                        NOT = { is_owned_by = GRD }
+                    }
+                    add_core_of = PREV
+                    transfer_state_to = PREV
+                }
+            }
+            ROOT = {
+                set_autonomy = {
+                    target = PREV
+                    autonomous_state = autonomy_reichsprotectorate
+                }
+            }
+            every_state = {
+                limit = {
                     is_in_array = { RCT.original_cores = THIS.id }
-                    is_in_array = { BAK.original_cores = THIS.id }
-                    is_in_array = { WIT.original_cores = THIS.id }
-                    is_in_array = { NIM.original_cores = THIS.id }
-                    is_in_array = { FRE.original_cores = THIS.id }
-                    is_in_array = { LCT.original_cores = THIS.id }
-                    is_in_array = { DEP.original_cores = THIS.id }
-                    is_in_array = { BAR.original_cores = THIS.id }
+                    is_core_of = ROOT
+                }
+                transfer_state_to = ROOT
+            }
+            RCT = {
+                PREV = {
+                    transfer_technology = yes
+                    transfer_society_ideas = yes
+                    transfer_science_ideas = yes
+                    transfer_poverty_ideas = yes
+                    transfer_illiteracy_ideas = yes
                 }
             }
-            add_core_of = RCT
-            transfer_state_to = RCT
         }
-        if = {
-            limit = { NOT = { has_country_flag = SOL_doghouse_set_up } }
-            every_state = {
-                limit = {
-                    is_in_array = { DMT.original_cores = THIS.id }
-                }
-                add_core_of = RCT
-                transfer_state_to = RCT
-            }
-        }
-        if = {
-            limit = { HLQ = { all_cores_owned_by_ROOT_or_subject = yes } }
-            every_state = {
-                limit = {
-                    is_core_of = HLQ
-                    NOT = { is_owned_by = GRD }
-                }
-                add_core_of = RCT
-                transfer_state_to = RCT
-            }
-        }
-        if = {
-            limit = {
-                LNS = { all_original_cores_owned_by_ROOT_or_subject = yes }
-            }
-            every_state = {
-                limit = {
-                    is_in_array = { LNS.original_cores = THIS.id }
-                    NOT = { is_owned_by = GRD }
-                }
-                add_core_of = RCT
-                transfer_state_to = RCT
-            }
-        }
-        set_autonomy = {
-            target = RCT
-            autonomous_state = autonomy_reichsprotectorate
-        }
-        every_state = {
-            limit = {
-                is_in_array = { RCT.original_cores = THIS.id }
-                is_core_of = ROOT
-            }
-            transfer_state_to = ROOT
-        }
-    }
-    effect_tooltip = {
-        release_autonomy = {
-            target = RCT
-            autonomous_state = autonomy_reichsprotectorate
-        }
-    }
-    RCT = {
-        SOL_apply_generic_focus_tree_to_puppets = yes
         set_cosmetic_tag = RIV_SOL
         set_country_flag = is_solar_puppet
         hidden_effect = { country_event = solarreworked.529 }
+        load_focus_tree = generic_griffon_focus
+    }
+    effect_tooltip = {
+        release_autonomy = {
+            target = RCT
+            autonomous_state = autonomy_reichsprotectorate
+        }
+        RCT = {
+            set_cosmetic_tag = RIV_SOL
+        }
     }
 }
 SOL_release_FBK = {
-    hidden_effect = {
-        every_state = {
-            limit = {
-                OR = {
-                    is_in_array = { WAT.original_cores = THIS.id }
-                    is_in_array = { FIR.original_cores = THIS.id }
-                    is_in_array = { NCH.original_cores = THIS.id }
-                    is_in_array = { FBK.original_cores = THIS.id }
+    create_dynamic_country = {
+        original_tag = FBK
+        reserve_dynamic_country = yes
+        add_ideas = pony_race
+        hidden_effect = {
+            every_state = {
+                limit = {
+                    OR = {
+                        is_in_array = { WAT.original_cores = THIS.id }
+                        is_in_array = { FIR.original_cores = THIS.id }
+                        is_in_array = { NCH.original_cores = THIS.id }
+                        is_in_array = { FBK.original_cores = THIS.id }
+                    }
+                }
+                transfer_state_to = PREV
+                add_core_of = PREV
+            }
+            ROOT = {
+                set_autonomy = {
+                    target = PREV
+                    autonomous_state = autonomy_reichsprotectorate
                 }
             }
-            add_core_of = FBK
-            transfer_state_to = FBK
+            FBK = {
+                PREV = {
+                    transfer_technology = yes
+                    transfer_society_ideas = yes
+                    transfer_science_ideas = yes
+                    transfer_poverty_ideas = yes
+                    transfer_illiteracy_ideas = yes
+                }
+            }
         }
-        set_autonomy = {
-            target = FBK
-            autonomous_state = autonomy_reichsprotectorate
-        }
-    }
-    effect_tooltip = {
-        release_autonomy = {
-            target = FBK
-            autonomous_state = autonomy_reichsprotectorate
-        }
-    }
-    FBK = {
-        SOL_apply_generic_focus_tree_to_puppets = yes
         set_cosmetic_tag = FBK_SOL
         set_country_flag = is_solar_puppet
         hidden_effect = { country_event = solarreworked.529 }
+        load_focus_tree = generic_griffon_focus
+    }
+    effect_tooltip = {
+        release_autonomy = {
+            target = FBK
+            autonomous_state = autonomy_reichsprotectorate
+        }
     }
 }
 SOL_release_HLR = {
-    hidden_effect = {
-        every_state = {
-            limit = {
-                OR = {
-                    is_in_array = { DED.original_cores = THIS.id }
-                    is_in_array = { HLR.original_cores = THIS.id }
+    create_dynamic_country = {
+        original_tag = HLR
+        reserve_dynamic_country = yes
+        add_ideas = griffon_race
+        hidden_effect = {
+            every_state = {
+                limit = {
+                    OR = {
+                        is_in_array = { HLR.original_cores = THIS.id }
+                        is_in_array = { DED.original_cores = THIS.id }
+                    }
+                }
+                transfer_state_to = PREV
+                add_core_of = PREV
+            }
+            ROOT = {
+                set_autonomy = {
+                    target = PREV
+                    autonomous_state = autonomy_reichsprotectorate
                 }
             }
-            add_core_of = HLR
-            transfer_state_to = HLR
+            HLR = {
+                PREV = {
+                    transfer_technology = yes
+                    transfer_society_ideas = yes
+                    transfer_science_ideas = yes
+                    transfer_poverty_ideas = yes
+                    transfer_illiteracy_ideas = yes
+                }
+            }
         }
-        set_autonomy = {
-            target = HLR
-            autonomous_state = autonomy_reichsprotectorate
-        }
+        set_cosmetic_tag = HLR_SOL
+        set_country_flag = is_solar_puppet
+        hidden_effect = { country_event = solarreworked.529 }
+        load_focus_tree = generic_griffon_focus
     }
     effect_tooltip = {
         release_autonomy = {
             target = HLR
             autonomous_state = autonomy_reichsprotectorate
         }
-    }
-    HLR = {
-        SOL_apply_generic_focus_tree_to_puppets = yes
-        set_cosmetic_tag = HLR_SOL
-        set_country_flag = is_solar_puppet
-        hidden_effect = { country_event = solarreworked.529 }
+        HLR = {
+            set_cosmetic_tag = HLR_SOL
+        }
     }
 }
 SOL_release_MIT = {
@@ -1839,84 +2186,139 @@ SOL_release_MIT = {
             target = MIT
             autonomy_state = autonomy_reichsprotectorate
         }
+        MIT = {
+            set_cosmetic_tag = MIT_SOL
+        }
     }
-    hidden_effect = {
-        every_state = {
-            limit = {
-                is_in_array = { MIT.original_cores = THIS.id }
+    create_dynamic_country = {
+        original_tag = MIT
+        reserve_dynamic_country = yes
+        add_ideas = minotaur_race
+        hidden_effect = {
+            every_state = {
+                limit = {
+                    is_in_array = { MIT.original_cores = THIS.id }
+                }
+                transfer_state_to = PREV
+                add_core_of = PREV
             }
-            transfer_state_to = MIT
+            ROOT = {
+                set_autonomy = {
+                    target = PREV
+                    autonomous_state = autonomy_reichsprotectorate
+                }
+            }
+            MIT = {
+                PREV = {
+                    transfer_technology = yes
+                    transfer_society_ideas = yes
+                    transfer_science_ideas = yes
+                    transfer_poverty_ideas = yes
+                    transfer_illiteracy_ideas = yes
+                }
+            }
         }
-        set_autonomy = {
-            target = MIT
-            autonomous_state = autonomy_reichsprotectorate
-        }
-    }
-    MIT = {
-        SOL_apply_generic_focus_tree_to_puppets = yes
         set_cosmetic_tag = MIT_SOL
         set_country_flag = is_solar_puppet
         hidden_effect = { country_event = solarreworked.529 }
+        load_focus_tree = generic_griffon_focus
     }
 }
 SOL_release_ZES = {
-    hidden_effect = {
-        every_state = {
-            limit = {
-                OR = {
-                    is_in_array = { OLV.original_cores = THIS.id }
-                    is_in_array = { ZES.original_cores = THIS.id }
+    create_dynamic_country = {
+        original_tag = ZES
+        reserve_dynamic_country = yes
+        add_ideas = zebra_race
+        hidden_effect = {
+            every_state = {
+                limit = {
+                    OR = {
+                        is_in_array = { ZES.original_cores = THIS.id }
+                        is_in_array = { OLV.original_cores = THIS.id }
+                    }
+                }
+                transfer_state_to = PREV
+                add_core_of = PREV
+            }
+            ROOT = {
+                set_autonomy = {
+                    target = PREV
+                    autonomous_state = autonomy_reichsprotectorate
                 }
             }
-            transfer_state_to = ZES
-            add_core_of = ZES
+            ZES = {
+                PREV = {
+                    transfer_technology = yes
+                    transfer_society_ideas = yes
+                    transfer_science_ideas = yes
+                    transfer_poverty_ideas = yes
+                    transfer_illiteracy_ideas = yes
+                }
+            }
         }
-        set_autonomy = {
-            target = ZES
-            autonomous_state = autonomy_reichsprotectorate
-        }
+        set_cosmetic_tag = ZES_SOL
+        set_country_flag = is_solar_puppet
+        hidden_effect = { country_event = solarreworked.529 }
+        load_focus_tree = generic_griffon_focus
     }
     effect_tooltip = {
         release_autonomy = {
             target = ZES
             autonomy_state = autonomy_reichsprotectorate
         }
-    }
-    ZES = {
-        SOL_apply_generic_focus_tree_to_puppets = yes
-        set_cosmetic_tag = ZES_SOL
-        set_country_flag = is_solar_puppet
-        hidden_effect = { country_event = solarreworked.529 }
+        ZES = {
+            set_cosmetic_tag = ZES_SOL
+        }
     }
 }
 SOL_release_HIP = {
-    hidden_effect = {
-        every_state = {
-            limit = {
-                OR = {
-                    is_in_array = { TBK.original_cores = THIS.id }
-                    is_in_array = { WAR.original_cores = THIS.id }
-                    is_in_array = { ZUM.original_cores = THIS.id }
-                    is_in_array = { MER.original_cores = THIS.id }
-                    is_in_array = { HIP.original_cores = THIS.id }
+    create_dynamic_country = {
+        original_tag = ZES
+        reserve_dynamic_country = yes
+        add_ideas = hippogriff_race
+        hidden_effect = {
+            every_state = {
+                limit = {
+                    OR = {
+                        is_in_array = { TBK.original_cores = THIS.id }
+                        is_in_array = { WAR.original_cores = THIS.id }
+                        is_in_array = { ZUM.original_cores = THIS.id }
+                        is_in_array = { MER.original_cores = THIS.id }
+                        is_in_array = { HIP.original_cores = THIS.id }
+                    }
+                    if = {
+                        limit = {
+                            ROOT = { has_country_flag = SOL_formed_super_equus }
+                        }
+                        NOT = {
+                            state = 1196
+                            state = 1197
+                        }
+                    }
                 }
-                if = {
-                    limit = {
-                        ROOT = { has_country_flag = SOL_formed_super_equus }
-                    }
-                    NOT = {
-                        state = 1196
-                        state = 1197
-                    }
+                transfer_state_to = PREV
+                add_core_of = PREV
+            }
+            ROOT = {
+                set_autonomy = {
+                    target = PREV
+                    autonomous_state = autonomy_reichsprotectorate
                 }
             }
-            add_core_of = HIP
-            transfer_state_to = HIP
+            HIP = {
+                PREV = {
+                    transfer_technology = yes
+                    transfer_society_ideas = yes
+                    transfer_science_ideas = yes
+                    transfer_poverty_ideas = yes
+                    transfer_illiteracy_ideas = yes
+                }
+            }
         }
-        set_autonomy = {
-            target = HIP
-            autonomous_state = autonomy_reichsprotectorate
-        }
+        set_cosmetic_tag = HIP_SOL
+        set_country_flag = is_solar_puppet
+        hidden_effect = { country_event = solarreworked.529 }
+        load_focus_tree = generic_zebra_focus
     }
     if = {
         limit = { 692 = { is_core_of = ROOT } }
@@ -1927,12 +2329,9 @@ SOL_release_HIP = {
             target = HIP
             autonomy_state = autonomy_reichsprotectorate
         }
-    }
-    HIP = {
-        SOL_apply_generic_focus_tree_to_puppets = yes
-        set_cosmetic_tag = HIP_SOL
-        set_country_flag = is_solar_puppet
-        hidden_effect = { country_event = solarreworked.529 }
+        HIP = {
+            set_cosmetic_tag = HIP_SOL
+        }
     }
     hidden_effect = {
         if = {
@@ -1947,190 +2346,283 @@ SOL_release_HIP = {
     }
 }
 SOL_release_CTH = {
-    hidden_effect = {
-        every_state = {
-            limit = {
-                OR = {
-                    is_in_array = { CGI.original_cores = THIS.id }
-                    is_in_array = { MCW.original_cores = THIS.id }
-                    is_in_array = { CVA.original_cores = THIS.id }
-                    is_in_array = { CDR.original_cores = THIS.id }
-                    is_in_array = { CTH.original_cores = THIS.id }
+    create_dynamic_country = {
+        original_tag = CTH
+        reserve_dynamic_country = yes
+        add_ideas = zebra_race
+        hidden_effect = {
+            every_state = {
+                limit = {
+                    OR = {
+                        is_in_array = { CGI.original_cores = THIS.id }
+                        is_in_array = { MCW.original_cores = THIS.id }
+                        is_in_array = { CVA.original_cores = THIS.id }
+                        is_in_array = { CDR.original_cores = THIS.id }
+                        is_in_array = { CTH.original_cores = THIS.id }
+                    }
+                }
+                transfer_state_to = PREV
+                add_core_of = PREV
+            }
+            ROOT = {
+                set_autonomy = {
+                    target = PREV
+                    autonomous_state = autonomy_reichsprotectorate
                 }
             }
-            add_core_of = CTH
-            transfer_state_to = CTH
+            CTH = {
+                PREV = {
+                    transfer_technology = yes
+                    transfer_society_ideas = yes
+                    transfer_science_ideas = yes
+                    transfer_poverty_ideas = yes
+                    transfer_illiteracy_ideas = yes
+                }
+            }
         }
-        set_autonomy = {
-            target = CTH
-            autonomous_state = autonomy_reichsprotectorate
-        }
-    }
-    effect_tooltip = {
-        release_autonomy = {
-            target = CTH
-            autonomy_state = autonomy_reichsprotectorate
-        }
-    }
-    CTH = {
-        SOL_apply_generic_focus_tree_to_puppets = yes
         set_cosmetic_tag = CTH_SOL
         set_country_flag = is_solar_puppet
         hidden_effect = { country_event = solarreworked.529 }
+        load_focus_tree = generic_zebra_focus
+    }
+    effect_tooltip = {
+        release_autonomy = {
+            target = CTH
+            autonomy_state = autonomy_reichsprotectorate
+        }
+        CTH = {
+            set_cosmetic_tag = CTH_SOL
+        }
     }
 }
 SOL_release_CTL = {
-    hidden_effect = {
-        every_state = {
-            limit = {
-                OR = {
-                    is_in_array = { HRV.original_cores = THIS.id }
-                    is_in_array = { LMB.original_cores = THIS.id }
-                    is_in_array = { SPL.original_cores = THIS.id }
-                    is_in_array = { HIN.original_cores = THIS.id }
-                    is_in_array = { SAM.original_cores = THIS.id }
-                    is_in_array = { BRS.original_cores = THIS.id }
-                    is_in_array = { GAZ.original_cores = THIS.id }
-                    is_in_array = { CTL.original_cores = THIS.id }
+    create_dynamic_country = {
+        original_tag = CTL
+        reserve_dynamic_country = yes
+        add_ideas = deer_race
+        hidden_effect = {
+            every_state = {
+                limit = {
+                    OR = {
+                        is_in_array = { HRV.original_cores = THIS.id }
+                        is_in_array = { LMB.original_cores = THIS.id }
+                        is_in_array = { SPL.original_cores = THIS.id }
+                        is_in_array = { HIN.original_cores = THIS.id }
+                        is_in_array = { SAM.original_cores = THIS.id }
+                        is_in_array = { BRS.original_cores = THIS.id }
+                        is_in_array = { GAZ.original_cores = THIS.id }
+                        is_in_array = { CTL.original_cores = THIS.id }
+                    }
+                }
+                transfer_state_to = PREV
+                add_core_of = PREV
+            }
+            ROOT = {
+                set_autonomy = {
+                    target = PREV
+                    autonomous_state = autonomy_reichsprotectorate
                 }
             }
-            add_core_of = CTL
-            transfer_state_to = CTL
+            CTL = {
+                PREV = {
+                    transfer_technology = yes
+                    transfer_society_ideas = yes
+                    transfer_science_ideas = yes
+                    transfer_poverty_ideas = yes
+                    transfer_illiteracy_ideas = yes
+                }
+            }
         }
-        set_autonomy = {
-            target = CTL
-            autonomous_state = autonomy_reichsprotectorate
-        }
-    }
-    CTL = {
-        SOL_apply_generic_focus_tree_to_puppets = yes
         set_cosmetic_tag = CTL_SOL
         set_country_flag = is_solar_puppet
         hidden_effect = { country_event = solarreworked.529 }
+        load_focus_tree = generic_zebra_focus
     }
     effect_tooltip = {
         release_autonomy = {
             target = CTL
             autonomy_state = autonomy_reichsprotectorate
+        }
+        CTL = {
+            set_cosmetic_tag = CTL_SOL
         }
     }
 }
 SOL_release_ABY = {
-    hidden_effect = {
-        every_state = {
-            limit = {
-                OR = {
-                    is_in_array = { ASS.original_cores = THIS.id }
-                    is_in_array = { ANS.original_cores = THIS.id }
-                    is_in_array = { ABY.original_cores = THIS.id }
+    create_dynamic_country = {
+        original_tag = ABY
+        reserve_dynamic_country = yes
+        save_global_event_target_as = ABY_dynamic_puppet
+        add_ideas = cat_race
+        hidden_effect = {
+            every_state = {
+                limit = {
+                    OR = {
+                        is_in_array = { ASS.original_cores = THIS.id }
+                        is_in_array = { ANS.original_cores = THIS.id }
+                        is_in_array = { ABY.original_cores = THIS.id }
+                    }
                 }
-                NOT = { state = 788 }
+                transfer_state_to = PREV
+                add_core_of = PREV
             }
-            add_core_of = ABY
-            transfer_state_to = ABY
+            ROOT = {
+                set_autonomy = {
+                    target = PREV
+                    autonomous_state = autonomy_reichsprotectorate
+                }
+            }
+            ABY = {
+                PREV = {
+                    transfer_technology = yes
+                    transfer_society_ideas = yes
+                    transfer_science_ideas = yes
+                    transfer_poverty_ideas = yes
+                    transfer_illiteracy_ideas = yes
+                }
+            }
         }
-        set_autonomy = {
-            target = ABY
-            autonomous_state = autonomy_reichsprotectorate
-        }
-    }
-    effect_tooltip = {
-        release_autonomy = {
-            target = ABY
-            autonomy_state = autonomy_reichsprotectorate
-        }
-    }
-    ABY = {
-        SOL_apply_generic_focus_tree_to_puppets = yes
         set_cosmetic_tag = ABY_SOL
         set_country_flag = is_solar_puppet
         hidden_effect = { country_event = solarreworked.529 }
-    }
-    custom_effect_tooltip = SOL_laser_pointer_tt
-    if = {
-        limit = {
-            788 = {
-                OWNER = {
-                    is_subject_of = ROOT
+        load_focus_tree = generic_zebra_focus
+        if = {
+            limit = {
+                788 = {
+                    OWNER = {
+                        is_subject_of = ROOT
+                    }
                 }
             }
+            788 = {
+                transfer_state_to = PREV
+                add_core_of = PREV
+            }
         }
-        transfer_state_to = ABY
-        add_core_of = ABY
+    }
+    effect_tooltip = {
+        release_autonomy = {
+            target = ABY
+            autonomy_state = autonomy_reichsprotectorate
+        }
+        ABY = {
+            set_cosmetic_tag = ABY_SOL
+        }
+        custom_effect_tooltip = SOL_laser_pointer_tt
+        if = {
+            limit = {
+                788 = {
+                    OWNER = {
+                        is_subject_of = ROOT
+                    }
+                }
+            }
+            transfer_state_to = ABY
+            add_core_of = ABY
+        }
     }
 }
 SOL_release_ZAR = {
-    hidden_effect = {
-        every_state = {
-            limit = {
-                OR = {
-                    is_in_array = { ZAI.original_cores = THIS.id }
-                    is_in_array = { CZR.original_cores = THIS.id }
-                    is_in_array = { ALO.original_cores = THIS.id }
-                    is_in_array = { ZAR.original_cores = THIS.id }
+    create_dynamic_country = {
+        original_tag = ZAR
+        reserve_dynamic_country = yes
+        add_ideas = zebra_race
+        hidden_effect = {
+            every_state = {
+                limit = {
+                    OR = {
+                        is_in_array = { ZAI.original_cores = THIS.id }
+                        is_in_array = { CZR.original_cores = THIS.id }
+                        is_in_array = { ALO.original_cores = THIS.id }
+                        is_in_array = { ZAR.original_cores = THIS.id }
+                    }
+                }
+                transfer_state_to = PREV
+                add_core_of = PREV
+            }
+            ROOT = {
+                set_autonomy = {
+                    target = PREV
+                    autonomous_state = autonomy_reichsprotectorate
                 }
             }
-            add_core_of = ZAR
-            transfer_state_to = ZAR
+            ZAR = {
+                PREV = {
+                    transfer_technology = yes
+                    transfer_society_ideas = yes
+                    transfer_science_ideas = yes
+                    transfer_poverty_ideas = yes
+                    transfer_illiteracy_ideas = yes
+                }
+            }
         }
-        set_autonomy = {
-            target = ZAR
-            autonomous_state = autonomy_reichsprotectorate
-        }
-    }
-    effect_tooltip = {
-        release_autonomy = {
-            target = ZAR
-            autonomy_state = autonomy_reichsprotectorate
-        }
-    }
-    ZAR = {
-        SOL_apply_generic_focus_tree_to_puppets = yes
         set_cosmetic_tag = ZAR_SOL
         set_country_flag = is_solar_puppet
         hidden_effect = { country_event = solarreworked.529 }
+        load_focus_tree = generic_zebra_focus
+    }
+    effect_tooltip = {
+        release_autonomy = {
+            target = ZAR
+            autonomy_state = autonomy_reichsprotectorate
+        }
+        ZAR = {
+            set_cosmetic_tag = ZAR_SOL
+        }
     }
 }
 SOL_release_ROA = {
-    hidden_effect = {
-        every_state = {
-            limit = {
-                OR = {
-                    is_in_array = { BLT.original_cores = THIS.id }
-                    is_in_array = { CME.original_cores = THIS.id }
-                    is_in_array = { GFS.original_cores = THIS.id }
-                    is_in_array = { GIF.original_cores = THIS.id }
-                    is_in_array = { TSV.original_cores = THIS.id }
-                    is_in_array = { ZLU.original_cores = THIS.id }
-                    is_in_array = { IBZ.original_cores = THIS.id }
-                    is_in_array = { ROA.original_cores = THIS.id }
-                }
-                if = {
-                    limit = {
-                        ZOO = { has_country_flag = is_solar_puppet }
+    set_country_flag = SOL_released_ROA
+    create_dynamic_country = {
+        original_tag = ROA
+        reserve_dynamic_country = yes
+        add_ideas = zebra_race
+        hidden_effect = {
+            every_state = {
+                limit = {
+                    OR = {
+                        is_in_array = { BLT.original_cores = THIS.id }
+                        is_in_array = { CME.original_cores = THIS.id }
+                        is_in_array = { GFS.original_cores = THIS.id }
+                        is_in_array = { GIF.original_cores = THIS.id }
+                        is_in_array = { TSV.original_cores = THIS.id }
+                        is_in_array = { ZLU.original_cores = THIS.id }
+                        is_in_array = { IBZ.original_cores = THIS.id }
+                        is_in_array = { ROA.original_cores = THIS.id }
                     }
-                    NOT = { state = 1130 }
+                }
+                transfer_state_to = PREV
+                add_core_of = PREV
+            }
+            ROOT = {
+                set_autonomy = {
+                    target = PREV
+                    autonomous_state = autonomy_reichsprotectorate
                 }
             }
-            add_core_of = ROA
-            transfer_state_to = ROA
+            ROA = {
+                PREV = {
+                    transfer_technology = yes
+                    transfer_society_ideas = yes
+                    transfer_science_ideas = yes
+                    transfer_poverty_ideas = yes
+                    transfer_illiteracy_ideas = yes
+                }
+            }
         }
-        set_autonomy = {
-            target = ROA
-            autonomous_state = autonomy_reichsprotectorate
-        }
+        set_cosmetic_tag = ROA_SOL
+        set_country_flag = is_solar_puppet
+        hidden_effect = { country_event = solarreworked.529 }
+        load_focus_tree = generic_zebra_focus
     }
     effect_tooltip = {
         release_autonomy = {
             target = ROA
             autonomy_state = autonomy_reichsprotectorate
         }
-    }
-    ROA = {
-        SOL_apply_generic_focus_tree_to_puppets = yes
-        set_cosmetic_tag = ROA_SOL
-        set_country_flag = is_solar_puppet
-        hidden_effect = { country_event = solarreworked.529 }
+        ROA = {
+            set_cosmetic_tag = ROA_SOL
+        }
     }
 }
 SOL_release_STM = {
@@ -2172,45 +2664,62 @@ SOL_release_STM = {
     }
 }
 SOL_release_ZOO = {
-    hidden_effect = {
-        every_state = {
-            limit = {
-                OR = {
-                    is_in_array = { TAI.original_cores = THIS.id }
-                    is_in_array = { MEL.original_cores = THIS.id }
-                    is_in_array = { MQA.original_cores = THIS.id }
-                    is_in_array = { YAN.original_cores = THIS.id }
-                    is_in_array = { DEL.original_cores = THIS.id }
-                    is_in_array = { IDO.original_cores = THIS.id }
-                    is_in_array = { IST.original_cores = THIS.id }
-                    is_in_array = { ZOO.original_cores = THIS.id }
-                }
-                if = {
-                    limit = {
-                        ROA = { has_country_flag = is_solar_puppet }
+    create_dynamic_country = {
+        original_tag = ZOO
+        reserve_dynamic_country = yes
+        add_ideas = zebra_race
+        hidden_effect = {
+            every_state = {
+                limit = {
+                    OR = {
+                        is_in_array = { TAI.original_cores = THIS.id }
+                        is_in_array = { MEL.original_cores = THIS.id }
+                        is_in_array = { MQA.original_cores = THIS.id }
+                        is_in_array = { YAN.original_cores = THIS.id }
+                        is_in_array = { DEL.original_cores = THIS.id }
+                        is_in_array = { IDO.original_cores = THIS.id }
+                        is_in_array = { IST.original_cores = THIS.id }
+                        is_in_array = { ZOO.original_cores = THIS.id }
                     }
-                    NOT = { state = 1130 }
+                    if = {
+                        limit = {
+                            ROOT = { has_country_flag = SOL_released_ROA }
+                        }
+                        NOT = { state = 1130 }
+                    }
+                }
+                transfer_state_to = PREV
+                add_core_of = PREV
+            }
+            ROOT = {
+                set_autonomy = {
+                    target = PREV
+                    autonomous_state = autonomy_reichsprotectorate
                 }
             }
-            add_core_of = ZOO
-            transfer_state_to = ZOO
+            ZOO = {
+                PREV = {
+                    transfer_technology = yes
+                    transfer_society_ideas = yes
+                    transfer_science_ideas = yes
+                    transfer_poverty_ideas = yes
+                    transfer_illiteracy_ideas = yes
+                }
+            }
         }
-        set_autonomy = {
-            target = ZOO
-            autonomous_state = autonomy_reichsprotectorate
-        }
+        set_cosmetic_tag = ZOO_SOL
+        set_country_flag = is_solar_puppet
+        hidden_effect = { country_event = solarreworked.529 }
+        load_focus_tree = generic_zebra_focus
     }
     effect_tooltip = {
         release_autonomy = {
             target = ZOO
             autonomy_state = autonomy_reichsprotectorate
         }
-    }
-    ZOO = {
-        SOL_apply_generic_focus_tree_to_puppets = yes
-        set_cosmetic_tag = ZOO_SOL
-        set_country_flag = is_solar_puppet
-        hidden_effect = { country_event = solarreworked.529 }
+        ZOO = {
+            set_cosmetic_tag = ZOO_SOL
+        }
     }
 }
 SOL_release_MTA = {
@@ -2285,7 +2794,7 @@ SOL_release_MAZ = {
 }
 SOL_release_GAR = {
     hidden_effect = {
-    every_state = {
+        every_state = {
             limit = {
                 OR = {
                     is_in_array = { HYE.original_cores = THIS.id }
@@ -2321,34 +2830,51 @@ SOL_release_GAR = {
     }
 }
 SOL_release_KXN = {
-    hidden_effect = {
-        every_state = {
-            limit = {
-                OR = {
-                    is_in_array = { KHM.original_cores = THIS.id }
-                    is_in_array = { NVA.original_cores = THIS.id }
-                    is_in_array = { KXN.original_cores = THIS.id }
+    create_dynamic_country = {
+        original_tag = KXN
+        reserve_dynamic_country = yes
+        add_ideas = kirin_race
+        hidden_effect = {
+            every_state = {
+                limit = {
+                    OR = {
+                        is_in_array = { KHM.original_cores = THIS.id }
+                        is_in_array = { NVA.original_cores = THIS.id }
+                        is_in_array = { KXN.original_cores = THIS.id }
+                    }
+                }
+                transfer_state_to = PREV
+                add_core_of = PREV
+            }
+            ROOT = {
+                set_autonomy = {
+                    target = PREV
+                    autonomous_state = autonomy_reichsprotectorate
                 }
             }
-            add_core_of = KXN
-            transfer_state_to = KXN
+            KXN = {
+                PREV = {
+                    transfer_technology = yes
+                    transfer_society_ideas = yes
+                    transfer_science_ideas = yes
+                    transfer_poverty_ideas = yes
+                    transfer_illiteracy_ideas = yes
+                }
+            }
         }
-        set_autonomy = {
-            target = KXN
-            autonomous_state = autonomy_reichsprotectorate
-        }
+        set_cosmetic_tag = KXN_SOL
+        set_country_flag = is_solar_puppet
+        hidden_effect = { country_event = solarreworked.529 }
+        load_focus_tree = generic_zebra_focus
     }
     effect_tooltip = {
         release_autonomy = {
             target = KXN
             autonomy_state = autonomy_reichsprotectorate
         }
-    }
-    KXN = {
-        SOL_apply_generic_focus_tree_to_puppets = yes
-        set_cosmetic_tag = KXN_SOL
-        set_country_flag = is_solar_puppet
-        hidden_effect = { country_event = solarreworked.529 }
+        KXN = {
+            set_cosmetic_tag = KXN_SOL
+        }
     }
 }
 SOL_release_AES = {
@@ -2384,6 +2910,39 @@ SOL_release_AES = {
     }
 }
 SOL_release_KIR = {
+    create_dynamic_country = {
+        original_tag = KIR
+        reserve_dynamic_country = yes
+        add_ideas = kirin_race
+        hidden_effect = {
+            every_state = {
+                limit = {
+                    is_in_array = { KIR.original_cores = THIS.id }
+                }
+                transfer_state_to = PREV
+                add_core_of = PREV
+            }
+            ROOT = {
+                set_autonomy = {
+                    target = PREV
+                    autonomous_state = autonomy_reichsprotectorate
+                }
+            }
+            KIR = {
+                PREV = {
+                    transfer_technology = yes
+                    transfer_society_ideas = yes
+                    transfer_science_ideas = yes
+                    transfer_poverty_ideas = yes
+                    transfer_illiteracy_ideas = yes
+                }
+            }
+        }
+        set_cosmetic_tag = KIR_SOL
+        set_country_flag = is_solar_puppet
+        hidden_effect = { country_event = solarreworked.529 }
+        load_focus_tree = generic_zebra_focus
+    }
     hidden_effect = {
         every_state = {
             limit = {
@@ -2410,34 +2969,34 @@ SOL_release_KIR = {
         hidden_effect = { country_event = solarreworked.529 }
     }
 }
-SOL_release_TBK = {
-    hidden_effect = {
-        every_state = {
-            limit = {
-                is_in_array = { TBK.original_cores = THIS.id }
-            }
-            add_core_of = TBK
-            transfer_state_to = TBK
-        }
-        set_autonomy = {
-            target = TBK
-            autonomous_state = autonomy_reichsprotectorate
-        }
-        if = {
-            limit = { 692 = { is_core_of = ROOT } }
-            transfer_state_to = ROOT
-        }
-    }
-    effect_tooltip = {
-        release_autonomy = {
-            target = TBK
-            autonomy_state = autonomy_reichsprotectorate
-        }
-    }
-    TBK = {
-        SOL_apply_generic_focus_tree_to_puppets = yes
-        set_cosmetic_tag = TBK_SOL
-        set_country_flag = is_solar_puppet
-        hidden_effect = { country_event = solarreworked.529 }
-    }
-}
+#SOL_release_TBK = {
+#    hidden_effect = {
+#        every_state = {
+#            limit = {
+#                is_in_array = { TBK.original_cores = THIS.id }
+#            }
+#            add_core_of = TBK
+#            transfer_state_to = TBK
+#        }
+#        set_autonomy = {
+#            target = TBK
+#            autonomous_state = autonomy_reichsprotectorate
+#        }
+#        if = {
+#            limit = { 692 = { is_core_of = ROOT } }
+#            transfer_state_to = ROOT
+#        }
+#    }
+#    effect_tooltip = {
+#        release_autonomy = {
+#            target = TBK
+#            autonomy_state = autonomy_reichsprotectorate
+#        }
+#    }
+#    TBK = {
+#        SOL_apply_generic_focus_tree_to_puppets = yes
+#        set_cosmetic_tag = TBK_SOL
+#        set_country_flag = is_solar_puppet
+#        hidden_effect = { country_event = solarreworked.529 }
+#    }
+#}
