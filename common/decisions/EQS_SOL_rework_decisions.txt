@@ -5569,12 +5569,14 @@ EQS_pan_pony_empire_category = {
             create_dynamic_country = {
                 original_tag = GRI
                 reserve_dynamic_country = yes
+                save_global_event_target_as = imperium_griffonia
                 hidden_effect = {
                     every_state = {
                         limit = {
                             is_on_continent = asia
                         }
                         transfer_state_to = PREV
+                        remove_core_of = PREV
                         add_compliance = 25
                     }
                     ROOT = {
@@ -5593,14 +5595,32 @@ EQS_pan_pony_empire_category = {
                         }
                     }
                     add_ideas = griffon_race
-                    every_possible_country = {
-                        limit = {
-                            has_character = GRI_daybreaker
-                        }
-                        GRI_daybreaker = {
-                            set_nationality = PREV
-                        }
+                    set_party_name = {
+                        ideology = fascism
+                        name = EQS_solaris_cultus
+                        long_name = EQS_solaris_cultus
                     }
+                    set_country_flag = is_solar_puppet
+                    set_cosmetic_tag = SOL_imperium_griffonia
+                    add_ideas = SOL_imperium_solaris_aeterna
+                    set_capital = { state = 382 }
+                }
+            }
+            hidden_effect = {
+                set_province_name = {
+                    id = 10537
+                    name = SOL_griffonia_super_capital
+                }
+                set_country_flag = SOL_formed_super_griffonia
+                every_possible_country = {
+                    limit = {
+                        has_character = GRI_daybreaker
+                    }
+                    GRI_daybreaker = {
+                        set_nationality = event_target:imperium_griffonia
+                    }
+                }
+                event_target:imperium_griffonia = {
                     if = {
                         limit = { can_be_country_leader = GRI_daybreaker }
                         GRI_daybreaker = {
@@ -5632,22 +5652,7 @@ EQS_pan_pony_empire_category = {
                             }
                         }
                     }
-                    set_party_name = {
-                        ideology = fascism
-                        name = EQS_solaris_cultus
-                        long_name = EQS_solaris_cultus
-                    }
                 }
-                set_country_flag = is_solar_puppet
-                set_cosmetic_tag = SOL_imperium_griffonia
-                add_ideas = SOL_imperium_solaris_aeterna
-            }
-            hidden_effect = {
-                set_province_name = {
-                    id = 10537
-                    name = SOL_griffonia_super_capital
-                }
-                set_country_flag = SOL_formed_super_griffonia
             }
         }
         ai_will_do = { factor = 1000 }
@@ -5675,20 +5680,16 @@ EQS_pan_pony_empire_category = {
             log = "[GetDateText]: [Root.GetName]: Decision SOL_establish_imperium_zebrica"
             custom_effect_tooltip = SOL_zebrican_union_tt
             create_dynamic_country = {
-                original_tag = GRI
+                original_tag = KIR
                 reserve_dynamic_country = yes
-                every_possible_country = {
-                    limit = {
-                        has_character = KIR_daybreaker
-                    }
-                    KIR_daybreaker = { set_nationality = PREV }
-                }
+                save_global_event_target_as = imperium_zebrica
                 hidden_effect = {
                     every_state = {
                         limit = {
                             is_on_continent = africa
                         }
                         transfer_state_to = PREV
+                        remove_core_of = PREV
                         add_compliance = 25
                     }
                     ROOT = {
@@ -5707,6 +5708,30 @@ EQS_pan_pony_empire_category = {
                         }
                     }
                     add_ideas = zebra_race
+                    set_party_name = {
+                        ideology = fascism
+                        name = EQS_solaris_cultus
+                        long_name = EQS_solaris_cultus
+                    }
+                    set_country_flag = is_solar_puppet
+                    set_cosmetic_tag = SOL_imperium_zebrica
+                    add_ideas = SOL_imperium_solaris_aeterna
+                    set_capital = { state = 1059 }
+                }
+            }
+            hidden_effect = {
+                set_province_name = {
+                    id = 5679
+                    name = SOL_zebrica_super_capital
+                }
+                set_country_flag = SOL_formed_super_zebrica
+                every_possible_country = {
+                    limit = {
+                        has_character = KIR_daybreaker
+                    }
+                    KIR_daybreaker = { set_nationality = event_target:imperium_zebrica }
+                }
+                event_target:imperium_zebrica = {
                     KIR_daybreaker = {
                         add_country_leader_role = {
                             promote_leader = yes
@@ -5717,22 +5742,7 @@ EQS_pan_pony_empire_category = {
                             }
                         }
                     }
-                    set_party_name = {
-                        ideology = fascism
-                        name = EQS_solaris_cultus
-                        long_name = EQS_solaris_cultus
-                    }
                 }
-                set_country_flag = is_solar_puppet
-                set_cosmetic_tag = SOL_imperium_zebrica
-                add_ideas = SOL_imperium_solaris_aeterna
-            }
-            hidden_effect = {
-                set_province_name = {
-                    id = 5679
-                    name = SOL_zebrica_super_capital
-                }
-                set_country_flag = SOL_formed_super_zebrica
             }
         }
         ai_will_do = { factor = 1000 }
