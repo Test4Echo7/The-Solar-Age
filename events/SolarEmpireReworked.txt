@@ -12839,7 +12839,6 @@ country_event = { #Event quickly stating that now that the war is over, with EQC
     picture = GFX_event_equestria_fail
     immediate = {
         log = "[GetDateText]: [ROOT.GetName]: event solarreworked.502"
-        set_country_flag = SOL_puppets_left
     }
 
     is_triggered_only = yes
