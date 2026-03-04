@@ -3,12 +3,6 @@
   YMN_SOL_DEF:0 "the Imperial Protectorate of Yemane"
   SDL_SOL:0 "Imperial Province of Arabia" #Alternate, Province of Equus Minor
   SDL_SOL_DEF:0 "the Imperial Province of Arabia"
-  HMR_SOL:0 "Imperial Protectorate of Haymir" #Alternate, Haymirite Sun-Song
-  HMR_SOL_DEF:0 "the Imperial Protectorate of Haymir"
-  OSQ_SOL:0 "Imperial Protectorate of Osqat" #Alternate, Osqat Dayrise
-  OSQ_SOL_DEF:0 "the Imperial Protectorate of Osqat"
-  REE_SOL:0 "Imperial Protectorate of Re'em" #Alternate, Salem Solar
-  REE_SOL_DEF:0 "the Imperial Protectorate of Re'em"
   MTA_SOL:0 "Imperial Region of Risea" #Alternate, Imperial Containment Zone
   MTA_SOL_DEF:0 "the Imperial Region of Risea"
   MTA_SOL_ADJ:0 "Risean"
@@ -41,18 +35,8 @@
   MDL_SOL_DEF:0 "the Imperial Region of Al-Manedalus"
   KIR_SOL:0 "Land of the Dawn Star"
   KIR_SOL_DEF:0 "the Land of the Dawn Star"
-  NVA_SOL:0 "Imperial Protectorate of Sen Kinh" #Alternate, Sen Solar
-  NVA_SOL_DEF:0 "the Imperial Protectorate of Sen Kinh"
-  KHM_SOL:0 "Imperial Protectorate of Khamrin" #Alternate, Khamric Dayspring
-  KHM_SOL_DEF:0 "the Imperial Protectorate of Khamrin"
   KXN_SOL:0 "Imperial Protectorate of Zaikiria" #Alternate, Junta of Solarist Niriks
   KXN_SOL_DEF:0 "the Imperial Protectorate of Zaikiria"
-  PLB_SOL_new:0 "Western Polar Pacification Zone"
-  PLB_SOL_new_DEF:0 "the Western Polar Pacification Zone"
-  PLB_SOL_new_ADJ:0 "Polar"
-  PNG_SOL_new:0 "Eastern Polar Pacification Zone"
-  PNG_SOL_new_DEF:0 "the Eastern Polar Pacification Zone"
-  PNG_SOL_new_ADJ:0 "Polar"
   ARC_SOL:0 "Polar Pacification Zone"
   ARC_SOL_DEF:0 "the Polar Pacification"
   ARC_SOL_ADJ:0 "Polar"
@@ -65,9 +49,6 @@
   WAT_SOL_DEF:0 "the Imperial Bath District"
   FIR_SOL:0 "Community of Imperial Mages"
   FIR_SOL_DEF:0 "the Community of Imperial Mages"
-  #HIP_SOL:0 "Solar Seaquestria"
-  #HIP_SOL_DEF:0 "Solar Seaquestria"
-  #HIP_SOL_ADJ:0 "Seaquestrian"
   HIP_SOL:0 "Arisian Autonomous Zone"
   HIP_SOL_DEF:0 "the Arisian Autonomous Zone"
   HIP_SOL_ADJ:0 "Arisian"

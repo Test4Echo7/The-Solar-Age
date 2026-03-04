@@ -2654,6 +2654,366 @@ Deerkind_formable = {
 	color = rgb { 90 130 255 }
     color_ui = rgb { 90 130 255 }
 }
+TL_CME = {
+	color = rgb { 119 119 255 }
+	color_ui = rgb { 119 119 255 }
+}
+HIN_CME = {
+	color = rgb { 255 153 0 }
+	color_ui = rgb { 255 153 0 }
+}
+CTL_CDR = {
+	color = rgb { 119 119 255 }
+	color_ui = rgb { 119 119 255 }
+}
+HIN_CDR = {
+	color = rgb { 255 153 0 }
+	color_ui = rgb { 255 153 0 }
+}
+CTL_MCW = {
+	color = rgb { 119 119 255 }
+	color_ui = rgb { 119 119 255 }
+}
+HIN_MCW = {
+	color = rgb { 255 153 0 }
+	color_ui = rgb { 255 153 0 }
+}
+CTL_ROA = {
+	color = rgb { 119 119 255 }
+	color_ui = rgb { 119 119 255 }
+}
+HIN_ROA = {
+	color = rgb { 255 153 0 }
+	color_ui = rgb { 255 153 0 }
+}
+CTL_ZUM = {
+	color = rgb { 119 119 255 }
+	color_ui = rgb { 119 119 255 }
+}
+HIN_ZUM = {
+	color = rgb { 255 153 0 }
+	color_ui = rgb { 255 153 0 }
+}
+CTL_HIP = {
+	color = rgb { 119 119 255 }
+	color_ui = rgb { 119 119 255 }
+}
+HIN_HIP = {
+	color = rgb { 255 153 0 }
+	color_ui = rgb { 255 153 0 }
+}
+CTL_KIR_generic = {
+	color = rgb { 119 119 255 }
+	color_ui = rgb { 119 119 255 }
+}
+HIN_KIR_generic = {
+	color = rgb { 255 153 0 }
+	color_ui = rgb { 255 153 0 }
+}
+CTL_KHM = {
+	color = rgb { 119 119 255 }
+	color_ui = rgb { 119 119 255 }
+}
+HIN_KHM = {
+	color = rgb { 255 153 0 }
+	color_ui = rgb { 255 153 0 }
+}
+KAT_despotism_tag = {
+	color = rgb { 163 118 99 }
+	color_ui = rgb { 163 118 99 }
+}
+KAT_knights_MIT = {
+	color = rgb { 163 118 99 }
+	color_ui = rgb { 163 118 99 }
+}
+KAT_knights_SIC = {
+	color = rgb { 163 118 99 }
+	color_ui = rgb { 163 118 99 }
+}
+KAT_knights_CYA = {
+	color = rgb { 163 118 99 }
+	color_ui = rgb { 163 118 99 }
+}
+DEL_AF_Castanor = {
+	color = rgb { 255 255 255 }
+	color_ui = rgb { 255 255 255 }
+}
+DEL_AF_wasteland = {
+	color = rgb { 20 10 30 }
+	color_ui = rgb { 25 15 35 }
+}
+YAN_AF_2025 = {
+	color = rgb { 203 138 74 }
+	color_ui = rgb { 255 179 96 }
+}
+KXN_Great_Kirin_Militarchy = {
+	color = rgb { 241 156 187 }
+	color_ui = rgb { 241 156 187 }
+}
+KXN_Zaikirian_Militarchy = {
+	color = rgb { 241 156 187 }
+	color_ui = rgb { 241 156 187 }
+}
+KXN_Vermilion = {
+	color = rgb { 240 152 164 }
+	color_ui = rgb { 240 152 164 }
+}
+KXN_Occident = {
+	color = rgb { 240 152 164 }
+	color_ui = rgb { 240 152 164 }
+}
+KXN_Exarchate = {
+	color = rgb { 240 152 164 }
+	color_ui = rgb { 240 152 164 }
+}
+KXN_Equatorarchy = {
+	color = rgb { 240 152 164 }
+	color_ui = rgb { 240 152 164 }
+}
+KXN_Eparchy = {
+	color = rgb { 240 152 164 }
+	color_ui = rgb { 240 152 164 }
+}
+KXN_Marshalcy = {
+	color = rgb { 240 152 164 }
+	color_ui = rgb { 240 152 164 }
+}
+KXN_Fragrance = {
+	color = rgb { 240 152 164 }
+	color_ui = rgb { 240 152 164 }
+}
+KXN_Satellite = {
+	color = rgb { 240 152 164 }
+	color_ui = rgb { 240 152 164 }
+}
+KXN_Mellifluve = {
+	color = rgb { 240 152 164 }
+	color_ui = rgb { 240 152 164 }
+}
+KXN_Domain = {
+	color = rgb { 240 152 164 }
+	color_ui = rgb { 240 152 164 }
+}
+KXN_Colony = {
+	color = rgb { 240 152 164 }
+	color_ui = rgb { 240 152 164 }
+}
+KXN_Federation = {
+	color = rgb { 240 152 164 }
+	color_ui = rgb { 240 152 164 }
+}
+KXN_Airforce = {
+	color = rgb { 240 152 164 }
+	color_ui = rgb { 240 152 164 }
+}
+KXN_Navy = {
+	color = rgb { 240 152 164 }
+	color_ui = rgb { 240 152 164 }
+}
+KXN_Expedition = {
+	color = rgb { 240 152 164 }
+	color_ui = rgb { 240 152 164 }
+}
+KXN_Tanker = {
+	color = rgb { 240 152 164 }
+	color_ui = rgb { 240 152 164 }
+}
+KXN_Equatorarch = {
+	color = rgb { 240 152 164 }
+	color_ui = rgb { 240 152 164 }
+}
+KXN_Tributary = {
+	color = rgb { 232 162 160 }
+	color_ui = rgb { 232 162 160 }
+}
+KXN_Warlord = {
+	color = rgb { 111 0 0 }
+	color_ui = rgb { 111 0 0 }
+}
+KXN_Splinter = {
+	color = rgb { 242 99 94 }
+	color_ui = rgb { 242 99 94 }
+}
+ZAI_League = {
+	color = rgb { 0 90 77 }
+	color_ui = rgb { 0 90 77 }
+}
+KXN_Union = {
+	color = rgb { 250 101 115 }
+	color_ui = rgb { 250 101 115 }
+}
+KXN_Contender = {
+	color = rgb { 242 99 94 }
+	color_ui = rgb { 242 99 94 }
+}
+KXN_March = {
+	color = rgb { 205 125 155 }
+	color_ui = rgb { 205 125 155 }
+}
+KXN_Company = {
+	color = rgb { 236 157 162 }
+	color_ui = rgb { 236 157 162 }
+}
+KXN_Griffonland = {
+	color = rgb { 236 157 162 }
+	color_ui = rgb { 236 157 162 }
+}
+KXN_GHQ = {
+	color = rgb { 236 157 162 }
+	color_ui = rgb { 236 157 162 }
+}
+KXN_Survey = {
+	color = rgb { 236 157 162 }
+	color_ui = rgb { 236 157 162 }
+}
+KXN_Successor = {
+	color = rgb { 236 157 162 }
+	color_ui = rgb { 236 157 162 }
+}
+KXN_Horde = {
+	color = rgb { 221 110 110 }
+	color_ui = rgb { 221 110 110 }
+}
+KXN_Command = {
+	color = rgb { 242 99 94 }
+	color_ui = rgb { 242 99 94 }
+}
+KXN_Triarchy = {
+	color = rgb { 255 170 155 }
+	color_ui = rgb { 255 170 155 }
+}
+KXN_Kirinokracy = {
+	color = rgb { 241 156 187 }
+	color_ui = rgb { 241 156 187 }
+}
+KXN_Commandery = {
+	color = rgb { 236 157 162 }
+	color_ui = rgb { 236 157 162 }
+}
+KXN_Navarchy = {
+	color = rgb { 236 157 162 }
+	color_ui = rgb { 236 157 162 }
+}
+KXN_Planetarium = {
+	color = rgb { 236 157 162 }
+	color_ui = rgb { 236 157 162 }
+}
+KXN_Decarchy = {
+	color = rgb { 236 157 162 }
+	color_ui = rgb { 236 157 162 }
+}
+KXN_Nova = {
+	color = rgb { 236 157 162 }
+	color_ui = rgb { 236 157 162 }
+}
+ROA_KXN = {
+	color = rgb { 232 162 160 }
+	color_ui = rgb { 232 162 160 }
+}
+GAZ_KXN = {
+	color = rgb { 232 162 160 }
+	color_ui = rgb { 232 162 160 }
+}
+ZLU_KXN = {
+	color = rgb { 232 162 160 }
+	color_ui = rgb { 232 162 160 }
+}
+GFS_KXN = {
+	color = rgb { 232 162 160 }
+	color_ui = rgb { 232 162 160 }
+}
+HAY_KXN = {
+	color = rgb { 232 162 160 }
+	color_ui = rgb { 232 162 160 }
+}
+MSH_KXN = {
+	color = rgb { 232 162 160 }
+	color_ui = rgb { 232 162 160 }
+}
+MGY_KXN = {
+	color = rgb { 232 162 160 }
+	color_ui = rgb { 232 162 160 }
+}
+MCW_KXN = {
+	color = rgb { 232 162 160 }
+	color_ui = rgb { 232 162 160 }
+}
+BAT_KXN = {
+	color = rgb { 232 162 160 }
+	color_ui = rgb { 232 162 160 }
+}
+KAR_KXN = {
+	color = rgb { 232 162 160 }
+	color_ui = rgb { 232 162 160 }
+}
+CGI_KXN = {
+	color = rgb { 232 162 160 }
+	color_ui = rgb { 232 162 160 }
+}
+SAD_KXN = {
+	color = rgb { 232 162 160 }
+	color_ui = rgb { 232 162 160 }
+}
+ZAI_KXN = {
+	color = rgb { 232 162 160 }
+	color_ui = rgb { 232 162 160 }
+}
+LMB_KXN = {
+	color = rgb { 232 162 160 }
+	color_ui = rgb { 232 162 160 }
+}
+TBK_KXN = {
+	color = rgb { 232 162 160 }
+	color_ui = rgb { 232 162 160 }
+}
+MTO_KXN = {
+	color = rgb { 232 162 160 }
+	color_ui = rgb { 232 162 160 }
+}
+HIP_KXN = {
+	color = rgb { 232 162 160 }
+	color_ui = rgb { 232 162 160 }
+}
+DRG_KXN = {
+	color = rgb { 232 162 160 }
+	color_ui = rgb { 232 162 160 }
+}
+KLG_KXN = {
+	color = rgb { 232 162 160 }
+	color_ui = rgb { 232 162 160 }
+}
+GIF_KXN = {
+	color = rgb { 232 162 160 }
+	color_ui = rgb { 232 162 160 }
+}
+KXN_League = {
+	color = rgb { 184 105 156 }
+	color_ui = rgb { 184 105 156 }
+}
+Generic_chisimbi_cosmetic_tag_placeholder = {
+	color = rgb { 45 50 120 }
+	color_ui = rgb { 45 50 120 }
+}
+
+JUN_EQS = {
+	color = rgb { 115 174 92 }
+	color_ui = rgb { 135 174 112 }
+}
+
+JUN_SOUTH = {
+	color = rgb { 112 130 36 }
+	color_ui = rgb { 112 130 36 }
+}
+
+beorgfordas = {
+	color = rgb { 0 112 90 }
+	color_ui = rgb { 0 112 90 }
+}
+
+ZLU_chisimbi_unified_fascism = {
+	color = rgb { 153 0 0 }
+	color_ui = rgb { 153 0 0 }
+}
 ###The Solar Age###
 EQS_SOL_romanophile = {
 	color = rgb { 255 224 129 }
@@ -2679,20 +3039,8 @@ YMN_SOL = {
 	color = rgb { 177 175 115 }
 	color_ui = rgb { 130 123 100 }
 }
-REE_SOL = {
-	color = rgb { 255 224 129 }
-	color_ui = rgb { 130 123 100 }
-}
 MTA_SOL = {
 	color = rgb { 169 163 108 }
-	color_ui = rgb { 130 123 100 }
-}
-HMR_SOL = {
-	color = rgb { 255 224 129 }
-	color_ui = rgb { 130 123 100 }
-}
-OSQ_SOL = {
-	color = rgb { 255 224 129 }
 	color_ui = rgb { 130 123 100 }
 }
 RIV_SOL = {
@@ -2723,43 +3071,15 @@ KIR_SOL = {
 	color = rgb { 196 190 137 }
 	color_ui = rgb { 130 123 100 }
 }
-NVA_SOL = {
-	color = rgb { 255 224 129 }
-	color_ui = rgb { 130 123 100 }
-}
-KHM_SOL = {
-	color = rgb { 255 224 129 }
-	color_ui = rgb { 130 123 100 }
-}
 KXN_SOL = {
 	color = rgb { 173 169 115 }
 	color_ui = rgb { 130 123 100 }
-}
-PLB_SOL_new = {
-	color = rgb { 129 132 100 }
-	color_ui = rgb {129 132 100 }
-}
-PNG_SOL_new = {
-	color = rgb { 158 152 124 }
-	color_ui = rgb { 158 152 124 }
 }
 ARC_SOL = {
 	color = rgb { 158 152 124 }
 	color_ui = rgb { 158 152 124 }
 }
 AES_SOL = {
-	color = rgb { 255 224 129 }
-	color_ui = rgb { 130 123 100 }
-}
-MTO_SOL = {
-	color = rgb { 157 155 111 }
-	color_ui = rgb { 130 123 100 }
-}
-WAT_SOL = {
-	color = rgb { 255 224 129 }
-	color_ui = rgb { 130 123 100 }
-}
-FIR_SOL = {
 	color = rgb { 255 224 129 }
 	color_ui = rgb { 130 123 100 }
 }
