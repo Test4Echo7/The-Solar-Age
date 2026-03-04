@@ -689,6 +689,7 @@ country_event = { #Blueblood is still busily working on the front when Daybreake
         name = solarreworked.22.a
         custom_effect_tooltip = SOL_blueblood_pulls_a_smart_tt
         set_country_flag = SOL_blueblood_kneeled
+        set_country_flag = EQS_tempest_to_ground
         add_stability = 0.05
         hidden_effect = {
             EQS_prince_blueblood = {
@@ -1009,6 +1010,7 @@ country_event = { #Daybreaker holds a speech in Sanctum Solar, which has just be
             set_faction_rule = call_to_war_rule_faction_leader_only
             set_faction_rule = war_declaration_rule_faction_leader_only
             set_faction_rule = change_leader_rule_never
+            set_faction_rule = dismissal_rule_ideology_not_fascist
 		}
 		if = {
             limit = {
@@ -1086,6 +1088,11 @@ country_event = { #Daybreaker holds a speech in Sanctum Solar, which has just be
             set_politics = {
                 ruling_party = fascism
                 elections_allowed = no
+            }
+            country_event = {
+                id = solarreworked.219
+                days = 60
+                random_days = 60
             }
             EQS_princess_celestia = {
                 if = {
@@ -5562,9 +5569,11 @@ country_event = {
     picture = GFX_event_solarempire
     immediate = {
         log = "[GetDateText]: [ROOT.GetName]: event solarreworked.227"
-        country_event = {
-            id = solarreworked.228
-            days = 1
+        hidden_effect = {
+            country_event = {
+                id = solarreworked.228
+                days = 1
+            }
         }
     }
 
@@ -9270,7 +9279,7 @@ country_event = { #Tempest Wind and some of the other NLR-aligned generals effec
     is_triggered_only = yes
 
     option = { #We must fight for true Harmony!
-        name = solarreworked.425
+        name = solarreworked.425.a
         effect_tooltip = {
             EQS_NLR_tempest_wind = { set_nationality = CRY }
             EQS_NLR_celenite = { set_nationality = CRY }
@@ -15593,4 +15602,230 @@ country_event = { #Follow Absconditus as he leads a number of loyal agents and a
         #Trigger same choice event for director
         country_event = solarreworked.650
     }
+}
+
+country_event = { #Luna war nerd is Luna war nerd.
+    id = equestriaexpanded.9
+    title = equestriaexpanded.9.t
+    desc = equestriaexpanded.9.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event equestriaexpanded.9"}
+    picture = GFX_event_luna_castle
+
+    is_triggered_only = yes
+
+    option = { #We shan't release thee!
+        name = equestriaexpanded.9.a
+        EQS_princess_luna = {
+            set_character_flag = EQS_war_has_been_doubled
+        }
+        #Luna maybe should have reduced stats, and gain more as the flavour events play, to reflect her catching up to speed and learning in the modern world
+        custom_effect_tooltip = SOL_luna_promotion_tt
+        custom_effect_tooltip = princess_luna_stats_tp
+        if = {
+            limit = { is_ai = yes }
+            add_advisor_role = {
+                character = EQS_princess_luna
+                advisor = {
+                    slot = army_chief
+                    cost = 50
+                    idea_token = EQS_princess_luna
+                    traits = { army_chief_offensive_1 }
+                }
+            }
+            activate_advisor = EQS_princess_luna
+        }
+        hidden_effect = {
+            country_event = {
+                id = equestriaexpanded.10
+                days = 30
+                random_days = 30
+            }
+        }
+    }
+}
+
+country_event = { #Sisterly fight! Sisterly fight! Sisterly fight! But only for play. Unless...?
+    id = equestriaexpanded.10
+    title = equestriaexpanded.10.t
+    desc = equestriaexpanded.10.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event equestriaexpanded.10"}
+    picture = GFX_event_palace_hall
+
+    is_triggered_only = yes
+
+    option = { #I didn't know I had it in me.
+        name = equestriaexpanded.10.a
+        hidden_effect = {
+            country_event = {
+                id = equestriaexpanded.11
+                days = 18
+                random_days = 17
+            }
+        }
+    }
+}
+
+country_event = { #Blueblood be mad that Lulu is taking over >:(
+    id = equestriaexpanded.11
+    title = equestriaexpanded.11.t
+    desc = equestriaexpanded.11.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event equestriaexpanded.11"}
+    picture = GFX_event_canterlot
+
+    is_triggered_only = yes
+
+    option = { #Maybe he's learned to hold his tongue, at last.
+        name = equestriaexpanded.11.a
+    }
+}
+
+country_event = { #How dare you actually do war prep, 'Tia?!
+    id = equestriaexpanded.12
+    title = equestriaexpanded.12.t
+    desc = equestriaexpanded.12.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event equestriaexpanded.12"}
+    picture = GFX_event_canterlot
+
+    is_triggered_only = yes
+
+    option = { #They are foals.
+        name = equestriaexpanded.12.a
+        ai_chance = {
+            modifier = {
+                has_global_flag = EQS_nice_celestia
+                factor = 0
+            }
+        }
+        set_country_flag = EQS_petition_denied
+        add_political_power = -100
+        add_stability = -0.075
+        add_war_support = -0.05
+        add_popularity = {
+            ideology = democratic
+            popularity = -0.1
+        }
+    }
+    option = { #Perhaps they're right.
+        name = equestriaexpanded.12.b
+        ai_chance = {
+            modifier = {
+                has_global_flag = EQS_evil_celestia
+                factor = 0
+            }
+        }
+        swap_ideas = {
+            remove_idea = early_economic_mobilisation
+            add_idea = civilian_economy
+        }
+        add_political_power = 150
+    }
+}
+
+country_event = { ## Working hippies
+	id = equestriaexpanded.13
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriaexpanded.13"}
+	title = equestriaexpanded.13.t
+	desc = equestriaexpanded.13.d
+	picture = GFX_event_celestia_poster
+
+	trigger = {
+		tag = EQS
+		has_government = democratic
+		is_subject = no
+		has_war = yes
+		NOT = {
+			has_idea = strikes_1
+			has_idea = strikes_2
+			has_idea = strikes_3
+		}
+		NOT = {
+			has_idea = civilian_economy
+			has_idea = low_economic_mobilisation
+			has_country_flag = EQS_strikes_recently
+		}
+	}
+	mean_time_to_happen = {
+		days = 480
+		modifier = {
+			factor = 0.6
+			has_idea = war_economy
+		}
+		modifier = {
+            factor = 0.4
+            has_idea = tot_economic_mobilisation
+		}
+		modifier = {
+			factor = 0.3
+			has_offensive_war = yes
+		}
+		modifier = {
+			factor = 2
+			surrender_progress > 0.3
+		}
+		modifier = {
+			factor = 2
+			surrender_progress > 0.6
+		}
+	}
+	option = {
+		name = equestriaexpanded.13.a
+		add_timed_idea = { idea = strikes_1 days = 180 }
+		hidden_effect = { set_country_flag = { flag = EQS_strikes_recently days = 360 value = 1 } }
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				OR = {
+					surrender_progress > 0.3
+					enemies_strength_ratio > 0.75
+					has_manpower < 20000
+					has_global_flag = EQS_evil_celestia
+				}
+			}
+		}
+	}
+	option = {
+		name = equestriaexpanded.13.b
+		add_timed_idea = { idea = strikes_1 days = 60 }
+		hidden_effect = {
+			modify_country_flag = { flag = celestia_evil_meter value = 1 }
+			set_country_flag = { flag = EQS_strikes_recently days = 360 value = 1 }
+			add_war_support = -0.03
+			add_power_balance_value = {
+				id = EQS_sanity_bop
+				value = -0.01
+				tooltip_side = EQS_angy
+			}
+		}
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				has_global_flag = EQS_evil_celestia
+			}
+		}
+	}
+	option = {
+		trigger = {
+			NOT = { has_global_flag = celestia_and_luna_fused }
+		}
+		name = equestriaexpanded.13.c
+		add_stability = -0.1
+		add_political_power = -100
+		trigger = {
+			NOT = { has_country_flag = eqs_democratic_laws }
+		}
+		hidden_effect = {
+			modify_country_flag = { flag = celestia_evil_meter value = 4 }
+			set_country_flag = EQS_strikes_recently
+			add_power_balance_value = {
+				id = EQS_sanity_bop
+				value = -0.04
+				tooltip_side = EQS_angy
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
 }

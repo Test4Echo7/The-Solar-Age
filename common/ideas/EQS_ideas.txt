@@ -2541,7 +2541,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				power_balance_weekly = -0.002
+				power_balance_weekly = -0.003
 			}
 		}
 		EQS_harmonist_pushback = {
