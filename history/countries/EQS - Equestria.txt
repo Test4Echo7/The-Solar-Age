@@ -226,6 +226,10 @@ country_event = {
 	days = 1
 }
 
+3 = {
+	set_state_name = EQS_canterlot_name_change
+}
+
 add_to_tech_sharing_group = equestrian_research
 
 set_variable = { EQS_flurry_skill_level = 1 }

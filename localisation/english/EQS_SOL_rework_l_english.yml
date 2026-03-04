@@ -155,6 +155,9 @@
   SOL_griffonia_super_capital:0 "Astria"
   SOL_zebrica_super_capital:0 "Sidia"
 
+  ###State Names###
+  EQS_canterlot_name_change:0 "Canterhorn Region"
+
   ###Collections###
   COLLECTION_NON_CAPITULATED_EQUUS_COUNTRIES:0 "Non-Capitulated Equus Countries"
   COLLECTION_SUBJUGATED_EQUUS_COUNTRIES:0 "Subjugated Equus Countries"
