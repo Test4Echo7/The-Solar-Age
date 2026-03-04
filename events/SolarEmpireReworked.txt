@@ -1059,6 +1059,7 @@ country_event = { #Daybreaker holds a speech in Sanctum Solar, which has just be
                         limit = {
                             is_in_faction_with = EQS
                             NOT = { has_war_together_with = EQS }
+                            NOT = { is_subect_of = EQS }
                         }
                         country_event = solarreworked.536
                     }
@@ -6886,6 +6887,13 @@ country_event = { #Sunrise enters into Daybreaker's throne room, opposed to bein
 		#else = {
 		#	add_ideas = SOL_Imperial_Inquisition_idea
 		#}
+		hidden_effect = {
+            country_event = {
+                id = solarreworked.453
+                days = 90
+                random_days = 45
+            }
+        }
     }
 }
 
@@ -12909,6 +12917,7 @@ country_event = { #Event quickly stating that now that the war is over, with EQC
                     limit = {
                         is_in_faction_with = EQS
                         NOT = { has_war_together_with = EQS }
+                        NOT = { is_subject_of = ROOT }
                     }
                     country_event = solarreworked.536
                 }

@@ -229,11 +229,6 @@ shared_focus = {
 					random_days = 45
 				}
 			}
-			country_event = {
-				id = solarreworked.453
-				days = 150
-				random_days = 60
-			}
 		}
 	}
 	search_filters = { FOCUS_FILTER_MANPOWER }
@@ -2256,6 +2251,11 @@ shared_focus = {
 			if = {
 				limit = { has_completed_focus = SOL_twilight_ascend }
 				country_event = solarreworked.302
+				country_event = { #Solaris Inquistionis flavour event chain
+					id = solarreworked.315
+					days = 180
+					random_days = 120
+				}
 			}
 			if = {
 				limit = {
@@ -2266,11 +2266,6 @@ shared_focus = {
 					days = 3
 					random_days = 7
 				}
-			}
-			country_event = { #Solaris Inquistionis flavour event chain
-				id = solarreworked.315
-				days = 120
-				random_days = 120
 			}
 		}
 		###Event of Twilight meeting privately with Daybreaker, who is pleased to offer Twilight an even better position than she had before, which will be the head inquisitor of the Solaris Inquisitionis, her holy inquisition, that will be used to keep Harmony and Order, which Twilight readily accepts, as she is worried that ponies don't understand Daybreaker's desires; it is close to a mother-daughter relationship kind of talk
@@ -8272,14 +8267,6 @@ shared_focus = {
 			exists = yes
 		}
 	}
-	bypass = {
-		CRY = {
-			OR = {
-				has_focus_tree = crystal_empire_solar_focus
-				has_focus_tree = crystal_empire_lunar_focus
-			}
-		}
-	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_royal_province"
@@ -9991,7 +9978,7 @@ shared_focus = {
 	icon = GFX_goal_communist_examples
 	relative_position_id = SOL_change_management
 
-	cost = 3
+	cost = 2
 	prerequisite = { focus = SOL_change_management }
 	mutually_exclusive = { focus = SOL_coercion_campaign }
 	available = {
@@ -10030,7 +10017,7 @@ shared_focus = {
 	icon = GFX_goal_coercion_campaign
 	relative_position_id = SOL_change_management
 
-	cost = 3
+	cost = 2
 	prerequisite = { focus = SOL_change_management }
 	mutually_exclusive = { focus = SOL_communist_examples }
 	available = {
