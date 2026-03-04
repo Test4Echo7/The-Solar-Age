@@ -521,7 +521,8 @@ characters={
 			}
 			visible = {
 				owner = {
-					hidden_trigger = { is_EQS_SOL = no }
+					#hidden_trigger = { is_EQS_SOL = no }
+					NOT = { has_country_flag = SOL_mane_six_escape }
 					has_government = democratic
 					if = {
 						limit = { event_target:solar_empire = { exists = yes } }
@@ -1682,6 +1683,17 @@ characters={
 					EQS_fizzlepop = { is_unit_leader = yes }
 				}
 			}
+			visible = {
+				if = {
+					limit = {
+						is_EQS_SOL = yes
+					}
+					has_country_flag = SOL_tempest_joined
+				}
+				else = {
+					NOT = { has_country_flag = EQS_tempest_to_ground }
+				}
+			}
 
 			traits = { alt_army_chief_maneuver_1 }
 			ai_will_do = {
@@ -1702,6 +1714,7 @@ characters={
 					AND = {
 						is_original_EQS = yes
 						has_country_flag = EQS_create_new_commanders_flag
+						NOT = { has_country_flag = EQS_tempest_to_ground }
 					}
 					AND = {
 						is_EQS_SOL = yes
