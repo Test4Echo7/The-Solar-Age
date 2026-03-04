@@ -1,4 +1,7 @@
 ﻿l_english:
+  ###Focuses###
+  Ministry_of_defense_desc:0 "In the light of recent developments, it is best to revive the Equestrian Ministry of Defence from ages past. We cannot remain unprepared given Chrysalis' recent aggressive rhetoric, nor can we ignore the possible threat of Stalliongrad. Additionally, Princess Luna has expressed a desire to contribute more to [EQS.GetNameDef], and her knowledge of warfare would be highly valuable." #Make this dynamic loc
+
   ###News###
   news.6.d:0 "[This.GetNewspaperHeader]Despite the fact that the ravages of war have fallen upon Equestria, Octavia Melody, a world-renowned [EQS.GetAdjectiveCap] cellist, performed with her ensemble at the Canterlot Grand Opera House during the evening in Canterlot Standard Time. Before the concert began, she dedicated the performance to "all ponies guarding our freedom on the frontlines." Additionally, she announced that all proceeds from the concert would be donated to various causes supporting veterans and their families. Afterwards the opera house erupted into applause."
 

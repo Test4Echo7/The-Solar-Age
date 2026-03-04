@@ -1140,26 +1140,9 @@ shared_focus = {
 		add_war_support = 0.1
 		if = {
 			limit = { has_idea = alicorn_sisters }
-			EQS_princess_luna = {
-				set_character_flag = EQS_war_has_been_doubled
-			}
-			custom_effect_tooltip = SOL_luna_promotion_tt
-			custom_effect_tooltip = princess_luna_stats_tp
+			country_event = equestriaexpanded.9
 		}
 		hidden_effect = {
-			if = {
-				limit = { is_ai = yes }
-				add_advisor_role = {
-					character = EQS_princess_luna
-					advisor = {
-						slot = army_chief
-						cost = 50
-						idea_token = EQS_princess_luna
-						traits = { army_chief_offensive_1 }
-					}
-				}
-				activate_advisor = EQS_princess_luna
-			}
 			if = {
 				limit = {
 					is_ai = yes
@@ -1954,7 +1937,7 @@ shared_focus = {
 		effect_tooltip = {
 			swap_ideas = { remove_idea = harmonic_stagnation add_idea = harmonic_stagnation2 }
 		}
-		custom_effect_tooltip = EQS_extrem_war_measures_conscription_tt
+		custom_effect_tooltip = EQS_extreme_measures_conscription_tt
 		country_event = { days = 1 id = equestria.147 }
 		hidden_effect = {
 			modify_country_flag = { flag = celestia_evil_meter value = 1 }
@@ -3503,7 +3486,7 @@ shared_focus = {
 shared_focus = {
 	id = EQS_infrastructure_of_jungles
 	icon = GFX_goal_KTG_Jungle_Railroad
-	cost = 10
+	cost = 5
 	ai_will_do = {
 		factor = 25
 		modifier = {
@@ -3568,7 +3551,7 @@ shared_focus = {
 shared_focus = {
 	id = EQS_portland_fishing_port
 	icon = GFX_goal_generic_coastal_navy
-	cost = 10
+	cost = 7
 	ai_will_do = {
 		factor = 25
 	}
