@@ -6802,8 +6802,8 @@ country_event = { #Resistance broken
             ideology = democratic
             popularity = -0.1
         }
-        add_political_power = 40
-        add_stability = 0.3
+        add_political_power = 70
+        add_stability = 0.15
         set_country_flag = SOL_destroyed_resistance
         remove_ideas = SOL_harmonic_resistance_idea
     }

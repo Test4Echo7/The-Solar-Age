@@ -8260,11 +8260,16 @@ shared_focus = {
 	}
 	available = {
 		eqs_not_has_civil_war = yes
-		is_subject = no
-		CRY = {
-			is_subject_of = ROOT
-			has_civil_war = no
-			exists = yes
+		if = {
+			limit = {
+				tag = EQS
+			}
+			is_subject = no
+			CRY = {
+				is_subject_of = ROOT
+				has_civil_war = no
+				exists = yes
+			}
 		}
 	}
 
