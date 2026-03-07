@@ -723,6 +723,13 @@ country_event = {
 			}
 		}
 		set_country_flag = SOL_harmonic_commanders_leave
+		hidden_effect = {
+			country_event = {
+				id = solarreworked.83
+				days = 90
+				random_days = 180
+			}
+		}
 	}
 }
 

@@ -1631,7 +1631,7 @@ SOL_release_OLE = {
                 autonomy_state = autonomy_reichsprotectorate
             }
             OLE = {
-                set_cosmetic_tag = OLE_SOL
+                set_cosmetic_tag = OLE_SOL #Replace with custom effect, since the display is broken, for some reason
             }
         }
         create_dynamic_country = {

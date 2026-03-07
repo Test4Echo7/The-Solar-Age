@@ -1796,8 +1796,8 @@ shared_focus = {
 			}
 		}
 	}
-	cancel_if_invalid = yes
-	continue_if_invalid = no
+	cancel_if_invalid = no
+	continue_if_invalid = yes
 	select_effect = {
 		#just a dummy thing to make it uncancellable
 		set_temp_variable = { aaaaa = 1 }

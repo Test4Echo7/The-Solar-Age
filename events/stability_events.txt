@@ -78,7 +78,7 @@ country_event = {
 					has_war_with = NMS
 					has_war_with = CES
 					has_war_with = BAL
-					has_war_with = NMS
+					has_war_with = JUN
 				}
 			}
 		}
@@ -229,6 +229,10 @@ country_event = {
 				modifier = {
 					factor = 0.1
 					has_war_support > 0.5
+				}
+				modifier = {
+					factor = 0
+					has_country_flag = EQS_mutinies_recently
 				}
 				modifier = {
 					factor = 0.75

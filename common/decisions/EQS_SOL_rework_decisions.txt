@@ -3835,6 +3835,55 @@ EQS_expand_imperial_territory_category = {
             316 = { add_core_of = ROOT }
         }
     }
+    SOL_nom_birbs = {
+        available = {
+            is_EQS_SOL = yes
+            has_country_flag = SOL_can_core_GRF_states
+            58 = { is_owned_and_controlled_by = GRF }
+            338 = { is_owned_and_controlled_by = GRF }
+            222 = { is_owned_and_controlled_by = GRF }
+            239 = { is_owned_and_controlled_by = GRF }
+            242 = { is_owned_and_controlled_by = GRF }
+        }
+        visible = {
+            is_EQS_SOL = yes
+            has_country_flag = SOL_can_core_GRF_states
+            GRF = {
+                is_subject_of = ROOT
+            }
+            OR = {
+                58 = { is_owned_and_controlled_by = GRF }
+                338 = { is_owned_and_controlled_by = GRF }
+                222 = { is_owned_and_controlled_by = GRF }
+                239 = { is_owned_and_controlled_by = GRF }
+                242 = { is_owned_and_controlled_by = GRF }
+            }
+        }
+        highlight_states = {
+            highlight_state_targets = {
+                state = 58
+                state = 338
+                state = 222
+                state = 239
+                state = 242
+            }
+        }
+        fire_only_once = yes
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision SOL_take_vaverfront_region"
+            58 = { transfer_state_to = ROOT }
+            338 = { transfer_state_to = ROOT }
+            222 = { transfer_state_to = ROOT }
+            239 = { transfer_state_to = ROOT }
+            242 = { transfer_state_to = ROOT }
+        }
+        ai_will_do = {
+            modifier = {
+                GRF = { is_ai = no }
+                factor = 0
+            }
+        }
+    }
     SOL_integrate_nouvelle_aquila_region = {
         allowed = { tag = EQS }
         available = {
@@ -3845,7 +3894,6 @@ EQS_expand_imperial_territory_category = {
                 222 = { compliance > 40 }
                 239 = { compliance > 40 }
                 242 = { compliance > 40 }
-                329 = { compliance > 40 }
             }
         }
         visible = {
@@ -3858,7 +3906,6 @@ EQS_expand_imperial_territory_category = {
                         state = 222
                         state = 239
                         state = 242
-                        state = 329
                     }
                     OWNER = {
                         is_subject_of = ROOT
@@ -3873,7 +3920,6 @@ EQS_expand_imperial_territory_category = {
                 state = 222
                 state = 239
                 state = 242
-                state = 329
             }
         }
         fire_only_once = yes
@@ -3886,7 +3932,6 @@ EQS_expand_imperial_territory_category = {
             222 = { add_core_of = ROOT }
             239 = { add_core_of = ROOT }
             242 = { add_core_of = ROOT }
-            329 = { add_core_of = ROOT }
         }
     }
     SOL_integrate_river_heartlands = {

@@ -1370,7 +1370,7 @@ country_event = { #Event of a thestral looking for work and having a hard time o
         random_state = {
             limit = {
                 is_owned_by = ROOT
-                has_state_flag = eqs_bat_state
+                has_state_flag = EQS_guaranteed_bat_state
             }
             add_extra_state_shared_building_slots = 2
             add_building_construction = {
@@ -1387,7 +1387,7 @@ country_event = { #Event of a thestral looking for work and having a hard time o
         random_state = {
             limit = {
                 is_owned_by = ROOT
-                has_state_flag = eqs_bat_state
+                has_state_flag = EQS_guaranteed_bat_state
             }
             add_extra_state_shared_building_slots = 1
             add_building_construction = {
@@ -1399,7 +1399,7 @@ country_event = { #Event of a thestral looking for work and having a hard time o
         random_state = {
             limit = {
                 is_owned_by = ROOT
-                has_state_flag = eqs_bat_state
+                has_state_flag = EQS_guaranteed_bat_state
             }
             add_extra_state_shared_building_slots = 2
             add_building_construction = {
@@ -2440,42 +2440,9 @@ country_event = { #Daybreaker leads dozens if not a hundred or more troops into 
 
     option = { #The Solarbeams seem like an adequate rebrand.
         name = solarreworked.83.a
-        custom_effect_tooltip = available_chief_of_airforce
-		show_ideas_tooltip = blaze
-		custom_effect_tooltip = available_chief_of_airforce
-		show_ideas_tooltip = thunderlane
-		custom_effect_tooltip = available_theorist
-		show_ideas_tooltip = wind_rider
 		retire_character = EQS_spitfire
-		EQS_wonderbolts = {
-            set_character_name = { name = EQS_solarbeams }
-        }
-		if = {
-            limit = {
-                has_dlc = "By Blood Alone"
-            }
-			add_tech_bonus = {
-				name = fighter_bonus
-				bonus = 0.75
-				uses = 1
-				category = light_air
-			}
-			add_tech_bonus = {
-				name = cat_air_guns
-				bonus = 0.75
-				uses = 1
-				category = cat_air_guns
-			}
-		}
-		else = {
-			add_tech_bonus = {
-				name = fighter_bonus
-				bonus = 0.75
-				uses = 1
-				category = light_fighter
-				category = cat_heavy_fighter
-			}
-		}
+		add_stability = 0.001
+		add_manpower = -1
     }
 }
 
@@ -15856,8 +15823,16 @@ country_event = { ## Working hippies
 				factor = 0
 				OR = {
 					surrender_progress > 0.3
-					enemies_strength_ratio > 0.75
-					has_manpower < 20000
+					OR = {
+                        ic_ratio = {
+                            tag = CHN
+                            ratio > 0.75
+                        }
+                        ic_ratio = {
+                            tag = NLR
+                            ratio > 0.75
+                        }
+                    }
 					has_global_flag = EQS_evil_celestia
 				}
 			}
@@ -15866,10 +15841,10 @@ country_event = { ## Working hippies
 	option = {
 		name = equestriaexpanded.13.b
 		add_timed_idea = { idea = strikes_1 days = 60 }
+		add_war_support = -0.03
 		hidden_effect = {
-			modify_country_flag = { flag = celestia_evil_meter value = 1 }
+			#modify_country_flag = { flag = celestia_evil_meter value = 1 }
 			set_country_flag = { flag = EQS_strikes_recently days = 360 value = 1 }
-			add_war_support = -0.03
 			add_power_balance_value = {
 				id = EQS_sanity_bop
 				value = -0.01
@@ -15895,7 +15870,118 @@ country_event = { ## Working hippies
 			NOT = { has_country_flag = eqs_democratic_laws }
 		}
 		hidden_effect = {
-			modify_country_flag = { flag = celestia_evil_meter value = 4 }
+			#modify_country_flag = { flag = celestia_evil_meter value = 4 }
+			set_country_flag = EQS_strikes_recently
+			add_power_balance_value = {
+				id = EQS_sanity_bop
+				value = -0.04
+				tooltip_side = EQS_angy
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+country_event = { ## Angy hippies
+	id = equestriaexpanded.14
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriaexpanded.14"}
+	title = equestriaexpanded.14.t
+	desc = equestriaexpanded.14.d
+	picture = GFX_event_celestia_poster
+
+	trigger = {
+		tag = EQS
+		has_government = democratic
+		is_subject = no
+		has_war = yes
+		NOT = {
+			has_idea = mutiny_1
+			has_idea = mutiny_2
+			has_idea = mutiny_3
+		}
+		NOT = {
+			has_idea = disarmed_nation
+			has_idea = volunteer_only
+			has_country_flag = EQS_mutinies_recently
+		}
+	}
+	mean_time_to_happen = {
+		days = 480
+		modifier = {
+			factor = 0.6
+			has_idea = extensive_conscription
+		}
+		modifier = {
+            factor = 0.4
+            OR = {
+                has_idea = service_by_requirement
+                has_idea = all_adults_serve
+                has_idea = scraping_the_barrel
+            }
+		}
+		modifier = {
+			factor = 0.3
+			has_offensive_war = yes
+		}
+		modifier = {
+			factor = 2
+			surrender_progress > 0.3
+		}
+		modifier = {
+			factor = 2
+			surrender_progress > 0.6
+		}
+	}
+	option = {
+		name = equestriaexpanded.14.a
+		add_timed_idea = { idea = mutiny_1 days = 180 }
+		hidden_effect = { set_country_flag = { flag = EQS_mutinies_recently days = 360 value = 1 } }
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				OR = {
+					surrender_progress > 0.3
+					enemies_strength_ratio > 0.75
+					has_global_flag = EQS_evil_celestia
+				}
+			}
+		}
+	}
+	option = {
+		name = equestriaexpanded.13.b
+		add_timed_idea = { idea = mutiny_1 days = 60 }
+		hidden_effect = {
+			#modify_country_flag = { flag = celestia_evil_meter value = 1 }
+			set_country_flag = { flag = EQS_mutinies_recently days = 360 value = 1 }
+			add_power_balance_value = {
+				id = EQS_sanity_bop
+				value = -0.01
+				tooltip_side = EQS_angy
+			}
+		}
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				has_global_flag = EQS_evil_celestia
+			}
+		}
+	}
+	option = {
+		trigger = {
+			NOT = { has_global_flag = celestia_and_luna_fused }
+		}
+		name = equestriaexpanded.13.c
+		add_war_support = -0.075
+		add_command_power = -50
+		trigger = {
+			NOT = { has_country_flag = eqs_democratic_laws }
+		}
+		hidden_effect = {
+			#modify_country_flag = { flag = celestia_evil_meter value = 4 }
 			set_country_flag = EQS_strikes_recently
 			add_power_balance_value = {
 				id = EQS_sanity_bop

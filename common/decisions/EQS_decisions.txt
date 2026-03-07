@@ -1898,7 +1898,7 @@ political_actions = {
 			date < 1022.1.1
 			has_completed_focus = SOL_rouse_godhood
 		}
-		cost = 125
+		cost = 100
 		days_remove = 120
 		fire_only_once = yes
 		modifier = {
@@ -1935,11 +1935,11 @@ political_actions = {
 			date < 1022.1.1
 			has_country_flag = SOL_flurry_training_tier_1
 		}
-		cost = 125
+		cost = 100
 		days_remove = 120
 		fire_only_once = yes
 		modifier = {
-			political_power_gain = -0.25
+			political_power_gain = -0.15
 			experience_gain_army = -0.05
 		}
 		remove_effect = {
@@ -1972,11 +1972,11 @@ political_actions = {
 			date < 1022.1.1
 			has_country_flag = SOL_flurry_training_tier_2
 		}
-		cost = 125
+		cost = 100
 		days_remove = 120
 		fire_only_once = yes
 		modifier = {
-			political_power_gain = -0.25
+			political_power_gain = -0.15
 			experience_gain_army = -0.08
 		}
 		remove_effect = {
@@ -2014,7 +2014,7 @@ political_actions = {
 		days_remove = 120
 		fire_only_once = yes
 		modifier = {
-			political_power_gain = -0.35
+			political_power_gain = -0.25
 			experience_gain_army = -0.1
 		}
 		remove_effect = {
@@ -3546,10 +3546,14 @@ prospect_for_resources = {
 		}
 		available = {
 			num_of_civilian_factories_available_for_projects > 5
-			owns_state = 241
+			241 = {
+				is_owned_and_controlled_by = ROOT
+			}
 		}
 		visible = {
-			owns_state = 241
+			241 = {
+				is_owned_and_controlled_by = ROOT
+			}
 			has_country_flag = SOL_new_mining_decisions
 		}
 
@@ -3609,13 +3613,15 @@ prospect_for_resources = {
 		}
 		available = {
 			num_of_civilian_factories_available_for_projects > 8
-			owns_state = 241
+			241 = {
+				is_owned_and_controlled_by = ROOT
+			}
 		}
 		visible = {
-			owns_state = 241
 			has_country_flag = SOL_new_mining_decisions
 			241 = {
 				has_state_flag = EQS_village_expansion_1
+				is_owned_and_controlled_by = ROOT
 			}
 		}
 
@@ -3680,10 +3686,14 @@ prospect_for_resources = {
 		}
 		available = {
 			num_of_civilian_factories_available_for_projects > 2
-			owns_state = 57
+			57 = {
+				is_owned_and_controlled_by = ROOT
+			}
 		}
 		visible = {
-			owns_state = 57
+			57 = {
+				is_owned_and_controlled_by = ROOT
+			}
 			has_country_flag = SOL_new_mining_decisions
 		}
 		fire_only_once = yes
@@ -3734,10 +3744,14 @@ prospect_for_resources = {
 		}
 		available = {
 			num_of_civilian_factories_available_for_projects > 4
-			owns_state = 166
+			166 = {
+				is_owned_and_controlled_by = ROOT
+			}
 		}
 		visible = {
-			owns_state = 166
+			166 = {
+				is_owned_and_controlled_by = ROOT
+			}
 			has_country_flag = SOL_new_mining_decisions
 		}
 		fire_only_once = yes
@@ -3777,10 +3791,14 @@ prospect_for_resources = {
 		}
 		available = {
 			num_of_civilian_factories_available_for_projects > 2
-			owns_state = 154
+			154 = {
+				is_owned_and_controlled_by = ROOT
+			}
 		}
 		visible = {
-			owns_state = 154
+			154 = {
+				is_owned_and_controlled_by = ROOT
+			}
 			has_country_flag = SOL_new_mining_decisions
 		}
 		fire_only_once = yes
@@ -3814,10 +3832,14 @@ prospect_for_resources = {
 		}
 		available = {
 			num_of_civilian_factories_available_for_projects > 2
-			owns_state = 70
+			70 = {
+				is_owned_and_controlled_by = ROOT
+			}
 		}
 		visible = {
-			owns_state = 70
+			70 = {
+				is_owned_and_controlled_by = ROOT
+			}
 			has_country_flag = SOL_new_mining_decisions
 		}
 		fire_only_once = yes
@@ -3858,10 +3880,14 @@ prospect_for_resources = {
 		}
 		available = {
 			num_of_civilian_factories_available_for_projects > 3
-			owns_state = 174
+			174 = {
+				is_owned_and_controlled_by = ROOT
+			}
 		}
 		visible = {
-			owns_state = 174
+			174 = {
+				is_owned_and_controlled_by = ROOT
+			}
 			has_country_flag = SOL_new_mining_decisions
 		}
 		fire_only_once = yes
@@ -3897,14 +3923,22 @@ prospect_for_resources = {
 		}
 		available = {
 			num_of_civilian_factories_available_for_projects > 5
-			owns_state = 174
-			owns_state = 131
+			174 = {
+				is_owned_and_controlled_by = ROOT
+			}
+			131 = {
+				is_owned_and_controlled_by = ROOT
+			}
 		}
 		visible = {
 			has_country_flag = SOL_new_mining_decisions
 			OR = {
-				owns_state = 174
-				owns_state = 131
+				174 = {
+					is_owned_and_controlled_by = ROOT
+				}
+				131 = {
+					is_owned_and_controlled_by = ROOT
+				}
 			}
 			174 = {
 				has_state_flag = EQS_peat_bogs_tapped
@@ -3950,10 +3984,14 @@ prospect_for_resources = {
 		}
 		available = {
 			num_of_civilian_factories_available_for_projects > 1
-			owns_state = 14
+			14 = {
+				is_owned_and_controlled_by = ROOT
+			}
 		}
 		visible = {
-			owns_state = 14
+			14 = {
+				is_owned_and_controlled_by = ROOT
+			}
 			has_country_flag = SOL_new_mining_decisions
 		}
 		fire_only_once = yes
@@ -3988,20 +4026,26 @@ prospect_for_resources = {
 		available = {
 			num_of_civilian_factories_available_for_projects > 2
 			OR = {
-				owns_state = 139
+				139 = {
+					is_owned_and_controlled_by = ROOT
+				}
 				CRY = {
 					is_subject_of = ROOT
 					owns_state = 139
+					controls_state = 139
 				}
 			}
 		}
 		visible = {
 			has_country_flag = SOL_new_mining_decisions
 			OR = {
-				owns_state = 139
+				139 = {
+					is_owned_and_controlled_by = ROOT
+				}
 				CRY = {
 					is_subject_of = ROOT
 					owns_state = 139
+					controls_state = 139
 				}
 			}
 		}
@@ -4038,20 +4082,26 @@ prospect_for_resources = {
 			num_of_civilian_factories_available_for_projects > 1
 			has_tech = excavation3
 			OR = {
-				owns_state = 55
+				55 = {
+					is_owned_and_controlled_by = ROOT
+				}
 				CRY = {
 					is_subject_of = ROOT
 					owns_state = 55
+					controls_state = 55
 				}
 			}
 		}
 		visible = {
 			has_country_flag = SOL_new_mining_decisions
 			OR = {
-				owns_state = 55
+				55 = {
+					is_owned_and_controlled_by = ROOT
+				}
 				CRY = {
 					is_subject_of = ROOT
 					owns_state = 55
+					controls_state = 55
 				}
 			}
 		}
@@ -4089,20 +4139,26 @@ prospect_for_resources = {
 			num_of_civilian_factories_available_for_projects > 3
 			has_tech = excavation4
 			OR = {
-				owns_state = 55
+				55 = {
+					is_owned_and_controlled_by = ROOT
+				}
 				CRY = {
 					is_subject_of = ROOT
 					owns_state = 55
+					controls_state = 55
 				}
 			}
 		}
 		visible = {
 			has_country_flag = SOL_new_mining_decisions
 			OR = {
-				owns_state = 55
+				55 = {
+					is_owned_and_controlled_by = ROOT
+				}
 				CRY = {
 					is_subject_of = ROOT
 					owns_state = 55
+					controls_state = 55
 				}
 			}
 			55 = {
@@ -4143,20 +4199,26 @@ prospect_for_resources = {
 			num_of_civilian_factories_available_for_projects > 7
 			has_tech = excavation_a
 			OR = {
-				owns_state = 55
+				55 = {
+					is_owned_and_controlled_by = ROOT
+				}
 				CRY = {
 					is_subject_of = ROOT
 					owns_state = 55
+					controls_state = 55
 				}
 			}
 		}
 		visible = {
 			has_country_flag = SOL_new_mining_decisions
 			OR = {
-				owns_state = 55
+				241 = {
+					is_owned_and_controlled_by = ROOT
+				}
 				CRY = {
 					is_subject_of = ROOT
 					owns_state = 55
+					controls_state = 55
 				}
 			}
 			55 = {
@@ -4194,10 +4256,14 @@ prospect_for_resources = {
 		}
 		available = {
 			num_of_civilian_factories_available_for_projects > 4
-			owns_state = 30
+			30 = {
+				is_owned_and_controlled_by = ROOT
+			}
 		}
 		visible = {
-			owns_state = 30
+			30 = {
+				is_owned_and_controlled_by = ROOT
+			}
 			has_country_flag = SOL_new_mining_decisions
 			has_completed_focus = SOL_useful_servants
 		}
@@ -4235,11 +4301,15 @@ prospect_for_resources = {
 		}
 		available = {
 			num_of_civilian_factories_available_for_projects > 7
-			owns_state = 30
+			30 = {
+				is_owned_and_controlled_by = ROOT
+			}
 		}
 		visible = {
-			owns_state = 30
-			30 = { has_state_flag = EQS_ayacachtli_expansion_1 }
+			30 = {
+				has_state_flag = EQS_ayacachtli_expansion_1
+				is_owned_and_controlled_by = ROOT
+			}
 		}
 		cost = 90
 		days_remove = 180
@@ -4282,13 +4352,23 @@ prospect_for_resources = {
 		}
 		available = {
 			num_of_civilian_factories_available_for_projects > 9
-			owns_state = 30
-			owns_state = 81
+			30 = {
+				is_owned_and_controlled_by = ROOT
+			}
+			81 = {
+				is_owned_and_controlled_by = ROOT
+			}
 			has_tech = excavation2
 		}
 		visible = {
-			owns_state = 30
-			owns_state = 81
+			OR = {
+				30 = {
+					is_owned_and_controlled_by = ROOT
+				}
+				81 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 			has_completed_focus = SOL_god_empress
 			has_country_flag = SOL_new_mining_decisions
 			has_completed_focus = SOL_burn_bats
@@ -4341,10 +4421,14 @@ prospect_for_resources = {
 		}
 		available = {
 			num_of_civilian_factories_available_for_projects > 3
-			owns_state = 16
+			16 = {
+				is_owned_and_controlled_by = ROOT
+			}
 		}
 		visible = {
-			owns_state = 16
+			16 = {
+				is_owned_and_controlled_by = ROOT
+			}
 			has_completed_focus = SOL_burn_bats
 			has_country_flag = SOL_new_mining_decisions
 		}
@@ -4383,11 +4467,15 @@ prospect_for_resources = {
 		}
 		available = {
 			num_of_civilian_factories_available_for_projects > 6
-			owns_state = 16
+			16 = {
+				is_owned_and_controlled_by = ROOT
+			}
 		}
 		visible = {
-			owns_state = 16
-			16 = { has_state_flag = EQS_tenochtitlan_expansion_1 }
+			16 = {
+				has_state_flag = EQS_tenochtitlan_expansion_1
+				is_owned_and_controlled_by = ROOT
+			}
 		}
 		cost = 85
 		days_remove = 150
@@ -4434,10 +4522,14 @@ prospect_for_resources = {
 		}
 		available = {
 			num_of_civilian_factories_available_for_projects > 7
-			owns_state = 16
+			16 = {
+				is_owned_and_controlled_by = ROOT
+			}
 		}
 		visible = {
-			owns_state = 16
+			16 = {
+				is_owned_and_controlled_by = ROOT
+			}
 			has_country_flag = SOL_new_mining_decisions
 			has_completed_focus = SOL_useful_servants
 			has_completed_focus = SOL_god_empress

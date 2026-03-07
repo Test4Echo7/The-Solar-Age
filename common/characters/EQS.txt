@@ -1995,7 +1995,7 @@ characters={
 			visible = {
 				owner = {
 					if = {
-						limit = { is_original_EQS = yes }
+						limit = { is_EQS_SOL = yes }
 						OR = {
 							has_global_flag = EQS_completed_EQS_WMD
 							has_completed_focus = SOL_breyns_dream
@@ -2899,6 +2899,7 @@ characters={
 			slot = air_chief
 			idea_token = thunderlane
 
+			cost = 100
 			allowed = {
 				original_tag = EQS
 			}

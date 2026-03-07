@@ -1249,7 +1249,7 @@ shared_focus = {
     y = 2
     relative_position_id = SOL_first_feelers
 
-    cost = 3
+    cost = 2
     prerequisite = { focus = SOL_first_feelers }
     prerequisite = { focus = SOL_arbitrary_judgement }
     available = {
@@ -1333,7 +1333,7 @@ shared_focus = {
     y = 2
     relative_position_id = SOL_plants_in_chaos
 
-    cost = 3
+    cost = 2
     prerequisite = { focus = SOL_plants_in_chaos }
     prerequisite = { focus = SOL_solidify_merger }
     available = {
@@ -4783,13 +4783,6 @@ shared_focus = {
 			add_building_construction = {
 				type = air_base
 				level = 4
-				instant_build = yes
-			}
-		}
-		329 = {
-			add_building_construction = {
-				type = air_base
-				level = 1
 				instant_build = yes
 			}
 		}
@@ -9194,7 +9187,7 @@ joint_focus = {
 shared_focus = {
 	id = SOL_bat_problems
 	icon = GFX_goal_the_bat_problem
-	cost = 2
+	cost = 1
 	ai_will_do = {
 		factor = 150
 	}
@@ -9267,7 +9260,7 @@ shared_focus = {
 		x = 2
 	}
 
-	cost = 2
+	cost = 1
 	prerequisite = { focus = SOL_bat_problems }
 	mutually_exclusive = { focus = SOL_enlighten_darkness }
 	available = { has_war = no }
@@ -9320,7 +9313,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_fire_and_brimstone
 
-	cost = 3
+	cost = 2
 	prerequisite = { focus = SOL_fire_and_brimstone }
 	available = { has_war = no }
 
@@ -9340,7 +9333,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_fire_and_brimstone
 
-	cost = 3
+	cost = 2
 	prerequisite = { focus = SOL_fire_and_brimstone }
 	available = { has_war = no }
 
@@ -9360,7 +9353,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_what_homes
 
-	cost = 4
+	cost = 3
 	prerequisite = { focus = SOL_what_homes }
 	prerequisite = { focus = SOL_what_jobs }
 	available = { has_war = no }
@@ -9418,7 +9411,7 @@ shared_focus = {
 		x = -2
 	}
 
-	cost = 2
+	cost = 1
 	prerequisite = { focus = SOL_bat_problems }
 	mutually_exclusive = { focus = SOL_fire_and_brimstone }
 	available = { has_war = no }
@@ -9464,7 +9457,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_enlighten_darkness
 
-	cost = 3
+	cost = 2
 	prerequisite = { focus = SOL_enlighten_darkness }
 	available = { has_war = no }
 
@@ -9483,7 +9476,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_enlighten_darkness
 
-	cost = 3
+	cost = 2
 	prerequisite = { focus = SOL_enlighten_darkness }
 	available = { has_war = no }
 
@@ -9502,7 +9495,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_second_class_employers
 
-	cost = 4
+	cost = 3
 	prerequisite = { focus = SOL_second_class_employers }
 	prerequisite = { focus = SOL_mandatory_education }
 	available = { has_war = no }
@@ -9601,7 +9594,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_peninsula_of_damned
 
-	cost = 4
+	cost = 3
 	prerequisite = { focus = SOL_peninsula_of_damned }
 	available = {
 		17 = { is_owned_and_controlled_by = ROOT }
@@ -9664,7 +9657,7 @@ shared_focus = {
 	y = 2
 	relative_position_id = SOL_peninsula_of_damned
 
-	cost = 5
+	cost = 4
 	prerequisite = { focus = SOL_peninsula_of_damned }
 
 	completion_reward = {
@@ -9756,7 +9749,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_peaks_of_wealth
 
-	cost = 5
+	cost = 4
 	prerequisite = {
 		focus = SOL_prison_of_fire
 		focus = SOL_peaks_of_wealth
@@ -9782,7 +9775,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_remote_no_more
 
-	cost = 6
+	cost = 5
 	prerequisite = { focus = SOL_remote_no_more }
 	mutually_exclusive = { focus = SOL_moonspeaker_tax }
 	mutually_exclusive = { focus = SOL_replanting_jungle }
@@ -9860,7 +9853,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_remote_no_more
 
-	cost = 6
+	cost = 5
 	prerequisite = { focus = SOL_remote_no_more }
 	prerequisite = { focus = SOL_prison_of_fire }
 	mutually_exclusive = { focus = SOL_modern_south_east }
@@ -9889,7 +9882,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_expand_oil_fields
 
-	cost = 6
+	cost = 5
 	prerequisite = { focus = SOL_expand_oil_fields }
 	mutually_exclusive = { focus = SOL_modern_south_east }
 	mutually_exclusive = { focus = SOL_moonspeaker_tax }
@@ -10061,7 +10054,7 @@ shared_focus = {
 	icon = GFX_goal_naval_staging_grounds
 	relative_position_id = SOL_coercion_campaign
 
-	cost = 5
+	cost = 3
 	prerequisite = {
 		focus = SOL_communist_examples
 		focus = SOL_coercion_campaign
@@ -10122,7 +10115,7 @@ shared_focus = {
 	icon = GFX_goal_plumb_mountain_depths
 	relative_position_id = SOL_naval_staging_grounds
 
-	cost = 5
+	cost = 4
 	prerequisite = { focus = SOL_naval_staging_grounds }
 	available = {
 		PCB = {
@@ -10158,7 +10151,7 @@ shared_focus = {
 	icon = GFX_goal_isle_of_sun
 	relative_position_id = SOL_plumb_mountain_depths
 
-	cost = 8
+	cost = 6
 	prerequisite = { focus = SOL_plumb_mountain_depths }
 	available = {
 		PCB = {
@@ -13691,7 +13684,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_modernize_relic
 
-	cost = 2
+	cost = 1
 	prerequisite = { focus = SOL_modernize_relic }
 	available = {
 		OR = {
@@ -13703,7 +13696,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_mighty_hoofs"
-		air_experience = 35
+		air_experience = 25
 	}
 	search_filters = { FOCUS_FILTER_AIRFORCE_BONUS }
 	ai_will_do = { factor = 50 }
@@ -13716,13 +13709,52 @@ shared_focus = {
 	relative_position_id = SOL_sky_domain
 	icon = GFX_goal_abolish_wonderbolts
 
-	cost = 3
+	cost = 2
 	prerequisite = { focus = SOL_sky_domain }
+	available = {
+		NOT = { has_character = EQS_spitfire }
+	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_abolish_wonderbolts"
 		###Event of the Wonderbolts headquarters in either Canterlot or Cloudsdale getting raided and ponies who serve there being arrested and those that resist executed, as they have been deemed a symbol of anti-Order activities and will be turned into something greater, and it's ensured that Spitfire knows that she will have a special place in the future air force, as a test pilot, or the like; Thunderlane was a mole who helped with the raid
-		country_event = solarreworked.83
+		###This will now be triggered shortly after the harmonist commanders leave
+		#country_event = solarreworked.83
+		custom_effect_tooltip = available_chief_of_airforce
+		show_ideas_tooltip = blaze
+		custom_effect_tooltip = available_chief_of_airforce
+		show_ideas_tooltip = thunderlane
+		custom_effect_tooltip = available_theorist
+		show_ideas_tooltip = wind_rider
+		EQS_wonderbolts = {
+            set_character_name = { name = EQS_solarbeams }
+        }
+		if = {
+            limit = {
+                has_dlc = "By Blood Alone"
+            }
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 0.75
+				uses = 1
+				category = light_air
+			}
+			add_tech_bonus = {
+				name = cat_air_guns
+				bonus = 0.75
+				uses = 1
+				category = cat_air_guns
+			}
+		}
+		else = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 0.75
+				uses = 1
+				category = light_fighter
+				category = cat_heavy_fighter
+			}
+		}
 	}
 	search_filters = { FOCUS_FILTER_AIRFORCE_BONUS FOCUS_FILTER_RESEARCH }
 }
@@ -14360,7 +14392,7 @@ shared_focus = {
 	relative_position_id = SOL_targeted_destruction
 	icon = GFX_goal_deliver_death
 
-	cost = 6
+	cost = 4
 	prerequisite = { focus = SOL_targeted_destruction }
 
 	completion_reward = {
@@ -14420,7 +14452,7 @@ shared_focus = {
 	relative_position_id = SOL_area_bombardment
 	icon = GFX_goal_desolation_engines
 
-	cost = 6
+	cost = 4
 	prerequisite = { focus = SOL_area_bombardment }
 
 	completion_reward = {
@@ -14553,13 +14585,12 @@ shared_focus = {
 	relative_position_id = SOL_deliver_death
 	icon = GFX_goal_breyns_dream
 
-	cost = 5
+	cost = 4
 	prerequisite = {
 		focus = SOL_judge_ground
 		focus = SOL_order_skies
 		focus = SOL_heavenly_backdrop
 	}
-	available = { has_war = yes }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_breyns_dream"
@@ -14586,7 +14617,7 @@ shared_focus = {
 	relative_position_id = SOL_desolation_engines
 	icon = GFX_goal_project_solar_flare
 
-	cost = 5
+	cost = 4
 	prerequisite = {
 		focus = SOL_judge_ground
 		focus = SOL_order_skies
@@ -14631,6 +14662,7 @@ shared_focus = {
 				uses = 1
 				bonus = 0.66
 				ahead_reduction = 0.5
+				category = nuclear
 			}
 		}
 		else = {
@@ -14681,7 +14713,7 @@ shared_focus = {
 	relative_position_id = SOL_modernize_relic
 	icon = GFX_goal_rebuild_admiralty
 
-	cost = 2
+	cost = 1
 	prerequisite = { focus = SOL_modernize_relic }
 	available = {
 		OR = {
@@ -14693,7 +14725,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_rebuild_admiralty"
-		navy_experience = 35
+		navy_experience = 25
 	}
 	search_filters = { FOCUS_FILTER_NAVY_BONUS }
 	ai_will_do = { factor = 40 }
@@ -14706,7 +14738,7 @@ shared_focus = {
 	relative_position_id = SOL_rebuild_admiralty
 	icon = GFX_goal_scraping_barrels
 
-	cost = 5
+	cost = 4
 	prerequisite = { focus = SOL_rebuild_admiralty }
 
 	completion_reward = {
@@ -14807,7 +14839,7 @@ shared_focus = {
 	relative_position_id = SOL_rebuild_admiralty
 	icon = GFX_goal_saltless_blood
 
-	cost = 5
+	cost = 4
 	prerequisite = { focus = SOL_rebuild_admiralty }
 
 	completion_reward = {
@@ -17089,7 +17121,7 @@ shared_focus = {
 	x = 29
 	y = -1
 
-	cost = 3
+	cost = 2
 	available = {
 		if = {
 			limit = { has_dlc = "La Resistance" }
