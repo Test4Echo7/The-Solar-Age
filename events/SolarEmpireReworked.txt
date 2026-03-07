@@ -2371,6 +2371,7 @@ country_event = { #A trainee evoker is put to the test on one of the main combat
     id = solarreworked.80
     title = solarreworked.80.t
     desc = solarreworked.80.d
+    picture = GFX_event_palace_hall
     #Fire GFX for pony training
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.80"}
 
