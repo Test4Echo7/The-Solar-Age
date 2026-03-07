@@ -182,6 +182,43 @@ EQS_SOL_wartime_change = {
 	clr_country_flag = economic_laws_blocked
 	set_country_flag = SOL_dont_trigger_target_change
 	if = {
+		limit = {
+			has_idea = alicorn_sisters
+		}
+		add_stability = -0.1
+		remove_ideas = alicorn_sisters
+	}
+	hidden_effect = {
+		EQS_princess_celestia = {
+			if = {
+				limit = { ROOT = { is_ai = no } }
+				#set_character_name = EQS_SOL_daybreaker
+				set_portraits = {
+					civilian = {
+						large = GFX_DaybreakerPortraitNew
+					}
+					army = {
+						large = GFX_DaybreakerPortraitNew
+						small = "gfx/interface/ideas/advisors/EQS/EQS_daybreaker_goddess.tga"
+					}
+				}
+			}
+
+			#add_country_leader_role = {
+			#	promote_leader = yes
+			#
+			#	country_leader = {
+			#		expire = "1965.1.1"
+			#		desc = "POLITICS_DAYBREAKER_DESC"
+			#		ideology = nazism
+			#		traits = { }
+			#		id = -1
+			#	}
+			#}
+			set_character_flag = EQS_celestia_is_db
+		}
+	}
+	if = {
 		limit = { NOT = { has_completed_focus = Friendship_Games } }
 		complete_national_focus = Friendship_Games
 	}
@@ -196,13 +233,6 @@ EQS_SOL_wartime_change = {
 	if = {
 		limit = { NOT = { has_completed_focus = worrisome_changelings } }
 		complete_national_focus = worrisome_changelings
-	}
-	if = {
-		limit = {
-			has_idea = alicorn_sisters
-		}
-		add_stability = -0.1
-		remove_ideas = alicorn_sisters
 	}
 	if = {
 		limit = {
@@ -247,36 +277,6 @@ EQS_SOL_wartime_change = {
 	#	ideology = fascism
 	#	popularity = 0.10
 	#}
-	hidden_effect = {
-		EQS_princess_celestia = {
-			if = {
-				limit = { ROOT = { is_ai = no } }
-				#set_character_name = EQS_SOL_daybreaker
-				set_portraits = {
-					civilian = {
-						large = GFX_DaybreakerPortraitNew
-					}
-					army = {
-						large = GFX_DaybreakerPortraitNew
-						small = "gfx/interface/ideas/advisors/EQS/EQS_daybreaker_goddess.tga"
-					}
-				}
-			}
-
-			#add_country_leader_role = {
-			#	promote_leader = yes
-			#
-			#	country_leader = {
-			#		expire = "1965.1.1"
-			#		desc = "POLITICS_DAYBREAKER_DESC"
-			#		ideology = nazism
-			#		traits = { }
-			#		id = -1
-			#	}
-			#}
-			set_character_flag = EQS_celestia_is_db
-		}
-	}
 	SOL = {
 		set_politics = { ruling_party = democratic }
 		save_global_event_target_as = equestria
@@ -402,6 +402,37 @@ EQS_pre_SOL_civil_war_setup = {
 	clr_country_flag = manpower_laws_blocked
 	clr_country_flag = economic_laws_blocked
 	set_country_flag = SOL_dont_trigger_target_change
+	hidden_effect = {
+		EQS_princess_celestia = {
+			if = {
+				limit = { ROOT = { is_ai = no } }
+				#set_character_name = EQS_SOL_daybreaker
+				set_portraits = {
+					civilian = {
+						large = GFX_DaybreakerPortraitNew
+					}
+					army = {
+						large = GFX_DaybreakerPortraitNew
+						small = "gfx/interface/ideas/advisors/EQS/EQS_daybreaker_goddess.tga"
+					}
+				}
+			}
+
+			#add_country_leader_role = {
+			#	promote_leader = yes
+			#
+			#	country_leader = {
+			#		expire = "1965.1.1"
+			#		desc = "POLITICS_DAYBREAKER_DESC"
+			#		ideology = nazism
+			#		traits = { }
+			#		id = -1
+			#	}
+			#}
+
+			set_character_flag = EQS_celestia_is_db
+		}
+	}
 	if = {
 		limit = { NOT = { has_completed_focus = Friendship_Games } }
 		complete_national_focus = Friendship_Games
@@ -429,40 +460,6 @@ EQS_pre_SOL_civil_war_setup = {
 			NOT = { has_country_flag = EQS_create_new_commanders_flag }
 		}
 		EQS_create_new_commanders = yes
-	}
-	if = {
-		limit = { is_ai = no }
-		hidden_effect = {
-			EQS_princess_celestia = {
-				if = {
-					limit = { ROOT = { is_ai = no } }
-					#set_character_name = EQS_SOL_daybreaker
-					set_portraits = {
-						civilian = {
-							large = GFX_DaybreakerPortraitNew
-						}
-						army = {
-							large = GFX_DaybreakerPortraitNew
-							small = "gfx/interface/ideas/advisors/EQS/EQS_daybreaker_goddess.tga"
-						}
-					}
-				}
-
-				#add_country_leader_role = {
-				#	promote_leader = yes
-				#
-				#	country_leader = {
-				#		expire = "1965.1.1"
-				#		desc = "POLITICS_DAYBREAKER_DESC"
-				#		ideology = nazism
-				#		traits = { }
-				#		id = -1
-				#	}
-				#}
-
-				set_character_flag = EQS_celestia_is_db
-			}
-		}
 	}
 	if = {
 		limit = { has_character = EQS_princess_luna }

@@ -1139,8 +1139,26 @@ shared_focus = {
 		army_experience = 50
 		add_war_support = 0.1
 		if = {
-			limit = { has_idea = alicorn_sisters }
+			limit = {
+				has_idea = alicorn_sisters
+				NOT = {
+					EQS_princess_celestia = {
+						has_character_flag = EQS_celestia_is_db
+					}
+				}
+			}
 			country_event = equestriaexpanded.9
+		}
+		else_if = {
+			limit = {
+				EQS_princess_celestia = {
+					has_character_flag = EQS_celestia_is_db
+				}
+				EQS_princess_luna = {
+					set_character_flag = EQS_war_has_been_doubled
+					set_character_flag = EQS_luna_leader_disabled
+				}
+			}
 		}
 		hidden_effect = {
 			if = {
