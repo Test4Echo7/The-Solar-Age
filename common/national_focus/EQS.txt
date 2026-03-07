@@ -1774,7 +1774,10 @@ shared_focus = {
 				has_war_with_major = yes
 			}
 			surrender_progress > 0.2
-			has_war_support > 0.5
+			AND = {
+				has_war_support > 0.5
+				date > 1009.12.31
+			}
 			any_of_scopes = {
 				array = global.majors
 				exists = yes
