@@ -14733,6 +14733,7 @@ country_event = { #Event for informing the player that they can make the game ha
             }
             CHN = {
                 add_ideas = EQS_buffed_enemy
+                load_oob = "CHN_buff"
             }
         }
         else_if = {
@@ -14741,6 +14742,7 @@ country_event = { #Event for informing the player that they can make the game ha
             }
             NLR = {
                 add_ideas = EQS_buffed_enemy
+                load_oob = "NLR_buff"
             }
         }
     }
@@ -14751,13 +14753,17 @@ country_event = { #Event for informing the player that they can make the game ha
             limit = {
                 has_war_with = CHN
             }
-            #CHN buffs
+            CHN = {
+                load_oob = "CHN_buff"
+            }
         }
         else_if = {
             limit = {
                 has_war_with = NLR
             }
-            #NLR buffs
+            NLR = {
+                load_oob = "NLR_buff"
+            }
         }
     }
     option = { #Mo' buffs!

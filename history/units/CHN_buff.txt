@@ -1,0 +1,272 @@
+units = {
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Infanterie Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 1118
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Infanterie Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 1118
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Infanterie Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 1118
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Infanterie Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 1118
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Infanterie Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 11617
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Infanterie Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 11617
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Infanterie Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 11617
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Infanterie Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 11617
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Infanterie Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 11690
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Infanterie Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 11690
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Infanterie Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 11690
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Infanterie Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 11690
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Infanterie Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 3777
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Infanterie Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 3777
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Infanterie Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 3777
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Infanterie Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 3777
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Infanterie Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 722
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Infanterie Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 722
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Infanterie Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 722
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Infanterie Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 722
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Infanterie Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 9158
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Infanterie Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 9158
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Infanterie Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 9158
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Infanterie Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 9158
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Motorisierte Infanterie"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 722
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Motorisierte Infanterie"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 722
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Motorisierte Infanterie"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 722
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Motorisierte Infanterie"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 722
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Panzer Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 3777
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Panzer Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 3777
+    }
+}

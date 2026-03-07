@@ -1,0 +1,272 @@
+units = {
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Onhooves Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 758
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Onhooves Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 758
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Onhooves Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 758
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Onhooves Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 758
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Onhooves Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 758
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Onhooves Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 758
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Onhooves Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 950
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Onhooves Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 950
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Onhooves Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 950
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Onhooves Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 950
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Onhooves Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 950
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Onhooves Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 950
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Onhooves Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 6812
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Onhooves Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 6812
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Onhooves Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 6812
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Onhooves Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 6812
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Onhooves Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 6812
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Onhooves Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 6812
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Onhooves Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 6598
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Onhooves Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 6598
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Onhooves Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 6598
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Onhooves Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 6598
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Onhooves Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 6598
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Onhooves Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 6598
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Pegasi Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 950
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Pegasi Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 950
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Pegasi Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 758
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Pegasi Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 758
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Royal Armour"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 758
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+        }
+        division_template = "Royal Armour"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        location = 950
+    }
+}
