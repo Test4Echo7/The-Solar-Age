@@ -1566,6 +1566,7 @@ shared_focus = {
 	x = 6
 	y = 1
 	relative_position_id = SOL_empress_mother
+	icon = GFX_goal_industrial_hoof
 
 	cost = 5
 	prerequisite = { focus = SOL_empress_mother }
@@ -1775,6 +1776,7 @@ shared_focus = {
 	x = 0
 	y = 2
 	relative_position_id = SOL_world_opportunity
+	icon = GFX_goal_peace_through_war
 
 	cost = 6
 	prerequisite = { focus = SOL_world_opportunity }

@@ -136,8 +136,16 @@ SpriteTypes = {
         texturefile = "gfx/interface/goals/EQS/imperial_corporation_council.tga"
     }
     SpriteType = {
+        name = GFX_goal_industrial_hoof
+        texturefile = "gfx/interface/goals/EQS/industrial_hoof.tga"
+    }
+    SpriteType = {
         name = GFX_goal_bed_companies
         texturefile = "gfx/interface/goals/EQS/bed_companies.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_peace_through_war
+        texturefile = "gfx/interface/goals/EQS/peace_through_war.tga"
     }
 
     ###Fallen Hero###
