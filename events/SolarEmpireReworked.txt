@@ -14748,6 +14748,76 @@ country_event = { #Remove STG and STL as original cores from EQS, since that mak
     }
 }
 
+country_event = { #Event for informing the player that they can make the game harder given that it can cause narrative dissonance with the gameplay, but they don't have to
+    id = solarreworked.542
+    title = solarreworked.542.t
+    picture = GFX_event_cheeki_tia
+    desc = solarreworked.542.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.542"}
+
+    is_triggered_only = yes
+
+    option = { #Mo' armies! Mo' buffs!
+        name = solarreworked.542.a
+        custom_effect_tooltip = EQS_40k_reference_tt
+        if = {
+            limit = {
+                has_war_with = CHN
+            }
+            CHN = {
+                add_ideas = EQS_buffed_enemy
+            }
+        }
+        else_if = {
+            limit = {
+                has_war_with = NLR
+            }
+            NLR = {
+                add_ideas = EQS_buffed_enemy
+            }
+        }
+    }
+    option = { #Mo' armies!
+        name = solarreworked.542.b
+        custom_effect_tooltip = EQS_SW_reference_tt
+        if = {
+            limit = {
+                has_war_with = CHN
+            }
+            #CHN buffs
+        }
+        else_if = {
+            limit = {
+                has_war_with = NLR
+            }
+            #NLR buffs
+        }
+    }
+    option = { #Mo' buffs!
+        name = solarreworked.542.c
+        custom_effect_tooltip = EQS_caffeine_tt
+        if = {
+            limit = {
+                has_war_with = CHN
+            }
+            CHN = {
+                add_ideas = EQS_buffed_enemy
+            }
+        }
+        else_if = {
+            limit = {
+                has_war_with = NLR
+            }
+            NLR = {
+                add_ideas = EQS_buffed_enemy
+            }
+        }
+    }
+    option = { #No thanks. Already buffed enough
+        name = solarreworked.542.e
+    }
+}
+
 ###Operation Events###
 country_event = { #Luna is awoken in her new cell as Daybreaker enters the dungeons of the palace, and Daybreaker sees how pathetic Luna now is and how her defiance will end, and Luna is adamant that she will not beg nor plead for her life, and Daybreaker is pleased, since it'd be boring if she did; she can languish while she sees how her sister has always been the better, and will lead harmony into greatness alone
     id = solarreworked.600

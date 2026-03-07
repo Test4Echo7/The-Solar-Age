@@ -161,6 +161,16 @@ on_actions = {
                     add_ideas = EQS_mental_decline
                     if = {
                         limit = {
+                            NOT = { has_country_flag = EQS_enemy_buff_event }
+                        }
+                        country_event = {
+                            id = solarreworked.542
+                            hours = 12
+                        }
+                        set_country_flag = EQS_enemy_buff_event
+                    }
+                    if = {
+                        limit = {
                             OR = {
                                 has_country_flag = EQS_sanity_bop_initialized
                                 focus_progress = {

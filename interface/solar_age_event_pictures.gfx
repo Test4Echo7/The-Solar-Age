@@ -20,6 +20,10 @@ spriteTypes = {
         texturefile = "gfx/event_pictures/event_celestia_ascension.tga"
     }
     spriteType = {
+        name = "GFX_event_cheeki_tia"
+        texturefile = "gfx/event_pictures/event_cheeki_tia.tga"
+    }
+    spriteType = {
         name = "GFX_event_sunrise_sparkle"
         texturefile = "gfx/event_pictures/event_sunrise_sparkle.tga"
     }
