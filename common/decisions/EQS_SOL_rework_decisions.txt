@@ -4143,7 +4143,6 @@ EQS_expand_imperial_territory_category = {
         }
         visible = {
             has_completed_focus = SOL_breach_zebrica
-            NOT = { has_country_flag = SOL_formed_super_zebrica }
             NOT = {
                 692 = {
                     OWNER = {
@@ -4773,7 +4772,6 @@ EQS_pan_pony_empire_category = {
             is_EQS_SOL = yes
             MGY = { all_original_cores_owned_by_ROOT_or_subject = yes }
             has_country_flag = SOL_tempest_joined
-            NOT = { has_country_flag = SOL_formed_super_zebrica }
         }
         visible = {
             MGY = { all_original_cores_owned_by_ROOT_or_subject = yes }
@@ -4781,6 +4779,7 @@ EQS_pan_pony_empire_category = {
                 exists = yes
                 is_subject = no
             }
+            NOT = { has_country_flag = SOL_formed_super_zebrica }
         }
         highlight_states = {
             highlight_state_targets = {

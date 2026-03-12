@@ -5658,6 +5658,9 @@ shared_focus = {
 	cost = 3
 	prerequisite = { focus = SOL_misguided_solarists }
 	available = {
+		734 = {
+			is_owned_and_controlled_by = ROOT
+		}
 		764 = {
 			NOT = { is_owned_and_controlled_by = ROOT }
 			NOT = { is_owned_and_controlled_by = MGY }
@@ -5848,7 +5851,7 @@ shared_focus = {
 				add_core_of = MGY
 				transfer_state_to = MGY
 			}
-			release_autonomy = {
+			set_autonomy = {
 				target = MGY
 				autonomy_state = autonomy_reichsprotectorate
 			}

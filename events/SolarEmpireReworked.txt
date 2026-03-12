@@ -3541,6 +3541,7 @@ country_event = { #Daybreaker smugly walks through Griffonstone, in a parade wit
                     limit = {
                         exists = yes
                         is_griffon_continent_griffon_country = yes
+                        NOT = { is_subect_of = EQS }
                     }
                     country_event = {
                         id = solarreworked.534
@@ -13454,6 +13455,7 @@ country_event = { #Short event for whoever owns the two MDL states that Daybreak
 
     option = { #Better to keep our heads than that land.
         name = solarreworked.516.a
+        trigger = { NOT = { tag = MDL } }
         ai_chance = {
             base = 1
             modifier = {
@@ -13476,11 +13478,36 @@ country_event = { #Short event for whoever owns the two MDL states that Daybreak
         add_political_power = -75
         FROM = { country_event = { id = solarreworked.517 days = 1 } }
     }
+    option = { #We are but a tiny nation. We submit to her will.
+        name = solarreworked.516.b
+        trigger = { tag = MDL }
+        ai_chance = {
+            base = 1
+            modifier = {
+                strength_ratio = {
+                    tag = FROM
+                    ratio < 0.6
+                }
+                factor = 4
+            }
+            modifier = {
+                strength_ratio = {
+                    tag = FROM
+                    ratio < 0.33
+                }
+                factor = 3
+            }
+        }
+        set_country_flag = SOL_surrendered_MDL_cores
+        add_stability = -0.15
+        add_political_power = -125
+        FROM = { country_event = { id = solarreworked.507 days = 1 } }
+    }
     option = { #It is ours by right!
         trigger = {
             NOT = { is_subject_of = FROM }
         }
-        name = solarreworked.516.b
+        name = solarreworked.516.c
         ai_chance = {
             base = 1
             modifier = {
@@ -13581,11 +13608,11 @@ country_event = { #SOL gets back KLG's answer and will either annex it, give it 
     title = solarreworked.519.t
     desc = {
         trigger = { FROM = { has_country_flag = SOL_KLG_accepted } }
-        text = solarreworked.519.d.a
+        text = solarreworked.519.d_a
     }
     desc = {
         trigger = { FROM = { has_country_flag = SOL_KLG_rejected } }
-        text = solarreworked.519.d.b
+        text = solarreworked.519.d_b
     }
     picture = GFX_event_solarempire
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.519"}
@@ -14438,6 +14465,7 @@ country_event = { #Event telling the leader that Daybreaker has performed the gr
                     limit = {
                         NOT = { has_country_flag = SOL_skipped_town }
                         is_griffon_continent_griffon_country = yes
+                        NOT = { is_subject_of = EQS }
                     }
                     country_event = solarreworked.534
                 }
