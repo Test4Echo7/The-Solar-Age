@@ -643,6 +643,8 @@
   EQS_40k_reference_tt:0 "§RWAAAAAAAAAAAAGH!§!"
   EQS_SW_reference_tt:0 "200,000 units are ready, with a million more well on the way."
   EQS_caffeine_tt:0 "Sleep? Who needs sleep?!"
+  EQS_pordox_intarct_tt:0 "Our §Yflame tanks§! will gain an additional §G+5%§! attack bonus in §Yurban§!, §Yforested§!, §Yjungle§!, and §Yfortified§! environments."
+  EQS_pordox_intarcter_tt:0 "Our §Yflame tanks§! will gain an additional §G+5%§! attack bonus in §Yplains§!, §Yhills§!, §Ydesert§!, and §Ymarshy§! environments."
   ###Last one in the chain. Remove comment later###
   SOL_conglaturation_a_winner_is_you_tt:0 "§GHarmony has been preserved and all of ponykind now bends the knee to Daybreaker. Thank you for playing the Solar Age! - Test4Echo§!"
 
