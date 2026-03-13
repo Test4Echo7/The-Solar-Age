@@ -1775,6 +1775,8 @@
   SOL_winter_preparations_desc:0 "The lands of [CRY.GetNameDef] can be harsh and unforgiving to those accustomed to the warmth and safety of the Empress's lands. In the advent of war between [CRY.GetNameDef] and us, our troops must be prepared to push into the cold embrace of the northern plains and mountains."
   SOL_CRY_imperial_capital:0 "[EQS.GetAdjectiveCap] Funds"
   SOL_CRY_imperial_capital_desc:0 "As our economy still lags behind [EQS.GetNameDef], [EQS.GetLeader] has generously provided from the royal treasury to assist with kickstarting more of our own industry. These investments will be given to the sectors that need it most, so that we can reach a stable threshold much sooner."
+  SOL_CRY_industrial_investments:0 "Industrial Investments"
+  SOL_CRY_industrial_investments_desc:0 "Our economy is still quite backwards compared to some of our neighbors, despite our citizens' best efforts to adapt to a thousand years of economic development. Through multiple loans thanks to [EQS.GetNameDef], we've been given a leg up so we can finally stand with other economic powers on the world stage."
   SOL_solarist_education:0 "Solarist Education"
   SOL_solarist_education_desc:0 "Too much free thought has been allowed to flourish in the universities in [ROOT.GetNameDef]. Much of the resistance to [EQS.GetLeader] comes from the students whose minds have been turned against her. New curriculum, courses, and grants will be provided, from [EQS.GetNameDef] itself to encourage more proper thought and raise a generation inquisitive in the right direction."
   SOL_solarist_minds:0 "A Solarist Mind"

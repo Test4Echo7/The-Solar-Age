@@ -1154,10 +1154,10 @@ shared_focus = {
 				EQS_princess_celestia = {
 					has_character_flag = EQS_celestia_is_db
 				}
-				EQS_princess_luna = {
-					set_character_flag = EQS_war_has_been_doubled
-					set_character_flag = EQS_luna_leader_disabled
-				}
+			}
+			EQS_princess_luna = {
+				set_character_flag = EQS_war_has_been_doubled
+				set_character_flag = EQS_luna_leader_disabled
 			}
 		}
 		hidden_effect = {

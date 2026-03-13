@@ -1465,16 +1465,22 @@ SOL_promote_local_governor = {
         hidden_effect = {
             every_possible_country = {
                 limit = {
-                    has_character = KIR_fickle_current
+                    has_character = KIR_winter_frost
                 }
-                KIR_fickle_current = {
+                KIR_winter_frost = {
                     set_nationality = FROM
                 }
             }
             FROM = {
-                KIR_fickle_current = {
-                    add_trait = { trait = imperial_collaborator_better ideology = corporatocracy }
-                    promote_character = yes
+                KIR_winter_frost = {
+                   add_country_leader_role = {
+                        promote_leader = yes
+                        country_leader = {
+                            ideology = falangism
+                            expire = "1965.1.1"
+                            traits = { imperial_collaborator }
+                        }
+                    }
                 }
             }
         }

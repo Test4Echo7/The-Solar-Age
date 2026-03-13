@@ -2251,7 +2251,10 @@ shared_focus = {
 		}
 		hidden_effect = {
 			if = {
-				limit = { has_completed_focus = SOL_twilight_ascend }
+				limit = {
+					has_completed_focus = SOL_twilight_ascend
+					NOT = { has_country_flag = SOL_block_continuity_snarl }
+				}
 				country_event = solarreworked.302
 				country_event = { #Solaris Inquistionis flavour event chain
 					id = solarreworked.315
@@ -5989,7 +5992,7 @@ shared_focus = {
 			limit = { country_exists = KAR }
 			create_wargoal = {
 				target = KAR
-				type = puppet_wargoal_focus
+				type = annex_everything
 			}
 		}
 	}
@@ -6228,28 +6231,28 @@ shared_focus = {
 			limit = { country_exists = KIR }
 			create_wargoal = {
 				target = KIR
-				type = puppet_wargoal_focus
+				type = annex_everything
 			}
 		}
 		if = {
 			limit = { country_exists = NVA }
 			create_wargoal = {
 				target = NVA
-				type = puppet_wargoal_focus
+				type = annex_everything
 			}
 		}
 		if = {
 			limit = { country_exists = KHM }
 			create_wargoal = {
 				target = KHM
-				type = puppet_wargoal_focus
+				type = annex_everything
 			}
 		}
 		if = {
 			limit = { country_exists = KXN }
 			create_wargoal = {
 				target = KXN
-				type = puppet_wargoal_focus
+				type = annex_everything
 			}
 		}
 	}
@@ -6639,14 +6642,14 @@ shared_focus = {
 #			limit = { country_exists = HIP }
 #			create_wargoal = {
 #				target = HIP
-#				type = puppet_wargoal_focus
+#				type = annex_everything
 #			}
 #		}
 #		if = {
 #			limit = { country_exists = WIN }
 #			create_wargoal = {
 #				target = WIN
-#				type = puppet_wargoal_focus
+#				type = annex_everything
 #			}
 #		}
 #	}
@@ -6816,42 +6819,42 @@ shared_focus = {
 			limit = { country_exists = EMR }
 			create_wargoal = {
 				target = EMR
-				type = puppet_wargoal_focus
+				type = annex_everything
 			}
 		}
 		if = {
 			limit = { country_exists = SDL }
 			create_wargoal = {
 				target = SDL
-				type = puppet_wargoal_focus
+				type = annex_everything
 			}
 		}
 		if = {
 			limit = { country_exists = SDS }
 			create_wargoal = {
 				target = SDS
-				type = puppet_wargoal_focus
+				type = annex_everything
 			}
 		}
 		if = {
 			limit = { country_exists = SDC }
 			create_wargoal = {
 				target = SDC
-				type = puppet_wargoal_focus
+				type = annex_everything
 			}
 		}
 		if = {
 			limit = { country_exists = SDF }
 			create_wargoal = {
 				target = SDF
-				type = puppet_wargoal_focus
+				type = annex_everything
 			}
 		}
 		if = {
 			limit = { country_exists = YMN }
 			create_wargoal = {
 				target = YMN
-				type = puppet_wargoal_focus
+				type = annex_everything
 			}
 		}
 	}
@@ -7064,28 +7067,28 @@ shared_focus = {
 		if = {
 			limit = { country_exists = REE }
 			create_wargoal = {
-				type = puppet_wargoal_focus
+				type = annex_everything
 				target = REE
 			}
 		}
 		if = {
 			limit = { country_exists = HMR }
 			create_wargoal = {
-				type = puppet_wargoal_focus
+				type = annex_everything
 				target = HMR
 			}
 		}
 		if = {
 			limit = { country_exists = OSQ }
 			create_wargoal = {
-				type = puppet_wargoal_focus
+				type = annex_everything
 				target = OSQ
 			}
 		}
 		if = {
 			limit = { country_exists = MTA }
 			create_wargoal = {
-				type = puppet_wargoal_focus
+				type = annex_everything
 				target = MTA
 			}
 		}

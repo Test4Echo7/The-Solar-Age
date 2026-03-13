@@ -2293,6 +2293,20 @@ characters={
 				#}
 			}
 		}
+		#advisor = {
+		#	slot = army_chief
+		#	idea_token = sunset_shimmer
+		#	desc = EQS_sunset_shimmer_alt_desc
+		#	visible = {
+		#		NOT = { has_character_flag = SOL_helping_twilight }
+		#		OR = {
+		#			has_country_flag = EQS_sunset_shimmer_arrived
+		#			has_country_flag = SOL_sunset_ascended
+		#			can_host_M6 = yes
+		#		}
+		#	}
+		#	traits = { army_chief_reform_2 }
+		#}
 	}
 	EQS_SOL_shining_star = {
 		name = EQS_SOL_shining_star

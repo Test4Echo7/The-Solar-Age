@@ -7337,6 +7337,7 @@ country_event = { ### MANE SIX EVENT TRIGGER
 			limit = {
 				has_war_with = CHN
 				has_government = democratic
+				NOT = { has_country_flag = SOL_mane_six_escape }
 			}
 			if = {
 				limit = {
