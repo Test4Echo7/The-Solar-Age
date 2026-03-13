@@ -1,8 +1,12 @@
 non_capitulated_equus_countries = {
-    input = constant:solar_age_country_groups.all_equus_countries_except_EQS
+    input = game:all_countries
     name = COLLECTION_NON_CAPITULATED_EQUUS_COUNTRIES
     operators = {
         limit = {
+            NOT = { tag = EQS }
+            capital_scope = {
+                is_on_continent = europe
+            }
             exists = yes
             has_capitulated = no
         }
@@ -20,13 +24,33 @@ subjugated_equus_countries = {
 }
 
 griffonian_pony_countries = {
-    input = constant:solar_age_country_groups.all_griffonian_pony_countries
+    input = game:all_countries
     name = COLLECTION_GRIFFONIAN_PONY_COUNTRIES
+    operators = {
+        limit = {
+            capital_scope = {
+                is_on_continent = asia
+            }
+            has_idea = pony_race
+        }
+    }
 }
 
 zebrican_pony_and_adjacent_countries = {
-    input = constant:solar_age_country_groups.all_zebrican_pony_and_adjacent_countries
+    input = game:all_countries
     name = COLLECTION_ZEBRICAN_PONY_AND_ADJACENT_COUNTRIES
+    operators = {
+        limit = {
+            capital_scope = {
+                is_on_continent = africa
+            }
+            OR = {
+                has_idea = pony_race
+                has_idea = kirin_race
+                has_idea = horse_race
+            }
+        }
+    }
 }
 
 non_capitulated_pony_and_adjacent_countries = {
@@ -34,6 +58,7 @@ non_capitulated_pony_and_adjacent_countries = {
     name = COLLECTION_NON_CAPITULATED_PONY_AND_ADJACENT_COUNTRIES
     operators = {
         limit = {
+            NOT = { tag = EQS }
             exists = yes
             has_capitulated = no
             OR = {
