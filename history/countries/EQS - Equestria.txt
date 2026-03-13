@@ -226,6 +226,12 @@ country_event = {
 	days = 1
 }
 
+#Hidden event for triggering ALL flavor events that currently have trigger blocks or may cause narrative issues
+country_event = {
+	id = solarreworked.599
+	days = 1
+}
+
 3 = {
 	set_state_name = EQS_canterlot_name_change
 }

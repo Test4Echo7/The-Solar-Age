@@ -1619,25 +1619,7 @@ country_event = {
     picture = GFX_event_canterlot
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.53"}
 
-    trigger = {
-        tag = EQS
-        power_balance_value = {
-            id = EQS_sanity_bop
-            value < 0.65
-        }
-        has_idea = chancellor_neighsay
-        has_idea = twilight_sparkle
-        OR = {
-            has_war_with = NLR
-            has_war_with = CHN
-        }
-        is_EQS_SOL = no
-        NOT = { has_global_flag = celestia_and_luna_fused }
-    }
-
-    fire_only_once = yes
-
-    mean_time_to_happen = { days = 120 }
+    is_triggered_only = yes
 
     option = { #Twilight is obviously right.
         name = solarreworked.53.a
@@ -1696,6 +1678,10 @@ country_event = {
             twilight_sparkle
         }
     }
+
+    after = {
+        clr_country_flag = SOL_mmmmmm_event_flavor
+    }
 }
 
 country_event = {
@@ -1705,24 +1691,7 @@ country_event = {
     picture = GFX_event_canterlot
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.54"}
 
-    trigger = {
-        tag = EQS
-        has_idea = raven
-        power_balance_value = {
-            id = EQS_sanity_bop
-            value < 0.65
-        }
-        OR = {
-            has_war_with = CHN
-            has_war_with = NLR
-        }
-        is_EQS_SOL = no
-        NOT = { has_global_flag = celestia_and_luna_fused }
-    }
-
-    fire_only_once = yes
-
-    mean_time_to_happen = { days = 90 }
+    is_triggered_only = yes
 
     option = {
         name = solarreworked.54.a
@@ -1750,6 +1719,10 @@ country_event = {
         add_war_support = -0.03
         set_country_flag = EQS_raven_cancelled_events
     }
+
+    after = {
+        clr_country_flag = SOL_mmmmmm_event_flavor
+    }
 }
 
 country_event = { #Celestia bursts into Luna's room, while Luna is working on paperwork, and accuses her of trying to usurp the throne, which Luna eventually gets through that she isn't, and is just trying to alleviate some of the burden of leadership during the war
@@ -1760,21 +1733,7 @@ country_event = { #Celestia bursts into Luna's room, while Luna is working on pa
     picture = GFX_event_celestia_theme
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.55"}
 
-    trigger = {
-        tag = EQS
-        power_balance_value = {
-            id = EQS_sanity_bop
-            value < 0.10
-        }
-        has_war_with = CHN
-        has_character = EQS_princess_luna
-        is_EQS_SOL = no
-        NOT = { has_global_flag = celestia_and_luna_fused }
-    }
-
-    fire_only_once = yes
-
-    mean_time_to_happen = { days = 120 }
+    is_triggered_only = yes
 
     option = { #I... I think I should step back for a while.
         name = solarreworked.55.a
@@ -1798,6 +1757,10 @@ country_event = { #Celestia bursts into Luna's room, while Luna is working on pa
             }
         }
     }
+
+    after = {
+        clr_country_flag = SOL_mmmmmm_event_flavor
+    }
 }
 
 country_event = { #Celestia has a meeting with her high command, and after making a comment about how they are basically cowering, she is told how she's slipping and should take a break, which she takes poorly
@@ -1807,23 +1770,7 @@ country_event = { #Celestia has a meeting with her high command, and after makin
     picture = GFX_event_celestia_theme
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.56"}
 
-    trigger = {
-        tag = EQS
-        power_balance_value = {
-            id = EQS_sanity_bop
-            value < 0
-        }
-        OR = {
-            has_war_with = CHN
-            has_war_with = NLR
-        }
-        is_EQS_SOL = no
-        NOT = { has_global_flag = celestia_and_luna_fused }
-    }
-
-    fire_only_once = yes
-
-    mean_time_to_happen = { days = 30 }
+    is_triggered_only = yes
 
     option = { #Maybe I should recuse myself.
         name = solarreworked.56.a
@@ -1847,6 +1794,10 @@ country_event = { #Celestia has a meeting with her high command, and after makin
             }
         }
     }
+
+    after = {
+        clr_country_flag = SOL_mmmmmm_event_flavor
+    }
 }
 
 country_event = {
@@ -1856,25 +1807,7 @@ country_event = {
     picture = GFX_event_celestia_theme
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.57"}
 
-    trigger = {
-        tag = EQS
-        power_balance_value = {
-            id = EQS_sanity_bop
-            value < 0.40
-        }
-        OR = {
-            has_war_with = CHN
-            has_war_with = NLR
-            has_war_with = BUF
-        }
-        has_country_flag = EQS_raven_cancelled_events
-        is_EQS_SOL = no
-        NOT = { has_global_flag = celestia_and_luna_fused }
-    }
-
-    fire_only_once = yes
-
-    mean_time_to_happen = { days = 30 }
+    is_triggered_only = yes
 
     option = {
         name = solarreworked.57.a
@@ -1898,6 +1831,10 @@ country_event = {
             }
         }
     }
+
+    after = {
+        clr_country_flag = SOL_mmmmmm_event_flavor
+    }
 }
 
 country_event = {
@@ -1907,20 +1844,7 @@ country_event = {
     picture = GFX_event_celestia_theme
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.58"}
 
-    trigger = {
-        tag = EQS
-        power_balance_value = {
-            id = EQS_sanity_bop
-            value < 0.50
-        }
-        has_war_with = CHN
-        is_EQS_SOL = no
-        NOT = { has_global_flag = celestia_and_luna_fused }
-    }
-
-    fire_only_once = yes
-
-    mean_time_to_happen = { days = 365 }
+    is_triggered_only = yes
 
     option = {
         name = solarreworked.58.a
@@ -1959,6 +1883,10 @@ country_event = {
             }
         }
     }
+
+    after = {
+        clr_country_flag = SOL_mmmmmm_event_flavor
+    }
 }
 
 country_event = {
@@ -1968,20 +1896,7 @@ country_event = {
     picture = GFX_event_pony_soldiers
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.59"}
 
-    trigger = {
-        tag = EQS
-        power_balance_value = {
-            id = EQS_sanity_bop
-            value < 0.6
-        }
-        has_war_with = NLR
-        is_EQS_SOL = no
-        NOT = { has_global_flag = celestia_and_luna_fused }
-    }
-
-    fire_only_once = yes
-
-    mean_time_to_happen = { days = 180 }
+    is_triggered_only = yes
 
     option = {
         name = solarreworked.59.a
@@ -2005,6 +1920,10 @@ country_event = {
             }
         }
     }
+
+    after = {
+        clr_country_flag = SOL_mmmmmm_event_flavor
+    }
 }
 
 country_event = {
@@ -2014,23 +1933,7 @@ country_event = {
     picture = GFX_event_pony_soldiers_sunset
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.60"}
 
-    trigger = {
-        tag = EQS
-        power_balance_value = {
-            id = EQS_sanity_bop
-            value < 0.75
-        }
-        OR = {
-            has_war_with = CHN
-            has_war_with = NLR
-        }
-        is_EQS_SOL = no
-        NOT = { has_global_flag = celestia_and_luna_fused }
-    }
-
-    fire_only_once = yes
-
-    mean_time_to_happen = { days = 180 }
+    is_triggered_only = yes
 
     option = {
         name = solarreworked.60.a
@@ -2055,6 +1958,10 @@ country_event = {
         }
         add_war_support = 0.01
         add_command_power = 5
+    }
+
+    after = {
+        clr_country_flag = SOL_mmmmmm_event_flavor
     }
 }
 
@@ -3541,7 +3448,7 @@ country_event = { #Daybreaker smugly walks through Griffonstone, in a parade wit
                     limit = {
                         exists = yes
                         is_griffon_continent_griffon_country = yes
-                        NOT = { is_subect_of = EQS }
+                        NOT = { is_subject_of = EQS }
                     }
                     country_event = {
                         id = solarreworked.534
@@ -4002,25 +3909,14 @@ country_event = {
     picture = GFX_event_celestia_theme
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.141"}
 
-    trigger = {
-        tag = EQS
-        OR = {
-            has_war_with = CHN
-            has_war_with = NLR
-        }
-        power_balance_value = {
-            id = EQS_sanity_bop
-            value < 0.8
-        }
-        is_EQS_SOL = no
-    }
-
-    fire_only_once = yes
-
-    mean_time_to_happen = { days = 90 }
+    is_triggered_only = yes
 
     option = {
         name = solarreworked.141.a
+    }
+
+    after = {
+        clr_country_flag = SOL_mmmmmm_event_flavor
     }
 }
 
@@ -4402,9 +4298,25 @@ country_event = { #Sunset hosts her friends in a field tent far from the front, 
                 days = 14
                 random_days = 10
             }
-        }
-        EQS_sunset_shimmer = {
-            set_character_flag = SOL_helping_twilight
+            EQS_sunset_shimmer = {
+                set_character_flag = SOL_helping_twilight
+                if = {
+                    limit = {
+                        has_advisor_role = high_command
+                    }
+                    remove_advisor_role = {
+                        slot = high_command
+                    }
+                }
+                else_if = {
+                    limit = {
+                        has_advisor_role = army_chief
+                    }
+                    remove_advisor_role = {
+                        slot = army_chief
+                    }
+                }
+            }
         }
     }
 }
@@ -6825,13 +6737,13 @@ country_event = { #Daybreaker holds a ceremony at night, so that the flames of t
     option = { #May you serve forever!
         name = solarreworked.301.a
         #add_ideas = SOL_solaris_adoratio_idea
-        hidden_effect = {
-            country_event = {
-                id = solarreworked.473
-                days = 30
-                random_days = 90
-            }
-        }
+        #hidden_effect = {
+        #    country_event = {
+        #        id = solarreworked.473
+        #        days = 30
+        #        random_days = 90
+        #    }
+        #}
     }
 }
 
@@ -6856,13 +6768,13 @@ country_event = { #Sunrise enters into Daybreaker's throne room, opposed to bein
 		#else = {
 		#	add_ideas = SOL_Imperial_Inquisition_idea
 		#}
-		hidden_effect = {
-            country_event = {
-                id = solarreworked.453
-                days = 90
-                random_days = 45
-            }
-        }
+		#hidden_effect = {
+        #    country_event = {
+        #        id = solarreworked.453
+        #        days = 90
+        #        random_days = 45
+        #    }
+        #}
     }
 }
 
@@ -9360,21 +9272,11 @@ country_event = {
     picture = GFX_event_twilight_reading
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.453"}
 
-    trigger = {
-        tag = EQS
-        has_war = no
-        has_country_flag = SOL_harmonic_commanders_leave
-        has_idea = SOL_harmonic_resistance_idea
-        has_global_flag = SOL_twilight_converted
-        has_character = EQS_twilight_sparkle
-    }
-
-    mean_time_to_happen = { days = 50 }
-
-    fire_only_once = yes
+    is_triggered_only = yes
 
     option = {
         name = solarreworked.453.a
+        set_country_flag = SOL_block_continuity_snarl
         hidden_effect = {
             country_event = {
                 id = solarreworked.454
@@ -9417,6 +9319,7 @@ country_event = {
 
     option = {
         name = solarreworked.455.a
+        clr_country_flag = SOL_block_continuity_snarl
     }
 }
 
@@ -9427,14 +9330,7 @@ country_event = {
     picture = GFX_event_river_swirl
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.456"}
 
-    trigger = {
-        RCT = {
-            has_completed_focus = RCT_bastion_of_the_east
-            has_country_leader = { character = RCT_river_swirl ruling_only = yes }
-        }
-    }
-
-    mean_time_to_happen = { days = 60 }
+    is_triggered_only = yes
 
     fire_only_once = yes
 
@@ -9558,18 +9454,7 @@ country_event = {
     picture = GFX_event_luna
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.464"}
 
-    trigger = {
-        tag = EQS
-        power_balance_value = {
-            id = EQS_sanity_bop
-            value < 0
-        }
-        has_character = EQS_princess_luna
-    }
-
-    mean_time_to_happen = { days = 90 }
-
-    fire_only_once = yes
+    is_triggered_only = yes
 
     option = {
         name = solarreworked.464.a
@@ -9611,19 +9496,7 @@ country_event = {
     picture = GFX_event_tired_raven
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.467"}
 
-    fire_only_once = yes
-    trigger = {
-        tag = EQS
-        has_war = yes
-        NOT = { has_war_with = NLR }
-        power_balance_value = {
-            id = EQS_sanity_bop
-            value < 0.5
-        }
-    }
-    mean_time_to_happen = {
-        days = 30
-    }
+    is_triggered_only = yes
 
     option = {
         name = solarreworked.467.a
@@ -9637,24 +9510,7 @@ country_event = {
     picture = GFX_event_raven_inkwell
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.468"}
 
-    fire_only_once = yes
-    trigger = {
-        tag = EQS
-        has_war = yes
-        power_balance_value = {
-            id = EQS_sanity_bop
-            value < 0.4
-        }
-        OR = {
-            has_idea = eqs_war_law
-            has_idea = eqs_war_law_extreme
-            has_idea = eqs_war_admin
-            has_idea = eqs_war_admin_extreme
-        }
-    }
-    mean_time_to_happen = {
-        days = 30
-    }
+    is_triggered_only = yes
 
     option = {
         name = solarreworked.468.a
@@ -9778,6 +9634,7 @@ country_event = {
         set_country_flag = SOL_caffeine_injection
         custom_effect_tooltip = available_political_advisor
         show_ideas_tooltip = stellar_breeze
+        clr_country_flag = SOL_mmmmmm_event_flavor
     }
 }
 
@@ -9882,16 +9739,7 @@ country_event = {
     picture = GFX_event_solarempire
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.497"}
 
-    trigger = {
-        tag = EQS
-        has_war_with = CHN
-        CHN = { surrender_progress > 0.25 }
-        has_country_flag = SOL_new_generals_flag
-    }
-    fire_only_once = yes
-    mean_time_to_happen = {
-        days = 90
-    }
+    is_triggered_only = yes
 
     option = {
         name = solarreworked.497.a
@@ -14817,6 +14665,405 @@ country_event = { #Event for informing the player that they can make the game ha
     }
     option = { #No thanks. Already buffed enough
         name = solarreworked.542.e
+    }
+}
+
+country_event = { #Master hidden event for flavour events. Removes all trigger block requirements, allows for better control over flavour event triggering
+    id = solarreworked.599
+    hidden = yes
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.599"}
+
+    is_triggered_only = yes
+
+    #Looooooooooong chain of if-else_if-else because PDX hates switch cases
+    option = {
+        if = {
+            limit = {
+                has_country_flag = SOL_stellar_boop
+                has_country_flag = SOL_spike_broken
+                NOT = { has_country_flag = SOL_new_spike }
+            }
+            country_event = {
+                id = solarreworked.473
+                days = 30
+                random_days = 60
+            }
+            set_country_flag = SOL_new_spike
+            set_country_flag = SOL_mmmmmm_event_flavor
+        }
+        else_if = {
+            limit = {
+                RCT = {
+                    has_completed_focus = RCT_bastion_of_the_east
+                    has_country_leader = { character = RCT_river_swirl ruling_only = yes }
+                }
+                NOT = { has_country_flag = EQS_mighty_pen }
+            }
+            country_event = {
+                id = solarreworked.456
+                days = 30
+                random_days = 30
+            }
+            set_country_flag = EQS_mighty_pen
+            set_country_flag = SOL_mmmmmm_event_flavor
+        }
+        else_if = {
+            limit = {
+                has_war = no
+                has_country_flag = SOL_harmonic_commanders_leave
+                has_idea = SOL_harmonic_resistance_idea
+                has_global_flag = SOL_twilight_converted
+                has_character = EQS_twilight_sparkle
+                NOT = { has_country_flag = SOL_heretic_hunting }
+                NOT = { has_country_flag = SOL_block_continuity_snarl }
+            }
+            country_event = {
+                id = solarreworked.453
+                days = 20
+                random_days = 15
+            }
+            set_country_flag = SOL_heretic_hunting
+            set_country_flag = SOL_mmmmmm_event_flavor
+        }
+        else_if = {
+            limit = {
+                has_country_flag = SOL_block_continuity_snarl
+                NOT = { has_country_flag = SOL_heretic_hunting }
+            }
+            country_event = solarreworked.302
+            country_event = { #Solaris Inquistionis flavour event chain
+                id = solarreworked.315
+                days = 180
+                random_days = 120
+            }
+        }
+        else_if = {
+            limit = {
+                NOT = { has_country_flag = SOL_mmmmmm_event_flavor }
+            }
+            random_list = {
+                1 = {
+                    modifier = {
+                        factor = 0
+                    }
+                    modifier = {
+                        add = 1
+                        power_balance_value = {
+                            id = EQS_sanity_bop
+                            value < 0.65
+                        }
+                        has_idea = chancellor_neighsay
+                        has_idea = twilight_sparkle
+                        OR = {
+                            has_war_with = NLR
+                            has_war_with = CHN
+                        }
+                        is_EQS_SOL = no
+                        NOT = { has_global_flag = celestia_and_luna_fused }
+                    }
+                    country_event = {
+                        id = solarreworked.53
+                        days = 30
+                        random_days = 60
+                    }
+                }
+                1 = {
+                    modifier = {
+                        factor = 0
+                    }
+                    modifier = {
+                        add = 1
+                        has_idea = raven
+                        power_balance_value = {
+                            id = EQS_sanity_bop
+                            value < 0.65
+                        }
+                        OR = {
+                            has_war_with = CHN
+                            has_war_with = NLR
+                        }
+                        is_EQS_SOL = no
+                        NOT = { has_global_flag = celestia_and_luna_fused }
+                        NOT = { has_country_flag = EQS_good_guy_raven }
+                    }
+                    country_event = {
+                        id = solarreworked.54
+                        days = 15
+                        random_days = 30
+                    }
+                    set_country_flag = EQS_good_guy_raven
+                }
+                1 = {
+                    modifier = {
+                        factor = 0
+                    }
+                    modifier = {
+                        add = 1
+                        power_balance_value = {
+                            id = EQS_sanity_bop
+                            value < 0.10
+                        }
+                        has_war_with = CHN
+                        has_character = EQS_princess_luna
+                        is_EQS_SOL = no
+                        NOT = { has_global_flag = celestia_and_luna_fused }
+                        NOT = { has_country_flag = EQS_celestia_snapple }
+                    }
+                    country_event = {
+                        id = solarreworked.55
+                        days = 30
+                        random_days = 30
+                    }
+                    set_country_flag = EQS_celestia_snapple
+                }
+                1 = {
+                    modifier = {
+                        factor = 0
+                    }
+                    modifier = {
+                        add = 1
+                        power_balance_value = {
+                            id = EQS_sanity_bop
+                            value < 0
+                        }
+                        OR = {
+                            has_war_with = CHN
+                            has_war_with = NLR
+                        }
+                        is_EQS_SOL = no
+                        NOT = { has_global_flag = celestia_and_luna_fused }
+                        NOT = { has_country_flag = EQS_celestia_angy }
+                    }
+                    country_event = {
+                        id = solarreworked.56
+                        days = 10
+                        random_days = 10
+                    }
+                    set_country_flag = EQS_celestia_angy
+                }
+                1 = {
+                    modifier = {
+                        factor = 0
+                    }
+                    modifier = {
+                        add = 1
+                        power_balance_value = {
+                            id = EQS_sanity_bop
+                            value < 0.40
+                        }
+                        OR = {
+                            has_war_with = CHN
+                            has_war_with = NLR
+                            has_war_with = BUF
+                        }
+                        has_country_flag = EQS_raven_cancelled_events
+                        is_EQS_SOL = no
+                        NOT = { has_global_flag = celestia_and_luna_fused }
+                        NOT = { has_country_flag = EQS_even_angier }
+                    }
+                    country_event = {
+                        id = solarreworked.57
+                        days = 15
+                        random_days = 25
+                    }
+                    set_country_flag = EQS_even_angier
+                }
+                1 = {
+                    modifier = {
+                        factor = 0
+                    }
+                    modifier = {
+                        add = 1
+                        power_balance_value = {
+                            id = EQS_sanity_bop
+                            value < 0.50
+                        }
+                        has_war_with = CHN
+                        is_EQS_SOL = no
+                        NOT = { has_global_flag = celestia_and_luna_fused }
+                        NOT = { has_country_flag = EQS_spy_v_spy }
+                    }
+                    country_event = {
+                        id = solarreworked.58
+                        days = 60
+                        random_days = 30
+                    }
+                    set_country_flag = EQS_spy_v_spy
+                }
+                1 = {
+                    modifier = {
+                        factor = 0
+                    }
+                    modifier = {
+                        add = 1
+                        power_balance_value = {
+                            id = EQS_sanity_bop
+                            value < 0.6
+                        }
+                        has_war_with = NLR
+                        is_EQS_SOL = no
+                        NOT = { has_global_flag = celestia_and_luna_fused }
+                        NOT = { has_country_flag = EQS_eeeeeeeee }
+                    }
+                    country_event = {
+                        id = solarreworked.59
+                        days = 60
+                        random_days = 30
+                    }
+                    set_country_flag = EQS_eeeeeeeee
+                }
+                1 = {
+                    modifier = {
+                        factor = 0
+                    }
+                    modifier = {
+                        add = 1
+                        power_balance_value = {
+                            id = EQS_sanity_bop
+                            value < 0.75
+                        }
+                        OR = {
+                            has_war_with = CHN
+                            has_war_with = NLR
+                        }
+                        is_EQS_SOL = no
+                        NOT = { has_global_flag = celestia_and_luna_fused }
+                        NOT = { has_country_flag = EQS_battlefield_justice }
+                    }
+                    country_event = {
+                        id = solarreworked.60
+                        days = 40
+                        random_days = 40
+                    }
+                    set_country_flag = EQS_battlefield_justice
+                }
+                1 = {
+                    modifier = {
+                        factor = 0
+                    }
+                    modifier = {
+                        add = 2
+                        OR = {
+                            has_war_with = CHN
+                            has_war_with = NLR
+                        }
+                        power_balance_value = {
+                            id = EQS_sanity_bop
+                            value < 0.8
+                        }
+                        is_EQS_SOL = no
+                        NOT = { has_global_flag = celestia_and_luna_fused }
+                        NOT = { has_country_flag = EQS_headaches_galore }
+                    }
+                    country_event = {
+                        id = solarreworked.141
+                        days = 15
+                        random_days = 25
+                    }
+                    set_country_flag = EQS_headaches_galore
+                }
+                1 = {
+                    modifier = {
+                        factor = 0
+                    }
+                    modifier = {
+                        add = 3
+                        power_balance_value = {
+                            id = EQS_sanity_bop
+                            value < 0
+                        }
+                        is_EQS_SOL = no
+                        has_character = EQS_princess_luna
+                        NOT = { has_global_flag = celestia_and_luna_fused }
+                        NOT = { has_country_flag = EQS_the_talk }
+                    }
+                    country_event = {
+                        id = solarreworked.464
+                        days = 10
+                        random_days = 20
+                    }
+                    set_country_flag = EQS_the_talk
+                }
+                1 = {
+                    modifier = {
+                        factor = 0
+                    }
+                    modifier = {
+                        add = 1
+                        has_war = yes
+                        NOT = { has_war_with = NLR }
+                        power_balance_value = {
+                            id = EQS_sanity_bop
+                            value < 0.5
+                        }
+                        is_EQS_SOL = no
+                        NOT = { has_global_flag = celestia_and_luna_fused }
+                        NOT = { has_country_flag = EQS_long_nights }
+                    }
+                    country_event = {
+                        id = solarreworked.467
+                        days = 12
+                        random_days = 18
+                    }
+                    set_country_flag = EQS_long_nights
+                }
+                1 = {
+                    modifier = {
+                        factor = 0
+                    }
+                    modifier = {
+                        add = 1
+                        has_war = yes
+                        is_EQS_SOL = no
+                        power_balance_value = {
+                            id = EQS_sanity_bop
+                            value < 0.4
+                        }
+                        OR = {
+                            has_idea = eqs_war_law
+                            has_idea = eqs_war_law_extreme
+                            has_idea = eqs_war_admin
+                            has_idea = eqs_war_admin_extreme
+                        }
+                        NOT = { has_global_flag = celestia_and_luna_fused }
+                        NOT = { has_country_flag = EQS_unexpected_demand }
+                    }
+                    country_event = {
+                        id = solarreworked.468
+                        days = 7
+                        random_days = 21
+                    }
+                    set_country_flag = EQS_unexpected_demand
+                }
+                1 = {
+                    modifier = {
+                        factor = 0
+                    }
+                    modifier = {
+                        add = 1
+                        has_war_with = CHN
+                        CHN = { surrender_progress > 0.25 }
+                        has_country_flag = SOL_new_generals_flag
+                        is_EQS_SOL = yes
+                        NOT = { has_country_flag = SOL_statistical_models }
+                    }
+                    country_event = {
+                        id = solarreworked.497
+                        days = 30
+                        random_days = 30
+                    }
+                    set_country_flag = SOL_statistical_models
+                }
+            }
+            set_country_flag = SOL_mmmmmm_event_flavor
+        }
+    }
+
+    after = {
+        country_event = {
+            id = solarreworked.599
+            days = 30
+        }
     }
 }
 
