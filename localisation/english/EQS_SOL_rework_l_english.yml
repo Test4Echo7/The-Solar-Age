@@ -1877,6 +1877,10 @@
   NLR_military_disarray_desc:0 "A number of our officers have been captured or killed by agents operating under [EQS.GetLeader]. None of us thought that [EQS.GetLeader.GetSheHe] would be capable of such ruthlessness, and our military is struggling to find replacements for our losses."
   SOL_sabotaged_tanks:0 "S.M.I.L.E. Retaliation"
   SOL_sabotaged_tanks_desc:0 "Despite offering amnesty, the S.M.I.L.E. agents we permitted to stay with us have betrayed our trust and lashed out like petulant foals at some of our armor operations. Those that have been found have been dealt with, but the damage they have inflicted will take time to repair and recover."
+  SOL_stolen_fire:0 "Secrets of the Flame"
+  SOL_stolen_fire_desc:0 "Through the capture and study of nirks and what causes their eternal, steel-melting flames, we have seen only a glimpse of what they are truly capable of. It is enough, though, for us to apply to our weapons, and new matrices with spells that can scorch or sear through the toughest armor are now part of the Empress's arsenal to defend Harmony."
+  SOL_staff_of_sacanas:0 "The Staff of Sacanas"
+  SOL_staff_of_sacanas_desc:0 "Although it was thought lost after the defeat of the Storm King, his staff, a magical artifact of old, was discovered to have been hidden in the depths of his shattered kingdom. Through sacrifices, we have taken the Staff of Sacanas for ourselves, and with its innate ability to control the weather, can now more easily manipulate battlefield conditions to our advantage."
 
   ###Spies###
   SOL_defensive_propaganda:0 "Bolstering Messages"
