@@ -12607,6 +12607,7 @@ shared_focus = {
 
 	cost = 3
 	prerequisite = { focus = SOL_inspect_officers }
+	prerequisite = { focus = SOL_encourage_troops }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_rearrange_command"
@@ -12670,7 +12671,7 @@ shared_focus = {
 	relative_position_id = SOL_break_out_blueprints
 
 	cost = 3
-	prerequisite = { focus = SOL_break_out_blueprints }
+	prerequisite = { focus = SOL_rearrange_command }
 	mutually_exclusive = { focus = SOL_traitors_reward }
 	mutually_exclusive = { focus = SOL_sun_shines }
 
@@ -12692,7 +12693,6 @@ shared_focus = {
 
 	cost = 3
 	prerequisite = { focus = SOL_rearrange_command }
-	prerequisite = { focus = SOL_imperial_factory_tour }
 	mutually_exclusive = { focus = SOL_prevent_embarrassments }
 	mutually_exclusive = { focus = SOL_sun_shines }
 
@@ -12723,7 +12723,7 @@ shared_focus = {
 	relative_position_id = SOL_imperial_factory_tour
 
 	cost = 3
-	prerequisite = { focus = SOL_motivate_engineers }
+	prerequisite = { focus = SOL_rearrange_command }
 	mutually_exclusive = { focus = SOL_prevent_embarrassments }
 	mutually_exclusive = { focus = SOL_traitors_reward }
 	available = {
