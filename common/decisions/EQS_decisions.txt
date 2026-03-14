@@ -591,9 +591,6 @@ SOL_dealing_with_resistance = {
 		}
 		custom_cost_text = EQS_decision_cost_dynamic_political_command_power
 		days_remove = 14
-		modifier = {
-			political_power_gain = -0.1
-		}
 		complete_effect = {
 			hidden_effect = {
 				add_political_power = -15
@@ -626,9 +623,6 @@ SOL_dealing_with_resistance = {
 		}
 		custom_cost_text = EQS_decision_cost_dynamic_political_command_power
 		days_remove = 21
-		modifier = {
-			political_power_gain = -0.15
-		}
 		complete_effect = {
 			hidden_effect = {
 				add_political_power = -15
@@ -700,9 +694,6 @@ SOL_dealing_with_resistance = {
 		}
 		custom_cost_text = EQS_decision_cost_dynamic_political_command_power
 		days_remove = 7
-		modifier = {
-			political_power_gain = -0.05
-		}
 		complete_effect = {
 			hidden_effect = {
 				add_political_power = -20
@@ -733,9 +724,6 @@ SOL_dealing_with_resistance = {
 		}
 		custom_cost_text = EQS_decision_cost_dynamic_political_command_power
 		days_remove = 25
-		modifier = {
-			political_power_gain = -0.2
-		}
 		complete_effect = {
 			hidden_effect = {
 				add_political_power = -10
@@ -769,9 +757,6 @@ SOL_dealing_with_resistance = {
 		custom_cost_text = EQS_decision_cost_dynamic_political_command_power
 		fire_only_once = yes
 		days_remove = 20
-		modifier = {
-			political_power_gain = -0.15
-		}
 		complete_effect = {
 			hidden_effect = {
 				add_political_power = -5
@@ -802,10 +787,6 @@ SOL_dealing_with_resistance = {
 		custom_cost_text = EQS_decision_cost_dynamic_political_command_power
 		fire_only_once = yes
 		days_remove = 30
-		modifier = {
-			political_power_gain = -0.25
-			command_power_gain = -0.03
-		}
 		complete_effect = {
 			hidden_effect = {
 				add_political_power = -5
@@ -836,9 +817,6 @@ SOL_dealing_with_resistance = {
 		custom_cost_text = EQS_decision_cost_dynamic_political_command_power
 		fire_only_once = yes
 		days_remove = 10
-		modifier = {
-			command_power_gain = -0.05
-		}
 		complete_effect = {
 			hidden_effect = {
 				add_political_power = -40
@@ -870,7 +848,6 @@ SOL_dealing_with_resistance = {
 		fire_only_once = yes
 		days_remove = 14
 		modifier = {
-			political_power_gain = -0.25
 			stability_weekly = -0.005
 		}
 		complete_effect = {
@@ -910,10 +887,6 @@ SOL_dealing_with_resistance = {
 		custom_cost_text = EQS_decision_cost_dynamic_political_command_power
 		fire_only_once = yes
 		days_remove = 20
-		modifier = {
-			political_power_gain = -0.35
-			command_power_gain = -0.07
-		}
 		complete_effect = {
 			hidden_effect = {
 				add_political_power = -25
@@ -977,9 +950,6 @@ SOL_dealing_with_resistance = {
 		custom_cost_text = EQS_decision_cost_dynamic_political_command_power
 		fire_only_once = yes
 		days_remove = 7
-		modifier = {
-			political_power_gain = -0.5
-		}
 		complete_effect = {
 			hidden_effect = {
 				add_political_power = -20
@@ -1010,10 +980,6 @@ SOL_dealing_with_resistance = {
 		custom_cost_text = EQS_decision_cost_dynamic_political_command_power
 		fire_only_once = yes
 		days_remove = 21
-		modifier = {
-			political_power_gain = -0.4
-			command_power_gain = -0.1
-		}
 		complete_effect = {
 			hidden_effect = {
 				add_political_power = -10
@@ -1051,9 +1017,6 @@ SOL_dealing_with_resistance = {
 		custom_cost_text = EQS_decision_cost_dynamic_political_command_power
 		fire_only_once = yes
 		days_remove = 10
-		modifier = {
-			political_power_gain = -0.25
-		}
 		complete_effect = {
 			hidden_effect = {
 				add_political_power = -5
@@ -1084,9 +1047,6 @@ SOL_dealing_with_resistance = {
 		custom_cost_text = EQS_decision_cost_dynamic_political_command_power
 		fire_only_once = yes
 		days_remove = 7
-		modifier = {
-			political_power_gain = -0.35
-		}
 		complete_effect = {
 			hidden_effect = {
 				add_political_power = -40
@@ -1116,10 +1076,6 @@ SOL_dealing_with_resistance = {
 		custom_cost_text = EQS_decision_cost_dynamic_political_command_power
 		fire_only_once = yes
 		days_remove = 7
-		modifier = {
-			command_power_gain = -0.25
-			political_power_gain = -0.25
-		}
 		complete_effect = {
 			hidden_effect = {
 				add_political_power = -20
