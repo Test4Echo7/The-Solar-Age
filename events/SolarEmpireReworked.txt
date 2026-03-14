@@ -6019,6 +6019,9 @@ country_event = { #Cadance gives into the threats from either Nova or the insinu
 
     option = { #You will be guided soon enough.
         name = solarreworked.243.a
+        FROM = {
+            get_current_government_type = yes
+        }
         set_autonomy = {
             target = FROM
             autonomous_state = autonomy_reichskommissariat

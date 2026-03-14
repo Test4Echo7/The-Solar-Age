@@ -8082,13 +8082,8 @@ shared_focus = {
 		}
 		CRY = {
 			has_war = no
-			OR = {
-				AND = {
-					is_subject = no
-					has_government = democratic
-				}
-				is_subject_of = ROOT
-			}
+			is_subject = no
+			has_government = democratic
 		}
 	}
 	allow_branch = {
