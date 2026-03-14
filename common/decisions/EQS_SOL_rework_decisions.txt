@@ -4226,6 +4226,44 @@ EQS_pan_pony_empire_category = {
             }
         }
     }
+    SOL_force_MER_surrender = {
+        allowed = {
+            original_tag = EQS
+        }
+        available = {
+            is_EQS_SOL = yes
+            country_exists = MER
+            1196 = {
+                is_owned_and_controlled_by = MER
+            }
+            1197 = {
+                is_owned_and_controlled_by = MER
+            }
+        }
+        visible = {
+            is_EQS_SOL = yes
+            has_completed_focus = SOL_change_management
+            PCB = {
+                is_subject_of = ROOT
+            }
+        }
+        highlight_states = {
+            highlight_state_targets = {
+                state = 1196
+                state = 1197
+            }
+        }
+        fire_only_once = yes
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision SOL_force_MER_surrender"
+            MER = {
+                country_event = {
+                    id = solarreworked.543
+                    days = 3
+                }
+            }
+        }
+    }
     SOL_spawn_CHN_puppet = {
 		allowed = {
 			original_tag = EQS
@@ -5420,6 +5458,41 @@ EQS_pan_pony_empire_category = {
             SOL_release_GAR = yes
         }
 	}
+	SOL_melt_IDT = {
+        allowed = {
+            original_tag = EQS
+        }
+        available = {
+            is_EQS_SOL = yes
+            IDT = {
+                exists = yes
+                is_subect = no
+            }
+        }
+        visible = {
+            is_EQS_SOL = yes
+            OR = {
+                MTO = { all_original_cores_owned_by_ROOT = yes }
+                AES = { all_original_cores_owned_by_ROOT = yes }
+                KAR = { all_original_cores_owned_by_ROOT = yes }
+            }
+        }
+        highlight_states = {
+            highlight_states_trigger = {
+                is_core_of = IDT
+            }
+        }
+        fire_only_once = yes
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision SOL_melt_IDT"
+            IDT = {
+                country_event = {
+                    id = solarreworked.545
+                    days = 3
+                }
+            }
+        }
+    }
 	SOL_release_MTO_super_puppet = {
         allowed = {
             original_tag = EQS
