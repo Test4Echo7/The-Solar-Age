@@ -14608,18 +14608,22 @@ country_event = { #Event for informing the player that they can make the game ha
             limit = {
                 has_war_with = CHN
             }
-            CHN = {
-                add_ideas = EQS_buffed_enemy
-                load_oob = "CHN_buff"
+            hidden_effect = {
+                CHN = {
+                    add_ideas = EQS_buffed_enemy
+                    load_oob = "CHN_buff"
+                }
             }
         }
         else_if = {
             limit = {
                 has_war_with = NLR
             }
-            NLR = {
-                add_ideas = EQS_buffed_enemy
-                load_oob = "NLR_buff"
+            hidden_effect = {
+                NLR = {
+                    add_ideas = EQS_buffed_enemy
+                    load_oob = "NLR_buff"
+                }
             }
         }
     }
@@ -14630,16 +14634,20 @@ country_event = { #Event for informing the player that they can make the game ha
             limit = {
                 has_war_with = CHN
             }
-            CHN = {
-                load_oob = "CHN_buff"
+            hidden_effect = {
+                CHN = {
+                    load_oob = "CHN_buff"
+                }
             }
         }
         else_if = {
             limit = {
                 has_war_with = NLR
             }
-            NLR = {
-                load_oob = "NLR_buff"
+            hidden_effect = {
+                NLR = {
+                    load_oob = "NLR_buff"
+                }
             }
         }
     }
@@ -14650,21 +14658,202 @@ country_event = { #Event for informing the player that they can make the game ha
             limit = {
                 has_war_with = CHN
             }
-            CHN = {
-                add_ideas = EQS_buffed_enemy
+            hidden_effect = {
+                CHN = {
+                    add_ideas = EQS_buffed_enemy
+                }
             }
         }
         else_if = {
             limit = {
                 has_war_with = NLR
             }
-            NLR = {
-                add_ideas = EQS_buffed_enemy
+            hidden_effect = {
+                NLR = {
+                    add_ideas = EQS_buffed_enemy
+                }
             }
         }
     }
     option = { #No thanks. Already buffed enough
         name = solarreworked.542.e
+    }
+}
+
+country_event = { #Please cede MER territory?
+    id = solarreworked.543
+    title = solarreworked.543.t
+    desc = solarreworked.543.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.543"}
+    picture = GFX_event_solarempire
+
+    is_triggered_only = yes
+
+    option = { #What can we do to resist?
+        name = solarreworked.543.a
+        ai_chance = {
+            factor = 5
+            strength_ratio = {
+                tag = FROM
+                ratio < 0.7
+            }
+        }
+        set_country_flag = SOL_MER_accepted
+    }
+    option = { #It is our home!
+        name = solarreworked.543.b
+        ai_chance = {
+            factor = 2
+        }
+        set_country_flag = SOL_MER_rejected
+    }
+
+    after = {
+        FROM = {
+            country_event = {
+                id = solarreworked.544
+                days = 3
+            }
+        }
+    }
+}
+
+country_event = { #MER's response to the demand to yoink land
+    id = solarreworked.544
+    title = solarreworked.544.t
+    desc = {
+        trigger = {
+            FROM = {
+                has_country_flag = SOL_MER_accepted
+            }
+        }
+        text = solarreworked.544.d_a
+    }
+    desc = {
+        trigger = {
+            FROM = {
+                has_country_flag = SOL_MER_rejected
+            }
+            text = solarreworked.544.d_b
+        }
+    }
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.544"}
+    picture = GFX_event_solarempire
+
+    is_triggered_only = yes
+
+    option = { #The smartest French birds around.
+        name = solarreworked.544.a
+        trigger = {
+            FROM = {
+                has_country_flag = SOL_MER_accepted
+            }
+        }
+        1196 = {
+            transfer_state_to = PCB
+        }
+        1197 = {
+            transfer_state_to = PCB
+        }
+    }
+    option = { #They ARE French after all.
+        name = solarreworked.544.b
+        trigger = {
+            FROM = {
+                has_country_flag = SOL_MER_rejected
+            }
+        }
+        create_wargoal = {
+            target = FROM
+            type = annex_everything
+        }
+    }
+}
+
+country_event = { #IDT? Where? Not there
+    id = solarreworked.545
+    title = solarreworked.545.t
+    desc = solarreworked.545.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.545"}
+    picture = GFX_event_solarempire
+
+    is_triggered_only = yes
+
+    option = { #Scales are no match for guns!
+        name = solarreworked.545.a
+        ai_chance = {
+            factor = 6
+            strength_ratio = {
+                tag = FROM
+                ratio < 0.7
+            }
+        }
+        set_country_flag = SOL_IDT_accepted
+    }
+    option = { #We shall fight to the last!
+        name = solarreworked.543.b
+        ai_chance = {
+            factor = 3
+        }
+        set_country_flag = SOL_IDT_rejected
+    }
+
+    after = {
+        FROM = {
+            country_event = {
+                id = solarreworked.546
+                days = 3
+            }
+        }
+    }
+}
+
+country_event = { #IDT chooses wisely or stupidly; time to do the thing
+    id = solarreworked.546
+    title = solarreworked.546.t
+    desc = {
+        trigger = {
+            FROM = {
+                has_country_flag = SOL_IDT_accepted
+            }
+        }
+        text = solarreworked.546.d_a
+    }
+    desc = {
+        trigger = {
+            FROM = {
+                has_country_flag = SOL_IDT_rejected
+            }
+            text = solarreworked.546.d_b
+        }
+    }
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.546"}
+    picture = GFX_event_solarempire
+
+    is_triggered_only = yes
+
+    option = { #Wise choice.
+        name = solarreworked.546.a
+        trigger = {
+            FROM = {
+                has_country_flag = SOL_IDT_accepted
+            }
+        }
+        annex_country = {
+            target = FROM
+        }
+    }
+    option = { #The ice froze their brains, obviously.
+        name = solarreworked.544.b
+        trigger = {
+            FROM = {
+                has_country_flag = SOL_IDT_rejected
+            }
+        }
+        create_wargoal = {
+            target = FROM
+            type = annex_everything
+        }
     }
 }
 
@@ -16042,7 +16231,7 @@ country_event = { #How dare you actually do war prep, 'Tia?!
             }
         }
         swap_ideas = {
-            remove_idea = early_economic_mobilisation
+            remove_idea = low_economic_mobilisation
             add_idea = civilian_economy
         }
         add_political_power = 150
