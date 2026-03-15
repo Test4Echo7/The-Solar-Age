@@ -14794,7 +14794,7 @@ country_event = { #IDT? Where? Not there
         set_country_flag = SOL_IDT_accepted
     }
     option = { #We shall fight to the last!
-        name = solarreworked.543.b
+        name = solarreworked.545.b
         ai_chance = {
             factor = 3
         }
@@ -14847,7 +14847,7 @@ country_event = { #IDT chooses wisely or stupidly; time to do the thing
         }
     }
     option = { #The ice froze their brains, obviously.
-        name = solarreworked.544.b
+        name = solarreworked.546.b
         trigger = {
             FROM = {
                 has_country_flag = SOL_IDT_rejected
