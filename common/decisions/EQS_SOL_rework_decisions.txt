@@ -5466,7 +5466,7 @@ EQS_pan_pony_empire_category = {
             is_EQS_SOL = yes
             IDT = {
                 exists = yes
-                is_subect = no
+                is_subject = no
             }
         }
         visible = {

@@ -14695,10 +14695,12 @@ country_event = { #Please cede MER territory?
     option = { #What can we do to resist?
         name = solarreworked.543.a
         ai_chance = {
-            factor = 5
-            strength_ratio = {
-                tag = FROM
-                ratio < 0.7
+            modifier = {
+                factor = 5
+                strength_ratio = {
+                    tag = FROM
+                    ratio < 0.7
+                }
             }
         }
         set_country_flag = SOL_MER_accepted
@@ -14785,10 +14787,12 @@ country_event = { #IDT? Where? Not there
     option = { #Scales are no match for guns!
         name = solarreworked.545.a
         ai_chance = {
-            factor = 6
-            strength_ratio = {
-                tag = FROM
-                ratio < 0.7
+            modifier = {
+                factor = 6
+                strength_ratio = {
+                    tag = FROM
+                    ratio < 0.7
+                }
             }
         }
         set_country_flag = SOL_IDT_accepted
