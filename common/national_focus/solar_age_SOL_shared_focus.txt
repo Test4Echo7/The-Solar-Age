@@ -1618,6 +1618,7 @@ shared_focus = {
 	x = 0
 	y = 2
 	relative_position_id = SOL_empress_mother
+	icon = GFX_goal_land_of_subjects
 
 	cost = 5
 	prerequisite = { focus = SOL_empress_mother }
@@ -1664,6 +1665,7 @@ shared_focus = {
 	x = 0
 	y = 1
 	relative_position_id = SOL_industrial_hoof
+	icon = GFX_goal_ponys_project
 
 	cost = 4
 	prerequisite = { focus = SOL_industrial_hoof }
@@ -1687,7 +1689,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_Maternal_Guidiance
-	icon = GFX_goal_solar_maternal_guidance
+	icon = GFX_goal_too_foolish_to_learn
 	prerequisite = {
 		focus = SOL_land_of_subjects
 	}
@@ -1714,6 +1716,7 @@ shared_focus = {
 	x = -1
 	y = 1
 	relative_position_id = SOL_bed_companies
+	icon = GFX_goal_empresss_bits
 
 	cost = 4
 	prerequisite = { focus = SOL_bed_companies }
@@ -1737,6 +1740,7 @@ shared_focus = {
 	x = 0
 	y = 2
 	relative_position_id = SOL_Imperial_Corporation_Council
+	icon = GFX_goal_innovative_corpo_grant
 
 	cost = 5
 	prerequisite = {
@@ -1796,7 +1800,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_Imperial_Investigative_Service
-	icon = GFX_goal_solar_intelligence
+	icon = GFX_goal_imperial_investigative_service_new
 	prerequisite = {
 		focus = SOL_world_opportunity
 		focus = SOL_Maternal_Guidiance

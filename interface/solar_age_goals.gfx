@@ -147,6 +147,30 @@ SpriteTypes = {
         name = GFX_goal_peace_through_war
         texturefile = "gfx/interface/goals/EQS/peace_through_war.tga"
     }
+    SpriteType = {
+        name = GFX_goal_too_foolish_to_learn
+        texturefile = "gfx/interface/goals/EQS/too_foolish_to_learn.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_ponys_project
+        texturefile = "gfx/interface/goals/EQS/ponys_project.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_land_of_subjects
+        texturefile = "gfx/interface/goals/EQS/land_of_subjects.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_innovative_corpo_grant
+        texturefile = "gfx/interface/goals/EQS/innovative_corpo_grant.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_imperial_investigative_service_new
+        texturefile = "gfx/interface/goals/EQS/imperial_investigative_service.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_empresss_bits
+        texturefile = "gfx/interface/goals/EQS/empresss_bits.tga"
+    }
 
     ###Fallen Hero###
     SpriteType = {
