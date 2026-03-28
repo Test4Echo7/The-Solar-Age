@@ -4644,6 +4644,9 @@ country_event = { #Twilight, Sunset, and the others attempt to keep low and unno
         set_country_flag = SOL_has_captured_sunset
         set_country_flag = SOL_has_twilight
         hidden_effect = {
+            EQS_sunset_shimmer = {
+                remove_unit_leader_role = yes
+            }
             if = {
                 limit = { has_country_flag = SOL_fled_CRY }
                 CRY = {
@@ -5104,6 +5107,18 @@ country_event = {
                 army = {
                     small = "gfx/interface/ideas/advisors/EQS/sunset_shimmer_newerest.tga"
                     large = "gfx/leaders/EQS/Sunset_newerest.tga"
+                }
+            }
+            custom_effect_tooltip = dawnbreak_shimmer_stats_tp
+            hidden_effect = {
+                add_field_marshal_role = {
+                    traits = { pony_race_trait fast_planner empathic_dictator }
+                    skill = 4
+                    attack_skill = 6
+                    defense_skill = 3
+                    planning_skill = 1
+                    logistics_skill = 3
+                    desc = EQS_SOL_dawnbreak_shimmer_desc
                 }
             }
             add_advisor_role = {
@@ -15552,6 +15567,7 @@ country_event = { #Event summarizing how the M6 have not been found after disapp
     title = solarreworked.614.t
     desc = solarreworked.614.d
     ###Daybreaker laughing?
+    picture = GFX_event_solarempire
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.614"}
 
     is_triggered_only = yes
@@ -15585,7 +15601,12 @@ country_event = { #Event summarizing how the M6 have not been found after disapp
         }
         if = {
             limit = { has_character = EQS_sunset_shimmer }
-            EQS_sunset_shimmer = { set_nationality = EQS }
+            EQS_sunset_shimmer = {
+                set_nationality = EQS
+                hidden_effect = {
+                    remove_unit_leader_role = yes
+                }
+            }
         }
     }
 }

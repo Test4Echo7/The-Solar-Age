@@ -141,6 +141,24 @@ leader_traits = {
         }
         new_commander_weight = { factor = 0 }
     }
+    empathic_dictator = {
+		type = all
+		trait_type = personality_trait
+
+		modifier = {
+			army_morale_factor = 0.1
+			land_reinforce_rate = 0.05
+			army_org_factor = 0.05
+			heat_attrition_factor = -0.2
+			planning_speed = 0.05
+			recon_factor = 0.1
+		}
+		non_shared_modifier = {
+			experience_gain_factor = 0.1
+		}
+
+		new_commander_weight = { factor = 0 }
+	}
     excitable_pone = {
         type = all
         trait_type = personality_trait

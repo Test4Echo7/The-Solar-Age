@@ -7720,7 +7720,7 @@ country_event = { #Sunset Shimmer-Twilight Convo
 	fire_only_once = yes
 	option = {
 		name = equestria.185.a
-		custom_effect_tooltip = sunset_shimmer_stats_tp
+		custom_effect_tooltip = sunset_shimmer_solar_age_stats_tp
 		set_country_flag = EQS_sunset_shimmer_arrived
 	}
 }
