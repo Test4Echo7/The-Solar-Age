@@ -1899,6 +1899,7 @@ shared_focus = {
 	x = -1
 	y = 1
 	relative_position_id = SOL_Imperial_Investigative_Service
+	icon = GFX_goal_sole_alicorn
 
 	cost = 5
 	prerequisite = { focus = SOL_Imperial_Investigative_Service }
@@ -1990,7 +1991,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_Firm_but_Fair
-	icon = GFX_goal_solar_fair_but_just
+	icon = GFX_goal_firm_but_fair_new
 	prerequisite = {
 		focus = SOL_sole_alicorn
 	}

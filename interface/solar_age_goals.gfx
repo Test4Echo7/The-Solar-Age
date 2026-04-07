@@ -171,6 +171,14 @@ SpriteTypes = {
         name = GFX_goal_empresss_bits
         texturefile = "gfx/interface/goals/EQS/empresss_bits.tga"
     }
+    SpriteType = {
+        name = GFX_goal_sole_alicorn
+        texturefile = "gfx/interface/goals/EQS/sole_alicorn.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_firm_but_fair_new
+        texturefile = "gfx/interface/goals/EQS/firm_but_fair.tga"
+    }
 
     ###Fallen Hero###
     SpriteType = {
