@@ -164,9 +164,17 @@ its_all_solar = {
             tooltip = EQS_always_has_been_tt
             is_EQS_SOL = yes
             all_other_country = {
-                OR = {
-                    exists = no
-                    is_subject_of = EQS
+                if = {
+                    limit = {
+                        tag = ZZZ
+                    }
+                    exists = yes
+                }
+                else = {
+                    OR = {
+                        exists = no
+                        is_subject_of = EQS
+                    }
                 }
             }
         }
