@@ -168,7 +168,6 @@ its_all_solar = {
                     limit = {
                         tag = ZZZ
                     }
-                    exists = yes
                 }
                 else = {
                     OR = {
