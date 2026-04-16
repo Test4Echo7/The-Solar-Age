@@ -1261,15 +1261,37 @@ SOL_promote_local_governor = {
         hidden_effect = {
             every_possible_country = {
                 limit = {
-                    has_character = STM_ikvus_hailstorm
+                    has_character = SLC_zelitha
                 }
-                STM_ikvus_hailstorm = {
+                SLC_zelitha = {
                     set_nationality = FROM
                 }
             }
             FROM = {
-                STM_ikvus_hailstorm = {
-                    add_trait = { trait = imperial_collaborator ideology = plutocracy }
+                SLC_zelitha = {
+                    if = {
+                        limit = {
+                            ROOT = { has_completed_focus = SOL_god_empress }
+                        }
+                        add_country_leader_role = {
+                            promote_leader = yes
+                            country_leader = {
+                                ideology = falangism
+                                expire = "1965.1.1"
+                                traits = { imperial_collaborator }
+                            }
+                        }
+                    }
+                    else = {
+                        add_country_leader_role = {
+                            promote_leader = yes
+                            country_leader = {
+                                ideology = nazism
+                                expire = "1965.1.1"
+                                traits = { imperial_collaborator }
+                            }
+                        }
+                    }
                 }
             }
         }

@@ -1861,7 +1861,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_Harmony_through_Order
-	icon = GFX_goal_solar_harmony_in_order
+	icon = GFX_goal_harmony_in_order_new
 	prerequisite = {
 		focus = SOL_innovative_corpo_grant
 	}
@@ -11948,11 +11948,11 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = SOL_canterbbean_grinder
+	id = SOL_canterribean_grinder
 	x = -2
 	y = 2
 	relative_position_id = Ministry_of_defense
-	icon = GFX_goal_canterbbean_grinder
+	icon = GFX_goal_canterribean_grinder
 
 	cost = 4
 	prerequisite = { focus = Ministry_of_defense }
@@ -11967,7 +11967,7 @@ shared_focus = {
 	allow_branch = { is_EQS_SOL = yes }
 
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SOL_canterbbean_grinder"
+		log = "[GetDateText]: [Root.GetName]: Focus SOL_canterribean_grinder"
 		1195 = {
 			add_building_construction = {
 				type = naval_base
@@ -12178,7 +12178,7 @@ shared_focus = {
 	cost = 4
 	prerequisite = {
 		focus = SOL_airfields2
-		focus = SOL_canterbbean_grinder
+		focus = SOL_canterribean_grinder
 	}
 	available = {
 		OR = {
@@ -12220,7 +12220,7 @@ shared_focus = {
 	cost = 5
 	prerequisite = {
 		focus = SOL_airfields2
-		focus = SOL_canterbbean_grinder
+		focus = SOL_canterribean_grinder
 	}
 	available = {
 		OR = {

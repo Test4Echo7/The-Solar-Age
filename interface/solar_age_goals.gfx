@@ -179,6 +179,10 @@ SpriteTypes = {
         name = GFX_goal_firm_but_fair_new
         texturefile = "gfx/interface/goals/EQS/firm_but_fair.tga"
     }
+    SpriteType = {
+        name = GFX_goal_harmony_in_order_new
+        texturefile = "gfx/interface/goals/EQS/harmony_in_order.tga"
+    }
 
     ###Fallen Hero###
     SpriteType = {
