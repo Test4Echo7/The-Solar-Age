@@ -401,3 +401,16 @@ defined_text = {
 		localization_key = [382.GetCapitalVictoryPointName]
 	}
 }
+
+defined_text = {
+	name = GetCivilWarCapital
+	text = {
+		trigger = {
+			has_character = EQS_princess_luna
+		}
+		localization_key = [75.GetCapitalVictoryPointName]
+	}
+	text = {
+		localization_key = [59.GetCapitalVictoryPointName]
+	}
+}

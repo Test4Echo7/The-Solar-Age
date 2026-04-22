@@ -526,11 +526,26 @@ EQS_SOL_civil_war = {
 	set_party_name = { ideology = democratic long_name = EQS_republic_long name = EQS_republic }
 	divide_temp_variable = { var = civil_war_size value = 2.5 }
 	add_to_temp_variable = { var = civil_war_size value = 0.04 }
-	start_civil_war = {
-		ruling_party = fascism
-		ideology = democratic
-		size = civil_war_size
-		capital = 75
+	if = {
+		limit = {
+			NOT = {
+				has_character = EQS_princess_luna
+			}
+		}
+		start_civil_war = {
+			ruling_party = fascism
+			ideology = democratic
+			size = civil_war_size
+			capital = 59
+		}
+	}
+	else = {
+		start_civil_war = {
+			ruling_party = fascism
+			ideology = democratic
+			size = civil_war_size
+			capital = 75
+		}
 	}
 	#create_faction_from_template = faction_template_harmony_pact_other_war_faction
 	save_global_event_target_as = solar_empire
@@ -548,8 +563,8 @@ EQS_SOL_civil_war = {
 			is_dynamic_country = yes #Need this to ensure it still chooses the civil war country, since EQS starts democratic with Daybreaker's ascension now
 		}
 		save_global_event_target_as = equestria
-		#load_focus_tree = { tree = equestria_focus keep_completed = yes }
-		set_capital = { state = 75 remember_old_capital = no }
+		load_focus_tree = { tree = equestria_focus keep_completed = yes }
+		set_capital = { state = 3 remember_old_capital = no }
 		add_political_power = 450
 		set_party_name = { ideology = fascism long_name = EQS_fascism_generic_party_long name = EQS_fascism_generic_party }
 		add_stability = -0.3
@@ -630,13 +645,31 @@ EQS_SOL_civil_war = {
 					#is_character = EQS_pinkie_pie
 					is_character = EQS_caltrop_decay
 					is_character = EQS_braeburn
-					is_character = EQS_NLR_tempest_wind
-					is_character = EQS_NLR_midnight_oil
-					is_character = EQS_oli_equites
-					is_character = EQS_NLR_bipen
+					#is_character = EQS_NLR_tempest_wind
+					#is_character = EQS_NLR_midnight_oil
+					#is_character = EQS_oli_equites
+					#is_character = EQS_NLR_bipen
 				}
 			}
 			set_nationality = event_target:equestria
+		}
+		if = {
+			limit = {
+				event_target:equestria = {
+					has_character = EQS_princess_luna
+				}
+			}
+			every_character = {
+				limit = {
+					OR = {
+						is_character = EQS_NLR_tempest_wind
+						is_character = EQS_NLR_midnight_oil
+						is_character = EQS_oli_equites
+						is_character = EQS_NLR_bipen
+					}
+				}
+				set_nationality = event_target:equestria
+			}
 		}
 	}
 #	hidden_effect = {

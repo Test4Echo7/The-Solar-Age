@@ -12879,46 +12879,20 @@ country_event = { #God-Empress-only follow-up purge if the purge focus is taken 
 }
 
 country_event = { #Event that Stalliongrad will get if the player takes too many harsh centralization decisions in a short window; a short message to STG's leader, from some of the lower classes and unions begging for assistance, since they are being rapidly oppressed by Daybreaker, with an option to help or not
-    id = solarreworked.505
+    id = solarreworked.505 #Now event either recapping how rebellious activity has massively increased and the first shots have been fired, or a short event of one of the generals still with the Solar Empire nearly being assassinated before an uprising in Tall Tail has led to an organized front trying to restore Harmony
     title = solarreworked.505.t
     desc = solarreworked.505.d
-    picture = GFX_event_pony_march
+    picture = GFX_event_pony_soldiers
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.505"}
 
     is_triggered_only = yes
 
-    option = { #We will come to your aid!
+    option = { #I will not roll over so easily!
         name = solarreworked.505.a
-        ai_chance = {
-            factor = 70
+        #custom_effect_tooltip = EQS_temp_content_is_temp_tt
+        hidden_effect = {
+            country_event = solarreworked.548
         }
-        custom_effect_tooltip = EQS_temp_content_is_temp_tt
-        if = {
-            limit = {
-                is_ai = yes
-            }
-            declare_war_on = {
-                target = FROM
-                type = annex_everything
-            }
-        }
-        else = {
-            create_wargoal = {
-                target = FROM
-                type = annex_everything
-            }
-        }
-    }
-    option = { #There is nothing we can do right now.
-        name = solarreworked.505.b
-        ai_chance = {
-            factor = 30
-            modifier = {
-                is_historical_focus_on = yes
-                factor = 0
-            }
-        }
-        custom_effect_tooltip = EQS_temp_content_is_temp_tt
     }
 }
 
@@ -14875,6 +14849,29 @@ country_event = { #IDT chooses wisely or stupidly; time to do the thing
         create_wargoal = {
             target = FROM
             type = annex_everything
+        }
+    }
+}
+
+country_event = { #Event to trigger the civil war if Daybreaker is too harsh
+    id = solarreworked.548
+    title = solarreworked.548.t
+    desc = solarreworked.548.d
+    picture = GFX_event_ponies_in_battle
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.548"}
+
+    is_triggered_only = yes
+
+    option = { #I shall not roll over so easily!
+        name = solarreworked.548.a
+        effect_tooltip = {
+            start_civil_war = {
+                ideology = democratic
+                size = civ_war_size
+            }
+        }
+        hidden_effect = {
+            EQS_SOL_civil_war = yes
         }
     }
 }
