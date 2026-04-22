@@ -2145,6 +2145,18 @@ shared_focus = {
 		custom_effect_tooltip = super_combat_abilities_tt
 		custom_effect_tooltip = SOL_smack_the_puppets_tt
 		hidden_effect = {
+			EQS_princess_celestia = {
+				set_portraits = {
+					civilian = {
+						large = "gfx/leaders/EQS/Daybreaker_goddess.tga"
+					}
+					army = {
+						large = "gfx/leaders/EQS/Daybreaker_goddess.tga"
+						small = "gfx/interface/ideas/advisors/EQS/EQS_daybreaker_goddess.tga"
+
+					}
+				}
+			}
 			set_country_leader_ideology = falangism
 			country_event = {
 				id = solarempire.45
@@ -3062,17 +3074,6 @@ shared_focus = {
 		custom_effect_tooltip = super_combat_abilities_tt
 		custom_effect_tooltip = SOL_smack_the_puppets_tt
 		hidden_effect = {
-			EQS_princess_celestia = {
-				set_portraits = {
-					civilian = {
-						large = "gfx/leaders/EQS/Daybreaker_savior.tga"
-					}
-					army = {
-						large = "gfx/leaders/EQS/Daybreaker_savior.tga"
-						small = "gfx/interface/ideas/advisors/EQS/EQS_daybreaker_protector.tga"
-					}
-				}
-			}
 			if = {
 				limit = {
 					has_game_rule = {

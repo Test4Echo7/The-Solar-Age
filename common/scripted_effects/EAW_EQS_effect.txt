@@ -199,7 +199,7 @@ EQS_SOL_wartime_change = {
 					}
 					army = {
 						large = GFX_DaybreakerPortraitNew
-						small = "gfx/interface/ideas/advisors/EQS/EQS_daybreaker_goddess.tga"
+						small = "gfx/interface/ideas/advisors/EQS/EQS_daybreaker_protector.tga"
 					}
 				}
 			}
@@ -413,7 +413,7 @@ EQS_pre_SOL_civil_war_setup = {
 					}
 					army = {
 						large = GFX_DaybreakerPortraitNew
-						small = "gfx/interface/ideas/advisors/EQS/EQS_daybreaker_goddess.tga"
+						small = "gfx/interface/ideas/advisors/EQS/EQS_daybreaker_protector.tga"
 					}
 				}
 			}
