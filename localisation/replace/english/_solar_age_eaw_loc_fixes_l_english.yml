@@ -1,4 +1,7 @@
 ﻿l_english:
+  ###Music###
+  maintheme:0 "Jyc Row - Imperatrix Solaris"
+
   ###Focuses###
   Ministry_of_defense_desc:0 "In the light of recent developments, it is best to revive the Equestrian Ministry of Defence from ages past. We cannot remain unprepared given Chrysalis' recent aggressive rhetoric, nor can we ignore the possible threat of Stalliongrad. Additionally, Princess Luna has expressed a desire to contribute more to [EQS.GetNameDef], and her knowledge of warfare would be highly valuable." #Make this dynamic loc
 
