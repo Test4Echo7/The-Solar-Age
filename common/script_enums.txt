@@ -668,6 +668,8 @@ script_enum_equipment_bonus_type = {
 	polar_bear_equipment
 	medium_airship_equipment_0
 	heavy_airship_equipment_0
+	medium_airship_equipment_yeti
+	heavy_airship_equipment_yeti
 	super_griffons_armor
 	super_griffons_weapon
 	bar_leopold_equipment_1
@@ -755,6 +757,7 @@ script_enum_equipment_bonus_type = {
 	infantry_equipment_x
 	infantry_equipment_x_2
 	magical_equipment
+	magical_equipment_0
 	magical_equipment_1
 	magical_equipment_2
 	magical_equipment_3
@@ -774,10 +777,13 @@ script_enum_equipment_bonus_type = {
 	medium_airship_airframe_0
 	medium_plane_airframe_5
 	large_airship_airframe_0
+	medium_airship_airframe_yeti
+	large_airship_airframe_yeti
 	large_plane_airframe_5
 	super_large_plane_airframe_1
 	transport_plane_equipment_2
 	transport_plane_equipment_3
+	transport_plane_equipment_4
 	train_equipment_4
 	ship_hull_carrier_4
 	ship_hull_carrier_5
@@ -814,13 +820,16 @@ script_enum_equipment_bonus_type = {
 	cv_small_plane_naval_bomber_airframe_5
 	small_plane_suicide_airframe_5
 	cv_small_plane_suicide_airframe_5
+	medium_plane_fighter_airframeairship_airframe_yeti
 	small_plane_naval_bomber_airframe_6
 	small_plane_suicide_airframe_6
 	medium_plane_fighter_airframeairship_airframe_0
 	medium_plane_fighter_airframe_5
 	medium_plane_scout_plane_airframeairship_airframe_0
+	medium_plane_scout_plane_airframeairship_airframe_yeti
 	medium_plane_scout_plane_airframe_5
 	large_plane_maritime_patrol_plane_airframeairship_airframe_0
+	large_plane_maritime_patrol_plane_airframeairship_airframe_yeti
 	large_plane_maritime_patrol_plane_airframe_5
 	jet_fighter_equipment_x
 	cv_jet_fighter_equipment_1
@@ -940,6 +949,8 @@ script_enum_equipment_bonus_type = {
 	spirit_grenade_0
 	tunnel_drill
 	tunnel_drill_0
+	yeti_lightning_gun
+	yeti_lightning_gun_0
 
 	intercontinental_maritime_patrol_plane_airframe
 	intercontinental_maritime_patrol_plane_airframe_1

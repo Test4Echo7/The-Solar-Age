@@ -3,7 +3,10 @@ non_capitulated_equus_countries = {
     name = COLLECTION_NON_CAPITULATED_EQUUS_COUNTRIES
     operators = {
         limit = {
-            NOT = { tag = EQS }
+            NOT = {
+                tag = EQS
+                tag = MER
+            }
             capital_scope = {
                 is_on_continent = europe
             }

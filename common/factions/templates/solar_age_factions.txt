@@ -3,7 +3,7 @@ faction_template_harmony_pact_gw_faction = {
 	manifest = faction_manifest_pony_dominance
 
 	# color = { 179 183 235 } # this should default to faction leader's color
-	icon = GFX_faction_icon_united_ponies_alliance # :^)
+	icon = GFX_faction_icon_imperium_of_the_sun # :^)
 
 	goals = {
 		# Short term goals
@@ -32,7 +32,7 @@ faction_template_harmony_pact_cw_faction = {
 	manifest = faction_manifest_pony_dominance
 
 	# color = { 179 183 235 } # this should default to faction leader's color
-	icon = GFX_faction_icon_united_ponies_alliance # :^)
+	icon = GFX_faction_icon_imperium_of_the_sun # :^)
 
 	goals = {
 		# Short term goals
@@ -62,7 +62,7 @@ faction_template_harmony_pact_other_war_faction = {
 	manifest = faction_manifest_pony_dominance
 
 	# color = { 179 183 235 } # this should default to faction leader's color
-	icon = GFX_faction_icon_united_ponies_alliance # :^)
+	icon = GFX_faction_icon_imperium_of_the_sun # :^)
 
 	goals = {
 		# Short term goals

@@ -659,8 +659,8 @@ EQS_BOP_SOL_power_category = {
                     limit = {
                         check_variable = {
                             SOL_so_edgy > 2
-                            NOT = { has_country_flag = SOL_civil_war_man }
                         }
+                        NOT = { has_country_flag = SOL_civil_war_man }
                     }
                     set_country_flag = SOL_civil_war_man
                     country_event = {
@@ -700,8 +700,8 @@ EQS_BOP_SOL_power_category = {
                     limit = {
                         check_variable = {
                             SOL_so_edgy > 2
-                            NOT = { has_country_flag = SOL_civil_war_man }
                         }
+                        NOT = { has_country_flag = SOL_civil_war_man }
                     }
                     set_country_flag = SOL_civil_war_man
                     country_event = {
@@ -744,8 +744,8 @@ EQS_BOP_SOL_power_category = {
                     limit = {
                         check_variable = {
                             SOL_so_edgy > 2
-                            NOT = { has_country_flag = SOL_civil_war_man }
                         }
+                        NOT = { has_country_flag = SOL_civil_war_man }
                     }
                     set_country_flag = SOL_civil_war_man
                     country_event = {
@@ -789,8 +789,8 @@ EQS_BOP_SOL_power_category = {
                     limit = {
                         check_variable = {
                             SOL_so_edgy > 2
-                            NOT = { has_country_flag = SOL_civil_war_man }
                         }
+                        NOT = { has_country_flag = SOL_civil_war_man }
                     }
                     set_country_flag = SOL_civil_war_man
                     country_event = {
@@ -834,8 +834,8 @@ EQS_BOP_SOL_power_category = {
                     limit = {
                         check_variable = {
                             SOL_so_edgy > 2
-                            NOT = { has_country_flag = SOL_civil_war_man }
                         }
+                        NOT = { has_country_flag = SOL_civil_war_man }
                     }
                     set_country_flag = SOL_civil_war_man
                     country_event = {
@@ -883,8 +883,8 @@ EQS_BOP_SOL_power_category = {
                     limit = {
                         check_variable = {
                             SOL_so_edgy > 2
-                            NOT = { has_country_flag = SOL_civil_war_man }
                         }
+                        NOT = { has_country_flag = SOL_civil_war_man }
                     }
                     set_country_flag = SOL_civil_war_man
                     country_event = {
@@ -930,8 +930,8 @@ EQS_BOP_SOL_power_category = {
                     limit = {
                         check_variable = {
                             SOL_so_edgy > 2
-                            NOT = { has_country_flag = SOL_civil_war_man }
                         }
+                        NOT = { has_country_flag = SOL_civil_war_man }
                     }
                     set_country_flag = SOL_civil_war_man
                     country_event = {
@@ -982,8 +982,8 @@ EQS_BOP_SOL_power_category = {
                     limit = {
                         check_variable = {
                             SOL_so_edgy > 2
-                            NOT = { has_country_flag = SOL_civil_war_man }
                         }
+                        NOT = { has_country_flag = SOL_civil_war_man }
                     }
                     set_country_flag = SOL_civil_war_man
                     country_event = {
@@ -1034,8 +1034,8 @@ EQS_BOP_SOL_power_category = {
                     limit = {
                         check_variable = {
                             SOL_so_edgy > 2
-                            NOT = { has_country_flag = SOL_civil_war_man }
                         }
+                        NOT = { has_country_flag = SOL_civil_war_man }
                     }
                     set_country_flag = SOL_civil_war_man
                     country_event = {

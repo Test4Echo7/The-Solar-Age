@@ -1003,14 +1003,29 @@ country_event = { #Daybreaker holds a speech in Sanctum Solar, which has just be
 			remove_ideas = EQS_harmonist_pushback
 			news_event = { id = news.solarage.2 hours = 6 }
 			country_event = { id = solarreworked.35 days = 21 random_days = 14 }
-			set_faction_name = SOL_faction
-			set_faction_manifest = faction_manifest_pony_dominance
-			set_faction_rule = joining_rule_puppets_only
-            set_faction_rule = faction_peace_rule_conquest_focus
-            set_faction_rule = call_to_war_rule_faction_leader_only
-            set_faction_rule = war_declaration_rule_faction_leader_only
-            set_faction_rule = change_leader_rule_never
-            set_faction_rule = dismissal_rule_ideology_not_fascist
+			#set_faction_name = SOL_faction
+			#set_faction_manifest = faction_manifest_pony_dominance
+			#set_faction_rule = joining_rule_puppets_only
+            #set_faction_rule = faction_peace_rule_conquest_focus
+            #set_faction_rule = call_to_war_rule_faction_leader_only
+            #set_faction_rule = war_declaration_rule_faction_leader_only
+            #set_faction_rule = change_leader_rule_never
+            #set_faction_rule = dismissal_rule_ideology_not_fascist
+            if = {
+            	limit = {
+            		has_war_with = CHN
+            	}
+            	create_faction_from_template = faction_template_harmony_pact_gw_faction
+            }
+            else_if = {
+            	limit = {
+            		has_war_with = NLR
+            	}
+            	create_faction_from_template = faction_template_harmony_pact_cw_faction
+            }
+            else = {
+            	create_faction_from_template = faction_template_harmony_pact_other_war_faction
+            }
 		}
 		if = {
             limit = {
@@ -14728,8 +14743,8 @@ country_event = { #MER's response to the demand to yoink land
             FROM = {
                 has_country_flag = SOL_MER_rejected
             }
-            text = solarreworked.544.d_b
         }
+        text = solarreworked.544.d_b
     }
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.544"}
     picture = GFX_event_solarempire
@@ -14820,8 +14835,8 @@ country_event = { #IDT chooses wisely or stupidly; time to do the thing
             FROM = {
                 has_country_flag = SOL_IDT_rejected
             }
-            text = solarreworked.546.d_b
         }
+        text = solarreworked.546.d_b
     }
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.546"}
     picture = GFX_event_solarempire

@@ -10,6 +10,6 @@ name="Equestria at War: The Solar Age"
 dependencies={
 	"Equestria at War"
 }
-supported_version="1.16.*"
+supported_version="1.18.*"
 path="/mod/SOL-Rework"
 remote_file_id="3539077570"

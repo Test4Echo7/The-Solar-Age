@@ -1,0 +1,12 @@
+spriteTypes = {
+    spriteType = { #Imperium of the Sun
+	 	name = "GFX_faction_icon_imperium_of_the_sun"
+	 	texturefile = "gfx/interface/factions/faction_logos/faction_icon_imperium_of_the_sun.tga"
+	 	noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_faction_icon_imperium_of_the_sun_miniature"
+		texturefile = "gfx/interface/factions/faction_logos/faction_icon_imperium_of_the_sun_miniature.tga"
+	}
+}
