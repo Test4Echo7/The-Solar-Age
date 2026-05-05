@@ -183,6 +183,34 @@ SpriteTypes = {
         name = GFX_goal_harmony_in_order_new
         texturefile = "gfx/interface/goals/EQS/harmony_in_order.tga"
     }
+    SpriteType = {
+        name = GFX_goal_ultimate_leader
+        texturefile = "gfx/interface/goals/EQS/ultimate_leader.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_imperial_betters
+        texturefile = "gfx/interface/goals/EQS/imperial_betters.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_loyals_boon
+        texturefile = "gfx/interface/goals/EQS/loyals_boon.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_train_in_excellence
+        texturefile = "gfx/interface/goals/EQS/train_in_excellence.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_nopony_greater
+        texturefile = "gfx/interface/goals/EQS/nopony_greater.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_magical_aggression
+        texturefile = "gfx/interface/goals/EQS/magical_aggress.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_empress_knows_best_new
+        texturefile = "gfx/interface/goals/EQS/empress_knows_best.tga"
+    }
 
     ###Fallen Hero###
     SpriteType = {

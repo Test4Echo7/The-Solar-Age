@@ -1842,6 +1842,7 @@ shared_focus = {
 	x = 0
 	y = 1
 	relative_position_id = SOL_empresss_bits
+	icon = GFX_goal_imperial_betters
 
 	cost = 5
 	prerequisite = { focus = SOL_empresss_bits }
@@ -1922,6 +1923,7 @@ shared_focus = {
 	x = 2
 	y = 1
 	relative_position_id = SOL_Imperial_Investigative_Service
+	icon = GFX_goal_ultimate_leader
 
 	cost = 5
 	prerequisite = {
@@ -1947,6 +1949,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	relative_position_id = SOL_imperial_betters
+	icon = GFX_goal_magical_aggression
 
 	cost = 3
 	prerequisite = {
@@ -1972,6 +1975,7 @@ shared_focus = {
 	x = 0
 	y = 1
 	relative_position_id = SOL_ultimate_leader
+	icon = GFX_goal_loyals_boon
 
 	cost = 6
 	prerequisite = { focus = SOL_ultimate_leader }
@@ -2018,6 +2022,7 @@ shared_focus = {
 	x = -1
 	y = 2
 	relative_position_id = SOL_magical_aggression
+	icon = GFX_goal_train_in_excellence
 
 	cost = 5
 	prerequisite = { focus = SOL_magical_aggression }
@@ -2041,6 +2046,7 @@ shared_focus = {
 	x = 1
 	y = 2
 	relative_position_id = SOL_magical_aggression
+	icon = GFX_goal_nopony_greater
 
 	cost = 5
 	prerequisite = { focus = SOL_magical_aggression }
@@ -2061,7 +2067,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SOL_Empress_knows_Best
-	icon = GFX_goal_solar_empress_knows_best
+	icon = GFX_goal_empress_knows_best_new
 	prerequisite = {
 		focus = SOL_Firm_but_Fair
 		focus = SOL_train_in_excellence
