@@ -12,7 +12,7 @@ SOL_imperial_science = {
 }
 
 EQS_smile_upgrades = {
-    icon = GFX_idea_EQS_unicorn_academy
+    icon = GFX_idea_EQS_increased_smile_funding
 
     encryption = encryption_var
     foreign_subversive_activites = foreign_subversive_activities_var
@@ -22,7 +22,7 @@ EQS_smile_upgrades = {
 }
 
 EQS_smile_upgrades_lar = {
-    icon = GFX_idea_EQS_unicorn_academy
+    icon = GFX_idea_EQS_increased_smile_funding
 
     agency_upgrade_time = agency_upgrade_var
     own_operative_detection_chance_factor = own_operative_detection_var

@@ -5258,12 +5258,8 @@ shared_focus = {
 	id = EQS_agents_of_SMILE
 	x = 15
 	y = 6
-	offset = {
-		x = 15
-		y = -7
-		trigger = { is_EQS_SOL = yes }
-	}
 	cost = 6
+	icon = GFX_goal_agents_of_SMILE
 
 	available = {
 		if = {
@@ -5299,6 +5295,7 @@ shared_focus = {
 	x = -2
 	y = 1
 	relative_position_id = EQS_agents_of_SMILE
+	icon = GFX_goal_further_deep_cover_training
 
 	cost = 6
 	prerequisite = { focus = EQS_agents_of_SMILE }
@@ -5317,6 +5314,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	relative_position_id = EQS_agents_of_SMILE
+	icon = GFX_goal_renovate_old_quarters
 
 	cost = 4
 	prerequisite = { focus = EQS_agents_of_SMILE }
@@ -5355,6 +5353,7 @@ shared_focus = {
 	x = 3
 	y = 1
 	relative_position_id = EQS_agents_of_SMILE
+	icon = GFX_goal_strike_moon
 
 	cost = 5
 	prerequisite = { focus = EQS_agents_of_SMILE }
@@ -5388,6 +5387,7 @@ shared_focus = {
 	x = -1
 	y = 1
 	relative_position_id = EQS_further_deep_cover_training
+	icon = GFX_goal_harmony_abroad
 
 	cost = 7
 	prerequisite = { focus = EQS_further_deep_cover_training }
@@ -5416,6 +5416,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	relative_position_id = EQS_further_deep_cover_training
+	icon = GFX_goal_keep_down_low
 
 	cost = 7
 	prerequisite = { focus = EQS_further_deep_cover_training }
@@ -5443,6 +5444,7 @@ shared_focus = {
 	x = 2
 	y = 2
 	relative_position_id = EQS_agents_of_SMILE
+	icon = GFX_goal_anti_changeling_training
 
 	cost = 5
 	prerequisite = { focus = EQS_agents_of_SMILE }
@@ -5467,6 +5469,7 @@ shared_focus = {
 	x = 0
 	y = 1
 	relative_position_id = EQS_anti_changeling_training
+	icon = GFX_goal_moth_to_flame
 
 	cost = 7
 	prerequisite = { focus = EQS_anti_changeling_training }

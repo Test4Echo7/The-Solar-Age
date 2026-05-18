@@ -17137,6 +17137,7 @@ shared_focus = {
 	id = SOL_new_imperial_chapter
 	x = 29
 	y = -1
+	icon = GFX_goal_new_imperial_chapter
 
 	cost = 2
 	available = {
@@ -17168,6 +17169,7 @@ shared_focus = {
 	x = -3
 	y = 1
 	relative_position_id = SOL_new_imperial_chapter
+	icon = GFX_goal_threats_without
 
 	cost = 4
 	prerequisite = { focus = SOL_new_imperial_chapter }

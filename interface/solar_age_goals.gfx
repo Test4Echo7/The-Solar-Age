@@ -205,7 +205,7 @@ SpriteTypes = {
     }
     SpriteType = {
         name = GFX_goal_magical_aggression
-        texturefile = "gfx/interface/goals/EQS/magical_aggress.tga"
+        texturefile = "gfx/interface/goals/EQS/magical_aggression.tga"
     }
     SpriteType = {
         name = GFX_goal_empress_knows_best_new
@@ -1002,5 +1002,49 @@ SpriteTypes = {
     SpriteType = {
         name = GFX_goal_griffon_birthplace
         texturefile = "gfx/interface/goals/EQS/griffon_birthplace.tga"
+    }
+
+    ###Spies###
+    SpriteType = {
+        name = GFX_goal_new_imperial_chapter
+        texturefile = "gfx/interface/goals/EQS/new_imperial_chapter.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_threats_without
+        texturefile = "gfx/interface/goals/EQS/threats_without.tga"
+    }
+
+    ###EQS Spies###
+    SpriteType = {
+        name = GFX_goal_agents_of_SMILE
+        texturefile = "gfx/interface/goals/EQS/agents_of_SMILE.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_further_deep_cover_training
+        texturefile = "gfx/interface/goals/EQS/further_deep_cover_training.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_harmony_abroad
+        texturefile = "gfx/interface/goals/EQS/harmony_abroad.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_renovate_old_quarters
+        texturefile = "gfx/interface/goals/EQS/renovate_old_quarters.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_anti_changeling_training
+        texturefile = "gfx/interface/goals/EQS/anti_changeling_training.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_keep_down_low
+        texturefile = "gfx/interface/goals/EQS/keep_down_low.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_strike_moon
+        texturefile = "gfx/interface/goals/EQS/strike_moon.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_moth_to_flame
+        texturefile = "gfx/interface/goals/EQS/moth_to_flame.tga"
     }
 }
