@@ -1014,6 +1014,12 @@ SpriteTypes = {
         texturefile = "gfx/interface/goals/EQS/threats_without.tga"
     }
 
+    ###Twiggy and Shimmy###
+    SpriteType = {
+        name = GFX_goal_sunset_awaken
+        texturefile = "gfx/interface/goals/EQS/sunset_awaken.tga"
+    }
+
     ###EQS Spies###
     SpriteType = {
         name = GFX_goal_agents_of_SMILE

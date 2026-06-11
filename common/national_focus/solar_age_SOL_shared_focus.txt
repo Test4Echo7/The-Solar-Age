@@ -5,7 +5,7 @@
 ###Sunset joins in on the evil fun###
 shared_focus = {
     id = SOL_sunset_awaken
-    icon = GFX_goal_sunrise_sparkle
+    icon = GFX_goal_sunset_awaken
     x = 6
     y = -1
 
@@ -6537,6 +6537,7 @@ shared_focus = {
 	mutually_exclusive = { focus = SOL_last_grover }
 	available = {
 		is_subject = no
+		NOT = { has_global_flag = GRI_grover_vi_dead }
 		GRD = {
 			all_cores_owned_by_ROOT_or_subject = yes
 			NOT = { has_country_leader = { character = GRI_emperor_grover_vi ruling_only = yes } }
