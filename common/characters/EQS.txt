@@ -1,6 +1,7 @@
 characters={
 	EQS_prince_blueblood={
 		name= EQS_prince_blueblood
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/EQS/Blueblood.tga"
@@ -116,6 +117,7 @@ characters={
 	}
 	EQS_princess_celestia={
 		name=EQS_princess_celestia
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="GFX_CelestiaPortrait"
@@ -164,6 +166,7 @@ characters={
 	}
 	EQS_princess_luna = {
 		name = EQS_princess_luna
+		can_be_captured = no
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/EQS/Luna.tga"
@@ -201,6 +204,7 @@ characters={
 	}
 	EQS_soarin={
 		name=EQS_soarin
+		can_be_captured = no
 		portraits={
 			army={
 				large="gfx/leaders/EQS/Soarin.tga"
@@ -220,6 +224,7 @@ characters={
 	}
 	EQS_fast_clip={
 		name=EQS_fast_clip
+		can_be_captured = no
 		portraits={
 			army={
 				large="gfx/leaders/EQS/FastClip.tga"
@@ -239,6 +244,7 @@ characters={
 	}
 	EQS_whiplash={
 		name=EQS_whiplash
+		can_be_captured = no
 		portraits={
 			army={
 				large="gfx/leaders/EQS/Whiplash.tga"
@@ -420,6 +426,7 @@ characters={
 	}
 	EQS_twilight_sparkle = {
 		name = EQS_twilight_sparkle
+		can_be_captured = no
 		portraits = {
 			civilian = {
 				large="gfx/leaders/CRY/Twilight.tga"
@@ -592,6 +599,7 @@ characters={
 	#Fuck you Paradox
 	EQS_sunrise_sparkle = {
 		name = EQS_SOL_evil_twilight_sparkle
+		can_be_captured = no
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/EQS/Sunrise_Sparkle_new.tga"
@@ -1114,6 +1122,7 @@ characters={
 	}
 	EQS_rainbowdash = {
 		name = EQS_rainbowdash
+		can_be_captured = no
 		portraits = {
 			army = {
 				small = "GFX_idea_EQS_rainbow_dash"
@@ -1653,6 +1662,7 @@ characters={
 	}
 	EQS_fizzlepop = {
 		name = EQS_fizzlepop
+		can_be_captured = no
 		portraits = {
 			army = {
 				small = "GFX_idea_EQS_fizzlepop"
@@ -1814,6 +1824,7 @@ characters={
 
 	EQS_fluttershy = {
 		name = EQS_fluttershy
+		can_be_captured = no
 		portraits = {
 			army = {
 				large = GFX_portrait_EQS_fluttershy
@@ -2265,6 +2276,7 @@ characters={
 
 	EQS_sunset_shimmer = {
 		name = EQS_sunset_shimmer
+		can_be_captured = no
 		portraits = {
 			army = {
 				large = "gfx/leaders/EQS/Sunset.tga"
@@ -2355,6 +2367,7 @@ characters={
 	}
 	EQS_SOL_aurora_shinespark = {
 		name = EQS_SOL_aurora_shinespark
+		can_be_captured = no
 		portraits = {
 			army = {
 				large = "gfx/leaders/SOL/Aurora_Shinespark.tga"
@@ -2766,6 +2779,7 @@ characters={
 	}
 	EQS_SOL_arcane_nova = {
 		name = EQS_SOL_arcane_nova
+		can_be_captured = no
 		portraits = {
 			army = {
 				large = "gfx/leaders/EQC/ArcaneNovaNew.tga"
@@ -2936,6 +2950,7 @@ characters={
 	}
 	EQS_applejack = {
 		name = EQS_applejack
+		can_be_captured = no
 		portraits = {
 			army = {
 				large = "gfx/leaders/EQS/Applejack.dds"
@@ -3102,6 +3117,7 @@ characters={
 	}
 	EQS_pinkie_pie = {
 		name = EQS_pinkie_pie
+		can_be_captured = no
 		portraits = {
 			army = {
 				large = "gfx/leaders/EQS/PinkiePie.tga"
@@ -3129,6 +3145,7 @@ characters={
 	}
 	EQS_caltrop_decay = {
 		name = EQS_caltrop_decay
+		can_be_captured = no
 		portraits = {
 			army = {
 				large = "gfx/leaders/EQS/Gamma.tga"

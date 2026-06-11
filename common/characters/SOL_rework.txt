@@ -1,6 +1,7 @@
 characters = {
     EQS_zephyr_breeze = {
         name = EQS_zephyr_breeze
+		can_be_captured = no
         portraits = {
 			army = {
 				large = "gfx/leaders/EQS/Zephyr_Breeze.tga"
@@ -107,6 +108,7 @@ characters = {
     }
     EQS_Novus_Flux = {
 		name = EQS_Novus_Flux
+		can_be_captured = no
 		gender = female
 		portraits = {
 			army = {
@@ -151,6 +153,7 @@ characters = {
 	}
 	EQS_Nova_Glow = {
 		name = EQS_Nova_Glow
+		can_be_captured = no
 		gender = female
 		portraits = {
 			army = {
