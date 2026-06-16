@@ -14938,6 +14938,20 @@ country_event = { #Event to trigger the civil war if Daybreaker is too harsh
     }
 }
 
+country_event = { #Daybreaker fights tooth and nail against an onslaught of soldiers, but is almost captured before she retreats, given that she's basically impossible to catch due to being an all-powerful alicorn
+    id = solarreworked.549
+    title = solarreworked.549.t
+    desc = solarreworked.549.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.549"}
+
+    is_triggered_only = yes
+
+    option = { #Well, so much for that.
+        name = solarreworked.549.a
+    }
+}
+
 country_event = { #Master hidden event for flavour events. Removes all trigger block requirements, allows for better control over flavour event triggering
     id = solarreworked.599
     hidden = yes
