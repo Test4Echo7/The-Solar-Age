@@ -570,4 +570,21 @@ leader_traits = {
 
         ai_will_do = { factor = 1 }
     }
+
+    ###SSSSSSSSSSSSSSSSSSSHHHHHHHHHHHHHHHHHHHHHHHHHHHH###
+    game_DM = {
+        random = no
+        political_power_gain = 3
+        stability_factor = 1
+        war_support_factor = 1
+        production_speed_buildings_factor = 2
+        army_attack_factor = 1
+        army_defence_factor = 1
+        army_speed_factor = 5
+        breakthrough_factor = 2
+        industrial_capacity_dockyard = 1.5
+        industrial_capacity_factory = 1.5
+        factory_energy_consumption = -0.8
+        conscription = 1
+    }
 }

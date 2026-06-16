@@ -13515,20 +13515,67 @@ country_event = { #Hidden event that will move all foreign characters to their r
     is_triggered_only = yes
 
     option = {
-        GRI_daybreaker = { set_nationality = GRD }
-        GRI_trinary_scribble = { set_nationality = GRD }
-        GRI_gratuity = { set_nationality = GRD }
-        CRY_triplicate = { set_nationality = CRY }
-        CRY_morning_mist = { set_nationality = CRY }
-        CRY_evening_shower = { set_nationality = CRY }
-        CRY_nightshade = { set_nationality = CRY }
-        CRY_mercy = { set_nationality = CRY }
-        CRY_beryl_scabbard = { set_nationality = CRY }
-        EQC_full_band = { set_nationality = EQC }
-        EQC_triple_strike = { set_nationality = EQC }
-        EQC_long_cast = { set_nationality = EQC }
-        EQC_dot_form = { set_nationality = EQC }
-        EQC_sharp_treble = { set_nationality = EQC }
+        if = {
+            limit = { NOT = { has_country_flag = EQS_load_finickiness } }
+            GRI_daybreaker = { set_nationality = GRD }
+            GRI_trinary_scribble = { set_nationality = GRD }
+            GRI_gratuity = { set_nationality = GRD }
+            CRY_triplicate = { set_nationality = CRY }
+            CRY_morning_mist = { set_nationality = CRY }
+            CRY_evening_shower = { set_nationality = CRY }
+            CRY_nightshade = { set_nationality = CRY }
+            CRY_mercy = { set_nationality = CRY }
+            CRY_beryl_scabbard = { set_nationality = CRY }
+            EQC_full_band = { set_nationality = EQC }
+            EQC_triple_strike = { set_nationality = EQC }
+            EQC_long_cast = { set_nationality = EQC }
+            EQC_dot_form = { set_nationality = EQC }
+            EQC_sharp_treble = { set_nationality = EQC }
+            EQS_discord = { set_nationality = ZZZ }
+        }
+        if = {
+            limit = { has_country_flag = EQS_load_finickiness }
+            every_possible_country = {
+                limit = {
+                    has_character = EQS_discord
+                }
+                promote_character = {
+                    character = EQS_discord
+                    ideology = anarchism
+                }
+                promote_character = {
+                    character = EQS_discord
+                    ideology = celestial_cult
+                }
+                promote_character = {
+                    character = EQS_discord
+                    ideology = anarchist_communism
+                }
+                promote_character = {
+                    character = EQS_discord
+                    ideology = harmonic_libertarianism
+                }
+            }
+        }
+    }
+
+    after = {
+        if = {
+            limit = {
+                NOT = { has_country_flag = EQS_load_finickiness }
+            }
+            set_country_flag = EQS_load_finickiness
+            country_event = {
+                id = solarreworked.520
+                hours = 1
+            }
+        }
+        else_if = {
+            limit = {
+                has_country_flag = EQS_load_finickiness
+            }
+            clr_country_flag = EQS_load_finickiness
+        }
     }
 }
 

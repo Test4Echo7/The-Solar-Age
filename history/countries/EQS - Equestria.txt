@@ -408,6 +408,7 @@ recruit_character = EQS_smoke_signal
 recruit_character = EQS_luminous_blade
 recruit_character = EQS_magpie
 recruit_character = EQS_dyx
+recruit_character = EQS_discord
 #Foreign characters
 recruit_character = CRY_nightshade
 recruit_character = CRY_morning_mist

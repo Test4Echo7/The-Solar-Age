@@ -1272,4 +1272,37 @@ characters = {
 			visible = { has_country_flag = SOL_easter_egg_time }
 		}
 	}
+	EQS_discord = {
+		name = EQS_discord
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EQS/grand_conspiracy.tga"
+			}
+		}
+
+		country_leader = {
+			expire="1965.1.1"
+			ideology=anarchism
+			traits={ game_DM }
+			desc=hello_there
+		}
+		country_leader = {
+			expire="1965.1.1"
+			ideology=celestial_cult
+			traits={ game_DM }
+			desc=hello_there
+		}
+		country_leader = {
+			expire="1965.1.1"
+			ideology=anarchist_communism
+			traits={ game_DM }
+			desc=hello_there
+		}
+		country_leader = {
+			expire="1965.1.1"
+			ideology=harmonic_libertarianism
+			traits={ game_DM }
+			desc=hello_there
+		}
+	}
 }
