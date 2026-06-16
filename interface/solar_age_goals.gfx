@@ -716,8 +716,8 @@ SpriteTypes = {
         texturefile = "gfx/interface/goals/EQS/airfields2.tga"
     }
     SpriteType = {
-        name = GFX_goal_canterbbean_grinder
-        texturefile = "gfx/interface/goals/EQS/canterbbean_grinder.tga"
+        name = GFX_goal_canteribbean_grinder
+        texturefile = "gfx/interface/goals/EQS/canteribbean_grinder.tga"
     }
     SpriteType = {
         name = GFX_goal_vanhoover_stations

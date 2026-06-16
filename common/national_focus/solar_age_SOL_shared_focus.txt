@@ -11956,11 +11956,11 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = SOL_canterribean_grinder
+	id = SOL_canteribbean_grinder
 	x = -2
 	y = 2
 	relative_position_id = Ministry_of_defense
-	icon = GFX_goal_canterribean_grinder
+	icon = GFX_goal_canteribbean_grinder
 
 	cost = 4
 	prerequisite = { focus = Ministry_of_defense }

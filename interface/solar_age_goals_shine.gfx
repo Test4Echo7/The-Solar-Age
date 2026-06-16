@@ -1337,7 +1337,7 @@ SpriteTypes = {
 		legacy_lazy_load = no
 	}
 	SpriteType = {
-		name = "GFX_goal_firm_but_far_new_shine"
+		name = "GFX_goal_firm_but_fair_new_shine"
 		texturefile = "gfx/interface/goals/EQS/firm_but_fair.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -1586,10 +1586,10 @@ SpriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_empress_knows_best_new_shine"
-		texturefile = "gfx/interface/goals/EQS/empress_knows_best_new.tga"
+		texturefile = "gfx/interface/goals/EQS/empress_knows_best.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/empress_knows_best_new.tga"
+			animationmaskfile = "gfx/interface/goals/EQS/empress_knows_best.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1602,7 +1602,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/empress_knows_best_new.tga"
+			animationmaskfile = "gfx/interface/goals/EQS/empress_knows_best.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -5458,11 +5458,11 @@ SpriteTypes = {
 		legacy_lazy_load = no
 	}
 	SpriteType = {
-		name = "GFX_goal_canterbbean_grinder_shine"
-		texturefile = "gfx/interface/goals/EQS/canterbbean_grinder.tga"
+		name = "GFX_goal_canteribbean_grinder_shine"
+		texturefile = "gfx/interface/goals/EQS/canteribbean_grinder.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/canterbbean_grinder.tga"
+			animationmaskfile = "gfx/interface/goals/EQS/canteribbean_grinder.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -5475,7 +5475,7 @@ SpriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EQS/canterbbean_grinder.tga"
+			animationmaskfile = "gfx/interface/goals/EQS/canteribbean_grinder.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -7658,7 +7658,7 @@ SpriteTypes = {
 		legacy_lazy_load = no
 	}
 	SpriteType = {
-		name = "GFX_goal_new_threats_without_shine"
+		name = "GFX_goal_threats_without_shine"
 		texturefile = "gfx/interface/goals/EQS/threats_without.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
