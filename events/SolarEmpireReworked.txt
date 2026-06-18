@@ -9849,8 +9849,7 @@ country_event = {
         name = solarreworked.799.a
         custom_effect_tooltip = SOL_flashback_tt
         hidden_effect = {
-            #ED_start_ominous_white = yes
-            ED_start_dialogue_gui = yes
+            ED_start_ominous_white = yes
         }
     }
 }

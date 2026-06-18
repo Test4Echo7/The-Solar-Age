@@ -11,4 +11,20 @@ spriteTypes = {
         name = GFX_solar_age_dialogue_sunset
         texturefile = "gfx/interface/gui/sunset.tga"
     }
+    spriteType = {
+        name = GFX_solar_age_dialogue_celestia
+        texturefile = "gfx/interface/gui/celestia.tga"
+    }
+    spriteType = {
+        name = GFX_solar_age_dialogue_celestia_2
+        texturefile = "gfx/interface/gui/celestia_2.tga"
+    }
+    spriteType = {
+        name = GFX_solar_age_dialogue_celestia_3
+        texturefile = "gfx/interface/gui/celestia_3.tga"
+    }
+    spriteType = {
+        name = GFX_solar_age_dialogue_daybreaker
+        texturefile = "gfx/interface/gui/daybreaker.tga"
+    }
 }

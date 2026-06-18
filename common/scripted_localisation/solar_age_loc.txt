@@ -443,6 +443,13 @@ defined_text = {
 		trigger = {
 			OR = {
 				check_variable = { dial_vv = 1 }
+			}
+		}
+		localization_key = SOL_character_daybreaker
+	}
+	text = {
+		trigger = {
+			OR = {
 				check_variable = { dial_vv = 3 }
 				check_variable = { dial_vv = 7 }
 				check_variable = { dial_vv = 15 }
@@ -619,6 +626,13 @@ defined_text = {
 		trigger = {
 			OR = {
 				check_variable = { dial_vv = 1 }
+			}
+		}
+		localization_key = GFX_solar_age_dialogue_daybreaker
+	}
+	text = {
+		trigger = {
+			OR = {
 				check_variable = { dial_vv = 3 }
 				check_variable = { dial_vv = 7 }
 				check_variable = { dial_vv = 15 }
@@ -629,11 +643,25 @@ defined_text = {
 				check_variable = { dial_vv = 39 }
 				check_variable = { dial_vv = 42 }
 				check_variable = { dial_vv = 58 }
+			}
+		}
+		localization_key = GFX_solar_age_dialogue_celestia
+	}
+	text = {
+		trigger = {
+			OR = {
 				check_variable = { dial_vv = 60 }
+			}
+		}
+		localization_key = GFX_solar_age_dialogue_celestia_2
+	}
+	text = {
+		trigger = {
+			OR = {
 				check_variable = { dial_vv = 66 }
 			}
 		}
-		localization_key = GFX_EQC_AF_dialogue_box_portrait_celestia
+		localization_key = GFX_solar_age_dialogue_celestia_3
 	}
 	text = {
 		trigger = {
