@@ -562,6 +562,34 @@ on_actions = {
                     remove_dynamic_modifier = { modifier = SOL_thestral_resistance }
                 }
             }
+            if = {
+                limit = {
+                    FROM.FROM = {
+                        state = 1209
+                    }
+                    FROM = {
+                        tag = ZZZ
+                    }
+                    ROOT = {
+                        tag = EQS
+                    }
+                }
+                if = {
+                    limit = {
+                        NOT = { has_country_flag = EQS_chocolate_rain }
+                    }
+                    country_event = {
+                        id = solarreworked.42069
+                        hours = 6
+                    }
+                }
+                else = {
+                    country_event = {
+                        id = solarreworked.42067
+                        hours = 6
+                    }
+                }
+            }
         }
     }
     #ROOT = nation being puppeted, FROM = overlord

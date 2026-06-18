@@ -12186,7 +12186,7 @@ shared_focus = {
 	cost = 4
 	prerequisite = {
 		focus = SOL_airfields2
-		focus = SOL_canterribean_grinder
+		focus = SOL_canteribbean_grinder
 	}
 	available = {
 		OR = {
@@ -12228,7 +12228,7 @@ shared_focus = {
 	cost = 5
 	prerequisite = {
 		focus = SOL_airfields2
-		focus = SOL_canterribean_grinder
+		focus = SOL_canteribbean_grinder
 	}
 	available = {
 		OR = {

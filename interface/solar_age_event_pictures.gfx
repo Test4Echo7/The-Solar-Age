@@ -155,6 +155,10 @@ spriteTypes = {
         name = "GFX_event_pumpkin_swirl"
         texturefile = "gfx/event_pictures/event_pumpkin_swirl.tga"
     }
+    spriteType = {
+        name = "GFX_event_discord_shocked"
+        texturefile = "gfx/event_pictures/event_discord_shocked.tga"
+    }
     ###News Events###
     spriteType = {
         name = "GFX_news_daybreaker_fighting"

@@ -8598,6 +8598,34 @@ country_event = { #Culmination event for Daybreaker, where she has her reward (t
         add_stability = 0.25
         add_political_power = 250
         custom_effect_tooltip = SOL_conglaturation_a_winner_is_you_tt
+        if = {
+            limit = {
+                has_completed_focus = SOL_god_empress
+                any_other_country = {
+                    if = {
+                        limit = {
+                            NOT = { tag = ZZZ }
+                        }
+                        exists = yes
+                    }
+                }
+            }
+            custom_effect_tooltip = SOL_go_on_do_it_tt
+            hidden_effect = {
+                country_event = {
+                    id = solarreworked.798
+                    days = 7
+                }
+            }
+        }
+        else = {
+            hidden_effect = {
+                country_event = {
+                    id = solarreworked.799
+                    days = 7
+                }
+            }
+        }
     }
 }
 
@@ -9790,6 +9818,40 @@ country_event = {
 
     option = {
         name = solarreworked.498.a
+    }
+}
+
+country_event = {
+    id = solarreworked.798
+    title = solarreworked.798.t
+    desc = solarreworked.798.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.798"}
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.798.a
+        custom_effect_tooltip = SOL_almost_winnar_tt
+    }
+}
+
+country_event = {
+    id = solarreworked.799
+    title = solarreworked.799.t
+    desc = solarreworked.799.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.799"}
+    picture = GFX_event_daybreaker_triumphant
+
+    is_triggered_only = yes
+
+    option = { #Dialogue time
+        name = solarreworked.799.a
+        custom_effect_tooltip = SOL_flashback_tt
+        hidden_effect = {
+            #ED_start_ominous_white = yes
+            ED_start_dialogue_gui = yes
+        }
     }
 }
 
@@ -16565,4 +16627,40 @@ country_event = { ## Angy hippies
 			factor = 10
 		}
 	}
+}
+
+###Shhhhhh###
+country_event = {
+    id = solarreworked.42069
+    title = solarreworked.42069.t
+    desc = solarreworked.42069.d
+    picture = GFX_event_discord_shocked
+    immediate = {log = "[GetDateText]: [Root.GetName]: event solarreworked.42069"}
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.42069.a
+        set_country_flag = EQS_chocolate_rain
+        custom_effect_tooltip = EQS_it_never_fails_tt
+        hidden_effect = {
+            1209 = {
+                transfer_state_to = ZZZ
+            }
+        }
+    }
+}
+
+country_event = { #Runs 6 hours after taking 1209 to give it back to ZZZ
+    id = solarreworked.42067
+    hidden = yes
+    immediate = {log = "[GetDateText]: [Root.GetName]: event solarreworked.42067"}
+
+    is_triggered_only = yes
+
+    option = {
+        1209 = {
+            transfer_state_to = ZZZ
+        }
+    }
 }

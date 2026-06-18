@@ -1276,7 +1276,7 @@ characters = {
 		name = EQS_discord
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/EQS/grand_conspiracy.tga"
+				large = "gfx/leaders/EQS/cheeky_extra.tga"
 			}
 		}
 

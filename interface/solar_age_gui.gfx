@@ -1,0 +1,14 @@
+spriteTypes = {
+    spriteType = {
+        name = GFX_solar_age_dialogue_flurry
+        texturefile = "gfx/interface/gui/flurry.tga"
+    }
+    spriteType = {
+        name = GFX_solar_age_dialogue_cadance
+        texturefile = "gfx/interface/gui/cadance.tga"
+    }
+    spriteType = {
+        name = GFX_solar_age_dialogue_sunset
+        texturefile = "gfx/interface/gui/sunset.tga"
+    }
+}

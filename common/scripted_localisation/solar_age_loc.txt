@@ -414,3 +414,377 @@ defined_text = {
 		localization_key = [59.GetCapitalVictoryPointName]
 	}
 }
+
+###Secret God-Empress Ending###
+defined_text = {
+	name = AFOverrideText
+	text = {
+		trigger = {
+			has_country_flag = EQS_SOL_override_AF_2026_dialog
+		}
+		localization_key = EQS_AF_credits_override
+	}
+	text = {
+		localization_key = EQS_EQC_AF_credits
+	}
+}
+
+defined_text = {
+	name = EQS_SOL_solar_age_dialogue_scriptedloc
+
+	text = {
+		localization_key = SOL_solar_age_dialogue_[?dial_vv]
+	}
+}
+
+defined_text = {
+	name = EQS_SOL_solar_age_dialogue_characters_scriptedloc
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { dial_vv = 1 }
+				check_variable = { dial_vv = 3 }
+				check_variable = { dial_vv = 7 }
+				check_variable = { dial_vv = 15 }
+				check_variable = { dial_vv = 28 }
+				check_variable = { dial_vv = 30 }
+				check_variable = { dial_vv = 35 }
+				check_variable = { dial_vv = 37 }
+				check_variable = { dial_vv = 39 }
+				check_variable = { dial_vv = 42 }
+				check_variable = { dial_vv = 58 }
+				check_variable = { dial_vv = 60 }
+				check_variable = { dial_vv = 66 }
+			}
+		}
+		localization_key = EQS_EQC_AF_character_celestia
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { dial_vv = 6 }
+				check_variable = { dial_vv = 8 }
+				check_variable = { dial_vv = 21 }
+				check_variable = { dial_vv = 27 }
+				check_variable = { dial_vv = 29 }
+				check_variable = { dial_vv = 38 }
+				check_variable = { dial_vv = 40 }
+				check_variable = { dial_vv = 59 }
+				check_variable = { dial_vv = 67 }
+			}
+		}
+		localization_key = EQS_EQC_AF_character_luna
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { dial_vv = 2 }
+				check_variable = { dial_vv = 5 }
+				check_variable = { dial_vv = 9 }
+				check_variable = { dial_vv = 14 }
+				check_variable = { dial_vv = 31 }
+				check_variable = { dial_vv = 52 }
+				check_variable = { dial_vv = 54 }
+				check_variable = { dial_vv = 56 }
+				check_variable = { dial_vv = 65 }
+			}
+		}
+		localization_key = EQS_EQC_AF_character_discord
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { dial_vv = 10 }
+				check_variable = { dial_vv = 12 }
+				check_variable = { dial_vv = 23 }
+				check_variable = { dial_vv = 34 }
+				check_variable = { dial_vv = 36 }
+				check_variable = { dial_vv = 62 }
+			}
+		}
+		localization_key = EQS_EQC_AF_character_twilight
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { dial_vv = 19 }
+			}
+		}
+		localization_key = EQS_EQC_AF_character_shining_armor
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { dial_vv = 32 }
+				check_variable = { dial_vv = 33 }
+				check_variable = { dial_vv = 64 }
+			}
+		}
+		localization_key = EQS_EQC_AF_character_spike
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { dial_vv = 44 }
+				check_variable = { dial_vv = 46 }
+				check_variable = { dial_vv = 48 }
+			}
+		}
+		localization_key = EQS_EQC_AF_character_applejack
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { dial_vv = 43 }
+				check_variable = { dial_vv = 45 }
+				check_variable = { dial_vv = 47 }
+			}
+		}
+		localization_key = EQS_EQC_AF_character_rainbow_dash
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { dial_vv = 49 }
+				check_variable = { dial_vv = 51 }
+				check_variable = { dial_vv = 53 }
+			}
+		}
+		localization_key = EQS_EQC_AF_character_rarity
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { dial_vv = 50 }
+			}
+		}
+		localization_key = EQS_EQC_AF_character_pinkie_pie
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { dial_vv = 4 }
+				check_variable = { dial_vv = 55 }
+				check_variable = { dial_vv = 57 }
+			}
+		}
+		localization_key = EQS_EQC_AF_character_fluttershy
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { dial_vv = 22 }
+				check_variable = { dial_vv = 24 }
+				check_variable = { dial_vv = 26 }
+			}
+		}
+		localization_key = SOL_character_flurry
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { dial_vv = 17 }
+				check_variable = { dial_vv = 18 }
+				check_variable = { dial_vv = 20 }
+				check_variable = { dial_vv = 25 }
+			}
+		}
+		localization_key = SOL_character_cadance
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { dial_vv = 11 }
+				check_variable = { dial_vv = 13 }
+				check_variable = { dial_vv = 41 }
+				check_variable = { dial_vv = 61 }
+				check_variable = { dial_vv = 63 }
+			}
+		}
+		localization_key = SOL_character_sunset
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { dial_vv = 16 }
+			}
+		}
+		localization_key = EQS_EQC_AF_character_everyone
+	}
+}
+
+defined_text = {
+	name = EQS_SOL_solar_age_dialogue_characters_GFX_scriptedloc
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { dial_vv = 1 }
+				check_variable = { dial_vv = 3 }
+				check_variable = { dial_vv = 7 }
+				check_variable = { dial_vv = 15 }
+				check_variable = { dial_vv = 28 }
+				check_variable = { dial_vv = 30 }
+				check_variable = { dial_vv = 35 }
+				check_variable = { dial_vv = 37 }
+				check_variable = { dial_vv = 39 }
+				check_variable = { dial_vv = 42 }
+				check_variable = { dial_vv = 58 }
+				check_variable = { dial_vv = 60 }
+				check_variable = { dial_vv = 66 }
+			}
+		}
+		localization_key = GFX_EQC_AF_dialogue_box_portrait_celestia
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { dial_vv = 6 }
+				check_variable = { dial_vv = 8 }
+				check_variable = { dial_vv = 21 }
+				check_variable = { dial_vv = 27 }
+				check_variable = { dial_vv = 29 }
+				check_variable = { dial_vv = 38 }
+				check_variable = { dial_vv = 40 }
+				check_variable = { dial_vv = 59 }
+				check_variable = { dial_vv = 67 }
+			}
+		}
+		localization_key = GFX_EQC_AF_dialogue_box_portrait_luna
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { dial_vv = 2 }
+				check_variable = { dial_vv = 5 }
+				check_variable = { dial_vv = 9 }
+				check_variable = { dial_vv = 14 }
+				check_variable = { dial_vv = 31 }
+				check_variable = { dial_vv = 52 }
+				check_variable = { dial_vv = 54 }
+				check_variable = { dial_vv = 56 }
+				check_variable = { dial_vv = 65 }
+			}
+		}
+		localization_key = GFX_EQC_AF_dialogue_box_portrait_discord
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { dial_vv = 10 }
+				check_variable = { dial_vv = 12 }
+				check_variable = { dial_vv = 23 }
+				check_variable = { dial_vv = 34 }
+				check_variable = { dial_vv = 36 }
+				check_variable = { dial_vv = 62 }
+			}
+		}
+		localization_key = GFX_EQC_AF_dialogue_box_portrait_twilight
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { dial_vv = 19 }
+			}
+		}
+		localization_key = GFX_EQC_AF_dialogue_box_portrait_shining_armor
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { dial_vv = 32 }
+				check_variable = { dial_vv = 33 }
+				check_variable = { dial_vv = 64 }
+			}
+		}
+		localization_key = GFX_EQC_AF_dialogue_box_portrait_spike
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { dial_vv = 44 }
+				check_variable = { dial_vv = 46 }
+				check_variable = { dial_vv = 48 }
+			}
+		}
+		localization_key = GFX_EQC_AF_dialogue_box_portrait_applejack
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { dial_vv = 43 }
+				check_variable = { dial_vv = 45 }
+				check_variable = { dial_vv = 47 }
+			}
+		}
+		localization_key = GFX_EQC_AF_dialogue_box_portrait_rainbow_dash
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { dial_vv = 49 }
+				check_variable = { dial_vv = 51 }
+				check_variable = { dial_vv = 53 }
+			}
+		}
+		localization_key = GFX_EQC_AF_dialogue_box_portrait_rarity
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { dial_vv = 50 }
+			}
+		}
+		localization_key = GFX_EQC_AF_dialogue_box_portrait_pinkie_pie
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { dial_vv = 4 }
+				check_variable = { dial_vv = 55 }
+				check_variable = { dial_vv = 57 }
+			}
+		}
+		localization_key = GFX_EQC_AF_dialogue_box_portrait_fluttershy
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { dial_vv = 22 }
+				check_variable = { dial_vv = 24 }
+				check_variable = { dial_vv = 26 }
+			}
+		}
+		localization_key = GFX_solar_age_dialogue_flurry
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { dial_vv = 17 }
+				check_variable = { dial_vv = 18 }
+				check_variable = { dial_vv = 20 }
+				check_variable = { dial_vv = 25 }
+			}
+		}
+		localization_key = GFX_solar_age_dialogue_cadance
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { dial_vv = 11 }
+				check_variable = { dial_vv = 13 }
+				check_variable = { dial_vv = 41 }
+				check_variable = { dial_vv = 61 }
+				check_variable = { dial_vv = 63 }
+			}
+		}
+		localization_key = GFX_solar_age_dialogue_sunset
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { dial_vv = 16 }
+			}
+		}
+		localization_key = GFX_EQC_AF_dialogue_box_portrait_everyone
+	}
+}
