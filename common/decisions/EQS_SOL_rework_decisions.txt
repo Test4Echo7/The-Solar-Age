@@ -5676,17 +5676,6 @@ EQS_pan_pony_empire_category = {
                     id = 179
                     name = SOL_equus_super_capital
                 }
-                if = {
-                    limit = {
-                        has_country_flag = SOL_formed_super_equus
-                        has_country_flag = SOL_formed_super_griffonia
-                        has_country_flag = SOL_formed_super_zebrica
-                    }
-                    country_event = {
-                        id = solarreworked.799
-                        days = 1
-                    }
-                }
             }
         }
         ai_will_do = { factor = 1000 }
@@ -5800,17 +5789,6 @@ EQS_pan_pony_empire_category = {
                         }
                     }
                 }
-                if = {
-                    limit = {
-                        has_country_flag = SOL_formed_super_equus
-                        has_country_flag = SOL_formed_super_griffonia
-                        has_country_flag = SOL_formed_super_zebrica
-                    }
-                    country_event = {
-                        id = solarreworked.799
-                        days = 1
-                    }
-                }
             }
         }
         ai_will_do = { factor = 1000 }
@@ -5899,17 +5877,6 @@ EQS_pan_pony_empire_category = {
                                 traits = { daybreaker_god2 }
                             }
                         }
-                    }
-                }
-                if = {
-                    limit = {
-                        has_country_flag = SOL_formed_super_equus
-                        has_country_flag = SOL_formed_super_griffonia
-                        has_country_flag = SOL_formed_super_zebrica
-                    }
-                    country_event = {
-                        id = solarreworked.799
-                        days = 1
                     }
                 }
             }

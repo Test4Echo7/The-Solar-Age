@@ -739,6 +739,26 @@ on_actions = {
             log = "[GetDateText]: [ROOT.GetName]: on_peaceconference_ended solar_age"
             if = {
                 limit = {
+                    all_country = {
+                        if = {
+                            limit = {
+                                NOT = { tag = ZZZ }
+                                exists = yes
+                            }
+                            OR = {
+                                tag = EQS
+                                is_subject_of = EQS
+                            }
+                        }
+                    }
+                }
+                country_event = {
+                    id = solarreworked.799
+                    days = 7
+                }
+            }
+            if = {
+                limit = {
                     ROOT = {
                         tag = EQS
                         is_EQS_SOL = yes
