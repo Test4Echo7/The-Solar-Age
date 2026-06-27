@@ -839,6 +839,22 @@ SpriteTypes = {
         name = GFX_goal_royal_province
         texturefile = "gfx/interface/goals/EQS/royal_province.tga"
     }
+    SpriteType = {
+        name = GFX_goal_destroy_night_guard
+        texturefile = "gfx/interface/goals/EQS/destroy_night_guard.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_establish_crystal_legion
+        texturefile = "gfx/interface/goals/EQS/establish_crystal_legion.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_umbrum_military_industrial_parks
+        texturefile = "gfx/interface/goals/EQS/umbrum_military_industrial_parks.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_monarchy_compliance
+        texturefile = "gfx/interface/goals/EQS/monarchy_compliance.tga"
+    }
 
     ###EQC###
     SpriteType = {

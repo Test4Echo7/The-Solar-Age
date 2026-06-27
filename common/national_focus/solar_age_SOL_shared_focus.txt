@@ -8328,6 +8328,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	relative_position_id = SOL_royal_province
+	icon = GFX_goal_destroy_night_guard
 
 	cost = 5
 	prerequisite = { focus = SOL_royal_province }
@@ -8367,7 +8368,7 @@ joint_focus = {
 	id = SOL_umbrum_military_industrial_parks
 	x = 3
 	y = 1
-	icon = GFX_goal_rainbow_falls
+	icon = GFX_goal_umbrum_military_industrial_parks
 	relative_position_id = SOL_royal_province
 
 	cost = 6
@@ -8658,6 +8659,7 @@ joint_focus = {
 	x = 1
 	y = 1
 	relative_position_id = SOL_umbrum_military_industrial_parks
+	icon = GFX_goal_establish_crystal_legion
 
 	cost = 5
 	prerequisite = { focus = SOL_umbrum_military_industrial_parks }
@@ -8673,9 +8675,12 @@ joint_focus = {
 			is_subject = no
 			has_DB_ruler = yes
 			country_exists = CRY
+			command_power > 39.99
 		}
-		else = { is_subject_of = EQS }
-		command_power > 39.99
+		else = {
+			is_subject_of = EQS
+			EQS = { command_power > 39.99 }
+		}
 	}
 
 	completion_reward = {
@@ -8686,7 +8691,7 @@ joint_focus = {
 			limit = {
 				tag = CRY
 			}
-			add_command_power = -40
+			EQS = { add_command_power = -40 }
 			hidden_effect = {
 				division_template = {
 					name = "Imperial Insurance"
@@ -8760,6 +8765,7 @@ shared_focus = {
 	x = -1
 	y = 1
 	relative_position_id = SOL_family_visits
+	icon = GFX_goal_monarchy_compliance
 
 	cost = 10
 	prerequisite = { focus = SOL_family_visits }
