@@ -12673,14 +12673,17 @@ country_event = {
     option = { #A cruiser which can chase down any foe!
         name = solarreworked.500.a
         EQS_get_flagship_bc = yes
+        set_variable = { SOL_daybreak_variable = 1 }
     }
     option = { #A battleship which shall crush every enemy beneath its barrage!
         name = solarreworked.500.b
         EQS_get_flagship_bb = yes
+        set_variable = { SOL_daybreak_variable = 2 }
     }
     option = { #A carrier which shall swarm the skies with fighters!
         name = solarreworked.500.c
         EQS_get_flagship_cv = yes
+        set_variable = { SOL_daybreak_variable = 3 }
     }
     option = { #Perhaps we can delay things a bit longer.
         trigger = {
@@ -15024,6 +15027,95 @@ country_event = { #Daybreaker fights tooth and nail against an onslaught of sold
 
     option = { #Well, so much for that.
         name = solarreworked.549.a
+    }
+}
+
+country_event = { #Daybreak background event to start a production line if not at the level to do the most basic form of Daybreak
+    id = solarreworked.598
+    hidden = yes
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.598"}
+
+    is_triggered_only = yes
+
+    option = {
+        if = {
+            limit = {
+                check_variable = { SOL_daybreak_variable > 0 }
+            }
+            if = {
+                limit = {
+                    check_variable = { SOL_daybreak_variable = 1 }
+                    has_tech = improved_ship_hull_heavy
+                }
+                add_equipment_production = {
+                    amount = 1
+                    progress = 0.33
+                    requested_factories = 10
+                    industrial_manufacturer = mio:EQS_baltimare_organization
+                    equipment = {
+                        type = ship_hull_heavy_3
+                        version_name = "Daybreak Class"
+                        creator = EQS
+                    }
+                    name = "HMS Daybreak"
+                }
+                set_country_flag = SOL_built_daybreak
+            }
+            if = {
+                limit = {
+                    check_variable = { SOL_daybreak_variable = 2 }
+                    is_special_project_completed = sp:sp_naval_super_heavy_battleship
+                }
+                add_equipment_production = {
+                    amount = 1
+                    progress = 0.33
+                    requested_factories = 10
+                    industrial_manufacturer = mio:EQS_baltimare_organization
+                    equipment = {
+                        type = ship_hull_super_heavy_1
+                        version_name = "Daybreak Class"
+                        creator = EQS
+                    }
+                    name = "HMS Daybreak"
+                }
+                set_country_flag = SOL_built_daybreak
+            }
+            if = {
+                limit = {
+                    check_variable = { SOL_daybreak_variable = 3 }
+                    has_tech = improved_ship_hull_carrier
+                }
+                add_equipment_production = {
+                    amount = 1
+                    progress = 0.33
+                    requested_factories = 10
+                    industrial_manufacturer = mio:EQS_seaward_organization
+                    equipment = {
+                        type = ship_hull_carrier_2
+                        version_name = "Daybreak Class"
+                        creator = EQS
+                    }
+                    name = "HMS Daybreak"
+                }
+                set_country_flag = SOL_built_daybreak
+            }
+        }
+    }
+
+    after = {
+        if = {
+            limit = {
+                NOT = { has_country_flag = SOL_built_daybreak }
+            }
+            country_event = {
+                id = solarreworked.598
+                days = 1
+            }
+        }
+        else = {
+            clr_country_flag = SOL_built_daybreak
+            clear_variable = SOL_daybreak_variable
+        }
     }
 }
 

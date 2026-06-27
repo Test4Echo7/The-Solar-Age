@@ -459,17 +459,8 @@ EQS_get_flagship_bb = {
                 }
             }
         }
-        add_equipment_production = {
-            amount = 1
-            progress = 0.33
-            requested_factories = 10
-            industrial_manufacturer = mio:EQS_baltimare_organization
-            equipment = {
-                type = ship_hull_super_heavy_1
-                version_name = "Daybreak Class"
-                creator = EQS
-            }
-            name = "HMS Daybreak"
+        hidden_effect = {
+            country_event = solarreworked.598
         }
     }
 }
@@ -750,17 +741,8 @@ EQS_get_flagship_bc = {
                 }
             }
         }
-        add_equipment_production = {
-            amount = 1
-            progress = 0.33
-            requested_factories = 10
-            industrial_manufacturer = mio:EQS_baltimare_organization
-            equipment = {
-                type = ship_hull_heavy_4
-                version_name = "Daybreak Class"
-                creator = EQS
-            }
-            name = "HMS Daybreak"
+        hidden_effect = {
+            country_event = solarreworked.598
         }
     }
 }
@@ -1027,17 +1009,8 @@ EQS_get_flagship_cv = {
                 }
             }
         }
-        add_equipment_production = {
-            amount = 1
-            progress = 0.33
-            requested_factories = 10
-            industrial_manufacturer = mio:EQS_seaward_organization
-            equipment = {
-                type = ship_hull_carrier_2
-                version_name = "Daybreak Class"
-                creator = EQS
-            }
-            name = "HMS Daybreak"
+        hidden_effect = {
+            country_event = solarreworked.598
         }
     }
 }
