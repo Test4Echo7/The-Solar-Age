@@ -2501,7 +2501,7 @@
   SOL_retire_old_guard_desc:0 "The Crystal Army is filled with a number of ponies still resistant to the Empress, and they have caused insubordination within the armed forces many times already. They are no longer required. Chief among their conspirators is Prince Shining Armor. Although he is too influential to execute, he can be relieved of duty, and his lackeys along with him. They should be thankful they are not shot instead."
   SOL_rouse_godhood:0 "Awaken Flurry to Her Deity"
   SOL_rouse_godhood_desc:0 "The Empress's young niece, Princess Flurry Heart is a naturally-born alicorn. This rarity is unprecedented, and her talents have so far been wasted. Only somepony born into deity could have had such a miraculous creation. If Flurry Heart will not be instructed in her birthright, then there is only one pony who can do so: our God-Empress."
-  SOL_cadance_university:0 "Mi Amore Unversity"
+  SOL_cadance_university:0 "Mi Amore University"
   SOL_cadance_university_desc:0 "Education in the finer knowledge of Order and Harmony is lacking within [CRY.GetNameDef]. Establishing a new university, ostensibly dedicated to Princess Cadance will further draw in minds, where they can be corrected to understand the struggle that everypony is, and how they must defend the Empress with their last breath."
   SOL_polished_armor_arsenals:0 "Polished Armor Arsenals"
   SOL_polished_armor_arsenals_desc:0 "With some of the highest concentration of magical crystals on Equus, [CRY.GetNameDef] is ripe for experimentation and improvement of old magical weapon designs. To help safeguard the Empress, grants shall be given for establishing new manufacturing concerns, so that the weapons that fight for Harmony may bring as much Order to the world as possible."
