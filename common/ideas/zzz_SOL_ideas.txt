@@ -2059,7 +2059,7 @@ ideas = {
 			modifier = {
 				coordination_bonus = 0.05
 			}
-			equipment_bonus = { artillery = { max_organisation = 5 defense = 0.1 instant = yes } }
+			equipment_bonus = { artillery = { ap_attack = 0.5 defense = 0.1 instant = yes } }
 		}
 		SOL_artillery_safety_removals = {
 			equipment_bonus = { artillery = { soft_attack = 0.1 reliability = -0.05 instant = yes } }
