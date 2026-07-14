@@ -12816,6 +12816,7 @@ shared_focus = {
 			uses = 1
 			category = land_doctrine
 		}
+		add_ideas = SOL_old_school_thought
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH }
 }
@@ -12978,6 +12979,7 @@ shared_focus = {
 			uses = 1
 			category = land_doctrine
 		}
+		add_ideas = SOL_hoof_of_iron
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH }
 }
@@ -13126,6 +13128,7 @@ shared_focus = {
 			uses = 1
 			category = land_doctrine
 		}
+		add_ideas = SOL_chosen_workponies
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH }
 }
@@ -13177,12 +13180,7 @@ shared_focus = {
 			folder = land
 			name = SOL_operational_art
 		}
-		add_doctrine_cost_reduction = {
-			name = cat_mass_assault
-			cost_reduction = 0.5
-			uses = 1
-			category = cat_mass_assault
-		}
+		add_ideas = SOL_artistic_license
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH }
 }
@@ -13313,6 +13311,13 @@ shared_focus = {
 			cost_reduction = 0.33
 			uses = 1
 			category = land_doctrine
+		}
+		add_ideas = SOL_pony_advantage
+		hidden_effect = {
+			set_technology = {
+				SOL_pony_advantage_tech = 1
+				popup = no
+			}
 		}
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH }

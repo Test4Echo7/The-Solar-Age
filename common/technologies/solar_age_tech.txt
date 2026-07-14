@@ -5,8 +5,8 @@ technologies = {
 		allow = { always = no }
 
 		unicorn_company = {
-			soft_attack = 0.25
-			breakthrough = 0.2
+			soft_attack = 0.45
+			breakthrough = 0.25
 		}
 	}
 	SOL_magic_laden_explosives_tech = {
@@ -14,7 +14,7 @@ technologies = {
 		allow = { always = no }
 
 		unicorn_company = {
-			soft_attack = 0.1
+			soft_attack = 0.25
 		}
 	}
 	SOL_self_improvement_programs_tech = {
@@ -22,7 +22,16 @@ technologies = {
 		allow = { always = no }
 
 		unicorn_company = {
-			defense = 0.15
+			defense = 0.25
+		}
+	}
+	SOL_pony_advantage_tech = {
+		research_cost = 1
+		allow = { always = no }
+
+		unicorn_company = {
+			max_strength = 10
+			max_organisation = 15
 		}
 	}
 	SOL_evoker_legions_tech = {
@@ -30,8 +39,8 @@ technologies = {
 		allow = { always = no }
 
 		unicorn_company {
-			soft_attack = 0.4
-			breakthrough = 0.25
+			soft_attack = 0.65
+			breakthrough = 0.35
 		}
 	}
 	EQS_nurse_redheart_trickleback = {
@@ -55,7 +64,7 @@ technologies = {
 	SOL_solarist_necromancy = {
 		category_all_infantry = {
 			casualty_trickleback = 0.025
-			max_organisation = -0.1
+			max_organisation = -10
 		}
 	}
 
@@ -126,8 +135,8 @@ technologies = {
 			soft_attack = 0.15
 		}
 		unicorn_company = {
-			soft_attack = 0.4
-			hard_attack = 0.4
+			soft_attack = 0.65
+			hard_attack = 0.65
 		}
 	}
 	EQS_portable_solar_panels = {
