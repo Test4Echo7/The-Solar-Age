@@ -429,6 +429,9 @@ shared_focus = {
 				instant_build = yes
 			}
 		}
+		mio:EQS_wonderbolt_concern_organization = {
+			add_mio_funds = 1000
+		}
 		if = {
             limit = {
                 has_dlc = "By Blood Alone"
@@ -724,7 +727,7 @@ shared_focus = {
 shared_focus = {
 	id = manehattan_line
 	icon = GFX_goal_generic_construct_infrastructure
-	cost = 6
+	cost = 5
 	ai_will_do = { factor = 70 }
 	prerequisite = {
 		focus = mil_industry_fillydelphia
@@ -886,7 +889,7 @@ shared_focus = {
 shared_focus = {
 	id = magical_crypto_machines
 	icon = GFX_focus_Computer_2
-	cost = 10.00
+	cost = 8
 	ai_will_do = { factor = 75 }
 	prerequisite = {
 		focus = industry_las_pegasus
@@ -1240,6 +1243,14 @@ shared_focus = {
 	icon = GFX_goal_generic_changeling
 	cost = 6
 	ai_will_do = { factor = 70 }
+	available = {
+		CHN = {
+			OR = {
+				has_added_tension_amount > 5
+				has_war = yes
+			}
+		}
+	}
 	prerequisite = {
 		focus = Ministry_of_defense
 	}

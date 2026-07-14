@@ -645,6 +645,9 @@
   EQS_caffeine_tt:0 "Sleep? Who needs sleep?!"
   EQS_pordox_intarct_tt:0 "Our §Yflame tanks§! will gain an additional §G+5%§! attack bonus in §Yurban§!, §Yforested§!, §Yjungle§!, and §Yfortified§! environments."
   EQS_pordox_intarcter_tt:0 "Our §Yflame tanks§! will gain an additional §G+5%§! attack bonus in §Yplains§!, §Yhills§!, §Ydesert§!, and §Ymarshy§! environments."
+  EQS_dont_miss_out_tt:0 "As we did not complete the focus §YSpitfire Research§! before §ODaybreaker§! ascended, we may gain the following:"
+  EQS_gold_star_tt:0 "Since we did not complete the focus §YTimberwolf Research§! before the §OSolar Empire§! was declared, we may gain the following:"
+  EQS_go_big_or_go_home_tt:0 "If we complete this focus after finishing the §YLand Cruiser§! special project, we will gain:"
   ###Last one in the chain. Remove comment later###
   SOL_go_on_do_it_tt:0 "§RBut what if she could have a bit more?§!"
   SOL_flashback_tt:0 "§YAnd the world fades to white...§!"

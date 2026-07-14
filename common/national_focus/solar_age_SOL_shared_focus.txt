@@ -15943,6 +15943,9 @@ shared_focus = {
 				has_dlc = "By Blood Alone"
 				NOT = { has_completed_focus = Spitfire_research }
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = EQS_dont_miss_out_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
 			if = {
 				limit = {
 					has_tech = improved_small_airframe
@@ -16114,10 +16117,17 @@ shared_focus = {
 			category = cat_anti_tank
 		}
 		add_ideas = SOL_timberwolf_research
+		mio:EQS_shoof_organization = {
+			add_mio_funds = 2500
+		}
 		if = {
 			limit = {
 				NOT = { has_completed_focus = Matilda_research }
+				has_dlc = "No Step Back"
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = EQS_gold_star_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = EQS_Timberwolf_tooltip
 			if = {
 				limit = {
@@ -16487,20 +16497,45 @@ shared_focus = {
 				amount = 6
 			}
 		}
+		mio:EQS_sirius_organization = {
+			add_mio_funds = 2500
+		}
 		if = {
 			limit = { has_dlc = "No Step Back" }
 			add_tech_bonus = {
-				name = super_heavy_bonus
+				name = SOL_project_starscream
 				uses = 1
 				bonus = 1.25
 				ahead_reduction = 2
 				technology = super_heavy_tank_chassis_a
 				technology = super_heavy_tank_chassis_b
 			}
+			if = {
+				limit = {
+					has_tech = super_heavy_tank_chassis_a
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				create_equipment_variant = {
+					name = "Crimson Comet"
+					type = super_heavy_tank_chassis_1
+					modules = {
+						turret_type_slot = tank_super_heavy_four_man_tank_turret
+						main_armament_slot = tank_super_heavy_cannon
+						special_type_slot_1 = tank_radio_1
+						special_type_slot_2 = sloped_armor
+						suspension_type_slot = tank_christie_suspension
+						armor_type_slot = tank_welded_armor
+						engine_type_slot = tank_gasoline_engine
+					}
+					upgrades = {
+						tank_nsb_armor_upgrade = 4
+					}
+				}
+			}
 		}
 		else = {
 			add_tech_bonus = {
-				name = super_heavy_bonus
+				name = SOL_project_starscream
 				uses = 1
 				bonus = 1.25
 				ahead_reduction = 2
@@ -16508,18 +16543,62 @@ shared_focus = {
 				technology = super_heavy_tank_a
 			}
 		}
+		custom_effect_tooltip = generic_skip_one_line_tt
 		if = {
 			limit = { has_dlc = "Gotterdammerung" }
 			add_tech_bonus = {
-				name = land_cruiser_bonus
+				name = SOL_project_starscream
 				uses = 1
 				bonus = 1.5
-				ahead_reduction = 0.5
+				ahead_reduction = 1
 				technology = sp_armored_lc_naval_engine_conversion_tech
 				technology = sp_armored_lc_transmission_improvements_tech
 				technology = sp_armored_lc_specialized_field_manuals_tech
 				technology = sp_armored_lc_high_impact_obliterator_cannon_tech
 				technology = sp_armored_lc_weapon_fire_control_tech
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					is_special_project_completed = sp:sp_land_land_cruiser
+				}
+				create_equipment_variant = {
+					name = "Sunflare"
+					type = land_cruiser_chassis_1
+					modules = {
+						lc_main_armament_slot = lc_heavy_naval_guns
+						lc_secondary_armament_slot = lc_medium_naval_guns
+						lc_additional_armament_slot_1 = lc_light_anti_air_battery
+						lc_additional_armament_slot_2 = lc_high_velocity_cannon_turret
+						lc_special_features_slot_1 = lc_command_center
+						lc_special_features_slot_2 = lc_wet_ammunition_storage
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 3
+						tank_nsb_armor_upgrade = 4
+					}
+				}
+			}
+			else = {
+				custom_effect_tooltip = EQS_go_big_or_go_home_tt
+				effect_tooltip = {
+						create_equipment_variant = {
+						name = "Sunflare"
+						type = land_cruiser_chassis_1
+						modules = {
+							lc_main_armament_slot = lc_heavy_naval_guns
+							lc_secondary_armament_slot = lc_medium_naval_guns
+							lc_additional_armament_slot_1 = lc_light_anti_air_battery
+							lc_additional_armament_slot_2 = lc_high_velocity_cannon_turret
+							lc_special_features_slot_1 = lc_command_center
+							lc_special_features_slot_2 = lc_wet_ammunition_storage
+						}
+						upgrades = {
+							tank_nsb_engine_upgrade = 3
+							tank_nsb_armor_upgrade = 4
+						}
+					}
+				}
 			}
 		}
 	}

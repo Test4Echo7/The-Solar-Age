@@ -1778,7 +1778,7 @@ ideas = {
 		###Industry Spirits###
 		SOL_dedicated_ministry_of_work = {
 			modifier = {
-				production_factory_efficiency_gain_factor = 0.03
+				production_factory_efficiency_gain_factor = 0.075
 			}
 			research_bonus = {
 				industry = 0.05
@@ -1808,7 +1808,7 @@ ideas = {
 			}
 		}
 		SOL_timberwolf_research = {
-			equipment_bonus = { armor = { armor_value = 0.02 instant = yes } }
+			equipment_bonus = { armor = { armor_value = 0.075 instant = yes } }
 			research_bonus = { armor = 0.05 }
 		}
 		SOL_micromanaged_industry = {
