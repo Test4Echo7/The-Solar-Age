@@ -855,6 +855,30 @@ SpriteTypes = {
         name = GFX_goal_monarchy_compliance
         texturefile = "gfx/interface/goals/EQS/monarchy_compliance.tga"
     }
+    SpriteType = {
+        name = GFX_goal_appoint_economic_advisors
+        texturefile = "gfx/interface/goals/EQS/appoint_economic_advisors.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_cadance_university
+        texturefile = "gfx/interface/goals/EQS/cadance_university.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_family_visits
+        texturefile = "gfx/interface/goals/EQS/family_visits.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_investments_in_empire
+        texturefile = "gfx/interface/goals/EQS/investments_in_empire.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_rouse_godhood
+        texturefile = "gfx/interface/goals/EQS/rouse_godhood.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_update_northern_tactics
+        texturefile = "gfx/interface/goals/EQS/update_northern_tactics.tga"
+    }
 
     ###EQC###
     SpriteType = {

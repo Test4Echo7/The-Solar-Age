@@ -8449,7 +8449,7 @@ joint_focus = {
 	id = SOL_investments_in_empire
 	x = -1
 	y = 2
-	icon = GFX_goal_cry_factory_cel
+	icon = GFX_goal_investments_in_empire
 	relative_position_id = SOL_royal_province
 
 	cost = 6
@@ -8550,6 +8550,7 @@ shared_focus = {
 	x = -3
 	y = 2
 	relative_position_id = SOL_royal_province
+	icon = GFX_goal_family_visits
 
 	cost = 5
 	prerequisite = { focus = SOL_royal_province }
@@ -8575,6 +8576,7 @@ joint_focus = {
 	x = -1
 	y = 1
 	relative_position_id = SOL_umbrum_military_industrial_parks
+	icon = GFX_goal_update_northern_tactics
 
 	cost = 8
 	prerequisite = { focus = SOL_umbrum_military_industrial_parks }
@@ -8821,6 +8823,7 @@ joint_focus = {
 	x = 1
 	y = 1
 	relative_position_id = SOL_investments_in_empire
+	icon = GFX_goal_appoint_economic_advisors
 
 	cost = 6
 	prerequisite = { focus = SOL_investments_in_empire }
@@ -8938,6 +8941,7 @@ shared_focus = {
 	x = 0
 	y = 1
 	relative_position_id = SOL_monarchy_compliance
+	icon = GFX_goal_rouse_godhood
 
 	cost = 10
 	prerequisite = { focus = SOL_monarchy_compliance }
@@ -8991,6 +8995,7 @@ joint_focus = {
 	x = 1
 	y = 2
 	relative_position_id = SOL_family_visits
+	icon = GFX_goal_cadance_university
 
 	cost = 7
 	prerequisite = { focus = SOL_family_visits }
