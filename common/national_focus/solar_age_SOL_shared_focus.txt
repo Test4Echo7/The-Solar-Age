@@ -12811,10 +12811,10 @@ shared_focus = {
 			name = SOL_safest_methods
 		}
 		add_doctrine_cost_reduction = {
-			name = cat_grand_battle_plan
-			cost_reduction = 0.5
+			name = SOL_safest_methods
+			cost_reduction = 0.25
 			uses = 1
-			category = cat_grand_battle_plan
+			category = land_doctrine
 		}
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH }
@@ -12973,10 +12973,10 @@ shared_focus = {
 			name = SOL_hoof_of_empress
 		}
 		add_doctrine_cost_reduction = {
-			name = cat_superior_firepower
-			cost_reduction = 0.5
+			name = SOL_hoof_of_empress
+			cost_reduction = 0.25
 			uses = 1
-			category = cat_superior_firepower
+			category = land_doctrine
 		}
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH }
@@ -13035,7 +13035,7 @@ shared_focus = {
 			uses = 1
 			category = cat_mechanized_equipment
 			category = motorized_equipment
-			ahead_reduction = 0.5
+			ahead_reduction = 1
 		}
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH }
@@ -13118,13 +13118,13 @@ shared_focus = {
 			bonus = 0.2
 			days = 180
 			folder = land
-			name = SOL_imperial_work_service
+			name = SOL_imperial_workhorses
 		}
 		add_doctrine_cost_reduction = {
-			name = cat_mass_assault
-			cost_reduction = 0.5
+			name = SOL_imperial_workhorses
+			cost_reduction = 0.25
 			uses = 1
-			category = cat_mass_assault
+			category = land_doctrine
 		}
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH }
