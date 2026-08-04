@@ -879,6 +879,22 @@ SpriteTypes = {
         name = GFX_goal_update_northern_tactics
         texturefile = "gfx/interface/goals/EQS/update_northern_tactics.tga"
     }
+    SpriteType = {
+        name = GFX_goal_retire_old_guard
+        texturefile = "gfx/interface/goals/EQS/retire_old_guard.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_polished_armor_arsenals
+        texturefile = "gfx/interface/goals/EQS/polished_armor_arsenals.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_imperial_mind
+        texturefile = "gfx/interface/goals/EQS/imperial_mind.tga"
+    }
+    SpriteType = {
+        name = GFX_goal_imperial_guardian
+        texturefile = "gfx/interface/goals/EQS/imperial_guardian.tga"
+    }
 
     ###EQC###
     SpriteType = {

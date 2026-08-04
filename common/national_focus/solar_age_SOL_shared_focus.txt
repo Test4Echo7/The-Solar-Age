@@ -8832,6 +8832,7 @@ joint_focus = {
 	x = 0
 	y = 1
 	relative_position_id = SOL_update_northern_tactics
+	icon = GFX_goal_retire_old_guard
 
 	cost = 6
 	prerequisite = { focus = SOL_update_northern_tactics }
@@ -9002,6 +9003,7 @@ joint_focus = {
 	x = 0
 	y = 2
 	relative_position_id = SOL_establish_crystal_legion
+	icon = GFX_goal_polished_armor_arsenals
 
 	cost = 7
 	prerequisite = { focus = SOL_establish_crystal_legion }
@@ -9074,6 +9076,7 @@ joint_focus = {
 	x = 0
 	y = 2
 	relative_position_id = SOL_appoint_economic_advisors
+	icon = GFX_goal_imperial_mind
 
 	cost = 8
 	prerequisite = { focus = SOL_appoint_economic_advisors }
@@ -9123,6 +9126,7 @@ joint_focus = {
 	x = 0
 	y = 2
 	relative_position_id = SOL_retire_old_guard
+	icon = GFX_goal_imperial_guardian
 
 	cost = 8
 	prerequisite = { focus = SOL_retire_old_guard }
@@ -13768,10 +13772,10 @@ shared_focus = {
 			name = SOL_striking_battlefield
 		}
 		add_doctrine_cost_reduction = {
-			name = battlefield_support_bonus
+			name = SOL_striking_battlefield
 			uses = 1
-			cost_reduction = 0.5
-			category = cat_battlefield_support
+			cost_reduction = 0.25
+			category = air_doctrine
 		}
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH }
@@ -13804,10 +13808,10 @@ shared_focus = {
 			name = SOL_punishing_world
 		}
 		add_doctrine_cost_reduction = {
-			name = strategic_destruction_bonus
+			name = SOL_punishing_world
 			uses = 1
-			cost_reduction = 0.5
-			category = cat_strategic_destruction
+			cost_reduction = 0.25
+			category = air_doctrine
 		}
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH }
@@ -14625,7 +14629,7 @@ shared_focus = {
 				limit = {
 					16 = {
 						is_fully_controlled_by = ROOT
-						can_construct_building = nuclear_facility
+						can_build_facility_here = yes
 					}
 				}
 				16 = {
@@ -14908,11 +14912,11 @@ shared_focus = {
 			folder = naval
 			name = SOL_surrender_waves
 		}
-		add_doctrine_cost_reduction ={
-			name = base_strike_bonus
+		add_doctrine_cost_reduction = {
+			name = SOL_surrender_waves
 			uses = 1
-			cost_reduction = 0.5
-			category = cat_base_strike
+			cost_reduction = 0.25
+			category = naval_doctrine
 		}
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH }
@@ -14948,10 +14952,10 @@ shared_focus = {
 			name = SOL_crushing_sea
 		}
 		add_doctrine_cost_reduction = {
-			name = fleet_in_being_bonus
+			name = SOL_crushing_sea
 			uses = 1
-			cost_reduction = 0.5
-			category = cat_fleet_in_being
+			cost_reduction = 0.25
+			category = naval_doctrine
 		}
 	}
 	search_filters = { FOCUS_FILTER_AIRFORCE_BONUS }
@@ -15869,7 +15873,7 @@ shared_focus = {
 				limit = {
 					525 = {
 						is_fully_controlled_by = ROOT
-						can_construct_building = air_facility
+						can_build_facility_here = yes
 					}
 				}
 				525 = {
