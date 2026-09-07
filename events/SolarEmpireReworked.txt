@@ -5135,6 +5135,13 @@ country_event = {
                     logistics_skill = 3
                     desc = EQS_SOL_dawnbreak_shimmer_desc
                 }
+                remove_trait = { trait = sunset_shimmer_t }
+                if = {
+                    limit = {
+                        has_trait = offensive_doctrine
+                    }
+                    add_attack = 1
+                }
             }
             add_advisor_role = {
                 advisor = {
@@ -5145,7 +5152,6 @@ country_event = {
             }
             clr_character_flag = SOL_helping_twilight
         }
-        custom_effect_tooltip = sunset_shimmer_stats_tp
         mark_focus_tree_layout_dirty = yes
     }
 }
@@ -14596,7 +14602,7 @@ country_event = { #Event for the griffon liberation faction leader to propose re
         ai_chance = {
             factor = 0
         }
-        custom_effect_tooltip = SOL_no_fun_tt
+        custom_effect_tooltip = SOL_GRI_no_fun_tt
         add_political_power = 100
         add_stability = 0.05
     }
