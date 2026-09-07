@@ -1069,6 +1069,10 @@ SpriteTypes = {
         name = GFX_goal_threats_without
         texturefile = "gfx/interface/goals/EQS/threats_without.tga"
     }
+    SpriteType = {
+        name = GFX_goal_demoralization_campaigns
+        texturefile = "gfx/interface/goals/EQS/demoralization_campaigns.tga"
+    }
 
     ###Twiggy and Shimmy###
     SpriteType = {

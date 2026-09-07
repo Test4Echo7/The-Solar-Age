@@ -17319,6 +17319,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	relative_position_id = SOL_threats_without
+	icon = GFX_goal_demoralization_campaigns
 
 	cost = 4
 	prerequisite = { focus = SOL_threats_without }
