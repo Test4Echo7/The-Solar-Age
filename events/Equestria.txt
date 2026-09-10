@@ -7375,11 +7375,13 @@ country_event = { ### MANE SIX EVENT TRIGGER
 				limit = {
 					check_variable  = {
 						mane_six_event_counter = 4
+						SOL_flutters_counter < 6
 					}
 					has_full_control_of_state = 3
 					num_of_nukes < 1
 				}
-				country_event = equestria.177
+				#country_event = equestria.177 #Trigger this in Flutt's chain. Rewrite it, and a couple of other flavour events, or add onto RD's
+				country_event = solarreworked.8
 			}
 		}
 	}

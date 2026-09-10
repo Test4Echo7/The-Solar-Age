@@ -611,6 +611,168 @@ country_event = { #How should the supremacist elements in the military be handle
     }
 }
 
+country_event = { #Begin Flutbutt nuke chain. Reuse equestria.172
+    id = solarreworked.8
+    title = solarreworked.8.t
+    desc = solarreworked.8.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.8"}
+    picture = GFX_event_autumn_forest
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.8.a
+        add_to_variable = { SOL_flutters_counter = 1 }
+        hidden_effect = {
+            country_event = {
+                id = equestria.172
+                days = 60
+            }
+        }
+    }
+}
+
+country_event = {
+    id = solarreworked.9
+    title = solarreworked.9.t
+    desc = solarreworked.9.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.9"}
+    picture = GFX_event_exu_news
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.9.a
+        add_to_variable = { SOL_flutters_counter = 1 }
+        hidden_effect = {
+            country_event = {
+                id = equestria.172
+                days = 60
+            }
+        }
+    }
+}
+
+country_event = {
+    id = solarreworked.10
+    title = solarreworked.10.t
+    desc = solarreworked.10.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.10"}
+    picture = GFX_event_zebrica_3
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.10.a
+        add_to_variable = { SOL_flutters_counter = 1 }
+        hidden_effect = {
+            country_event = {
+                id = equestria.172
+                days = 60
+            }
+        }
+    }
+}
+
+country_event = {
+    id = solarreworked.11
+    title = solarreworked.11.t
+    desc = solarreworked.11.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.11"}
+    picture = GFX_event_eqc_nuclear_power
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.11.a
+        add_to_variable = { SOL_flutters_counter = 1 }
+        hidden_effect = {
+            country_event = {
+                id = equestria.172
+                days = 60
+            }
+        }
+    }
+}
+
+country_event = {
+    id = solarreworked.12
+    title = solarreworked.12.t
+    desc = solarreworked.12.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.12"}
+    picture = GFX_event_waste
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.12.a
+        add_to_variable = { SOL_flutters_counter = 1 }
+        hidden_effect = {
+            country_event = {
+                id = equestria.172
+                days = 60
+            }
+        }
+    }
+}
+
+country_event = {
+    id = solarreworked.13
+    title = solarreworked.13.t
+    desc = solarreworked.13.d
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.13"}
+    picture = GFX_event_mlp_movie_canterlot1
+
+    is_triggered_only = yes
+
+    option = {
+        name = solarreworked.13.a
+        ai_chance = {
+            factor = 1
+            modifier = {
+                OR = {
+                    has_country_flag = EQS_AI_SOLAR_EMPIRE
+                    has_country_flag = EQS_AI_HISTORICAL
+                    has_game_rule = {
+                        rule = EQS_ai_behavior
+                        option = SOLAR_EMPIRE
+                    }
+                    has_game_rule = {
+                        rule = EQS_ai_behavior
+                        option = HISTORICAL
+                    }
+                    is_historical_focus_on = yes
+                }
+                factor = 0
+            }
+        }
+        add_stability = 0.05
+        add_ideas = EQS_nukes_backed_by_words
+        hidden_effect = {
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = 0.05
+                tooltip_side = EQS_kalm
+            }
+        }
+    }
+    option = {
+        name = solarreworked.13.b
+        ai_chance = {
+            factor = 1
+        }
+        add_war_support = 0.05
+        add_ideas = EQS_words_backed_by_nukes
+        hidden_effect = {
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = -0.05
+                tooltip_side = EQS_angy
+            }
+        }
+    }
+}
+
 ###Opening Events###
 country_event = { #A soldier is on a patrol outside the palace and thinks about how his job is rather boring, and that he could be better serving elsewhere, but is surprised when Daybreaker breaks out of the castle to proclaim her ascension, and ponies' salvation is at hoof
     id = solarreworked.20
