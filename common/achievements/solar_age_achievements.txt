@@ -246,7 +246,7 @@ there_is_only_war = {
 
     happened = {
         is_EQS_SOL = yes
-        has_army_manpower = { size > 1500000 }
+        has_army_manpower = { size > 2000000 }
         has_completed_focus = SOL_god_empress
         EQS = {
             custom_trigger_tooltip = {
