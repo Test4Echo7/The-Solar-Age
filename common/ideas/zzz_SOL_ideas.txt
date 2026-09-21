@@ -1141,7 +1141,6 @@ ideas = {
 		###NLR Spirits###
 		SOL_nmm_prisoner = {
 			modifier = {
-				political_power_gain = -0.15
 				stability_factor = 0.075
 				war_support_factor = 0.035
 				fascism_drift = 0.01
@@ -1453,7 +1452,7 @@ ideas = {
 		}
 		SOL_showcased_element_bearers = {
 			modifier = {
-				political_power_gain = -0.5
+				political_power_gain = -0.3
 				army_morale_factor = 0.1
 				air_agility_factor = 0.05
 				heat_attrition_factor = -0.075
@@ -1464,7 +1463,7 @@ ideas = {
 		}
 		SOL_the_true_elements = {
 			modifier = {
-				political_power_gain = -0.35
+				political_power_gain = -0.2
 				army_morale_factor = 0.15
 				army_org_factor = 0.05
 			}

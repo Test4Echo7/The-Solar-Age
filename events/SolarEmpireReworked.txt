@@ -9549,6 +9549,7 @@ country_event = {
     option = {
         name = solarreworked.455.a
         clr_country_flag = SOL_block_continuity_snarl
+        clr_country_flag = SOL_mmmmmm_event_flavor
     }
 }
 
@@ -9617,6 +9618,7 @@ country_event = {
 
     option = {
         name = solarreworked.459.a
+        clr_country_flag = SOL_mmmmmm_event_flavor
     }
 }
 
@@ -9688,6 +9690,10 @@ country_event = {
     option = {
         name = solarreworked.464.a
     }
+
+    after = {
+        clr_country_flag = SOL_mmmmmm_event_flavor
+    }
 }
 
 country_event = {
@@ -9730,6 +9736,10 @@ country_event = {
     option = {
         name = solarreworked.467.a
     }
+
+    after = {
+        clr_country_flag = SOL_mmmmmm_event_flavor
+    }
 }
 
 country_event = {
@@ -9743,6 +9753,10 @@ country_event = {
 
     option = {
         name = solarreworked.468.a
+    }
+
+    after = {
+        clr_country_flag = SOL_mmmmmm_event_flavor
     }
 }
 
@@ -9972,6 +9986,10 @@ country_event = {
 
     option = {
         name = solarreworked.497.a
+    }
+
+    after = {
+        clr_country_flag = SOL_mmmmmm_event_flavor
     }
 }
 
@@ -15198,6 +15216,22 @@ country_event = { #Daybreaker fights tooth and nail against an onslaught of sold
     }
 }
 
+country_event = { #Debug to clear and set event targets, which hopefully now work in the scripted effects file
+    id = solarreworked.550
+    title = solarreworked.550.t
+    desc = solarreworked.550.d
+    picture = GFX_event_solarempire
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.550"}
+
+    is_triggered_only = yes
+
+    option = { #Well, so much for that.
+        name = solarreworked.550.a
+        clear_global_event_target = equestria
+        save_global_event_target_as = solar_empire
+    }
+}
+
 country_event = { #Daybreak background event to start a production line if not at the level to do the most basic form of Daybreak
     id = solarreworked.598
     hidden = yes
@@ -15346,8 +15380,8 @@ country_event = { #Master hidden event for flavour events. Removes all trigger b
         }
         else_if = {
             limit = {
-                has_country_flag = SOL_block_continuity_snarl
-                NOT = { has_country_flag = SOL_heretic_hunting }
+                NOT = { has_country_flag = SOL_block_continuity_snarl }
+                has_country_flag = SOL_heretic_hunting
             }
             country_event = solarreworked.302
             country_event = { #Solaris Inquistionis flavour event chain
@@ -16889,7 +16923,7 @@ country_event = { ## Angy hippies
 		}
 		hidden_effect = {
 			#modify_country_flag = { flag = celestia_evil_meter value = 4 }
-			set_country_flag = EQS_strikes_recently
+			set_country_flag = EQS_mutinies_recently
 			add_power_balance_value = {
 				id = EQS_sanity_bop
 				value = -0.04

@@ -181,6 +181,8 @@ EQS_SOL_wartime_change = {
 	clr_country_flag = manpower_laws_blocked
 	clr_country_flag = economic_laws_blocked
 	set_country_flag = SOL_dont_trigger_target_change
+	clear_global_event_target = equestria
+	save_global_event_target_as = solar_empire
 	if = {
 		limit = {
 			has_idea = alicorn_sisters
@@ -270,8 +272,6 @@ EQS_SOL_wartime_change = {
 
 	#set_country_flag = SOL_new_generals_flag
 	#set_party_name = { ideology = democratic long_name = EQS_republic_long name = EQS_republic }
-	save_global_event_target_as = solar_empire
-	clear_global_event_target = equestria
 	#set_politics = { ruling_party = fascism }
 	#add_popularity = {
 	#	ideology = fascism
@@ -481,6 +481,8 @@ EQS_SOL_civil_war = {
 	set_global_flag = daybreaker_spawned
 	set_global_flag = equestrian_civil_war_daybreaker
 	clr_country_flag = nightmare_moon
+	clear_global_event_target = equestria
+	save_global_event_target_as = solar_empire
 	#clr_country_flag = manpower_laws_blocked
 	#clr_country_flag = economic_laws_blocked
 	#if = {
@@ -548,8 +550,6 @@ EQS_SOL_civil_war = {
 		}
 	}
 	#create_faction_from_template = faction_template_harmony_pact_other_war_faction
-	save_global_event_target_as = solar_empire
-	clear_global_event_target = equestria
 	add_ideas = SOL_civil_war
 	add_ideas = SOL_harmonic_resistance_idea
 	add_stability = -0.1
@@ -1297,6 +1297,9 @@ EQS_NLR_civil_war = {
 			custom_effect_tooltip = selenite_stats_tp
 			set_global_flag = EQS_Selenite_created
 			EQS_NLR_celenite = { set_nationality = NLR }
+		}
+		EQS_magpie = {
+			set_nationality = NLR
 		}
 	}
 	NLR = {
