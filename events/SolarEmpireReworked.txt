@@ -2142,6 +2142,82 @@ country_event = {
     }
 }
 
+country_event = { #NLR Civil War event; sympathizer for NMM captured and believed to be attempting to assassinate Celestia
+    id = solarreworked.64
+    title = solarreworked.64.t
+    desc = solarreworked.64.d
+    picture = GFX_event_palace_hall
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.64"}
+
+    is_triggered_only = yes
+
+    option = { #There's only one punishment for assassins.
+        name = solarreworked.64.a
+        add_political_power = 50
+        hidden_effect = {
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = -0.03
+                tooltip_side = EQS_angy
+            }
+        }
+    }
+    option = { #We can rehabilitate her.
+        name = solarreworked.64.b
+        add_political_power = -50
+        hidden_effect = {
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = 0.03
+                tooltip_side = EQS_kalm
+            }
+        }
+    }
+
+    after = {
+        clr_country_flag = SOL_mmmmmm_event_flavor
+    }
+}
+
+country_event = { #NLR Civil War event; Fancy Pants comes in to say that negotiations with NLR for their surrender is taking longer than intended and Celestia can press for a position
+    id = solarreworked.67
+    title = solarreworked.67.t
+    desc = solarreworked.67.d
+    picture = GFX_event_mlp_movie_canterlot
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.67"}
+
+    is_triggered_only = yes
+
+    option = { #We won't budge on our position of Harmony.
+        name = solarreworked.67.a
+        add_stability = 0.03
+        add_war_support = -0.05
+        hidden_effect = {
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = 0.1
+                tooltip_side = EQS_kalm
+            }
+        }
+    }
+    option = { #The days of being reasonable are over.
+        name = solarreworked.67.b
+        add_stability = -0.05
+        add_war_support = 0.03
+        hidden_effect = {
+            add_power_balance_value = {
+                id = EQS_sanity_bop
+                value = -0.1
+                tooltip_side = EQS_angy
+            }
+        }
+    }
+
+    after = {
+        clr_country_flag = SOL_mmmmmm_event_flavor
+    }
+}
+
 ###Internal affairs###
 #country_event = { #Jet Set is completley surprised when a formation of Imperial ships comes to New Mareland, and hastily gets to the piers so that he can meet whoever the delegate is, who is Arcane Nova, and she and him have a tense confrontation before she states that she will be the one looking over him, to make sure that he is truly loyal.
 #    id = solarreworked.70
@@ -4431,6 +4507,9 @@ country_event = { #After Luna speaks with Twilight, Twilight summons her friends
                 days = 7
                 random_days = 7
             }
+            #Only way to have Twilight stop being a scientist if she's currently working a facility
+            EQS_twilight_sparkle = { set_nationality = ZZZ }
+            EQS_twilight_sparkle = { set_nationality = ROOT }
         }
         set_country_flag = SOL_twilight_fleeing
         set_country_flag = SOL_mane_six_escape
@@ -9550,6 +9629,7 @@ country_event = {
         name = solarreworked.455.a
         clr_country_flag = SOL_block_continuity_snarl
         clr_country_flag = SOL_mmmmmm_event_flavor
+        set_country_flag = SOL_a_little_reference
     }
 }
 
@@ -15380,8 +15460,8 @@ country_event = { #Master hidden event for flavour events. Removes all trigger b
         }
         else_if = {
             limit = {
-                NOT = { has_country_flag = SOL_block_continuity_snarl }
-                has_country_flag = SOL_heretic_hunting
+                has_country_flag = SOL_a_little_reference
+                NOT = { has_country_flag = SOL_double_up }
             }
             country_event = solarreworked.302
             country_event = { #Solaris Inquistionis flavour event chain

@@ -51,15 +51,14 @@ characters={
 				NOT = { has_government = communism }
 				if = {
 					limit = { event_target:solar_empire = { exists = yes } }
-					OR = {
-						AND = {
+					if = {
+						limit = {
 							tag = event_target:solar_empire
-							has_country_flag = SOL_blueblood_kneeled
 						}
-						AND = {
-							tag = event_target:equestria
-							NOT = { country_exists = event_target:solar_empire }
-						}
+						has_country_flag = SOL_blueblood_kneeled
+					}
+					else = {
+						NOT = { country_exists = event_target:solar_empire }
 					}
 				}
 				if = {

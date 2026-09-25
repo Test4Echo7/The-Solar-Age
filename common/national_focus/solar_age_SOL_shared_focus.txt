@@ -2284,6 +2284,7 @@ shared_focus = {
 					days = 180
 					random_days = 120
 				}
+				set_country_flag = SOL_double_up
 			}
 			if = {
 				limit = {
@@ -12504,7 +12505,7 @@ shared_focus = {
 	icon = GFX_goal_solaris_militarium
 	relative_position_id = SOL_modernize_relic
 
-	cost = 2
+	cost = 1
 	prerequisite = { focus = SOL_modernize_relic }
 
 	completion_reward = {
@@ -15542,7 +15543,23 @@ shared_focus = {
 		66 = { is_owned_and_controlled_by = ROOT }
 		14 = { is_owned_and_controlled_by = ROOT }
 		173 = { is_owned_and_controlled_by = ROOT }
-		36 = { is_owned_and_controlled_by = ROOT }
+		36 = {
+			if = {
+				limit = {
+					CES = {
+						exists = yes
+						is_subject_of = ROOT
+					}
+				}
+				OR = {
+					is_owned_and_controlled_by = ROOT
+					is_owned_and_controlled_by = CES
+				}
+			}
+			else = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
 	}
 	allow_branch = { is_EQS_SOL = yes }
 	completion_reward = {
