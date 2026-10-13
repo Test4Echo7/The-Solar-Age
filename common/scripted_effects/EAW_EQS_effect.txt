@@ -180,8 +180,8 @@ EQS_SOL_wartime_change = {
 	set_country_flag = EQS_AI_STOP_VANILLA_STRATEGY
 	clr_country_flag = manpower_laws_blocked
 	clr_country_flag = economic_laws_blocked
-	set_country_flag = SOL_dont_trigger_target_change
-	#Borked. Thanks, Pordox
+	#set_country_flag = SOL_dont_trigger_target_change
+	CRY = { set_country_flag = CRY_dont_give_SOL_cosmetic }
 	#clear_global_event_target = equestria
 	#save_global_event_target_as = solar_empire
 	country_event = solarreworked.550
@@ -403,7 +403,8 @@ EQS_pre_SOL_civil_war_setup = {
 	set_country_flag = EQS_AI_STOP_VANILLA_STRATEGY
 	clr_country_flag = manpower_laws_blocked
 	clr_country_flag = economic_laws_blocked
-	set_country_flag = SOL_dont_trigger_target_change
+	#set_country_flag = SOL_dont_trigger_target_change
+	CRY = { set_country_flag = CRY_dont_give_SOL_cosmetic }
 	hidden_effect = {
 		EQS_princess_celestia = {
 			if = {

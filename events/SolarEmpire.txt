@@ -679,6 +679,7 @@ country_event = {
 	option = { #very well
 		name = solarempire.8.a
 		add_political_power = -20
+		add_manpower = 32810
 		if = {
 			limit = { EQS_big_macintosh = { is_unit_leader = yes } }
 			remove_unit_leader_role = {

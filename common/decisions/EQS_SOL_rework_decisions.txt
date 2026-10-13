@@ -4498,15 +4498,39 @@ EQS_pan_pony_empire_category = {
         available = {
             is_EQS_SOL = yes
             NTR = { all_original_cores_owned_by_ROOT = yes }
+            hidden_trigger = {
+                #Thanks, FAT
+                677 = { is_owned_by = ROOT }
+                562 = { is_owned_by = ROOT }
+                567 = { is_owned_by = ROOT }
+                563 = { is_owned_by = ROOT }
+                602 = { is_owned_by = ROOT }
+                573 = { is_owned_by = ROOT }
+                574 = { is_owned_by = ROOT }
+            }
         }
         visible = {
-            NTR = { all_original_cores_owned_by_ROOT = yes }
+            #NTR = { all_original_cores_owned_by_ROOT = yes }
             NOT = { has_country_flag = SOL_formed_super_griffonia }
+            677 = { is_owned_by = ROOT }
+            562 = { is_owned_by = ROOT }
+            567 = { is_owned_by = ROOT }
+            563 = { is_owned_by = ROOT }
+            602 = { is_owned_by = ROOT }
+            573 = { is_owned_by = ROOT }
+            574 = { is_owned_by = ROOT }
         }
         highlight_states = {
             highlight_states_trigger = {
                 OR = {
-                    is_in_array = { NTR.original_cores = THIS.id }
+                    #is_in_array = { NTR.original_cores = THIS.id }
+                    state = 677
+                    state = 562
+                    state = 567
+                    state = 563
+                    state = 602
+                    state = 573
+                    state = 574
                     AND = {
                         is_owned_and_controlled_by = ROOT
                         is_in_array = { SRS.original_cores = THIS.id }
@@ -4531,7 +4555,13 @@ EQS_pan_pony_empire_category = {
                                 is_in_array = { SRS.original_cores = THIS.id }
                                 is_owned_and_controlled_by = ROOT
                             }
-                            is_in_array = { NTR.original_cores = THIS.id }
+                            state = 677
+                            state = 562
+                            state = 567
+                            state = 563
+                            state = 602
+                            state = 573
+                            state = 574
                         }
                     }
                     transfer_state_to = NTR

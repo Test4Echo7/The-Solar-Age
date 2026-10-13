@@ -631,8 +631,10 @@
  solarempire.7.b:0 "We will not swear fealty to her!"
 
  solarempire.8.t:0 "Harmonists Leave General Staff"
- solarempire.8.d:0 "Today, a group of generals and military staffers led by the Elements of Harmony, long suspected of having seditious and subversive ideals, have jointly resigned from their posts, citing their inability to, quote, "serve this oppressive and tyrannical regime of a madpony"."
- solarempire.8.a:0 "They should remember that we know where they live."
+ #solarempire.8.d:0 "Today, a group of generals and military staffers led by the Elements of Harmony, long suspected of having seditious and subversive ideals, have jointly resigned from their posts, citing their inability to, quote, "serve this oppressive and tyrannical regime of a madpony"."
+ solarempire.8.d:0 "Unsurprisingly, the rule our Empress has pricked the consciences of some of the general staff, many of whom had been open regarding their sole reason for joining [ROOT.GetNameDef]'s military: Defending their homes and Harmony. While they claim that they are making a stand against the "oppressive and tyrannical regime of a madpony," they have fled like cowards with their tails between their legs. Across the military, defections and desertions have reached a peak, spurred by the open letter decrying our Empress's leadership. Our Empress has already decreed that these turncoats are enemies of the state, but with our current resources, we are unable to pursue them immediately.\n\nWhile this weakens our position in the short-term, it has provided new opportunities. Those that remain will be watched more carefully, and the gaps that have been created will be perfect for those that are eager, and loyal, to serve our Empress. Besides, those that resigned cannot go far. There is, after all, one thing they forgot."
+ #solarempire.8.a:0 "They should remember that we know where they live."
+ solarempire.8.a:0 "We know where they live."
 
  SOL_rehabilitate_generals:0 "Rehabilitate Generals"
  SOL_rehabilitate_generals_desc:0 "While some of our commanders have decided to support the treasonous rebellion after having second thoughts about serving the Empire, the Empress in all her mercy and wisdom has decided to grant them a second chance - provided that they will serve her and the Empire loyally."

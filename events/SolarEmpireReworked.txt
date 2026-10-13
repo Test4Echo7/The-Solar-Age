@@ -1282,7 +1282,7 @@ country_event = { #Daybreaker holds a speech in Sanctum Solar, which has just be
                         }
                         army = {
                             large = GFX_DaybreakerPortraitNew
-                            small = "gfx/interface/ideas/advisors/EQS/EQS_daybreaker_goddess.tga"
+                            small = "gfx/interface/ideas/advisors/EQS/EQS_daybreaker_protector.tga"
                         }
                     }
                 }
@@ -14863,6 +14863,13 @@ country_event = { #Event informing the UPA members that it is best to leave the 
             }
             leave_faction = yes
             drop_cosmetic_tag = yes
+            if = {
+                limit = {
+                    tag = CRY
+                    has_country_flag = CRY_dont_give_SOL_cosmetic
+                }
+                clr_country_flag = CRY_dont_give_SOL_cosmetic
+            }
         }
     }
     option = { #Maybe she's not so bad after all.
