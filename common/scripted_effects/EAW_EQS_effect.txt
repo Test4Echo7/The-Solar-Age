@@ -1137,6 +1137,10 @@ EQS_NLR_civil_war = {
 
 
 	EQS = {
+		add_timed_idea = {
+			idea = eqs_civil_war_army_debuff
+			days = 240
+		}
 		if = {
 			limit = {
 				check_variable = { NMM_partisans = 3 }
