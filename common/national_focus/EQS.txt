@@ -1311,7 +1311,7 @@ shared_focus = {
 shared_focus = {
 	id = EQS_airfields
 	icon = GFX_goal_eqs_airfields_central
-	cost = 3
+	cost = 5
 	ai_will_do = { factor = 70 }
 	prerequisite = {
 		focus = Ministry_of_defense
@@ -1347,49 +1347,49 @@ shared_focus = {
 		132 = {
 			add_building_construction = {
 				type = air_base
-				level = 1
+				level = 3
 				instant_build = yes
 			}
 		}
 		170 = {
 			add_building_construction = {
 				type = air_base
-				level = 1
+				level = 3
 				instant_build = yes
 			}
 		}
 		129 = {
 			add_building_construction = {
 				type = air_base
-				level = 1
+				level = 3
 				instant_build = yes
 			}
 		}
 		131 = {
 			add_building_construction = {
 				type = air_base
-				level = 1
+				level = 3
 				instant_build = yes
 			}
 		}
 		146 = {
 			add_building_construction = {
 				type = air_base
-				level = 1
+				level = 3
 				instant_build = yes
 			}
 		}
 		70 = {
 			add_building_construction = {
 				type = air_base
-				level = 1
+				level = 3
 				instant_build = yes
 			}
 		}
 		74 = {
 			add_building_construction = {
 				type = air_base
-				level = 1
+				level = 3
 				instant_build = yes
 			}
 		}
@@ -1400,7 +1400,7 @@ shared_focus = {
 shared_focus = {
 	id = EQS_airfields2
 	icon = GFX_goal_eqs_airfields_south
-	cost = 3
+	cost = 5
 	ai_will_do = { factor = 20 }
 	prerequisite = {
 		focus = Ministry_of_defense
@@ -1431,42 +1431,42 @@ shared_focus = {
 		38 = {
 			add_building_construction = {
 				type = air_base
-				level = 1
+				level = 3
 				instant_build = yes
 			}
 		}
 		114 = {
 			add_building_construction = {
 				type = air_base
-				level = 1
+				level = 3
 				instant_build = yes
 			}
 		}
 		111 = {
 			add_building_construction = {
 				type = air_base
-				level = 1
+				level = 3
 				instant_build = yes
 			}
 		}
 		22 = {
 			add_building_construction = {
 				type = air_base
-				level = 1
+				level = 3
 				instant_build = yes
 			}
 		}
 		116 = {
 			add_building_construction = {
 				type = air_base
-				level = 1
+				level = 3
 				instant_build = yes
 			}
 		}
 		12 = {
 			add_building_construction = {
 				type = air_base
-				level = 1
+				level = 3
 				instant_build = yes
 			}
 		}
