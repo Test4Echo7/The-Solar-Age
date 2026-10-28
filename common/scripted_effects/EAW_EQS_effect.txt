@@ -184,7 +184,10 @@ EQS_SOL_wartime_change = {
 	CRY = { set_country_flag = CRY_dont_give_SOL_cosmetic }
 	#clear_global_event_target = equestria
 	#save_global_event_target_as = solar_empire
-	country_event = solarreworked.550
+	country_event = {
+		id = solarreworked.550
+		days = 1
+	}
 	if = {
 		limit = {
 			has_idea = alicorn_sisters
@@ -281,7 +284,11 @@ EQS_SOL_wartime_change = {
 	#}
 	SOL = {
 		set_politics = { ruling_party = democratic }
-		save_global_event_target_as = equestria
+		#save_global_event_target_as = equestria
+		country_event = {
+			id = solarreworked.551
+			days = 1
+		}
 	}
 	clr_country_flag = nightmare_moon
 	#if = {
@@ -484,7 +491,10 @@ EQS_SOL_civil_war = {
 	set_global_flag = daybreaker_spawned
 	set_global_flag = equestrian_civil_war_daybreaker
 	clr_country_flag = nightmare_moon
-	country_event = solarreworked.550
+	country_event = {
+		id = solarreworked.551
+		days = 1
+	}
 	#clear_global_event_target = equestria
 	#save_global_event_target_as = solar_empire
 	#clr_country_flag = manpower_laws_blocked
@@ -567,13 +577,17 @@ EQS_SOL_civil_war = {
 			is_dynamic_country = yes #Need this to ensure it still chooses the civil war country, since EQS starts democratic with Daybreaker's ascension now
 		}
 		#save_global_event_target_as = equestria
-		country_event = solarreworked.551
+		country_event = {
+			id = solarreworked.551
+			days = 1
+		}
 		load_focus_tree = { tree = equestria_focus keep_completed = yes }
 		set_capital = { state = 3 remember_old_capital = no }
 		add_political_power = 450
 		set_party_name = { ideology = fascism long_name = EQS_fascism_generic_party_long name = EQS_fascism_generic_party }
 		add_stability = -0.3
 		set_cosmetic_tag = EQS_DEM
+		set_country_flag = EQS_dynamic_EQS #Because global event targets are breaking hard for some reason, probably PDX's end
 		if = {
 			limit = {
 				ROOT = { has_country_flag = luna_alive }
@@ -626,7 +640,7 @@ EQS_SOL_civil_war = {
 					is_character = EQS_SOL_comet_trail
 				}
 			}
-			set_nationality = event_target:solar_empire
+			set_nationality = ROOT
 		}
 	}
 	hidden_effect = {
@@ -656,11 +670,17 @@ EQS_SOL_civil_war = {
 					#is_character = EQS_NLR_bipen
 				}
 			}
-			set_nationality = event_target:equestria
+			every_other_country = {
+				limit = {
+					has_country_flag = EQS_dynamic_EQS
+				}
+				ROOT = { set_nationality = PREV }
+			}
 		}
 		if = {
 			limit = {
-				event_target:equestria = {
+				any_other_country = {
+					has_country_flag = EQS_dynamic_EQS
 					has_character = EQS_princess_luna
 				}
 			}
@@ -673,7 +693,13 @@ EQS_SOL_civil_war = {
 						is_character = EQS_NLR_bipen
 					}
 				}
-				set_nationality = event_target:equestria
+				every_other_country = {
+					limit = {
+						has_country_flag = EQS_dynamic_EQS
+						has_character = EQS_princess_luna
+					}
+					ROOT = { set_nationality = PREV }
+				}
 			}
 		}
 	}
