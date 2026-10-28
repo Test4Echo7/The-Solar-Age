@@ -4158,7 +4158,18 @@ country_event = {
 country_event = {
     id = solarreworked.141
     title = solarreworked.141.t
-    desc = solarreworked.141.d
+    desc = {
+        trigger = {
+            has_character = EQS_princess_luna
+        }
+        text = solarreworked.141.d_a
+    }
+    desc = {
+        trigger = {
+            NOT = { has_character = EQS_princess_luna }
+        }
+        text = solarreworked.141.d_b
+    }
     picture = GFX_event_celestia_theme
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.141"}
 
@@ -15403,6 +15414,21 @@ country_event = { #Set the harmonist civil war country to be the event target of
     }
 }
 
+country_event = { #To trigger the master event for flavour
+    id = solarreworked.552
+    hidden = yes
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.552"}
+
+    is_triggered_only = yes
+
+    immediate = {
+        country_event = {
+            id = solarreworked.599
+            days = 29
+        }
+    }
+}
+
 country_event = { #Daybreak background event to start a production line if not at the level to do the most basic form of Daybreak
     id = solarreworked.598
     hidden = yes
@@ -15498,8 +15524,8 @@ country_event = { #Master hidden event for flavour events. Removes all trigger b
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.599"}
     immediate = {
         country_event = {
-            id = solarreworked.599
-            days = 30
+            id = solarreworked.552
+            days = 1
         }
     }
 
