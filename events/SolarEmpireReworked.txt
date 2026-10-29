@@ -15389,31 +15389,6 @@ country_event = { #Daybreaker fights tooth and nail against an onslaught of sold
     }
 }
 
-country_event = { #Debug to clear and set event targets, which hopefully now work in the scripted effects file
-    id = solarreworked.550
-    hidden = yes
-    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.550"}
-
-    is_triggered_only = yes
-
-    option = { #Well, so much for that.
-        clear_global_event_target = equestria
-        save_global_event_target_as = solar_empire
-    }
-}
-
-country_event = { #Set the harmonist civil war country to be the event target of Equestria, since it seems it's borked
-    id = solarreworked.551
-    hidden = yes
-    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.551"}
-
-    is_triggered_only = yes
-
-    option = {
-        save_global_event_target_as = equestria
-    }
-}
-
 country_event = { #To trigger the master event for flavour
     id = solarreworked.552
     hidden = yes

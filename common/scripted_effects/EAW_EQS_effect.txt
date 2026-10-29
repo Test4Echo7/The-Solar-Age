@@ -180,11 +180,10 @@ EQS_SOL_wartime_change = {
 	set_country_flag = EQS_AI_STOP_VANILLA_STRATEGY
 	clr_country_flag = manpower_laws_blocked
 	clr_country_flag = economic_laws_blocked
-	#set_country_flag = SOL_dont_trigger_target_change
+	set_country_flag = SOL_dont_trigger_target_change
 	CRY = { set_country_flag = CRY_dont_give_SOL_cosmetic }
-	#clear_global_event_target = equestria
-	#save_global_event_target_as = solar_empire
-	country_event = solarreworked.550
+	clear_global_event_target = equestria
+	save_global_event_target_as = solar_empire
 	if = {
 		limit = {
 			has_idea = alicorn_sisters
@@ -403,7 +402,7 @@ EQS_pre_SOL_civil_war_setup = {
 	set_country_flag = EQS_AI_STOP_VANILLA_STRATEGY
 	clr_country_flag = manpower_laws_blocked
 	clr_country_flag = economic_laws_blocked
-	#set_country_flag = SOL_dont_trigger_target_change
+	set_country_flag = SOL_dont_trigger_target_change
 	CRY = { set_country_flag = CRY_dont_give_SOL_cosmetic }
 	hidden_effect = {
 		EQS_princess_celestia = {
@@ -485,8 +484,8 @@ EQS_SOL_civil_war = {
 	set_global_flag = equestrian_civil_war_daybreaker
 	clr_country_flag = nightmare_moon
 	country_event = solarreworked.550
-	#clear_global_event_target = equestria
-	#save_global_event_target_as = solar_empire
+	clear_global_event_target = equestria
+	save_global_event_target_as = solar_empire
 	#clr_country_flag = manpower_laws_blocked
 	#clr_country_flag = economic_laws_blocked
 	#if = {
@@ -566,8 +565,7 @@ EQS_SOL_civil_war = {
 			has_government = democratic
 			is_dynamic_country = yes #Need this to ensure it still chooses the civil war country, since EQS starts democratic with Daybreaker's ascension now
 		}
-		#save_global_event_target_as = equestria
-		country_event = solarreworked.551
+		save_global_event_target_as = equestria
 		load_focus_tree = { tree = equestria_focus keep_completed = yes }
 		set_capital = { state = 3 remember_old_capital = no }
 		add_political_power = 450
