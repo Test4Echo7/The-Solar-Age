@@ -751,6 +751,8 @@
   chaotic_spawn_desc:0 "§L"Psst, hey you. Feel like shanking that bitch, Rose Petal? She drank the last beer."§!"
   empathic_dictator:0 "Empathic Commander"
   empathic_dictator_desc:0 "§L"Okay, I totally get why you think that Daybreaker's orders are suicidal and it would probably mean your entire army gets wiped out. You're new here, so I'll give you a little hint: It is. Now, how about I write this down as a resonable concern, you go and do it, and I won't have you court martialed so fast you'll make a sonic rainboom faster than Rainbow Dash when she hears there's a new Daring Do book. Okay? Okay."§!"
+  doubting_blueblood:0 "Shaken Loyalty"
+  doubting_blueblood_desc:0 "§LWith news of Celestia's change circling through Equestria, Blueblood has grown distant from Canterlot and has been negligent of his duties. Frequently he can't be found by his subordinates, and there is worry that he may desert. Of all ponies who could understand Daybreaker, he is the last pony she needs to leave. A stern talking to should be enough to set him straight, as long as she finds him in time.§!"
 
   ###Country Leader Traits###
   aussenseiter_regentin:0 "Foreign Regent"

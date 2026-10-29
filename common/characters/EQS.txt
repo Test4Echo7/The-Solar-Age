@@ -20,19 +20,6 @@ characters={
 			logistics_skill=2
 			legacy_id=1
 			desc = EQS_blueblood_desc
-			visible = {
-				original_tag = EQS
-				OR = {
-					AND = {
-						has_government = democratic
-						NOT = { EQS_princess_celestia = { has_character_flag = EQS_celestia_is_db } }
-					}
-					AND = {
-						is_EQS_SOL = yes
-						has_country_flag = SOL_blueblood_kneeled
-					}
-				}
-			}
 		}
 		country_leader={
 			desc="POLITICS_BLUEBLOOD_DESC"

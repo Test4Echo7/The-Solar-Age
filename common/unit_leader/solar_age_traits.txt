@@ -20,6 +20,28 @@ leader_traits = {
 
         new_commander_weight = { factor = 0 }
     }
+    doubting_blueblood = {
+        type = all
+        trait_type = personality_trait
+
+        allowed = {
+            always = no
+        }
+
+        attack_skill = -2
+        defense_skill = -2
+
+        modifier = {
+            coordination_bonus = -0.1
+            max_planning_factor = -0.25
+            army_attack_factor = -0.15
+            army_org_factor = -0.1
+        }
+
+        non_shared_modifier = {
+            experience_gain_factor = -0.5
+        }
+    }
     bearer_of_the_sun = {
         type = all
 		trait_type = personality_trait

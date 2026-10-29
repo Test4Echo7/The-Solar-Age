@@ -811,6 +811,9 @@ country_event = { #A soldier is on a patrol outside the palace and thinks about 
                 days = 1
                 random_days = 3
             }
+            EQS_prince_blueblood = {
+                add_trait = { trait = doubting_blueblood }
+            }
 		}
     }
 }
@@ -864,6 +867,7 @@ country_event = { #Blueblood is still busily working on the front when Daybreake
                         large = "gfx/leaders/EQS/Blueblood_new.tga"
                     }
                 }
+                remove_trait = { trait = doubting_blueblood }
             }
         }
     }
