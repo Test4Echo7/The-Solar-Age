@@ -174,7 +174,7 @@ EQS_debug_category = {
             }
         }
     }
-    EQS_right_left = {
+    EQS_max_right = {
         allowed = {
             tag = EQS
         }

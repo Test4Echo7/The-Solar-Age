@@ -9965,7 +9965,7 @@ shared_focus = {
 	icon = GFX_goal_communist_examples
 	relative_position_id = SOL_change_management
 
-	cost = 2
+	cost = 1
 	prerequisite = { focus = SOL_change_management }
 	mutually_exclusive = { focus = SOL_coercion_campaign }
 	available = {
@@ -10004,7 +10004,7 @@ shared_focus = {
 	icon = GFX_goal_coercion_campaign
 	relative_position_id = SOL_change_management
 
-	cost = 2
+	cost = 1
 	prerequisite = { focus = SOL_change_management }
 	mutually_exclusive = { focus = SOL_communist_examples }
 	available = {
@@ -10043,7 +10043,7 @@ shared_focus = {
 	icon = GFX_goal_naval_staging_grounds
 	relative_position_id = SOL_coercion_campaign
 
-	cost = 3
+	cost = 2
 	prerequisite = {
 		focus = SOL_communist_examples
 		focus = SOL_coercion_campaign
@@ -10140,7 +10140,7 @@ shared_focus = {
 	icon = GFX_goal_isle_of_sun
 	relative_position_id = SOL_plumb_mountain_depths
 
-	cost = 6
+	cost = 5
 	prerequisite = { focus = SOL_plumb_mountain_depths }
 	available = {
 		PCB = {
@@ -16399,13 +16399,45 @@ shared_focus = {
 	y = 1
 	relative_position_id = SOL_imperial_production_committee
 
-	cost = 6
+	cost = 5
 	prerequisite = { focus = SOL_imperial_production_committee }
 	available = {
 		eqs_not_has_civil_war = yes
 		66 = { is_owned_and_controlled_by = ROOT }
-		15 = { is_owned_and_controlled_by = ROOT }
-		13 = { is_owned_and_controlled_by = ROOT }
+		13 = {
+			if = {
+				limit = {
+					CES = {
+						exists = yes
+						is_subject_of = ROOT
+					}
+				}
+				OR = {
+					is_owned_and_controlled_by = ROOT
+					is_owned_and_controlled_by = CES
+				}
+			}
+			else = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+		15 = {
+			if = {
+				limit = {
+					CES = {
+						exists = yes
+						is_subject_of = ROOT
+					}
+				}
+				OR = {
+					is_owned_and_controlled_by = ROOT
+					is_owned_and_controlled_by = CES
+				}
+			}
+			else = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
 	}
 
 	completion_reward = {
