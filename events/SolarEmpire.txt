@@ -3104,6 +3104,7 @@ country_event = { #Add bat resistance
 	trigger = {
 		is_EQS_SOL = yes
 		NOT = { has_completed_focus = SOL_bat_problems }
+		NOT = { has_country_flag = SOL_pacified_battos }
 		40 = { is_owned_and_controlled_by = ROOT NOT = { has_state_flag = eqs_bat_state } }
 		31 = { is_owned_and_controlled_by = ROOT NOT = { has_state_flag = eqs_bat_state } }
 		36 = { is_owned_and_controlled_by = ROOT NOT = { has_state_flag = eqs_bat_state } }

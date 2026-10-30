@@ -4222,6 +4222,7 @@ EQS_pan_pony_empire_category = {
         complete_effect = {
             log = "[GetDateText]: [Root.GetName]: Decision SOL_demand_CES_integration"
             custom_effect_tooltip = SOL_bow_to_daybreaker_tt
+            set_country_flag = SOL_pacified_battos
             hidden_effect = {
                 CES = {
                     country_event = {

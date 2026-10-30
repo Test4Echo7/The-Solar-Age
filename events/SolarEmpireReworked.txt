@@ -1486,8 +1486,15 @@ country_event = { #Follow a group of fanatical followers of Daybreaker, who have
 					state = 30
 				}
 			}
-			remove_dynamic_modifier = { modifier = SOL_thestral_resistance }
-			#clr_state_flag = eqs_bat_state
+			if = {
+                limit = {
+                    ROOT = { NOT = { has_country_flag = SOL_pacified_battos } }
+                }
+                remove_dynamic_modifier = { modifier = SOL_thestral_resistance }
+            }
+            else = {
+                set_state_flag = eqs_bat_state
+            }
 		}
 		if = {
 			limit = {
@@ -1686,8 +1693,15 @@ country_event = { #Event of a thestral officer being pushed to her limit, after 
 					state = 30
 				}
 			}
-			remove_dynamic_modifier = { modifier = SOL_thestral_resistance }
-			#clr_state_flag = eqs_bat_state
+			if = {
+                limit = {
+                    ROOT = { NOT = { has_country_flag = SOL_pacified_battos } }
+                }
+                remove_dynamic_modifier = { modifier = SOL_thestral_resistance }
+            }
+            else = {
+                set_state_flag = eqs_bat_state
+            }
 		}
     }
 }

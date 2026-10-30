@@ -873,7 +873,9 @@ shared_focus = {
 			}
         }
         else = {
-			always = no
+			hidden_trigger = {
+				always = no
+			}
         }
     }
     continue_if_invalid = yes
@@ -920,7 +922,9 @@ shared_focus = {
 			}
         }
         else = {
-			always = no #So it doesn't bypass immediately
+			hidden_trigger = {
+				always = no #So it doesn't bypass immediately
+			}
         }
     }
     continue_if_invalid = yes
@@ -1002,7 +1006,9 @@ shared_focus = {
 			}
         }
         else = {
-			always = no
+			hidden_trigger = {
+				always = no
+			}
         }
     }
     continue_if_invalid = yes
@@ -1049,7 +1055,9 @@ shared_focus = {
 			}
         }
         else = {
-			always = no
+			hidden_trigger = {
+				always = no
+			}
         }
     }
     continue_if_invalid = yes
@@ -1158,7 +1166,9 @@ shared_focus = {
 			}
         }
         else = {
-			always = no
+			hidden_trigger = {
+				always = no
+			}
         }
     }
     continue_if_invalid = yes
@@ -1207,7 +1217,9 @@ shared_focus = {
 			}
         }
         else = {
-			always = no
+			hidden_trigger = {
+				always = no
+			}
         }
     }
     continue_if_invalid = yes
@@ -9199,6 +9211,19 @@ shared_focus = {
 			has_completed_focus = SOL_god_empress
 		}
 	}
+	bypass = {
+		if = {
+			limit = {
+				has_country_flag = SOL_pacified_battos
+			}
+			has_country_flag = SOL_pacified_battos
+		}
+		else = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_bat_problems"
 		###Event of the military going in to put down a riot by the bats, and otherwise having to deal with their issues, and Daybreaker resolving to deal with it in the most appropriate punishment possible; should be a bit of war support and command power
@@ -9253,6 +9278,19 @@ shared_focus = {
 	prerequisite = { focus = SOL_bat_problems }
 	mutually_exclusive = { focus = SOL_enlighten_darkness }
 	available = { has_war = no }
+	bypass = {
+		if = {
+			limit = {
+				has_country_flag = SOL_pacified_battos
+			}
+			has_country_flag = SOL_pacified_battos
+		}
+		else = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+	}
 	allow_branch = {
 		if = {
 			limit = {
@@ -9305,6 +9343,19 @@ shared_focus = {
 	cost = 1
 	prerequisite = { focus = SOL_fire_and_brimstone }
 	available = { has_war = no }
+	bypass = {
+		if = {
+			limit = {
+				has_country_flag = SOL_pacified_battos
+			}
+			has_country_flag = SOL_pacified_battos
+		}
+		else = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_what_homes"
@@ -9325,6 +9376,19 @@ shared_focus = {
 	cost = 1
 	prerequisite = { focus = SOL_fire_and_brimstone }
 	available = { has_war = no }
+	bypass = {
+		if = {
+			limit = {
+				has_country_flag = SOL_pacified_battos
+			}
+			has_country_flag = SOL_pacified_battos
+		}
+		else = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_what_jobs"
@@ -9404,6 +9468,19 @@ shared_focus = {
 	prerequisite = { focus = SOL_bat_problems }
 	mutually_exclusive = { focus = SOL_fire_and_brimstone }
 	available = { has_war = no }
+	bypass = {
+		if = {
+			limit = {
+				has_country_flag = SOL_pacified_battos
+			}
+			has_country_flag = SOL_pacified_battos
+		}
+		else = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+	}
 	allow_branch = {
 		if = {
 			limit = {
@@ -9449,6 +9526,19 @@ shared_focus = {
 	cost = 1
 	prerequisite = { focus = SOL_enlighten_darkness }
 	available = { has_war = no }
+	bypass = {
+		if = {
+			limit = {
+				has_country_flag = SOL_pacified_battos
+			}
+			has_country_flag = SOL_pacified_battos
+		}
+		else = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_second_class_employers"
@@ -9468,6 +9558,19 @@ shared_focus = {
 	cost = 1
 	prerequisite = { focus = SOL_enlighten_darkness }
 	available = { has_war = no }
+	bypass = {
+		if = {
+			limit = {
+				has_country_flag = SOL_pacified_battos
+			}
+			has_country_flag = SOL_pacified_battos
+		}
+		else = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_mandatory_education"
