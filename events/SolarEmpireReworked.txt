@@ -9929,15 +9929,18 @@ country_event = {
     title = solarreworked.472.t
     desc = {
         text = solarreworked.472.d_a
-        trigger = { STG = { has_country_leader = { character = STG_vasiliy_wheatin ruling_only = yes } } }
+        #trigger = { STG = { has_country_leader = { character = STG_vasiliy_wheatin ruling_only = yes } } }
+        trigger = { STG = { has_completed_focus = vasya_leader } }
     }
     desc = {
         text = solarreworked.472.d_b
-        trigger = { STG = { has_country_leader = { character = STG_sinister_serov ruling_only = yes } } }
+        #trigger = { STG = { has_country_leader = { character = STG_sinister_serov ruling_only = yes } } }
+        trigger = { STG = { has_completed_focus = sinister_leader } }
     }
     desc = {
         text = solarreworked.472.d_c
-        trigger = { STG = { has_country_leader = { character = STG_dark_wing ruling_only = yes } } }
+        #trigger = { STG = { has_country_leader = { character = STG_dark_wing ruling_only = yes } } }
+        trigger = { STG = { has_completed_focus = darkwing_leader } }
     }
     picture = GFX_event_solarempire
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.472"}
@@ -9945,15 +9948,18 @@ country_event = {
     is_triggered_only = yes
 
     option = {
-        trigger = { STG = { has_country_leader = { character = STG_vasiliy_wheatin ruling_only = yes } } }
+        #trigger = { STG = { has_country_leader = { character = STG_vasiliy_wheatin ruling_only = yes } } }
+        trigger = { STG = { has_completed_focus = vasya_leader } }
         name = solarreworked.472.a
     }
     option = {
-        trigger = { STG = { has_country_leader = { character = STG_sinister_serov ruling_only = yes } } }
+        #trigger = { STG = { has_country_leader = { character = STG_sinister_serov ruling_only = yes } } }
+        trigger = { STG = { has_completed_focus = sinister_leader } }
         name = solarreworked.472.b
     }
     option = {
-        trigger = { STG = { has_country_leader = { character = STG_dark_wing ruling_only = yes } } }
+       #trigger = { STG = { has_country_leader = { character = STG_dark_wing ruling_only = yes } } }
+       trigger = { STG = { has_completed_focus = darkwing_leader } }
         name = solarreworked.472.c
     }
 }
@@ -11713,6 +11719,7 @@ country_event = { #Country event speaking of either the dragon's acceptance or r
         }
         FROM = {
             set_cosmetic_tag = DRG_SOL
+            set_country_flag = is_solar_puppet
         }
         if = {
             limit = { FROM = { has_country_flag = SOL_twilight_negotiating } }
@@ -11997,6 +12004,8 @@ country_event = { #Country event speaking of either the yak's acceptance or reje
         }
         FROM = {
             set_cosmetic_tag = YAK_SOL
+            set_country_flag = is_solar_puppet
+            SOL_apply_generic_focus_tree_to_puppets = yes
         }
         if = {
             limit = { FROM = { has_country_flag = SOL_twilight_negotiating } }
@@ -12393,6 +12402,10 @@ country_event = { #Country event speaking of either PLB and PNG's acceptance or 
             autonomous_state = autonomy_reichsprotectorate
             target = FROM
         }
+        FROM = {
+            set_country_flag = is_solar_puppet
+            SOL_apply_generic_focus_tree_to_puppets = yes
+        }
         if = {
             limit = { FROM = { tag = PLB } }
             FROM = {
@@ -12403,6 +12416,35 @@ country_event = { #Country event speaking of either PLB and PNG's acceptance or 
             limit = { FROM = { tag = PNG } }
             FROM = {
                 set_cosmetic_tag = PNG_SOL
+            }
+        }
+        if = {
+            limit = {
+                OR = {
+                    FROM = {
+                        tag = PLB
+                        owns_state = 325
+                    }
+                    FROM = {
+                        tag = PNG
+                        owns_state = 290
+                    }
+                }
+            }
+            FROM = {
+                set_cosmetic_tag = ARC_SOL
+                hidden_effect = {
+                    every_state = {
+                        limit = {
+                            OR = {
+                                is_in_array = { PLB.original_cores = THIS }
+                                is_in_array = { PNG.original_cores = THIS }
+                            }
+                            NOT = { is_core_of = FROM }
+                        }
+                        add_core_of = FROM
+                    }
+                }
             }
         }
         if = {
@@ -12418,7 +12460,14 @@ country_event = { #Country event speaking of either PLB and PNG's acceptance or 
                 hidden_effect = {
                     if = {
                         limit = {
-                            tag = PLB
+                            OR = {
+                                tag = PLB
+                                AND = {
+                                    tag = PNG
+                                    owns_state = 263
+                                    owns_state = 272
+                                }
+                            }
                         }
                         give_resource_rights = {
                             receiver = ROOT
@@ -12431,7 +12480,14 @@ country_event = { #Country event speaking of either PLB and PNG's acceptance or 
                     }
                     if = {
                         limit = {
-                            tag = PNG
+                            OR = {
+                                tag = PNG
+                                AND = {
+                                    tag = PLB
+                                    owns_state = 266
+                                    owns_state = 325
+                                }
+                            }
                         }
                         give_resource_rights = {
                             receiver = ROOT
@@ -12729,6 +12785,8 @@ country_event = { #Country event speaking of either GRF's acceptance or rejectio
                 limit = { tag = GFF }
                 set_cosmetic_tag = GFF_SOL
             }
+            set_country_flag = is_solar_puppet
+            SOL_apply_generic_focus_tree_to_puppets = yes
         }
         if = {
             limit = { FROM = { has_country_flag = SOL_twilight_negotiating } }

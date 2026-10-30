@@ -34,11 +34,11 @@ shared_focus = {
         hidden_effect = {
 			country_event = {
 				id = solarreworked.205
-				days = 20
+				days = 15
 			}
 			country_event = {
 				id = solarreworked.206
-				days = 43
+				days = 35
 			}
 			country_event = {
 				id = solarreworked.207

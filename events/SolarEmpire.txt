@@ -4885,7 +4885,7 @@ country_event = { # celestia Puppet
 	hidden = yes
 	is_triggered_only = yes
 	option = {
-		set_cosmetic_tag = PLB_SOL_new
+		set_cosmetic_tag = PLB_SOL
 
 		set_country_flag = is_solar_puppet
 
@@ -4925,7 +4925,7 @@ country_event = { # celestia Puppet
 	hidden = yes
 	is_triggered_only = yes
 	option = {
-		set_cosmetic_tag = PNG_SOL_new
+		set_cosmetic_tag = PNG_SOL
 		set_country_flag = is_solar_puppet
 	}
 }
