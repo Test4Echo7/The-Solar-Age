@@ -5215,6 +5215,15 @@ shared_focus = {
 				}
 			}
 		}
+		if = {
+			limit = {
+				country_exists = WNG
+			}
+			create_wargoal = {
+				target = annex_everything
+				target = WNG
+			}
+		}
 	}
 	search_filters = { FOCUS_FILTER_ANNEXATION }
 }
@@ -16265,15 +16274,15 @@ shared_focus = {
 	prerequisite = { focus = SOL_invest_in_manehattan }
 	available = {
 		eqs_not_has_civil_war = yes
-		39 = { is_owned_and_controlled_by = ROOT }
-		128 = { is_owned_and_controlled_by = ROOT }
-		127 = { is_owned_and_controlled_by = ROOT }
-		18 = { is_owned_and_controlled_by = ROOT }
+		65 = { is_owned_and_controlled_by = ROOT }
+		99 = { is_owned_and_controlled_by = ROOT }
+		130 = { is_owned_and_controlled_by = ROOT }
+		61 = { is_owned_and_controlled_by = ROOT }
 	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_trawl_mountain_depths"
-		39 = {
+		65 = {
 			add_resource = {
 				type = crystals
 				amount = 15
@@ -16283,7 +16292,7 @@ shared_focus = {
 				amount = 5
 			}
 		}
-		128 = {
+		99 = {
 			add_resource = {
 				type = crystals
 				amount = 5
@@ -16293,13 +16302,13 @@ shared_focus = {
 				amount = 5
 			}
 		}
-		127 = {
+		130 = {
 			add_resource = {
 				type = aluminium
 				amount = 10
 			}
 		}
-		18 = {
+		61 = {
 			add_resource = {
 				type = aluminium
 				amount = 6

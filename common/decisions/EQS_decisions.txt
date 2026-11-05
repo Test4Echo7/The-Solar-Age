@@ -4034,33 +4034,33 @@ prospect_for_resources = {
 		icon = crystals
 		highlight_states = {
 			highlight_state_targets = {
-				state = 55
+				state = 141
 			}
 		}
 		available = {
 			num_of_civilian_factories_available_for_projects > 1
 			has_tech = excavation3
 			OR = {
-				55 = {
+				141 = {
 					is_owned_and_controlled_by = ROOT
 				}
 				CRY = {
 					is_subject_of = ROOT
-					owns_state = 55
-					controls_state = 55
+					owns_state = 141
+					controls_state = 141
 				}
 			}
 		}
 		visible = {
 			has_country_flag = SOL_new_mining_decisions
 			OR = {
-				55 = {
+				141 = {
 					is_owned_and_controlled_by = ROOT
 				}
 				CRY = {
 					is_subject_of = ROOT
-					owns_state = 55
-					controls_state = 55
+					owns_state = 141
+					controls_state = 141
 				}
 			}
 		}
@@ -4070,7 +4070,7 @@ prospect_for_resources = {
 		days_remove = 120
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_plunge_everhoofs_depths"
-			55 = {
+			141 = {
 				add_resource = {
 					type = crystals
 					amount = 12
@@ -4091,36 +4091,36 @@ prospect_for_resources = {
 		icon = crystals
 		highlight_states = {
 			highlight_state_targets = {
-				state = 55
+				state = 141
 			}
 		}
 		available = {
 			num_of_civilian_factories_available_for_projects > 3
 			has_tech = excavation4
 			OR = {
-				55 = {
+				141 = {
 					is_owned_and_controlled_by = ROOT
 				}
 				CRY = {
 					is_subject_of = ROOT
-					owns_state = 55
-					controls_state = 55
+					owns_state = 141
+					controls_state = 141
 				}
 			}
 		}
 		visible = {
 			has_country_flag = SOL_new_mining_decisions
 			OR = {
-				55 = {
+				141 = {
 					is_owned_and_controlled_by = ROOT
 				}
 				CRY = {
 					is_subject_of = ROOT
-					owns_state = 55
-					controls_state = 55
+					owns_state = 141
+					controls_state = 141
 				}
 			}
-			55 = {
+			141 = {
 				has_state_flag = EQS_everhoof_expansion_1
 			}
 		}
@@ -4130,7 +4130,7 @@ prospect_for_resources = {
 		days_remove = 130
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_strip_mine_everhoof_range"
-			55 = {
+			141 = {
 				add_resource = {
 					type = crystals
 					amount = 12
@@ -4151,36 +4151,36 @@ prospect_for_resources = {
 		icon = crystals
 		highlight_states = {
 			highlight_state_targets = {
-				state = 55
+				state = 141
 			}
 		}
 		available = {
 			num_of_civilian_factories_available_for_projects > 7
 			has_tech = excavation_a
 			OR = {
-				55 = {
+				141 = {
 					is_owned_and_controlled_by = ROOT
 				}
 				CRY = {
 					is_subject_of = ROOT
-					owns_state = 55
-					controls_state = 55
+					owns_state = 141
+					controls_state = 141
 				}
 			}
 		}
 		visible = {
 			has_country_flag = SOL_new_mining_decisions
 			OR = {
-				241 = {
+				141 = {
 					is_owned_and_controlled_by = ROOT
 				}
 				CRY = {
 					is_subject_of = ROOT
-					owns_state = 55
-					controls_state = 55
+					owns_state = 141
+					controls_state = 141
 				}
 			}
-			55 = {
+			141 = {
 				has_state_flag = EQS_everhoof_expansion_2
 			}
 		}
@@ -4190,7 +4190,7 @@ prospect_for_resources = {
 		days_remove = 200
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_plunge_everhoofs_depths"
-			55 = {
+			141 = {
 				add_resource = {
 					type = crystals
 					amount = 18

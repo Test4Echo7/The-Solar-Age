@@ -5047,7 +5047,10 @@ country_event = { #As Luna is having a meeting with some of her staff, somepony,
         hidden_effect = {
             if = {
                 limit = {
-                    HIP = { has_government = democratic }
+                    HIP = {
+                        has_government = democratic
+                        exists = yes
+                    }
                 }
                 HIP = {
                     country_event = {
@@ -5065,7 +5068,10 @@ country_event = { #As Luna is having a meeting with some of her staff, somepony,
             }
             else_if = {
                 limit = {
-                    RCT = { has_government = democratic }
+                    RCT = {
+                        has_government = democratic
+                        exists = yes
+                    }
                 }
                 RCT = {
                     country_event = {
@@ -5128,12 +5134,63 @@ country_event = { #The Mane Six, or what's left of them, meet to try and solve a
         custom_effect_tooltip = SOL_mane_six_dip_tt
         clr_country_flag = SOL_hosting_M6
         hidden_effect = {
-            every_possible_country = {
-                limit = { has_character = EQS_princess_luna }
-                country_event = {
-                    id = solarreworked.166
-                    days = 15
-                    random_days = 9
+            if = {
+                limit = {
+                    NOT = { has_global_flag = NLR_spawned }
+                }
+                every_possible_country = {
+                    limit = {
+                        has_character = EQS_princess_luna
+                    }
+                    country_event = {
+                        id = solarreworked.166
+                        days = 15
+                        random_days = 9
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    has_global_flag = NLR_spawned
+                }
+                if = {
+                    limit = {
+                        HIP = {
+                            has_government = democratic
+                            exists = yes
+                        }
+                    }
+                    HIP = {
+                        country_event = {
+                            id = solarreworked.166
+                            days = 15
+                            random_days = 9
+                        }
+                    }
+                }
+                else_if = {
+                    limit = {
+                        RCT = {
+                            has_government = democratic
+                            exists = yes
+                        }
+                    }
+                    RCT = {
+                        country_event = {
+                            id = solarreworked.166
+                            days = 15
+                            random_days = 9
+                        }
+                    }
+                }
+                else = {
+                    MGY = {
+                        country_event = {
+                            id = solarreworked.166
+                            days = 15
+                            random_days = 9
+                        }
+                    }
                 }
             }
         }
@@ -5184,16 +5241,136 @@ country_event = { #The Mane Six arrive in Hippogriffia and meet up with both Nov
     id = solarreworked.166 #Alternate would be arriving in RCT and meeting Luna, who has been trying to gather support beyond River Swirl and some in the government, and feels rather defeated, since most ponies simply don't care about what is happening half a world away
     title = solarreworked.166.t #Third alternate would be arriving in MGY and catching up with Somnambula and Luna, who both speak about how what Maregypt can do is minimal, but they must still hope that they can one day free Equestria from Daybreaker's grip
     desc = {
-        trigger = { ROOT = { tag = HIP } }
+        trigger = {
+            ROOT = { tag = HIP }
+            EQS = { NOT = { has_country_flag = SOL_has_twilight } }
+        }
         text = solarreworked.166.d_a
     }
     desc = {
-        trigger = { ROOT = { tag = RCT } }
+        trigger = {
+            ROOT = { tag = RCT }
+            EQS = { NOT = { has_country_flag = SOL_has_twilight } }
+        }
         text = solarreworked.166.d_b
     }
     desc = {
-        trigger = { ROOT = { tag = MGY } }
+        trigger = {
+            ROOT = { tag = MGY }
+            EQS = { NOT = { has_country_flag = SOL_has_twilight } }
+        }
         text = solarreworked.166.d_c
+    }
+    desc = {
+        trigger = {
+            ROOT = { tag = HIP }
+            EQS = { has_country_flag = SOL_has_twilight }
+        }
+        text = solarreworked.166.d_d
+    }
+    desc = {
+        trigger = {
+            ROOT = { tag = RCT }
+            EQS = { has_country_flag = SOL_has_twilight }
+        }
+        text = solarreworked.166.d_e
+    }
+    desc = {
+        trigger = {
+            ROOT = { tag = MGY }
+            EQS = { has_country_flag = SOL_has_twilight }
+        }
+        text = solarreworked.166.d_f
+    }
+    picture = GFX_event_aris_and_beach
+    immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.166"}
+
+    is_triggered_only = yes
+
+    option = { #Maybe we can finally stop running
+        name = solarreworked.167.a
+        set_country_flag = SOL_hosting_M6
+        every_possible_country = {
+            limit = { has_character = EQS_rainbowdash }
+            EQS_rainbowdash = { set_nationality = ROOT }
+        }
+        every_possible_country = {
+            limit = { has_character = EQS_fluttershy }
+            EQS_fluttershy = { set_nationality = ROOT }
+        }
+        every_possible_country = {
+            limit = { has_character = EQS_rarity }
+            EQS_rarity = { set_nationality = ROOT }
+        }
+        every_possible_country = {
+            limit = { has_character = EQS_applejack }
+            EQS_applejack = { set_nationality = ROOT }
+        }
+        every_possible_country = {
+            limit = { has_character = EQS_pinkie_pie }
+            EQS_pinkie_pie = { set_nationality = ROOT }
+        }
+        every_possible_country = {
+            limit = { has_character = EQS_twilight_sparkle }
+            if = {
+                limit = { NOT = { has_country_flag = SOL_has_twilight } }
+                EQS_twilight_sparkle = { set_nationality = ROOT }
+            }
+        }
+        every_possible_country = {
+            limit = { has_character = EQS_sunset_shimmer }
+            if = {
+                limit = { NOT = { has_country_flag = SOL_has_captured_sunset } }
+                EQS_sunset_shimmer = { set_nationality = ROOT }
+            }
+        }
+    }
+}
+
+country_event = { #M6 arrive to the country that will ultimatley host them, although said country doesn't have Luna; same thing as 166, just without Luna
+    id = solarreworked.167
+    title = solarreworked.167.t
+    desc = {
+        trigger = {
+            ROOT = { tag = HIP }
+            EQS = { NOT = { has_country_flag = SOL_has_twilight } }
+        }
+        text = solarreworked.167.d_a
+    }
+    desc = {
+        trigger = {
+            ROOT = { tag = RCT }
+            EQS = { NOT = { has_country_flag = SOL_has_twilight } }
+        }
+        text = solarreworked.167.d_b
+    }
+    desc = {
+        trigger = {
+            ROOT = { tag = MGY }
+            EQS = { NOT = { has_country_flag = SOL_has_twilight } }
+        }
+        text = solarreworked.167.d_c
+    }
+    desc = {
+        trigger = {
+            ROOT = { tag = HIP }
+            EQS = { has_country_flag = SOL_has_twilight }
+        }
+        text = solarreworked.167.d_d
+    }
+    desc = {
+        trigger = {
+            ROOT = { tag = RCT }
+            EQS = { has_country_flag = SOL_has_twilight }
+        }
+        text = solarreworked.167.d_e
+    }
+    desc = {
+        trigger = {
+            ROOT = { tag = MGY }
+            EQS = { has_country_flag = SOL_has_twilight }
+        }
+        text = solarreworked.167.d_f
     }
     picture = GFX_event_aris_and_beach
     immediate = {log = "[GetDateText]: [ROOT.GetName]: event solarreworked.166"}

@@ -4162,11 +4162,9 @@ EQS_expand_imperial_territory_category = {
         }
         visible = {
             has_completed_focus = SOL_breach_zebrica
-            NOT = {
-                692 = {
-                    OWNER = {
-                        is_subject_of = ROOT
-                    }
+            692 = {
+                OWNER = {
+                    tag = ROOT
                 }
             }
         }
@@ -4223,6 +4221,7 @@ EQS_pan_pony_empire_category = {
             log = "[GetDateText]: [Root.GetName]: Decision SOL_demand_CES_integration"
             custom_effect_tooltip = SOL_bow_to_daybreaker_tt
             set_country_flag = SOL_pacified_battos
+            set_country_flag = SOL_bat_problems_flag
             hidden_effect = {
                 CES = {
                     country_event = {
@@ -4419,12 +4418,7 @@ EQS_pan_pony_empire_category = {
                         tag = ROOT
                         is_subject_of = ROOT
                     }
-                }
-                CONTROLLER = {
-                    OR = {
-                        tag = ROOT
-                        is_subject_of = ROOT
-                    }
+                    NOT = { has_country_flag = is_solar_puppet }
                 }
             }
             OR = {
