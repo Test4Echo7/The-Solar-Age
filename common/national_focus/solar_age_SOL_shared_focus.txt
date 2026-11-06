@@ -15108,6 +15108,15 @@ shared_focus = {
 
 	cost = 5
 	prerequisite = { focus = SOL_surrender_waves }
+	bypass = {
+		12 = {
+			free_building_slots = {
+				building = dockyard
+				size < 1
+				include_locked = yes
+			}
+		}
+	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_fillydelphia_rivalry"
@@ -15166,6 +15175,15 @@ shared_focus = {
 
 	cost = 5
 	prerequisite = { focus = SOL_crushing_sea }
+	bypass = {
+		75 = {
+			free_building_slots = {
+				building = dockyard
+				size < 1
+				include_locked = yes
+			}
+		}
+	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOL_expand_manehattan_dockyards"

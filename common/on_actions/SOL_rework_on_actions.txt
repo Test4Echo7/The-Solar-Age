@@ -650,6 +650,12 @@ on_actions = {
                     }
                 }
                 apply_SOL_cosmetic_tags_on_puppet = yes
+                if = {
+                    limit = {
+                        tag = EQC
+                    }
+                    356 = { reset_state_name = yes }
+                }
             }
         }
     }

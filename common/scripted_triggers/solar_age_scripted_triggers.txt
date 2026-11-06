@@ -51,23 +51,10 @@ is_EQS_SOL = {
 EQS_has_high_naval_tech = {
 	OR = {
 		AND = {
-			has_dlc = "Man the Guns"
-			OR = {
-				AND = {
-					has_tech = ship_hull_super_heavy
-					has_tech = improved_ship_hull_heavy
-				}
-				has_tech = improved_ship_hull_carrier
-			}
+			is_special_project_completed = sp:sp_naval_super_heavy_battleship
+			has_tech = improved_ship_hull_heavy
 		}
-		AND = {
-			NOT = { has_dlc = "Man the Guns" }
-			OR = {
-				has_tech = improved_battleship
-				has_tech = improved_battlecruiser
-				has_tech = improved_carrier
-			}
-		}
+		has_tech = improved_ship_hull_carrier
 	}
 }
 EQS_not_most_advanced_ships = {

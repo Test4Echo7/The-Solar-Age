@@ -3402,6 +3402,11 @@ country_event = { #Daybreaker marches and enters into the chambers of Grover, wh
 							traits = { aussenseiter_regentin }
 						}
 					}
+					set_portraits = {
+                        civilian = {
+                            large = "gfx/leaders/EQS/Daybreaker_goddess.tga"
+                        }
+					}
 				}
 				set_party_name = {
 					ideology = fascism
@@ -3418,6 +3423,18 @@ country_event = { #Daybreaker marches and enters into the chambers of Grover, wh
 							expire = "1965.1.1"
 							traits = { aussenseiter_regentin }
 						}
+					}
+					if = {
+                        limit = {
+                            ROOT = {
+                                has_completed_focus = SOL_empress_mother
+                            }
+                        }
+                        set_portraits = {
+                            civilian = {
+                                large = "gfx/leaders/EQS/Daybreaker_canon.tga"
+                            }
+                        }
 					}
 				}
 				set_party_name = {
@@ -3559,6 +3576,11 @@ country_event = { #Daybreaker smugly walks through Griffonstone, in a parade wit
 							traits = { die_kaiserin_der_greifen }
 						}
 					}
+                    set_portraits = {
+                        civilian = {
+                            large = "gfx/leaders/EQS/Daybreaker_goddess.tga"
+                        }
+                    }
 				}
 				set_party_name = {
 					ideology = fascism
@@ -3575,6 +3597,18 @@ country_event = { #Daybreaker smugly walks through Griffonstone, in a parade wit
 							expire = "1965.1.1"
 							traits = { die_kaiserin_der_greifen }
 						}
+					}
+					if = {
+                        limit = {
+                            ROOT = {
+                                has_completed_focus = SOL_empress_mother
+                            }
+                        }
+                        set_portraits = {
+                            civilian = {
+                                large = "gfx/leaders/EQS/Daybreaker_canon.tga"
+                            }
+                        }
 					}
 				}
 				set_party_name = {
@@ -14238,6 +14272,7 @@ country_event = { #Hidden event that will move all foreign characters to their r
                     character = EQS_discord
                     ideology = harmonic_libertarianism
                 }
+                add_ideas = ZZZ_dont_break_pp_spend
             }
         }
     }

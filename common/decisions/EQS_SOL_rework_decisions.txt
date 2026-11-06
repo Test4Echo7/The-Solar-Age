@@ -4773,13 +4773,45 @@ EQS_pan_pony_empire_category = {
         }
         available = {
             is_EQS_SOL = yes
-            #EQS_owns_all_MIT_starting_states = yes
             MIT = { all_original_cores_owned_by_ROOT = yes }
+            #Thanks, GRI
+            hidden_trigger = {
+                667 = { is_owned_by = ROOT }
+                657 = { is_owned_by = ROOT }
+                513 = { is_owned_by = ROOT }
+                664 = { is_owned_by = ROOT }
+                654 = { is_owned_by = ROOT }
+                655 = { is_owned_by = ROOT }
+                469 = { is_owned_by = ROOT }
+                468 = { is_owned_by = ROOT }
+                467 = { is_owned_by = ROOT }
+                466 = { is_owned_by = ROOT }
+                656 = { is_owned_by = ROOT }
+                463 = { is_owned_by = ROOT }
+                464 = { is_owned_by = ROOT }
+                462 = { is_owned_by = ROOT }
+                465 = { is_owned_by = ROOT }
+                386 = { is_owned_by = ROOT }
+            }
         }
         visible = {
-            #EQS_owns_all_MIT_starting_states = yes
-            MIT = { all_original_cores_owned_by_ROOT = yes }
             NOT = { has_country_flag = SOL_formed_super_griffonia }
+            667 = { is_owned_by = ROOT }
+            657 = { is_owned_by = ROOT }
+            513 = { is_owned_by = ROOT }
+            664 = { is_owned_by = ROOT }
+            654 = { is_owned_by = ROOT }
+            655 = { is_owned_by = ROOT }
+            469 = { is_owned_by = ROOT }
+            468 = { is_owned_by = ROOT }
+            467 = { is_owned_by = ROOT }
+            466 = { is_owned_by = ROOT }
+            656 = { is_owned_by = ROOT }
+            463 = { is_owned_by = ROOT }
+            464 = { is_owned_by = ROOT }
+            462 = { is_owned_by = ROOT }
+            465 = { is_owned_by = ROOT }
+            386 = { is_owned_by = ROOT }
         }
         highlight_states = {
             highlight_states_trigger = {

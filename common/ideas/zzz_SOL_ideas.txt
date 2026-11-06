@@ -2439,6 +2439,12 @@ ideas = {
 				industry_air_damage_factor = -0.1
 			}
 		}
+		###ZZZ###
+		ZZZ_dont_break_pp_spend = {
+			modifier = {
+				political_power_cost = 5
+			}
+		}
 	}
 	###Concerns###
 	tank_manufacturer = {
